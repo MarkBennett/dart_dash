@@ -1,8 +1,10 @@
 require "sqlite3"
 require 'nokogiri'
-require 'pry'
+require 'find'
 
 class DartIndexer
+
+  DOC_ROOT = "Dart.docset/Contents/Resources/Documents/"
 
   # Process the contents of Dart.docset/Contents/Resources/Documents and
   # produce a sqlite3 index in Dart.docset/Contents/Resources/docSet.dsidx
@@ -10,10 +12,13 @@ class DartIndexer
     index = DashIndex.new
 
     paths = [
-      "dart_async/Future.html"
+      "dart_async/Future.html",
+      "dart_async/Stream.html"
     ]
+    # paths = Find.find(DOC_ROOT).select { |s| s if s =~ /.*\.html$/ }.
+    #  map { |p| p.split(DOC_ROOT)[1] }
     paths.each do |path|
-      index.add_tokens(DartPageParser.new("Dart.docset/Contents/Resources/Documents/", path).tokens)
+      index.add_tokens(DartPageParser.new(DOC_ROOT, path).tokens)
     end
   end
 end
