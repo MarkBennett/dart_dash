@@ -30,7 +30,20 @@ class DartPageParser
 
     # Add static methods
     page = Nokogiri::HTML(open(@doc_root + @page_path))
+    tokens += page_title_token(page)
     tokens += static_methods_tokens(page)
+  end
+
+  def page_title_token(page)
+    page_title = page.css(".content h2 strong").text
+
+    [
+      {
+        :name => page_title,
+        :type => "Class",
+        :path => @page_path
+      }
+    ]
   end
 
   def static_methods_tokens(page)
@@ -44,8 +57,6 @@ class DartPageParser
         tokens << { :name => name, :type => doc_class, :path => path }
       end
     end
-
-    p tokens
 
     tokens
   end
