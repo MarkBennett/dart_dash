@@ -1,4 +1,6 @@
 require "sqlite3"
+require 'nokogiri'
+require 'pry'
 
 class DartIndexer
 
@@ -11,22 +13,41 @@ class DartIndexer
       "dart_async/Future.html"
     ]
     paths.each do |path|
-      index.add_tokens(DartPageParser.new(path).tokens)
+      index.add_tokens(DartPageParser.new("Dart.docset/Contents/Resources/Documents/", path).tokens)
     end
   end
 end
 
 class DartPageParser
-  def intialize(page_path)
+  def initialize(doc_root, page_path)
+    @doc_root = doc_root
     @page_path = page_path
   end
 
   # Scan the page returning tokens matching the parser
   def tokens
-    [
-      { :name => "Future", :type => "Class", :path => "dart_async/Future.html"},
-      { :name => "Stream<T>", :type => "Class", :path => "dart_async/Stream.html"}
-    ]
+    tokens = []
+
+    # Add static methods
+    page = Nokogiri::HTML(open(@doc_root + @page_path))
+    tokens += static_methods_tokens(page)
+  end
+
+  def static_methods_tokens(page)
+    tokens = []
+    static_methods_section = page.xpath('//h3[contains(text(), "Static Methods")]')
+    static_methods_section.each do |section|
+      section.parent.css(".method").each do |method|
+        name = method.children[0].attributes["id"].value
+        doc_class = "Method"
+        path = @page_path + "#" + name
+        tokens << { :name => name, :type => doc_class, :path => path }
+      end
+    end
+
+    p tokens
+
+    tokens
   end
 end
 
