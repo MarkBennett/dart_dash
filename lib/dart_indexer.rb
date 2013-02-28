@@ -32,6 +32,7 @@ class DartPageParser
     page = Nokogiri::HTML(open(@doc_root + @page_path))
     tokens += page_title_token(page)
     tokens += static_methods_tokens(page)
+    tokens += constructor_tokens(page)
   end
 
   def page_title_token(page)
@@ -52,9 +53,22 @@ class DartPageParser
     static_methods_section.each do |section|
       section.parent.css(".method").each do |method|
         name = method.children[0].attributes["id"].value
-        doc_class = "Method"
         path = @page_path + "#" + name
-        tokens << { :name => name, :type => doc_class, :path => path }
+        tokens << { :name => name, :type => "Method", :path => path }
+      end
+    end
+
+    tokens
+  end
+
+  def constructor_tokens(page)
+    tokens = []
+    constructors_sections = page.xpath('//h3[contains(text(), "Constructors")]')
+    constructors_sections.each do |section|
+      section.parent.css(".method").each do |method|
+        name = method.children[0].attributes["id"].value
+        path = @page_path + "#" + name
+        tokens << { :name => name, :type => "Constructor", :path => path }
       end
     end
 
