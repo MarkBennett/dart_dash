@@ -33,6 +33,7 @@ class DartPageParser
     tokens += page_title_token(page)
     tokens += static_methods_tokens(page)
     tokens += constructor_tokens(page)
+    tokens += method_tokens(page)
   end
 
   def page_title_token(page)
@@ -74,6 +75,21 @@ class DartPageParser
 
     tokens
   end
+
+  def method_tokens(page)
+    tokens = []
+    methods_sections = page.xpath('//h3[contains(text(), "Methods")]')
+    methods_sections.each do |section|
+      section.parent.css(".method").each do |method|
+        name = method.children[0].attributes["id"].value
+        path = @page_path + "#" + name
+        tokens << { :name => name, :type => "Method", :path => path }
+      end
+    end
+
+    tokens
+  end
+
 end
 
 class DashIndex
