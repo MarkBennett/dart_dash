@@ -1,0 +1,694 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>HttpStatus abstract class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="HttpStatus">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/HttpStatus.html">HttpStatus</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><div class="icon-class"></div><strong>HttpStatus</strong></li>
+<li><a href="../dart_io/IOSink.html"><div class="icon-class"></div>IOSink&lt;T&gt;</a></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="../dart_io/ProcessOptions.html"><div class="icon-class"></div>ProcessOptions</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="../dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/DirectoryIOException.html"><div class="icon-exception"></div>DirectoryIOException</a></li>
+<li><a href="../dart_io/FileIOException.html"><div class="icon-exception"></div>FileIOException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/HttpParserException.html"><div class="icon-exception"></div>HttpParserException</a></li>
+<li><a href="../dart_io/MimeParserException.html"><div class="icon-exception"></div>MimeParserException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/RedirectLimitExceededException.html"><div class="icon-exception"></div>RedirectLimitExceededException</a></li>
+<li><a href="../dart_io/RedirectLoopException.html"><div class="icon-exception"></div>RedirectLoopException</a></li>
+<li><a href="../dart_io/SocketIOException.html"><div class="icon-exception"></div>SocketIOException</a></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>HttpStatus</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>HTTP status codes.</p>
+<pre class="source">
+abstract class HttpStatus {
+ static const int CONTINUE = 100;
+ static const int SWITCHING_PROTOCOLS = 101;
+ static const int OK = 200;
+ static const int CREATED = 201;
+ static const int ACCEPTED = 202;
+ static const int NON_AUTHORITATIVE_INFORMATION = 203;
+ static const int NO_CONTENT = 204;
+ static const int RESET_CONTENT = 205;
+ static const int PARTIAL_CONTENT = 206;
+ static const int MULTIPLE_CHOICES = 300;
+ static const int MOVED_PERMANENTLY = 301;
+ static const int FOUND = 302;
+ static const int MOVED_TEMPORARILY = 302; // Common alias for FOUND.
+ static const int SEE_OTHER = 303;
+ static const int NOT_MODIFIED = 304;
+ static const int USE_PROXY = 305;
+ static const int TEMPORARY_REDIRECT = 307;
+ static const int BAD_REQUEST = 400;
+ static const int UNAUTHORIZED = 401;
+ static const int PAYMENT_REQUIRED = 402;
+ static const int FORBIDDEN = 403;
+ static const int NOT_FOUND = 404;
+ static const int METHOD_NOT_ALLOWED = 405;
+ static const int NOT_ACCEPTABLE = 406;
+ static const int PROXY_AUTHENTICATION_REQUIRED = 407;
+ static const int REQUEST_TIMEOUT = 408;
+ static const int CONFLICT = 409;
+ static const int GONE = 410;
+ static const int LENGTH_REQUIRED = 411;
+ static const int PRECONDITION_FAILED = 412;
+ static const int REQUEST_ENTITY_TOO_LARGE = 413;
+ static const int REQUEST_URI_TOO_LONG = 414;
+ static const int UNSUPPORTED_MEDIA_TYPE = 415;
+ static const int REQUESTED_RANGE_NOT_SATISFIABLE = 416;
+ static const int EXPECTATION_FAILED = 417;
+ static const int INTERNAL_SERVER_ERROR = 500;
+ static const int NOT_IMPLEMENTED = 501;
+ static const int BAD_GATEWAY = 502;
+ static const int SERVICE_UNAVAILABLE = 503;
+ static const int GATEWAY_TIMEOUT = 504;
+ static const int HTTP_VERSION_NOT_SUPPORTED = 505;
+ // Client generated status code.
+ static const int NETWORK_CONNECT_TIMEOUT_ERROR = 599;
+}
+</pre>
+</div>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="ACCEPTED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ACCEPTED</strong> <a class="anchor-link"
+            href="#ACCEPTED"
+            title="Permalink to HttpStatus.ACCEPTED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ACCEPTED = 202
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="BAD_GATEWAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>BAD_GATEWAY</strong> <a class="anchor-link"
+            href="#BAD_GATEWAY"
+            title="Permalink to HttpStatus.BAD_GATEWAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+BAD_GATEWAY = 502
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="BAD_REQUEST">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>BAD_REQUEST</strong> <a class="anchor-link"
+            href="#BAD_REQUEST"
+            title="Permalink to HttpStatus.BAD_REQUEST">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+BAD_REQUEST = 400
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CONFLICT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CONFLICT</strong> <a class="anchor-link"
+            href="#CONFLICT"
+            title="Permalink to HttpStatus.CONFLICT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CONFLICT = 409
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CONTINUE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CONTINUE</strong> <a class="anchor-link"
+            href="#CONTINUE"
+            title="Permalink to HttpStatus.CONTINUE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CONTINUE = 100
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CREATED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CREATED</strong> <a class="anchor-link"
+            href="#CREATED"
+            title="Permalink to HttpStatus.CREATED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CREATED = 201
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="EXPECTATION_FAILED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>EXPECTATION_FAILED</strong> <a class="anchor-link"
+            href="#EXPECTATION_FAILED"
+            title="Permalink to HttpStatus.EXPECTATION_FAILED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+EXPECTATION_FAILED = 417
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FORBIDDEN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FORBIDDEN</strong> <a class="anchor-link"
+            href="#FORBIDDEN"
+            title="Permalink to HttpStatus.FORBIDDEN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FORBIDDEN = 403
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FOUND">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FOUND</strong> <a class="anchor-link"
+            href="#FOUND"
+            title="Permalink to HttpStatus.FOUND">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FOUND = 302
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="GATEWAY_TIMEOUT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>GATEWAY_TIMEOUT</strong> <a class="anchor-link"
+            href="#GATEWAY_TIMEOUT"
+            title="Permalink to HttpStatus.GATEWAY_TIMEOUT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+GATEWAY_TIMEOUT = 504
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="GONE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>GONE</strong> <a class="anchor-link"
+            href="#GONE"
+            title="Permalink to HttpStatus.GONE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+GONE = 410
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HTTP_VERSION_NOT_SUPPORTED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>HTTP_VERSION_NOT_SUPPORTED</strong> <a class="anchor-link"
+            href="#HTTP_VERSION_NOT_SUPPORTED"
+            title="Permalink to HttpStatus.HTTP_VERSION_NOT_SUPPORTED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HTTP_VERSION_NOT_SUPPORTED = 505
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="INTERNAL_SERVER_ERROR">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>INTERNAL_SERVER_ERROR</strong> <a class="anchor-link"
+            href="#INTERNAL_SERVER_ERROR"
+            title="Permalink to HttpStatus.INTERNAL_SERVER_ERROR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+INTERNAL_SERVER_ERROR = 500
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LENGTH_REQUIRED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>LENGTH_REQUIRED</strong> <a class="anchor-link"
+            href="#LENGTH_REQUIRED"
+            title="Permalink to HttpStatus.LENGTH_REQUIRED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LENGTH_REQUIRED = 411
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="METHOD_NOT_ALLOWED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>METHOD_NOT_ALLOWED</strong> <a class="anchor-link"
+            href="#METHOD_NOT_ALLOWED"
+            title="Permalink to HttpStatus.METHOD_NOT_ALLOWED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+METHOD_NOT_ALLOWED = 405
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MOVED_PERMANENTLY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MOVED_PERMANENTLY</strong> <a class="anchor-link"
+            href="#MOVED_PERMANENTLY"
+            title="Permalink to HttpStatus.MOVED_PERMANENTLY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MOVED_PERMANENTLY = 301
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MOVED_TEMPORARILY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MOVED_TEMPORARILY</strong> <a class="anchor-link"
+            href="#MOVED_TEMPORARILY"
+            title="Permalink to HttpStatus.MOVED_TEMPORARILY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MOVED_TEMPORARILY = 302
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MULTIPLE_CHOICES">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MULTIPLE_CHOICES</strong> <a class="anchor-link"
+            href="#MULTIPLE_CHOICES"
+            title="Permalink to HttpStatus.MULTIPLE_CHOICES">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MULTIPLE_CHOICES = 300
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NETWORK_CONNECT_TIMEOUT_ERROR">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NETWORK_CONNECT_TIMEOUT_ERROR</strong> <a class="anchor-link"
+            href="#NETWORK_CONNECT_TIMEOUT_ERROR"
+            title="Permalink to HttpStatus.NETWORK_CONNECT_TIMEOUT_ERROR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NETWORK_CONNECT_TIMEOUT_ERROR = 599
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NO_CONTENT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NO_CONTENT</strong> <a class="anchor-link"
+            href="#NO_CONTENT"
+            title="Permalink to HttpStatus.NO_CONTENT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NO_CONTENT = 204
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NON_AUTHORITATIVE_INFORMATION">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NON_AUTHORITATIVE_INFORMATION</strong> <a class="anchor-link"
+            href="#NON_AUTHORITATIVE_INFORMATION"
+            title="Permalink to HttpStatus.NON_AUTHORITATIVE_INFORMATION">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NON_AUTHORITATIVE_INFORMATION = 203
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NOT_ACCEPTABLE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NOT_ACCEPTABLE</strong> <a class="anchor-link"
+            href="#NOT_ACCEPTABLE"
+            title="Permalink to HttpStatus.NOT_ACCEPTABLE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NOT_ACCEPTABLE = 406
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NOT_FOUND">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NOT_FOUND</strong> <a class="anchor-link"
+            href="#NOT_FOUND"
+            title="Permalink to HttpStatus.NOT_FOUND">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NOT_FOUND = 404
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NOT_IMPLEMENTED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NOT_IMPLEMENTED</strong> <a class="anchor-link"
+            href="#NOT_IMPLEMENTED"
+            title="Permalink to HttpStatus.NOT_IMPLEMENTED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NOT_IMPLEMENTED = 501
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NOT_MODIFIED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NOT_MODIFIED</strong> <a class="anchor-link"
+            href="#NOT_MODIFIED"
+            title="Permalink to HttpStatus.NOT_MODIFIED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NOT_MODIFIED = 304
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="OK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>OK</strong> <a class="anchor-link"
+            href="#OK"
+            title="Permalink to HttpStatus.OK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+OK = 200
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PARTIAL_CONTENT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PARTIAL_CONTENT</strong> <a class="anchor-link"
+            href="#PARTIAL_CONTENT"
+            title="Permalink to HttpStatus.PARTIAL_CONTENT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PARTIAL_CONTENT = 206
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PAYMENT_REQUIRED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PAYMENT_REQUIRED</strong> <a class="anchor-link"
+            href="#PAYMENT_REQUIRED"
+            title="Permalink to HttpStatus.PAYMENT_REQUIRED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PAYMENT_REQUIRED = 402
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PRECONDITION_FAILED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PRECONDITION_FAILED</strong> <a class="anchor-link"
+            href="#PRECONDITION_FAILED"
+            title="Permalink to HttpStatus.PRECONDITION_FAILED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PRECONDITION_FAILED = 412
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PROXY_AUTHENTICATION_REQUIRED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PROXY_AUTHENTICATION_REQUIRED</strong> <a class="anchor-link"
+            href="#PROXY_AUTHENTICATION_REQUIRED"
+            title="Permalink to HttpStatus.PROXY_AUTHENTICATION_REQUIRED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PROXY_AUTHENTICATION_REQUIRED = 407
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="REQUEST_ENTITY_TOO_LARGE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>REQUEST_ENTITY_TOO_LARGE</strong> <a class="anchor-link"
+            href="#REQUEST_ENTITY_TOO_LARGE"
+            title="Permalink to HttpStatus.REQUEST_ENTITY_TOO_LARGE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+REQUEST_ENTITY_TOO_LARGE = 413
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="REQUEST_TIMEOUT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>REQUEST_TIMEOUT</strong> <a class="anchor-link"
+            href="#REQUEST_TIMEOUT"
+            title="Permalink to HttpStatus.REQUEST_TIMEOUT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+REQUEST_TIMEOUT = 408
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="REQUEST_URI_TOO_LONG">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>REQUEST_URI_TOO_LONG</strong> <a class="anchor-link"
+            href="#REQUEST_URI_TOO_LONG"
+            title="Permalink to HttpStatus.REQUEST_URI_TOO_LONG">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+REQUEST_URI_TOO_LONG = 414
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="REQUESTED_RANGE_NOT_SATISFIABLE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>REQUESTED_RANGE_NOT_SATISFIABLE</strong> <a class="anchor-link"
+            href="#REQUESTED_RANGE_NOT_SATISFIABLE"
+            title="Permalink to HttpStatus.REQUESTED_RANGE_NOT_SATISFIABLE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+REQUESTED_RANGE_NOT_SATISFIABLE = 416
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="RESET_CONTENT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>RESET_CONTENT</strong> <a class="anchor-link"
+            href="#RESET_CONTENT"
+            title="Permalink to HttpStatus.RESET_CONTENT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+RESET_CONTENT = 205
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SEE_OTHER">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SEE_OTHER</strong> <a class="anchor-link"
+            href="#SEE_OTHER"
+            title="Permalink to HttpStatus.SEE_OTHER">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SEE_OTHER = 303
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SERVICE_UNAVAILABLE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SERVICE_UNAVAILABLE</strong> <a class="anchor-link"
+            href="#SERVICE_UNAVAILABLE"
+            title="Permalink to HttpStatus.SERVICE_UNAVAILABLE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SERVICE_UNAVAILABLE = 503
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SWITCHING_PROTOCOLS">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SWITCHING_PROTOCOLS</strong> <a class="anchor-link"
+            href="#SWITCHING_PROTOCOLS"
+            title="Permalink to HttpStatus.SWITCHING_PROTOCOLS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SWITCHING_PROTOCOLS = 101
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="TEMPORARY_REDIRECT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>TEMPORARY_REDIRECT</strong> <a class="anchor-link"
+            href="#TEMPORARY_REDIRECT"
+            title="Permalink to HttpStatus.TEMPORARY_REDIRECT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+TEMPORARY_REDIRECT = 307
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="UNAUTHORIZED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>UNAUTHORIZED</strong> <a class="anchor-link"
+            href="#UNAUTHORIZED"
+            title="Permalink to HttpStatus.UNAUTHORIZED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+UNAUTHORIZED = 401
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="UNSUPPORTED_MEDIA_TYPE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>UNSUPPORTED_MEDIA_TYPE</strong> <a class="anchor-link"
+            href="#UNSUPPORTED_MEDIA_TYPE"
+            title="Permalink to HttpStatus.UNSUPPORTED_MEDIA_TYPE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+UNSUPPORTED_MEDIA_TYPE = 415
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="USE_PROXY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>USE_PROXY</strong> <a class="anchor-link"
+            href="#USE_PROXY"
+            title="Permalink to HttpStatus.USE_PROXY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+USE_PROXY = 305
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:10.056</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

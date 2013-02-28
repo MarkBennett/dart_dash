@@ -1,0 +1,356 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>scheduled_test Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="scheduled_test">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="index.html">Dart API Reference</a>
+         &rsaquo; <a href="scheduled_test.html">scheduled_test</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="args.html">args</a></h2><h2><div class="icon-library"></div><a href="dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="mock.html">mock</a></h2><h2><div class="icon-library"></div><strong>scheduled_test</strong></h2><h2><div class="icon-library"></div><a href="serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="unittest.html">unittest</a></h2></div>
+<div class="content">
+<h2><strong>scheduled_test</strong> library</h2>
+<div class="doc"><p>A package for writing readable tests of asynchronous behavior.</p>
+<p>This package works by building up a queue of asynchronous tasks called a
+"schedule", then executing those tasks in order. This allows the tests to
+read like synchronous, linear code, despite executing asynchronously.</p>
+<p>The <code>scheduled_test</code> package is built on top of <code>unittest</code>, and should be
+imported instead of <code>unittest</code>. It provides its own version of <a class="crossref" href="scheduled_test.html#group">group</a>,
+<a class="crossref" href="scheduled_test.html#test">test</a>, and <a class="crossref" href="scheduled_test.html#setUp">setUp</a>, and re-exports most other APIs from unittest.</p>
+<p>To schedule a task, call the <a class="crossref" href="scheduled_test.html#schedule">schedule</a> function. For example:</p>
+<pre><code>import 'package:scheduled_test/scheduled_test.dart';
+
+void main() {
+  test('writing to a file and reading it back should work', () {
+    schedule(() {
+      // The schedule won't proceed until the returned Future has
+      // completed.
+      return new File("output.txt").writeAsString("contents");
+    });
+
+    schedule(() {
+      return new File("output.txt").readAsString().then((contents) {
+        // The normal unittest matchers can still be used.
+        expect(contents, equals("contents"));
+      });
+    });
+  });
+}
+</code></pre>
+<h2>Setting Up and Tearing Down</h2>
+<p>The <code>scheduled_test</code> package defines its own <a class="crossref" href="scheduled_test.html#setUp">setUp</a> method that works just
+like the one in <code>unittest</code>. Tasks can be scheduled in <a class="crossref" href="scheduled_test.html#setUp">setUp</a>; they'll be
+run before the tasks scheduled by tests in that group. <a class="crossref" href="scheduled_test.html#currentSchedule">currentSchedule</a> is
+also set in the <a class="crossref" href="scheduled_test.html#setUp">setUp</a> callback.</p>
+<p>This package doesn't have an explicit <code>tearDown</code> method. Instead, the
+<code>currentSchedule.onComplete</code> and <code>currentSchedule.onException</code> task queues
+can have tasks scheduled during <a class="crossref" href="scheduled_test.html#setUp">setUp</a>. For example:</p>
+<pre><code>import 'package:scheduled_test/scheduled_test.dart';
+
+void main() {
+  var tempDir;
+  setUp(() {
+    schedule(() {
+      return createTempDir().then((dir) {
+        tempDir = dir;
+      });
+    });
+
+    currentSchedule.onComplete.schedule(() =&gt; deleteDir(tempDir));
+  });
+
+  // ...
+}
+</code></pre>
+<h2>Passing Values Between Tasks</h2>
+<p>It's often useful to use values computed in one task in other tasks that are
+scheduled afterwards. There are two ways to do this. The most
+straightforward is just to define a local variable and assign to it. For
+example:</p>
+<pre><code>import 'package:scheduled_test/scheduled_test.dart';
+
+void main() {
+  test('computeValue returns 12', () {
+    var value;
+
+    schedule(() {
+      return computeValue().then((computedValue) {
+        value = computedValue;
+      });
+    });
+
+    schedule(() =&gt; expect(value, equals(12)));
+  });
+}
+</code></pre>
+<p>However, this doesn't scale well, especially when you start factoring out
+calls to <a class="crossref" href="scheduled_test.html#schedule">schedule</a> into library methods. For that reason, <a class="crossref" href="scheduled_test.html#schedule">schedule</a>
+returns a <code>Future</code> that will complete to the same value as the return
+value of the task. For example:</p>
+<pre><code>import 'package:scheduled_test/scheduled_test.dart';
+
+void main() {
+  test('computeValue returns 12', () {
+    var valueFuture = schedule(() =&gt; computeValue());
+    schedule(() {
+      valueFuture.then((value) =&gt; expect(value, equals(12)));
+    });
+  });
+}
+</code></pre>
+<h2>Out-of-Band Callbacks</h2>
+<p>Sometimes your tests will have callbacks that don't fit into the schedule.
+It's important that errors in these callbacks are still registered, though,
+and that <code>Schedule.onException</code> and <code>Schedule.onComplete</code> still run after
+they finish. When using <code>unittest</code>, you wrap these callbacks with
+<code>expectAsyncN</code>; when using <code>scheduled_test</code>, you use <code>wrapAsync</code> or
+<a class="crossref" href="scheduled_test.html#wrapFuture">wrapFuture</a>.</p>
+<p><code>wrapAsync</code> has two important functions. First, any errors that occur in it
+will be passed into the <code>Schedule</code> instead of causing the whole test to
+crash. They can then be handled by <code>Schedule.onException</code> and
+<code>Schedule.onComplete</code>. Second, a task queue isn't considered finished until
+all of its <code>wrapAsync</code>-wrapped functions have been called. This ensures that
+<code>Schedule.onException</code> and <code>Schedule.onComplete</code> will always run after all
+the test code in the main queue.</p>
+<p>Note that the <code>completes</code>, <code>completion</code>, and <code>throws</code> matchers use
+<code>wrapAsync</code> internally, so they're safe to use in conjunction with scheduled
+tests.</p>
+<p>Here's an example of a test using <code>wrapAsync</code> to catch errors thrown in the
+callback of a fictional <code>startServer</code> function:</p>
+<pre><code>import 'package:scheduled_test/scheduled_test.dart';
+
+void main() {
+  test('sendRequest sends a request', () {
+    startServer(wrapAsync((request) {
+      expect(request.body, equals('payload'));
+      request.response.close();
+    }));
+
+    schedule(() =&gt; sendRequest('payload'));
+  });
+}
+</code></pre>
+<p><a class="crossref" href="scheduled_test.html#wrapFuture">wrapFuture</a> works similarly to <code>wrapAsync</code>, but instead of wrapping a
+single callback it wraps a whole <code>Future</code> chain. Like <code>wrapAsync</code>, it
+ensures that the task queue doesn't complete until the out-of-band chain has
+finished, and that any errors in the chain are piped back into the scheduled
+test. For example:</p>
+<pre><code>import 'package:scheduled_test/scheduled_test.dart';
+
+void main() {
+  test('sendRequest sends a request', () {
+    wrapFuture(server.nextRequest.then((request) {
+      expect(request.body, equals('payload'));
+      expect(request.headers['content-type'], equals('text/plain'));
+    }));
+
+    schedule(() =&gt; sendRequest('payload'));
+  });
+}
+</code></pre>
+<h2>Timeouts</h2>
+<p><code>scheduled_test</code> has a built-in timeout of 30 seconds (configurable via
+<code>Schedule.timeout</code>). This timeout is aware of the structure of the schedule;
+this means that it will reset for each task in a queue, when moving between
+queues, or almost any other sort of interaction with <a class="crossref" href="scheduled_test.html#currentSchedule">currentSchedule</a>. As
+long as the <code>Schedule</code> knows your test is making some sort of progress, it
+won't time out.</p>
+<p>If a single task might take a long time, you can also manually tell the
+<code>Schedule</code> that it's making progress by calling <code>Schedule.heartbeat</code>, which
+will reset the timeout whenever it's called.</p></div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="currentSchedule">
+<button class="show-code">Code</button>
+final Schedule         <strong>currentSchedule</strong> <a class="anchor-link"
+            href="#currentSchedule"
+            title="Permalink to currentSchedule">#</a>
+        </h4>
+        <div class="doc">
+<p>The <code>Schedule</code> for the current test. This is used to add new tasks and
+inspect the state of the schedule.</p>
+<p>This is <code>null</code> when there's no test currently running.</p>
+<pre class="source">
+Schedule get currentSchedule =&gt; _currentSchedule;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Functions</h3>
+<div class="method"><h4 id="wrapFuture">
+<button class="show-code">Code</button>
+<a href="dart_async/Future.html">Future</a> <strong>wrapFuture</strong>(<a href="dart_async/Future.html">Future</a> future) <a class="anchor-link" href="#wrapFuture"
+              title="Permalink to wrapFuture">#</a></h4>
+<div class="doc">
+<p>Like <code>wrapAsync</code>, this ensures that the current task queue waits for
+out-of-band asynchronous code, and that errors raised in that code are
+handled correctly. However, <a class="crossref" href="scheduled_test.html#wrapFuture">wrapFuture</a> wraps a <code>Future</code> chain rather than
+a single callback.</p>
+<p>The returned <code>Future</code> completes to the same value or error as 
+<span class="param">future</span>.</p>
+<pre class="source">
+Future wrapFuture(Future future) {
+ if (currentSchedule == null) {
+   throw new StateError("Unexpected call to wrapFuture with no current "
+       "schedule.");
+ }
+
+ return currentSchedule.wrapFuture(future);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setUp">
+<button class="show-code">Code</button>
+void <strong>setUp</strong>(void setUpFn()) <a class="anchor-link" href="#setUp"
+              title="Permalink to setUp">#</a></h4>
+<div class="doc">
+<p>Register a <a class="crossref" href="scheduled_test.html#setUp">setUp</a> function for a test <a class="crossref" href="scheduled_test.html#group">group</a>. This has the same semantics
+as <code>unittest.setUp</code>. Tasks may be scheduled using <a class="crossref" href="scheduled_test.html#schedule">schedule</a> within
+
+<span class="param">setUpFn</span>, and <a class="crossref" href="scheduled_test.html#currentSchedule">currentSchedule</a> may be accessed as well.</p>
+<p>Note that there is no associated <code>tearDown</code> function. Instead, tasks should
+be scheduled for <code>currentSchedule.onComplete</code> or
+<code>currentSchedule.onException</code>. These tasks will be run after each test's
+schedule is completed.</p>
+<pre class="source">
+void setUp(void setUpFn()) {
+ _setUpScheduledTest(setUpFn);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="schedule">
+<button class="show-code">Code</button>
+<a href="dart_async/Future.html">Future</a> <strong>schedule</strong>(fn(), [<a href="dart_core/String.html">String</a> description]) <a class="anchor-link" href="#schedule"
+              title="Permalink to schedule">#</a></h4>
+<div class="doc">
+<p>Schedules a task, 
+<span class="param">fn</span>, to run asynchronously as part of the main task queue
+of <a class="crossref" href="scheduled_test.html#currentSchedule">currentSchedule</a>. Tasks will be run in the order they're scheduled. If
+
+<span class="param">fn</span> returns a <code>Future</code>, tasks after it won't be run until that <code>Future</code>
+completes.</p>
+<p>The return value will be completed once the scheduled task has finished
+running. Its return value is the same as the return value of 
+<span class="param">fn</span>, or the
+value it completes to if it's a <code>Future</code>.</p>
+<p>If 
+<span class="param">description</span> is passed, it's used to describe the task for debugging
+purposes when an error occurs.</p>
+<p>If this is called when a task queue is currently running, it will run 
+<span class="param">fn</span>
+on the next event loop iteration rather than adding it to a queue. The
+current task will not complete until 
+<span class="param">fn</span> (and any <code>Future</code> it returns) has
+finished running. Any errors in 
+<span class="param">fn</span> will automatically be handled.</p>
+<pre class="source">
+Future schedule(fn(), [String description]) =&gt;
+ currentSchedule.tasks.schedule(fn, description);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="group">
+<button class="show-code">Code</button>
+void <strong>group</strong>(<a href="dart_core/String.html">String</a> description, void body()) <a class="anchor-link" href="#group"
+              title="Permalink to group">#</a></h4>
+<div class="doc">
+<p>Creates a new named group of tests. This has the same semantics as
+<code>unittest.group</code>.</p>
+<pre class="source">
+void group(String description, void body()) {
+ unittest.group(description, () {
+   var wasInGroup = _inGroup;
+   _inGroup = true;
+   _setUpScheduledTest();
+   body();
+   _inGroup = wasInGroup;
+ });
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="solo_test">
+<button class="show-code">Code</button>
+void <strong>solo_test</strong>(<a href="dart_core/String.html">String</a> description, void body()) <a class="anchor-link" href="#solo_test"
+              title="Permalink to solo_test">#</a></h4>
+<div class="doc">
+<p>Creates a new test case with the given description and body that will be the
+only test run in this file. This has the same semantics as
+<code>unittest.solo_test</code>.</p>
+<pre class="source">
+void solo_test(String description, void body()) =&gt;
+ _test(description, body, unittest.solo_test);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="test">
+<button class="show-code">Code</button>
+void <strong>test</strong>(<a href="dart_core/String.html">String</a> description, void body()) <a class="anchor-link" href="#test"
+              title="Permalink to test">#</a></h4>
+<div class="doc">
+<p>Creates a new test case with the given description and body. This has the
+same semantics as <code>unittest.test</code>.</p>
+<pre class="source">
+void test(String description, void body()) =&gt;
+ _test(description, body, unittest.test);
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:05.338</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="client-static.js"></script>
+        </body></html>
+        

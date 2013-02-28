@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+  <Token>
+    <TokenIdentifier><Name>Future</Name><Type>Class</Type><APILanguage>cpp</APILanguage></TokenIdentifier>
+    <Path>dart_async/Future.html</Path>
+  </Token>
+</Tokens>

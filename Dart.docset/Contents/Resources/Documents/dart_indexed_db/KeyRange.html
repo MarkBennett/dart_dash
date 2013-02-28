@@ -1,0 +1,312 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>KeyRange class / dart:indexed_db Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:indexed_db" data-type="KeyRange">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_indexed_db.html">dart:indexed_db</a> &rsaquo; <a href="../dart_indexed_db/KeyRange.html">KeyRange</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><ul class="icon">
+<li><a href="../dart_indexed_db/Cursor.html"><div class="icon-class"></div>Cursor</a></li>
+<li><a href="../dart_indexed_db/CursorWithValue.html"><div class="icon-class"></div>CursorWithValue</a></li>
+<li><a href="../dart_indexed_db/Database.html"><div class="icon-class"></div>Database</a></li>
+<li><a href="../dart_indexed_db/IdbFactory.html"><div class="icon-class"></div>IdbFactory</a></li>
+<li><a href="../dart_indexed_db/Index.html"><div class="icon-class"></div>Index</a></li>
+<li><div class="icon-class"></div><strong>KeyRange</strong></li>
+<li><a href="../dart_indexed_db/ObjectStore.html"><div class="icon-class"></div>ObjectStore</a></li>
+<li><a href="../dart_indexed_db/OpenDBRequest.html"><div class="icon-class"></div>OpenDBRequest</a></li>
+<li><a href="../dart_indexed_db/Request.html"><div class="icon-class"></div>Request</a></li>
+<li><a href="../dart_indexed_db/Transaction.html"><div class="icon-class"></div>Transaction</a></li>
+<li><a href="../dart_indexed_db/VersionChangeEvent.html"><div class="icon-class"></div>VersionChangeEvent</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>KeyRange</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+@DomName('IDBKeyRange')
+class KeyRange native "*IDBKeyRange" {
+ @DomName('IDBKeyRange.only')
+ factory KeyRange.only(/*Key*/ value) =&gt;
+     _KeyRangeFactoryProvider.createKeyRange_only(value);
+
+ @DomName('IDBKeyRange.lowerBound')
+ factory KeyRange.lowerBound(/*Key*/ bound, [bool open = false]) =&gt;
+     _KeyRangeFactoryProvider.createKeyRange_lowerBound(bound, open);
+
+ @DomName('IDBKeyRange.upperBound')
+ factory KeyRange.upperBound(/*Key*/ bound, [bool open = false]) =&gt;
+     _KeyRangeFactoryProvider.createKeyRange_upperBound(bound, open);
+
+ @DomName('KeyRange.bound')
+ factory KeyRange.bound(/*Key*/ lower, /*Key*/ upper,
+                           [bool lowerOpen = false, bool upperOpen = false]) =&gt;
+     _KeyRangeFactoryProvider.createKeyRange_bound(
+         lower, upper, lowerOpen, upperOpen);
+
+
+ @DomName('IDBKeyRange.lower')
+ @DocsEditable
+ final Object lower;
+
+ @DomName('IDBKeyRange.lowerOpen')
+ @DocsEditable
+ final bool lowerOpen;
+
+ @DomName('IDBKeyRange.upper')
+ @DocsEditable
+ final Object upper;
+
+ @DomName('IDBKeyRange.upperOpen')
+ @DocsEditable
+ final bool upperOpen;
+
+ @JSName('bound')
+ @DomName('IDBKeyRange.bound')
+ @DocsEditable
+ static KeyRange bound_(Object lower, Object upper, [bool lowerOpen, bool upperOpen]) native;
+
+ @JSName('lowerBound')
+ @DomName('IDBKeyRange.lowerBound')
+ @DocsEditable
+ static KeyRange lowerBound_(Object bound, [bool open]) native;
+
+ @JSName('only')
+ @DomName('IDBKeyRange.only')
+ @DocsEditable
+ static KeyRange only_(Object value) native;
+
+ @JSName('upperBound')
+ @DomName('IDBKeyRange.upperBound')
+ @DocsEditable
+ static KeyRange upperBound_(Object bound, [bool open]) native;
+
+}
+</pre>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="bound_">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/KeyRange.html">KeyRange</a> <strong>bound_</strong>(<a href="../dart_core/Object.html">Object</a> lower, <a href="../dart_core/Object.html">Object</a> upper, [<a href="../dart_core/bool.html">bool</a> lowerOpen, <a href="../dart_core/bool.html">bool</a> upperOpen]) <a class="anchor-link" href="#bound_"
+              title="Permalink to KeyRange.bound_">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('bound')
+@DomName('IDBKeyRange.bound')
+@DocsEditable
+static KeyRange bound_(Object lower, Object upper, [bool lowerOpen, bool upperOpen]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lowerBound_">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/KeyRange.html">KeyRange</a> <strong>lowerBound_</strong>(<a href="../dart_core/Object.html">Object</a> bound, [<a href="../dart_core/bool.html">bool</a> open]) <a class="anchor-link" href="#lowerBound_"
+              title="Permalink to KeyRange.lowerBound_">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('lowerBound')
+@DomName('IDBKeyRange.lowerBound')
+@DocsEditable
+static KeyRange lowerBound_(Object bound, [bool open]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="only_">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/KeyRange.html">KeyRange</a> <strong>only_</strong>(<a href="../dart_core/Object.html">Object</a> value) <a class="anchor-link" href="#only_"
+              title="Permalink to KeyRange.only_">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('only')
+@DomName('IDBKeyRange.only')
+@DocsEditable
+static KeyRange only_(Object value) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="upperBound_">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/KeyRange.html">KeyRange</a> <strong>upperBound_</strong>(<a href="../dart_core/Object.html">Object</a> bound, [<a href="../dart_core/bool.html">bool</a> open]) <a class="anchor-link" href="#upperBound_"
+              title="Permalink to KeyRange.upperBound_">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('upperBound')
+@DomName('IDBKeyRange.upperBound')
+@DocsEditable
+static KeyRange upperBound_(Object bound, [bool open]) native;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="KeyRange.bound">
+<button class="show-code">Code</button>
+factory <strong>KeyRange.bound</strong>(lower, upper, [<a href="../dart_core/bool.html">bool</a> lowerOpen = false, <a href="../dart_core/bool.html">bool</a> upperOpen = false]) <a class="anchor-link" href="#KeyRange.bound"
+              title="Permalink to KeyRange.KeyRange.bound">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('KeyRange.bound')
+factory KeyRange.bound(/*Key*/ lower, /*Key*/ upper,
+                         [bool lowerOpen = false, bool upperOpen = false]) =&gt;
+   _KeyRangeFactoryProvider.createKeyRange_bound(
+       lower, upper, lowerOpen, upperOpen);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="KeyRange.lowerBound">
+<button class="show-code">Code</button>
+factory <strong>KeyRange.lowerBound</strong>(bound, [<a href="../dart_core/bool.html">bool</a> open = false]) <a class="anchor-link" href="#KeyRange.lowerBound"
+              title="Permalink to KeyRange.KeyRange.lowerBound">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBKeyRange.lowerBound')
+factory KeyRange.lowerBound(/*Key*/ bound, [bool open = false]) =&gt;
+   _KeyRangeFactoryProvider.createKeyRange_lowerBound(bound, open);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="KeyRange.only">
+<button class="show-code">Code</button>
+factory <strong>KeyRange.only</strong>(value) <a class="anchor-link" href="#KeyRange.only"
+              title="Permalink to KeyRange.KeyRange.only">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBKeyRange.only')
+factory KeyRange.only(/*Key*/ value) =&gt;
+   _KeyRangeFactoryProvider.createKeyRange_only(value);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="KeyRange.upperBound">
+<button class="show-code">Code</button>
+factory <strong>KeyRange.upperBound</strong>(bound, [<a href="../dart_core/bool.html">bool</a> open = false]) <a class="anchor-link" href="#KeyRange.upperBound"
+              title="Permalink to KeyRange.KeyRange.upperBound">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBKeyRange.upperBound')
+factory KeyRange.upperBound(/*Key*/ bound, [bool open = false]) =&gt;
+   _KeyRangeFactoryProvider.createKeyRange_upperBound(bound, open);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="lower">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Object.html">Object</a>         <strong>lower</strong> <a class="anchor-link"
+            href="#lower"
+            title="Permalink to KeyRange.lower">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBKeyRange.lower')
+@DocsEditable
+final Object lower
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lowerOpen">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>lowerOpen</strong> <a class="anchor-link"
+            href="#lowerOpen"
+            title="Permalink to KeyRange.lowerOpen">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBKeyRange.lowerOpen')
+@DocsEditable
+final bool lowerOpen
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="upper">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Object.html">Object</a>         <strong>upper</strong> <a class="anchor-link"
+            href="#upper"
+            title="Permalink to KeyRange.upper">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBKeyRange.upper')
+@DocsEditable
+final Object upper
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="upperOpen">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>upperOpen</strong> <a class="anchor-link"
+            href="#upperOpen"
+            title="Permalink to KeyRange.upperOpen">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBKeyRange.upperOpen')
+@DocsEditable
+final bool upperOpen
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:05.350</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

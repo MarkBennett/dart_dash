@@ -1,0 +1,347 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>StreamController&lt;T&gt; class / dart:async Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:async" data-type="StreamController&amp;lt;T&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_async.html">dart:async</a> &rsaquo; <a href="../dart_async/StreamController.html">StreamController&lt;T&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><ul class="icon">
+<li><a href="../dart_async/CollectionSink.html"><div class="icon-class"></div>CollectionSink&lt;T&gt;</a></li>
+<li><a href="../dart_async/Completer.html"><div class="icon-class"></div>Completer&lt;T&gt;</a></li>
+<li><a href="../dart_async/DeferredLibrary.html"><div class="icon-class"></div>DeferredLibrary</a></li>
+<li><a href="../dart_async/EventTransformStream.html"><div class="icon-class"></div>EventTransformStream&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/Future.html"><div class="icon-class"></div>Future&lt;T&gt;</a></li>
+<li><a href="../dart_async/Stream.html"><div class="icon-class"></div>Stream&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamConsumer.html"><div class="icon-class"></div>StreamConsumer&lt;S, T&gt;</a></li>
+<li><div class="icon-class"></div><strong>StreamController&lt;T&gt;</strong></li>
+<li><a href="../dart_async/StreamEventTransformer.html"><div class="icon-class"></div>StreamEventTransformer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamSink.html"><div class="icon-class"></div>StreamSink&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamSinkView.html"><div class="icon-class"></div>StreamSinkView&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamSubscription.html"><div class="icon-class"></div>StreamSubscription&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamTransformer.html"><div class="icon-class"></div>StreamTransformer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamView.html"><div class="icon-class"></div>StreamView&lt;T&gt;</a></li>
+<li><a href="../dart_async/Timer.html"><div class="icon-class"></div>Timer</a></li>
+<li><a href="../dart_async/AsyncError.html"><div class="icon-exception"></div>AsyncError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>StreamController&lt;T&gt;</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A controller with the stream it controls.</p>
+<p>This controller allows sending data, error and done events on
+its <a class="crossref" href="../dart_async/StreamController.html#stream">stream</a>.
+This class can be used to create a simple stream that others
+can listen on, and to push events to that stream.</p>
+<p>It's possible to check whether the stream is paused or not, and whether
+it has subscribers or not, as well as getting a callback when either of
+these change.</p>
+<pre class="source">
+class StreamController&lt;T&gt; implements StreamSink&lt;T&gt; {
+ final _StreamImpl&lt;T&gt; stream;
+
+ /**
+  * A controller with a broadcast [stream]..
+  *
+  * The [onPauseStateChange] function is called when the stream becomes
+  * paused or resumes after being paused. The current pause state can
+  * be read from [isPaused]. Ignored if [:null:].
+  *
+  * The [onSubscriptionStateChange] function is called when the stream
+  * receives its first listener or loses its last. The current subscription
+  * state can be read from [hasSubscribers]. Ignored if [:null:].
+  */
+ StreamController.broadcast({void onPauseStateChange(),
+                             void onSubscriptionStateChange()})
+     : stream = new _MultiControllerStream&lt;T&gt;(onSubscriptionStateChange,
+                                              onPauseStateChange);
+
+ /**
+  * A controller with a [stream] that supports only one single subscriber.
+  *
+  * The controller will buffer all incoming events until the subscriber is
+  * registered.
+  *
+  * The [onPauseStateChange] function is called when the stream becomes
+  * paused or resumes after being paused. The current pause state can
+  * be read from [isPaused]. Ignored if [:null:].
+  *
+  * The [onSubscriptionStateChange] function is called when the stream
+  * receives its first listener or loses its last. The current subscription
+  * state can be read from [hasSubscribers]. Ignored if [:null:].
+  */
+ StreamController({void onPauseStateChange(),
+                   void onSubscriptionStateChange()})
+     : stream = new _SingleControllerStream&lt;T&gt;(onSubscriptionStateChange,
+                                               onPauseStateChange);
+
+ /**
+  * Returns a view of this object that only exposes the [StreamSink] interface.
+  */
+ StreamSink&lt;T&gt; get sink =&gt; new StreamSinkView&lt;T&gt;(this);
+
+ /** Whether one or more active subscribers have requested a pause. */
+ bool get isPaused =&gt; stream._isPaused;
+
+ /** Whether there are currently any subscribers on this [Stream]. */
+ bool get hasSubscribers =&gt; stream._hasSubscribers;
+
+ /**
+  * Send or queue a data event.
+  */
+ void add(T value) =&gt; stream._add(value);
+
+ /**
+  * Send or enqueue an error event.
+  *
+  * If [error] is not an [AsyncError], [error] and an optional [stackTrace]
+  * is combined into an [AsyncError] and sent this stream's listeners.
+  *
+  * Otherwise, if [error] is an [AsyncError], it is used directly as the
+  * error object reported to listeners, and the [stackTrace] is ignored.
+  *
+  * If a subscription has requested to be unsubscribed on errors,
+  * it will be unsubscribed after receiving this event.
+  */
+ void signalError(Object error, [Object stackTrace]) {
+   AsyncError asyncError;
+   if (error is AsyncError) {
+     asyncError = error;
+   } else {
+     asyncError = new AsyncError(error, stackTrace);
+   }
+   stream._signalError(asyncError);
+ }
+
+ /**
+  * Send or enqueue a "done" message.
+  *
+  * The "done" message should be sent at most once by a stream, and it
+  * should be the last message sent.
+  */
+ void close() { stream._close(); }
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_async/StreamSink.html">StreamSink&lt;T&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="StreamController">
+<button class="show-code">Code</button>
+new <strong>StreamController</strong>({void onPauseStateChange(), void onSubscriptionStateChange()}) <a class="anchor-link" href="#StreamController"
+              title="Permalink to StreamController&lt;T&gt;.StreamController">#</a></h4>
+<div class="doc">
+<p>A controller with a <a class="crossref" href="../dart_async/StreamController.html#stream">stream</a> that supports only one single subscriber.</p>
+<p>The controller will buffer all incoming events until the subscriber is
+registered.</p>
+<p>The 
+<span class="param">onPauseStateChange</span> function is called when the stream becomes
+paused or resumes after being paused. The current pause state can
+be read from <a class="crossref" href="../dart_async/StreamController.html#isPaused">isPaused</a>. Ignored if <code>null</code>.</p>
+<p>The 
+<span class="param">onSubscriptionStateChange</span> function is called when the stream
+receives its first listener or loses its last. The current subscription
+state can be read from <a class="crossref" href="../dart_async/StreamController.html#hasSubscribers">hasSubscribers</a>. Ignored if <code>null</code>.</p>
+<pre class="source">
+StreamController({void onPauseStateChange(),
+                 void onSubscriptionStateChange()})
+   : stream = new _SingleControllerStream&lt;T&gt;(onSubscriptionStateChange,
+                                             onPauseStateChange);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="StreamController.broadcast">
+<button class="show-code">Code</button>
+new <strong>StreamController.broadcast</strong>({void onPauseStateChange(), void onSubscriptionStateChange()}) <a class="anchor-link" href="#StreamController.broadcast"
+              title="Permalink to StreamController&lt;T&gt;.StreamController.broadcast">#</a></h4>
+<div class="doc">
+<p>A controller with a broadcast <a class="crossref" href="../dart_async/StreamController.html#stream">stream</a>..</p>
+<p>The 
+<span class="param">onPauseStateChange</span> function is called when the stream becomes
+paused or resumes after being paused. The current pause state can
+be read from <a class="crossref" href="../dart_async/StreamController.html#isPaused">isPaused</a>. Ignored if <code>null</code>.</p>
+<p>The 
+<span class="param">onSubscriptionStateChange</span> function is called when the stream
+receives its first listener or loses its last. The current subscription
+state can be read from <a class="crossref" href="../dart_async/StreamController.html#hasSubscribers">hasSubscribers</a>. Ignored if <code>null</code>.</p>
+<pre class="source">
+StreamController.broadcast({void onPauseStateChange(),
+                           void onSubscriptionStateChange()})
+   : stream = new _MultiControllerStream&lt;T&gt;(onSubscriptionStateChange,
+                                            onPauseStateChange);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="hasSubscribers">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>hasSubscribers</strong> <a class="anchor-link"
+            href="#hasSubscribers"
+            title="Permalink to StreamController&lt;T&gt;.hasSubscribers">#</a>
+        </h4>
+        <div class="doc">
+<p>Whether there are currently any subscribers on this <a class="crossref" href="../dart_async/Stream.html">Stream</a>. </p>
+<pre class="source">
+bool get hasSubscribers =&gt; stream._hasSubscribers;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isPaused">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isPaused</strong> <a class="anchor-link"
+            href="#isPaused"
+            title="Permalink to StreamController&lt;T&gt;.isPaused">#</a>
+        </h4>
+        <div class="doc">
+<p>Whether one or more active subscribers have requested a pause. </p>
+<pre class="source">
+bool get isPaused =&gt; stream._isPaused;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="sink">
+<button class="show-code">Code</button>
+final <a href="../dart_async/StreamSink.html">StreamSink</a>&lt;<a href="../dart_async/StreamController.html">T</a>&gt;         <strong>sink</strong> <a class="anchor-link"
+            href="#sink"
+            title="Permalink to StreamController&lt;T&gt;.sink">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a view of this object that only exposes the <a class="crossref" href="../dart_async/StreamSink.html">StreamSink</a> interface.</p>
+<pre class="source">
+StreamSink&lt;T&gt; get sink =&gt; new StreamSinkView&lt;T&gt;(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stream">
+<button class="show-code">Code</button>
+final <a href="../dart_async/_StreamImpl.html">_StreamImpl</a>&lt;<a href="../dart_async/StreamController.html">T</a>&gt;         <strong>stream</strong> <a class="anchor-link"
+            href="#stream"
+            title="Permalink to StreamController&lt;T&gt;.stream">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+stream
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add">
+<button class="show-code">Code</button>
+void <strong>add</strong>(<a href="../dart_async/StreamController.html">T</a> value) <a class="anchor-link" href="#add"
+              title="Permalink to StreamController&lt;T&gt;.add">#</a></h4>
+<div class="doc">
+<p>Send or queue a data event.</p>
+<pre class="source">
+void add(T value) =&gt; stream._add(value);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="close">
+<button class="show-code">Code</button>
+void <strong>close</strong>() <a class="anchor-link" href="#close"
+              title="Permalink to StreamController&lt;T&gt;.close">#</a></h4>
+<div class="doc">
+<p>Send or enqueue a "done" message.</p>
+<p>The "done" message should be sent at most once by a stream, and it
+should be the last message sent.</p>
+<pre class="source">
+void close() { stream._close(); }
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="signalError">
+<button class="show-code">Code</button>
+void <strong>signalError</strong>(<a href="../dart_core/Object.html">Object</a> error, [<a href="../dart_core/Object.html">Object</a> stackTrace]) <a class="anchor-link" href="#signalError"
+              title="Permalink to StreamController&lt;T&gt;.signalError">#</a></h4>
+<div class="doc">
+<p>Send or enqueue an error event.</p>
+<p>If 
+<span class="param">error</span> is not an <a class="crossref" href="../dart_async/AsyncError.html">AsyncError</a>, 
+<span class="param">error</span> and an optional 
+<span class="param">stackTrace</span>
+is combined into an <a class="crossref" href="../dart_async/AsyncError.html">AsyncError</a> and sent this stream's listeners.</p>
+<p>Otherwise, if 
+<span class="param">error</span> is an <a class="crossref" href="../dart_async/AsyncError.html">AsyncError</a>, it is used directly as the
+error object reported to listeners, and the 
+<span class="param">stackTrace</span> is ignored.</p>
+<p>If a subscription has requested to be unsubscribed on errors,
+it will be unsubscribed after receiving this event.</p>
+<pre class="source">
+void signalError(Object error, [Object stackTrace]) {
+ AsyncError asyncError;
+ if (error is AsyncError) {
+   asyncError = error;
+ } else {
+   asyncError = new AsyncError(error, stackTrace);
+ }
+ stream._signalError(asyncError);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:18.635</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

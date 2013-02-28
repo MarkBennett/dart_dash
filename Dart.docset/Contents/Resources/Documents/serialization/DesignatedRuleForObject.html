@@ -1,0 +1,169 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>DesignatedRuleForObject class / serialization Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="serialization" data-type="DesignatedRuleForObject">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../serialization.html">serialization</a> &rsaquo; <a href="../serialization/DesignatedRuleForObject.html">DesignatedRuleForObject</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><ul class="icon">
+<li><a href="../serialization/BasicRule.html"><div class="icon-class"></div>BasicRule</a></li>
+<li><a href="../serialization/ClosureRule.html"><div class="icon-class"></div>ClosureRule</a></li>
+<li><a href="../serialization/Constructor.html"><div class="icon-class"></div>Constructor</a></li>
+<li><a href="../serialization/ConstructType.html"><div class="icon-interface"></div>ConstructType</a></li>
+<li><a href="../serialization/CustomRule.html"><div class="icon-class"></div>CustomRule</a></li>
+<li><div class="icon-class"></div><strong>DesignatedRuleForObject</strong></li>
+<li><a href="../serialization/Format.html"><div class="icon-class"></div>Format</a></li>
+<li><a href="../serialization/GetStateType.html"><div class="icon-interface"></div>GetStateType</a></li>
+<li><a href="../serialization/ListRule.html"><div class="icon-class"></div>ListRule</a></li>
+<li><a href="../serialization/ListRuleEssential.html"><div class="icon-class"></div>ListRuleEssential</a></li>
+<li><a href="../serialization/MapRule.html"><div class="icon-class"></div>MapRule</a></li>
+<li><a href="../serialization/MirrorRule.html"><div class="icon-class"></div>MirrorRule</a></li>
+<li><a href="../serialization/NamedObjectRule.html"><div class="icon-class"></div>NamedObjectRule</a></li>
+<li><a href="../serialization/NonEssentialStateType.html"><div class="icon-interface"></div>NonEssentialStateType</a></li>
+<li><a href="../serialization/PrimitiveRule.html"><div class="icon-class"></div>PrimitiveRule</a></li>
+<li><a href="../serialization/Reader.html"><div class="icon-class"></div>Reader</a></li>
+<li><a href="../serialization/ReaderOrWriter.html"><div class="icon-class"></div>ReaderOrWriter</a></li>
+<li><a href="../serialization/Reference.html"><div class="icon-class"></div>Reference</a></li>
+<li><a href="../serialization/Serialization.html"><div class="icon-class"></div>Serialization</a></li>
+<li><a href="../serialization/SerializationRule.html"><div class="icon-class"></div>SerializationRule</a></li>
+<li><a href="../serialization/SetWithFunction.html"><div class="icon-interface"></div>SetWithFunction</a></li>
+<li><a href="../serialization/SimpleFlatFormat.html"><div class="icon-class"></div>SimpleFlatFormat</a></li>
+<li><a href="../serialization/SimpleJsonFormat.html"><div class="icon-class"></div>SimpleJsonFormat</a></li>
+<li><a href="../serialization/SimpleMapFormat.html"><div class="icon-class"></div>SimpleMapFormat</a></li>
+<li><a href="../serialization/Trace.html"><div class="icon-class"></div>Trace</a></li>
+<li><a href="../serialization/Writer.html"><div class="icon-class"></div>Writer</a></li>
+<li><a href="../serialization/SerializationException.html"><div class="icon-exception"></div>SerializationException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>DesignatedRuleForObject</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>This is used during tracing to indicate that an object should be processed
+using a particular rule, rather than the one that might ordinarily be
+found for it. This normally only makes sense if the object is uniquely
+referenced, and is a more or less internal collection. See ListRuleEssential
+for an example. It knows how to return its object and how to filter.</p>
+<pre class="source">
+class DesignatedRuleForObject {
+ Function rulePredicate;
+ final target;
+
+ DesignatedRuleForObject(this.target, this.rulePredicate);
+
+ possibleRules(List rules) =&gt; rules.where(rulePredicate).toList();
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="DesignatedRuleForObject">
+<button class="show-code">Code</button>
+new <strong>DesignatedRuleForObject</strong>(target, <a href="../dart_core/Function.html">Function</a> rulePredicate) <a class="anchor-link" href="#DesignatedRuleForObject"
+              title="Permalink to DesignatedRuleForObject.DesignatedRuleForObject">#</a></h4>
+<div class="doc">
+<pre class="source">
+DesignatedRuleForObject(this.target, this.rulePredicate);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="rulePredicate">
+<button class="show-code">Code</button>
+<a href="../dart_core/Function.html">Function</a>         <strong>rulePredicate</strong> <a class="anchor-link"
+            href="#rulePredicate"
+            title="Permalink to DesignatedRuleForObject.rulePredicate">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+rulePredicate
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="target">
+<button class="show-code">Code</button>
+final         <strong>target</strong> <a class="anchor-link"
+            href="#target"
+            title="Permalink to DesignatedRuleForObject.target">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+target
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="possibleRules">
+<button class="show-code">Code</button>
+<strong>possibleRules</strong>(<a href="../dart_core/List.html">List</a> rules) <a class="anchor-link" href="#possibleRules"
+              title="Permalink to DesignatedRuleForObject.possibleRules">#</a></h4>
+<div class="doc">
+<pre class="source">
+possibleRules(List rules) =&gt; rules.where(rulePredicate).toList();
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:07.167</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

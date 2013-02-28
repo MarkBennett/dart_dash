@@ -1,0 +1,277 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>dart:web_audio Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:web_audio">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="index.html">Dart API Reference</a>
+         &rsaquo; <a href="dart_web_audio.html">dart:web_audio</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="args.html">args</a></h2><h2><div class="icon-library"></div><a href="dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><strong>dart:web_audio</strong></h2><ul class="icon">
+<li><a href="dart_web_audio/AnalyserNode.html"><div class="icon-class"></div>AnalyserNode</a></li>
+<li><a href="dart_web_audio/AudioBuffer.html"><div class="icon-class"></div>AudioBuffer</a></li>
+<li><a href="dart_web_audio/AudioBufferCallback.html"><div class="icon-interface"></div>AudioBufferCallback</a></li>
+<li><a href="dart_web_audio/AudioBufferSourceNode.html"><div class="icon-class"></div>AudioBufferSourceNode</a></li>
+<li><a href="dart_web_audio/AudioContext.html"><div class="icon-class"></div>AudioContext</a></li>
+<li><a href="dart_web_audio/AudioDestinationNode.html"><div class="icon-class"></div>AudioDestinationNode</a></li>
+<li><a href="dart_web_audio/AudioGain.html"><div class="icon-class"></div>AudioGain</a></li>
+<li><a href="dart_web_audio/AudioListener.html"><div class="icon-class"></div>AudioListener</a></li>
+<li><a href="dart_web_audio/AudioNode.html"><div class="icon-class"></div>AudioNode</a></li>
+<li><a href="dart_web_audio/AudioParam.html"><div class="icon-class"></div>AudioParam</a></li>
+<li><a href="dart_web_audio/AudioProcessingEvent.html"><div class="icon-class"></div>AudioProcessingEvent</a></li>
+<li><a href="dart_web_audio/AudioSourceNode.html"><div class="icon-class"></div>AudioSourceNode</a></li>
+<li><a href="dart_web_audio/BiquadFilterNode.html"><div class="icon-class"></div>BiquadFilterNode</a></li>
+<li><a href="dart_web_audio/ChannelMergerNode.html"><div class="icon-class"></div>ChannelMergerNode</a></li>
+<li><a href="dart_web_audio/ChannelSplitterNode.html"><div class="icon-class"></div>ChannelSplitterNode</a></li>
+<li><a href="dart_web_audio/ConvolverNode.html"><div class="icon-class"></div>ConvolverNode</a></li>
+<li><a href="dart_web_audio/DelayNode.html"><div class="icon-class"></div>DelayNode</a></li>
+<li><a href="dart_web_audio/DynamicsCompressorNode.html"><div class="icon-class"></div>DynamicsCompressorNode</a></li>
+<li><a href="dart_web_audio/GainNode.html"><div class="icon-class"></div>GainNode</a></li>
+<li><a href="dart_web_audio/MediaElementAudioSourceNode.html"><div class="icon-class"></div>MediaElementAudioSourceNode</a></li>
+<li><a href="dart_web_audio/MediaStreamAudioDestinationNode.html"><div class="icon-class"></div>MediaStreamAudioDestinationNode</a></li>
+<li><a href="dart_web_audio/MediaStreamAudioSourceNode.html"><div class="icon-class"></div>MediaStreamAudioSourceNode</a></li>
+<li><a href="dart_web_audio/OfflineAudioCompletionEvent.html"><div class="icon-class"></div>OfflineAudioCompletionEvent</a></li>
+<li><a href="dart_web_audio/OfflineAudioContext.html"><div class="icon-class"></div>OfflineAudioContext</a></li>
+<li><a href="dart_web_audio/OscillatorNode.html"><div class="icon-class"></div>OscillatorNode</a></li>
+<li><a href="dart_web_audio/PannerNode.html"><div class="icon-class"></div>PannerNode</a></li>
+<li><a href="dart_web_audio/ScriptProcessorNode.html"><div class="icon-class"></div>ScriptProcessorNode</a></li>
+<li><a href="dart_web_audio/WaveShaperNode.html"><div class="icon-class"></div>WaveShaperNode</a></li>
+<li><a href="dart_web_audio/WaveTable.html"><div class="icon-class"></div>WaveTable</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="unittest.html">unittest</a></h2></div>
+<div class="content">
+<h2><strong>dart:web_audio</strong> library</h2>
+<div>
+<h3>Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AnalyserNode.html"><strong>AnalyserNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioBuffer.html"><strong>AudioBuffer</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioBufferSourceNode.html"><strong>AudioBufferSourceNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioContext.html"><strong>AudioContext</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioDestinationNode.html"><strong>AudioDestinationNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioGain.html"><strong>AudioGain</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioListener.html"><strong>AudioListener</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioNode.html"><strong>AudioNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioParam.html"><strong>AudioParam</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioProcessingEvent.html"><strong>AudioProcessingEvent</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioSourceNode.html"><strong>AudioSourceNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/BiquadFilterNode.html"><strong>BiquadFilterNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/ChannelMergerNode.html"><strong>ChannelMergerNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/ChannelSplitterNode.html"><strong>ChannelSplitterNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/ConvolverNode.html"><strong>ConvolverNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/DelayNode.html"><strong>DelayNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/DynamicsCompressorNode.html"><strong>DynamicsCompressorNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/GainNode.html"><strong>GainNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/MediaElementAudioSourceNode.html"><strong>MediaElementAudioSourceNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/MediaStreamAudioDestinationNode.html"><strong>MediaStreamAudioDestinationNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/MediaStreamAudioSourceNode.html"><strong>MediaStreamAudioSourceNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/OfflineAudioCompletionEvent.html"><strong>OfflineAudioCompletionEvent</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/OfflineAudioContext.html"><strong>OfflineAudioContext</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/OscillatorNode.html"><strong>OscillatorNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/PannerNode.html"><strong>PannerNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/ScriptProcessorNode.html"><strong>ScriptProcessorNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/WaveShaperNode.html"><strong>WaveShaperNode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/WaveTable.html"><strong>WaveTable</strong></a>
+          </h4>
+          </div>
+          
+</div>
+<div>
+<h3>Typedefs</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_web_audio/AudioBufferCallback.html"><strong>AudioBufferCallback</strong></a>
+          </h4>
+          </div>
+          
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:00.774</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="client-static.js"></script>
+        </body></html>
+        

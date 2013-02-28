@@ -1,0 +1,849 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ObjectStore class / dart:indexed_db Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:indexed_db" data-type="ObjectStore">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_indexed_db.html">dart:indexed_db</a> &rsaquo; <a href="../dart_indexed_db/ObjectStore.html">ObjectStore</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><ul class="icon">
+<li><a href="../dart_indexed_db/Cursor.html"><div class="icon-class"></div>Cursor</a></li>
+<li><a href="../dart_indexed_db/CursorWithValue.html"><div class="icon-class"></div>CursorWithValue</a></li>
+<li><a href="../dart_indexed_db/Database.html"><div class="icon-class"></div>Database</a></li>
+<li><a href="../dart_indexed_db/IdbFactory.html"><div class="icon-class"></div>IdbFactory</a></li>
+<li><a href="../dart_indexed_db/Index.html"><div class="icon-class"></div>Index</a></li>
+<li><a href="../dart_indexed_db/KeyRange.html"><div class="icon-class"></div>KeyRange</a></li>
+<li><div class="icon-class"></div><strong>ObjectStore</strong></li>
+<li><a href="../dart_indexed_db/OpenDBRequest.html"><div class="icon-class"></div>OpenDBRequest</a></li>
+<li><a href="../dart_indexed_db/Request.html"><div class="icon-class"></div>Request</a></li>
+<li><a href="../dart_indexed_db/Transaction.html"><div class="icon-class"></div>Transaction</a></li>
+<li><a href="../dart_indexed_db/VersionChangeEvent.html"><div class="icon-class"></div>VersionChangeEvent</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ObjectStore</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore')
+class ObjectStore native "*IDBObjectStore" {
+
+ @DomName('IDBObjectStore.add')
+ Future add(value, [key]) {
+   try {
+     var request;
+     if (key != null) {
+       request = $dom_add(value, key);
+     } else {
+       request = $dom_add(value);
+     }
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.clear')
+ Future clear() {
+   try {
+     return _completeRequest($dom_clear());
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.delete')
+ Future delete(key_OR_keyRange){
+   try {
+     return _completeRequest($dom_delete(key_OR_keyRange));
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.count')
+ Future&lt;int&gt; count([key_OR_range]) {
+  try {
+     var request;
+     if (key_OR_range != null) {
+       request = $dom_count(key_OR_range);
+     } else {
+       request = $dom_count();
+     }
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.put')
+ Future put(value, [key]) {
+   try {
+     var request;
+     if (key != null) {
+       request = $dom_put(value, key);
+     } else {
+       request = $dom_put(value);
+     }
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.getObject')
+ Future getObject(key) {
+   try {
+     var request = $dom_getObject(key);
+
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ /**
+  * Creates a stream of cursors over the records in this object store.
+  *
+  * **The stream must be manually advanced by calling [Cursor.next] after
+  * each item or by specifying autoAdvance to be true.**
+  *
+  *     var cursors = objectStore.openCursor().listen(
+  *       (cursor) {
+  *         // ...some processing with the cursor
+  *         cursor.next(); // advance onto the next cursor.
+  *       },
+  *       onDone: () {
+  *         // called when there are no more cursors.
+  *         print('all done!');
+  *       });
+  *
+  * Asynchronous operations which are not related to the current transaction
+  * will cause the transaction to automatically be committed-- all processing
+  * must be done synchronously unless they are additional async requests to
+  * the current transaction.
+  */
+ @DomName('IDBObjectStore.openCursor')
+ Stream&lt;CursorWithValue&gt; openCursor({key, KeyRange range, String direction,
+     bool autoAdvance}) {
+   var key_OR_range = null;
+   if (key != null) {
+     if (range != null) {
+       throw new ArgumentError('Cannot specify both key and range.');
+     }
+     key_OR_range = key;
+   } else {
+     key_OR_range = range;
+   }
+
+   // TODO: try/catch this and return a stream with an immediate error.
+   var request;
+   if (direction == null) {
+     request = $dom_openCursor(key_OR_range);
+   } else {
+     request = $dom_openCursor(key_OR_range, direction);
+   }
+   return _cursorStreamFromResult(request, autoAdvance);
+ }
+
+ @DomName('IDBObjectStore.createIndex')
+ Index createIndex(String name, keyPath, {bool unique, bool multiEntry}) {
+   var options = {};
+   if (unique != null) {
+     options['unique'] = unique;
+   }
+   if (multiEntry != null) {
+     options['multiEntry'] = multiEntry;
+   }
+
+   return $dom_createIndex(name, keyPath, options);
+ }
+
+
+ @DomName('IDBObjectStore.autoIncrement')
+ @DocsEditable
+ final bool autoIncrement;
+
+ @DomName('IDBObjectStore.indexNames')
+ @DocsEditable
+ @Returns('DomStringList')
+ @Creates('DomStringList')
+ final List&lt;String&gt; indexNames;
+
+ @DomName('IDBObjectStore.keyPath')
+ @DocsEditable
+ final dynamic keyPath;
+
+ @DomName('IDBObjectStore.name')
+ @DocsEditable
+ final String name;
+
+ @DomName('IDBObjectStore.transaction')
+ @DocsEditable
+ final Transaction transaction;
+
+ @DomName('IDBObjectStore.add')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request $dom_add(/*any*/ value, [/*any*/ key]) {
+   if (?key) {
+     var value_1 = convertDartToNative_SerializedScriptValue(value);
+     var key_2 = convertDartToNative_SerializedScriptValue(key);
+     return _$dom_add_1(value_1, key_2);
+   }
+   var value_3 = convertDartToNative_SerializedScriptValue(value);
+   return _$dom_add_2(value_3);
+ }
+ @JSName('add')
+ @DomName('IDBObjectStore.add')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request _$dom_add_1(value, key) native;
+ @JSName('add')
+ @DomName('IDBObjectStore.add')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request _$dom_add_2(value) native;
+
+ @JSName('clear')
+ @DomName('IDBObjectStore.clear')
+ @DocsEditable
+ Request $dom_clear() native;
+
+ @JSName('count')
+ @DomName('IDBObjectStore.count')
+ @DocsEditable
+ Request $dom_count([key_OR_range]) native;
+
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index $dom_createIndex(String name, keyPath, [Map options]) {
+   if ((keyPath is List&lt;String&gt; || keyPath == null) &amp;&amp; !?options) {
+     List keyPath_1 = convertDartToNative_StringArray(keyPath);
+     return _$dom_createIndex_1(name, keyPath_1);
+   }
+   if ((keyPath is List&lt;String&gt; || keyPath == null)) {
+     List keyPath_2 = convertDartToNative_StringArray(keyPath);
+     var options_3 = convertDartToNative_Dictionary(options);
+     return _$dom_createIndex_2(name, keyPath_2, options_3);
+   }
+   if ((keyPath is String || keyPath == null) &amp;&amp; !?options) {
+     return _$dom_createIndex_3(name, keyPath);
+   }
+   if ((keyPath is String || keyPath == null)) {
+     var options_4 = convertDartToNative_Dictionary(options);
+     return _$dom_createIndex_4(name, keyPath, options_4);
+   }
+   throw new ArgumentError("Incorrect number or type of arguments");
+ }
+ @JSName('createIndex')
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index _$dom_createIndex_1(name, List keyPath) native;
+ @JSName('createIndex')
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index _$dom_createIndex_2(name, List keyPath, options) native;
+ @JSName('createIndex')
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index _$dom_createIndex_3(name, String keyPath) native;
+ @JSName('createIndex')
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index _$dom_createIndex_4(name, String keyPath, options) native;
+
+ @JSName('delete')
+ @DomName('IDBObjectStore.delete')
+ @DocsEditable
+ Request $dom_delete(key_OR_keyRange) native;
+
+ @DomName('IDBObjectStore.deleteIndex')
+ @DocsEditable
+ void deleteIndex(String name) native;
+
+ @JSName('get')
+ @DomName('IDBObjectStore.get')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @annotation_Creates_SerializedScriptValue
+ Request $dom_getObject(key) native;
+
+ @DomName('IDBObjectStore.index')
+ @DocsEditable
+ Index index(String name) native;
+
+ @JSName('openCursor')
+ @DomName('IDBObjectStore.openCursor')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @Creates('Cursor')
+ Request $dom_openCursor([key_OR_range, String direction]) native;
+
+ @DomName('IDBObjectStore.put')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request $dom_put(/*any*/ value, [/*any*/ key]) {
+   if (?key) {
+     var value_1 = convertDartToNative_SerializedScriptValue(value);
+     var key_2 = convertDartToNative_SerializedScriptValue(key);
+     return _$dom_put_1(value_1, key_2);
+   }
+   var value_3 = convertDartToNative_SerializedScriptValue(value);
+   return _$dom_put_2(value_3);
+ }
+ @JSName('put')
+ @DomName('IDBObjectStore.put')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request _$dom_put_1(value, key) native;
+ @JSName('put')
+ @DomName('IDBObjectStore.put')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request _$dom_put_2(value) native;
+
+
+ /**
+  * Helper for iterating over cursors in a request.
+  */
+ static Stream&lt;Cursor&gt; _cursorStreamFromResult(Request request,
+     bool autoAdvance) {
+   // TODO: need to guarantee that the controller provides the values
+   // immediately as waiting until the next tick will cause the transaction to
+   // close.
+   var controller = new StreamController();
+
+   request.onError.listen((e) {
+     //TODO: Report stacktrace once issue 4061 is resolved.
+     controller.signalError(e);
+   });
+
+   request.onSuccess.listen((e) {
+     Cursor cursor = request.result;
+     if (cursor == null) {
+       controller.close();
+     } else {
+       controller.add(cursor);
+       if (autoAdvance == true) {
+         cursor.next();
+       }
+     }
+   });
+   return controller.stream;
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="autoIncrement">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>autoIncrement</strong> <a class="anchor-link"
+            href="#autoIncrement"
+            title="Permalink to ObjectStore.autoIncrement">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.autoIncrement')
+@DocsEditable
+final bool autoIncrement
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="indexNames">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt;         <strong>indexNames</strong> <a class="anchor-link"
+            href="#indexNames"
+            title="Permalink to ObjectStore.indexNames">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.indexNames')
+@DocsEditable
+@Returns('DomStringList')
+@Creates('DomStringList')
+final List&lt;String&gt; indexNames
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="keyPath">
+<button class="show-code">Code</button>
+final         <strong>keyPath</strong> <a class="anchor-link"
+            href="#keyPath"
+            title="Permalink to ObjectStore.keyPath">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.keyPath')
+@DocsEditable
+final dynamic keyPath
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="name">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>name</strong> <a class="anchor-link"
+            href="#name"
+            title="Permalink to ObjectStore.name">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.name')
+@DocsEditable
+final String name
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="transaction">
+<button class="show-code">Code</button>
+final <a href="../dart_indexed_db/Transaction.html">Transaction</a>         <strong>transaction</strong> <a class="anchor-link"
+            href="#transaction"
+            title="Permalink to ObjectStore.transaction">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.transaction')
+@DocsEditable
+final Transaction transaction
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>add</strong>(value, [key]) <a class="anchor-link" href="#add"
+              title="Permalink to ObjectStore.add">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.add')
+Future add(value, [key]) {
+ try {
+   var request;
+   if (key != null) {
+     request = $dom_add(value, key);
+   } else {
+     request = $dom_add(value);
+   }
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="clear">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>clear</strong>() <a class="anchor-link" href="#clear"
+              title="Permalink to ObjectStore.clear">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.clear')
+Future clear() {
+ try {
+   return _completeRequest($dom_clear());
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="count">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/int.html">int</a>&gt; <strong>count</strong>([key_OR_range]) <a class="anchor-link" href="#count"
+              title="Permalink to ObjectStore.count">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.count')
+Future&lt;int&gt; count([key_OR_range]) {
+try {
+   var request;
+   if (key_OR_range != null) {
+     request = $dom_count(key_OR_range);
+   } else {
+     request = $dom_count();
+   }
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createIndex">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Index.html">Index</a> <strong>createIndex</strong>(<a href="../dart_core/String.html">String</a> name, keyPath, {<a href="../dart_core/bool.html">bool</a> unique, <a href="../dart_core/bool.html">bool</a> multiEntry}) <a class="anchor-link" href="#createIndex"
+              title="Permalink to ObjectStore.createIndex">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.createIndex')
+Index createIndex(String name, keyPath, {bool unique, bool multiEntry}) {
+ var options = {};
+ if (unique != null) {
+   options['unique'] = unique;
+ }
+ if (multiEntry != null) {
+   options['multiEntry'] = multiEntry;
+ }
+
+ return $dom_createIndex(name, keyPath, options);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="delete">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>delete</strong>(key_OR_keyRange) <a class="anchor-link" href="#delete"
+              title="Permalink to ObjectStore.delete">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.delete')
+Future delete(key_OR_keyRange){
+ try {
+   return _completeRequest($dom_delete(key_OR_keyRange));
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="deleteIndex">
+<button class="show-code">Code</button>
+void <strong>deleteIndex</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#deleteIndex"
+              title="Permalink to ObjectStore.deleteIndex">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.deleteIndex')
+@DocsEditable
+void deleteIndex(String name) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getObject">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>getObject</strong>(key) <a class="anchor-link" href="#getObject"
+              title="Permalink to ObjectStore.getObject">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.getObject')
+Future getObject(key) {
+ try {
+   var request = $dom_getObject(key);
+
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="index">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Index.html">Index</a> <strong>index</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#index"
+              title="Permalink to ObjectStore.index">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.index')
+@DocsEditable
+Index index(String name) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="openCursor">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_indexed_db/CursorWithValue.html">CursorWithValue</a>&gt; <strong>openCursor</strong>({key, <a href="../dart_indexed_db/KeyRange.html">KeyRange</a> range, <a href="../dart_core/String.html">String</a> direction, <a href="../dart_core/bool.html">bool</a> autoAdvance}) <a class="anchor-link" href="#openCursor"
+              title="Permalink to ObjectStore.openCursor">#</a></h4>
+<div class="doc">
+<p>Creates a stream of cursors over the records in this object store.</p>
+<p><strong>The stream must be manually advanced by calling <a class="crossref" href="../dart_indexed_db/Cursor.html#next">Cursor.next</a> after
+each item or by specifying autoAdvance to be true.</strong></p>
+<pre><code>var cursors = objectStore.openCursor().listen(
+  (cursor) {
+    // ...some processing with the cursor
+    cursor.next(); // advance onto the next cursor.
+  },
+  onDone: () {
+    // called when there are no more cursors.
+    print('all done!');
+  });
+</code></pre>
+<p>Asynchronous operations which are not related to the current transaction
+will cause the transaction to automatically be committed-- all processing
+must be done synchronously unless they are additional async requests to
+the current transaction.</p>
+<pre class="source">
+@DomName('IDBObjectStore.openCursor')
+Stream&lt;CursorWithValue&gt; openCursor({key, KeyRange range, String direction,
+   bool autoAdvance}) {
+ var key_OR_range = null;
+ if (key != null) {
+   if (range != null) {
+     throw new ArgumentError('Cannot specify both key and range.');
+   }
+   key_OR_range = key;
+ } else {
+   key_OR_range = range;
+ }
+
+ // TODO: try/catch this and return a stream with an immediate error.
+ var request;
+ if (direction == null) {
+   request = $dom_openCursor(key_OR_range);
+ } else {
+   request = $dom_openCursor(key_OR_range, direction);
+ }
+ return _cursorStreamFromResult(request, autoAdvance);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="put">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>put</strong>(value, [key]) <a class="anchor-link" href="#put"
+              title="Permalink to ObjectStore.put">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.put')
+Future put(value, [key]) {
+ try {
+   var request;
+   if (key != null) {
+     request = $dom_put(value, key);
+   } else {
+     request = $dom_put(value);
+   }
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_add">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_add</strong>(value, [key]) <a class="anchor-link" href="#$dom_add"
+              title="Permalink to ObjectStore.$dom_add">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.add')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@_annotation_Creates_IDBKey
+Request $dom_add(/*any*/ value, [/*any*/ key]) {
+ if (?key) {
+   var value_1 = convertDartToNative_SerializedScriptValue(value);
+   var key_2 = convertDartToNative_SerializedScriptValue(key);
+   return _$dom_add_1(value_1, key_2);
+ }
+ var value_3 = convertDartToNative_SerializedScriptValue(value);
+ return _$dom_add_2(value_3);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_clear">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_clear</strong>() <a class="anchor-link" href="#$dom_clear"
+              title="Permalink to ObjectStore.$dom_clear">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('clear')
+@DomName('IDBObjectStore.clear')
+@DocsEditable
+Request $dom_clear() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_count">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_count</strong>([key_OR_range]) <a class="anchor-link" href="#$dom_count"
+              title="Permalink to ObjectStore.$dom_count">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('count')
+@DomName('IDBObjectStore.count')
+@DocsEditable
+Request $dom_count([key_OR_range]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createIndex">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Index.html">Index</a> <strong>$dom_createIndex</strong>(<a href="../dart_core/String.html">String</a> name, keyPath, [<a href="../dart_core/Map.html">Map</a> options]) <a class="anchor-link" href="#$dom_createIndex"
+              title="Permalink to ObjectStore.$dom_createIndex">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.createIndex')
+@DocsEditable
+Index $dom_createIndex(String name, keyPath, [Map options]) {
+ if ((keyPath is List&lt;String&gt; || keyPath == null) &amp;&amp; !?options) {
+   List keyPath_1 = convertDartToNative_StringArray(keyPath);
+   return _$dom_createIndex_1(name, keyPath_1);
+ }
+ if ((keyPath is List&lt;String&gt; || keyPath == null)) {
+   List keyPath_2 = convertDartToNative_StringArray(keyPath);
+   var options_3 = convertDartToNative_Dictionary(options);
+   return _$dom_createIndex_2(name, keyPath_2, options_3);
+ }
+ if ((keyPath is String || keyPath == null) &amp;&amp; !?options) {
+   return _$dom_createIndex_3(name, keyPath);
+ }
+ if ((keyPath is String || keyPath == null)) {
+   var options_4 = convertDartToNative_Dictionary(options);
+   return _$dom_createIndex_4(name, keyPath, options_4);
+ }
+ throw new ArgumentError("Incorrect number or type of arguments");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_delete">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_delete</strong>(key_OR_keyRange) <a class="anchor-link" href="#$dom_delete"
+              title="Permalink to ObjectStore.$dom_delete">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('delete')
+@DomName('IDBObjectStore.delete')
+@DocsEditable
+Request $dom_delete(key_OR_keyRange) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_getObject">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_getObject</strong>(key) <a class="anchor-link" href="#$dom_getObject"
+              title="Permalink to ObjectStore.$dom_getObject">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('get')
+@DomName('IDBObjectStore.get')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@annotation_Creates_SerializedScriptValue
+Request $dom_getObject(key) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_openCursor">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_openCursor</strong>([key_OR_range, <a href="../dart_core/String.html">String</a> direction]) <a class="anchor-link" href="#$dom_openCursor"
+              title="Permalink to ObjectStore.$dom_openCursor">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('openCursor')
+@DomName('IDBObjectStore.openCursor')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@Creates('Cursor')
+Request $dom_openCursor([key_OR_range, String direction]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_put">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_put</strong>(value, [key]) <a class="anchor-link" href="#$dom_put"
+              title="Permalink to ObjectStore.$dom_put">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBObjectStore.put')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@_annotation_Creates_IDBKey
+Request $dom_put(/*any*/ value, [/*any*/ key]) {
+ if (?key) {
+   var value_1 = convertDartToNative_SerializedScriptValue(value);
+   var key_2 = convertDartToNative_SerializedScriptValue(key);
+   return _$dom_put_1(value_1, key_2);
+ }
+ var value_3 = convertDartToNative_SerializedScriptValue(value);
+ return _$dom_put_2(value_3);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:05.342</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

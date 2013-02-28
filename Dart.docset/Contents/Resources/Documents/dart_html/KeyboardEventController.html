@@ -1,0 +1,1047 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>KeyboardEventController class / dart:html Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:html" data-type="KeyboardEventController">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_html.html">dart:html</a> &rsaquo; <a href="../dart_html/KeyboardEventController.html">KeyboardEventController</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><ul class="icon">
+<li><a href="../dart_html/AbstractWorker.html"><div class="icon-class"></div>AbstractWorker</a></li>
+<li><a href="../dart_html/AnchorElement.html"><div class="icon-class"></div>AnchorElement</a></li>
+<li><a href="../dart_html/AnimationEvent.html"><div class="icon-class"></div>AnimationEvent</a></li>
+<li><a href="../dart_html/ApplicationCache.html"><div class="icon-class"></div>ApplicationCache</a></li>
+<li><a href="../dart_html/AreaElement.html"><div class="icon-class"></div>AreaElement</a></li>
+<li><a href="../dart_html/ArrayBuffer.html"><div class="icon-class"></div>ArrayBuffer</a></li>
+<li><a href="../dart_html/ArrayBufferView.html"><div class="icon-class"></div>ArrayBufferView</a></li>
+<li><a href="../dart_html/Attr.html"><div class="icon-class"></div>Attr</a></li>
+<li><a href="../dart_html/AudioElement.html"><div class="icon-class"></div>AudioElement</a></li>
+<li><a href="../dart_html/BarInfo.html"><div class="icon-class"></div>BarInfo</a></li>
+<li><a href="../dart_html/BaseElement.html"><div class="icon-class"></div>BaseElement</a></li>
+<li><a href="../dart_html/BatteryManager.html"><div class="icon-class"></div>BatteryManager</a></li>
+<li><a href="../dart_html/BeforeLoadEvent.html"><div class="icon-class"></div>BeforeLoadEvent</a></li>
+<li><a href="../dart_html/Blob.html"><div class="icon-class"></div>Blob</a></li>
+<li><a href="../dart_html/BodyElement.html"><div class="icon-class"></div>BodyElement</a></li>
+<li><a href="../dart_html/BRElement.html"><div class="icon-class"></div>BRElement</a></li>
+<li><a href="../dart_html/ButtonElement.html"><div class="icon-class"></div>ButtonElement</a></li>
+<li><a href="../dart_html/ButtonInputElement.html"><div class="icon-class"></div>ButtonInputElement</a></li>
+<li><a href="../dart_html/CanvasElement.html"><div class="icon-class"></div>CanvasElement</a></li>
+<li><a href="../dart_html/CanvasGradient.html"><div class="icon-class"></div>CanvasGradient</a></li>
+<li><a href="../dart_html/CanvasPattern.html"><div class="icon-class"></div>CanvasPattern</a></li>
+<li><a href="../dart_html/CanvasRenderingContext.html"><div class="icon-class"></div>CanvasRenderingContext</a></li>
+<li><a href="../dart_html/CanvasRenderingContext2D.html"><div class="icon-class"></div>CanvasRenderingContext2D</a></li>
+<li><a href="../dart_html/CDataSection.html"><div class="icon-class"></div>CDataSection</a></li>
+<li><a href="../dart_html/CharacterData.html"><div class="icon-class"></div>CharacterData</a></li>
+<li><a href="../dart_html/CheckboxInputElement.html"><div class="icon-class"></div>CheckboxInputElement</a></li>
+<li><a href="../dart_html/ClientRect.html"><div class="icon-class"></div>ClientRect</a></li>
+<li><a href="../dart_html/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_html/Comment.html"><div class="icon-class"></div>Comment</a></li>
+<li><a href="../dart_html/CompositionEvent.html"><div class="icon-class"></div>CompositionEvent</a></li>
+<li><a href="../dart_html/Console.html"><div class="icon-class"></div>Console</a></li>
+<li><a href="../dart_html/ContentElement.html"><div class="icon-class"></div>ContentElement</a></li>
+<li><a href="../dart_html/Coordinates.html"><div class="icon-class"></div>Coordinates</a></li>
+<li><a href="../dart_html/Counter.html"><div class="icon-class"></div>Counter</a></li>
+<li><a href="../dart_html/Crypto.html"><div class="icon-class"></div>Crypto</a></li>
+<li><a href="../dart_html/CssCharsetRule.html"><div class="icon-class"></div>CssCharsetRule</a></li>
+<li><a href="../dart_html/CssClassSet.html"><div class="icon-class"></div>CssClassSet</a></li>
+<li><a href="../dart_html/CssFontFaceRule.html"><div class="icon-class"></div>CssFontFaceRule</a></li>
+<li><a href="../dart_html/CssHostRule.html"><div class="icon-class"></div>CssHostRule</a></li>
+<li><a href="../dart_html/CssImportRule.html"><div class="icon-class"></div>CssImportRule</a></li>
+<li><a href="../dart_html/CssKeyframeRule.html"><div class="icon-class"></div>CssKeyframeRule</a></li>
+<li><a href="../dart_html/CssKeyframesRule.html"><div class="icon-class"></div>CssKeyframesRule</a></li>
+<li><a href="../dart_html/CssMatrix.html"><div class="icon-class"></div>CssMatrix</a></li>
+<li><a href="../dart_html/CssMediaRule.html"><div class="icon-class"></div>CssMediaRule</a></li>
+<li><a href="../dart_html/CssPageRule.html"><div class="icon-class"></div>CssPageRule</a></li>
+<li><a href="../dart_html/CssPrimitiveValue.html"><div class="icon-class"></div>CssPrimitiveValue</a></li>
+<li><a href="../dart_html/CssRule.html"><div class="icon-class"></div>CssRule</a></li>
+<li><a href="../dart_html/CssStyleDeclaration.html"><div class="icon-class"></div>CssStyleDeclaration</a></li>
+<li><a href="../dart_html/CssStyleRule.html"><div class="icon-class"></div>CssStyleRule</a></li>
+<li><a href="../dart_html/CssStyleSheet.html"><div class="icon-class"></div>CssStyleSheet</a></li>
+<li><a href="../dart_html/CssTransformValue.html"><div class="icon-class"></div>CssTransformValue</a></li>
+<li><a href="../dart_html/CssUnknownRule.html"><div class="icon-class"></div>CssUnknownRule</a></li>
+<li><a href="../dart_html/CssValue.html"><div class="icon-class"></div>CssValue</a></li>
+<li><a href="../dart_html/CustomEvent.html"><div class="icon-class"></div>CustomEvent</a></li>
+<li><a href="../dart_html/DataListElement.html"><div class="icon-class"></div>DataListElement</a></li>
+<li><a href="../dart_html/DataTransfer.html"><div class="icon-class"></div>DataTransfer</a></li>
+<li><a href="../dart_html/DataTransferItem.html"><div class="icon-class"></div>DataTransferItem</a></li>
+<li><a href="../dart_html/DataTransferItemList.html"><div class="icon-class"></div>DataTransferItemList</a></li>
+<li><a href="../dart_html/DataView.html"><div class="icon-class"></div>DataView</a></li>
+<li><a href="../dart_html/DateInputElement.html"><div class="icon-class"></div>DateInputElement</a></li>
+<li><a href="../dart_html/DedicatedWorkerContext.html"><div class="icon-class"></div>DedicatedWorkerContext</a></li>
+<li><a href="../dart_html/DetailsElement.html"><div class="icon-class"></div>DetailsElement</a></li>
+<li><a href="../dart_html/DeviceMotionEvent.html"><div class="icon-class"></div>DeviceMotionEvent</a></li>
+<li><a href="../dart_html/DeviceOrientationEvent.html"><div class="icon-class"></div>DeviceOrientationEvent</a></li>
+<li><a href="../dart_html/DirectoryEntry.html"><div class="icon-class"></div>DirectoryEntry</a></li>
+<li><a href="../dart_html/DirectoryEntrySync.html"><div class="icon-class"></div>DirectoryEntrySync</a></li>
+<li><a href="../dart_html/DirectoryReader.html"><div class="icon-class"></div>DirectoryReader</a></li>
+<li><a href="../dart_html/DirectoryReaderSync.html"><div class="icon-class"></div>DirectoryReaderSync</a></li>
+<li><a href="../dart_html/DivElement.html"><div class="icon-class"></div>DivElement</a></li>
+<li><a href="../dart_html/DListElement.html"><div class="icon-class"></div>DListElement</a></li>
+<li><a href="../dart_html/Document.html"><div class="icon-class"></div>Document</a></li>
+<li><a href="../dart_html/DocumentFragment.html"><div class="icon-class"></div>DocumentFragment</a></li>
+<li><a href="../dart_html/DocumentType.html"><div class="icon-class"></div>DocumentType</a></li>
+<li><a href="../dart_html/DomImplementation.html"><div class="icon-class"></div>DomImplementation</a></li>
+<li><a href="../dart_html/DomMimeType.html"><div class="icon-class"></div>DomMimeType</a></li>
+<li><a href="../dart_html/DomMimeTypeArray.html"><div class="icon-class"></div>DomMimeTypeArray</a></li>
+<li><a href="../dart_html/DomParser.html"><div class="icon-class"></div>DomParser</a></li>
+<li><a href="../dart_html/DomPlugin.html"><div class="icon-class"></div>DomPlugin</a></li>
+<li><a href="../dart_html/DomPluginArray.html"><div class="icon-class"></div>DomPluginArray</a></li>
+<li><a href="../dart_html/DomPoint.html"><div class="icon-class"></div>DomPoint</a></li>
+<li><a href="../dart_html/DomSelection.html"><div class="icon-class"></div>DomSelection</a></li>
+<li><a href="../dart_html/DomSettableTokenList.html"><div class="icon-class"></div>DomSettableTokenList</a></li>
+<li><a href="../dart_html/DomStringList.html"><div class="icon-class"></div>DomStringList</a></li>
+<li><a href="../dart_html/DomStringMap.html"><div class="icon-class"></div>DomStringMap</a></li>
+<li><a href="../dart_html/DomTokenList.html"><div class="icon-class"></div>DomTokenList</a></li>
+<li><a href="../dart_html/Element.html"><div class="icon-class"></div>Element</a></li>
+<li><a href="../dart_html/ElementTraversal.html"><div class="icon-class"></div>ElementTraversal</a></li>
+<li><a href="../dart_html/EmailInputElement.html"><div class="icon-class"></div>EmailInputElement</a></li>
+<li><a href="../dart_html/EmbedElement.html"><div class="icon-class"></div>EmbedElement</a></li>
+<li><a href="../dart_html/EntityReference.html"><div class="icon-class"></div>EntityReference</a></li>
+<li><a href="../dart_html/EntriesCallback.html"><div class="icon-interface"></div>EntriesCallback</a></li>
+<li><a href="../dart_html/Entry.html"><div class="icon-class"></div>Entry</a></li>
+<li><a href="../dart_html/EntryCallback.html"><div class="icon-interface"></div>EntryCallback</a></li>
+<li><a href="../dart_html/EntrySync.html"><div class="icon-class"></div>EntrySync</a></li>
+<li><a href="../dart_html/ErrorCallback.html"><div class="icon-interface"></div>ErrorCallback</a></li>
+<li><a href="../dart_html/ErrorEvent.html"><div class="icon-class"></div>ErrorEvent</a></li>
+<li><a href="../dart_html/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_html/EventListener.html"><div class="icon-interface"></div>EventListener</a></li>
+<li><a href="../dart_html/Events.html"><div class="icon-class"></div>Events</a></li>
+<li><a href="../dart_html/EventSource.html"><div class="icon-class"></div>EventSource</a></li>
+<li><a href="../dart_html/EventStreamProvider.html"><div class="icon-class"></div>EventStreamProvider&lt;T&gt;</a></li>
+<li><a href="../dart_html/EventTarget.html"><div class="icon-class"></div>EventTarget</a></li>
+<li><a href="../dart_html/ExtTextureFilterAnisotropic.html"><div class="icon-class"></div>ExtTextureFilterAnisotropic</a></li>
+<li><a href="../dart_html/FieldSetElement.html"><div class="icon-class"></div>FieldSetElement</a></li>
+<li><a href="../dart_html/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_html/FileCallback.html"><div class="icon-interface"></div>FileCallback</a></li>
+<li><a href="../dart_html/FileEntry.html"><div class="icon-class"></div>FileEntry</a></li>
+<li><a href="../dart_html/FileEntrySync.html"><div class="icon-class"></div>FileEntrySync</a></li>
+<li><a href="../dart_html/FileList.html"><div class="icon-class"></div>FileList</a></li>
+<li><a href="../dart_html/FileReader.html"><div class="icon-class"></div>FileReader</a></li>
+<li><a href="../dart_html/FileReaderSync.html"><div class="icon-class"></div>FileReaderSync</a></li>
+<li><a href="../dart_html/FileSystem.html"><div class="icon-class"></div>FileSystem</a></li>
+<li><a href="../dart_html/FileSystemCallback.html"><div class="icon-interface"></div>FileSystemCallback</a></li>
+<li><a href="../dart_html/FileSystemSync.html"><div class="icon-class"></div>FileSystemSync</a></li>
+<li><a href="../dart_html/FileUploadInputElement.html"><div class="icon-class"></div>FileUploadInputElement</a></li>
+<li><a href="../dart_html/FileWriter.html"><div class="icon-class"></div>FileWriter</a></li>
+<li><a href="../dart_html/FileWriterCallback.html"><div class="icon-interface"></div>FileWriterCallback</a></li>
+<li><a href="../dart_html/FileWriterSync.html"><div class="icon-class"></div>FileWriterSync</a></li>
+<li><a href="../dart_html/FixedSizeListIterator.html"><div class="icon-class"></div>FixedSizeListIterator&lt;T&gt;</a></li>
+<li><a href="../dart_html/Float32Array.html"><div class="icon-class"></div>Float32Array</a></li>
+<li><a href="../dart_html/Float64Array.html"><div class="icon-class"></div>Float64Array</a></li>
+<li><a href="../dart_html/FocusEvent.html"><div class="icon-class"></div>FocusEvent</a></li>
+<li><a href="../dart_html/FormData.html"><div class="icon-class"></div>FormData</a></li>
+<li><a href="../dart_html/FormElement.html"><div class="icon-class"></div>FormElement</a></li>
+<li><a href="../dart_html/Gamepad.html"><div class="icon-class"></div>Gamepad</a></li>
+<li><a href="../dart_html/Geolocation.html"><div class="icon-class"></div>Geolocation</a></li>
+<li><a href="../dart_html/Geoposition.html"><div class="icon-class"></div>Geoposition</a></li>
+<li><a href="../dart_html/HashChangeEvent.html"><div class="icon-class"></div>HashChangeEvent</a></li>
+<li><a href="../dart_html/HeadElement.html"><div class="icon-class"></div>HeadElement</a></li>
+<li><a href="../dart_html/HeadingElement.html"><div class="icon-class"></div>HeadingElement</a></li>
+<li><a href="../dart_html/HiddenInputElement.html"><div class="icon-class"></div>HiddenInputElement</a></li>
+<li><a href="../dart_html/History.html"><div class="icon-class"></div>History</a></li>
+<li><a href="../dart_html/HistoryBase.html"><div class="icon-class"></div>HistoryBase</a></li>
+<li><a href="../dart_html/HRElement.html"><div class="icon-class"></div>HRElement</a></li>
+<li><a href="../dart_html/HtmlAllCollection.html"><div class="icon-class"></div>HtmlAllCollection</a></li>
+<li><a href="../dart_html/HtmlCollection.html"><div class="icon-class"></div>HtmlCollection</a></li>
+<li><a href="../dart_html/HtmlDocument.html"><div class="icon-class"></div>HtmlDocument</a></li>
+<li><a href="../dart_html/HtmlElement.html"><div class="icon-class"></div>HtmlElement</a></li>
+<li><a href="../dart_html/HtmlFormControlsCollection.html"><div class="icon-class"></div>HtmlFormControlsCollection</a></li>
+<li><a href="../dart_html/HtmlOptionsCollection.html"><div class="icon-class"></div>HtmlOptionsCollection</a></li>
+<li><a href="../dart_html/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_html/HttpRequestProgressEvent.html"><div class="icon-class"></div>HttpRequestProgressEvent</a></li>
+<li><a href="../dart_html/HttpRequestUpload.html"><div class="icon-class"></div>HttpRequestUpload</a></li>
+<li><a href="../dart_html/IFrameElement.html"><div class="icon-class"></div>IFrameElement</a></li>
+<li><a href="../dart_html/ImageButtonInputElement.html"><div class="icon-class"></div>ImageButtonInputElement</a></li>
+<li><a href="../dart_html/ImageData.html"><div class="icon-class"></div>ImageData</a></li>
+<li><a href="../dart_html/ImageElement.html"><div class="icon-class"></div>ImageElement</a></li>
+<li><a href="../dart_html/InputElement.html"><div class="icon-class"></div>InputElement</a></li>
+<li><a href="../dart_html/InputElementBase.html"><div class="icon-class"></div>InputElementBase</a></li>
+<li><a href="../dart_html/Int16Array.html"><div class="icon-class"></div>Int16Array</a></li>
+<li><a href="../dart_html/Int32Array.html"><div class="icon-class"></div>Int32Array</a></li>
+<li><a href="../dart_html/Int8Array.html"><div class="icon-class"></div>Int8Array</a></li>
+<li><a href="../dart_html/JavaScriptCallFrame.html"><div class="icon-class"></div>JavaScriptCallFrame</a></li>
+<li><a href="../dart_html/KeyboardEvent.html"><div class="icon-class"></div>KeyboardEvent</a></li>
+<li><div class="icon-class"></div><strong>KeyboardEventController</strong></li>
+<li><a href="../dart_html/KeyCode.html"><div class="icon-class"></div>KeyCode</a></li>
+<li><a href="../dart_html/KeyEvent.html"><div class="icon-class"></div>KeyEvent</a></li>
+<li><a href="../dart_html/KeygenElement.html"><div class="icon-class"></div>KeygenElement</a></li>
+<li><a href="../dart_html/KeyLocation.html"><div class="icon-class"></div>KeyLocation</a></li>
+<li><a href="../dart_html/KeyName.html"><div class="icon-class"></div>KeyName</a></li>
+<li><a href="../dart_html/LabelElement.html"><div class="icon-class"></div>LabelElement</a></li>
+<li><a href="../dart_html/LegendElement.html"><div class="icon-class"></div>LegendElement</a></li>
+<li><a href="../dart_html/LIElement.html"><div class="icon-class"></div>LIElement</a></li>
+<li><a href="../dart_html/LinkElement.html"><div class="icon-class"></div>LinkElement</a></li>
+<li><a href="../dart_html/LocalDateTimeInputElement.html"><div class="icon-class"></div>LocalDateTimeInputElement</a></li>
+<li><a href="../dart_html/LocalMediaStream.html"><div class="icon-class"></div>LocalMediaStream</a></li>
+<li><a href="../dart_html/Location.html"><div class="icon-class"></div>Location</a></li>
+<li><a href="../dart_html/LocationBase.html"><div class="icon-class"></div>LocationBase</a></li>
+<li><a href="../dart_html/MapElement.html"><div class="icon-class"></div>MapElement</a></li>
+<li><a href="../dart_html/MediaController.html"><div class="icon-class"></div>MediaController</a></li>
+<li><a href="../dart_html/MediaElement.html"><div class="icon-class"></div>MediaElement</a></li>
+<li><a href="../dart_html/MediaKeyEvent.html"><div class="icon-class"></div>MediaKeyEvent</a></li>
+<li><a href="../dart_html/MediaList.html"><div class="icon-class"></div>MediaList</a></li>
+<li><a href="../dart_html/MediaQueryList.html"><div class="icon-class"></div>MediaQueryList</a></li>
+<li><a href="../dart_html/MediaQueryListListener.html"><div class="icon-class"></div>MediaQueryListListener</a></li>
+<li><a href="../dart_html/MediaSource.html"><div class="icon-class"></div>MediaSource</a></li>
+<li><a href="../dart_html/MediaStream.html"><div class="icon-class"></div>MediaStream</a></li>
+<li><a href="../dart_html/MediaStreamEvent.html"><div class="icon-class"></div>MediaStreamEvent</a></li>
+<li><a href="../dart_html/MediaStreamTrack.html"><div class="icon-class"></div>MediaStreamTrack</a></li>
+<li><a href="../dart_html/MediaStreamTrackEvent.html"><div class="icon-class"></div>MediaStreamTrackEvent</a></li>
+<li><a href="../dart_html/MemoryInfo.html"><div class="icon-class"></div>MemoryInfo</a></li>
+<li><a href="../dart_html/MenuElement.html"><div class="icon-class"></div>MenuElement</a></li>
+<li><a href="../dart_html/MessageChannel.html"><div class="icon-class"></div>MessageChannel</a></li>
+<li><a href="../dart_html/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_html/MessagePort.html"><div class="icon-class"></div>MessagePort</a></li>
+<li><a href="../dart_html/Metadata.html"><div class="icon-class"></div>Metadata</a></li>
+<li><a href="../dart_html/MetadataCallback.html"><div class="icon-interface"></div>MetadataCallback</a></li>
+<li><a href="../dart_html/MetaElement.html"><div class="icon-class"></div>MetaElement</a></li>
+<li><a href="../dart_html/MeterElement.html"><div class="icon-class"></div>MeterElement</a></li>
+<li><a href="../dart_html/ModElement.html"><div class="icon-class"></div>ModElement</a></li>
+<li><a href="../dart_html/MonthInputElement.html"><div class="icon-class"></div>MonthInputElement</a></li>
+<li><a href="../dart_html/MouseEvent.html"><div class="icon-class"></div>MouseEvent</a></li>
+<li><a href="../dart_html/MutationCallback.html"><div class="icon-interface"></div>MutationCallback</a></li>
+<li><a href="../dart_html/MutationEvent.html"><div class="icon-class"></div>MutationEvent</a></li>
+<li><a href="../dart_html/MutationObserver.html"><div class="icon-class"></div>MutationObserver</a></li>
+<li><a href="../dart_html/MutationRecord.html"><div class="icon-class"></div>MutationRecord</a></li>
+<li><a href="../dart_html/Navigator.html"><div class="icon-class"></div>Navigator</a></li>
+<li><a href="../dart_html/Node.html"><div class="icon-class"></div>Node</a></li>
+<li><a href="../dart_html/NodeFilter.html"><div class="icon-class"></div>NodeFilter</a></li>
+<li><a href="../dart_html/NodeIterator.html"><div class="icon-class"></div>NodeIterator</a></li>
+<li><a href="../dart_html/NodeList.html"><div class="icon-class"></div>NodeList</a></li>
+<li><a href="../dart_html/Notation.html"><div class="icon-class"></div>Notation</a></li>
+<li><a href="../dart_html/Notification.html"><div class="icon-class"></div>Notification</a></li>
+<li><a href="../dart_html/NotificationCenter.html"><div class="icon-class"></div>NotificationCenter</a></li>
+<li><a href="../dart_html/NotificationPermissionCallback.html"><div class="icon-interface"></div>NotificationPermissionCallback</a></li>
+<li><a href="../dart_html/NumberInputElement.html"><div class="icon-class"></div>NumberInputElement</a></li>
+<li><a href="../dart_html/ObjectElement.html"><div class="icon-class"></div>ObjectElement</a></li>
+<li><a href="../dart_html/OesElementIndexUint.html"><div class="icon-class"></div>OesElementIndexUint</a></li>
+<li><a href="../dart_html/OesStandardDerivatives.html"><div class="icon-class"></div>OesStandardDerivatives</a></li>
+<li><a href="../dart_html/OesTextureFloat.html"><div class="icon-class"></div>OesTextureFloat</a></li>
+<li><a href="../dart_html/OesVertexArrayObject.html"><div class="icon-class"></div>OesVertexArrayObject</a></li>
+<li><a href="../dart_html/OListElement.html"><div class="icon-class"></div>OListElement</a></li>
+<li><a href="../dart_html/OptGroupElement.html"><div class="icon-class"></div>OptGroupElement</a></li>
+<li><a href="../dart_html/OptionElement.html"><div class="icon-class"></div>OptionElement</a></li>
+<li><a href="../dart_html/OutputElement.html"><div class="icon-class"></div>OutputElement</a></li>
+<li><a href="../dart_html/OverflowEvent.html"><div class="icon-class"></div>OverflowEvent</a></li>
+<li><a href="../dart_html/PagePopupController.html"><div class="icon-class"></div>PagePopupController</a></li>
+<li><a href="../dart_html/PageTransitionEvent.html"><div class="icon-class"></div>PageTransitionEvent</a></li>
+<li><a href="../dart_html/ParagraphElement.html"><div class="icon-class"></div>ParagraphElement</a></li>
+<li><a href="../dart_html/ParamElement.html"><div class="icon-class"></div>ParamElement</a></li>
+<li><a href="../dart_html/PasswordInputElement.html"><div class="icon-class"></div>PasswordInputElement</a></li>
+<li><a href="../dart_html/Performance.html"><div class="icon-class"></div>Performance</a></li>
+<li><a href="../dart_html/PerformanceNavigation.html"><div class="icon-class"></div>PerformanceNavigation</a></li>
+<li><a href="../dart_html/PerformanceTiming.html"><div class="icon-class"></div>PerformanceTiming</a></li>
+<li><a href="../dart_html/PopStateEvent.html"><div class="icon-class"></div>PopStateEvent</a></li>
+<li><a href="../dart_html/PreElement.html"><div class="icon-class"></div>PreElement</a></li>
+<li><a href="../dart_html/ProcessingInstruction.html"><div class="icon-class"></div>ProcessingInstruction</a></li>
+<li><a href="../dart_html/ProgressElement.html"><div class="icon-class"></div>ProgressElement</a></li>
+<li><a href="../dart_html/ProgressEvent.html"><div class="icon-class"></div>ProgressEvent</a></li>
+<li><a href="../dart_html/QuoteElement.html"><div class="icon-class"></div>QuoteElement</a></li>
+<li><a href="../dart_html/RadioButtonInputElement.html"><div class="icon-class"></div>RadioButtonInputElement</a></li>
+<li><a href="../dart_html/RadioNodeList.html"><div class="icon-class"></div>RadioNodeList</a></li>
+<li><a href="../dart_html/Range.html"><div class="icon-class"></div>Range</a></li>
+<li><a href="../dart_html/RangeInputElement.html"><div class="icon-class"></div>RangeInputElement</a></li>
+<li><a href="../dart_html/RangeInputElementBase.html"><div class="icon-class"></div>RangeInputElementBase</a></li>
+<li><a href="../dart_html/ReadyState.html"><div class="icon-class"></div>ReadyState</a></li>
+<li><a href="../dart_html/ReceivePortSync.html"><div class="icon-class"></div>ReceivePortSync</a></li>
+<li><a href="../dart_html/Rect.html"><div class="icon-class"></div>Rect</a></li>
+<li><a href="../dart_html/RequestAnimationFrameCallback.html"><div class="icon-interface"></div>RequestAnimationFrameCallback</a></li>
+<li><a href="../dart_html/ResetButtonInputElement.html"><div class="icon-class"></div>ResetButtonInputElement</a></li>
+<li><a href="../dart_html/RgbColor.html"><div class="icon-class"></div>RgbColor</a></li>
+<li><a href="../dart_html/RtcDataChannel.html"><div class="icon-class"></div>RtcDataChannel</a></li>
+<li><a href="../dart_html/RtcDataChannelEvent.html"><div class="icon-class"></div>RtcDataChannelEvent</a></li>
+<li><a href="../dart_html/RtcdtmfSender.html"><div class="icon-class"></div>RtcdtmfSender</a></li>
+<li><a href="../dart_html/RtcdtmfToneChangeEvent.html"><div class="icon-class"></div>RtcdtmfToneChangeEvent</a></li>
+<li><a href="../dart_html/RtcErrorCallback.html"><div class="icon-interface"></div>RtcErrorCallback</a></li>
+<li><a href="../dart_html/RtcIceCandidate.html"><div class="icon-class"></div>RtcIceCandidate</a></li>
+<li><a href="../dart_html/RtcIceCandidateEvent.html"><div class="icon-class"></div>RtcIceCandidateEvent</a></li>
+<li><a href="../dart_html/RtcPeerConnection.html"><div class="icon-class"></div>RtcPeerConnection</a></li>
+<li><a href="../dart_html/RtcSessionDescription.html"><div class="icon-class"></div>RtcSessionDescription</a></li>
+<li><a href="../dart_html/RtcSessionDescriptionCallback.html"><div class="icon-interface"></div>RtcSessionDescriptionCallback</a></li>
+<li><a href="../dart_html/RtcStatsCallback.html"><div class="icon-interface"></div>RtcStatsCallback</a></li>
+<li><a href="../dart_html/RtcStatsElement.html"><div class="icon-class"></div>RtcStatsElement</a></li>
+<li><a href="../dart_html/RtcStatsReport.html"><div class="icon-class"></div>RtcStatsReport</a></li>
+<li><a href="../dart_html/RtcStatsResponse.html"><div class="icon-class"></div>RtcStatsResponse</a></li>
+<li><a href="../dart_html/Screen.html"><div class="icon-class"></div>Screen</a></li>
+<li><a href="../dart_html/ScriptElement.html"><div class="icon-class"></div>ScriptElement</a></li>
+<li><a href="../dart_html/ScriptProfile.html"><div class="icon-class"></div>ScriptProfile</a></li>
+<li><a href="../dart_html/ScriptProfileNode.html"><div class="icon-class"></div>ScriptProfileNode</a></li>
+<li><a href="../dart_html/ScrollAlignment.html"><div class="icon-class"></div>ScrollAlignment</a></li>
+<li><a href="../dart_html/SearchInputElement.html"><div class="icon-class"></div>SearchInputElement</a></li>
+<li><a href="../dart_html/SelectElement.html"><div class="icon-class"></div>SelectElement</a></li>
+<li><a href="../dart_html/ShadowElement.html"><div class="icon-class"></div>ShadowElement</a></li>
+<li><a href="../dart_html/ShadowRoot.html"><div class="icon-class"></div>ShadowRoot</a></li>
+<li><a href="../dart_html/SharedWorker.html"><div class="icon-class"></div>SharedWorker</a></li>
+<li><a href="../dart_html/SharedWorkerContext.html"><div class="icon-class"></div>SharedWorkerContext</a></li>
+<li><a href="../dart_html/SourceBuffer.html"><div class="icon-class"></div>SourceBuffer</a></li>
+<li><a href="../dart_html/SourceBufferList.html"><div class="icon-class"></div>SourceBufferList</a></li>
+<li><a href="../dart_html/SourceElement.html"><div class="icon-class"></div>SourceElement</a></li>
+<li><a href="../dart_html/SpanElement.html"><div class="icon-class"></div>SpanElement</a></li>
+<li><a href="../dart_html/SpeechGrammar.html"><div class="icon-class"></div>SpeechGrammar</a></li>
+<li><a href="../dart_html/SpeechGrammarList.html"><div class="icon-class"></div>SpeechGrammarList</a></li>
+<li><a href="../dart_html/SpeechInputEvent.html"><div class="icon-class"></div>SpeechInputEvent</a></li>
+<li><a href="../dart_html/SpeechInputResult.html"><div class="icon-class"></div>SpeechInputResult</a></li>
+<li><a href="../dart_html/SpeechRecognition.html"><div class="icon-class"></div>SpeechRecognition</a></li>
+<li><a href="../dart_html/SpeechRecognitionAlternative.html"><div class="icon-class"></div>SpeechRecognitionAlternative</a></li>
+<li><a href="../dart_html/SpeechRecognitionEvent.html"><div class="icon-class"></div>SpeechRecognitionEvent</a></li>
+<li><a href="../dart_html/SpeechRecognitionResult.html"><div class="icon-class"></div>SpeechRecognitionResult</a></li>
+<li><a href="../dart_html/Storage.html"><div class="icon-class"></div>Storage</a></li>
+<li><a href="../dart_html/StorageEvent.html"><div class="icon-class"></div>StorageEvent</a></li>
+<li><a href="../dart_html/StorageInfo.html"><div class="icon-class"></div>StorageInfo</a></li>
+<li><a href="../dart_html/StorageInfoErrorCallback.html"><div class="icon-interface"></div>StorageInfoErrorCallback</a></li>
+<li><a href="../dart_html/StorageInfoQuotaCallback.html"><div class="icon-interface"></div>StorageInfoQuotaCallback</a></li>
+<li><a href="../dart_html/StorageInfoUsageCallback.html"><div class="icon-interface"></div>StorageInfoUsageCallback</a></li>
+<li><a href="../dart_html/StringCallback.html"><div class="icon-interface"></div>StringCallback</a></li>
+<li><a href="../dart_html/StyleElement.html"><div class="icon-class"></div>StyleElement</a></li>
+<li><a href="../dart_html/StyleMedia.html"><div class="icon-class"></div>StyleMedia</a></li>
+<li><a href="../dart_html/StyleSheet.html"><div class="icon-class"></div>StyleSheet</a></li>
+<li><a href="../dart_html/SubmitButtonInputElement.html"><div class="icon-class"></div>SubmitButtonInputElement</a></li>
+<li><a href="../dart_html/TableCaptionElement.html"><div class="icon-class"></div>TableCaptionElement</a></li>
+<li><a href="../dart_html/TableCellElement.html"><div class="icon-class"></div>TableCellElement</a></li>
+<li><a href="../dart_html/TableColElement.html"><div class="icon-class"></div>TableColElement</a></li>
+<li><a href="../dart_html/TableElement.html"><div class="icon-class"></div>TableElement</a></li>
+<li><a href="../dart_html/TableRowElement.html"><div class="icon-class"></div>TableRowElement</a></li>
+<li><a href="../dart_html/TableSectionElement.html"><div class="icon-class"></div>TableSectionElement</a></li>
+<li><a href="../dart_html/TelephoneInputElement.html"><div class="icon-class"></div>TelephoneInputElement</a></li>
+<li><a href="../dart_html/Text.html"><div class="icon-class"></div>Text</a></li>
+<li><a href="../dart_html/TextAreaElement.html"><div class="icon-class"></div>TextAreaElement</a></li>
+<li><a href="../dart_html/TextEvent.html"><div class="icon-class"></div>TextEvent</a></li>
+<li><a href="../dart_html/TextInputElement.html"><div class="icon-class"></div>TextInputElement</a></li>
+<li><a href="../dart_html/TextInputElementBase.html"><div class="icon-class"></div>TextInputElementBase</a></li>
+<li><a href="../dart_html/TextMetrics.html"><div class="icon-class"></div>TextMetrics</a></li>
+<li><a href="../dart_html/TextTrack.html"><div class="icon-class"></div>TextTrack</a></li>
+<li><a href="../dart_html/TextTrackCue.html"><div class="icon-class"></div>TextTrackCue</a></li>
+<li><a href="../dart_html/TextTrackCueList.html"><div class="icon-class"></div>TextTrackCueList</a></li>
+<li><a href="../dart_html/TextTrackList.html"><div class="icon-class"></div>TextTrackList</a></li>
+<li><a href="../dart_html/TimeInputElement.html"><div class="icon-class"></div>TimeInputElement</a></li>
+<li><a href="../dart_html/TimeoutHandler.html"><div class="icon-interface"></div>TimeoutHandler</a></li>
+<li><a href="../dart_html/TimeRanges.html"><div class="icon-class"></div>TimeRanges</a></li>
+<li><a href="../dart_html/TitleElement.html"><div class="icon-class"></div>TitleElement</a></li>
+<li><a href="../dart_html/Touch.html"><div class="icon-class"></div>Touch</a></li>
+<li><a href="../dart_html/TouchEvent.html"><div class="icon-class"></div>TouchEvent</a></li>
+<li><a href="../dart_html/TouchList.html"><div class="icon-class"></div>TouchList</a></li>
+<li><a href="../dart_html/TrackElement.html"><div class="icon-class"></div>TrackElement</a></li>
+<li><a href="../dart_html/TrackEvent.html"><div class="icon-class"></div>TrackEvent</a></li>
+<li><a href="../dart_html/TransitionEvent.html"><div class="icon-class"></div>TransitionEvent</a></li>
+<li><a href="../dart_html/TreeWalker.html"><div class="icon-class"></div>TreeWalker</a></li>
+<li><a href="../dart_html/UIEvent.html"><div class="icon-class"></div>UIEvent</a></li>
+<li><a href="../dart_html/Uint16Array.html"><div class="icon-class"></div>Uint16Array</a></li>
+<li><a href="../dart_html/Uint32Array.html"><div class="icon-class"></div>Uint32Array</a></li>
+<li><a href="../dart_html/Uint8Array.html"><div class="icon-class"></div>Uint8Array</a></li>
+<li><a href="../dart_html/Uint8ClampedArray.html"><div class="icon-class"></div>Uint8ClampedArray</a></li>
+<li><a href="../dart_html/UListElement.html"><div class="icon-class"></div>UListElement</a></li>
+<li><a href="../dart_html/UnknownElement.html"><div class="icon-class"></div>UnknownElement</a></li>
+<li><a href="../dart_html/Url.html"><div class="icon-class"></div>Url</a></li>
+<li><a href="../dart_html/UrlInputElement.html"><div class="icon-class"></div>UrlInputElement</a></li>
+<li><a href="../dart_html/ValidityState.html"><div class="icon-class"></div>ValidityState</a></li>
+<li><a href="../dart_html/VideoElement.html"><div class="icon-class"></div>VideoElement</a></li>
+<li><a href="../dart_html/VoidCallback.html"><div class="icon-interface"></div>VoidCallback</a></li>
+<li><a href="../dart_html/WebGLActiveInfo.html"><div class="icon-class"></div>WebGLActiveInfo</a></li>
+<li><a href="../dart_html/WebGLBuffer.html"><div class="icon-class"></div>WebGLBuffer</a></li>
+<li><a href="../dart_html/WebGLCompressedTextureS3TC.html"><div class="icon-class"></div>WebGLCompressedTextureS3TC</a></li>
+<li><a href="../dart_html/WebGLContextAttributes.html"><div class="icon-class"></div>WebGLContextAttributes</a></li>
+<li><a href="../dart_html/WebGLContextEvent.html"><div class="icon-class"></div>WebGLContextEvent</a></li>
+<li><a href="../dart_html/WebGLDebugRendererInfo.html"><div class="icon-class"></div>WebGLDebugRendererInfo</a></li>
+<li><a href="../dart_html/WebGLDebugShaders.html"><div class="icon-class"></div>WebGLDebugShaders</a></li>
+<li><a href="../dart_html/WebGLDepthTexture.html"><div class="icon-class"></div>WebGLDepthTexture</a></li>
+<li><a href="../dart_html/WebGLFramebuffer.html"><div class="icon-class"></div>WebGLFramebuffer</a></li>
+<li><a href="../dart_html/WebGLLoseContext.html"><div class="icon-class"></div>WebGLLoseContext</a></li>
+<li><a href="../dart_html/WebGLProgram.html"><div class="icon-class"></div>WebGLProgram</a></li>
+<li><a href="../dart_html/WebGLRenderbuffer.html"><div class="icon-class"></div>WebGLRenderbuffer</a></li>
+<li><a href="../dart_html/WebGLRenderingContext.html"><div class="icon-class"></div>WebGLRenderingContext</a></li>
+<li><a href="../dart_html/WebGLShader.html"><div class="icon-class"></div>WebGLShader</a></li>
+<li><a href="../dart_html/WebGLShaderPrecisionFormat.html"><div class="icon-class"></div>WebGLShaderPrecisionFormat</a></li>
+<li><a href="../dart_html/WebGLTexture.html"><div class="icon-class"></div>WebGLTexture</a></li>
+<li><a href="../dart_html/WebGLUniformLocation.html"><div class="icon-class"></div>WebGLUniformLocation</a></li>
+<li><a href="../dart_html/WebGLVertexArrayObject.html"><div class="icon-class"></div>WebGLVertexArrayObject</a></li>
+<li><a href="../dart_html/WebKitCssFilterRule.html"><div class="icon-class"></div>WebKitCssFilterRule</a></li>
+<li><a href="../dart_html/WebKitCssFilterValue.html"><div class="icon-class"></div>WebKitCssFilterValue</a></li>
+<li><a href="../dart_html/WebKitCssMixFunctionValue.html"><div class="icon-class"></div>WebKitCssMixFunctionValue</a></li>
+<li><a href="../dart_html/WebKitNamedFlow.html"><div class="icon-class"></div>WebKitNamedFlow</a></li>
+<li><a href="../dart_html/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_html/WeekInputElement.html"><div class="icon-class"></div>WeekInputElement</a></li>
+<li><a href="../dart_html/WheelEvent.html"><div class="icon-class"></div>WheelEvent</a></li>
+<li><a href="../dart_html/Window.html"><div class="icon-class"></div>Window</a></li>
+<li><a href="../dart_html/WindowBase.html"><div class="icon-class"></div>WindowBase</a></li>
+<li><a href="../dart_html/Worker.html"><div class="icon-class"></div>Worker</a></li>
+<li><a href="../dart_html/WorkerContext.html"><div class="icon-class"></div>WorkerContext</a></li>
+<li><a href="../dart_html/WorkerLocation.html"><div class="icon-class"></div>WorkerLocation</a></li>
+<li><a href="../dart_html/WorkerNavigator.html"><div class="icon-class"></div>WorkerNavigator</a></li>
+<li><a href="../dart_html/XmlSerializer.html"><div class="icon-class"></div>XmlSerializer</a></li>
+<li><a href="../dart_html/XPathEvaluator.html"><div class="icon-class"></div>XPathEvaluator</a></li>
+<li><a href="../dart_html/XPathExpression.html"><div class="icon-class"></div>XPathExpression</a></li>
+<li><a href="../dart_html/XPathNSResolver.html"><div class="icon-class"></div>XPathNSResolver</a></li>
+<li><a href="../dart_html/XPathResult.html"><div class="icon-class"></div>XPathResult</a></li>
+<li><a href="../dart_html/XsltProcessor.html"><div class="icon-class"></div>XsltProcessor</a></li>
+<li><a href="../dart_html/DomError.html"><div class="icon-exception"></div>DomError</a></li>
+<li><a href="../dart_html/DomException.html"><div class="icon-exception"></div>DomException</a></li>
+<li><a href="../dart_html/EventException.html"><div class="icon-exception"></div>EventException</a></li>
+<li><a href="../dart_html/FileError.html"><div class="icon-exception"></div>FileError</a></li>
+<li><a href="../dart_html/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../dart_html/HttpRequestException.html"><div class="icon-exception"></div>HttpRequestException</a></li>
+<li><a href="../dart_html/MediaError.html"><div class="icon-exception"></div>MediaError</a></li>
+<li><a href="../dart_html/MediaKeyError.html"><div class="icon-exception"></div>MediaKeyError</a></li>
+<li><a href="../dart_html/NavigatorUserMediaError.html"><div class="icon-exception"></div>NavigatorUserMediaError</a></li>
+<li><a href="../dart_html/PositionError.html"><div class="icon-exception"></div>PositionError</a></li>
+<li><a href="../dart_html/RangeException.html"><div class="icon-exception"></div>RangeException</a></li>
+<li><a href="../dart_html/SpeechRecognitionError.html"><div class="icon-exception"></div>SpeechRecognitionError</a></li>
+<li><a href="../dart_html/XPathException.html"><div class="icon-exception"></div>XPathException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>KeyboardEventController</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Works with KeyboardEvent and KeyEvent to determine how to expose information
+about Key(board)Events. This class functions like an EventListenerList, and
+provides a consistent interface for the Dart
+user, despite the fact that a multitude of browsers that have varying
+keyboard default behavior.</p>
+<p>This class is very much a work in progress, and we'd love to get information
+on how we can make this class work with as many international keyboards as
+possible. Bugs welcome!</p>
+<pre class="source">
+class KeyboardEventController {
+ // This code inspired by Closure's KeyHandling library.
+ // http://closure-library.googlecode.com/svn/docs/closure_goog_events_keyhandler.js.source.html
+
+ /**
+  * The set of keys that have been pressed down without seeing their
+  * corresponding keyup event.
+  */
+ List&lt;KeyboardEvent&gt; _keyDownList;
+
+ /** The set of functions that wish to be notified when a KeyEvent happens. */
+ List&lt;Function&gt; _callbacks;
+
+ /** The type of KeyEvent we are tracking (keyup, keydown, keypress). */
+ String _type;
+
+ /** The element we are watching for events to happen on. */
+ EventTarget _target;
+
+ // The distance to shift from upper case alphabet Roman letters to lower case.
+ final int _ROMAN_ALPHABET_OFFSET = "a".codeUnits[0] - "A".codeUnits[0];
+
+ StreamSubscription _keyUpSubscription, _keyDownSubscription,
+     _keyPressSubscription;
+
+ /**
+  * An enumeration of key identifiers currently part of the W3C draft for DOM3
+  * and their mappings to keyCodes.
+  * http://www.w3.org/TR/DOM-Level-3-Events/keyset.html#KeySet-Set
+  */
+ static Map&lt;String, int&gt; _keyIdentifier = {
+   'Up': KeyCode.UP,
+   'Down': KeyCode.DOWN,
+   'Left': KeyCode.LEFT,
+   'Right': KeyCode.RIGHT,
+   'Enter': KeyCode.ENTER,
+   'F1': KeyCode.F1,
+   'F2': KeyCode.F2,
+   'F3': KeyCode.F3,
+   'F4': KeyCode.F4,
+   'F5': KeyCode.F5,
+   'F6': KeyCode.F6,
+   'F7': KeyCode.F7,
+   'F8': KeyCode.F8,
+   'F9': KeyCode.F9,
+   'F10': KeyCode.F10,
+   'F11': KeyCode.F11,
+   'F12': KeyCode.F12,
+   'U+007F': KeyCode.DELETE,
+   'Home': KeyCode.HOME,
+   'End': KeyCode.END,
+   'PageUp': KeyCode.PAGE_UP,
+   'PageDown': KeyCode.PAGE_DOWN,
+   'Insert': KeyCode.INSERT
+ };
+
+ /** Named constructor to add an onKeyPress event listener to our handler. */
+ KeyboardEventController.keypress(EventTarget target) {
+   _KeyboardEventController(target, 'keypress');
+ }
+
+ /** Named constructor to add an onKeyUp event listener to our handler. */
+ KeyboardEventController.keyup(EventTarget target) {
+   _KeyboardEventController(target, 'keyup');
+ }
+
+ /** Named constructor to add an onKeyDown event listener to our handler. */
+ KeyboardEventController.keydown(EventTarget target) {
+   _KeyboardEventController(target, 'keydown');
+ }
+
+ /**
+  * General constructor, performs basic initialization for our improved
+  * KeyboardEvent controller.
+  */
+ _KeyboardEventController(EventTarget target, String type) {
+   _callbacks = [];
+   _type = type;
+   _target = target;
+ }
+
+ /**
+  * Hook up all event listeners under the covers so we can estimate keycodes
+  * and charcodes when they are not provided.
+  */
+ void _initializeAllEventListeners() {
+   _keyDownList = [];
+   if (_keyDownSubscription == null) {
+     _keyDownSubscription = Element.keyDownEvent.forTarget(
+         _target, useCapture: true).listen(processKeyDown);
+     _keyPressSubscription = Element.keyPressEvent.forTarget(
+         _target, useCapture: true).listen(processKeyUp);
+     _keyUpSubscription = Element.keyUpEvent.forTarget(
+         _target, useCapture: true).listen(processKeyPress);
+   }
+ }
+
+ /** Add a callback that wishes to be notified when a KeyEvent occurs. */
+ void add(void callback(KeyEvent)) {
+   if (_callbacks.length == 0) {
+     _initializeAllEventListeners();
+   }
+   _callbacks.add(callback);
+ }
+
+ /**
+  * Notify all callback listeners that a KeyEvent of the relevant type has
+  * occurred.
+  */
+ bool _dispatch(KeyEvent event) {
+   if (event.type == _type) {
+     // Make a copy of the listeners in case a callback gets removed while
+     // dispatching from the list.
+     List callbacksCopy = new List.from(_callbacks);
+     for(var callback in callbacksCopy) {
+       callback(event);
+     }
+   }
+ }
+
+ /** Remove the given callback from the listeners list. */
+ void remove(void callback(KeyEvent)) {
+   var index = _callbacks.indexOf(callback);
+   if (index != -1) {
+     _callbacks.removeAt(index);
+   }
+   if (_callbacks.length == 0) {
+     // If we have no listeners, don't bother keeping track of keypresses.
+     _keyDownSubscription.cancel();
+     _keyDownSubscription = null;
+     _keyPressSubscription.cancel();
+     _keyPressSubscription = null;
+     _keyUpSubscription.cancel();
+     _keyUpSubscription = null;
+   }
+ }
+
+ /** Determine if caps lock is one of the currently depressed keys. */
+ bool get _capsLockOn =&gt;
+     _keyDownList.any((var element) =&gt; element.keyCode == KeyCode.CAPS_LOCK);
+
+ /**
+  * Given the previously recorded keydown key codes, see if we can determine
+  * the keycode of this keypress [event]. (Generally browsers only provide
+  * charCode information for keypress events, but with a little
+  * reverse-engineering, we can also determine the keyCode.) Returns
+  * KeyCode.UNKNOWN if the keycode could not be determined.
+  */
+ int _determineKeyCodeForKeypress(KeyboardEvent event) {
+   // Note: This function is a work in progress. We'll expand this function
+   // once we get more information about other keyboards.
+   for (var prevEvent in _keyDownList) {
+     if (prevEvent._shadowCharCode == event.charCode) {
+       return prevEvent.keyCode;
+     }
+     if ((event.shiftKey || _capsLockOn) &amp;&amp; event.charCode &gt;= "A".codeUnits[0]
+         &amp;&amp; event.charCode &lt;= "Z".codeUnits[0] &amp;&amp; event.charCode +
+         _ROMAN_ALPHABET_OFFSET == prevEvent._shadowCharCode) {
+       return prevEvent.keyCode;
+     }
+   }
+   return KeyCode.UNKNOWN;
+ }
+
+ /**
+  * Given the charater code returned from a keyDown [event], try to ascertain
+  * and return the corresponding charCode for the character that was pressed.
+  * This information is not shown to the user, but used to help polyfill
+  * keypress events.
+  */
+ int _findCharCodeKeyDown(KeyboardEvent event) {
+   if (event.keyLocation == 3) { // Numpad keys.
+     switch (event.keyCode) {
+       case KeyCode.NUM_ZERO:
+         // Even though this function returns _charCodes_, for some cases the
+         // KeyCode == the charCode we want, in which case we use the keycode
+         // constant for readability.
+         return KeyCode.ZERO;
+       case KeyCode.NUM_ONE:
+         return KeyCode.ONE;
+       case KeyCode.NUM_TWO:
+         return KeyCode.TWO;
+       case KeyCode.NUM_THREE:
+         return KeyCode.THREE;
+       case KeyCode.NUM_FOUR:
+         return KeyCode.FOUR;
+       case KeyCode.NUM_FIVE:
+         return KeyCode.FIVE;
+       case KeyCode.NUM_SIX:
+         return KeyCode.SIX;
+       case KeyCode.NUM_SEVEN:
+         return KeyCode.SEVEN;
+       case KeyCode.NUM_EIGHT:
+         return KeyCode.EIGHT;
+       case KeyCode.NUM_NINE:
+         return KeyCode.NINE;
+       case KeyCode.NUM_MULTIPLY:
+         return 42; // Char code for *
+       case KeyCode.NUM_PLUS:
+         return 43; // +
+       case KeyCode.NUM_MINUS:
+         return 45; // -
+       case KeyCode.NUM_PERIOD:
+         return 46; // .
+       case KeyCode.NUM_DIVISION:
+         return 47; // /
+     }
+   } else if (event.keyCode &gt;= 65 &amp;&amp; event.keyCode &lt;= 90) {
+     // Set the "char code" for key down as the lower case letter. Again, this
+     // will not show up for the user, but will be helpful in estimating
+     // keyCode locations and other information during the keyPress event.
+     return event.keyCode + _ROMAN_ALPHABET_OFFSET;
+   }
+   switch(event.keyCode) {
+     case KeyCode.SEMICOLON:
+       return KeyCode.FF_SEMICOLON;
+     case KeyCode.EQUALS:
+       return KeyCode.FF_EQUALS;
+     case KeyCode.COMMA:
+       return 44; // Ascii value for ,
+     case KeyCode.DASH:
+       return 45; // -
+     case KeyCode.PERIOD:
+       return 46; // .
+     case KeyCode.SLASH:
+       return 47; // /
+     case KeyCode.APOSTROPHE:
+       return 96; // `
+     case KeyCode.OPEN_SQUARE_BRACKET:
+       return 91; // [
+     case KeyCode.BACKSLASH:
+       return 92; // \
+     case KeyCode.CLOSE_SQUARE_BRACKET:
+       return 93; // ]
+     case KeyCode.SINGLE_QUOTE:
+       return 39; // '
+   }
+   return event.keyCode;
+ }
+
+ /**
+  * Returns true if the key fires a keypress event in the current browser.
+  */
+ bool _firesKeyPressEvent(KeyEvent event) {
+   if (!_Device.isIE &amp;&amp; !_Device.isWebKit) {
+     return true;
+   }
+
+   if (_Device.userAgent.contains('Mac') &amp;&amp; event.altKey) {
+     return KeyCode.isCharacterKey(event.keyCode);
+   }
+
+   // Alt but not AltGr which is represented as Alt+Ctrl.
+   if (event.altKey &amp;&amp; !event.ctrlKey) {
+     return false;
+   }
+
+   // Saves Ctrl or Alt + key for IE and WebKit, which won't fire keypress.
+   if (!event.shiftKey &amp;&amp;
+       (_keyDownList.last.keyCode == KeyCode.CTRL ||
+        _keyDownList.last.keyCode == KeyCode.ALT ||
+        _Device.userAgent.contains('Mac') &amp;&amp;
+        _keyDownList.last.keyCode == KeyCode.META)) {
+     return false;
+   }
+
+   // Some keys with Ctrl/Shift do not issue keypress in WebKit.
+   if (_Device.isWebKit &amp;&amp; event.ctrlKey &amp;&amp; event.shiftKey &amp;&amp; (
+       event.keyCode == KeyCode.BACKSLASH ||
+       event.keyCode == KeyCode.OPEN_SQUARE_BRACKET ||
+       event.keyCode == KeyCode.CLOSE_SQUARE_BRACKET ||
+       event.keyCode == KeyCode.TILDE ||
+       event.keyCode == KeyCode.SEMICOLON || event.keyCode == KeyCode.DASH ||
+       event.keyCode == KeyCode.EQUALS || event.keyCode == KeyCode.COMMA ||
+       event.keyCode == KeyCode.PERIOD || event.keyCode == KeyCode.SLASH ||
+       event.keyCode == KeyCode.APOSTROPHE ||
+       event.keyCode == KeyCode.SINGLE_QUOTE)) {
+     return false;
+   }
+
+   switch (event.keyCode) {
+     case KeyCode.ENTER:
+       // IE9 does not fire keypress on ENTER.
+       return !_Device.isIE;
+     case KeyCode.ESC:
+       return !_Device.isWebKit;
+   }
+
+   return KeyCode.isCharacterKey(event.keyCode);
+ }
+
+ /**
+  * Normalize the keycodes to the IE KeyCodes (this is what Chrome, IE, and
+  * Opera all use).
+  */
+ int _normalizeKeyCodes(KeyboardEvent event) {
+   // Note: This may change once we get input about non-US keyboards.
+   if (_Device.isFirefox) {
+     switch(event.keyCode) {
+       case KeyCode.FF_EQUALS:
+         return KeyCode.EQUALS;
+       case KeyCode.FF_SEMICOLON:
+         return KeyCode.SEMICOLON;
+       case KeyCode.MAC_FF_META:
+         return KeyCode.META;
+       case KeyCode.WIN_KEY_FF_LINUX:
+         return KeyCode.WIN_KEY;
+     }
+   }
+   return event.keyCode;
+ }
+
+ /** Handle keydown events. */
+ void processKeyDown(KeyboardEvent e) {
+   // Ctrl-Tab and Alt-Tab can cause the focus to be moved to another window
+   // before we've caught a key-up event.  If the last-key was one of these
+   // we reset the state.
+   if (_keyDownList.length &gt; 0 &amp;&amp;
+       (_keyDownList.last.keyCode == KeyCode.CTRL &amp;&amp; !e.ctrlKey ||
+        _keyDownList.last.keyCode == KeyCode.ALT &amp;&amp; !e.altKey ||
+        _Device.userAgent.contains('Mac') &amp;&amp;
+        _keyDownList.last.keyCode == KeyCode.META &amp;&amp; !e.metaKey)) {
+     _keyDownList = [];
+   }
+
+   var event = new KeyEvent(e);
+   event._shadowKeyCode = _normalizeKeyCodes(event);
+   // Technically a "keydown" event doesn't have a charCode. This is
+   // calculated nonetheless to provide us with more information in giving
+   // as much information as possible on keypress about keycode and also
+   // charCode.
+   event._shadowCharCode = _findCharCodeKeyDown(event);
+   if (_keyDownList.length &gt; 0 &amp;&amp; event.keyCode != _keyDownList.last.keyCode &amp;&amp;
+       !_firesKeyPressEvent(event)) {
+     // Some browsers have quirks not firing keypress events where all other
+     // browsers do. This makes them more consistent.
+     processKeyPress(event);
+   }
+   _keyDownList.add(event);
+   _dispatch(event);
+ }
+
+ /** Handle keypress events. */
+ void processKeyPress(KeyboardEvent event) {
+   var e = new KeyEvent(event);
+   // IE reports the character code in the keyCode field for keypress events.
+   // There are two exceptions however, Enter and Escape.
+   if (_Device.isIE) {
+     if (e.keyCode == KeyCode.ENTER || e.keyCode == KeyCode.ESC) {
+       e._shadowCharCode = 0;
+     } else {
+       e._shadowCharCode = e.keyCode;
+     }
+   } else if (_Device.isOpera) {
+     // Opera reports the character code in the keyCode field.
+     e._shadowCharCode = KeyCode.isCharacterKey(e.keyCode) ? e.keyCode : 0;
+   }
+   // Now we guestimate about what the keycode is that was actually
+   // pressed, given previous keydown information.
+   e._shadowKeyCode = _determineKeyCodeForKeypress(e);
+
+   // Correct the key value for certain browser-specific quirks.
+   if (e._shadowKeyIdentifier != null &amp;&amp;
+       _keyIdentifier.containsKey(e._shadowKeyIdentifier)) {
+     // This is needed for Safari Windows because it currently doesn't give a
+     // keyCode/which for non printable keys.
+     e._shadowKeyCode = _keyIdentifier[e._shadowKeyIdentifier];
+   }
+   e._shadowAltKey = _keyDownList.any((var element) =&gt; element.altKey);
+   _dispatch(e);
+ }
+
+ /** Handle keyup events. */
+ void processKeyUp(KeyboardEvent event) {
+   var e = new KeyEvent(event);
+   KeyboardEvent toRemove = null;
+   for (var key in _keyDownList) {
+     if (key.keyCode == e.keyCode) {
+       toRemove = key;
+     }
+   }
+   if (toRemove != null) {
+     _keyDownList =
+         _keyDownList.where((element) =&gt; element != toRemove).toList();
+   } else if (_keyDownList.length &gt; 0) {
+     // This happens when we've reached some international keyboard case we
+     // haven't accounted for or we haven't correctly eliminated all browser
+     // inconsistencies. Filing bugs on when this is reached is welcome!
+     _keyDownList.removeLast();
+   }
+   _dispatch(e);
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="KeyboardEventController.keydown">
+<button class="show-code">Code</button>
+new <strong>KeyboardEventController.keydown</strong>(<a href="../dart_html/EventTarget.html">EventTarget</a> target) <a class="anchor-link" href="#KeyboardEventController.keydown"
+              title="Permalink to KeyboardEventController.KeyboardEventController.keydown">#</a></h4>
+<div class="doc">
+<p>Named constructor to add an onKeyDown event listener to our handler. </p>
+<pre class="source">
+KeyboardEventController.keydown(EventTarget target) {
+ _KeyboardEventController(target, 'keydown');
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="KeyboardEventController.keypress">
+<button class="show-code">Code</button>
+new <strong>KeyboardEventController.keypress</strong>(<a href="../dart_html/EventTarget.html">EventTarget</a> target) <a class="anchor-link" href="#KeyboardEventController.keypress"
+              title="Permalink to KeyboardEventController.KeyboardEventController.keypress">#</a></h4>
+<div class="doc">
+<p>Named constructor to add an onKeyPress event listener to our handler. </p>
+<pre class="source">
+KeyboardEventController.keypress(EventTarget target) {
+ _KeyboardEventController(target, 'keypress');
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="KeyboardEventController.keyup">
+<button class="show-code">Code</button>
+new <strong>KeyboardEventController.keyup</strong>(<a href="../dart_html/EventTarget.html">EventTarget</a> target) <a class="anchor-link" href="#KeyboardEventController.keyup"
+              title="Permalink to KeyboardEventController.KeyboardEventController.keyup">#</a></h4>
+<div class="doc">
+<p>Named constructor to add an onKeyUp event listener to our handler. </p>
+<pre class="source">
+KeyboardEventController.keyup(EventTarget target) {
+ _KeyboardEventController(target, 'keyup');
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add">
+<button class="show-code">Code</button>
+void <strong>add</strong>(void callback(KeyEvent)) <a class="anchor-link" href="#add"
+              title="Permalink to KeyboardEventController.add">#</a></h4>
+<div class="doc">
+<p>Add a callback that wishes to be notified when a KeyEvent occurs. </p>
+<pre class="source">
+void add(void callback(KeyEvent)) {
+ if (_callbacks.length == 0) {
+   _initializeAllEventListeners();
+ }
+ _callbacks.add(callback);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="processKeyDown">
+<button class="show-code">Code</button>
+void <strong>processKeyDown</strong>(<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a> e) <a class="anchor-link" href="#processKeyDown"
+              title="Permalink to KeyboardEventController.processKeyDown">#</a></h4>
+<div class="doc">
+<p>Handle keydown events. </p>
+<pre class="source">
+void processKeyDown(KeyboardEvent e) {
+ // Ctrl-Tab and Alt-Tab can cause the focus to be moved to another window
+ // before we've caught a key-up event.  If the last-key was one of these
+ // we reset the state.
+ if (_keyDownList.length &gt; 0 &amp;&amp;
+     (_keyDownList.last.keyCode == KeyCode.CTRL &amp;&amp; !e.ctrlKey ||
+      _keyDownList.last.keyCode == KeyCode.ALT &amp;&amp; !e.altKey ||
+      _Device.userAgent.contains('Mac') &amp;&amp;
+      _keyDownList.last.keyCode == KeyCode.META &amp;&amp; !e.metaKey)) {
+   _keyDownList = [];
+ }
+
+ var event = new KeyEvent(e);
+ event._shadowKeyCode = _normalizeKeyCodes(event);
+ // Technically a "keydown" event doesn't have a charCode. This is
+ // calculated nonetheless to provide us with more information in giving
+ // as much information as possible on keypress about keycode and also
+ // charCode.
+ event._shadowCharCode = _findCharCodeKeyDown(event);
+ if (_keyDownList.length &gt; 0 &amp;&amp; event.keyCode != _keyDownList.last.keyCode &amp;&amp;
+     !_firesKeyPressEvent(event)) {
+   // Some browsers have quirks not firing keypress events where all other
+   // browsers do. This makes them more consistent.
+   processKeyPress(event);
+ }
+ _keyDownList.add(event);
+ _dispatch(event);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="processKeyPress">
+<button class="show-code">Code</button>
+void <strong>processKeyPress</strong>(<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a> event) <a class="anchor-link" href="#processKeyPress"
+              title="Permalink to KeyboardEventController.processKeyPress">#</a></h4>
+<div class="doc">
+<p>Handle keypress events. </p>
+<pre class="source">
+void processKeyPress(KeyboardEvent event) {
+ var e = new KeyEvent(event);
+ // IE reports the character code in the keyCode field for keypress events.
+ // There are two exceptions however, Enter and Escape.
+ if (_Device.isIE) {
+   if (e.keyCode == KeyCode.ENTER || e.keyCode == KeyCode.ESC) {
+     e._shadowCharCode = 0;
+   } else {
+     e._shadowCharCode = e.keyCode;
+   }
+ } else if (_Device.isOpera) {
+   // Opera reports the character code in the keyCode field.
+   e._shadowCharCode = KeyCode.isCharacterKey(e.keyCode) ? e.keyCode : 0;
+ }
+ // Now we guestimate about what the keycode is that was actually
+ // pressed, given previous keydown information.
+ e._shadowKeyCode = _determineKeyCodeForKeypress(e);
+
+ // Correct the key value for certain browser-specific quirks.
+ if (e._shadowKeyIdentifier != null &amp;&amp;
+     _keyIdentifier.containsKey(e._shadowKeyIdentifier)) {
+   // This is needed for Safari Windows because it currently doesn't give a
+   // keyCode/which for non printable keys.
+   e._shadowKeyCode = _keyIdentifier[e._shadowKeyIdentifier];
+ }
+ e._shadowAltKey = _keyDownList.any((var element) =&gt; element.altKey);
+ _dispatch(e);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="processKeyUp">
+<button class="show-code">Code</button>
+void <strong>processKeyUp</strong>(<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a> event) <a class="anchor-link" href="#processKeyUp"
+              title="Permalink to KeyboardEventController.processKeyUp">#</a></h4>
+<div class="doc">
+<p>Handle keyup events. </p>
+<pre class="source">
+void processKeyUp(KeyboardEvent event) {
+ var e = new KeyEvent(event);
+ KeyboardEvent toRemove = null;
+ for (var key in _keyDownList) {
+   if (key.keyCode == e.keyCode) {
+     toRemove = key;
+   }
+ }
+ if (toRemove != null) {
+   _keyDownList =
+       _keyDownList.where((element) =&gt; element != toRemove).toList();
+ } else if (_keyDownList.length &gt; 0) {
+   // This happens when we've reached some international keyboard case we
+   // haven't accounted for or we haven't correctly eliminated all browser
+   // inconsistencies. Filing bugs on when this is reached is welcome!
+   _keyDownList.removeLast();
+ }
+ _dispatch(e);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="remove">
+<button class="show-code">Code</button>
+void <strong>remove</strong>(void callback(KeyEvent)) <a class="anchor-link" href="#remove"
+              title="Permalink to KeyboardEventController.remove">#</a></h4>
+<div class="doc">
+<p>Remove the given callback from the listeners list. </p>
+<pre class="source">
+void remove(void callback(KeyEvent)) {
+ var index = _callbacks.indexOf(callback);
+ if (index != -1) {
+   _callbacks.removeAt(index);
+ }
+ if (_callbacks.length == 0) {
+   // If we have no listeners, don't bother keeping track of keypresses.
+   _keyDownSubscription.cancel();
+   _keyDownSubscription = null;
+   _keyPressSubscription.cancel();
+   _keyPressSubscription = null;
+   _keyUpSubscription.cancel();
+   _keyUpSubscription = null;
+ }
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:29.423</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

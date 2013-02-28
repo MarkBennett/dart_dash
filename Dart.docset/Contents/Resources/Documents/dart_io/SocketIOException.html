@@ -1,0 +1,232 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>SocketIOException class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="SocketIOException">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/SocketIOException.html">SocketIOException</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="../dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><a href="../dart_io/IOSink.html"><div class="icon-class"></div>IOSink&lt;T&gt;</a></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="../dart_io/ProcessOptions.html"><div class="icon-class"></div>ProcessOptions</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="../dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/DirectoryIOException.html"><div class="icon-exception"></div>DirectoryIOException</a></li>
+<li><a href="../dart_io/FileIOException.html"><div class="icon-exception"></div>FileIOException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/HttpParserException.html"><div class="icon-exception"></div>HttpParserException</a></li>
+<li><a href="../dart_io/MimeParserException.html"><div class="icon-exception"></div>MimeParserException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/RedirectLimitExceededException.html"><div class="icon-exception"></div>RedirectLimitExceededException</a></li>
+<li><a href="../dart_io/RedirectLoopException.html"><div class="icon-exception"></div>RedirectLoopException</a></li>
+<li><div class="icon-exception"></div><strong>SocketIOException</strong></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>SocketIOException</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+class SocketIOException implements Exception {
+ const SocketIOException([String this.message = "",
+                          OSError this.osError = null]);
+ String toString() {
+   StringBuffer sb = new StringBuffer();
+   sb.add("SocketIOException");
+   if (!message.isEmpty) {
+     sb.add(": $message");
+     if (osError != null) {
+       sb.add(" ($osError)");
+     }
+   } else if (osError != null) {
+     sb.add(": $osError");
+   }
+   return sb.toString();
+ }
+ final String message;
+ final OSError osError;
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-exception"></span><a href="../dart_core/Exception.html">Exception</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="SocketIOException">
+<button class="show-code">Code</button>
+const <strong>SocketIOException</strong>([<a href="../dart_core/String.html">String</a> message = "", <a href="../dart_io/OSError.html">OSError</a> osError = null]) <a class="anchor-link" href="#SocketIOException"
+              title="Permalink to SocketIOException.SocketIOException">#</a></h4>
+<div class="doc">
+<pre class="source">
+const SocketIOException([String this.message = "",
+                        OSError this.osError = null]);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="message">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>message</strong> <a class="anchor-link"
+            href="#message"
+            title="Permalink to SocketIOException.message">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+message
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="osError">
+<button class="show-code">Code</button>
+final <a href="../dart_io/OSError.html">OSError</a>         <strong>osError</strong> <a class="anchor-link"
+            href="#osError"
+            title="Permalink to SocketIOException.osError">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+osError
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to SocketIOException.toString">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() {
+ StringBuffer sb = new StringBuffer();
+ sb.add("SocketIOException");
+ if (!message.isEmpty) {
+   sb.add(": $message");
+   if (osError != null) {
+     sb.add(" ($osError)");
+   }
+ } else if (osError != null) {
+   sb.add(": $osError");
+ }
+ return sb.toString();
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:07.029</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

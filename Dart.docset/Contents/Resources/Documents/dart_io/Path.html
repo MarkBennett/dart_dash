@@ -1,0 +1,633 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Path abstract class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="Path">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/Path.html">Path</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="../dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><a href="../dart_io/IOSink.html"><div class="icon-class"></div>IOSink&lt;T&gt;</a></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><div class="icon-class"></div><strong>Path</strong></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="../dart_io/ProcessOptions.html"><div class="icon-class"></div>ProcessOptions</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="../dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/DirectoryIOException.html"><div class="icon-exception"></div>DirectoryIOException</a></li>
+<li><a href="../dart_io/FileIOException.html"><div class="icon-exception"></div>FileIOException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/HttpParserException.html"><div class="icon-exception"></div>HttpParserException</a></li>
+<li><a href="../dart_io/MimeParserException.html"><div class="icon-exception"></div>MimeParserException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/RedirectLimitExceededException.html"><div class="icon-exception"></div>RedirectLimitExceededException</a></li>
+<li><a href="../dart_io/RedirectLoopException.html"><div class="icon-exception"></div>RedirectLoopException</a></li>
+<li><a href="../dart_io/SocketIOException.html"><div class="icon-exception"></div>SocketIOException</a></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Path</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A Path is an immutable wrapper of a String, with additional member functions
+for useful path manipulations and queries.
+On the Windows platform, Path also converts from native paths to paths using
+'/' as a path separator, and vice versa.</p>
+<p>Joining of paths and path normalization handle '.' and '..' in the usual way.</p>
+<pre class="source">
+abstract class Path {
+ /**
+  * Creates a Path from a String that uses the native filesystem's conventions.
+  *
+  * On Windows, this converts '\' to '/' and has special handling for drive
+  * letters and shares.
+  *
+  * If the path starts with a drive letter, like 'C:',  a '/' is added
+  * before the drive letter.
+  *
+  *     new Path(r'c:\a\b').toString() == '/c:/a/b'
+  *
+  * A path starting with a drive letter is
+  * treated specially.  Backwards links ('..') cannot cancel the drive letter.
+  *
+  * If the path is a share path this is recorded in the Path object and
+  * maintained in operations on the Path object.
+  *
+  *     var share = new Path(r'\\share\a\b\c');
+  *     share.isWindowsShare == true
+  *     share.toString() == '/share/a/b/c'
+  *     share.toNativePath() == r'\\share\a\b\c'
+  *     share.append('final').isWindowsShare == true
+  */
+ factory Path(String source) =&gt; new _Path(source);
+
+ /**
+  * Creates a Path from the String [source].  [source] is used as-is, so if
+  * the string does not consist of segments separated by forward slashes, the
+  * behavior may not be as expected.  Paths are immutable.
+  */
+ factory Path.raw(String source) =&gt; new _Path.raw(source);
+
+ /**
+  * Is this path the empty string?
+  */
+ bool get isEmpty;
+
+ /**
+  * Is this path an absolute path, beginning with a '/'?  Note that
+  * Windows paths beginning with '\' or with a drive letter are absolute,
+  * and a leading '/' is added when they are converted to a Path.
+  */
+ bool get isAbsolute;
+
+ /**
+  * Is this path a Windows share path?
+  */
+ bool get isWindowsShare;
+
+ /**
+  * Does this path end with a '/'?
+  */
+ bool get hasTrailingSeparator;
+
+ /**
+  * Does this path contain no consecutive '/'s, no segments that
+  * are '.' unless the path is exactly '.', and segments that are '..' only
+  * as the leading segments on a relative path?
+  */
+ bool get isCanonical;
+
+ /**
+  * Make a path canonical by dropping segments that are '.', cancelling
+  * segments that are '..' with preceding segments, if possible,
+  * and combining consecutive '/'s.  Leading '..' segments
+  * are kept on relative paths, and dropped from absolute paths.
+  */
+ Path canonicalize();
+
+ /**
+  * Joins the relative path [further] to this path.  Canonicalizes the
+  * resulting joined path using [canonicalize],
+  * interpreting '.' and '..' as directory traversal commands, and removing
+  * consecutive '/'s.
+  *
+  * If [further] is an absolute path, an IllegalArgument exception is thrown.
+  *
+  * Examples:
+  *   `new Path('/a/b/c').join(new Path('d/e'))` returns the Path object
+  *   containing `'a/b/c/d/e'`.
+  *
+  *   `new Path('a/b/../c/').join(new Path('d/./e//')` returns the Path
+  *   containing `'a/c/d/e/'`.
+  *
+  *   `new Path('a/b/c').join(new Path('d/../../e')` returns the Path
+  *   containing `'a/b/e'`.
+  *
+  * Note that the join operation does not drop the last segment of the
+  * base path, the way URL joining does.  To join basepath to further using
+  * URL semantics, use
+  *    [:basepath.directoryPath.join(further):].
+  *
+  * If you want to avoid joins that traverse
+  * parent directories in the base, you can check whether
+  * `further.canonicalize()` starts with '../' or equals '..'.
+  */
+ Path join(Path further);
+
+
+ /**
+  * Returns a path [:relative:] such that
+  *    [:base.join(relative) == this.canonicalize():].
+  * Throws an exception if such a path is impossible.
+  * For example, if [base] is '../../a/b' and [this] is '.'.
+  * The computation is independent of the file system and current directory.
+  *
+  * To compute a relative path using URL semantics, where the final
+  * path component of the base is dropped unless it ends with a slash,
+  * call [: a.relativeTo(b.directoryPath) :] instead of [: a.relativeTo(b) :].
+  */
+ Path relativeTo(Path base);
+
+ /**
+  * Converts a path to a string using the native filesystem's conventions.
+  *
+  * On Windows, converts '/'s to backwards slashes, and removes
+  * the leading '/' if the path starts with a drive specification.
+  * For most valid Windows paths, this should be the inverse of the
+  * conversion that the constructor new Path() performs.  If the path is
+  * a Windows share, restores the '\\' at the start of the path.
+  */
+ String toNativePath();
+
+ /**
+  * Returns the path as a string.  If this path is constructed using
+  * new Path.raw(), or new Path() on a non-Windows system, the
+  * returned value is the original string argument to the constructor.
+  */
+ String toString();
+
+ /**
+  * Gets the segments of a Path. The segments are just the result of
+  * splitting the path on any '/' characters, except that a '/' at the
+  * beginning does not create an empty segment before it, and a '/' at
+  * the end does not create an empty segment after it.
+  *
+  *     new Path('/a/b/c/d').segments() == ['a', 'b', 'c', d'];
+  *     new Path(' foo bar //../') == [' foo bar ', '', '..'];
+  */
+ List&lt;String&gt; segments();
+
+ /**
+  * Appends [finalSegment] to a path as a new segment.  Adds a '/'
+  * between the path and [finalSegment] if the path does not already end in
+  * a '/'.  The path is not canonicalized, and [finalSegment] may
+  * contain '/'s.
+  */
+ Path append(String finalSegment);
+
+ /**
+  * Drops the final '/' and whatever follows it from this Path,
+  * and returns the resulting Path object.  If the only '/' in
+  * this Path is the first character, returns '/' instead of the empty string.
+  * If there is no '/' in the Path, returns the empty string.
+  *
+  *     new Path('../images/dot.gif').directoryPath == '../images'
+  *     new Path('/usr/geoffrey/www/').directoryPath == '/usr/geoffrey/www'
+  *     new Path('lost_file_old').directoryPath == ''
+  *     new Path('/src').directoryPath == '/'
+  *     Note: new Path('/D:/src').directoryPath == '/D:'
+  */
+ Path get directoryPath;
+
+ /**
+  * The part of the path after the last '/', or the entire path if
+  * it contains no '/'.
+  *
+  *     new Path('images/DSC_0027.jpg).filename == 'DSC_0027.jpg'
+  *     new Path('users/fred/').filename == ''
+  */
+ String get filename;
+
+ /**
+  * The part of [filename] before the last '.', or the entire filename if it
+  * contains no '.'.  If [filename] is '.' or '..' it is unchanged.
+  *
+  *     new Path('/c:/My Documents/Heidi.txt').filenameWithoutExtension
+  *     would return 'Heidi'.
+  *     new Path('not what I would call a path').filenameWithoutExtension
+  *     would return 'not what I would call a path'.
+  */
+ String get filenameWithoutExtension;
+
+ /**
+  * The part of [filename] after the last '.', or '' if [filename]
+  * contains no '.'.  If [filename] is '.' or '..', returns ''.
+  *
+  *     new Path('tiger.svg').extension == 'svg'
+  *     new Path('/src/dart/dart_secrets').extension == ''
+  */
+ String get extension;
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Path">
+<button class="show-code">Code</button>
+factory <strong>Path</strong>(<a href="../dart_core/String.html">String</a> source) <a class="anchor-link" href="#Path"
+              title="Permalink to Path.Path">#</a></h4>
+<div class="doc">
+<p>Creates a Path from a String that uses the native filesystem's conventions.</p>
+<p>On Windows, this converts '\' to '/' and has special handling for drive
+letters and shares.</p>
+<p>If the path starts with a drive letter, like 'C:',  a '/' is added
+before the drive letter.</p>
+<pre><code>new Path(r'c:\a\b').toString() == '/c:/a/b'
+</code></pre>
+<p>A path starting with a drive letter is
+treated specially.  Backwards links ('..') cannot cancel the drive letter.</p>
+<p>If the path is a share path this is recorded in the Path object and
+maintained in operations on the Path object.</p>
+<pre><code>var share = new Path(r'\\share\a\b\c');
+share.isWindowsShare == true
+share.toString() == '/share/a/b/c'
+share.toNativePath() == r'\\share\a\b\c'
+share.append('final').isWindowsShare == true
+</code></pre>
+<pre class="source">
+factory Path(String source) =&gt; new _Path(source);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Path.raw">
+<button class="show-code">Code</button>
+factory <strong>Path.raw</strong>(<a href="../dart_core/String.html">String</a> source) <a class="anchor-link" href="#Path.raw"
+              title="Permalink to Path.Path.raw">#</a></h4>
+<div class="doc">
+<p>Creates a Path from the String 
+<span class="param">source</span>.  
+<span class="param">source</span> is used as-is, so if
+the string does not consist of segments separated by forward slashes, the
+behavior may not be as expected.  Paths are immutable.</p>
+<pre class="source">
+factory Path.raw(String source) =&gt; new _Path.raw(source);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="directoryPath">
+<button class="show-code">Code</button>
+final <a href="../dart_io/Path.html">Path</a>         <strong>directoryPath</strong> <a class="anchor-link"
+            href="#directoryPath"
+            title="Permalink to Path.directoryPath">#</a>
+        </h4>
+        <div class="doc">
+<p>Drops the final '/' and whatever follows it from this Path,
+and returns the resulting Path object.  If the only '/' in
+this Path is the first character, returns '/' instead of the empty string.
+If there is no '/' in the Path, returns the empty string.</p>
+<pre><code>new Path('../images/dot.gif').directoryPath == '../images'
+new Path('/usr/geoffrey/www/').directoryPath == '/usr/geoffrey/www'
+new Path('lost_file_old').directoryPath == ''
+new Path('/src').directoryPath == '/'
+Note: new Path('/D:/src').directoryPath == '/D:'
+</code></pre>
+<pre class="source">
+Path get directoryPath;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="extension">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>extension</strong> <a class="anchor-link"
+            href="#extension"
+            title="Permalink to Path.extension">#</a>
+        </h4>
+        <div class="doc">
+<p>The part of <a class="crossref" href="../dart_io/Path.html#filename">filename</a> after the last '.', or '' if <a class="crossref" href="../dart_io/Path.html#filename">filename</a>
+contains no '.'.  If <a class="crossref" href="../dart_io/Path.html#filename">filename</a> is '.' or '..', returns ''.</p>
+<pre><code>new Path('tiger.svg').extension == 'svg'
+new Path('/src/dart/dart_secrets').extension == ''
+</code></pre>
+<pre class="source">
+String get extension;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="filename">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>filename</strong> <a class="anchor-link"
+            href="#filename"
+            title="Permalink to Path.filename">#</a>
+        </h4>
+        <div class="doc">
+<p>The part of the path after the last '/', or the entire path if
+it contains no '/'.</p>
+<pre><code>new Path('images/DSC_0027.jpg).filename == 'DSC_0027.jpg'
+new Path('users/fred/').filename == ''
+</code></pre>
+<pre class="source">
+String get filename;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="filenameWithoutExtension">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>filenameWithoutExtension</strong> <a class="anchor-link"
+            href="#filenameWithoutExtension"
+            title="Permalink to Path.filenameWithoutExtension">#</a>
+        </h4>
+        <div class="doc">
+<p>The part of <a class="crossref" href="../dart_io/Path.html#filename">filename</a> before the last '.', or the entire filename if it
+contains no '.'.  If <a class="crossref" href="../dart_io/Path.html#filename">filename</a> is '.' or '..' it is unchanged.</p>
+<pre><code>new Path('/c:/My Documents/Heidi.txt').filenameWithoutExtension
+would return 'Heidi'.
+new Path('not what I would call a path').filenameWithoutExtension
+would return 'not what I would call a path'.
+</code></pre>
+<pre class="source">
+String get filenameWithoutExtension;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hasTrailingSeparator">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>hasTrailingSeparator</strong> <a class="anchor-link"
+            href="#hasTrailingSeparator"
+            title="Permalink to Path.hasTrailingSeparator">#</a>
+        </h4>
+        <div class="doc">
+<p>Does this path end with a '/'?</p>
+<pre class="source">
+bool get hasTrailingSeparator;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isAbsolute">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isAbsolute</strong> <a class="anchor-link"
+            href="#isAbsolute"
+            title="Permalink to Path.isAbsolute">#</a>
+        </h4>
+        <div class="doc">
+<p>Is this path an absolute path, beginning with a '/'?  Note that
+Windows paths beginning with '\' or with a drive letter are absolute,
+and a leading '/' is added when they are converted to a Path.</p>
+<pre class="source">
+bool get isAbsolute;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isCanonical">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isCanonical</strong> <a class="anchor-link"
+            href="#isCanonical"
+            title="Permalink to Path.isCanonical">#</a>
+        </h4>
+        <div class="doc">
+<p>Does this path contain no consecutive '/'s, no segments that
+are '.' unless the path is exactly '.', and segments that are '..' only
+as the leading segments on a relative path?</p>
+<pre class="source">
+bool get isCanonical;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isEmpty</strong> <a class="anchor-link"
+            href="#isEmpty"
+            title="Permalink to Path.isEmpty">#</a>
+        </h4>
+        <div class="doc">
+<p>Is this path the empty string?</p>
+<pre class="source">
+bool get isEmpty;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isWindowsShare">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isWindowsShare</strong> <a class="anchor-link"
+            href="#isWindowsShare"
+            title="Permalink to Path.isWindowsShare">#</a>
+        </h4>
+        <div class="doc">
+<p>Is this path a Windows share path?</p>
+<pre class="source">
+bool get isWindowsShare;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="append">
+abstract <a href="../dart_io/Path.html">Path</a> <strong>append</strong>(<a href="../dart_core/String.html">String</a> finalSegment) <a class="anchor-link" href="#append"
+              title="Permalink to Path.append">#</a></h4>
+<div class="doc">
+<p>Appends 
+<span class="param">finalSegment</span> to a path as a new segment.  Adds a '/'
+between the path and 
+<span class="param">finalSegment</span> if the path does not already end in
+a '/'.  The path is not canonicalized, and 
+<span class="param">finalSegment</span> may
+contain '/'s.</p>
+</div>
+</div>
+<div class="method"><h4 id="canonicalize">
+abstract <a href="../dart_io/Path.html">Path</a> <strong>canonicalize</strong>() <a class="anchor-link" href="#canonicalize"
+              title="Permalink to Path.canonicalize">#</a></h4>
+<div class="doc">
+<p>Make a path canonical by dropping segments that are '.', cancelling
+segments that are '..' with preceding segments, if possible,
+and combining consecutive '/'s.  Leading '..' segments
+are kept on relative paths, and dropped from absolute paths.</p>
+</div>
+</div>
+<div class="method"><h4 id="join">
+abstract <a href="../dart_io/Path.html">Path</a> <strong>join</strong>(<a href="../dart_io/Path.html">Path</a> further) <a class="anchor-link" href="#join"
+              title="Permalink to Path.join">#</a></h4>
+<div class="doc">
+<p>Joins the relative path 
+<span class="param">further</span> to this path.  Canonicalizes the
+resulting joined path using <a class="crossref" href="../dart_io/Path.html#canonicalize">canonicalize</a>,
+interpreting '.' and '..' as directory traversal commands, and removing
+consecutive '/'s.</p>
+<p>If 
+<span class="param">further</span> is an absolute path, an IllegalArgument exception is thrown.</p>
+<p>Examples:
+  <code>new Path('/a/b/c').join(new Path('d/e'))</code> returns the Path object
+  containing <code>'a/b/c/d/e'</code>.</p>
+<p>  <code>new Path('a/b/../c/').join(new Path('d/./e//')</code> returns the Path
+  containing <code>'a/c/d/e/'</code>.</p>
+<p>  <code>new Path('a/b/c').join(new Path('d/../../e')</code> returns the Path
+  containing <code>'a/b/e'</code>.</p>
+<p>Note that the join operation does not drop the last segment of the
+base path, the way URL joining does.  To join basepath to further using
+URL semantics, use
+   <code>basepath.directoryPath.join(further)</code>.</p>
+<p>If you want to avoid joins that traverse
+parent directories in the base, you can check whether
+<code>further.canonicalize()</code> starts with '../' or equals '..'.</p>
+</div>
+</div>
+<div class="method"><h4 id="relativeTo">
+abstract <a href="../dart_io/Path.html">Path</a> <strong>relativeTo</strong>(<a href="../dart_io/Path.html">Path</a> base) <a class="anchor-link" href="#relativeTo"
+              title="Permalink to Path.relativeTo">#</a></h4>
+<div class="doc">
+<p>Returns a path <code>relative</code> such that
+   <code>base.join(relative) == this.canonicalize()</code>.
+Throws an exception if such a path is impossible.
+For example, if 
+<span class="param">base</span> is '../../a/b' and <code>this</code> is '.'.
+The computation is independent of the file system and current directory.</p>
+<p>To compute a relative path using URL semantics, where the final
+path component of the base is dropped unless it ends with a slash,
+call <code>a.relativeTo(b.directoryPath)</code> instead of <code>a.relativeTo(b)</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="segments">
+abstract <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt; <strong>segments</strong>() <a class="anchor-link" href="#segments"
+              title="Permalink to Path.segments">#</a></h4>
+<div class="doc">
+<p>Gets the segments of a Path. The segments are just the result of
+splitting the path on any '/' characters, except that a '/' at the
+beginning does not create an empty segment before it, and a '/' at
+the end does not create an empty segment after it.</p>
+<pre><code>new Path('/a/b/c/d').segments() == ['a', 'b', 'c', d'];
+new Path(' foo bar //../') == [' foo bar ', '', '..'];
+</code></pre>
+</div>
+</div>
+<div class="method"><h4 id="toNativePath">
+abstract <a href="../dart_core/String.html">String</a> <strong>toNativePath</strong>() <a class="anchor-link" href="#toNativePath"
+              title="Permalink to Path.toNativePath">#</a></h4>
+<div class="doc">
+<p>Converts a path to a string using the native filesystem's conventions.</p>
+<p>On Windows, converts '/'s to backwards slashes, and removes
+the leading '/' if the path starts with a drive specification.
+For most valid Windows paths, this should be the inverse of the
+conversion that the constructor new Path() performs.  If the path is
+a Windows share, restores the '\\' at the start of the path.</p>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+abstract <a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to Path.toString">#</a></h4>
+<div class="doc">
+<p>Returns the path as a string.  If this path is constructed using
+new Path.raw(), or new Path() on a non-Windows system, the
+returned value is the original string argument to the constructor.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:08.439</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

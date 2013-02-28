@@ -1,0 +1,187 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>dart:json Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:json">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="index.html">Dart API Reference</a>
+         &rsaquo; <a href="dart_json.html">dart:json</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="args.html">args</a></h2><h2><div class="icon-library"></div><a href="dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><strong>dart:json</strong></h2><ul class="icon">
+<li><a href="dart_json/BuildJsonListener.html"><div class="icon-class"></div>BuildJsonListener</a></li>
+<li><a href="dart_json/JsonListener.html"><div class="icon-class"></div>JsonListener</a></li>
+<li><a href="dart_json/JsonParser.html"><div class="icon-class"></div>JsonParser</a></li>
+<li><a href="dart_json/ReviverJsonListener.html"><div class="icon-class"></div>ReviverJsonListener</a></li>
+<li><a href="dart_json/JsonUnsupportedObjectError.html"><div class="icon-exception"></div>JsonUnsupportedObjectError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="unittest.html">unittest</a></h2></div>
+<div class="content">
+<h2><strong>dart:json</strong> library</h2>
+<div>
+<h3>Functions</h3>
+<div class="method"><h4 id="printOn">
+<button class="show-code">Code</button>
+void <strong>printOn</strong>(<a href="dart_core/Object.html">Object</a> object, <a href="dart_core/StringBuffer.html">StringBuffer</a> output) <a class="anchor-link" href="#printOn"
+              title="Permalink to printOn">#</a></h4>
+<div class="doc">
+<p>Serializes 
+<span class="param">object</span> into 
+<span class="param">output</span> stream.</p>
+<p>Performs the same operations as <a class="crossref" href="dart.json.html#stringify">stringify</a> but outputs the resulting
+string to an existing <code>StringBuffer</code> instead of creating a new <code>String</code>.</p>
+<p>If serialization fails by throwing, some data might have been added to
+
+<span class="param">output</span>, but it won't contain valid JSON text.</p>
+<pre class="source">
+void printOn(Object object, StringBuffer output) {
+ return _JsonStringifier.printOn(object, output);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="stringify">
+<button class="show-code">Code</button>
+<a href="dart_core/String.html">String</a> <strong>stringify</strong>(<a href="dart_core/Object.html">Object</a> object) <a class="anchor-link" href="#stringify"
+              title="Permalink to stringify">#</a></h4>
+<div class="doc">
+<p>Serializes 
+<span class="param">object</span> into a JSON string.</p>
+<p>Directly serializable types are <code>num</code>, <code>String</code>, <code>bool</code>, <code>Null</code>, <code>List</code>
+and <code>Map</code>.
+For <code>List</code>, the elements must all be serializable.
+For <code>Map</code>, the keys must be <code>String</code> and the values must be serializable.
+If a value is any other type is attempted serialized, a "toJson()" method
+is invoked on the object and the result, which must be a directly
+serializable type, is serialized instead of the original value.
+If the object does not support this method, throws, or returns a
+value that is not directly serializable, a <a class="crossref" href="dart_json/JsonUnsupportedObjectError.html">JsonUnsupportedObjectError</a>
+exception is thrown. If the call throws (including the case where there
+is no nullary "toJson" method, the error is caught and stored in the
+<a class="crossref" href="dart_json/JsonUnsupportedObjectError.html">JsonUnsupportedObjectError</a>'s <code>cause</code> field.
+Json
+Objects should not change during serialization.
+If an object is serialized more than once, <a class="crossref" href="dart.json.html#stringify">stringify</a> is allowed to cache
+the JSON text for it. I.e., if an object changes after it is first
+serialized, the new values may or may not be reflected in the result.</p>
+<pre class="source">
+String stringify(Object object) {
+ return _JsonStringifier.stringify(object);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parse">
+<button class="show-code">Code</button>
+<strong>parse</strong>(<a href="dart_core/String.html">String</a> json, [reviver(key, value)]) <a class="anchor-link" href="#parse"
+              title="Permalink to parse">#</a></h4>
+<div class="doc">
+<p>Parses 
+<span class="param">json</span> and build the corresponding parsed JSON value.</p>
+<p>Parsed JSON values are of the types <code>num</code>, <code>String</code>, <code>bool</code>, <code>Null</code>,
+<code>List</code>s of parsed JSON values or <code>Map</code>s from <code>String</code> to parsed
+JSON values.</p>
+<p>The optional <code>revivier</code> function, if provided, is called once for each
+object or list property parsed. The arguments are the property name
+(<code>String</code>) or list index (<code>int</code>), and the value is the parsed value.
+The return value of the revivier will be used as the value of that property
+instead the parsed value.</p>
+<p>Throws <code>FormatException</code> if the input is not valid JSON text.</p>
+<pre class="source">
+external parse(String json, [reviver(var key, var value)]);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Abstract Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_json/JsonListener.html"><strong>JsonListener</strong></a>
+          </h4>
+          </div>
+          
+</div>
+<div>
+<h3>Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_json/BuildJsonListener.html"><strong>BuildJsonListener</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_json/JsonParser.html"><strong>JsonParser</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_json/ReviverJsonListener.html"><strong>ReviverJsonListener</strong></a>
+          </h4>
+          </div>
+          
+</div>
+<div>
+<h3>Exceptions</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_json/JsonUnsupportedObjectError.html"><strong>JsonUnsupportedObjectError</strong></a>
+          </h4>
+          </div>
+          
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:11.040</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="client-static.js"></script>
+        </body></html>
+        

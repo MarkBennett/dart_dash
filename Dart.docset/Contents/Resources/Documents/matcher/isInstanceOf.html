@@ -1,0 +1,184 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>isInstanceOf&lt;T&gt; class / matcher Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="matcher" data-type="isInstanceOf&amp;lt;T&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../matcher.html">matcher</a> &rsaquo; <a href="../matcher/isInstanceOf.html">isInstanceOf&lt;T&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><ul class="icon">
+<li><a href="../matcher/BaseMatcher.html"><div class="icon-class"></div>BaseMatcher</a></li>
+<li><a href="../matcher/CustomMatcher.html"><div class="icon-class"></div>CustomMatcher</a></li>
+<li><a href="../matcher/DefaultFailureHandler.html"><div class="icon-class"></div>DefaultFailureHandler</a></li>
+<li><a href="../matcher/Description.html"><div class="icon-class"></div>Description</a></li>
+<li><a href="../matcher/ErrorFormatter.html"><div class="icon-interface"></div>ErrorFormatter</a></li>
+<li><a href="../matcher/FailureHandler.html"><div class="icon-class"></div>FailureHandler</a></li>
+<li><div class="icon-class"></div><strong>isInstanceOf&lt;T&gt;</strong></li>
+<li><a href="../matcher/Matcher.html"><div class="icon-class"></div>Matcher</a></li>
+<li><a href="../matcher/MatchState.html"><div class="icon-class"></div>MatchState</a></li>
+<li><a href="../matcher/StringDescription.html"><div class="icon-class"></div>StringDescription</a></li>
+<li><a href="../matcher/Throws.html"><div class="icon-class"></div>Throws</a></li>
+<li><a href="../matcher/TypeMatcher.html"><div class="icon-class"></div>TypeMatcher</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>isInstanceOf&lt;T&gt;</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Returns a matcher that matches if an object is an instance
+of <code>type</code> (or a subtype).</p>
+<p>As types are not first class objects in Dart we can only
+approximate this test by using a generic wrapper class.</p>
+<p>For example, to test whether 'bar' is an instance of type
+'Foo', we would write:</p>
+<pre><code>expect(bar, new isInstanceOf&lt;Foo&gt;());
+</code></pre>
+<p>To get better error message, supply a name when creating the
+Type wrapper; e.g.:</p>
+<pre><code>expect(bar, new isInstanceOf&lt;Foo&gt;('Foo'));
+</code></pre>
+<p>Note that this does not currently work in dart2js; it will
+match any type, and isNot(new isInstanceof&lt;T>()) will always
+fail. This is because dart2js currently ignores template type
+parameters.</p>
+<pre class="source">
+class isInstanceOf&lt;T&gt; extends BaseMatcher {
+ final String _name;
+ const isInstanceOf([name = 'specified type']) : this._name = name;
+ bool matches(obj, MatchState matchState) =&gt; obj is T;
+ // The description here is lame :-(
+ Description describe(Description description) =&gt;
+     description.add('an instance of ${_name}');
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../matcher/BaseMatcher.html">BaseMatcher</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>isInstanceOf&lt;T&gt;</strong></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="isInstanceOf">
+<button class="show-code">Code</button>
+const <strong>isInstanceOf</strong>([name = 'specified type']) <a class="anchor-link" href="#isInstanceOf"
+              title="Permalink to isInstanceOf&lt;T&gt;.isInstanceOf">#</a></h4>
+<div class="doc">
+<pre class="source">
+const isInstanceOf([name = 'specified type']) : this._name = name;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="describe">
+<button class="show-code">Code</button>
+<a href="../matcher/Description.html">Description</a> <strong>describe</strong>(<a href="../matcher/Description.html">Description</a> description) <a class="anchor-link" href="#describe"
+              title="Permalink to isInstanceOf&lt;T&gt;.describe">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Creates a textual description of a matcher,
+by appending to <code>mismatchDescription</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../matcher/BaseMatcher.html">BaseMatcher</a> </div></div>
+<pre class="source">
+Description describe(Description description) =&gt;
+   description.add('an instance of ${_name}');
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="describeMismatch">
+<button class="show-code">Code</button>
+<a href="../matcher/Description.html">Description</a> <strong>describeMismatch</strong>(item, <a href="../matcher/Description.html">Description</a> mismatchDescription, <a href="../matcher/MatchState.html">MatchState</a> matchState, <a href="../dart_core/bool.html">bool</a> verbose) <a class="anchor-link" href="#describeMismatch"
+              title="Permalink to isInstanceOf&lt;T&gt;.describeMismatch">#</a></h4>
+<div class="inherited-from">inherited from <a href="../matcher/BaseMatcher.html">BaseMatcher</a> </div><div class="doc">
+<p>Generates a description of the matcher failed for a particular
+
+<span class="param">item</span>, by appending the description to 
+<span class="param">mismatchDescription</span>.
+It does not check whether the 
+<span class="param">item</span> fails the match, as it is
+only called after a failed match. There may be additional info
+about the mismatch in 
+<span class="param">matchState</span>.</p>
+<pre class="source">
+Description describeMismatch(item, Description mismatchDescription,
+                            MatchState matchState, bool verbose) =&gt;
+ mismatchDescription.add('was ').addDescriptionOf(item);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="matches">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>matches</strong>(obj, <a href="../matcher/MatchState.html">MatchState</a> matchState) <a class="anchor-link" href="#matches"
+              title="Permalink to isInstanceOf&lt;T&gt;.matches">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Tests the matcher against a given <code>item</code>
+and return true if the match succeeds; false otherwise.
+
+<span class="param">matchState</span> may be used to return additional info for
+the use of <code>describeMismatch</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../matcher/BaseMatcher.html">BaseMatcher</a> </div></div>
+<pre class="source">
+bool matches(obj, MatchState matchState) =&gt; obj is T;
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:04.476</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

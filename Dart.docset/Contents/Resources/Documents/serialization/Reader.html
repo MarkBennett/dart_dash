@@ -1,0 +1,660 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Reader class / serialization Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="serialization" data-type="Reader">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../serialization.html">serialization</a> &rsaquo; <a href="../serialization/Reader.html">Reader</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><ul class="icon">
+<li><a href="../serialization/BasicRule.html"><div class="icon-class"></div>BasicRule</a></li>
+<li><a href="../serialization/ClosureRule.html"><div class="icon-class"></div>ClosureRule</a></li>
+<li><a href="../serialization/Constructor.html"><div class="icon-class"></div>Constructor</a></li>
+<li><a href="../serialization/ConstructType.html"><div class="icon-interface"></div>ConstructType</a></li>
+<li><a href="../serialization/CustomRule.html"><div class="icon-class"></div>CustomRule</a></li>
+<li><a href="../serialization/DesignatedRuleForObject.html"><div class="icon-class"></div>DesignatedRuleForObject</a></li>
+<li><a href="../serialization/Format.html"><div class="icon-class"></div>Format</a></li>
+<li><a href="../serialization/GetStateType.html"><div class="icon-interface"></div>GetStateType</a></li>
+<li><a href="../serialization/ListRule.html"><div class="icon-class"></div>ListRule</a></li>
+<li><a href="../serialization/ListRuleEssential.html"><div class="icon-class"></div>ListRuleEssential</a></li>
+<li><a href="../serialization/MapRule.html"><div class="icon-class"></div>MapRule</a></li>
+<li><a href="../serialization/MirrorRule.html"><div class="icon-class"></div>MirrorRule</a></li>
+<li><a href="../serialization/NamedObjectRule.html"><div class="icon-class"></div>NamedObjectRule</a></li>
+<li><a href="../serialization/NonEssentialStateType.html"><div class="icon-interface"></div>NonEssentialStateType</a></li>
+<li><a href="../serialization/PrimitiveRule.html"><div class="icon-class"></div>PrimitiveRule</a></li>
+<li><div class="icon-class"></div><strong>Reader</strong></li>
+<li><a href="../serialization/ReaderOrWriter.html"><div class="icon-class"></div>ReaderOrWriter</a></li>
+<li><a href="../serialization/Reference.html"><div class="icon-class"></div>Reference</a></li>
+<li><a href="../serialization/Serialization.html"><div class="icon-class"></div>Serialization</a></li>
+<li><a href="../serialization/SerializationRule.html"><div class="icon-class"></div>SerializationRule</a></li>
+<li><a href="../serialization/SetWithFunction.html"><div class="icon-interface"></div>SetWithFunction</a></li>
+<li><a href="../serialization/SimpleFlatFormat.html"><div class="icon-class"></div>SimpleFlatFormat</a></li>
+<li><a href="../serialization/SimpleJsonFormat.html"><div class="icon-class"></div>SimpleJsonFormat</a></li>
+<li><a href="../serialization/SimpleMapFormat.html"><div class="icon-class"></div>SimpleMapFormat</a></li>
+<li><a href="../serialization/Trace.html"><div class="icon-class"></div>Trace</a></li>
+<li><a href="../serialization/Writer.html"><div class="icon-class"></div>Writer</a></li>
+<li><a href="../serialization/SerializationException.html"><div class="icon-exception"></div>SerializationException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Reader</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The main class responsible for reading. It holds
+onto the necessary state and to the objects that have been inflated.</p>
+<pre class="source">
+class Reader implements ReaderOrWriter {
+
+ /**
+  * The serialization that specifies how we read. Note that in contrast
+  * to the Writer, this is not final. This is because we may be created
+  * with an empty [Serialization] and then read the rules from the data,
+  * if [selfDescribing] is true.
+  */
+ Serialization serialization;
+
+ /**
+  * When we read objects, should we read a description of the rules if
+  * present. This defaults to the corresponding value on the Serialization.
+  */
+ bool selfDescribing;
+
+ /**
+  * The state of objects that have been serialized is stored here.
+  * Each rule has a number, and rules keep track of the objects that they
+  * serialize, in order. So the state of any object can be found by indexing
+  * from the rule number and the object number within the rule.
+  * The actual representation of the state is determined by the rule. Lists
+  * and Maps are common, but it is arbitrary. See [Writer.states].
+  */
+ List&lt;List&gt; _data;
+
+ /**
+  * The resulting objects, indexed according to the same scheme as
+  * [data], where each rule has a number, and rules keep track of the objects
+  * that they serialize, in order.
+  */
+ List&lt;List&gt; objects;
+
+ Format format = new SimpleMapFormat();
+
+ /**
+  * Creates a new [Reader] that uses the rules from its parent
+  * [Serialization]. Serializations do not keep any state related to
+  * a particular read or write operation, so the same one can be used
+  * for multiple different Writers/Readers.
+  */
+ Reader(this.serialization, [Format newFormat]) {
+   selfDescribing = serialization.selfDescribing;
+   if (newFormat != null) format = newFormat;
+ }
+
+ /**
+  * When we read, we may need to look up objects by name in order to link to
+  * them. This is particularly true if we have references to classes,
+  * functions, mirrors, or other non-portable entities. The map in which we
+  * look things up can be provided as an argument to read, but we can also
+  * provide a map here, and objects will be looked up in both places.
+  */
+ Map namedObjects;
+
+ /**
+  * Look up the reference to an external object. This can be held either in
+  * the reader-specific list of externals or in the serializer's
+  */
+ objectNamed(key, [Function ifAbsent]) {
+   var map = (namedObjects.containsKey(key))
+       ? namedObjects : serialization.namedObjects;
+   if (!map.containsKey(key)) {
+     (ifAbsent == null ? keyNotFound : ifAbsent)(key);
+   }
+   return map[key];
+ }
+
+ void keyNotFound(key) {
+   throw new SerializationException(
+       'Cannot find named object to link to: $key');
+ }
+
+ /**
+  * Return the list of rules to be used when writing. These come from the
+  * [serialization].
+  */
+ List&lt;SerializationRule&gt; get rules =&gt; serialization._rules;
+
+ /**
+  * Internal use only, for testing purposes. Set the data for this reader
+  * to a List of Lists whose size must match the number of rules.
+  */
+ // When we set the data, initialize the object storage to a matching size.
+ void set data(List&lt;List&gt; newData) {
+   _data = newData;
+   objects = _data.map((x) =&gt; new List(x.length)).toList();
+ }
+
+ /**
+  * This is the primary method for a [Reader]. It takes the input data,
+  * decodes it according to [format] and returns the root object.
+  */
+ read(rawInput, [Map externals = const {}]) {
+   namedObjects = externals;
+   var input = format.read(rawInput, this);
+   data = input["data"];
+   rules.forEach(inflateForRule);
+   return inflateReference(input["roots"].first);
+ }
+
+ /**
+  * If the data we are reading from has rules written to it, read them back
+  * and set them as the rules we will use.
+  */
+ void readRules(newRules) {
+   // TODO(alanknight): Replacing the serialization is kind of confusing.
+   if (newRules == null) return;
+   var reader = serialization.ruleSerialization().newReader(format);
+   List rulesWeRead = reader.read(newRules, namedObjects);
+   if (rulesWeRead != null &amp;&amp; !rulesWeRead.isEmpty) {
+     serialization = new Serialization.blank();
+     rulesWeRead.forEach(serialization.addRule);
+   }
+ }
+
+ /**
+  * Inflate all of the objects for [rule]. Does the essential state for all
+  * objects first, then the non-essential state. This avoids cycles in
+  * non-essential state, because all the objects will have already been
+  * created.
+  */
+ inflateForRule(rule) {
+   var dataForThisRule = _data[rule.number];
+   keysAndValues(dataForThisRule).forEach((position, state) {
+     inflateOne(rule, position, state);
+   });
+   keysAndValues(dataForThisRule).forEach((position, state) {
+     rule.inflateNonEssential(state, allObjectsForRule(rule)[position], this);
+   });
+ }
+
+ /**
+  * Create a new object, based on [rule] and [state], which will
+  * be stored in [position] in the storage for [rule]. This will
+  * follow references and recursively inflate them, leaving Sentinel objects
+  * to detect cycles.
+  */
+ inflateOne(SerializationRule rule, position, state) {
+   var existing = allObjectsForRule(rule)[position];
+   // We may already be in progress and hitting this in a cycle.
+   if (existing is _Sentinel) {
+     throw new SerializationException('Cycle in essential state');
+   }
+   // We may have already inflated this object, at least its essential state.
+   if (existing != null) return existing;
+
+   // Put a sentinel there to mark this in case of recursion.
+   allObjectsForRule(rule)[position] = const _Sentinel();
+   var newObject = rule.inflateEssential(state, this);
+   allObjectsForRule(rule)[position] = newObject;
+   return newObject;
+ }
+
+ /**
+  * The parameter [possibleReference] might be a reference. If it isn't, just
+  * return it. If it is, then inflate the target of the reference and return
+  * the resulting object.
+  */
+ inflateReference(possibleReference) {
+   // If this is a primitive, return it directly.
+   // TODO This seems too complicated.
+   return asReference(possibleReference,
+       ifReference: (reference) {
+         var rule = ruleFor(reference);
+         var state = _stateFor(reference);
+         inflateOne(rule, reference.objectNumber, state);
+         return _objectFor(reference);
+       });
+ }
+
+ /** Return the object pointed to by [reference]. */
+ resolveReference(reference) =&gt; inflateReference(reference);
+
+ /**
+  * Given [reference], return what we have stored as an object for it. Note
+  * that, depending on the current state, this might be null or a Sentinel.
+  */
+ _objectFor(Reference reference) =&gt;
+     objects[reference.ruleNumber][reference.objectNumber];
+
+ /** Given [rule], return the storage for its objects. */
+ allObjectsForRule(SerializationRule rule) =&gt; objects[rule.number];
+
+ /** Given [reference], return the the state we have stored for it. */
+ _stateFor(Reference reference) =&gt;
+     _data[reference.ruleNumber][reference.objectNumber];
+
+ /** Given a reference, return the rule it references. */
+ SerializationRule ruleFor(Reference reference) =&gt;
+     serialization._rules[reference.ruleNumber];
+
+ /**
+  * Return the primitive rule we are using. This is an ugly mechanism to
+  * support the extra information to reconstruct objects in the
+  * [SimpleJsonFormat].
+  */
+ SerializationRule _primitiveRule() {
+   for (var each in rules) {
+     if (each.runtimeType == PrimitiveRule) {
+       return each;
+     }
+   }
+   throw new SerializationException("No PrimitiveRule found");
+ }
+
+ /**
+  * Given a possible reference [anObject], call either [ifReference] or
+  * [ifNotReference], depending if it's a reference or not. This is the
+  * primary place that knows about the serialized representation of a
+  * reference.
+  */
+ asReference(anObject, {Function ifReference: doNothing,
+     Function ifNotReference : doNothing}) {
+   if (anObject is Reference) return ifReference(anObject);
+   if (anObject is Map &amp;&amp; anObject["__Ref"] == true) {
+     var ref =
+         new Reference(this, anObject["rule"], anObject["object"]);
+     return ifReference(ref);
+   } else {
+     return ifNotReference(anObject);
+   }
+ }
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../serialization/ReaderOrWriter.html">ReaderOrWriter</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Reader">
+<button class="show-code">Code</button>
+new <strong>Reader</strong>(<a href="../serialization/Serialization.html">Serialization</a> serialization, [<a href="../serialization/Format.html">Format</a> newFormat]) <a class="anchor-link" href="#Reader"
+              title="Permalink to Reader.Reader">#</a></h4>
+<div class="doc">
+<p>Creates a new <a class="crossref" href="../serialization/Reader.html#Reader">Reader</a> that uses the rules from its parent
+<a class="crossref" href="../serialization/Serialization.html">Serialization</a>. Serializations do not keep any state related to
+a particular read or write operation, so the same one can be used
+for multiple different Writers/Readers.</p>
+<pre class="source">
+Reader(this.serialization, [Format newFormat]) {
+ selfDescribing = serialization.selfDescribing;
+ if (newFormat != null) format = newFormat;
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="method"><h4 id="data=">
+<button class="show-code">Code</button>
+void <strong>set data</strong>(<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/List.html">List</a>&gt; newData) <a class="anchor-link" href="#data="
+              title="Permalink to Reader.set data">#</a></h4>
+<div class="doc">
+<p>Internal use only, for testing purposes. Set the data for this reader
+to a List of Lists whose size must match the number of rules.</p>
+<pre class="source">
+void set data(List&lt;List&gt; newData) {
+ _data = newData;
+ objects = _data.map((x) =&gt; new List(x.length)).toList();
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="format">
+<button class="show-code">Code</button>
+<a href="../serialization/Format.html">Format</a>         <strong>format</strong> <a class="anchor-link"
+            href="#format"
+            title="Permalink to Reader.format">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+format = new SimpleMapFormat()
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="namedObjects">
+<button class="show-code">Code</button>
+<a href="../dart_core/Map.html">Map</a>         <strong>namedObjects</strong> <a class="anchor-link"
+            href="#namedObjects"
+            title="Permalink to Reader.namedObjects">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+namedObjects
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="objects">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/List.html">List</a>&gt;         <strong>objects</strong> <a class="anchor-link"
+            href="#objects"
+            title="Permalink to Reader.objects">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+objects
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="rules">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../serialization/SerializationRule.html">SerializationRule</a>&gt;         <strong>rules</strong> <a class="anchor-link"
+            href="#rules"
+            title="Permalink to Reader.rules">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the list of rules to be used when writing. These come from the
+<a class="crossref" href="../serialization/Reader.html#serialization">serialization</a>.</p>
+<pre class="source">
+List&lt;SerializationRule&gt; get rules =&gt; serialization._rules;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="selfDescribing">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>selfDescribing</strong> <a class="anchor-link"
+            href="#selfDescribing"
+            title="Permalink to Reader.selfDescribing">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+selfDescribing
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="serialization">
+<button class="show-code">Code</button>
+<a href="../serialization/Serialization.html">Serialization</a>         <strong>serialization</strong> <a class="anchor-link"
+            href="#serialization"
+            title="Permalink to Reader.serialization">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+serialization
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="allObjectsForRule">
+<button class="show-code">Code</button>
+<strong>allObjectsForRule</strong>(<a href="../serialization/SerializationRule.html">SerializationRule</a> rule) <a class="anchor-link" href="#allObjectsForRule"
+              title="Permalink to Reader.allObjectsForRule">#</a></h4>
+<div class="doc">
+<p>Given 
+<span class="param">rule</span>, return the storage for its objects. </p>
+<pre class="source">
+allObjectsForRule(SerializationRule rule) =&gt; objects[rule.number];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="asReference">
+<button class="show-code">Code</button>
+<strong>asReference</strong>(anObject, {<a href="../dart_core/Function.html">Function</a> ifReference: doNothing, <a href="../dart_core/Function.html">Function</a> ifNotReference: doNothing}) <a class="anchor-link" href="#asReference"
+              title="Permalink to Reader.asReference">#</a></h4>
+<div class="doc">
+<p>Given a possible reference 
+<span class="param">anObject</span>, call either 
+<span class="param">ifReference</span> or
+
+<span class="param">ifNotReference</span>, depending if it's a reference or not. This is the
+primary place that knows about the serialized representation of a
+reference.</p>
+<pre class="source">
+asReference(anObject, {Function ifReference: doNothing,
+   Function ifNotReference : doNothing}) {
+ if (anObject is Reference) return ifReference(anObject);
+ if (anObject is Map &amp;&amp; anObject["__Ref"] == true) {
+   var ref =
+       new Reference(this, anObject["rule"], anObject["object"]);
+   return ifReference(ref);
+ } else {
+   return ifNotReference(anObject);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="inflateForRule">
+<button class="show-code">Code</button>
+<strong>inflateForRule</strong>(rule) <a class="anchor-link" href="#inflateForRule"
+              title="Permalink to Reader.inflateForRule">#</a></h4>
+<div class="doc">
+<p>Inflate all of the objects for 
+<span class="param">rule</span>. Does the essential state for all
+objects first, then the non-essential state. This avoids cycles in
+non-essential state, because all the objects will have already been
+created.</p>
+<pre class="source">
+inflateForRule(rule) {
+ var dataForThisRule = _data[rule.number];
+ keysAndValues(dataForThisRule).forEach((position, state) {
+   inflateOne(rule, position, state);
+ });
+ keysAndValues(dataForThisRule).forEach((position, state) {
+   rule.inflateNonEssential(state, allObjectsForRule(rule)[position], this);
+ });
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="inflateOne">
+<button class="show-code">Code</button>
+<strong>inflateOne</strong>(<a href="../serialization/SerializationRule.html">SerializationRule</a> rule, position, state) <a class="anchor-link" href="#inflateOne"
+              title="Permalink to Reader.inflateOne">#</a></h4>
+<div class="doc">
+<p>Create a new object, based on 
+<span class="param">rule</span> and 
+<span class="param">state</span>, which will
+be stored in 
+<span class="param">position</span> in the storage for 
+<span class="param">rule</span>. This will
+follow references and recursively inflate them, leaving Sentinel objects
+to detect cycles.</p>
+<pre class="source">
+inflateOne(SerializationRule rule, position, state) {
+ var existing = allObjectsForRule(rule)[position];
+ // We may already be in progress and hitting this in a cycle.
+ if (existing is _Sentinel) {
+   throw new SerializationException('Cycle in essential state');
+ }
+ // We may have already inflated this object, at least its essential state.
+ if (existing != null) return existing;
+
+ // Put a sentinel there to mark this in case of recursion.
+ allObjectsForRule(rule)[position] = const _Sentinel();
+ var newObject = rule.inflateEssential(state, this);
+ allObjectsForRule(rule)[position] = newObject;
+ return newObject;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="inflateReference">
+<button class="show-code">Code</button>
+<strong>inflateReference</strong>(possibleReference) <a class="anchor-link" href="#inflateReference"
+              title="Permalink to Reader.inflateReference">#</a></h4>
+<div class="doc">
+<p>The parameter 
+<span class="param">possibleReference</span> might be a reference. If it isn't, just
+return it. If it is, then inflate the target of the reference and return
+the resulting object.</p>
+<pre class="source">
+inflateReference(possibleReference) {
+ // If this is a primitive, return it directly.
+ // TODO This seems too complicated.
+ return asReference(possibleReference,
+     ifReference: (reference) {
+       var rule = ruleFor(reference);
+       var state = _stateFor(reference);
+       inflateOne(rule, reference.objectNumber, state);
+       return _objectFor(reference);
+     });
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="keyNotFound">
+<button class="show-code">Code</button>
+void <strong>keyNotFound</strong>(key) <a class="anchor-link" href="#keyNotFound"
+              title="Permalink to Reader.keyNotFound">#</a></h4>
+<div class="doc">
+<pre class="source">
+void keyNotFound(key) {
+ throw new SerializationException(
+     'Cannot find named object to link to: $key');
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="objectNamed">
+<button class="show-code">Code</button>
+<strong>objectNamed</strong>(key, [<a href="../dart_core/Function.html">Function</a> ifAbsent]) <a class="anchor-link" href="#objectNamed"
+              title="Permalink to Reader.objectNamed">#</a></h4>
+<div class="doc">
+<p>Look up the reference to an external object. This can be held either in
+the reader-specific list of externals or in the serializer's</p>
+<pre class="source">
+objectNamed(key, [Function ifAbsent]) {
+ var map = (namedObjects.containsKey(key))
+     ? namedObjects : serialization.namedObjects;
+ if (!map.containsKey(key)) {
+   (ifAbsent == null ? keyNotFound : ifAbsent)(key);
+ }
+ return map[key];
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="read">
+<button class="show-code">Code</button>
+<strong>read</strong>(rawInput, [<a href="../dart_core/Map.html">Map</a> externals = const{}]) <a class="anchor-link" href="#read"
+              title="Permalink to Reader.read">#</a></h4>
+<div class="doc">
+<p>This is the primary method for a <a class="crossref" href="../serialization/Reader.html#Reader">Reader</a>. It takes the input data,
+decodes it according to <a class="crossref" href="../serialization/Reader.html#format">format</a> and returns the root object.</p>
+<pre class="source">
+read(rawInput, [Map externals = const {}]) {
+ namedObjects = externals;
+ var input = format.read(rawInput, this);
+ data = input["data"];
+ rules.forEach(inflateForRule);
+ return inflateReference(input["roots"].first);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="readRules">
+<button class="show-code">Code</button>
+void <strong>readRules</strong>(newRules) <a class="anchor-link" href="#readRules"
+              title="Permalink to Reader.readRules">#</a></h4>
+<div class="doc">
+<p>If the data we are reading from has rules written to it, read them back
+and set them as the rules we will use.</p>
+<pre class="source">
+void readRules(newRules) {
+ // TODO(alanknight): Replacing the serialization is kind of confusing.
+ if (newRules == null) return;
+ var reader = serialization.ruleSerialization().newReader(format);
+ List rulesWeRead = reader.read(newRules, namedObjects);
+ if (rulesWeRead != null &amp;&amp; !rulesWeRead.isEmpty) {
+   serialization = new Serialization.blank();
+   rulesWeRead.forEach(serialization.addRule);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="resolveReference">
+<button class="show-code">Code</button>
+<strong>resolveReference</strong>(reference) <a class="anchor-link" href="#resolveReference"
+              title="Permalink to Reader.resolveReference">#</a></h4>
+<div class="doc">
+<p>Return the object pointed to by 
+<span class="param">reference</span>. </p>
+<pre class="source">
+resolveReference(reference) =&gt; inflateReference(reference);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="ruleFor">
+<button class="show-code">Code</button>
+<a href="../serialization/SerializationRule.html">SerializationRule</a> <strong>ruleFor</strong>(<a href="../serialization/Reference.html">Reference</a> reference) <a class="anchor-link" href="#ruleFor"
+              title="Permalink to Reader.ruleFor">#</a></h4>
+<div class="doc">
+<p>Given a reference, return the rule it references. </p>
+<pre class="source">
+SerializationRule ruleFor(Reference reference) =&gt;
+   serialization._rules[reference.ruleNumber];
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:07.230</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

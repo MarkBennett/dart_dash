@@ -1,0 +1,1881 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ElementInstance class / dart:svg Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:svg" data-type="ElementInstance">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_svg.html">dart:svg</a> &rsaquo; <a href="../dart_svg/ElementInstance.html">ElementInstance</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><ul class="icon">
+<li><a href="../dart_svg/AElement.html"><div class="icon-class"></div>AElement</a></li>
+<li><a href="../dart_svg/AltGlyphElement.html"><div class="icon-class"></div>AltGlyphElement</a></li>
+<li><a href="../dart_svg/Angle.html"><div class="icon-class"></div>Angle</a></li>
+<li><a href="../dart_svg/AnimatedAngle.html"><div class="icon-class"></div>AnimatedAngle</a></li>
+<li><a href="../dart_svg/AnimatedBoolean.html"><div class="icon-class"></div>AnimatedBoolean</a></li>
+<li><a href="../dart_svg/AnimatedEnumeration.html"><div class="icon-class"></div>AnimatedEnumeration</a></li>
+<li><a href="../dart_svg/AnimatedInteger.html"><div class="icon-class"></div>AnimatedInteger</a></li>
+<li><a href="../dart_svg/AnimatedLength.html"><div class="icon-class"></div>AnimatedLength</a></li>
+<li><a href="../dart_svg/AnimatedLengthList.html"><div class="icon-class"></div>AnimatedLengthList</a></li>
+<li><a href="../dart_svg/AnimatedNumber.html"><div class="icon-class"></div>AnimatedNumber</a></li>
+<li><a href="../dart_svg/AnimatedNumberList.html"><div class="icon-class"></div>AnimatedNumberList</a></li>
+<li><a href="../dart_svg/AnimatedPreserveAspectRatio.html"><div class="icon-class"></div>AnimatedPreserveAspectRatio</a></li>
+<li><a href="../dart_svg/AnimatedRect.html"><div class="icon-class"></div>AnimatedRect</a></li>
+<li><a href="../dart_svg/AnimatedString.html"><div class="icon-class"></div>AnimatedString</a></li>
+<li><a href="../dart_svg/AnimatedTransformList.html"><div class="icon-class"></div>AnimatedTransformList</a></li>
+<li><a href="../dart_svg/AnimateElement.html"><div class="icon-class"></div>AnimateElement</a></li>
+<li><a href="../dart_svg/AnimateMotionElement.html"><div class="icon-class"></div>AnimateMotionElement</a></li>
+<li><a href="../dart_svg/AnimateTransformElement.html"><div class="icon-class"></div>AnimateTransformElement</a></li>
+<li><a href="../dart_svg/AnimationElement.html"><div class="icon-class"></div>AnimationElement</a></li>
+<li><a href="../dart_svg/CircleElement.html"><div class="icon-class"></div>CircleElement</a></li>
+<li><a href="../dart_svg/ClipPathElement.html"><div class="icon-class"></div>ClipPathElement</a></li>
+<li><a href="../dart_svg/Color.html"><div class="icon-class"></div>Color</a></li>
+<li><a href="../dart_svg/DefsElement.html"><div class="icon-class"></div>DefsElement</a></li>
+<li><a href="../dart_svg/DescElement.html"><div class="icon-class"></div>DescElement</a></li>
+<li><div class="icon-class"></div><strong>ElementInstance</strong></li>
+<li><a href="../dart_svg/ElementTimeControl.html"><div class="icon-class"></div>ElementTimeControl</a></li>
+<li><a href="../dart_svg/EllipseElement.html"><div class="icon-class"></div>EllipseElement</a></li>
+<li><a href="../dart_svg/ExternalResourcesRequired.html"><div class="icon-class"></div>ExternalResourcesRequired</a></li>
+<li><a href="../dart_svg/FEBlendElement.html"><div class="icon-class"></div>FEBlendElement</a></li>
+<li><a href="../dart_svg/FEColorMatrixElement.html"><div class="icon-class"></div>FEColorMatrixElement</a></li>
+<li><a href="../dart_svg/FEComponentTransferElement.html"><div class="icon-class"></div>FEComponentTransferElement</a></li>
+<li><a href="../dart_svg/FECompositeElement.html"><div class="icon-class"></div>FECompositeElement</a></li>
+<li><a href="../dart_svg/FEConvolveMatrixElement.html"><div class="icon-class"></div>FEConvolveMatrixElement</a></li>
+<li><a href="../dart_svg/FEDiffuseLightingElement.html"><div class="icon-class"></div>FEDiffuseLightingElement</a></li>
+<li><a href="../dart_svg/FEDisplacementMapElement.html"><div class="icon-class"></div>FEDisplacementMapElement</a></li>
+<li><a href="../dart_svg/FEDistantLightElement.html"><div class="icon-class"></div>FEDistantLightElement</a></li>
+<li><a href="../dart_svg/FEFloodElement.html"><div class="icon-class"></div>FEFloodElement</a></li>
+<li><a href="../dart_svg/FEFuncAElement.html"><div class="icon-class"></div>FEFuncAElement</a></li>
+<li><a href="../dart_svg/FEFuncBElement.html"><div class="icon-class"></div>FEFuncBElement</a></li>
+<li><a href="../dart_svg/FEFuncGElement.html"><div class="icon-class"></div>FEFuncGElement</a></li>
+<li><a href="../dart_svg/FEFuncRElement.html"><div class="icon-class"></div>FEFuncRElement</a></li>
+<li><a href="../dart_svg/FEGaussianBlurElement.html"><div class="icon-class"></div>FEGaussianBlurElement</a></li>
+<li><a href="../dart_svg/FEImageElement.html"><div class="icon-class"></div>FEImageElement</a></li>
+<li><a href="../dart_svg/FEMergeElement.html"><div class="icon-class"></div>FEMergeElement</a></li>
+<li><a href="../dart_svg/FEMergeNodeElement.html"><div class="icon-class"></div>FEMergeNodeElement</a></li>
+<li><a href="../dart_svg/FEMorphologyElement.html"><div class="icon-class"></div>FEMorphologyElement</a></li>
+<li><a href="../dart_svg/FEOffsetElement.html"><div class="icon-class"></div>FEOffsetElement</a></li>
+<li><a href="../dart_svg/FEPointLightElement.html"><div class="icon-class"></div>FEPointLightElement</a></li>
+<li><a href="../dart_svg/FESpecularLightingElement.html"><div class="icon-class"></div>FESpecularLightingElement</a></li>
+<li><a href="../dart_svg/FESpotLightElement.html"><div class="icon-class"></div>FESpotLightElement</a></li>
+<li><a href="../dart_svg/FETileElement.html"><div class="icon-class"></div>FETileElement</a></li>
+<li><a href="../dart_svg/FETurbulenceElement.html"><div class="icon-class"></div>FETurbulenceElement</a></li>
+<li><a href="../dart_svg/FilterElement.html"><div class="icon-class"></div>FilterElement</a></li>
+<li><a href="../dart_svg/FilterPrimitiveStandardAttributes.html"><div class="icon-class"></div>FilterPrimitiveStandardAttributes</a></li>
+<li><a href="../dart_svg/FitToViewBox.html"><div class="icon-class"></div>FitToViewBox</a></li>
+<li><a href="../dart_svg/ForeignObjectElement.html"><div class="icon-class"></div>ForeignObjectElement</a></li>
+<li><a href="../dart_svg/GElement.html"><div class="icon-class"></div>GElement</a></li>
+<li><a href="../dart_svg/ImageElement.html"><div class="icon-class"></div>ImageElement</a></li>
+<li><a href="../dart_svg/LangSpace.html"><div class="icon-class"></div>LangSpace</a></li>
+<li><a href="../dart_svg/Length.html"><div class="icon-class"></div>Length</a></li>
+<li><a href="../dart_svg/LengthList.html"><div class="icon-class"></div>LengthList</a></li>
+<li><a href="../dart_svg/LinearGradientElement.html"><div class="icon-class"></div>LinearGradientElement</a></li>
+<li><a href="../dart_svg/LineElement.html"><div class="icon-class"></div>LineElement</a></li>
+<li><a href="../dart_svg/Locatable.html"><div class="icon-class"></div>Locatable</a></li>
+<li><a href="../dart_svg/MarkerElement.html"><div class="icon-class"></div>MarkerElement</a></li>
+<li><a href="../dart_svg/MaskElement.html"><div class="icon-class"></div>MaskElement</a></li>
+<li><a href="../dart_svg/Matrix.html"><div class="icon-class"></div>Matrix</a></li>
+<li><a href="../dart_svg/MetadataElement.html"><div class="icon-class"></div>MetadataElement</a></li>
+<li><a href="../dart_svg/Number.html"><div class="icon-class"></div>Number</a></li>
+<li><a href="../dart_svg/NumberList.html"><div class="icon-class"></div>NumberList</a></li>
+<li><a href="../dart_svg/Paint.html"><div class="icon-class"></div>Paint</a></li>
+<li><a href="../dart_svg/PathElement.html"><div class="icon-class"></div>PathElement</a></li>
+<li><a href="../dart_svg/PathSeg.html"><div class="icon-class"></div>PathSeg</a></li>
+<li><a href="../dart_svg/PathSegArcAbs.html"><div class="icon-class"></div>PathSegArcAbs</a></li>
+<li><a href="../dart_svg/PathSegArcRel.html"><div class="icon-class"></div>PathSegArcRel</a></li>
+<li><a href="../dart_svg/PathSegClosePath.html"><div class="icon-class"></div>PathSegClosePath</a></li>
+<li><a href="../dart_svg/PathSegCurvetoCubicAbs.html"><div class="icon-class"></div>PathSegCurvetoCubicAbs</a></li>
+<li><a href="../dart_svg/PathSegCurvetoCubicRel.html"><div class="icon-class"></div>PathSegCurvetoCubicRel</a></li>
+<li><a href="../dart_svg/PathSegCurvetoCubicSmoothAbs.html"><div class="icon-class"></div>PathSegCurvetoCubicSmoothAbs</a></li>
+<li><a href="../dart_svg/PathSegCurvetoCubicSmoothRel.html"><div class="icon-class"></div>PathSegCurvetoCubicSmoothRel</a></li>
+<li><a href="../dart_svg/PathSegCurvetoQuadraticAbs.html"><div class="icon-class"></div>PathSegCurvetoQuadraticAbs</a></li>
+<li><a href="../dart_svg/PathSegCurvetoQuadraticRel.html"><div class="icon-class"></div>PathSegCurvetoQuadraticRel</a></li>
+<li><a href="../dart_svg/PathSegCurvetoQuadraticSmoothAbs.html"><div class="icon-class"></div>PathSegCurvetoQuadraticSmoothAbs</a></li>
+<li><a href="../dart_svg/PathSegCurvetoQuadraticSmoothRel.html"><div class="icon-class"></div>PathSegCurvetoQuadraticSmoothRel</a></li>
+<li><a href="../dart_svg/PathSegLinetoAbs.html"><div class="icon-class"></div>PathSegLinetoAbs</a></li>
+<li><a href="../dart_svg/PathSegLinetoHorizontalAbs.html"><div class="icon-class"></div>PathSegLinetoHorizontalAbs</a></li>
+<li><a href="../dart_svg/PathSegLinetoHorizontalRel.html"><div class="icon-class"></div>PathSegLinetoHorizontalRel</a></li>
+<li><a href="../dart_svg/PathSegLinetoRel.html"><div class="icon-class"></div>PathSegLinetoRel</a></li>
+<li><a href="../dart_svg/PathSegLinetoVerticalAbs.html"><div class="icon-class"></div>PathSegLinetoVerticalAbs</a></li>
+<li><a href="../dart_svg/PathSegLinetoVerticalRel.html"><div class="icon-class"></div>PathSegLinetoVerticalRel</a></li>
+<li><a href="../dart_svg/PathSegList.html"><div class="icon-class"></div>PathSegList</a></li>
+<li><a href="../dart_svg/PathSegMovetoAbs.html"><div class="icon-class"></div>PathSegMovetoAbs</a></li>
+<li><a href="../dart_svg/PathSegMovetoRel.html"><div class="icon-class"></div>PathSegMovetoRel</a></li>
+<li><a href="../dart_svg/PatternElement.html"><div class="icon-class"></div>PatternElement</a></li>
+<li><a href="../dart_svg/Point.html"><div class="icon-class"></div>Point</a></li>
+<li><a href="../dart_svg/PointList.html"><div class="icon-class"></div>PointList</a></li>
+<li><a href="../dart_svg/PolygonElement.html"><div class="icon-class"></div>PolygonElement</a></li>
+<li><a href="../dart_svg/PolylineElement.html"><div class="icon-class"></div>PolylineElement</a></li>
+<li><a href="../dart_svg/PreserveAspectRatio.html"><div class="icon-class"></div>PreserveAspectRatio</a></li>
+<li><a href="../dart_svg/RadialGradientElement.html"><div class="icon-class"></div>RadialGradientElement</a></li>
+<li><a href="../dart_svg/Rect.html"><div class="icon-class"></div>Rect</a></li>
+<li><a href="../dart_svg/RectElement.html"><div class="icon-class"></div>RectElement</a></li>
+<li><a href="../dart_svg/RenderingIntent.html"><div class="icon-class"></div>RenderingIntent</a></li>
+<li><a href="../dart_svg/ScriptElement.html"><div class="icon-class"></div>ScriptElement</a></li>
+<li><a href="../dart_svg/SetElement.html"><div class="icon-class"></div>SetElement</a></li>
+<li><a href="../dart_svg/StopElement.html"><div class="icon-class"></div>StopElement</a></li>
+<li><a href="../dart_svg/StringList.html"><div class="icon-class"></div>StringList</a></li>
+<li><a href="../dart_svg/StyledElement.html"><div class="icon-class"></div>StyledElement</a></li>
+<li><a href="../dart_svg/StyleElement.html"><div class="icon-class"></div>StyleElement</a></li>
+<li><a href="../dart_svg/SvgDocument.html"><div class="icon-class"></div>SvgDocument</a></li>
+<li><a href="../dart_svg/SvgElement.html"><div class="icon-class"></div>SvgElement</a></li>
+<li><a href="../dart_svg/SvgSvgElement.html"><div class="icon-class"></div>SvgSvgElement</a></li>
+<li><a href="../dart_svg/SwitchElement.html"><div class="icon-class"></div>SwitchElement</a></li>
+<li><a href="../dart_svg/SymbolElement.html"><div class="icon-class"></div>SymbolElement</a></li>
+<li><a href="../dart_svg/Tests.html"><div class="icon-class"></div>Tests</a></li>
+<li><a href="../dart_svg/TextContentElement.html"><div class="icon-class"></div>TextContentElement</a></li>
+<li><a href="../dart_svg/TextElement.html"><div class="icon-class"></div>TextElement</a></li>
+<li><a href="../dart_svg/TextPathElement.html"><div class="icon-class"></div>TextPathElement</a></li>
+<li><a href="../dart_svg/TextPositioningElement.html"><div class="icon-class"></div>TextPositioningElement</a></li>
+<li><a href="../dart_svg/TitleElement.html"><div class="icon-class"></div>TitleElement</a></li>
+<li><a href="../dart_svg/Transform.html"><div class="icon-class"></div>Transform</a></li>
+<li><a href="../dart_svg/Transformable.html"><div class="icon-class"></div>Transformable</a></li>
+<li><a href="../dart_svg/TransformList.html"><div class="icon-class"></div>TransformList</a></li>
+<li><a href="../dart_svg/TSpanElement.html"><div class="icon-class"></div>TSpanElement</a></li>
+<li><a href="../dart_svg/UnitTypes.html"><div class="icon-class"></div>UnitTypes</a></li>
+<li><a href="../dart_svg/UriReference.html"><div class="icon-class"></div>UriReference</a></li>
+<li><a href="../dart_svg/UseElement.html"><div class="icon-class"></div>UseElement</a></li>
+<li><a href="../dart_svg/ViewElement.html"><div class="icon-class"></div>ViewElement</a></li>
+<li><a href="../dart_svg/ViewSpec.html"><div class="icon-class"></div>ViewSpec</a></li>
+<li><a href="../dart_svg/ZoomAndPan.html"><div class="icon-class"></div>ZoomAndPan</a></li>
+<li><a href="../dart_svg/ZoomEvent.html"><div class="icon-class"></div>ZoomEvent</a></li>
+<li><a href="../dart_svg/SvgException.html"><div class="icon-exception"></div>SvgException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ElementInstance</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+@DocsEditable
+@DomName('SVGElementInstance')
+class ElementInstance extends EventTarget native "*SVGElementInstance" {
+
+ @DomName('SVGElementInstance.abortEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; abortEvent = const EventStreamProvider&lt;Event&gt;('abort');
+
+ @DomName('SVGElementInstance.beforecopyEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; beforeCopyEvent = const EventStreamProvider&lt;Event&gt;('beforecopy');
+
+ @DomName('SVGElementInstance.beforecutEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; beforeCutEvent = const EventStreamProvider&lt;Event&gt;('beforecut');
+
+ @DomName('SVGElementInstance.beforepasteEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; beforePasteEvent = const EventStreamProvider&lt;Event&gt;('beforepaste');
+
+ @DomName('SVGElementInstance.blurEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; blurEvent = const EventStreamProvider&lt;Event&gt;('blur');
+
+ @DomName('SVGElementInstance.changeEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; changeEvent = const EventStreamProvider&lt;Event&gt;('change');
+
+ @DomName('SVGElementInstance.clickEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; clickEvent = const EventStreamProvider&lt;MouseEvent&gt;('click');
+
+ @DomName('SVGElementInstance.contextmenuEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; contextMenuEvent = const EventStreamProvider&lt;MouseEvent&gt;('contextmenu');
+
+ @DomName('SVGElementInstance.copyEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; copyEvent = const EventStreamProvider&lt;Event&gt;('copy');
+
+ @DomName('SVGElementInstance.cutEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; cutEvent = const EventStreamProvider&lt;Event&gt;('cut');
+
+ @DomName('SVGElementInstance.dblclickEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; doubleClickEvent = const EventStreamProvider&lt;Event&gt;('dblclick');
+
+ @DomName('SVGElementInstance.dragEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; dragEvent = const EventStreamProvider&lt;MouseEvent&gt;('drag');
+
+ @DomName('SVGElementInstance.dragendEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; dragEndEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragend');
+
+ @DomName('SVGElementInstance.dragenterEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; dragEnterEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragenter');
+
+ @DomName('SVGElementInstance.dragleaveEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; dragLeaveEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragleave');
+
+ @DomName('SVGElementInstance.dragoverEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; dragOverEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragover');
+
+ @DomName('SVGElementInstance.dragstartEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; dragStartEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragstart');
+
+ @DomName('SVGElementInstance.dropEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; dropEvent = const EventStreamProvider&lt;MouseEvent&gt;('drop');
+
+ @DomName('SVGElementInstance.errorEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; errorEvent = const EventStreamProvider&lt;Event&gt;('error');
+
+ @DomName('SVGElementInstance.focusEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; focusEvent = const EventStreamProvider&lt;Event&gt;('focus');
+
+ @DomName('SVGElementInstance.inputEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; inputEvent = const EventStreamProvider&lt;Event&gt;('input');
+
+ @DomName('SVGElementInstance.keydownEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;KeyboardEvent&gt; keyDownEvent = const EventStreamProvider&lt;KeyboardEvent&gt;('keydown');
+
+ @DomName('SVGElementInstance.keypressEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;KeyboardEvent&gt; keyPressEvent = const EventStreamProvider&lt;KeyboardEvent&gt;('keypress');
+
+ @DomName('SVGElementInstance.keyupEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;KeyboardEvent&gt; keyUpEvent = const EventStreamProvider&lt;KeyboardEvent&gt;('keyup');
+
+ @DomName('SVGElementInstance.loadEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; loadEvent = const EventStreamProvider&lt;Event&gt;('load');
+
+ @DomName('SVGElementInstance.mousedownEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; mouseDownEvent = const EventStreamProvider&lt;MouseEvent&gt;('mousedown');
+
+ @DomName('SVGElementInstance.mousemoveEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; mouseMoveEvent = const EventStreamProvider&lt;MouseEvent&gt;('mousemove');
+
+ @DomName('SVGElementInstance.mouseoutEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; mouseOutEvent = const EventStreamProvider&lt;MouseEvent&gt;('mouseout');
+
+ @DomName('SVGElementInstance.mouseoverEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; mouseOverEvent = const EventStreamProvider&lt;MouseEvent&gt;('mouseover');
+
+ @DomName('SVGElementInstance.mouseupEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MouseEvent&gt; mouseUpEvent = const EventStreamProvider&lt;MouseEvent&gt;('mouseup');
+
+ @DomName('SVGElementInstance.mousewheelEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;WheelEvent&gt; mouseWheelEvent = const EventStreamProvider&lt;WheelEvent&gt;('mousewheel');
+
+ @DomName('SVGElementInstance.pasteEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; pasteEvent = const EventStreamProvider&lt;Event&gt;('paste');
+
+ @DomName('SVGElementInstance.resetEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; resetEvent = const EventStreamProvider&lt;Event&gt;('reset');
+
+ @DomName('SVGElementInstance.resizeEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; resizeEvent = const EventStreamProvider&lt;Event&gt;('resize');
+
+ @DomName('SVGElementInstance.scrollEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; scrollEvent = const EventStreamProvider&lt;Event&gt;('scroll');
+
+ @DomName('SVGElementInstance.searchEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; searchEvent = const EventStreamProvider&lt;Event&gt;('search');
+
+ @DomName('SVGElementInstance.selectEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; selectEvent = const EventStreamProvider&lt;Event&gt;('select');
+
+ @DomName('SVGElementInstance.selectstartEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; selectStartEvent = const EventStreamProvider&lt;Event&gt;('selectstart');
+
+ @DomName('SVGElementInstance.submitEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; submitEvent = const EventStreamProvider&lt;Event&gt;('submit');
+
+ @DomName('SVGElementInstance.unloadEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; unloadEvent = const EventStreamProvider&lt;Event&gt;('unload');
+
+ @DomName('SVGElementInstance.childNodes')
+ @DocsEditable
+ @Returns('_ElementInstanceList')
+ @Creates('_ElementInstanceList')
+ final List&lt;ElementInstance&gt; childNodes;
+
+ @DomName('SVGElementInstance.correspondingElement')
+ @DocsEditable
+ final SvgElement correspondingElement;
+
+ @DomName('SVGElementInstance.correspondingUseElement')
+ @DocsEditable
+ final UseElement correspondingUseElement;
+
+ @DomName('SVGElementInstance.firstChild')
+ @DocsEditable
+ final ElementInstance firstChild;
+
+ @DomName('SVGElementInstance.lastChild')
+ @DocsEditable
+ final ElementInstance lastChild;
+
+ @DomName('SVGElementInstance.nextSibling')
+ @DocsEditable
+ final ElementInstance nextSibling;
+
+ @DomName('SVGElementInstance.parentNode')
+ @DocsEditable
+ final ElementInstance parentNode;
+
+ @DomName('SVGElementInstance.previousSibling')
+ @DocsEditable
+ final ElementInstance previousSibling;
+
+ @DomName('SVGElementInstance.onabort')
+ @DocsEditable
+ Stream&lt;Event&gt; get onAbort =&gt; abortEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onbeforecopy')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBeforeCopy =&gt; beforeCopyEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onbeforecut')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBeforeCut =&gt; beforeCutEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onbeforepaste')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBeforePaste =&gt; beforePasteEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onblur')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBlur =&gt; blurEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onchange')
+ @DocsEditable
+ Stream&lt;Event&gt; get onChange =&gt; changeEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onclick')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onClick =&gt; clickEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.oncontextmenu')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onContextMenu =&gt; contextMenuEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.oncopy')
+ @DocsEditable
+ Stream&lt;Event&gt; get onCopy =&gt; copyEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.oncut')
+ @DocsEditable
+ Stream&lt;Event&gt; get onCut =&gt; cutEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.ondblclick')
+ @DocsEditable
+ Stream&lt;Event&gt; get onDoubleClick =&gt; doubleClickEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.ondrag')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDrag =&gt; dragEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.ondragend')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragEnd =&gt; dragEndEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.ondragenter')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragEnter =&gt; dragEnterEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.ondragleave')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragLeave =&gt; dragLeaveEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.ondragover')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragOver =&gt; dragOverEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.ondragstart')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragStart =&gt; dragStartEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.ondrop')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDrop =&gt; dropEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onerror')
+ @DocsEditable
+ Stream&lt;Event&gt; get onError =&gt; errorEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onfocus')
+ @DocsEditable
+ Stream&lt;Event&gt; get onFocus =&gt; focusEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.oninput')
+ @DocsEditable
+ Stream&lt;Event&gt; get onInput =&gt; inputEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onkeydown')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyDown =&gt; keyDownEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onkeypress')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyPress =&gt; keyPressEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onkeyup')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyUp =&gt; keyUpEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onload')
+ @DocsEditable
+ Stream&lt;Event&gt; get onLoad =&gt; loadEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onmousedown')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseDown =&gt; mouseDownEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onmousemove')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseMove =&gt; mouseMoveEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onmouseout')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseOut =&gt; mouseOutEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onmouseover')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseOver =&gt; mouseOverEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onmouseup')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseUp =&gt; mouseUpEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onmousewheel')
+ @DocsEditable
+ Stream&lt;WheelEvent&gt; get onMouseWheel =&gt; mouseWheelEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onpaste')
+ @DocsEditable
+ Stream&lt;Event&gt; get onPaste =&gt; pasteEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onreset')
+ @DocsEditable
+ Stream&lt;Event&gt; get onReset =&gt; resetEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onresize')
+ @DocsEditable
+ Stream&lt;Event&gt; get onResize =&gt; resizeEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onscroll')
+ @DocsEditable
+ Stream&lt;Event&gt; get onScroll =&gt; scrollEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onsearch')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSearch =&gt; searchEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onselect')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSelect =&gt; selectEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onselectstart')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSelectStart =&gt; selectStartEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onsubmit')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSubmit =&gt; submitEvent.forTarget(this);
+
+ @DomName('SVGElementInstance.onunload')
+ @DocsEditable
+ Stream&lt;Event&gt; get onUnload =&gt; unloadEvent.forTarget(this);
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_html/EventTarget.html">EventTarget</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>ElementInstance</strong></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="abortEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>abortEvent</strong> <a class="anchor-link"
+            href="#abortEvent"
+            title="Permalink to ElementInstance.abortEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.abortEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; abortEvent = const EventStreamProvider&lt;Event&gt;('abort')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="beforeCopyEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>beforeCopyEvent</strong> <a class="anchor-link"
+            href="#beforeCopyEvent"
+            title="Permalink to ElementInstance.beforeCopyEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.beforecopyEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; beforeCopyEvent = const EventStreamProvider&lt;Event&gt;('beforecopy')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="beforeCutEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>beforeCutEvent</strong> <a class="anchor-link"
+            href="#beforeCutEvent"
+            title="Permalink to ElementInstance.beforeCutEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.beforecutEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; beforeCutEvent = const EventStreamProvider&lt;Event&gt;('beforecut')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="beforePasteEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>beforePasteEvent</strong> <a class="anchor-link"
+            href="#beforePasteEvent"
+            title="Permalink to ElementInstance.beforePasteEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.beforepasteEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; beforePasteEvent = const EventStreamProvider&lt;Event&gt;('beforepaste')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="blurEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>blurEvent</strong> <a class="anchor-link"
+            href="#blurEvent"
+            title="Permalink to ElementInstance.blurEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.blurEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; blurEvent = const EventStreamProvider&lt;Event&gt;('blur')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="changeEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>changeEvent</strong> <a class="anchor-link"
+            href="#changeEvent"
+            title="Permalink to ElementInstance.changeEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.changeEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; changeEvent = const EventStreamProvider&lt;Event&gt;('change')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="clickEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>clickEvent</strong> <a class="anchor-link"
+            href="#clickEvent"
+            title="Permalink to ElementInstance.clickEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.clickEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; clickEvent = const EventStreamProvider&lt;MouseEvent&gt;('click')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="contextMenuEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>contextMenuEvent</strong> <a class="anchor-link"
+            href="#contextMenuEvent"
+            title="Permalink to ElementInstance.contextMenuEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.contextmenuEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; contextMenuEvent = const EventStreamProvider&lt;MouseEvent&gt;('contextmenu')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="copyEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>copyEvent</strong> <a class="anchor-link"
+            href="#copyEvent"
+            title="Permalink to ElementInstance.copyEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.copyEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; copyEvent = const EventStreamProvider&lt;Event&gt;('copy')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="cutEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>cutEvent</strong> <a class="anchor-link"
+            href="#cutEvent"
+            title="Permalink to ElementInstance.cutEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.cutEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; cutEvent = const EventStreamProvider&lt;Event&gt;('cut')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="doubleClickEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>doubleClickEvent</strong> <a class="anchor-link"
+            href="#doubleClickEvent"
+            title="Permalink to ElementInstance.doubleClickEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.dblclickEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; doubleClickEvent = const EventStreamProvider&lt;Event&gt;('dblclick')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="dragEndEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>dragEndEvent</strong> <a class="anchor-link"
+            href="#dragEndEvent"
+            title="Permalink to ElementInstance.dragEndEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.dragendEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; dragEndEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragend')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="dragEnterEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>dragEnterEvent</strong> <a class="anchor-link"
+            href="#dragEnterEvent"
+            title="Permalink to ElementInstance.dragEnterEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.dragenterEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; dragEnterEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragenter')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="dragEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>dragEvent</strong> <a class="anchor-link"
+            href="#dragEvent"
+            title="Permalink to ElementInstance.dragEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.dragEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; dragEvent = const EventStreamProvider&lt;MouseEvent&gt;('drag')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="dragLeaveEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>dragLeaveEvent</strong> <a class="anchor-link"
+            href="#dragLeaveEvent"
+            title="Permalink to ElementInstance.dragLeaveEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.dragleaveEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; dragLeaveEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragleave')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="dragOverEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>dragOverEvent</strong> <a class="anchor-link"
+            href="#dragOverEvent"
+            title="Permalink to ElementInstance.dragOverEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.dragoverEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; dragOverEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragover')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="dragStartEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>dragStartEvent</strong> <a class="anchor-link"
+            href="#dragStartEvent"
+            title="Permalink to ElementInstance.dragStartEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.dragstartEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; dragStartEvent = const EventStreamProvider&lt;MouseEvent&gt;('dragstart')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="dropEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>dropEvent</strong> <a class="anchor-link"
+            href="#dropEvent"
+            title="Permalink to ElementInstance.dropEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.dropEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; dropEvent = const EventStreamProvider&lt;MouseEvent&gt;('drop')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="errorEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>errorEvent</strong> <a class="anchor-link"
+            href="#errorEvent"
+            title="Permalink to ElementInstance.errorEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.errorEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; errorEvent = const EventStreamProvider&lt;Event&gt;('error')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="focusEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>focusEvent</strong> <a class="anchor-link"
+            href="#focusEvent"
+            title="Permalink to ElementInstance.focusEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.focusEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; focusEvent = const EventStreamProvider&lt;Event&gt;('focus')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="inputEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>inputEvent</strong> <a class="anchor-link"
+            href="#inputEvent"
+            title="Permalink to ElementInstance.inputEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.inputEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; inputEvent = const EventStreamProvider&lt;Event&gt;('input')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="keyDownEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>keyDownEvent</strong> <a class="anchor-link"
+            href="#keyDownEvent"
+            title="Permalink to ElementInstance.keyDownEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.keydownEvent')
+@DocsEditable
+static const EventStreamProvider&lt;KeyboardEvent&gt; keyDownEvent = const EventStreamProvider&lt;KeyboardEvent&gt;('keydown')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="keyPressEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>keyPressEvent</strong> <a class="anchor-link"
+            href="#keyPressEvent"
+            title="Permalink to ElementInstance.keyPressEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.keypressEvent')
+@DocsEditable
+static const EventStreamProvider&lt;KeyboardEvent&gt; keyPressEvent = const EventStreamProvider&lt;KeyboardEvent&gt;('keypress')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="keyUpEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>keyUpEvent</strong> <a class="anchor-link"
+            href="#keyUpEvent"
+            title="Permalink to ElementInstance.keyUpEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.keyupEvent')
+@DocsEditable
+static const EventStreamProvider&lt;KeyboardEvent&gt; keyUpEvent = const EventStreamProvider&lt;KeyboardEvent&gt;('keyup')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="loadEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>loadEvent</strong> <a class="anchor-link"
+            href="#loadEvent"
+            title="Permalink to ElementInstance.loadEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.loadEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; loadEvent = const EventStreamProvider&lt;Event&gt;('load')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="mouseDownEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>mouseDownEvent</strong> <a class="anchor-link"
+            href="#mouseDownEvent"
+            title="Permalink to ElementInstance.mouseDownEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.mousedownEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; mouseDownEvent = const EventStreamProvider&lt;MouseEvent&gt;('mousedown')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="mouseMoveEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>mouseMoveEvent</strong> <a class="anchor-link"
+            href="#mouseMoveEvent"
+            title="Permalink to ElementInstance.mouseMoveEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.mousemoveEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; mouseMoveEvent = const EventStreamProvider&lt;MouseEvent&gt;('mousemove')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="mouseOutEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>mouseOutEvent</strong> <a class="anchor-link"
+            href="#mouseOutEvent"
+            title="Permalink to ElementInstance.mouseOutEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.mouseoutEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; mouseOutEvent = const EventStreamProvider&lt;MouseEvent&gt;('mouseout')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="mouseOverEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>mouseOverEvent</strong> <a class="anchor-link"
+            href="#mouseOverEvent"
+            title="Permalink to ElementInstance.mouseOverEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.mouseoverEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; mouseOverEvent = const EventStreamProvider&lt;MouseEvent&gt;('mouseover')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="mouseUpEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>mouseUpEvent</strong> <a class="anchor-link"
+            href="#mouseUpEvent"
+            title="Permalink to ElementInstance.mouseUpEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.mouseupEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MouseEvent&gt; mouseUpEvent = const EventStreamProvider&lt;MouseEvent&gt;('mouseup')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="mouseWheelEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/WheelEvent.html">WheelEvent</a>&gt;         <strong>mouseWheelEvent</strong> <a class="anchor-link"
+            href="#mouseWheelEvent"
+            title="Permalink to ElementInstance.mouseWheelEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.mousewheelEvent')
+@DocsEditable
+static const EventStreamProvider&lt;WheelEvent&gt; mouseWheelEvent = const EventStreamProvider&lt;WheelEvent&gt;('mousewheel')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pasteEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>pasteEvent</strong> <a class="anchor-link"
+            href="#pasteEvent"
+            title="Permalink to ElementInstance.pasteEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.pasteEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; pasteEvent = const EventStreamProvider&lt;Event&gt;('paste')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="resetEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>resetEvent</strong> <a class="anchor-link"
+            href="#resetEvent"
+            title="Permalink to ElementInstance.resetEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.resetEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; resetEvent = const EventStreamProvider&lt;Event&gt;('reset')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="resizeEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>resizeEvent</strong> <a class="anchor-link"
+            href="#resizeEvent"
+            title="Permalink to ElementInstance.resizeEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.resizeEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; resizeEvent = const EventStreamProvider&lt;Event&gt;('resize')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="scrollEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>scrollEvent</strong> <a class="anchor-link"
+            href="#scrollEvent"
+            title="Permalink to ElementInstance.scrollEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.scrollEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; scrollEvent = const EventStreamProvider&lt;Event&gt;('scroll')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="searchEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>searchEvent</strong> <a class="anchor-link"
+            href="#searchEvent"
+            title="Permalink to ElementInstance.searchEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.searchEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; searchEvent = const EventStreamProvider&lt;Event&gt;('search')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="selectEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>selectEvent</strong> <a class="anchor-link"
+            href="#selectEvent"
+            title="Permalink to ElementInstance.selectEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.selectEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; selectEvent = const EventStreamProvider&lt;Event&gt;('select')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="selectStartEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>selectStartEvent</strong> <a class="anchor-link"
+            href="#selectStartEvent"
+            title="Permalink to ElementInstance.selectStartEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.selectstartEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; selectStartEvent = const EventStreamProvider&lt;Event&gt;('selectstart')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="submitEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>submitEvent</strong> <a class="anchor-link"
+            href="#submitEvent"
+            title="Permalink to ElementInstance.submitEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.submitEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; submitEvent = const EventStreamProvider&lt;Event&gt;('submit')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="unloadEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>unloadEvent</strong> <a class="anchor-link"
+            href="#unloadEvent"
+            title="Permalink to ElementInstance.unloadEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.unloadEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; unloadEvent = const EventStreamProvider&lt;Event&gt;('unload')
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="childNodes">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_svg/ElementInstance.html">ElementInstance</a>&gt;         <strong>childNodes</strong> <a class="anchor-link"
+            href="#childNodes"
+            title="Permalink to ElementInstance.childNodes">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.childNodes')
+@DocsEditable
+@Returns('_ElementInstanceList')
+@Creates('_ElementInstanceList')
+final List&lt;ElementInstance&gt; childNodes
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="correspondingElement">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/SvgElement.html">SvgElement</a>         <strong>correspondingElement</strong> <a class="anchor-link"
+            href="#correspondingElement"
+            title="Permalink to ElementInstance.correspondingElement">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.correspondingElement')
+@DocsEditable
+final SvgElement correspondingElement
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="correspondingUseElement">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/UseElement.html">UseElement</a>         <strong>correspondingUseElement</strong> <a class="anchor-link"
+            href="#correspondingUseElement"
+            title="Permalink to ElementInstance.correspondingUseElement">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.correspondingUseElement')
+@DocsEditable
+final UseElement correspondingUseElement
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="firstChild">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/ElementInstance.html">ElementInstance</a>         <strong>firstChild</strong> <a class="anchor-link"
+            href="#firstChild"
+            title="Permalink to ElementInstance.firstChild">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.firstChild')
+@DocsEditable
+final ElementInstance firstChild
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lastChild">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/ElementInstance.html">ElementInstance</a>         <strong>lastChild</strong> <a class="anchor-link"
+            href="#lastChild"
+            title="Permalink to ElementInstance.lastChild">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.lastChild')
+@DocsEditable
+final ElementInstance lastChild
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="nextSibling">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/ElementInstance.html">ElementInstance</a>         <strong>nextSibling</strong> <a class="anchor-link"
+            href="#nextSibling"
+            title="Permalink to ElementInstance.nextSibling">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.nextSibling')
+@DocsEditable
+final ElementInstance nextSibling
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="on">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Events.html">Events</a>         <strong>on</strong> <a class="anchor-link"
+            href="#on"
+            title="Permalink to ElementInstance.on">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>This is an ease-of-use accessor for event streams which should only be
+used when an explicit accessor is not available.</p>
+<pre class="source">
+Events get on =&gt; new Events(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onAbort">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onAbort</strong> <a class="anchor-link"
+            href="#onAbort"
+            title="Permalink to ElementInstance.onAbort">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onabort')
+@DocsEditable
+Stream&lt;Event&gt; get onAbort =&gt; abortEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBeforeCopy">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforeCopy</strong> <a class="anchor-link"
+            href="#onBeforeCopy"
+            title="Permalink to ElementInstance.onBeforeCopy">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onbeforecopy')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforeCopy =&gt; beforeCopyEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBeforeCut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforeCut</strong> <a class="anchor-link"
+            href="#onBeforeCut"
+            title="Permalink to ElementInstance.onBeforeCut">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onbeforecut')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforeCut =&gt; beforeCutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBeforePaste">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforePaste</strong> <a class="anchor-link"
+            href="#onBeforePaste"
+            title="Permalink to ElementInstance.onBeforePaste">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onbeforepaste')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforePaste =&gt; beforePasteEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBlur">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBlur</strong> <a class="anchor-link"
+            href="#onBlur"
+            title="Permalink to ElementInstance.onBlur">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onblur')
+@DocsEditable
+Stream&lt;Event&gt; get onBlur =&gt; blurEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onChange</strong> <a class="anchor-link"
+            href="#onChange"
+            title="Permalink to ElementInstance.onChange">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onchange')
+@DocsEditable
+Stream&lt;Event&gt; get onChange =&gt; changeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onClick">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onClick</strong> <a class="anchor-link"
+            href="#onClick"
+            title="Permalink to ElementInstance.onClick">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onclick')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onClick =&gt; clickEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onContextMenu">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onContextMenu</strong> <a class="anchor-link"
+            href="#onContextMenu"
+            title="Permalink to ElementInstance.onContextMenu">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.oncontextmenu')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onContextMenu =&gt; contextMenuEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onCopy">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onCopy</strong> <a class="anchor-link"
+            href="#onCopy"
+            title="Permalink to ElementInstance.onCopy">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.oncopy')
+@DocsEditable
+Stream&lt;Event&gt; get onCopy =&gt; copyEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onCut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onCut</strong> <a class="anchor-link"
+            href="#onCut"
+            title="Permalink to ElementInstance.onCut">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.oncut')
+@DocsEditable
+Stream&lt;Event&gt; get onCut =&gt; cutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDoubleClick">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onDoubleClick</strong> <a class="anchor-link"
+            href="#onDoubleClick"
+            title="Permalink to ElementInstance.onDoubleClick">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.ondblclick')
+@DocsEditable
+Stream&lt;Event&gt; get onDoubleClick =&gt; doubleClickEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDrag">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDrag</strong> <a class="anchor-link"
+            href="#onDrag"
+            title="Permalink to ElementInstance.onDrag">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.ondrag')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDrag =&gt; dragEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragEnd</strong> <a class="anchor-link"
+            href="#onDragEnd"
+            title="Permalink to ElementInstance.onDragEnd">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.ondragend')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragEnd =&gt; dragEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragEnter">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragEnter</strong> <a class="anchor-link"
+            href="#onDragEnter"
+            title="Permalink to ElementInstance.onDragEnter">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.ondragenter')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragEnter =&gt; dragEnterEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragLeave">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragLeave</strong> <a class="anchor-link"
+            href="#onDragLeave"
+            title="Permalink to ElementInstance.onDragLeave">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.ondragleave')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragLeave =&gt; dragLeaveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragOver">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragOver</strong> <a class="anchor-link"
+            href="#onDragOver"
+            title="Permalink to ElementInstance.onDragOver">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.ondragover')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragOver =&gt; dragOverEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragStart</strong> <a class="anchor-link"
+            href="#onDragStart"
+            title="Permalink to ElementInstance.onDragStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.ondragstart')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragStart =&gt; dragStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDrop">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDrop</strong> <a class="anchor-link"
+            href="#onDrop"
+            title="Permalink to ElementInstance.onDrop">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.ondrop')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDrop =&gt; dropEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onError</strong> <a class="anchor-link"
+            href="#onError"
+            title="Permalink to ElementInstance.onError">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onerror')
+@DocsEditable
+Stream&lt;Event&gt; get onError =&gt; errorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onFocus">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onFocus</strong> <a class="anchor-link"
+            href="#onFocus"
+            title="Permalink to ElementInstance.onFocus">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onfocus')
+@DocsEditable
+Stream&lt;Event&gt; get onFocus =&gt; focusEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onInput">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onInput</strong> <a class="anchor-link"
+            href="#onInput"
+            title="Permalink to ElementInstance.onInput">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.oninput')
+@DocsEditable
+Stream&lt;Event&gt; get onInput =&gt; inputEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyDown">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyDown</strong> <a class="anchor-link"
+            href="#onKeyDown"
+            title="Permalink to ElementInstance.onKeyDown">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onkeydown')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyDown =&gt; keyDownEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyPress">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyPress</strong> <a class="anchor-link"
+            href="#onKeyPress"
+            title="Permalink to ElementInstance.onKeyPress">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onkeypress')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyPress =&gt; keyPressEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyUp">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyUp</strong> <a class="anchor-link"
+            href="#onKeyUp"
+            title="Permalink to ElementInstance.onKeyUp">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onkeyup')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyUp =&gt; keyUpEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onLoad">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onLoad</strong> <a class="anchor-link"
+            href="#onLoad"
+            title="Permalink to ElementInstance.onLoad">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onload')
+@DocsEditable
+Stream&lt;Event&gt; get onLoad =&gt; loadEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseDown">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseDown</strong> <a class="anchor-link"
+            href="#onMouseDown"
+            title="Permalink to ElementInstance.onMouseDown">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onmousedown')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseDown =&gt; mouseDownEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseMove">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseMove</strong> <a class="anchor-link"
+            href="#onMouseMove"
+            title="Permalink to ElementInstance.onMouseMove">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onmousemove')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseMove =&gt; mouseMoveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseOut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseOut</strong> <a class="anchor-link"
+            href="#onMouseOut"
+            title="Permalink to ElementInstance.onMouseOut">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onmouseout')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseOut =&gt; mouseOutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseOver">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseOver</strong> <a class="anchor-link"
+            href="#onMouseOver"
+            title="Permalink to ElementInstance.onMouseOver">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onmouseover')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseOver =&gt; mouseOverEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseUp">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseUp</strong> <a class="anchor-link"
+            href="#onMouseUp"
+            title="Permalink to ElementInstance.onMouseUp">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onmouseup')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseUp =&gt; mouseUpEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseWheel">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/WheelEvent.html">WheelEvent</a>&gt;         <strong>onMouseWheel</strong> <a class="anchor-link"
+            href="#onMouseWheel"
+            title="Permalink to ElementInstance.onMouseWheel">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onmousewheel')
+@DocsEditable
+Stream&lt;WheelEvent&gt; get onMouseWheel =&gt; mouseWheelEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onPaste">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onPaste</strong> <a class="anchor-link"
+            href="#onPaste"
+            title="Permalink to ElementInstance.onPaste">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onpaste')
+@DocsEditable
+Stream&lt;Event&gt; get onPaste =&gt; pasteEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onReset">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onReset</strong> <a class="anchor-link"
+            href="#onReset"
+            title="Permalink to ElementInstance.onReset">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onreset')
+@DocsEditable
+Stream&lt;Event&gt; get onReset =&gt; resetEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onResize">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onResize</strong> <a class="anchor-link"
+            href="#onResize"
+            title="Permalink to ElementInstance.onResize">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onresize')
+@DocsEditable
+Stream&lt;Event&gt; get onResize =&gt; resizeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onScroll">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onScroll</strong> <a class="anchor-link"
+            href="#onScroll"
+            title="Permalink to ElementInstance.onScroll">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onscroll')
+@DocsEditable
+Stream&lt;Event&gt; get onScroll =&gt; scrollEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSearch">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSearch</strong> <a class="anchor-link"
+            href="#onSearch"
+            title="Permalink to ElementInstance.onSearch">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onsearch')
+@DocsEditable
+Stream&lt;Event&gt; get onSearch =&gt; searchEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSelect">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSelect</strong> <a class="anchor-link"
+            href="#onSelect"
+            title="Permalink to ElementInstance.onSelect">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onselect')
+@DocsEditable
+Stream&lt;Event&gt; get onSelect =&gt; selectEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSelectStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSelectStart</strong> <a class="anchor-link"
+            href="#onSelectStart"
+            title="Permalink to ElementInstance.onSelectStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onselectstart')
+@DocsEditable
+Stream&lt;Event&gt; get onSelectStart =&gt; selectStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSubmit">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSubmit</strong> <a class="anchor-link"
+            href="#onSubmit"
+            title="Permalink to ElementInstance.onSubmit">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onsubmit')
+@DocsEditable
+Stream&lt;Event&gt; get onSubmit =&gt; submitEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onUnload">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onUnload</strong> <a class="anchor-link"
+            href="#onUnload"
+            title="Permalink to ElementInstance.onUnload">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.onunload')
+@DocsEditable
+Stream&lt;Event&gt; get onUnload =&gt; unloadEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="parentNode">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/ElementInstance.html">ElementInstance</a>         <strong>parentNode</strong> <a class="anchor-link"
+            href="#parentNode"
+            title="Permalink to ElementInstance.parentNode">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.parentNode')
+@DocsEditable
+final ElementInstance parentNode
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="previousSibling">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/ElementInstance.html">ElementInstance</a>         <strong>previousSibling</strong> <a class="anchor-link"
+            href="#previousSibling"
+            title="Permalink to ElementInstance.previousSibling">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGElementInstance.previousSibling')
+@DocsEditable
+final ElementInstance previousSibling
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="dispatchEvent">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>dispatchEvent</strong>(<a href="../dart_html/Event.html">Event</a> event) <a class="anchor-link" href="#dispatchEvent"
+              title="Permalink to ElementInstance.dispatchEvent">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>Dispatch an event to this &lt;code>EventTarget&lt;/code>.</p>
+<pre class="source">
+@DomName('EventTarget.dispatchEvent')
+@DocsEditable
+bool dispatchEvent(Event event) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_addEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_addEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_addEventListener"
+              title="Permalink to ElementInstance.$dom_addEventListener">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>Register an event handler of a specific event type on the &lt;code>EventTarget&lt;/code>.</p>
+<pre class="source">
+@JSName('addEventListener')
+@DomName('EventTarget.addEventListener')
+@DocsEditable
+void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_removeEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_removeEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_removeEventListener"
+              title="Permalink to ElementInstance.$dom_removeEventListener">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>Removes an event listener from the &lt;code>EventTarget&lt;/code>.</p>
+<pre class="source">
+@JSName('removeEventListener')
+@DomName('EventTarget.removeEventListener')
+@DocsEditable
+void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+</div>
+          <p class="mdn-attribution">
+          <a href="https://developer.mozilla.org">
+            <img src="../mdn-logo-tiny.png" class="mdn-logo" />
+          </a>
+          This page includes <a href="https://developer.mozilla.org/en/DOM/EventTarget">content</a> from the
+          <a href="http://www.mozilla.org/">Mozilla Foundation</a> that is graciously
+          <a href="https://developer.mozilla.org/Project:Copyrights">licensed</a> under a
+          <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons: Attribution-Sharealike license</a>.
+          Mozilla has no other association with Dart or dartlang.org. We
+          encourage you to improve the web by
+          <a href="https://developer.mozilla.org/Project:en/How_to_Help">contributing</a> to
+          <a href="https://developer.mozilla.org">The Mozilla Developer Network</a>.
+          </p>
+          
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:53.034</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

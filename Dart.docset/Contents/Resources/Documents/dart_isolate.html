@@ -1,0 +1,249 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>dart:isolate Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:isolate">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="index.html">Dart API Reference</a>
+         &rsaquo; <a href="dart_isolate.html">dart:isolate</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="args.html">args</a></h2><h2><div class="icon-library"></div><a href="dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><strong>dart:isolate</strong></h2><ul class="icon">
+<li><a href="dart_isolate/IsolateSink.html"><div class="icon-class"></div>IsolateSink</a></li>
+<li><a href="dart_isolate/IsolateStream.html"><div class="icon-class"></div>IsolateStream</a></li>
+<li><a href="dart_isolate/MessageBox.html"><div class="icon-class"></div>MessageBox</a></li>
+<li><a href="dart_isolate/ReceivePort.html"><div class="icon-class"></div>ReceivePort</a></li>
+<li><a href="dart_isolate/SendPort.html"><div class="icon-class"></div>SendPort</a></li>
+<li><a href="dart_isolate/SendPortSync.html"><div class="icon-class"></div>SendPortSync</a></li>
+<li><a href="dart_isolate/IsolateSpawnException.html"><div class="icon-exception"></div>IsolateSpawnException</a></li>
+<li><a href="dart_isolate/IsolateUnhandledException.html"><div class="icon-exception"></div>IsolateUnhandledException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="unittest.html">unittest</a></h2></div>
+<div class="content">
+<h2><strong>dart:isolate</strong> library</h2>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="port">
+<button class="show-code">Code</button>
+final <a href="dart_isolate/ReceivePort.html">ReceivePort</a>         <strong>port</strong> <a class="anchor-link"
+            href="#port"
+            title="Permalink to port">#</a>
+        </h4>
+        <div class="doc">
+<p>The initial <a class="crossref" href="dart_isolate/ReceivePort.html">ReceivePort</a> available by default for this isolate. This
+<a class="crossref" href="dart_isolate/ReceivePort.html">ReceivePort</a> is created automatically and it is commonly used to establish
+the first communication between isolates (see <a class="crossref" href="dart.isolate.html#spawnFunction">spawnFunction</a> and
+<a class="crossref" href="dart.isolate.html#spawnUri">spawnUri</a>).</p>
+<pre class="source">
+ReceivePort get port =&gt; _Isolate.port;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stream">
+<button class="show-code">Code</button>
+final <a href="dart_isolate/IsolateStream.html">IsolateStream</a>         <strong>stream</strong> <a class="anchor-link"
+            href="#stream"
+            title="Permalink to stream">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+stream = new IsolateStream._fromOriginalReceivePort(port)
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Functions</h3>
+<div class="method"><h4 id="streamSpawnUri">
+<button class="show-code">Code</button>
+<a href="dart_isolate/IsolateSink.html">IsolateSink</a> <strong>streamSpawnUri</strong>(<a href="dart_core/String.html">String</a> uri) <a class="anchor-link" href="#streamSpawnUri"
+              title="Permalink to streamSpawnUri">#</a></h4>
+<div class="doc">
+<p>Creates and spawns an isolate whose code is available at 
+<span class="param">uri</span>.  Like with
+<a class="crossref" href="dart.isolate.html#streamSpawnFunction">streamSpawnFunction</a>, the child isolate will have a default <a class="crossref" href="dart_isolate/IsolateStream.html">IsolateStream</a>,
+and a this function returns an <a class="crossref" href="dart_isolate/IsolateSink.html">IsolateSink</a> feeding into it.</p>
+<p>See comments at the top of this library for more details.</p>
+<pre class="source">
+IsolateSink streamSpawnUri(String uri) {
+ SendPort sendPort = spawnUri(uri);
+ return new IsolateSink._fromPort(sendPort);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="streamSpawnFunction">
+<button class="show-code">Code</button>
+<a href="dart_isolate/IsolateSink.html">IsolateSink</a> <strong>streamSpawnFunction</strong>(void topLevelFunction()) <a class="anchor-link" href="#streamSpawnFunction"
+              title="Permalink to streamSpawnFunction">#</a></h4>
+<div class="doc">
+<p>Creates and spawns an isolate that shares the same code as the current
+isolate, but that starts from 
+<span class="param">topLevelFunction</span>. The 
+<span class="param">topLevelFunction</span>
+argument must be a static top-level function or a static method that takes no
+arguments.</p>
+<p>When any isolate starts (even the main script of the application), a default
+<a class="crossref" href="dart_isolate/IsolateStream.html">IsolateStream</a> is created for it. This sink is available from the top-level
+getter <a class="crossref" href="dart.isolate.html#stream">stream</a> defined in this library.</p>
+<p><a class="crossref" href="dart.isolate.html#spawnFunction">spawnFunction</a> returns an <a class="crossref" href="dart_isolate/IsolateSink.html">IsolateSink</a> feeding into the child isolate's
+default stream.</p>
+<p>See comments at the top of this library for more details.</p>
+<pre class="source">
+IsolateSink streamSpawnFunction(void topLevelFunction()) {
+ SendPort sendPort = spawnFunction(topLevelFunction);
+ return new IsolateSink._fromPort(sendPort);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="spawnUri">
+<button class="show-code">Code</button>
+<a href="dart_isolate/SendPort.html">SendPort</a> <strong>spawnUri</strong>(<a href="dart_core/String.html">String</a> uri) <a class="anchor-link" href="#spawnUri"
+              title="Permalink to spawnUri">#</a></h4>
+<div class="doc">
+<p>Creates and spawns an isolate whose code is available at 
+<span class="param">uri</span>.  Like with
+<a class="crossref" href="dart.isolate.html#spawnFunction">spawnFunction</a>, the child isolate will have a default <a class="crossref" href="dart_isolate/ReceivePort.html">ReceivePort</a>, and a
+this function returns a <a class="crossref" href="dart_isolate/SendPort.html">SendPort</a> derived from it.</p>
+<p>See comments at the top of this library for more details.</p>
+<pre class="source">
+SendPort spawnUri(String uri) =&gt; _Isolate.spawnUri(uri);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="spawnFunction">
+<button class="show-code">Code</button>
+<a href="dart_isolate/SendPort.html">SendPort</a> <strong>spawnFunction</strong>(void topLevelFunction(), [<a href="dart_core/bool.html">bool</a> UnhandledExceptionCallback(<a href="dart_isolate/IsolateUnhandledException.html">IsolateUnhandledException</a> e)]) <a class="anchor-link" href="#spawnFunction"
+              title="Permalink to spawnFunction">#</a></h4>
+<div class="doc">
+<p>Creates and spawns an isolate that shares the same code as the current
+isolate, but that starts from 
+<span class="param">topLevelFunction</span>. The 
+<span class="param">topLevelFunction</span>
+argument must be a static top-level function or a static method that takes no
+arguments. It is illegal to pass a function closure.</p>
+<p>When any isolate starts (even the main script of the application), a default
+<a class="crossref" href="dart_isolate/ReceivePort.html">ReceivePort</a> is created for it. This port is available from the top-level
+getter <a class="crossref" href="dart.isolate.html#port">port</a> defined in this library.</p>
+<p><a class="crossref" href="dart.isolate.html#spawnFunction">spawnFunction</a> returns a <a class="crossref" href="dart_isolate/SendPort.html">SendPort</a> derived from the child isolate's default
+port.</p>
+<p>See comments at the top of this library for more details.</p>
+<pre class="source">
+SendPort spawnFunction(void topLevelFunction(),
+   [bool UnhandledExceptionCallback(IsolateUnhandledException e)])
+   =&gt; _Isolate.spawnFunction(topLevelFunction, UnhandledExceptionCallback);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Abstract Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_isolate/ReceivePort.html"><strong>ReceivePort</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_isolate/SendPort.html"><strong>SendPort</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_isolate/SendPortSync.html"><strong>SendPortSync</strong></a>
+          </h4>
+          </div>
+          
+</div>
+<div>
+<h3>Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_isolate/IsolateSink.html"><strong>IsolateSink</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_isolate/IsolateStream.html"><strong>IsolateStream</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_isolate/MessageBox.html"><strong>MessageBox</strong></a>
+          </h4>
+          </div>
+          
+</div>
+<div>
+<h3>Exceptions</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_isolate/IsolateSpawnException.html"><strong>IsolateSpawnException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_isolate/IsolateUnhandledException.html"><strong>IsolateUnhandledException</strong></a>
+          </h4>
+          </div>
+          
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:10.340</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="client-static.js"></script>
+        </body></html>
+        

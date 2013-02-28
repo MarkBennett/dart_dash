@@ -1,0 +1,713 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>IterableUtf8Decoder class / dart:utf Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:utf" data-type="IterableUtf8Decoder">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_utf.html">dart:utf</a> &rsaquo; <a href="../dart_utf/IterableUtf8Decoder.html">IterableUtf8Decoder</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><ul class="icon">
+<li><a href="../dart_utf/IterableUtf16Decoder.html"><div class="icon-class"></div>IterableUtf16Decoder</a></li>
+<li><a href="../dart_utf/IterableUtf32Decoder.html"><div class="icon-class"></div>IterableUtf32Decoder</a></li>
+<li><div class="icon-class"></div><strong>IterableUtf8Decoder</strong></li>
+<li><a href="../dart_utf/Utf16beBytesToCodeUnitsDecoder.html"><div class="icon-class"></div>Utf16beBytesToCodeUnitsDecoder</a></li>
+<li><a href="../dart_utf/Utf16BytesToCodeUnitsDecoder.html"><div class="icon-class"></div>Utf16BytesToCodeUnitsDecoder</a></li>
+<li><a href="../dart_utf/Utf16CodeUnitDecoder.html"><div class="icon-class"></div>Utf16CodeUnitDecoder</a></li>
+<li><a href="../dart_utf/Utf16leBytesToCodeUnitsDecoder.html"><div class="icon-class"></div>Utf16leBytesToCodeUnitsDecoder</a></li>
+<li><a href="../dart_utf/Utf32beBytesDecoder.html"><div class="icon-class"></div>Utf32beBytesDecoder</a></li>
+<li><a href="../dart_utf/Utf32BytesDecoder.html"><div class="icon-class"></div>Utf32BytesDecoder</a></li>
+<li><a href="../dart_utf/Utf32BytesDecoderProvider.html"><div class="icon-interface"></div>Utf32BytesDecoderProvider</a></li>
+<li><a href="../dart_utf/Utf32leBytesDecoder.html"><div class="icon-class"></div>Utf32leBytesDecoder</a></li>
+<li><a href="../dart_utf/Utf8Decoder.html"><div class="icon-class"></div>Utf8Decoder</a></li>
+<li><a href="../dart_utf/Utf8DecoderTransformer.html"><div class="icon-class"></div>Utf8DecoderTransformer</a></li>
+<li><a href="../dart_utf/Utf8EncoderTransformer.html"><div class="icon-class"></div>Utf8EncoderTransformer</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>IterableUtf8Decoder</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Return type of <a class="crossref" href="../dart.utf.html#decodeUtf8AsIterable">decodeUtf8AsIterable</a> and variants. The Iterable type
+provides an iterator on demand and the iterator will only translate bytes
+as requested by the user of the iterator. (Note: results are not cached.)</p>
+<pre class="source">
+class IterableUtf8Decoder extends Iterable&lt;int&gt; {
+ final List&lt;int&gt; bytes;
+ final int offset;
+ final int length;
+ final int replacementCodepoint;
+
+ IterableUtf8Decoder(this.bytes, [this.offset = 0, this.length = null,
+     this.replacementCodepoint = UNICODE_REPLACEMENT_CHARACTER_CODEPOINT]);
+
+ Utf8Decoder get iterator =&gt;
+     new Utf8Decoder(bytes, offset, length, replacementCodepoint);
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_core/Iterable.html">Iterable&lt;int&gt;</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>IterableUtf8Decoder</strong></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="IterableUtf8Decoder">
+<button class="show-code">Code</button>
+new <strong>IterableUtf8Decoder</strong>(<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt; bytes, [<a href="../dart_core/int.html">int</a> offset = 0, <a href="../dart_core/int.html">int</a> length = null, <a href="../dart_core/int.html">int</a> replacementCodepoint = UNICODE_REPLACEMENT_CHARACTER_CODEPOINT]) <a class="anchor-link" href="#IterableUtf8Decoder"
+              title="Permalink to IterableUtf8Decoder.IterableUtf8Decoder">#</a></h4>
+<div class="doc">
+<pre class="source">
+IterableUtf8Decoder(this.bytes, [this.offset = 0, this.length = null,
+   this.replacementCodepoint = UNICODE_REPLACEMENT_CHARACTER_CODEPOINT]);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="bytes">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;         <strong>bytes</strong> <a class="anchor-link"
+            href="#bytes"
+            title="Permalink to IterableUtf8Decoder.bytes">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+bytes
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="first">
+<button class="show-code">Code</button>
+final <a href="../dart_utf/IterableUtf8Decoder.html">E</a>         <strong>first</strong> <a class="anchor-link"
+            href="#first"
+            title="Permalink to IterableUtf8Decoder.first">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the first element.</p>
+<p>If <code>this</code> is empty throws a <code>StateError</code>. Otherwise this method is
+equivalent to <code>this.elementAt(0)</code></p>
+<pre class="source">
+E get first {
+ Iterator it = iterator;
+ if (!it.moveNext()) {
+   throw new StateError("No elements");
+ }
+ return it.current;
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isEmpty</strong> <a class="anchor-link"
+            href="#isEmpty"
+            title="Permalink to IterableUtf8Decoder.isEmpty">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns true if there is no element in this collection.</p>
+<pre class="source">
+bool get isEmpty =&gt; !iterator.moveNext();
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="iterator">
+<button class="show-code">Code</button>
+final <a href="../dart_utf/Utf8Decoder.html">Utf8Decoder</a>         <strong>iterator</strong> <a class="anchor-link"
+            href="#iterator"
+            title="Permalink to IterableUtf8Decoder.iterator">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns an <code>Iterator</code> that iterates over this <code>Iterable</code> object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/int.html">int</a>&gt; </div></div>
+<pre class="source">
+Utf8Decoder get iterator =&gt;
+   new Utf8Decoder(bytes, offset, length, replacementCodepoint);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="last">
+<button class="show-code">Code</button>
+final <a href="../dart_utf/IterableUtf8Decoder.html">E</a>         <strong>last</strong> <a class="anchor-link"
+            href="#last"
+            title="Permalink to IterableUtf8Decoder.last">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the last element.</p>
+<p>If <code>this</code> is empty throws a <code>StateError</code>.</p>
+<pre class="source">
+E get last {
+ Iterator it = iterator;
+ if (!it.moveNext()) {
+   throw new StateError("No elements");
+ }
+ E result;
+ do {
+   result = it.current;
+ } while(it.moveNext());
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="length">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>length</strong> <a class="anchor-link"
+            href="#length"
+            title="Permalink to IterableUtf8Decoder.length">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns the number of elements in <code>this</code>.</p>
+<p>Counting all elements may be involve running through all elements and can
+therefore be slow.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/int.html">int</a>&gt; </div></div>
+<pre class="source">
+length
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="offset">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>offset</strong> <a class="anchor-link"
+            href="#offset"
+            title="Permalink to IterableUtf8Decoder.offset">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+offset
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="replacementCodepoint">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>replacementCodepoint</strong> <a class="anchor-link"
+            href="#replacementCodepoint"
+            title="Permalink to IterableUtf8Decoder.replacementCodepoint">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+replacementCodepoint
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="single">
+<button class="show-code">Code</button>
+final <a href="../dart_utf/IterableUtf8Decoder.html">E</a>         <strong>single</strong> <a class="anchor-link"
+            href="#single"
+            title="Permalink to IterableUtf8Decoder.single">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the single element in <code>this</code>.</p>
+<p>If <code>this</code> is empty or has more than one element throws a <code>StateError</code>.</p>
+<pre class="source">
+E get single {
+ Iterator it = iterator;
+ if (!it.moveNext()) throw new StateError("No elements");
+ E result = it.current;
+ if (it.moveNext()) throw new StateError("More than one element");
+ return result;
+}
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="any">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>any</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> element)) <a class="anchor-link" href="#any"
+              title="Permalink to IterableUtf8Decoder.any">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns true if one element of this collection satisfies the
+predicate 
+<span class="param">f</span>. Returns false otherwise.</p>
+<pre class="source">
+bool any(bool f(E element)) {
+ for (E element in this) {
+   if (f(element)) return true;
+ }
+ return false;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="contains">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>contains</strong>(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> element) <a class="anchor-link" href="#contains"
+              title="Permalink to IterableUtf8Decoder.contains">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Check whether the collection contains an element equal to 
+<span class="param">element</span>.</p>
+<pre class="source">
+bool contains(E element) {
+ for (E e in this) {
+   if (e == element) return true;
+ }
+ return false;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="elementAt">
+<button class="show-code">Code</button>
+<a href="../dart_utf/IterableUtf8Decoder.html">E</a> <strong>elementAt</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#elementAt"
+              title="Permalink to IterableUtf8Decoder.elementAt">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the 
+<span class="param">index</span>th element.</p>
+<p>If [this] [Iterable] has fewer than 
+<span class="param">index</span> elements throws a
+<code>RangeError</code>.</p>
+<p>Note: if <code>this</code> does not have a deterministic iteration order then the
+function may simply return any element without any iteration if there are
+at least 
+<span class="param">index</span> elements in <code>this</code>.</p>
+<pre class="source">
+E elementAt(int index) {
+ if (index is! int || index &lt; 0) throw new RangeError.value(index);
+ int remaining = index;
+ for (E element in this) {
+   if (remaining == 0) return element;
+   remaining--;
+ }
+ throw new RangeError.value(index);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="every">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>every</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> element)) <a class="anchor-link" href="#every"
+              title="Permalink to IterableUtf8Decoder.every">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns true if every elements of this collection satisify the
+predicate 
+<span class="param">f</span>. Returns false otherwise.</p>
+<pre class="source">
+bool every(bool f(E element)) {
+ for (E element in this) {
+   if (!f(element)) return false;
+ }
+ return true;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="expand">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>expand</strong>(<a href="../dart_core/Iterable.html">Iterable</a> f(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> element)) <a class="anchor-link" href="#expand"
+              title="Permalink to IterableUtf8Decoder.expand">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Expand each element of this <code>Iterable</code> into zero or more elements.</p>
+<p>The resulting Iterable will run through the elements returned
+by 
+<span class="param">f</span> for each element of this, in order.</p>
+<p>The returned <code>Iterable</code> is lazy, and will call 
+<span class="param">f</span> for each element
+of this every time it's iterated.</p>
+<pre class="source">
+Iterable expand(Iterable f(E element)) =&gt;
+   new ExpandIterable&lt;E, dynamic&gt;(this, f);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="firstMatching">
+<button class="show-code">Code</button>
+<a href="../dart_utf/IterableUtf8Decoder.html">E</a> <strong>firstMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> value), {<a href="../dart_utf/IterableUtf8Decoder.html">E</a> orElse()}) <a class="anchor-link" href="#firstMatching"
+              title="Permalink to IterableUtf8Decoder.firstMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the first element that satisfies the given predicate <code>f</code>.</p>
+<p>If none matches, the result of invoking the 
+<span class="param">orElse</span> function is
+returned. By default, when 
+<span class="param">orElse</span> is <code>null</code>, a <code>StateError</code> is
+thrown.</p>
+<pre class="source">
+E firstMatching(bool test(E value), { E orElse() }) {
+ // TODO(floitsch): check that arguments are of correct type?
+ for (E element in this) {
+   if (test(element)) return element;
+ }
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="forEach">
+<button class="show-code">Code</button>
+void <strong>forEach</strong>(void f(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> element)) <a class="anchor-link" href="#forEach"
+              title="Permalink to IterableUtf8Decoder.forEach">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Applies the function 
+<span class="param">f</span> to each element of this collection.</p>
+<pre class="source">
+void forEach(void f(E element)) {
+ for (E element in this) f(element);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="join">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>join</strong>([<a href="../dart_core/String.html">String</a> separator]) <a class="anchor-link" href="#join"
+              title="Permalink to IterableUtf8Decoder.join">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Convert each element to a <code>String</code> and concatenate the strings.</p>
+<p>Converts each element to a <code>String</code> by calling <code>Object.toString</code> on it.
+Then concatenates the strings, optionally separated by the 
+<span class="param">separator</span>
+string.</p>
+<pre class="source">
+String join([String separator]) {
+ Iterator&lt;E&gt; iterator = this.iterator;
+ if (!iterator.moveNext()) return "";
+ StringBuffer buffer = new StringBuffer();
+ if (separator == null || separator == "") {
+   do {
+     buffer.add("${iterator.current}");
+   } while (iterator.moveNext());
+ } else {
+   buffer.add("${iterator.current}");
+   while (iterator.moveNext()) {
+     buffer.add(separator);
+     buffer.add("${iterator.current}");
+   }
+ }
+ return buffer.toString();
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="lastMatching">
+<button class="show-code">Code</button>
+<a href="../dart_utf/IterableUtf8Decoder.html">E</a> <strong>lastMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> value), {<a href="../dart_utf/IterableUtf8Decoder.html">E</a> orElse()}) <a class="anchor-link" href="#lastMatching"
+              title="Permalink to IterableUtf8Decoder.lastMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the last element that satisfies the given predicate <code>f</code>.</p>
+<p>If none matches, the result of invoking the 
+<span class="param">orElse</span> function is
+returned. By default, when 
+<span class="param">orElse</span> is <code>null</code>, a <code>StateError</code> is
+thrown.</p>
+<pre class="source">
+E lastMatching(bool test(E value), {E orElse()}) {
+ // TODO(floitsch): check that arguments are of correct type?
+ E result = null;
+ bool foundMatching = false;
+ for (E element in this) {
+   if (test(element)) {
+     result = element;
+     foundMatching = true;
+   }
+ }
+ if (foundMatching) return result;
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="map">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>map</strong>(f(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> element)) <a class="anchor-link" href="#map"
+              title="Permalink to IterableUtf8Decoder.map">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns a lazy <code>Iterable</code> where each element <code>e</code> of <code>this</code> is replaced
+by the result of <code>f(e)</code>.</p>
+<p>This method returns a view of the mapped elements. As long as the
+returned <code>Iterable</code> is not iterated over, the supplied function 
+<span class="param">f</span> will
+not be invoked. The transformed elements will not be cached. Iterating
+multiple times over the the returned <code>Iterable</code> will invoke the supplied
+function 
+<span class="param">f</span> multiple times on the same element.</p>
+<pre class="source">
+Iterable map(f(E element)) =&gt; new MappedIterable&lt;E, dynamic&gt;(this, f);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="max">
+<button class="show-code">Code</button>
+<a href="../dart_utf/IterableUtf8Decoder.html">E</a> <strong>max</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> a, <a href="../dart_utf/IterableUtf8Decoder.html">E</a> b)]) <a class="anchor-link" href="#max"
+              title="Permalink to IterableUtf8Decoder.max">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Find the largest element in the iterable.</p>
+<p>Returns null if the iterable is empty.
+Otherwise returns an element <code>x</code> of this <code>Iterable</code> so that
+<code>x</code> is not smaller than <code>y</code> (that is, <code>compare(x, y) &gt;= 0</code>) for all
+other elements <code>y</code> in the iterable.</p>
+<p>The 
+<span class="param">compare</span> function must be a proper [Comparator<T>]. If a function is
+not provided, 
+<span class="param">compare</span> defaults to <code>Comparable.compare</code>.</p>
+<pre class="source">
+E max([int compare(E a, E b)]) {
+ if (compare == null) compare = Comparable.compare;
+ Iterator it = iterator;
+ if (!it.moveNext()) return null;
+ E max = it.current;
+ while (it.moveNext()) {
+   E current = it.current;
+   if (compare(max, current) &lt; 0) max = current;
+ }
+ return max;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="min">
+<button class="show-code">Code</button>
+<a href="../dart_utf/IterableUtf8Decoder.html">E</a> <strong>min</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> a, <a href="../dart_utf/IterableUtf8Decoder.html">E</a> b)]) <a class="anchor-link" href="#min"
+              title="Permalink to IterableUtf8Decoder.min">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Find the least element in the iterable.</p>
+<p>Returns null if the iterable is empty.
+Otherwise returns an element <code>x</code> of this <code>Iterable</code> so that
+<code>x</code> is not greater than <code>y</code> (that is, <code>compare(x, y) &lt;= 0</code>) for all
+other elements <code>y</code> in the iterable.</p>
+<p>The 
+<span class="param">compare</span> function must be a proper [Comparator<T>]. If a function is
+not provided, 
+<span class="param">compare</span> defaults to <code>Comparable.compare</code>.</p>
+<pre class="source">
+E min([int compare(E a, E b)]) {
+ if (compare == null) compare = Comparable.compare;
+ Iterator it = iterator;
+ if (!it.moveNext()) return null;
+ E min = it.current;
+ while (it.moveNext()) {
+   E current = it.current;
+   if (compare(min, current) &gt; 0) min = current;
+ }
+ return min;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="reduce">
+<button class="show-code">Code</button>
+<strong>reduce</strong>(initialValue, combine(previousValue, <a href="../dart_utf/IterableUtf8Decoder.html">E</a> element)) <a class="anchor-link" href="#reduce"
+              title="Permalink to IterableUtf8Decoder.reduce">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Reduce a collection to a single value by iteratively combining each element
+of the collection with an existing value using the provided function.
+Use 
+<span class="param">initialValue</span> as the initial value, and the function 
+<span class="param">combine</span> to
+create a new value from the previous one and an element.</p>
+<p>Example of calculating the sum of a collection:</p>
+<p>  collection.reduce(0, (prev, element) => prev + element);</p>
+<pre class="source">
+dynamic reduce(var initialValue,
+              dynamic combine(var previousValue, E element)) {
+ var value = initialValue;
+ for (E element in this) value = combine(value, element);
+ return value;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="singleMatching">
+<button class="show-code">Code</button>
+<a href="../dart_utf/IterableUtf8Decoder.html">E</a> <strong>singleMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> value)) <a class="anchor-link" href="#singleMatching"
+              title="Permalink to IterableUtf8Decoder.singleMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the single element that satisfies <code>f</code>. If no or more than one
+element match then a <code>StateError</code> is thrown.</p>
+<pre class="source">
+E singleMatching(bool test(E value)) {
+ // TODO(floitsch): check that argument is of correct type?
+ E result = null;
+ bool foundMatching = false;
+ for (E element in this) {
+   if (test(element)) {
+     if (foundMatching) {
+       throw new StateError("More than one matching element");
+     }
+     result = element;
+     foundMatching = true;
+   }
+ }
+ if (foundMatching) return result;
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="skip">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_utf/IterableUtf8Decoder.html">E</a>&gt; <strong>skip</strong>(<a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#skip"
+              title="Permalink to IterableUtf8Decoder.skip">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that skips the first 
+<span class="param">n</span> elements.</p>
+<p>If <code>this</code> has fewer than 
+<span class="param">n</span> elements, then the resulting <code>Iterable</code> will
+be empty.</p>
+<pre class="source">
+Iterable&lt;E&gt; skip(int n) {
+ return new SkipIterable&lt;E&gt;(this, n);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="skipWhile">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_utf/IterableUtf8Decoder.html">E</a>&gt; <strong>skipWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> value)) <a class="anchor-link" href="#skipWhile"
+              title="Permalink to IterableUtf8Decoder.skipWhile">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that skips elements while 
+<span class="param">test</span> is satisfied.</p>
+<p>The filtering happens lazily. Every new <code>Iterator</code> of the returned
+<code>Iterable</code> will iterate over all elements of <code>this</code>.
+As long as the iterator's elements do not satisfy 
+<span class="param">test</span> they are
+discarded. Once an element satisfies the 
+<span class="param">test</span> the iterator stops testing
+and uses every element unconditionally.</p>
+<pre class="source">
+Iterable&lt;E&gt; skipWhile(bool test(E value)) {
+ return new SkipWhileIterable&lt;E&gt;(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="take">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_utf/IterableUtf8Decoder.html">E</a>&gt; <strong>take</strong>(<a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#take"
+              title="Permalink to IterableUtf8Decoder.take">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> with at most 
+<span class="param">n</span> elements.</p>
+<p>The returned <code>Iterable</code> may contain fewer than 
+<span class="param">n</span> elements, if <code>this</code>
+contains fewer than 
+<span class="param">n</span> elements.</p>
+<pre class="source">
+Iterable&lt;E&gt; take(int n) {
+ return new TakeIterable&lt;E&gt;(this, n);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="takeWhile">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_utf/IterableUtf8Decoder.html">E</a>&gt; <strong>takeWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> value)) <a class="anchor-link" href="#takeWhile"
+              title="Permalink to IterableUtf8Decoder.takeWhile">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that stops once 
+<span class="param">test</span> is not satisfied anymore.</p>
+<p>The filtering happens lazily. Every new <code>Iterator</code> of the returned
+<code>Iterable</code> will start iterating over the elements of <code>this</code>.
+When the iterator encounters an element <code>e</code> that does not satisfy 
+<span class="param">test</span>,
+it discards <code>e</code> and moves into the finished state. That is, it will not
+ask or provide any more elements.</p>
+<pre class="source">
+Iterable&lt;E&gt; takeWhile(bool test(E value)) {
+ return new TakeWhileIterable&lt;E&gt;(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toList">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_utf/IterableUtf8Decoder.html">E</a>&gt; <strong>toList</strong>() <a class="anchor-link" href="#toList"
+              title="Permalink to IterableUtf8Decoder.toList">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<pre class="source">
+List&lt;E&gt; toList() =&gt; new List&lt;E&gt;.from(this);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toSet">
+<button class="show-code">Code</button>
+<a href="../dart_core/Set.html">Set</a>&lt;<a href="../dart_utf/IterableUtf8Decoder.html">E</a>&gt; <strong>toSet</strong>() <a class="anchor-link" href="#toSet"
+              title="Permalink to IterableUtf8Decoder.toSet">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<pre class="source">
+Set&lt;E&gt; toSet() =&gt; new Set&lt;E&gt;.from(this);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="where">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_utf/IterableUtf8Decoder.html">E</a>&gt; <strong>where</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_utf/IterableUtf8Decoder.html">E</a> element)) <a class="anchor-link" href="#where"
+              title="Permalink to IterableUtf8Decoder.where">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns a lazy <code>Iterable</code> with all elements that satisfy the
+predicate 
+<span class="param">f</span>.</p>
+<p>This method returns a view of the mapped elements. As long as the
+returned <code>Iterable</code> is not iterated over, the supplied function 
+<span class="param">f</span> will
+not be invoked. Iterating will not cache results, and thus iterating
+multiple times over the the returned <code>Iterable</code> will invoke the supplied
+function 
+<span class="param">f</span> multiple times on the same element.</p>
+<pre class="source">
+Iterable&lt;E&gt; where(bool f(E element)) =&gt; new WhereIterable&lt;E&gt;(this, f);
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:00.733</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

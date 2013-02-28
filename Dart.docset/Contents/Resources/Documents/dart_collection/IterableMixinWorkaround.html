@@ -1,0 +1,1051 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>IterableMixinWorkaround class / dart:collection Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:collection" data-type="IterableMixinWorkaround">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_collection.html">dart:collection</a> &rsaquo; <a href="../dart_collection/IterableMixinWorkaround.html">IterableMixinWorkaround</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><ul class="icon">
+<li><a href="../dart_collection/Arrays.html"><div class="icon-class"></div>Arrays</a></li>
+<li><a href="../dart_collection/Collections.html"><div class="icon-class"></div>Collections</a></li>
+<li><a href="../dart_collection/DoubleLinkedQueue.html"><div class="icon-class"></div>DoubleLinkedQueue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/DoubleLinkedQueueEntry.html"><div class="icon-class"></div>DoubleLinkedQueueEntry&lt;E&gt;</a></li>
+<li><a href="../dart_collection/HashMap.html"><div class="icon-class"></div>HashMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/HashSet.html"><div class="icon-class"></div>HashSet&lt;E&gt;</a></li>
+<li><a href="../dart_collection/HasNextIterator.html"><div class="icon-class"></div>HasNextIterator&lt;E&gt;</a></li>
+<li><div class="icon-class"></div><strong>IterableMixinWorkaround</strong></li>
+<li><a href="../dart_collection/LinkedHashMap.html"><div class="icon-class"></div>LinkedHashMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/LinkedHashSet.html"><div class="icon-class"></div>LinkedHashSet&lt;E&gt;</a></li>
+<li><a href="../dart_collection/ListQueue.html"><div class="icon-class"></div>ListQueue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/Maps.html"><div class="icon-class"></div>Maps</a></li>
+<li><a href="../dart_collection/Queue.html"><div class="icon-class"></div>Queue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/SplayTreeMap.html"><div class="icon-class"></div>SplayTreeMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/SplayTreeNode.html"><div class="icon-class"></div>SplayTreeNode&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/UnmodifiableListView.html"><div class="icon-class"></div>UnmodifiableListView&lt;E&gt;</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>IterableMixinWorkaround</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>This class provides default implementations for Iterables (including Lists).</p>
+<p>Once Dart receives Mixins it will be replaced with mixin classes.</p>
+<pre class="source">
+class IterableMixinWorkaround {
+ static bool contains(Iterable iterable, var element) {
+   for (final e in iterable) {
+     if (element == e) return true;
+   }
+   return false;
+ }
+
+ static void forEach(Iterable iterable, void f(o)) {
+   for (final e in iterable) {
+     f(e);
+   }
+ }
+
+ static bool any(Iterable iterable, bool f(o)) {
+   for (final e in iterable) {
+     if (f(e)) return true;
+   }
+   return false;
+ }
+
+ static bool every(Iterable iterable, bool f(o)) {
+   for (final e in iterable) {
+     if (!f(e)) return false;
+   }
+   return true;
+ }
+
+ static dynamic reduce(Iterable iterable,
+                       dynamic initialValue,
+                       dynamic combine(dynamic previousValue, element)) {
+   for (final element in iterable) {
+     initialValue = combine(initialValue, element);
+   }
+   return initialValue;
+ }
+
+ /**
+  * Simple implementation for [Collection.removeAll].
+  *
+  * This implementation assumes that [Collection.remove] on [collection]
+  * is efficient. The [:remove:] method on [List] objects is typically
+  * not efficient since it requires linear search to find an element.
+  */
+ static void removeAll(Collection collection, Iterable elementsToRemove) {
+   for (Object object in elementsToRemove) {
+     collection.remove(object);
+   }
+ }
+
+ /**
+  * Implementation of [Collection.removeAll] for lists.
+  *
+  * This implementation assumes that [Collection.remove] is not efficient
+  * (as it usually isn't on a [List]) and uses [Collection.removeMathcing]
+  * instead of just repeatedly calling remove.
+  */
+ static void removeAllList(Collection collection, Iterable elementsToRemove) {
+   Set setToRemove;
+   // Assume [contains] is efficient on a Set.
+   if (elementsToRemove is Set) {
+     setToRemove = elementsToRemove;
+   } else {
+     setToRemove = elementsToRemove.toSet();
+   }
+   collection.removeMatching(setToRemove.contains);
+ }
+
+ /**
+  * Simple implemenation for [Collection.retainAll].
+  *
+  * This implementation assumes that [Collecton.retainMatching] on [collection]
+  * is efficient.
+  */
+ static void retainAll(Collection collection, Iterable elementsToRetain) {
+   Set lookup;
+   if (elementsToRetain is Set) {
+     lookup = elementsToRetain;
+   } else {
+     lookup = elementsToRetain.toSet();
+   }
+   if (lookup.isEmpty) {
+     collection.clear();
+     return;
+   }
+   collection.retainMatching(lookup.contains);
+ }
+
+ /**
+  * Simple implemenation for [Collection.removeMatching].
+  *
+  * This implementation assumes that [Collecton.removeAll] on [collection] is
+  * efficient.
+  */
+ static void removeMatching(Collection collection, bool test(var element)) {
+   List elementsToRemove = [];
+   for (var element in collection) {
+     if (test(element)) elementsToRemove.add(element);
+   }
+   collection.removeAll(elementsToRemove);
+ }
+
+ /**
+  * Removes elements matching [test] from [list].
+  *
+  * This is performed in two steps, to avoid exposing an inconsistent state
+  * to the [test] function. First the elements to retain are found, and then
+  * the original list is updated to contain those elements.
+  */
+ static void removeMatchingList(List list, bool test(var element)) {
+   List retained = [];
+   int length = list.length;
+   for (int i = 0; i &lt; length; i++) {
+     var element = list[i];
+     if (!test(element)) {
+       retained.add(element);
+     }
+     if (length != list.length) {
+       throw new ConcurrentModificationError(list);
+     }
+   }
+   if (retained.length == length) return;
+   list.length = retained.length;
+   for (int i = 0; i &lt; retained.length; i++) {
+     list[i] = retained[i];
+   }
+ }
+
+ /**
+  * Simple implemenation for [Collection.retainMatching].
+  *
+  * This implementation assumes that [Collecton.removeAll] on [collection] is
+  * efficient.
+  */
+ static void retainMatching(Collection collection, bool test(var element)) {
+   List elementsToRemove = [];
+   for (var element in collection) {
+     if (!test(element)) elementsToRemove.add(element);
+   }
+   collection.removeAll(elementsToRemove);
+ }
+
+ static bool isEmpty(Iterable iterable) {
+   return !iterable.iterator.moveNext();
+ }
+
+ static dynamic first(Iterable iterable) {
+   Iterator it = iterable.iterator;
+   if (!it.moveNext()) {
+     throw new StateError("No elements");
+   }
+   return it.current;
+ }
+
+ static dynamic last(Iterable iterable) {
+   Iterator it = iterable.iterator;
+   if (!it.moveNext()) {
+     throw new StateError("No elements");
+   }
+   dynamic result;
+   do {
+     result = it.current;
+   } while(it.moveNext());
+   return result;
+ }
+
+ static dynamic min(Iterable iterable, [int compare(var a, var b)]) {
+   if (compare == null) compare = Comparable.compare;
+   Iterator it = iterable.iterator;
+   if (!it.moveNext()) {
+     return null;
+   }
+   var min = it.current;
+   while (it.moveNext()) {
+     if (compare(min, it.current) &gt; 0) min = it.current;
+   }
+   return min;
+ }
+
+ static dynamic max(Iterable iterable, [int compare(var a, var b)]) {
+   if (compare == null) compare = Comparable.compare;
+   Iterator it = iterable.iterator;
+   if (!it.moveNext()) {
+     return null;
+   }
+   var max = it.current;
+   while (it.moveNext()) {
+     if (compare(max, it.current) &lt; 0) max = it.current;
+   }
+   return max;
+ }
+
+ static dynamic single(Iterable iterable) {
+   Iterator it = iterable.iterator;
+   if (!it.moveNext()) throw new StateError("No elements");
+   dynamic result = it.current;
+   if (it.moveNext()) throw new StateError("More than one element");
+   return result;
+ }
+
+ static dynamic firstMatching(Iterable iterable,
+                              bool test(dynamic value),
+                              dynamic orElse()) {
+   for (dynamic element in iterable) {
+     if (test(element)) return element;
+   }
+   if (orElse != null) return orElse();
+   throw new StateError("No matching element");
+ }
+
+ static dynamic lastMatching(Iterable iterable,
+                             bool test(dynamic value),
+                             dynamic orElse()) {
+   dynamic result = null;
+   bool foundMatching = false;
+   for (dynamic element in iterable) {
+     if (test(element)) {
+       result = element;
+       foundMatching = true;
+     }
+   }
+   if (foundMatching) return result;
+   if (orElse != null) return orElse();
+   throw new StateError("No matching element");
+ }
+
+ static dynamic lastMatchingInList(List list,
+                                   bool test(dynamic value),
+                                   dynamic orElse()) {
+   // TODO(floitsch): check that arguments are of correct type?
+   for (int i = list.length - 1; i &gt;= 0; i--) {
+     dynamic element = list[i];
+     if (test(element)) return element;
+   }
+   if (orElse != null) return orElse();
+   throw new StateError("No matching element");
+ }
+
+ static dynamic singleMatching(Iterable iterable, bool test(dynamic value)) {
+   dynamic result = null;
+   bool foundMatching = false;
+   for (dynamic element in iterable) {
+     if (test(element)) {
+       if (foundMatching) {
+         throw new StateError("More than one matching element");
+       }
+       result = element;
+       foundMatching = true;
+     }
+   }
+   if (foundMatching) return result;
+   throw new StateError("No matching element");
+ }
+
+ static dynamic elementAt(Iterable iterable, int index) {
+   if (index is! int || index &lt; 0) throw new RangeError.value(index);
+   int remaining = index;
+   for (dynamic element in iterable) {
+     if (remaining == 0) return element;
+     remaining--;
+   }
+   throw new RangeError.value(index);
+ }
+
+ static String join(Iterable iterable, [String separator]) {
+   Iterator iterator = iterable.iterator;
+   if (!iterator.moveNext()) return "";
+   StringBuffer buffer = new StringBuffer();
+   if (separator == null || separator == "") {
+     do {
+       buffer.add("${iterator.current}");
+     } while (iterator.moveNext());
+   } else {
+     buffer.add("${iterator.current}");
+     while (iterator.moveNext()) {
+       buffer.add(separator);
+       buffer.add("${iterator.current}");
+     }
+   }
+   return buffer.toString();
+ }
+
+ static String joinList(List list, [String separator]) {
+   if (list.isEmpty) return "";
+   if (list.length == 1) return "${list[0]}";
+   StringBuffer buffer = new StringBuffer();
+   if (separator == null || separator == "") {
+     for (int i = 0; i &lt; list.length; i++) {
+       buffer.add("${list[i]}");
+     }
+   } else {
+     buffer.add("${list[0]}");
+     for (int i = 1; i &lt; list.length; i++) {
+       buffer.add(separator);
+       buffer.add("${list[i]}");
+     }
+   }
+   return buffer.toString();
+ }
+
+ static Iterable where(Iterable iterable, bool f(var element)) {
+   return new WhereIterable(iterable, f);
+ }
+
+ static Iterable map(Iterable iterable, f(var element)) {
+   return new MappedIterable(iterable, f);
+ }
+
+ static Iterable mapList(List list, f(var element)) {
+   return new MappedListIterable(list, f);
+ }
+
+ static Iterable expand(Iterable iterable, Iterable f(var element)) {
+   return new ExpandIterable(iterable, f);
+ }
+
+ static Iterable takeList(List list, int n) {
+   // The generic type is currently lost. It will be fixed with mixins.
+   // This is currently a List as well as an Iterable.
+   return new SubListIterable(list, 0, n);
+ }
+
+ static Iterable takeWhile(Iterable iterable, bool test(var value)) {
+   // The generic type is currently lost. It will be fixed with mixins.
+   return new TakeWhileIterable(iterable, test);
+ }
+
+ static Iterable skipList(List list, int n) {
+   // The generic type is currently lost. It will be fixed with mixins.
+   // This is currently a List as well as an Iterable.
+   return new SubListIterable(list, n, null);
+ }
+
+ static Iterable skipWhile(Iterable iterable, bool test(var value)) {
+   // The generic type is currently lost. It will be fixed with mixins.
+   return new SkipWhileIterable(iterable, test);
+ }
+
+ static Iterable reversedList(List l) {
+   return new ReversedListIterable(l);
+ }
+
+ static void sortList(List l, int compare(a, b)) {
+   if (compare == null) compare = Comparable.compare;
+   Sort.sort(l, compare);
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="contains">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>contains</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, element) <a class="anchor-link" href="#contains"
+              title="Permalink to IterableMixinWorkaround.contains">#</a></h4>
+<div class="doc">
+<pre class="source">
+static bool contains(Iterable iterable, var element) {
+ for (final e in iterable) {
+   if (element == e) return true;
+ }
+ return false;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="forEach">
+<button class="show-code">Code</button>
+void <strong>forEach</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, void f(o)) <a class="anchor-link" href="#forEach"
+              title="Permalink to IterableMixinWorkaround.forEach">#</a></h4>
+<div class="doc">
+<pre class="source">
+static void forEach(Iterable iterable, void f(o)) {
+ for (final e in iterable) {
+   f(e);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="any">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>any</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/bool.html">bool</a> f(o)) <a class="anchor-link" href="#any"
+              title="Permalink to IterableMixinWorkaround.any">#</a></h4>
+<div class="doc">
+<pre class="source">
+static bool any(Iterable iterable, bool f(o)) {
+ for (final e in iterable) {
+   if (f(e)) return true;
+ }
+ return false;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="every">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>every</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/bool.html">bool</a> f(o)) <a class="anchor-link" href="#every"
+              title="Permalink to IterableMixinWorkaround.every">#</a></h4>
+<div class="doc">
+<pre class="source">
+static bool every(Iterable iterable, bool f(o)) {
+ for (final e in iterable) {
+   if (!f(e)) return false;
+ }
+ return true;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="reduce">
+<button class="show-code">Code</button>
+<strong>reduce</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, initialValue, combine(previousValue, element)) <a class="anchor-link" href="#reduce"
+              title="Permalink to IterableMixinWorkaround.reduce">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic reduce(Iterable iterable,
+                     dynamic initialValue,
+                     dynamic combine(dynamic previousValue, element)) {
+ for (final element in iterable) {
+   initialValue = combine(initialValue, element);
+ }
+ return initialValue;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeAll">
+<button class="show-code">Code</button>
+void <strong>removeAll</strong>(<a href="../dart_core/Collection.html">Collection</a> collection, <a href="../dart_core/Iterable.html">Iterable</a> elementsToRemove) <a class="anchor-link" href="#removeAll"
+              title="Permalink to IterableMixinWorkaround.removeAll">#</a></h4>
+<div class="doc">
+<p>Simple implementation for <code>Collection.removeAll</code>.</p>
+<p>This implementation assumes that <code>Collection.remove</code> on 
+<span class="param">collection</span>
+is efficient. The <code>remove</code> method on <code>List</code> objects is typically
+not efficient since it requires linear search to find an element.</p>
+<pre class="source">
+static void removeAll(Collection collection, Iterable elementsToRemove) {
+ for (Object object in elementsToRemove) {
+   collection.remove(object);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeAllList">
+<button class="show-code">Code</button>
+void <strong>removeAllList</strong>(<a href="../dart_core/Collection.html">Collection</a> collection, <a href="../dart_core/Iterable.html">Iterable</a> elementsToRemove) <a class="anchor-link" href="#removeAllList"
+              title="Permalink to IterableMixinWorkaround.removeAllList">#</a></h4>
+<div class="doc">
+<p>Implementation of <code>Collection.removeAll</code> for lists.</p>
+<p>This implementation assumes that <code>Collection.remove</code> is not efficient
+(as it usually isn't on a <code>List</code>) and uses <code>Collection.removeMathcing</code>
+instead of just repeatedly calling remove.</p>
+<pre class="source">
+static void removeAllList(Collection collection, Iterable elementsToRemove) {
+ Set setToRemove;
+ // Assume [contains] is efficient on a Set.
+ if (elementsToRemove is Set) {
+   setToRemove = elementsToRemove;
+ } else {
+   setToRemove = elementsToRemove.toSet();
+ }
+ collection.removeMatching(setToRemove.contains);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="retainAll">
+<button class="show-code">Code</button>
+void <strong>retainAll</strong>(<a href="../dart_core/Collection.html">Collection</a> collection, <a href="../dart_core/Iterable.html">Iterable</a> elementsToRetain) <a class="anchor-link" href="#retainAll"
+              title="Permalink to IterableMixinWorkaround.retainAll">#</a></h4>
+<div class="doc">
+<p>Simple implemenation for <code>Collection.retainAll</code>.</p>
+<p>This implementation assumes that <code>Collecton.retainMatching</code> on 
+<span class="param">collection</span>
+is efficient.</p>
+<pre class="source">
+static void retainAll(Collection collection, Iterable elementsToRetain) {
+ Set lookup;
+ if (elementsToRetain is Set) {
+   lookup = elementsToRetain;
+ } else {
+   lookup = elementsToRetain.toSet();
+ }
+ if (lookup.isEmpty) {
+   collection.clear();
+   return;
+ }
+ collection.retainMatching(lookup.contains);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeMatching">
+<button class="show-code">Code</button>
+void <strong>removeMatching</strong>(<a href="../dart_core/Collection.html">Collection</a> collection, <a href="../dart_core/bool.html">bool</a> test(element)) <a class="anchor-link" href="#removeMatching"
+              title="Permalink to IterableMixinWorkaround.removeMatching">#</a></h4>
+<div class="doc">
+<p>Simple implemenation for <code>Collection.removeMatching</code>.</p>
+<p>This implementation assumes that <code>Collecton.removeAll</code> on 
+<span class="param">collection</span> is
+efficient.</p>
+<pre class="source">
+static void removeMatching(Collection collection, bool test(var element)) {
+ List elementsToRemove = [];
+ for (var element in collection) {
+   if (test(element)) elementsToRemove.add(element);
+ }
+ collection.removeAll(elementsToRemove);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeMatchingList">
+<button class="show-code">Code</button>
+void <strong>removeMatchingList</strong>(<a href="../dart_core/List.html">List</a> list, <a href="../dart_core/bool.html">bool</a> test(element)) <a class="anchor-link" href="#removeMatchingList"
+              title="Permalink to IterableMixinWorkaround.removeMatchingList">#</a></h4>
+<div class="doc">
+<p>Removes elements matching 
+<span class="param">test</span> from 
+<span class="param">list</span>.</p>
+<p>This is performed in two steps, to avoid exposing an inconsistent state
+to the 
+<span class="param">test</span> function. First the elements to retain are found, and then
+the original list is updated to contain those elements.</p>
+<pre class="source">
+static void removeMatchingList(List list, bool test(var element)) {
+ List retained = [];
+ int length = list.length;
+ for (int i = 0; i &lt; length; i++) {
+   var element = list[i];
+   if (!test(element)) {
+     retained.add(element);
+   }
+   if (length != list.length) {
+     throw new ConcurrentModificationError(list);
+   }
+ }
+ if (retained.length == length) return;
+ list.length = retained.length;
+ for (int i = 0; i &lt; retained.length; i++) {
+   list[i] = retained[i];
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="retainMatching">
+<button class="show-code">Code</button>
+void <strong>retainMatching</strong>(<a href="../dart_core/Collection.html">Collection</a> collection, <a href="../dart_core/bool.html">bool</a> test(element)) <a class="anchor-link" href="#retainMatching"
+              title="Permalink to IterableMixinWorkaround.retainMatching">#</a></h4>
+<div class="doc">
+<p>Simple implemenation for <code>Collection.retainMatching</code>.</p>
+<p>This implementation assumes that <code>Collecton.removeAll</code> on 
+<span class="param">collection</span> is
+efficient.</p>
+<pre class="source">
+static void retainMatching(Collection collection, bool test(var element)) {
+ List elementsToRemove = [];
+ for (var element in collection) {
+   if (!test(element)) elementsToRemove.add(element);
+ }
+ collection.removeAll(elementsToRemove);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>isEmpty</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable) <a class="anchor-link" href="#isEmpty"
+              title="Permalink to IterableMixinWorkaround.isEmpty">#</a></h4>
+<div class="doc">
+<pre class="source">
+static bool isEmpty(Iterable iterable) {
+ return !iterable.iterator.moveNext();
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="first">
+<button class="show-code">Code</button>
+<strong>first</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable) <a class="anchor-link" href="#first"
+              title="Permalink to IterableMixinWorkaround.first">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic first(Iterable iterable) {
+ Iterator it = iterable.iterator;
+ if (!it.moveNext()) {
+   throw new StateError("No elements");
+ }
+ return it.current;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="last">
+<button class="show-code">Code</button>
+<strong>last</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable) <a class="anchor-link" href="#last"
+              title="Permalink to IterableMixinWorkaround.last">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic last(Iterable iterable) {
+ Iterator it = iterable.iterator;
+ if (!it.moveNext()) {
+   throw new StateError("No elements");
+ }
+ dynamic result;
+ do {
+   result = it.current;
+ } while(it.moveNext());
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="min">
+<button class="show-code">Code</button>
+<strong>min</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, [<a href="../dart_core/int.html">int</a> compare(a, b)]) <a class="anchor-link" href="#min"
+              title="Permalink to IterableMixinWorkaround.min">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic min(Iterable iterable, [int compare(var a, var b)]) {
+ if (compare == null) compare = Comparable.compare;
+ Iterator it = iterable.iterator;
+ if (!it.moveNext()) {
+   return null;
+ }
+ var min = it.current;
+ while (it.moveNext()) {
+   if (compare(min, it.current) &gt; 0) min = it.current;
+ }
+ return min;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="max">
+<button class="show-code">Code</button>
+<strong>max</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, [<a href="../dart_core/int.html">int</a> compare(a, b)]) <a class="anchor-link" href="#max"
+              title="Permalink to IterableMixinWorkaround.max">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic max(Iterable iterable, [int compare(var a, var b)]) {
+ if (compare == null) compare = Comparable.compare;
+ Iterator it = iterable.iterator;
+ if (!it.moveNext()) {
+   return null;
+ }
+ var max = it.current;
+ while (it.moveNext()) {
+   if (compare(max, it.current) &lt; 0) max = it.current;
+ }
+ return max;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="single">
+<button class="show-code">Code</button>
+<strong>single</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable) <a class="anchor-link" href="#single"
+              title="Permalink to IterableMixinWorkaround.single">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic single(Iterable iterable) {
+ Iterator it = iterable.iterator;
+ if (!it.moveNext()) throw new StateError("No elements");
+ dynamic result = it.current;
+ if (it.moveNext()) throw new StateError("More than one element");
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="firstMatching">
+<button class="show-code">Code</button>
+<strong>firstMatching</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/bool.html">bool</a> test(value), orElse()) <a class="anchor-link" href="#firstMatching"
+              title="Permalink to IterableMixinWorkaround.firstMatching">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic firstMatching(Iterable iterable,
+                            bool test(dynamic value),
+                            dynamic orElse()) {
+ for (dynamic element in iterable) {
+   if (test(element)) return element;
+ }
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lastMatching">
+<button class="show-code">Code</button>
+<strong>lastMatching</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/bool.html">bool</a> test(value), orElse()) <a class="anchor-link" href="#lastMatching"
+              title="Permalink to IterableMixinWorkaround.lastMatching">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic lastMatching(Iterable iterable,
+                           bool test(dynamic value),
+                           dynamic orElse()) {
+ dynamic result = null;
+ bool foundMatching = false;
+ for (dynamic element in iterable) {
+   if (test(element)) {
+     result = element;
+     foundMatching = true;
+   }
+ }
+ if (foundMatching) return result;
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lastMatchingInList">
+<button class="show-code">Code</button>
+<strong>lastMatchingInList</strong>(<a href="../dart_core/List.html">List</a> list, <a href="../dart_core/bool.html">bool</a> test(value), orElse()) <a class="anchor-link" href="#lastMatchingInList"
+              title="Permalink to IterableMixinWorkaround.lastMatchingInList">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic lastMatchingInList(List list,
+                                 bool test(dynamic value),
+                                 dynamic orElse()) {
+ // TODO(floitsch): check that arguments are of correct type?
+ for (int i = list.length - 1; i &gt;= 0; i--) {
+   dynamic element = list[i];
+   if (test(element)) return element;
+ }
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="singleMatching">
+<button class="show-code">Code</button>
+<strong>singleMatching</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/bool.html">bool</a> test(value)) <a class="anchor-link" href="#singleMatching"
+              title="Permalink to IterableMixinWorkaround.singleMatching">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic singleMatching(Iterable iterable, bool test(dynamic value)) {
+ dynamic result = null;
+ bool foundMatching = false;
+ for (dynamic element in iterable) {
+   if (test(element)) {
+     if (foundMatching) {
+       throw new StateError("More than one matching element");
+     }
+     result = element;
+     foundMatching = true;
+   }
+ }
+ if (foundMatching) return result;
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="elementAt">
+<button class="show-code">Code</button>
+<strong>elementAt</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#elementAt"
+              title="Permalink to IterableMixinWorkaround.elementAt">#</a></h4>
+<div class="doc">
+<pre class="source">
+static dynamic elementAt(Iterable iterable, int index) {
+ if (index is! int || index &lt; 0) throw new RangeError.value(index);
+ int remaining = index;
+ for (dynamic element in iterable) {
+   if (remaining == 0) return element;
+   remaining--;
+ }
+ throw new RangeError.value(index);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="join">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>join</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, [<a href="../dart_core/String.html">String</a> separator]) <a class="anchor-link" href="#join"
+              title="Permalink to IterableMixinWorkaround.join">#</a></h4>
+<div class="doc">
+<pre class="source">
+static String join(Iterable iterable, [String separator]) {
+ Iterator iterator = iterable.iterator;
+ if (!iterator.moveNext()) return "";
+ StringBuffer buffer = new StringBuffer();
+ if (separator == null || separator == "") {
+   do {
+     buffer.add("${iterator.current}");
+   } while (iterator.moveNext());
+ } else {
+   buffer.add("${iterator.current}");
+   while (iterator.moveNext()) {
+     buffer.add(separator);
+     buffer.add("${iterator.current}");
+   }
+ }
+ return buffer.toString();
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="joinList">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>joinList</strong>(<a href="../dart_core/List.html">List</a> list, [<a href="../dart_core/String.html">String</a> separator]) <a class="anchor-link" href="#joinList"
+              title="Permalink to IterableMixinWorkaround.joinList">#</a></h4>
+<div class="doc">
+<pre class="source">
+static String joinList(List list, [String separator]) {
+ if (list.isEmpty) return "";
+ if (list.length == 1) return "${list[0]}";
+ StringBuffer buffer = new StringBuffer();
+ if (separator == null || separator == "") {
+   for (int i = 0; i &lt; list.length; i++) {
+     buffer.add("${list[i]}");
+   }
+ } else {
+   buffer.add("${list[0]}");
+   for (int i = 1; i &lt; list.length; i++) {
+     buffer.add(separator);
+     buffer.add("${list[i]}");
+   }
+ }
+ return buffer.toString();
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="where">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>where</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/bool.html">bool</a> f(element)) <a class="anchor-link" href="#where"
+              title="Permalink to IterableMixinWorkaround.where">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable where(Iterable iterable, bool f(var element)) {
+ return new WhereIterable(iterable, f);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="map">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>map</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, f(element)) <a class="anchor-link" href="#map"
+              title="Permalink to IterableMixinWorkaround.map">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable map(Iterable iterable, f(var element)) {
+ return new MappedIterable(iterable, f);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="mapList">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>mapList</strong>(<a href="../dart_core/List.html">List</a> list, f(element)) <a class="anchor-link" href="#mapList"
+              title="Permalink to IterableMixinWorkaround.mapList">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable mapList(List list, f(var element)) {
+ return new MappedListIterable(list, f);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="expand">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>expand</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/Iterable.html">Iterable</a> f(element)) <a class="anchor-link" href="#expand"
+              title="Permalink to IterableMixinWorkaround.expand">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable expand(Iterable iterable, Iterable f(var element)) {
+ return new ExpandIterable(iterable, f);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="takeList">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>takeList</strong>(<a href="../dart_core/List.html">List</a> list, <a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#takeList"
+              title="Permalink to IterableMixinWorkaround.takeList">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable takeList(List list, int n) {
+ // The generic type is currently lost. It will be fixed with mixins.
+ // This is currently a List as well as an Iterable.
+ return new SubListIterable(list, 0, n);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="takeWhile">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>takeWhile</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/bool.html">bool</a> test(value)) <a class="anchor-link" href="#takeWhile"
+              title="Permalink to IterableMixinWorkaround.takeWhile">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable takeWhile(Iterable iterable, bool test(var value)) {
+ // The generic type is currently lost. It will be fixed with mixins.
+ return new TakeWhileIterable(iterable, test);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="skipList">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>skipList</strong>(<a href="../dart_core/List.html">List</a> list, <a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#skipList"
+              title="Permalink to IterableMixinWorkaround.skipList">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable skipList(List list, int n) {
+ // The generic type is currently lost. It will be fixed with mixins.
+ // This is currently a List as well as an Iterable.
+ return new SubListIterable(list, n, null);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="skipWhile">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>skipWhile</strong>(<a href="../dart_core/Iterable.html">Iterable</a> iterable, <a href="../dart_core/bool.html">bool</a> test(value)) <a class="anchor-link" href="#skipWhile"
+              title="Permalink to IterableMixinWorkaround.skipWhile">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable skipWhile(Iterable iterable, bool test(var value)) {
+ // The generic type is currently lost. It will be fixed with mixins.
+ return new SkipWhileIterable(iterable, test);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="reversedList">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>reversedList</strong>(<a href="../dart_core/List.html">List</a> l) <a class="anchor-link" href="#reversedList"
+              title="Permalink to IterableMixinWorkaround.reversedList">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Iterable reversedList(List l) {
+ return new ReversedListIterable(l);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="sortList">
+<button class="show-code">Code</button>
+void <strong>sortList</strong>(<a href="../dart_core/List.html">List</a> l, <a href="../dart_core/int.html">int</a> compare(a, b)) <a class="anchor-link" href="#sortList"
+              title="Permalink to IterableMixinWorkaround.sortList">#</a></h4>
+<div class="doc">
+<pre class="source">
+static void sortList(List l, int compare(a, b)) {
+ if (compare == null) compare = Comparable.compare;
+ Sort.sort(l, compare);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:23.010</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

@@ -1,0 +1,1845 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>CanvasRenderingContext2D class / dart:html Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:html" data-type="CanvasRenderingContext2D">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_html.html">dart:html</a> &rsaquo; <a href="../dart_html/CanvasRenderingContext2D.html">CanvasRenderingContext2D</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><ul class="icon">
+<li><a href="../dart_html/AbstractWorker.html"><div class="icon-class"></div>AbstractWorker</a></li>
+<li><a href="../dart_html/AnchorElement.html"><div class="icon-class"></div>AnchorElement</a></li>
+<li><a href="../dart_html/AnimationEvent.html"><div class="icon-class"></div>AnimationEvent</a></li>
+<li><a href="../dart_html/ApplicationCache.html"><div class="icon-class"></div>ApplicationCache</a></li>
+<li><a href="../dart_html/AreaElement.html"><div class="icon-class"></div>AreaElement</a></li>
+<li><a href="../dart_html/ArrayBuffer.html"><div class="icon-class"></div>ArrayBuffer</a></li>
+<li><a href="../dart_html/ArrayBufferView.html"><div class="icon-class"></div>ArrayBufferView</a></li>
+<li><a href="../dart_html/Attr.html"><div class="icon-class"></div>Attr</a></li>
+<li><a href="../dart_html/AudioElement.html"><div class="icon-class"></div>AudioElement</a></li>
+<li><a href="../dart_html/BarInfo.html"><div class="icon-class"></div>BarInfo</a></li>
+<li><a href="../dart_html/BaseElement.html"><div class="icon-class"></div>BaseElement</a></li>
+<li><a href="../dart_html/BatteryManager.html"><div class="icon-class"></div>BatteryManager</a></li>
+<li><a href="../dart_html/BeforeLoadEvent.html"><div class="icon-class"></div>BeforeLoadEvent</a></li>
+<li><a href="../dart_html/Blob.html"><div class="icon-class"></div>Blob</a></li>
+<li><a href="../dart_html/BodyElement.html"><div class="icon-class"></div>BodyElement</a></li>
+<li><a href="../dart_html/BRElement.html"><div class="icon-class"></div>BRElement</a></li>
+<li><a href="../dart_html/ButtonElement.html"><div class="icon-class"></div>ButtonElement</a></li>
+<li><a href="../dart_html/ButtonInputElement.html"><div class="icon-class"></div>ButtonInputElement</a></li>
+<li><a href="../dart_html/CanvasElement.html"><div class="icon-class"></div>CanvasElement</a></li>
+<li><a href="../dart_html/CanvasGradient.html"><div class="icon-class"></div>CanvasGradient</a></li>
+<li><a href="../dart_html/CanvasPattern.html"><div class="icon-class"></div>CanvasPattern</a></li>
+<li><a href="../dart_html/CanvasRenderingContext.html"><div class="icon-class"></div>CanvasRenderingContext</a></li>
+<li><div class="icon-class"></div><strong>CanvasRenderingContext2D</strong></li>
+<li><a href="../dart_html/CDataSection.html"><div class="icon-class"></div>CDataSection</a></li>
+<li><a href="../dart_html/CharacterData.html"><div class="icon-class"></div>CharacterData</a></li>
+<li><a href="../dart_html/CheckboxInputElement.html"><div class="icon-class"></div>CheckboxInputElement</a></li>
+<li><a href="../dart_html/ClientRect.html"><div class="icon-class"></div>ClientRect</a></li>
+<li><a href="../dart_html/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_html/Comment.html"><div class="icon-class"></div>Comment</a></li>
+<li><a href="../dart_html/CompositionEvent.html"><div class="icon-class"></div>CompositionEvent</a></li>
+<li><a href="../dart_html/Console.html"><div class="icon-class"></div>Console</a></li>
+<li><a href="../dart_html/ContentElement.html"><div class="icon-class"></div>ContentElement</a></li>
+<li><a href="../dart_html/Coordinates.html"><div class="icon-class"></div>Coordinates</a></li>
+<li><a href="../dart_html/Counter.html"><div class="icon-class"></div>Counter</a></li>
+<li><a href="../dart_html/Crypto.html"><div class="icon-class"></div>Crypto</a></li>
+<li><a href="../dart_html/CssCharsetRule.html"><div class="icon-class"></div>CssCharsetRule</a></li>
+<li><a href="../dart_html/CssClassSet.html"><div class="icon-class"></div>CssClassSet</a></li>
+<li><a href="../dart_html/CssFontFaceRule.html"><div class="icon-class"></div>CssFontFaceRule</a></li>
+<li><a href="../dart_html/CssHostRule.html"><div class="icon-class"></div>CssHostRule</a></li>
+<li><a href="../dart_html/CssImportRule.html"><div class="icon-class"></div>CssImportRule</a></li>
+<li><a href="../dart_html/CssKeyframeRule.html"><div class="icon-class"></div>CssKeyframeRule</a></li>
+<li><a href="../dart_html/CssKeyframesRule.html"><div class="icon-class"></div>CssKeyframesRule</a></li>
+<li><a href="../dart_html/CssMatrix.html"><div class="icon-class"></div>CssMatrix</a></li>
+<li><a href="../dart_html/CssMediaRule.html"><div class="icon-class"></div>CssMediaRule</a></li>
+<li><a href="../dart_html/CssPageRule.html"><div class="icon-class"></div>CssPageRule</a></li>
+<li><a href="../dart_html/CssPrimitiveValue.html"><div class="icon-class"></div>CssPrimitiveValue</a></li>
+<li><a href="../dart_html/CssRule.html"><div class="icon-class"></div>CssRule</a></li>
+<li><a href="../dart_html/CssStyleDeclaration.html"><div class="icon-class"></div>CssStyleDeclaration</a></li>
+<li><a href="../dart_html/CssStyleRule.html"><div class="icon-class"></div>CssStyleRule</a></li>
+<li><a href="../dart_html/CssStyleSheet.html"><div class="icon-class"></div>CssStyleSheet</a></li>
+<li><a href="../dart_html/CssTransformValue.html"><div class="icon-class"></div>CssTransformValue</a></li>
+<li><a href="../dart_html/CssUnknownRule.html"><div class="icon-class"></div>CssUnknownRule</a></li>
+<li><a href="../dart_html/CssValue.html"><div class="icon-class"></div>CssValue</a></li>
+<li><a href="../dart_html/CustomEvent.html"><div class="icon-class"></div>CustomEvent</a></li>
+<li><a href="../dart_html/DataListElement.html"><div class="icon-class"></div>DataListElement</a></li>
+<li><a href="../dart_html/DataTransfer.html"><div class="icon-class"></div>DataTransfer</a></li>
+<li><a href="../dart_html/DataTransferItem.html"><div class="icon-class"></div>DataTransferItem</a></li>
+<li><a href="../dart_html/DataTransferItemList.html"><div class="icon-class"></div>DataTransferItemList</a></li>
+<li><a href="../dart_html/DataView.html"><div class="icon-class"></div>DataView</a></li>
+<li><a href="../dart_html/DateInputElement.html"><div class="icon-class"></div>DateInputElement</a></li>
+<li><a href="../dart_html/DedicatedWorkerContext.html"><div class="icon-class"></div>DedicatedWorkerContext</a></li>
+<li><a href="../dart_html/DetailsElement.html"><div class="icon-class"></div>DetailsElement</a></li>
+<li><a href="../dart_html/DeviceMotionEvent.html"><div class="icon-class"></div>DeviceMotionEvent</a></li>
+<li><a href="../dart_html/DeviceOrientationEvent.html"><div class="icon-class"></div>DeviceOrientationEvent</a></li>
+<li><a href="../dart_html/DirectoryEntry.html"><div class="icon-class"></div>DirectoryEntry</a></li>
+<li><a href="../dart_html/DirectoryEntrySync.html"><div class="icon-class"></div>DirectoryEntrySync</a></li>
+<li><a href="../dart_html/DirectoryReader.html"><div class="icon-class"></div>DirectoryReader</a></li>
+<li><a href="../dart_html/DirectoryReaderSync.html"><div class="icon-class"></div>DirectoryReaderSync</a></li>
+<li><a href="../dart_html/DivElement.html"><div class="icon-class"></div>DivElement</a></li>
+<li><a href="../dart_html/DListElement.html"><div class="icon-class"></div>DListElement</a></li>
+<li><a href="../dart_html/Document.html"><div class="icon-class"></div>Document</a></li>
+<li><a href="../dart_html/DocumentFragment.html"><div class="icon-class"></div>DocumentFragment</a></li>
+<li><a href="../dart_html/DocumentType.html"><div class="icon-class"></div>DocumentType</a></li>
+<li><a href="../dart_html/DomImplementation.html"><div class="icon-class"></div>DomImplementation</a></li>
+<li><a href="../dart_html/DomMimeType.html"><div class="icon-class"></div>DomMimeType</a></li>
+<li><a href="../dart_html/DomMimeTypeArray.html"><div class="icon-class"></div>DomMimeTypeArray</a></li>
+<li><a href="../dart_html/DomParser.html"><div class="icon-class"></div>DomParser</a></li>
+<li><a href="../dart_html/DomPlugin.html"><div class="icon-class"></div>DomPlugin</a></li>
+<li><a href="../dart_html/DomPluginArray.html"><div class="icon-class"></div>DomPluginArray</a></li>
+<li><a href="../dart_html/DomPoint.html"><div class="icon-class"></div>DomPoint</a></li>
+<li><a href="../dart_html/DomSelection.html"><div class="icon-class"></div>DomSelection</a></li>
+<li><a href="../dart_html/DomSettableTokenList.html"><div class="icon-class"></div>DomSettableTokenList</a></li>
+<li><a href="../dart_html/DomStringList.html"><div class="icon-class"></div>DomStringList</a></li>
+<li><a href="../dart_html/DomStringMap.html"><div class="icon-class"></div>DomStringMap</a></li>
+<li><a href="../dart_html/DomTokenList.html"><div class="icon-class"></div>DomTokenList</a></li>
+<li><a href="../dart_html/Element.html"><div class="icon-class"></div>Element</a></li>
+<li><a href="../dart_html/ElementTraversal.html"><div class="icon-class"></div>ElementTraversal</a></li>
+<li><a href="../dart_html/EmailInputElement.html"><div class="icon-class"></div>EmailInputElement</a></li>
+<li><a href="../dart_html/EmbedElement.html"><div class="icon-class"></div>EmbedElement</a></li>
+<li><a href="../dart_html/EntityReference.html"><div class="icon-class"></div>EntityReference</a></li>
+<li><a href="../dart_html/EntriesCallback.html"><div class="icon-interface"></div>EntriesCallback</a></li>
+<li><a href="../dart_html/Entry.html"><div class="icon-class"></div>Entry</a></li>
+<li><a href="../dart_html/EntryCallback.html"><div class="icon-interface"></div>EntryCallback</a></li>
+<li><a href="../dart_html/EntrySync.html"><div class="icon-class"></div>EntrySync</a></li>
+<li><a href="../dart_html/ErrorCallback.html"><div class="icon-interface"></div>ErrorCallback</a></li>
+<li><a href="../dart_html/ErrorEvent.html"><div class="icon-class"></div>ErrorEvent</a></li>
+<li><a href="../dart_html/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_html/EventListener.html"><div class="icon-interface"></div>EventListener</a></li>
+<li><a href="../dart_html/Events.html"><div class="icon-class"></div>Events</a></li>
+<li><a href="../dart_html/EventSource.html"><div class="icon-class"></div>EventSource</a></li>
+<li><a href="../dart_html/EventStreamProvider.html"><div class="icon-class"></div>EventStreamProvider&lt;T&gt;</a></li>
+<li><a href="../dart_html/EventTarget.html"><div class="icon-class"></div>EventTarget</a></li>
+<li><a href="../dart_html/ExtTextureFilterAnisotropic.html"><div class="icon-class"></div>ExtTextureFilterAnisotropic</a></li>
+<li><a href="../dart_html/FieldSetElement.html"><div class="icon-class"></div>FieldSetElement</a></li>
+<li><a href="../dart_html/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_html/FileCallback.html"><div class="icon-interface"></div>FileCallback</a></li>
+<li><a href="../dart_html/FileEntry.html"><div class="icon-class"></div>FileEntry</a></li>
+<li><a href="../dart_html/FileEntrySync.html"><div class="icon-class"></div>FileEntrySync</a></li>
+<li><a href="../dart_html/FileList.html"><div class="icon-class"></div>FileList</a></li>
+<li><a href="../dart_html/FileReader.html"><div class="icon-class"></div>FileReader</a></li>
+<li><a href="../dart_html/FileReaderSync.html"><div class="icon-class"></div>FileReaderSync</a></li>
+<li><a href="../dart_html/FileSystem.html"><div class="icon-class"></div>FileSystem</a></li>
+<li><a href="../dart_html/FileSystemCallback.html"><div class="icon-interface"></div>FileSystemCallback</a></li>
+<li><a href="../dart_html/FileSystemSync.html"><div class="icon-class"></div>FileSystemSync</a></li>
+<li><a href="../dart_html/FileUploadInputElement.html"><div class="icon-class"></div>FileUploadInputElement</a></li>
+<li><a href="../dart_html/FileWriter.html"><div class="icon-class"></div>FileWriter</a></li>
+<li><a href="../dart_html/FileWriterCallback.html"><div class="icon-interface"></div>FileWriterCallback</a></li>
+<li><a href="../dart_html/FileWriterSync.html"><div class="icon-class"></div>FileWriterSync</a></li>
+<li><a href="../dart_html/FixedSizeListIterator.html"><div class="icon-class"></div>FixedSizeListIterator&lt;T&gt;</a></li>
+<li><a href="../dart_html/Float32Array.html"><div class="icon-class"></div>Float32Array</a></li>
+<li><a href="../dart_html/Float64Array.html"><div class="icon-class"></div>Float64Array</a></li>
+<li><a href="../dart_html/FocusEvent.html"><div class="icon-class"></div>FocusEvent</a></li>
+<li><a href="../dart_html/FormData.html"><div class="icon-class"></div>FormData</a></li>
+<li><a href="../dart_html/FormElement.html"><div class="icon-class"></div>FormElement</a></li>
+<li><a href="../dart_html/Gamepad.html"><div class="icon-class"></div>Gamepad</a></li>
+<li><a href="../dart_html/Geolocation.html"><div class="icon-class"></div>Geolocation</a></li>
+<li><a href="../dart_html/Geoposition.html"><div class="icon-class"></div>Geoposition</a></li>
+<li><a href="../dart_html/HashChangeEvent.html"><div class="icon-class"></div>HashChangeEvent</a></li>
+<li><a href="../dart_html/HeadElement.html"><div class="icon-class"></div>HeadElement</a></li>
+<li><a href="../dart_html/HeadingElement.html"><div class="icon-class"></div>HeadingElement</a></li>
+<li><a href="../dart_html/HiddenInputElement.html"><div class="icon-class"></div>HiddenInputElement</a></li>
+<li><a href="../dart_html/History.html"><div class="icon-class"></div>History</a></li>
+<li><a href="../dart_html/HistoryBase.html"><div class="icon-class"></div>HistoryBase</a></li>
+<li><a href="../dart_html/HRElement.html"><div class="icon-class"></div>HRElement</a></li>
+<li><a href="../dart_html/HtmlAllCollection.html"><div class="icon-class"></div>HtmlAllCollection</a></li>
+<li><a href="../dart_html/HtmlCollection.html"><div class="icon-class"></div>HtmlCollection</a></li>
+<li><a href="../dart_html/HtmlDocument.html"><div class="icon-class"></div>HtmlDocument</a></li>
+<li><a href="../dart_html/HtmlElement.html"><div class="icon-class"></div>HtmlElement</a></li>
+<li><a href="../dart_html/HtmlFormControlsCollection.html"><div class="icon-class"></div>HtmlFormControlsCollection</a></li>
+<li><a href="../dart_html/HtmlOptionsCollection.html"><div class="icon-class"></div>HtmlOptionsCollection</a></li>
+<li><a href="../dart_html/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_html/HttpRequestProgressEvent.html"><div class="icon-class"></div>HttpRequestProgressEvent</a></li>
+<li><a href="../dart_html/HttpRequestUpload.html"><div class="icon-class"></div>HttpRequestUpload</a></li>
+<li><a href="../dart_html/IFrameElement.html"><div class="icon-class"></div>IFrameElement</a></li>
+<li><a href="../dart_html/ImageButtonInputElement.html"><div class="icon-class"></div>ImageButtonInputElement</a></li>
+<li><a href="../dart_html/ImageData.html"><div class="icon-class"></div>ImageData</a></li>
+<li><a href="../dart_html/ImageElement.html"><div class="icon-class"></div>ImageElement</a></li>
+<li><a href="../dart_html/InputElement.html"><div class="icon-class"></div>InputElement</a></li>
+<li><a href="../dart_html/InputElementBase.html"><div class="icon-class"></div>InputElementBase</a></li>
+<li><a href="../dart_html/Int16Array.html"><div class="icon-class"></div>Int16Array</a></li>
+<li><a href="../dart_html/Int32Array.html"><div class="icon-class"></div>Int32Array</a></li>
+<li><a href="../dart_html/Int8Array.html"><div class="icon-class"></div>Int8Array</a></li>
+<li><a href="../dart_html/JavaScriptCallFrame.html"><div class="icon-class"></div>JavaScriptCallFrame</a></li>
+<li><a href="../dart_html/KeyboardEvent.html"><div class="icon-class"></div>KeyboardEvent</a></li>
+<li><a href="../dart_html/KeyboardEventController.html"><div class="icon-class"></div>KeyboardEventController</a></li>
+<li><a href="../dart_html/KeyCode.html"><div class="icon-class"></div>KeyCode</a></li>
+<li><a href="../dart_html/KeyEvent.html"><div class="icon-class"></div>KeyEvent</a></li>
+<li><a href="../dart_html/KeygenElement.html"><div class="icon-class"></div>KeygenElement</a></li>
+<li><a href="../dart_html/KeyLocation.html"><div class="icon-class"></div>KeyLocation</a></li>
+<li><a href="../dart_html/KeyName.html"><div class="icon-class"></div>KeyName</a></li>
+<li><a href="../dart_html/LabelElement.html"><div class="icon-class"></div>LabelElement</a></li>
+<li><a href="../dart_html/LegendElement.html"><div class="icon-class"></div>LegendElement</a></li>
+<li><a href="../dart_html/LIElement.html"><div class="icon-class"></div>LIElement</a></li>
+<li><a href="../dart_html/LinkElement.html"><div class="icon-class"></div>LinkElement</a></li>
+<li><a href="../dart_html/LocalDateTimeInputElement.html"><div class="icon-class"></div>LocalDateTimeInputElement</a></li>
+<li><a href="../dart_html/LocalMediaStream.html"><div class="icon-class"></div>LocalMediaStream</a></li>
+<li><a href="../dart_html/Location.html"><div class="icon-class"></div>Location</a></li>
+<li><a href="../dart_html/LocationBase.html"><div class="icon-class"></div>LocationBase</a></li>
+<li><a href="../dart_html/MapElement.html"><div class="icon-class"></div>MapElement</a></li>
+<li><a href="../dart_html/MediaController.html"><div class="icon-class"></div>MediaController</a></li>
+<li><a href="../dart_html/MediaElement.html"><div class="icon-class"></div>MediaElement</a></li>
+<li><a href="../dart_html/MediaKeyEvent.html"><div class="icon-class"></div>MediaKeyEvent</a></li>
+<li><a href="../dart_html/MediaList.html"><div class="icon-class"></div>MediaList</a></li>
+<li><a href="../dart_html/MediaQueryList.html"><div class="icon-class"></div>MediaQueryList</a></li>
+<li><a href="../dart_html/MediaQueryListListener.html"><div class="icon-class"></div>MediaQueryListListener</a></li>
+<li><a href="../dart_html/MediaSource.html"><div class="icon-class"></div>MediaSource</a></li>
+<li><a href="../dart_html/MediaStream.html"><div class="icon-class"></div>MediaStream</a></li>
+<li><a href="../dart_html/MediaStreamEvent.html"><div class="icon-class"></div>MediaStreamEvent</a></li>
+<li><a href="../dart_html/MediaStreamTrack.html"><div class="icon-class"></div>MediaStreamTrack</a></li>
+<li><a href="../dart_html/MediaStreamTrackEvent.html"><div class="icon-class"></div>MediaStreamTrackEvent</a></li>
+<li><a href="../dart_html/MemoryInfo.html"><div class="icon-class"></div>MemoryInfo</a></li>
+<li><a href="../dart_html/MenuElement.html"><div class="icon-class"></div>MenuElement</a></li>
+<li><a href="../dart_html/MessageChannel.html"><div class="icon-class"></div>MessageChannel</a></li>
+<li><a href="../dart_html/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_html/MessagePort.html"><div class="icon-class"></div>MessagePort</a></li>
+<li><a href="../dart_html/Metadata.html"><div class="icon-class"></div>Metadata</a></li>
+<li><a href="../dart_html/MetadataCallback.html"><div class="icon-interface"></div>MetadataCallback</a></li>
+<li><a href="../dart_html/MetaElement.html"><div class="icon-class"></div>MetaElement</a></li>
+<li><a href="../dart_html/MeterElement.html"><div class="icon-class"></div>MeterElement</a></li>
+<li><a href="../dart_html/ModElement.html"><div class="icon-class"></div>ModElement</a></li>
+<li><a href="../dart_html/MonthInputElement.html"><div class="icon-class"></div>MonthInputElement</a></li>
+<li><a href="../dart_html/MouseEvent.html"><div class="icon-class"></div>MouseEvent</a></li>
+<li><a href="../dart_html/MutationCallback.html"><div class="icon-interface"></div>MutationCallback</a></li>
+<li><a href="../dart_html/MutationEvent.html"><div class="icon-class"></div>MutationEvent</a></li>
+<li><a href="../dart_html/MutationObserver.html"><div class="icon-class"></div>MutationObserver</a></li>
+<li><a href="../dart_html/MutationRecord.html"><div class="icon-class"></div>MutationRecord</a></li>
+<li><a href="../dart_html/Navigator.html"><div class="icon-class"></div>Navigator</a></li>
+<li><a href="../dart_html/Node.html"><div class="icon-class"></div>Node</a></li>
+<li><a href="../dart_html/NodeFilter.html"><div class="icon-class"></div>NodeFilter</a></li>
+<li><a href="../dart_html/NodeIterator.html"><div class="icon-class"></div>NodeIterator</a></li>
+<li><a href="../dart_html/NodeList.html"><div class="icon-class"></div>NodeList</a></li>
+<li><a href="../dart_html/Notation.html"><div class="icon-class"></div>Notation</a></li>
+<li><a href="../dart_html/Notification.html"><div class="icon-class"></div>Notification</a></li>
+<li><a href="../dart_html/NotificationCenter.html"><div class="icon-class"></div>NotificationCenter</a></li>
+<li><a href="../dart_html/NotificationPermissionCallback.html"><div class="icon-interface"></div>NotificationPermissionCallback</a></li>
+<li><a href="../dart_html/NumberInputElement.html"><div class="icon-class"></div>NumberInputElement</a></li>
+<li><a href="../dart_html/ObjectElement.html"><div class="icon-class"></div>ObjectElement</a></li>
+<li><a href="../dart_html/OesElementIndexUint.html"><div class="icon-class"></div>OesElementIndexUint</a></li>
+<li><a href="../dart_html/OesStandardDerivatives.html"><div class="icon-class"></div>OesStandardDerivatives</a></li>
+<li><a href="../dart_html/OesTextureFloat.html"><div class="icon-class"></div>OesTextureFloat</a></li>
+<li><a href="../dart_html/OesVertexArrayObject.html"><div class="icon-class"></div>OesVertexArrayObject</a></li>
+<li><a href="../dart_html/OListElement.html"><div class="icon-class"></div>OListElement</a></li>
+<li><a href="../dart_html/OptGroupElement.html"><div class="icon-class"></div>OptGroupElement</a></li>
+<li><a href="../dart_html/OptionElement.html"><div class="icon-class"></div>OptionElement</a></li>
+<li><a href="../dart_html/OutputElement.html"><div class="icon-class"></div>OutputElement</a></li>
+<li><a href="../dart_html/OverflowEvent.html"><div class="icon-class"></div>OverflowEvent</a></li>
+<li><a href="../dart_html/PagePopupController.html"><div class="icon-class"></div>PagePopupController</a></li>
+<li><a href="../dart_html/PageTransitionEvent.html"><div class="icon-class"></div>PageTransitionEvent</a></li>
+<li><a href="../dart_html/ParagraphElement.html"><div class="icon-class"></div>ParagraphElement</a></li>
+<li><a href="../dart_html/ParamElement.html"><div class="icon-class"></div>ParamElement</a></li>
+<li><a href="../dart_html/PasswordInputElement.html"><div class="icon-class"></div>PasswordInputElement</a></li>
+<li><a href="../dart_html/Performance.html"><div class="icon-class"></div>Performance</a></li>
+<li><a href="../dart_html/PerformanceNavigation.html"><div class="icon-class"></div>PerformanceNavigation</a></li>
+<li><a href="../dart_html/PerformanceTiming.html"><div class="icon-class"></div>PerformanceTiming</a></li>
+<li><a href="../dart_html/PopStateEvent.html"><div class="icon-class"></div>PopStateEvent</a></li>
+<li><a href="../dart_html/PreElement.html"><div class="icon-class"></div>PreElement</a></li>
+<li><a href="../dart_html/ProcessingInstruction.html"><div class="icon-class"></div>ProcessingInstruction</a></li>
+<li><a href="../dart_html/ProgressElement.html"><div class="icon-class"></div>ProgressElement</a></li>
+<li><a href="../dart_html/ProgressEvent.html"><div class="icon-class"></div>ProgressEvent</a></li>
+<li><a href="../dart_html/QuoteElement.html"><div class="icon-class"></div>QuoteElement</a></li>
+<li><a href="../dart_html/RadioButtonInputElement.html"><div class="icon-class"></div>RadioButtonInputElement</a></li>
+<li><a href="../dart_html/RadioNodeList.html"><div class="icon-class"></div>RadioNodeList</a></li>
+<li><a href="../dart_html/Range.html"><div class="icon-class"></div>Range</a></li>
+<li><a href="../dart_html/RangeInputElement.html"><div class="icon-class"></div>RangeInputElement</a></li>
+<li><a href="../dart_html/RangeInputElementBase.html"><div class="icon-class"></div>RangeInputElementBase</a></li>
+<li><a href="../dart_html/ReadyState.html"><div class="icon-class"></div>ReadyState</a></li>
+<li><a href="../dart_html/ReceivePortSync.html"><div class="icon-class"></div>ReceivePortSync</a></li>
+<li><a href="../dart_html/Rect.html"><div class="icon-class"></div>Rect</a></li>
+<li><a href="../dart_html/RequestAnimationFrameCallback.html"><div class="icon-interface"></div>RequestAnimationFrameCallback</a></li>
+<li><a href="../dart_html/ResetButtonInputElement.html"><div class="icon-class"></div>ResetButtonInputElement</a></li>
+<li><a href="../dart_html/RgbColor.html"><div class="icon-class"></div>RgbColor</a></li>
+<li><a href="../dart_html/RtcDataChannel.html"><div class="icon-class"></div>RtcDataChannel</a></li>
+<li><a href="../dart_html/RtcDataChannelEvent.html"><div class="icon-class"></div>RtcDataChannelEvent</a></li>
+<li><a href="../dart_html/RtcdtmfSender.html"><div class="icon-class"></div>RtcdtmfSender</a></li>
+<li><a href="../dart_html/RtcdtmfToneChangeEvent.html"><div class="icon-class"></div>RtcdtmfToneChangeEvent</a></li>
+<li><a href="../dart_html/RtcErrorCallback.html"><div class="icon-interface"></div>RtcErrorCallback</a></li>
+<li><a href="../dart_html/RtcIceCandidate.html"><div class="icon-class"></div>RtcIceCandidate</a></li>
+<li><a href="../dart_html/RtcIceCandidateEvent.html"><div class="icon-class"></div>RtcIceCandidateEvent</a></li>
+<li><a href="../dart_html/RtcPeerConnection.html"><div class="icon-class"></div>RtcPeerConnection</a></li>
+<li><a href="../dart_html/RtcSessionDescription.html"><div class="icon-class"></div>RtcSessionDescription</a></li>
+<li><a href="../dart_html/RtcSessionDescriptionCallback.html"><div class="icon-interface"></div>RtcSessionDescriptionCallback</a></li>
+<li><a href="../dart_html/RtcStatsCallback.html"><div class="icon-interface"></div>RtcStatsCallback</a></li>
+<li><a href="../dart_html/RtcStatsElement.html"><div class="icon-class"></div>RtcStatsElement</a></li>
+<li><a href="../dart_html/RtcStatsReport.html"><div class="icon-class"></div>RtcStatsReport</a></li>
+<li><a href="../dart_html/RtcStatsResponse.html"><div class="icon-class"></div>RtcStatsResponse</a></li>
+<li><a href="../dart_html/Screen.html"><div class="icon-class"></div>Screen</a></li>
+<li><a href="../dart_html/ScriptElement.html"><div class="icon-class"></div>ScriptElement</a></li>
+<li><a href="../dart_html/ScriptProfile.html"><div class="icon-class"></div>ScriptProfile</a></li>
+<li><a href="../dart_html/ScriptProfileNode.html"><div class="icon-class"></div>ScriptProfileNode</a></li>
+<li><a href="../dart_html/ScrollAlignment.html"><div class="icon-class"></div>ScrollAlignment</a></li>
+<li><a href="../dart_html/SearchInputElement.html"><div class="icon-class"></div>SearchInputElement</a></li>
+<li><a href="../dart_html/SelectElement.html"><div class="icon-class"></div>SelectElement</a></li>
+<li><a href="../dart_html/ShadowElement.html"><div class="icon-class"></div>ShadowElement</a></li>
+<li><a href="../dart_html/ShadowRoot.html"><div class="icon-class"></div>ShadowRoot</a></li>
+<li><a href="../dart_html/SharedWorker.html"><div class="icon-class"></div>SharedWorker</a></li>
+<li><a href="../dart_html/SharedWorkerContext.html"><div class="icon-class"></div>SharedWorkerContext</a></li>
+<li><a href="../dart_html/SourceBuffer.html"><div class="icon-class"></div>SourceBuffer</a></li>
+<li><a href="../dart_html/SourceBufferList.html"><div class="icon-class"></div>SourceBufferList</a></li>
+<li><a href="../dart_html/SourceElement.html"><div class="icon-class"></div>SourceElement</a></li>
+<li><a href="../dart_html/SpanElement.html"><div class="icon-class"></div>SpanElement</a></li>
+<li><a href="../dart_html/SpeechGrammar.html"><div class="icon-class"></div>SpeechGrammar</a></li>
+<li><a href="../dart_html/SpeechGrammarList.html"><div class="icon-class"></div>SpeechGrammarList</a></li>
+<li><a href="../dart_html/SpeechInputEvent.html"><div class="icon-class"></div>SpeechInputEvent</a></li>
+<li><a href="../dart_html/SpeechInputResult.html"><div class="icon-class"></div>SpeechInputResult</a></li>
+<li><a href="../dart_html/SpeechRecognition.html"><div class="icon-class"></div>SpeechRecognition</a></li>
+<li><a href="../dart_html/SpeechRecognitionAlternative.html"><div class="icon-class"></div>SpeechRecognitionAlternative</a></li>
+<li><a href="../dart_html/SpeechRecognitionEvent.html"><div class="icon-class"></div>SpeechRecognitionEvent</a></li>
+<li><a href="../dart_html/SpeechRecognitionResult.html"><div class="icon-class"></div>SpeechRecognitionResult</a></li>
+<li><a href="../dart_html/Storage.html"><div class="icon-class"></div>Storage</a></li>
+<li><a href="../dart_html/StorageEvent.html"><div class="icon-class"></div>StorageEvent</a></li>
+<li><a href="../dart_html/StorageInfo.html"><div class="icon-class"></div>StorageInfo</a></li>
+<li><a href="../dart_html/StorageInfoErrorCallback.html"><div class="icon-interface"></div>StorageInfoErrorCallback</a></li>
+<li><a href="../dart_html/StorageInfoQuotaCallback.html"><div class="icon-interface"></div>StorageInfoQuotaCallback</a></li>
+<li><a href="../dart_html/StorageInfoUsageCallback.html"><div class="icon-interface"></div>StorageInfoUsageCallback</a></li>
+<li><a href="../dart_html/StringCallback.html"><div class="icon-interface"></div>StringCallback</a></li>
+<li><a href="../dart_html/StyleElement.html"><div class="icon-class"></div>StyleElement</a></li>
+<li><a href="../dart_html/StyleMedia.html"><div class="icon-class"></div>StyleMedia</a></li>
+<li><a href="../dart_html/StyleSheet.html"><div class="icon-class"></div>StyleSheet</a></li>
+<li><a href="../dart_html/SubmitButtonInputElement.html"><div class="icon-class"></div>SubmitButtonInputElement</a></li>
+<li><a href="../dart_html/TableCaptionElement.html"><div class="icon-class"></div>TableCaptionElement</a></li>
+<li><a href="../dart_html/TableCellElement.html"><div class="icon-class"></div>TableCellElement</a></li>
+<li><a href="../dart_html/TableColElement.html"><div class="icon-class"></div>TableColElement</a></li>
+<li><a href="../dart_html/TableElement.html"><div class="icon-class"></div>TableElement</a></li>
+<li><a href="../dart_html/TableRowElement.html"><div class="icon-class"></div>TableRowElement</a></li>
+<li><a href="../dart_html/TableSectionElement.html"><div class="icon-class"></div>TableSectionElement</a></li>
+<li><a href="../dart_html/TelephoneInputElement.html"><div class="icon-class"></div>TelephoneInputElement</a></li>
+<li><a href="../dart_html/Text.html"><div class="icon-class"></div>Text</a></li>
+<li><a href="../dart_html/TextAreaElement.html"><div class="icon-class"></div>TextAreaElement</a></li>
+<li><a href="../dart_html/TextEvent.html"><div class="icon-class"></div>TextEvent</a></li>
+<li><a href="../dart_html/TextInputElement.html"><div class="icon-class"></div>TextInputElement</a></li>
+<li><a href="../dart_html/TextInputElementBase.html"><div class="icon-class"></div>TextInputElementBase</a></li>
+<li><a href="../dart_html/TextMetrics.html"><div class="icon-class"></div>TextMetrics</a></li>
+<li><a href="../dart_html/TextTrack.html"><div class="icon-class"></div>TextTrack</a></li>
+<li><a href="../dart_html/TextTrackCue.html"><div class="icon-class"></div>TextTrackCue</a></li>
+<li><a href="../dart_html/TextTrackCueList.html"><div class="icon-class"></div>TextTrackCueList</a></li>
+<li><a href="../dart_html/TextTrackList.html"><div class="icon-class"></div>TextTrackList</a></li>
+<li><a href="../dart_html/TimeInputElement.html"><div class="icon-class"></div>TimeInputElement</a></li>
+<li><a href="../dart_html/TimeoutHandler.html"><div class="icon-interface"></div>TimeoutHandler</a></li>
+<li><a href="../dart_html/TimeRanges.html"><div class="icon-class"></div>TimeRanges</a></li>
+<li><a href="../dart_html/TitleElement.html"><div class="icon-class"></div>TitleElement</a></li>
+<li><a href="../dart_html/Touch.html"><div class="icon-class"></div>Touch</a></li>
+<li><a href="../dart_html/TouchEvent.html"><div class="icon-class"></div>TouchEvent</a></li>
+<li><a href="../dart_html/TouchList.html"><div class="icon-class"></div>TouchList</a></li>
+<li><a href="../dart_html/TrackElement.html"><div class="icon-class"></div>TrackElement</a></li>
+<li><a href="../dart_html/TrackEvent.html"><div class="icon-class"></div>TrackEvent</a></li>
+<li><a href="../dart_html/TransitionEvent.html"><div class="icon-class"></div>TransitionEvent</a></li>
+<li><a href="../dart_html/TreeWalker.html"><div class="icon-class"></div>TreeWalker</a></li>
+<li><a href="../dart_html/UIEvent.html"><div class="icon-class"></div>UIEvent</a></li>
+<li><a href="../dart_html/Uint16Array.html"><div class="icon-class"></div>Uint16Array</a></li>
+<li><a href="../dart_html/Uint32Array.html"><div class="icon-class"></div>Uint32Array</a></li>
+<li><a href="../dart_html/Uint8Array.html"><div class="icon-class"></div>Uint8Array</a></li>
+<li><a href="../dart_html/Uint8ClampedArray.html"><div class="icon-class"></div>Uint8ClampedArray</a></li>
+<li><a href="../dart_html/UListElement.html"><div class="icon-class"></div>UListElement</a></li>
+<li><a href="../dart_html/UnknownElement.html"><div class="icon-class"></div>UnknownElement</a></li>
+<li><a href="../dart_html/Url.html"><div class="icon-class"></div>Url</a></li>
+<li><a href="../dart_html/UrlInputElement.html"><div class="icon-class"></div>UrlInputElement</a></li>
+<li><a href="../dart_html/ValidityState.html"><div class="icon-class"></div>ValidityState</a></li>
+<li><a href="../dart_html/VideoElement.html"><div class="icon-class"></div>VideoElement</a></li>
+<li><a href="../dart_html/VoidCallback.html"><div class="icon-interface"></div>VoidCallback</a></li>
+<li><a href="../dart_html/WebGLActiveInfo.html"><div class="icon-class"></div>WebGLActiveInfo</a></li>
+<li><a href="../dart_html/WebGLBuffer.html"><div class="icon-class"></div>WebGLBuffer</a></li>
+<li><a href="../dart_html/WebGLCompressedTextureS3TC.html"><div class="icon-class"></div>WebGLCompressedTextureS3TC</a></li>
+<li><a href="../dart_html/WebGLContextAttributes.html"><div class="icon-class"></div>WebGLContextAttributes</a></li>
+<li><a href="../dart_html/WebGLContextEvent.html"><div class="icon-class"></div>WebGLContextEvent</a></li>
+<li><a href="../dart_html/WebGLDebugRendererInfo.html"><div class="icon-class"></div>WebGLDebugRendererInfo</a></li>
+<li><a href="../dart_html/WebGLDebugShaders.html"><div class="icon-class"></div>WebGLDebugShaders</a></li>
+<li><a href="../dart_html/WebGLDepthTexture.html"><div class="icon-class"></div>WebGLDepthTexture</a></li>
+<li><a href="../dart_html/WebGLFramebuffer.html"><div class="icon-class"></div>WebGLFramebuffer</a></li>
+<li><a href="../dart_html/WebGLLoseContext.html"><div class="icon-class"></div>WebGLLoseContext</a></li>
+<li><a href="../dart_html/WebGLProgram.html"><div class="icon-class"></div>WebGLProgram</a></li>
+<li><a href="../dart_html/WebGLRenderbuffer.html"><div class="icon-class"></div>WebGLRenderbuffer</a></li>
+<li><a href="../dart_html/WebGLRenderingContext.html"><div class="icon-class"></div>WebGLRenderingContext</a></li>
+<li><a href="../dart_html/WebGLShader.html"><div class="icon-class"></div>WebGLShader</a></li>
+<li><a href="../dart_html/WebGLShaderPrecisionFormat.html"><div class="icon-class"></div>WebGLShaderPrecisionFormat</a></li>
+<li><a href="../dart_html/WebGLTexture.html"><div class="icon-class"></div>WebGLTexture</a></li>
+<li><a href="../dart_html/WebGLUniformLocation.html"><div class="icon-class"></div>WebGLUniformLocation</a></li>
+<li><a href="../dart_html/WebGLVertexArrayObject.html"><div class="icon-class"></div>WebGLVertexArrayObject</a></li>
+<li><a href="../dart_html/WebKitCssFilterRule.html"><div class="icon-class"></div>WebKitCssFilterRule</a></li>
+<li><a href="../dart_html/WebKitCssFilterValue.html"><div class="icon-class"></div>WebKitCssFilterValue</a></li>
+<li><a href="../dart_html/WebKitCssMixFunctionValue.html"><div class="icon-class"></div>WebKitCssMixFunctionValue</a></li>
+<li><a href="../dart_html/WebKitNamedFlow.html"><div class="icon-class"></div>WebKitNamedFlow</a></li>
+<li><a href="../dart_html/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_html/WeekInputElement.html"><div class="icon-class"></div>WeekInputElement</a></li>
+<li><a href="../dart_html/WheelEvent.html"><div class="icon-class"></div>WheelEvent</a></li>
+<li><a href="../dart_html/Window.html"><div class="icon-class"></div>Window</a></li>
+<li><a href="../dart_html/WindowBase.html"><div class="icon-class"></div>WindowBase</a></li>
+<li><a href="../dart_html/Worker.html"><div class="icon-class"></div>Worker</a></li>
+<li><a href="../dart_html/WorkerContext.html"><div class="icon-class"></div>WorkerContext</a></li>
+<li><a href="../dart_html/WorkerLocation.html"><div class="icon-class"></div>WorkerLocation</a></li>
+<li><a href="../dart_html/WorkerNavigator.html"><div class="icon-class"></div>WorkerNavigator</a></li>
+<li><a href="../dart_html/XmlSerializer.html"><div class="icon-class"></div>XmlSerializer</a></li>
+<li><a href="../dart_html/XPathEvaluator.html"><div class="icon-class"></div>XPathEvaluator</a></li>
+<li><a href="../dart_html/XPathExpression.html"><div class="icon-class"></div>XPathExpression</a></li>
+<li><a href="../dart_html/XPathNSResolver.html"><div class="icon-class"></div>XPathNSResolver</a></li>
+<li><a href="../dart_html/XPathResult.html"><div class="icon-class"></div>XPathResult</a></li>
+<li><a href="../dart_html/XsltProcessor.html"><div class="icon-class"></div>XsltProcessor</a></li>
+<li><a href="../dart_html/DomError.html"><div class="icon-exception"></div>DomError</a></li>
+<li><a href="../dart_html/DomException.html"><div class="icon-exception"></div>DomException</a></li>
+<li><a href="../dart_html/EventException.html"><div class="icon-exception"></div>EventException</a></li>
+<li><a href="../dart_html/FileError.html"><div class="icon-exception"></div>FileError</a></li>
+<li><a href="../dart_html/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../dart_html/HttpRequestException.html"><div class="icon-exception"></div>HttpRequestException</a></li>
+<li><a href="../dart_html/MediaError.html"><div class="icon-exception"></div>MediaError</a></li>
+<li><a href="../dart_html/MediaKeyError.html"><div class="icon-exception"></div>MediaKeyError</a></li>
+<li><a href="../dart_html/NavigatorUserMediaError.html"><div class="icon-exception"></div>NavigatorUserMediaError</a></li>
+<li><a href="../dart_html/PositionError.html"><div class="icon-exception"></div>PositionError</a></li>
+<li><a href="../dart_html/RangeException.html"><div class="icon-exception"></div>RangeException</a></li>
+<li><a href="../dart_html/SpeechRecognitionError.html"><div class="icon-exception"></div>SpeechRecognitionError</a></li>
+<li><a href="../dart_html/XPathException.html"><div class="icon-exception"></div>XPathException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>CanvasRenderingContext2D</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The bulk of the operations available at present with &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/HTML/Element/canvas">&lt;canvas&gt;&lt;/a>&lt;/code>
+ are available through this interface, returned by a call to &lt;code>getContext()&lt;/code> on the &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/HTML/Element/canvas">&lt;canvas&gt;&lt;/a>&lt;/code>
+ element, with "2d" as its argument.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D')
+class CanvasRenderingContext2D extends CanvasRenderingContext native "*CanvasRenderingContext2D" {
+
+ @DomName('CanvasRenderingContext2D.fillStyle')
+ @DocsEditable
+ @Creates('String|CanvasGradient|CanvasPattern')
+ @Returns('String|CanvasGradient|CanvasPattern')
+ dynamic fillStyle;
+
+ @DomName('CanvasRenderingContext2D.font')
+ @DocsEditable
+ String font;
+
+ @DomName('CanvasRenderingContext2D.globalAlpha')
+ @DocsEditable
+ num globalAlpha;
+
+ @DomName('CanvasRenderingContext2D.globalCompositeOperation')
+ @DocsEditable
+ String globalCompositeOperation;
+
+ @DomName('CanvasRenderingContext2D.lineCap')
+ @DocsEditable
+ String lineCap;
+
+ @DomName('CanvasRenderingContext2D.lineJoin')
+ @DocsEditable
+ String lineJoin;
+
+ @DomName('CanvasRenderingContext2D.lineWidth')
+ @DocsEditable
+ num lineWidth;
+
+ @DomName('CanvasRenderingContext2D.miterLimit')
+ @DocsEditable
+ num miterLimit;
+
+ @DomName('CanvasRenderingContext2D.shadowBlur')
+ @DocsEditable
+ num shadowBlur;
+
+ @DomName('CanvasRenderingContext2D.shadowColor')
+ @DocsEditable
+ String shadowColor;
+
+ @DomName('CanvasRenderingContext2D.shadowOffsetX')
+ @DocsEditable
+ num shadowOffsetX;
+
+ @DomName('CanvasRenderingContext2D.shadowOffsetY')
+ @DocsEditable
+ num shadowOffsetY;
+
+ @DomName('CanvasRenderingContext2D.strokeStyle')
+ @DocsEditable
+ @Creates('String|CanvasGradient|CanvasPattern')
+ @Returns('String|CanvasGradient|CanvasPattern')
+ dynamic strokeStyle;
+
+ @DomName('CanvasRenderingContext2D.textAlign')
+ @DocsEditable
+ String textAlign;
+
+ @DomName('CanvasRenderingContext2D.textBaseline')
+ @DocsEditable
+ String textBaseline;
+
+ @JSName('webkitBackingStorePixelRatio')
+ @DomName('CanvasRenderingContext2D.webkitBackingStorePixelRatio')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ final num backingStorePixelRatio;
+
+ @JSName('webkitImageSmoothingEnabled')
+ @DomName('CanvasRenderingContext2D.webkitImageSmoothingEnabled')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ bool imageSmoothingEnabled;
+
+ @JSName('webkitLineDash')
+ @DomName('CanvasRenderingContext2D.webkitLineDash')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ List lineDash;
+
+ @DomName('CanvasRenderingContext2D.arc')
+ @DocsEditable
+ void arc(num x, num y, num radius, num startAngle, num endAngle, bool anticlockwise) native;
+
+ @DomName('CanvasRenderingContext2D.arcTo')
+ @DocsEditable
+ void arcTo(num x1, num y1, num x2, num y2, num radius) native;
+
+ @DomName('CanvasRenderingContext2D.beginPath')
+ @DocsEditable
+ void beginPath() native;
+
+ @DomName('CanvasRenderingContext2D.bezierCurveTo')
+ @DocsEditable
+ void bezierCurveTo(num cp1x, num cp1y, num cp2x, num cp2y, num x, num y) native;
+
+ @DomName('CanvasRenderingContext2D.clearRect')
+ @DocsEditable
+ void clearRect(num x, num y, num width, num height) native;
+
+ @DomName('CanvasRenderingContext2D.clip')
+ @DocsEditable
+ void clip([String winding]) native;
+
+ @DomName('CanvasRenderingContext2D.closePath')
+ @DocsEditable
+ void closePath() native;
+
+ @DomName('CanvasRenderingContext2D.createImageData')
+ @DocsEditable
+ @Creates('ImageData|=Object')
+ ImageData createImageData(imagedata_OR_sw, [num sh]) {
+   if ((imagedata_OR_sw is ImageData || imagedata_OR_sw == null) &amp;&amp; !?sh) {
+     var imagedata_1 = _convertDartToNative_ImageData(imagedata_OR_sw);
+     return _convertNativeToDart_ImageData(_createImageData_1(imagedata_1));
+   }
+   if ((imagedata_OR_sw is num || imagedata_OR_sw == null)) {
+     return _convertNativeToDart_ImageData(_createImageData_2(imagedata_OR_sw, sh));
+   }
+   throw new ArgumentError("Incorrect number or type of arguments");
+ }
+ @JSName('createImageData')
+ @DomName('CanvasRenderingContext2D.createImageData')
+ @DocsEditable
+ @Creates('ImageData|=Object')
+ _createImageData_1(imagedata) native;
+ @JSName('createImageData')
+ @DomName('CanvasRenderingContext2D.createImageData')
+ @DocsEditable
+ @Creates('ImageData|=Object')
+ _createImageData_2(num sw, sh) native;
+
+ @DomName('CanvasRenderingContext2D.createLinearGradient')
+ @DocsEditable
+ CanvasGradient createLinearGradient(num x0, num y0, num x1, num y1) native;
+
+ @DomName('CanvasRenderingContext2D.createPattern')
+ @DocsEditable
+ CanvasPattern createPattern(canvas_OR_image, String repetitionType) native;
+
+ @DomName('CanvasRenderingContext2D.createRadialGradient')
+ @DocsEditable
+ CanvasGradient createRadialGradient(num x0, num y0, num r0, num x1, num y1, num r1) native;
+
+ @DomName('CanvasRenderingContext2D.drawImage')
+ @DocsEditable
+ void drawImage(canvas_OR_image_OR_video, num sx_OR_x, num sy_OR_y, [num sw_OR_width, num height_OR_sh, num dx, num dy, num dw, num dh]) native;
+
+ @DomName('CanvasRenderingContext2D.fill')
+ @DocsEditable
+ void fill([String winding]) native;
+
+ @DomName('CanvasRenderingContext2D.fillRect')
+ @DocsEditable
+ void fillRect(num x, num y, num width, num height) native;
+
+ @DomName('CanvasRenderingContext2D.fillText')
+ @DocsEditable
+ void fillText(String text, num x, num y, [num maxWidth]) native;
+
+ @DomName('CanvasRenderingContext2D.getImageData')
+ @DocsEditable
+ @Creates('ImageData|=Object')
+ ImageData getImageData(num sx, num sy, num sw, num sh) {
+   return _convertNativeToDart_ImageData(_getImageData_1(sx, sy, sw, sh));
+ }
+ @JSName('getImageData')
+ @DomName('CanvasRenderingContext2D.getImageData')
+ @DocsEditable
+ @Creates('ImageData|=Object')
+ _getImageData_1(sx, sy, sw, sh) native;
+
+ @DomName('CanvasRenderingContext2D.getLineDash')
+ @DocsEditable
+ List&lt;num&gt; getLineDash() native;
+
+ @DomName('CanvasRenderingContext2D.isPointInPath')
+ @DocsEditable
+ bool isPointInPath(num x, num y, [String winding]) native;
+
+ @DomName('CanvasRenderingContext2D.isPointInStroke')
+ @DocsEditable
+ bool isPointInStroke(num x, num y) native;
+
+ @DomName('CanvasRenderingContext2D.lineTo')
+ @DocsEditable
+ void lineTo(num x, num y) native;
+
+ @DomName('CanvasRenderingContext2D.measureText')
+ @DocsEditable
+ TextMetrics measureText(String text) native;
+
+ @DomName('CanvasRenderingContext2D.moveTo')
+ @DocsEditable
+ void moveTo(num x, num y) native;
+
+ @DomName('CanvasRenderingContext2D.putImageData')
+ @DocsEditable
+ void putImageData(ImageData imagedata, num dx, num dy, [num dirtyX, num dirtyY, num dirtyWidth, num dirtyHeight]) {
+   if (!?dirtyX &amp;&amp; !?dirtyY &amp;&amp; !?dirtyWidth &amp;&amp; !?dirtyHeight) {
+     var imagedata_1 = _convertDartToNative_ImageData(imagedata);
+     _putImageData_1(imagedata_1, dx, dy);
+     return;
+   }
+   var imagedata_2 = _convertDartToNative_ImageData(imagedata);
+   _putImageData_2(imagedata_2, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+   return;
+   throw new ArgumentError("Incorrect number or type of arguments");
+ }
+ @JSName('putImageData')
+ @DomName('CanvasRenderingContext2D.putImageData')
+ @DocsEditable
+ void _putImageData_1(imagedata, dx, dy) native;
+ @JSName('putImageData')
+ @DomName('CanvasRenderingContext2D.putImageData')
+ @DocsEditable
+ void _putImageData_2(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight) native;
+
+ @DomName('CanvasRenderingContext2D.quadraticCurveTo')
+ @DocsEditable
+ void quadraticCurveTo(num cpx, num cpy, num x, num y) native;
+
+ @DomName('CanvasRenderingContext2D.rect')
+ @DocsEditable
+ void rect(num x, num y, num width, num height) native;
+
+ @DomName('CanvasRenderingContext2D.restore')
+ @DocsEditable
+ void restore() native;
+
+ @DomName('CanvasRenderingContext2D.rotate')
+ @DocsEditable
+ void rotate(num angle) native;
+
+ @DomName('CanvasRenderingContext2D.save')
+ @DocsEditable
+ void save() native;
+
+ @DomName('CanvasRenderingContext2D.scale')
+ @DocsEditable
+ void scale(num sx, num sy) native;
+
+ @DomName('CanvasRenderingContext2D.setLineDash')
+ @DocsEditable
+ void setLineDash(List&lt;num&gt; dash) native;
+
+ @DomName('CanvasRenderingContext2D.setTransform')
+ @DocsEditable
+ void setTransform(num m11, num m12, num m21, num m22, num dx, num dy) native;
+
+ @DomName('CanvasRenderingContext2D.stroke')
+ @DocsEditable
+ void stroke() native;
+
+ @DomName('CanvasRenderingContext2D.strokeRect')
+ @DocsEditable
+ void strokeRect(num x, num y, num width, num height, [num lineWidth]) native;
+
+ @DomName('CanvasRenderingContext2D.strokeText')
+ @DocsEditable
+ void strokeText(String text, num x, num y, [num maxWidth]) native;
+
+ @DomName('CanvasRenderingContext2D.transform')
+ @DocsEditable
+ void transform(num m11, num m12, num m21, num m22, num dx, num dy) native;
+
+ @DomName('CanvasRenderingContext2D.translate')
+ @DocsEditable
+ void translate(num tx, num ty) native;
+
+ @DomName('CanvasRenderingContext2D.webkitGetImageDataHD')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ @Creates('ImageData|=Object')
+ ImageData getImageDataHD(num sx, num sy, num sw, num sh) {
+   return _convertNativeToDart_ImageData(_getImageDataHD_1(sx, sy, sw, sh));
+ }
+ @JSName('webkitGetImageDataHD')
+ @DomName('CanvasRenderingContext2D.webkitGetImageDataHD')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ @Creates('ImageData|=Object')
+ _getImageDataHD_1(sx, sy, sw, sh) native;
+
+ @DomName('CanvasRenderingContext2D.webkitPutImageDataHD')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ void putImageDataHD(ImageData imagedata, num dx, num dy, [num dirtyX, num dirtyY, num dirtyWidth, num dirtyHeight]) {
+   if (!?dirtyX &amp;&amp; !?dirtyY &amp;&amp; !?dirtyWidth &amp;&amp; !?dirtyHeight) {
+     var imagedata_1 = _convertDartToNative_ImageData(imagedata);
+     _putImageDataHD_1(imagedata_1, dx, dy);
+     return;
+   }
+   var imagedata_2 = _convertDartToNative_ImageData(imagedata);
+   _putImageDataHD_2(imagedata_2, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+   return;
+   throw new ArgumentError("Incorrect number or type of arguments");
+ }
+ @JSName('webkitPutImageDataHD')
+ @DomName('CanvasRenderingContext2D.webkitPutImageDataHD')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ void _putImageDataHD_1(imagedata, dx, dy) native;
+ @JSName('webkitPutImageDataHD')
+ @DomName('CanvasRenderingContext2D.webkitPutImageDataHD')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ void _putImageDataHD_2(imagedata, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight) native;
+
+
+ /**
+  * Sets the color used inside shapes.
+  * [r], [g], [b] are 0-255, [a] is 0-1.
+  */
+ void setFillColorRgb(int r, int g, int b, [num a = 1]) {
+   this.fillStyle = 'rgba($r, $g, $b, $a)';
+ }
+
+ /**
+  * Sets the color used inside shapes.
+  * [h] is in degrees, 0-360.
+  * [s], [l] are in percent, 0-100.
+  * [a] is 0-1.
+  */
+ void setFillColorHsl(int h, num s, num l, [num a = 1]) {
+   this.fillStyle = 'hsla($h, $s%, $l%, $a)';
+ }
+
+ /**
+  * Sets the color used for stroking shapes.
+  * [r], [g], [b] are 0-255, [a] is 0-1.
+  */
+ void setStrokeColorRgb(int r, int g, int b, [num a = 1]) {
+   this.strokeStyle = 'rgba($r, $g, $b, $a)';
+ }
+
+ /**
+  * Sets the color used for stroking shapes.
+  * [h] is in degrees, 0-360.
+  * [s], [l] are in percent, 0-100.
+  * [a] is 0-1.
+  */
+ void setStrokeColorHsl(int h, num s, num l, [num a = 1]) {
+   this.strokeStyle = 'hsla($h, $s%, $l%, $a)';
+ }
+
+ @DomName('CanvasRenderingContext2D.lineDashOffset')
+ num get lineDashOffset =&gt; JS('num',
+     '#.lineDashOffset || #.webkitLineDashOffset', this, this);
+
+ @DomName('CanvasRenderingContext2D.lineDashOffset')
+ void set lineDashOffset(num value) =&gt; JS('void', 
+     'typeof #.lineDashOffset != "undefined" ? #.lineDashOffset = # : '
+     '#.webkitLineDashOffset = #', this, this, value, this, value);
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_html/CanvasRenderingContext.html">CanvasRenderingContext</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>CanvasRenderingContext2D</strong></span></p>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="backingStorePixelRatio">
+<button class="show-code">Code</button>
+final <a href="../dart_core/num.html">num</a>         <strong>backingStorePixelRatio</strong> <a class="anchor-link"
+            href="#backingStorePixelRatio"
+            title="Permalink to CanvasRenderingContext2D.backingStorePixelRatio">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@JSName('webkitBackingStorePixelRatio')
+@DomName('CanvasRenderingContext2D.webkitBackingStorePixelRatio')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+final num backingStorePixelRatio
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="canvas">
+<button class="show-code">Code</button>
+final <a href="../dart_html/CanvasElement.html">CanvasElement</a>         <strong>canvas</strong> <a class="anchor-link"
+            href="#canvas"
+            title="Permalink to CanvasRenderingContext2D.canvas">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/CanvasRenderingContext.html">CanvasRenderingContext</a> </div><div class="doc">
+<p>Reference to the canvas element to which this context belongs.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext.canvas')
+@DocsEditable
+final CanvasElement canvas
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="fillStyle">
+<button class="show-code">Code</button>
+var         <strong>fillStyle</strong> <a class="anchor-link"
+            href="#fillStyle"
+            title="Permalink to CanvasRenderingContext2D.fillStyle">#</a>
+        </h4>
+        <div class="doc">
+<p>Color or style to use inside shapes. Default &lt;code>#000&lt;/code> (black).</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.fillStyle')
+@DocsEditable
+@Creates('String|CanvasGradient|CanvasPattern')
+@Returns('String|CanvasGradient|CanvasPattern')
+dynamic fillStyle
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="font">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>font</strong> <a class="anchor-link"
+            href="#font"
+            title="Permalink to CanvasRenderingContext2D.font">#</a>
+        </h4>
+        <div class="doc">
+<p>Default value &lt;code>10px sans-serif&lt;/code>.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.font')
+@DocsEditable
+String font
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="globalAlpha">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>globalAlpha</strong> <a class="anchor-link"
+            href="#globalAlpha"
+            title="Permalink to CanvasRenderingContext2D.globalAlpha">#</a>
+        </h4>
+        <div class="doc">
+<p>Alpha value that is applied to shapes and images before they are composited onto the canvas. Default &lt;code>1.0&lt;/code> (opaque).</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.globalAlpha')
+@DocsEditable
+num globalAlpha
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="globalCompositeOperation">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>globalCompositeOperation</strong> <a class="anchor-link"
+            href="#globalCompositeOperation"
+            title="Permalink to CanvasRenderingContext2D.globalCompositeOperation">#</a>
+        </h4>
+        <div class="doc">
+<p>With &lt;code>globalAplpha&lt;/code> applied this sets how shapes and images are drawn onto the existing bitmap. Possible values: &lt;ul> &lt;li>&lt;code>source-atop&lt;/code>&lt;/li> &lt;li>&lt;code>source-in&lt;/code>&lt;/li> &lt;li>&lt;code>source-out&lt;/code>&lt;/li> &lt;li>&lt;code>source-over&lt;/code> (default)&lt;/li> &lt;li>&lt;code>destination-atop&lt;/code>&lt;/li> &lt;li>&lt;code>destination-in&lt;/code>&lt;/li> &lt;li>&lt;code>destination-out&lt;/code>&lt;/li> &lt;li>&lt;code>destination-over&lt;/code>&lt;/li> &lt;li>&lt;code>lighter&lt;/code>&lt;/li> &lt;li>&lt;code>xor&lt;/code>&lt;/li> &lt;/ul></p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.globalCompositeOperation')
+@DocsEditable
+String globalCompositeOperation
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="imageSmoothingEnabled">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>imageSmoothingEnabled</strong> <a class="anchor-link"
+            href="#imageSmoothingEnabled"
+            title="Permalink to CanvasRenderingContext2D.imageSmoothingEnabled">#</a>
+        </h4>
+        <div class="doc">
+<p>Image smoothing mode; if disabled, images will not be smoothed if scaled. 
+&lt;span title="(Firefox 3.6 / Thunderbird 3.1 / Fennec 1.0)
+">Requires Gecko 1.9.2&lt;/span></p>
+<pre class="source">
+@JSName('webkitImageSmoothingEnabled')
+@DomName('CanvasRenderingContext2D.webkitImageSmoothingEnabled')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+bool imageSmoothingEnabled
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lineCap">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>lineCap</strong> <a class="anchor-link"
+            href="#lineCap"
+            title="Permalink to CanvasRenderingContext2D.lineCap">#</a>
+        </h4>
+        <div class="doc">
+<p>Type of endings on the end of lines. Possible values: &lt;code>butt&lt;/code> (default), &lt;code>round&lt;/code>, &lt;code>square&lt;/code></p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.lineCap')
+@DocsEditable
+String lineCap
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lineDash">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>         <strong>lineDash</strong> <a class="anchor-link"
+            href="#lineDash"
+            title="Permalink to CanvasRenderingContext2D.lineDash">#</a>
+        </h4>
+        <div class="doc">
+<p>An array which specifies the lengths of alternating dashes and gaps.</p>
+<pre class="source">
+@JSName('webkitLineDash')
+@DomName('CanvasRenderingContext2D.webkitLineDash')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+List lineDash
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lineDashOffset">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>lineDashOffset</strong> <a class="anchor-link"
+            href="#lineDashOffset"
+            title="Permalink to CanvasRenderingContext2D.lineDashOffset">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.lineDashOffset')
+num get lineDashOffset =&gt; JS('num',
+   '#.lineDashOffset || #.webkitLineDashOffset', this, this);
+</pre>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.lineDashOffset')
+void set lineDashOffset(num value) =&gt; JS('void', 
+   'typeof #.lineDashOffset != "undefined" ? #.lineDashOffset = # : '
+   '#.webkitLineDashOffset = #', this, this, value, this, value);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lineJoin">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>lineJoin</strong> <a class="anchor-link"
+            href="#lineJoin"
+            title="Permalink to CanvasRenderingContext2D.lineJoin">#</a>
+        </h4>
+        <div class="doc">
+<p>Defines the type of corners where two lines meet. Possible values: &lt;code>round&lt;/code>, &lt;code>bevel&lt;/code>, &lt;code>miter&lt;/code> (default)</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.lineJoin')
+@DocsEditable
+String lineJoin
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lineWidth">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>lineWidth</strong> <a class="anchor-link"
+            href="#lineWidth"
+            title="Permalink to CanvasRenderingContext2D.lineWidth">#</a>
+        </h4>
+        <div class="doc">
+<p>Width of lines. Default &lt;code>1.0&lt;/code></p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.lineWidth')
+@DocsEditable
+num lineWidth
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="miterLimit">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>miterLimit</strong> <a class="anchor-link"
+            href="#miterLimit"
+            title="Permalink to CanvasRenderingContext2D.miterLimit">#</a>
+        </h4>
+        <div class="doc">
+<p>Default &lt;code>10&lt;/code>.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.miterLimit')
+@DocsEditable
+num miterLimit
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="shadowBlur">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>shadowBlur</strong> <a class="anchor-link"
+            href="#shadowBlur"
+            title="Permalink to CanvasRenderingContext2D.shadowBlur">#</a>
+        </h4>
+        <div class="doc">
+<p>Specifies the blurring effect. Default &lt;code>0&lt;/code></p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.shadowBlur')
+@DocsEditable
+num shadowBlur
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="shadowColor">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>shadowColor</strong> <a class="anchor-link"
+            href="#shadowColor"
+            title="Permalink to CanvasRenderingContext2D.shadowColor">#</a>
+        </h4>
+        <div class="doc">
+<p>Color of the shadow. Default fully-transparent black.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.shadowColor')
+@DocsEditable
+String shadowColor
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="shadowOffsetX">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>shadowOffsetX</strong> <a class="anchor-link"
+            href="#shadowOffsetX"
+            title="Permalink to CanvasRenderingContext2D.shadowOffsetX">#</a>
+        </h4>
+        <div class="doc">
+<p>Horizontal distance the shadow will be offset. Default 0.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.shadowOffsetX')
+@DocsEditable
+num shadowOffsetX
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="shadowOffsetY">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>shadowOffsetY</strong> <a class="anchor-link"
+            href="#shadowOffsetY"
+            title="Permalink to CanvasRenderingContext2D.shadowOffsetY">#</a>
+        </h4>
+        <div class="doc">
+<p>Vertical distance the shadow will be offset. Default 0.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.shadowOffsetY')
+@DocsEditable
+num shadowOffsetY
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="strokeStyle">
+<button class="show-code">Code</button>
+var         <strong>strokeStyle</strong> <a class="anchor-link"
+            href="#strokeStyle"
+            title="Permalink to CanvasRenderingContext2D.strokeStyle">#</a>
+        </h4>
+        <div class="doc">
+<p>Color or style to use for the lines around shapes. Default &lt;code>#000&lt;/code> (black).</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.strokeStyle')
+@DocsEditable
+@Creates('String|CanvasGradient|CanvasPattern')
+@Returns('String|CanvasGradient|CanvasPattern')
+dynamic strokeStyle
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="textAlign">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>textAlign</strong> <a class="anchor-link"
+            href="#textAlign"
+            title="Permalink to CanvasRenderingContext2D.textAlign">#</a>
+        </h4>
+        <div class="doc">
+<p>Possible values: &lt;code>start&lt;/code> (default), &lt;code>end&lt;/code>, &lt;code>left&lt;/code>, &lt;code>right&lt;/code> or &lt;code>center&lt;/code>.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.textAlign')
+@DocsEditable
+String textAlign
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="textBaseline">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>textBaseline</strong> <a class="anchor-link"
+            href="#textBaseline"
+            title="Permalink to CanvasRenderingContext2D.textBaseline">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.textBaseline')
+@DocsEditable
+String textBaseline
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="arc">
+<button class="show-code">Code</button>
+void <strong>arc</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y, <a href="../dart_core/num.html">num</a> radius, <a href="../dart_core/num.html">num</a> startAngle, <a href="../dart_core/num.html">num</a> endAngle, <a href="../dart_core/bool.html">bool</a> anticlockwise) <a class="anchor-link" href="#arc"
+              title="Permalink to CanvasRenderingContext2D.arc">#</a></h4>
+<div class="doc">
+<p>Adds an arc to the path which it center is at <em>(x, y)</em> position with radius<em> r</em> starting at <em>startAngle</em> and ending at <em>endAngle</em> going in the given direction by <em>anticlockwise</em> (defaulting to clockwise).</p><div id="section_11"><span id="Parameters"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x</code></dt> <dd>The x axis of the coordinate for the arc's center</dd> <dt><code>y</code></dt> <dd>The y axis of the coordinate for the arc's center.</dd> <dt><code>radius</code></dt> <dd>The arc's radius</dd> <dt><code>startAngle</code></dt> <dd>The starting point, measured from the x axis , from which it will be drawed expressed as radians.</dd> <dt><code>endAngle</code></dt> <dd>The end arc's angle to which it will be drawed expressed as radians.</dd> <dt><code>anticlockwise</code> 
+<span title="(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)
+">Optional from Gecko 2.0</span>
+</dt> <dd>When <code>true</code> draws the arc anticlockwise, otherwise in a clockwise direction.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.arc')
+@DocsEditable
+void arc(num x, num y, num radius, num startAngle, num endAngle, bool anticlockwise) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="arcTo">
+<button class="show-code">Code</button>
+void <strong>arcTo</strong>(<a href="../dart_core/num.html">num</a> x1, <a href="../dart_core/num.html">num</a> y1, <a href="../dart_core/num.html">num</a> x2, <a href="../dart_core/num.html">num</a> y2, <a href="../dart_core/num.html">num</a> radius) <a class="anchor-link" href="#arcTo"
+              title="Permalink to CanvasRenderingContext2D.arcTo">#</a></h4>
+<div class="doc">
+<p>Adds an arc with the given control points and radius, connected to the previous point by a straight line.</p><div id="section_13"><span id="Parameters_2"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x1</code></dt> <dd></dd> <dt><code>y1</code></dt> <dd></dd> <dt><code>x2</code></dt> <dd></dd> <dt><code>y2</code></dt> <dd></dd> <dt><code>radius</code></dt> <dd>The arc's radius.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.arcTo')
+@DocsEditable
+void arcTo(num x1, num y1, num x2, num y2, num radius) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="beginPath">
+<button class="show-code">Code</button>
+void <strong>beginPath</strong>() <a class="anchor-link" href="#beginPath"
+              title="Permalink to CanvasRenderingContext2D.beginPath">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.beginPath')
+@DocsEditable
+void beginPath() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="bezierCurveTo">
+<button class="show-code">Code</button>
+void <strong>bezierCurveTo</strong>(<a href="../dart_core/num.html">num</a> cp1x, <a href="../dart_core/num.html">num</a> cp1y, <a href="../dart_core/num.html">num</a> cp2x, <a href="../dart_core/num.html">num</a> cp2y, <a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y) <a class="anchor-link" href="#bezierCurveTo"
+              title="Permalink to CanvasRenderingContext2D.bezierCurveTo">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.bezierCurveTo')
+@DocsEditable
+void bezierCurveTo(num cp1x, num cp1y, num cp2x, num cp2y, num x, num y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="clearRect">
+<button class="show-code">Code</button>
+void <strong>clearRect</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y, <a href="../dart_core/num.html">num</a> width, <a href="../dart_core/num.html">num</a> height) <a class="anchor-link" href="#clearRect"
+              title="Permalink to CanvasRenderingContext2D.clearRect">#</a></h4>
+<div class="doc">
+<p>Clears the rectangle defined by it starting point at <em>(x, y)</em> and has a <em>w</em> width and a <em>h</em> height.</p><div id="section_19"><span id="Parameters_5"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x</code></dt> <dd>The x axis of the coordinate for the rectangle starting point.</dd> <dt><code>y</code></dt> <dd>The y axis of the coordinate for the rectangle starting point.</dd> <dt><code>width</code></dt> <dd>The rectangle's width.</dd> <dt><code>height</code></dt> <dd>The rectangle's height.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.clearRect')
+@DocsEditable
+void clearRect(num x, num y, num width, num height) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="clip">
+<button class="show-code">Code</button>
+void <strong>clip</strong>([<a href="../dart_core/String.html">String</a> winding]) <a class="anchor-link" href="#clip"
+              title="Permalink to CanvasRenderingContext2D.clip">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.clip')
+@DocsEditable
+void clip([String winding]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="closePath">
+<button class="show-code">Code</button>
+void <strong>closePath</strong>() <a class="anchor-link" href="#closePath"
+              title="Permalink to CanvasRenderingContext2D.closePath">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.closePath')
+@DocsEditable
+void closePath() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createImageData">
+<button class="show-code">Code</button>
+<a href="../dart_html/ImageData.html">ImageData</a> <strong>createImageData</strong>(imagedata_OR_sw, [<a href="../dart_core/num.html">num</a> sh]) <a class="anchor-link" href="#createImageData"
+              title="Permalink to CanvasRenderingContext2D.createImageData">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.createImageData')
+@DocsEditable
+@Creates('ImageData|=Object')
+ImageData createImageData(imagedata_OR_sw, [num sh]) {
+ if ((imagedata_OR_sw is ImageData || imagedata_OR_sw == null) &amp;&amp; !?sh) {
+   var imagedata_1 = _convertDartToNative_ImageData(imagedata_OR_sw);
+   return _convertNativeToDart_ImageData(_createImageData_1(imagedata_1));
+ }
+ if ((imagedata_OR_sw is num || imagedata_OR_sw == null)) {
+   return _convertNativeToDart_ImageData(_createImageData_2(imagedata_OR_sw, sh));
+ }
+ throw new ArgumentError("Incorrect number or type of arguments");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createLinearGradient">
+<button class="show-code">Code</button>
+<a href="../dart_html/CanvasGradient.html">CanvasGradient</a> <strong>createLinearGradient</strong>(<a href="../dart_core/num.html">num</a> x0, <a href="../dart_core/num.html">num</a> y0, <a href="../dart_core/num.html">num</a> x1, <a href="../dart_core/num.html">num</a> y1) <a class="anchor-link" href="#createLinearGradient"
+              title="Permalink to CanvasRenderingContext2D.createLinearGradient">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.createLinearGradient')
+@DocsEditable
+CanvasGradient createLinearGradient(num x0, num y0, num x1, num y1) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createPattern">
+<button class="show-code">Code</button>
+<a href="../dart_html/CanvasPattern.html">CanvasPattern</a> <strong>createPattern</strong>(canvas_OR_image, <a href="../dart_core/String.html">String</a> repetitionType) <a class="anchor-link" href="#createPattern"
+              title="Permalink to CanvasRenderingContext2D.createPattern">#</a></h4>
+<div class="doc">
+<div id="section_31"><span id="Parameters_10"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>image</code></dt> <dd>A DOM <code><a rel="custom" href="https://developer.mozilla.org/en/DOM/element">element</a></code>
+ to use as the source image for the pattern. This can be any element, although typically you'll use an <code><a rel="internal" href="https://developer.mozilla.org/Article_not_found?uri=en/DOM/Image" class="new">Image</a></code>
+ or <code><a rel="custom" href="https://developer.mozilla.org/en/HTML/Element/canvas">&lt;canvas&gt;</a></code>
+.</dd> <dt><code>repetition</code></dt> <dd>?</dd>
+</dl>
+</div><div id="section_32"><span id="Return_value_3"></span><h6 class="editable">Return value</h6>
+<p>A new DOM canvas pattern object for use in pattern-based operations.</p>
+</div><div id="section_33"><span id="Exceptions_thrown"></span><h6 class="editable">Exceptions thrown</h6>
+<dl> <dt><code>NS_ERROR_DOM_INVALID_STATE_ERR</code> 
+<span title="(Firefox 10.0 / Thunderbird 10.0)
+">Requires Gecko 10.0</span>
+</dt> <dd>The specified <code><a rel="custom" href="https://developer.mozilla.org/en/HTML/Element/canvas">&lt;canvas&gt;</a></code>
+ element for the <code>image</code> parameter is zero-sized (that is, one or both of its dimensions are 0 pixels).</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.createPattern')
+@DocsEditable
+CanvasPattern createPattern(canvas_OR_image, String repetitionType) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createRadialGradient">
+<button class="show-code">Code</button>
+<a href="../dart_html/CanvasGradient.html">CanvasGradient</a> <strong>createRadialGradient</strong>(<a href="../dart_core/num.html">num</a> x0, <a href="../dart_core/num.html">num</a> y0, <a href="../dart_core/num.html">num</a> r0, <a href="../dart_core/num.html">num</a> x1, <a href="../dart_core/num.html">num</a> y1, <a href="../dart_core/num.html">num</a> r1) <a class="anchor-link" href="#createRadialGradient"
+              title="Permalink to CanvasRenderingContext2D.createRadialGradient">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.createRadialGradient')
+@DocsEditable
+CanvasGradient createRadialGradient(num x0, num y0, num r0, num x1, num y1, num r1) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="drawImage">
+<button class="show-code">Code</button>
+void <strong>drawImage</strong>(canvas_OR_image_OR_video, <a href="../dart_core/num.html">num</a> sx_OR_x, <a href="../dart_core/num.html">num</a> sy_OR_y, [<a href="../dart_core/num.html">num</a> sw_OR_width, <a href="../dart_core/num.html">num</a> height_OR_sh, <a href="../dart_core/num.html">num</a> dx, <a href="../dart_core/num.html">num</a> dy, <a href="../dart_core/num.html">num</a> dw, <a href="../dart_core/num.html">num</a> dh]) <a class="anchor-link" href="#drawImage"
+              title="Permalink to CanvasRenderingContext2D.drawImage">#</a></h4>
+<div class="doc">
+<p>Draws the specified image. This method is available in multiple formats, providing a great deal of flexibility in its use.</p><div id="section_41"><span id="Parameters_13"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>image</code></dt> <dd>An element to draw into the context; the specification permits any image element (that is, <code><a rel="custom" href="https://developer.mozilla.org/en/HTML/Element/img">&lt;img&gt;</a></code>
+, <code><a rel="custom" href="https://developer.mozilla.org/en/HTML/Element/canvas">&lt;canvas&gt;</a></code>
+, and <code><a rel="custom" href="https://developer.mozilla.org/en/HTML/Element/video">&lt;video&gt;</a></code>
+). Some browsers, including Firefox, let you use any arbitrary element.</dd> <dt><code>dx</code></dt> <dd>The X coordinate in the destination canvas at which to place the top-left corner of the source <code>image</code>.</dd> <dt><code>dy</code></dt> <dd>The Y coordinate in the destination canvas at which to place the top-left corner of the source <code>image</code>.</dd> <dt><code>dw</code></dt> <dd>The width to draw the <code>image</code> in the destination canvas. This allows scaling of the drawn image. If not specified, the image is not scaled in width when drawn.</dd> <dt><code>dh</code></dt> <dd>The height to draw the <code>image</code> in the destination canvas. This allows scaling of the drawn image. If not specified, the image is not scaled in height when drawn.</dd> <dt><code>sx</code></dt> <dd>The X coordinate of the top left corner of the sub-rectangle of the source image to draw into the destination context.</dd> <dt><code>sy</code></dt> <dd>The Y coordinate of the top left corner of the sub-rectangle of the source image to draw into the destination context.</dd> <dt><code>sw</code></dt> <dd>The width of the sub-rectangle of the source image to draw into the destination context. If not specified, the entire rectangle from the coordinates specified by <code>sx</code> and <code>sy</code> to the bottom-right corner of the image is used. If you specify a negative value, the image is flipped horizontally when drawn.</dd> <dt><code>sh</code></dt> <dd>The height of the sub-rectangle of the source image to draw into the destination context. If you specify a negative value, the image is flipped vertically when drawn.</dd>
+</dl>
+<p>The diagram below illustrates the meanings of the various parameters.</p>
+<p><img alt="drawImage.png" class="internal default" src="https://developer.mozilla.org/@api/deki/files/5494/=drawImage.png"></p>
+</div><div id="section_42"><span id="Exceptions_thrown_2"></span><h6 class="editable">Exceptions thrown</h6>
+<dl> <dt><code>INDEX_SIZE_ERR</code></dt> <dd>If the canvas or source rectangle width or height is zero.</dd> <dt><code>INVALID_STATE_ERR</code></dt> <dd>The image has no image data.</dd> <dt><code>TYPE_MISMATCH_ERR</code></dt> <dd>The specified source element isn't supported. This is not thrown by Firefox, since any element may be used as a source image.</dd>
+</dl>
+</div><div id="section_43"><span id="Compatibility_notes"></span><h6 class="editable">Compatibility notes</h6>
+<ul> <li>Prior to Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4)
+, Firefox threw an exception if any of the coordinate values was non-finite or zero. As per the specification, this no longer happens.</li> <li>Support for flipping the image by using negative values for <code>sw</code> and <code>sh</code> was added in Gecko 5.0 (Firefox 5.0 / Thunderbird 5.0 / SeaMonkey 2.2)
+.</li> <li>Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6)
+ now correctly supports CORS for drawing images across domains without <a title="en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" rel="internal" href="https://developer.mozilla.org/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the canvas</a>.</li>
+</ul>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.drawImage')
+@DocsEditable
+void drawImage(canvas_OR_image_OR_video, num sx_OR_x, num sy_OR_y, [num sw_OR_width, num height_OR_sh, num dx, num dy, num dw, num dh]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="fill">
+<button class="show-code">Code</button>
+void <strong>fill</strong>([<a href="../dart_core/String.html">String</a> winding]) <a class="anchor-link" href="#fill"
+              title="Permalink to CanvasRenderingContext2D.fill">#</a></h4>
+<div class="doc">
+<p>Fills the subpaths with the current fill style.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.fill')
+@DocsEditable
+void fill([String winding]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="fillRect">
+<button class="show-code">Code</button>
+void <strong>fillRect</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y, <a href="../dart_core/num.html">num</a> width, <a href="../dart_core/num.html">num</a> height) <a class="anchor-link" href="#fillRect"
+              title="Permalink to CanvasRenderingContext2D.fillRect">#</a></h4>
+<div class="doc">
+<p>Draws a filled rectangle at <em>(x, y) </em>position whose size is determined by <em>width</em> and <em>height</em>.</p><div id="section_49"><span id="Parameters_16"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x</code></dt> <dd>The x axis of the coordinate for the rectangle starting point.</dd> <dt><code>y</code></dt> <dd>The y axis of the coordinate for the rectangle starting point.</dd> <dt><code>width</code></dt> <dd>The rectangle's width.</dd> <dt><code>height</code></dt> <dd>The rectangle's height.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.fillRect')
+@DocsEditable
+void fillRect(num x, num y, num width, num height) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="fillText">
+<button class="show-code">Code</button>
+void <strong>fillText</strong>(<a href="../dart_core/String.html">String</a> text, <a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y, [<a href="../dart_core/num.html">num</a> maxWidth]) <a class="anchor-link" href="#fillText"
+              title="Permalink to CanvasRenderingContext2D.fillText">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.fillText')
+@DocsEditable
+void fillText(String text, num x, num y, [num maxWidth]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getImageData">
+<button class="show-code">Code</button>
+<a href="../dart_html/ImageData.html">ImageData</a> <strong>getImageData</strong>(<a href="../dart_core/num.html">num</a> sx, <a href="../dart_core/num.html">num</a> sy, <a href="../dart_core/num.html">num</a> sw, <a href="../dart_core/num.html">num</a> sh) <a class="anchor-link" href="#getImageData"
+              title="Permalink to CanvasRenderingContext2D.getImageData">#</a></h4>
+<div class="doc">
+<p>Returns an <code><a class="external" rel="external" href="http://dev.w3.org/html5/2dcontext/Overview.html#imagedata" title="http://dev.w3.org/html5/2dcontext/Overview.html#imagedata" target="_blank">ImageData</a></code> object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at <em>(sx, sy)</em> and has a <em>sw</em> width and <em>sh</em> height.</p><div id="section_53"><span id="Parameters_18"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>sx</code></dt> <dd>The x axis of the coordinate for the rectangle startpoint from which the ImageData will be extracted.</dd> <dt><code>sy</code></dt> <dd>The x axis of the coordinate for the rectangle endpoint from which the ImageData will be extracted.</dd> <dt><code>sw</code></dt> <dd>The width of the rectangle from which the ImageData will be extracted.</dd> <dt><code>sh</code></dt> <dd>The height of the rectangle from which the ImageData will be extracted.</dd>
+</dl>
+</div><div id="section_54"><span id="Return_value_6"></span><h6 class="editable">Return value</h6>
+<p>Returns an <code><a class="external" rel="external" href="http://www.w3.org/TR/2011/WD-2dcontext-20110405/#imagedata" title="http://www.w3.org/TR/2011/WD-2dcontext-20110405/#imagedata" target="_blank">ImageData</a></code> object containing the image data for the given rectangle of the canvas.</p>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.getImageData')
+@DocsEditable
+@Creates('ImageData|=Object')
+ImageData getImageData(num sx, num sy, num sw, num sh) {
+ return _convertNativeToDart_ImageData(_getImageData_1(sx, sy, sw, sh));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getImageDataHD">
+<button class="show-code">Code</button>
+<a href="../dart_html/ImageData.html">ImageData</a> <strong>getImageDataHD</strong>(<a href="../dart_core/num.html">num</a> sx, <a href="../dart_core/num.html">num</a> sy, <a href="../dart_core/num.html">num</a> sw, <a href="../dart_core/num.html">num</a> sh) <a class="anchor-link" href="#getImageDataHD"
+              title="Permalink to CanvasRenderingContext2D.getImageDataHD">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.webkitGetImageDataHD')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+@Creates('ImageData|=Object')
+ImageData getImageDataHD(num sx, num sy, num sw, num sh) {
+ return _convertNativeToDart_ImageData(_getImageDataHD_1(sx, sy, sw, sh));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getLineDash">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/num.html">num</a>&gt; <strong>getLineDash</strong>() <a class="anchor-link" href="#getLineDash"
+              title="Permalink to CanvasRenderingContext2D.getLineDash">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.getLineDash')
+@DocsEditable
+List&lt;num&gt; getLineDash() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isPointInPath">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>isPointInPath</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y, [<a href="../dart_core/String.html">String</a> winding]) <a class="anchor-link" href="#isPointInPath"
+              title="Permalink to CanvasRenderingContext2D.isPointInPath">#</a></h4>
+<div class="doc">
+<p>Reports whether or not the specified point is contained in the current path.</p><div id="section_56"><span id="Parameters_19"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x</code></dt> <dd>The X coordinate of the point to check.</dd> <dt><code>y</code></dt> <dd>The Y coordinate of the point to check.</dd>
+</dl>
+</div><div id="section_57"><span id="Return_value_7"></span><h6 class="editable">Return value</h6>
+<p><code>true</code> if the specified point is contained in the current path; otherwise <code>false</code>.</p>
+</div><div id="section_58"><span id="Compatibility_notes_2"></span><h6 class="editable">Compatibility notes</h6>
+<ul> <li>Prior to Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4)
+, this method incorrectly failed to multiply the specified point's coordinates by the current transformation matrix before comparing it to the path. Now this method works correctly even if the context is rotated, scaled, or otherwise transformed.</li>
+</ul>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.isPointInPath')
+@DocsEditable
+bool isPointInPath(num x, num y, [String winding]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isPointInStroke">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>isPointInStroke</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y) <a class="anchor-link" href="#isPointInStroke"
+              title="Permalink to CanvasRenderingContext2D.isPointInStroke">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.isPointInStroke')
+@DocsEditable
+bool isPointInStroke(num x, num y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lineTo">
+<button class="show-code">Code</button>
+void <strong>lineTo</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y) <a class="anchor-link" href="#lineTo"
+              title="Permalink to CanvasRenderingContext2D.lineTo">#</a></h4>
+<div class="doc">
+<p>Connects the last point in the subpath to the <code>x, y</code> coordinates with a straight line.</p><div id="section_60"><span id="Parameters_20"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x</code></dt> <dd>The x axis of the coordinate for the end of the line.</dd> <dt><code>y</code></dt> <dd>The y axis of the coordinate for the end of the line.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.lineTo')
+@DocsEditable
+void lineTo(num x, num y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="measureText">
+<button class="show-code">Code</button>
+<a href="../dart_html/TextMetrics.html">TextMetrics</a> <strong>measureText</strong>(<a href="../dart_core/String.html">String</a> text) <a class="anchor-link" href="#measureText"
+              title="Permalink to CanvasRenderingContext2D.measureText">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.measureText')
+@DocsEditable
+TextMetrics measureText(String text) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="moveTo">
+<button class="show-code">Code</button>
+void <strong>moveTo</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y) <a class="anchor-link" href="#moveTo"
+              title="Permalink to CanvasRenderingContext2D.moveTo">#</a></h4>
+<div class="doc">
+<p>Moves the starting point of a new subpath to the <strong>(x, y)</strong> coordinates.</p><div id="section_65"><span id="Parameters_22"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x</code></dt> <dd>The x axis of the point.</dd> <dt><code>y</code></dt> <dd>The y axis of the point.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.moveTo')
+@DocsEditable
+void moveTo(num x, num y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="putImageData">
+<button class="show-code">Code</button>
+void <strong>putImageData</strong>(<a href="../dart_html/ImageData.html">ImageData</a> imagedata, <a href="../dart_core/num.html">num</a> dx, <a href="../dart_core/num.html">num</a> dy, [<a href="../dart_core/num.html">num</a> dirtyX, <a href="../dart_core/num.html">num</a> dirtyY, <a href="../dart_core/num.html">num</a> dirtyWidth, <a href="../dart_core/num.html">num</a> dirtyHeight]) <a class="anchor-link" href="#putImageData"
+              title="Permalink to CanvasRenderingContext2D.putImageData">#</a></h4>
+<div class="doc">
+<h6 class="editable">Compatibility notes</h6>
+<ul> <li>Starting in Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0)
+, non-finite values to any of these parameters causes the call to putImageData() to be silently ignored, rather than throwing an exception.</li>
+</ul>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.putImageData')
+@DocsEditable
+void putImageData(ImageData imagedata, num dx, num dy, [num dirtyX, num dirtyY, num dirtyWidth, num dirtyHeight]) {
+ if (!?dirtyX &amp;&amp; !?dirtyY &amp;&amp; !?dirtyWidth &amp;&amp; !?dirtyHeight) {
+   var imagedata_1 = _convertDartToNative_ImageData(imagedata);
+   _putImageData_1(imagedata_1, dx, dy);
+   return;
+ }
+ var imagedata_2 = _convertDartToNative_ImageData(imagedata);
+ _putImageData_2(imagedata_2, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+ return;
+ throw new ArgumentError("Incorrect number or type of arguments");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="putImageDataHD">
+<button class="show-code">Code</button>
+void <strong>putImageDataHD</strong>(<a href="../dart_html/ImageData.html">ImageData</a> imagedata, <a href="../dart_core/num.html">num</a> dx, <a href="../dart_core/num.html">num</a> dy, [<a href="../dart_core/num.html">num</a> dirtyX, <a href="../dart_core/num.html">num</a> dirtyY, <a href="../dart_core/num.html">num</a> dirtyWidth, <a href="../dart_core/num.html">num</a> dirtyHeight]) <a class="anchor-link" href="#putImageDataHD"
+              title="Permalink to CanvasRenderingContext2D.putImageDataHD">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.webkitPutImageDataHD')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+void putImageDataHD(ImageData imagedata, num dx, num dy, [num dirtyX, num dirtyY, num dirtyWidth, num dirtyHeight]) {
+ if (!?dirtyX &amp;&amp; !?dirtyY &amp;&amp; !?dirtyWidth &amp;&amp; !?dirtyHeight) {
+   var imagedata_1 = _convertDartToNative_ImageData(imagedata);
+   _putImageDataHD_1(imagedata_1, dx, dy);
+   return;
+ }
+ var imagedata_2 = _convertDartToNative_ImageData(imagedata);
+ _putImageDataHD_2(imagedata_2, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight);
+ return;
+ throw new ArgumentError("Incorrect number or type of arguments");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="quadraticCurveTo">
+<button class="show-code">Code</button>
+void <strong>quadraticCurveTo</strong>(<a href="../dart_core/num.html">num</a> cpx, <a href="../dart_core/num.html">num</a> cpy, <a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y) <a class="anchor-link" href="#quadraticCurveTo"
+              title="Permalink to CanvasRenderingContext2D.quadraticCurveTo">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.quadraticCurveTo')
+@DocsEditable
+void quadraticCurveTo(num cpx, num cpy, num x, num y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="rect">
+<button class="show-code">Code</button>
+void <strong>rect</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y, <a href="../dart_core/num.html">num</a> width, <a href="../dart_core/num.html">num</a> height) <a class="anchor-link" href="#rect"
+              title="Permalink to CanvasRenderingContext2D.rect">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.rect')
+@DocsEditable
+void rect(num x, num y, num width, num height) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="restore">
+<button class="show-code">Code</button>
+void <strong>restore</strong>() <a class="anchor-link" href="#restore"
+              title="Permalink to CanvasRenderingContext2D.restore">#</a></h4>
+<div class="doc">
+<p>Restores the drawing style state to the last element on the 'state stack' saved by save()</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.restore')
+@DocsEditable
+void restore() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="rotate">
+<button class="show-code">Code</button>
+void <strong>rotate</strong>(<a href="../dart_core/num.html">num</a> angle) <a class="anchor-link" href="#rotate"
+              title="Permalink to CanvasRenderingContext2D.rotate">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.rotate')
+@DocsEditable
+void rotate(num angle) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="save">
+<button class="show-code">Code</button>
+void <strong>save</strong>() <a class="anchor-link" href="#save"
+              title="Permalink to CanvasRenderingContext2D.save">#</a></h4>
+<div class="doc">
+<p>Saves the current drawing style state using a stack so you can revert any change you make to it using restore().</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.save')
+@DocsEditable
+void save() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="scale">
+<button class="show-code">Code</button>
+void <strong>scale</strong>(<a href="../dart_core/num.html">num</a> sx, <a href="../dart_core/num.html">num</a> sy) <a class="anchor-link" href="#scale"
+              title="Permalink to CanvasRenderingContext2D.scale">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.scale')
+@DocsEditable
+void scale(num sx, num sy) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setFillColorHsl">
+<button class="show-code">Code</button>
+void <strong>setFillColorHsl</strong>(<a href="../dart_core/int.html">int</a> h, <a href="../dart_core/num.html">num</a> s, <a href="../dart_core/num.html">num</a> l, [<a href="../dart_core/num.html">num</a> a = 1]) <a class="anchor-link" href="#setFillColorHsl"
+              title="Permalink to CanvasRenderingContext2D.setFillColorHsl">#</a></h4>
+<div class="doc">
+<p>Sets the color used inside shapes.
+
+<span class="param">h</span> is in degrees, 0-360.
+
+<span class="param">s</span>, 
+<span class="param">l</span> are in percent, 0-100.
+
+<span class="param">a</span> is 0-1.</p>
+<pre class="source">
+void setFillColorHsl(int h, num s, num l, [num a = 1]) {
+ this.fillStyle = 'hsla($h, $s%, $l%, $a)';
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setFillColorRgb">
+<button class="show-code">Code</button>
+void <strong>setFillColorRgb</strong>(<a href="../dart_core/int.html">int</a> r, <a href="../dart_core/int.html">int</a> g, <a href="../dart_core/int.html">int</a> b, [<a href="../dart_core/num.html">num</a> a = 1]) <a class="anchor-link" href="#setFillColorRgb"
+              title="Permalink to CanvasRenderingContext2D.setFillColorRgb">#</a></h4>
+<div class="doc">
+<p>Sets the color used inside shapes.
+
+<span class="param">r</span>, 
+<span class="param">g</span>, 
+<span class="param">b</span> are 0-255, 
+<span class="param">a</span> is 0-1.</p>
+<pre class="source">
+void setFillColorRgb(int r, int g, int b, [num a = 1]) {
+ this.fillStyle = 'rgba($r, $g, $b, $a)';
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setLineDash">
+<button class="show-code">Code</button>
+void <strong>setLineDash</strong>(<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/num.html">num</a>&gt; dash) <a class="anchor-link" href="#setLineDash"
+              title="Permalink to CanvasRenderingContext2D.setLineDash">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.setLineDash')
+@DocsEditable
+void setLineDash(List&lt;num&gt; dash) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setStrokeColorHsl">
+<button class="show-code">Code</button>
+void <strong>setStrokeColorHsl</strong>(<a href="../dart_core/int.html">int</a> h, <a href="../dart_core/num.html">num</a> s, <a href="../dart_core/num.html">num</a> l, [<a href="../dart_core/num.html">num</a> a = 1]) <a class="anchor-link" href="#setStrokeColorHsl"
+              title="Permalink to CanvasRenderingContext2D.setStrokeColorHsl">#</a></h4>
+<div class="doc">
+<p>Sets the color used for stroking shapes.
+
+<span class="param">h</span> is in degrees, 0-360.
+
+<span class="param">s</span>, 
+<span class="param">l</span> are in percent, 0-100.
+
+<span class="param">a</span> is 0-1.</p>
+<pre class="source">
+void setStrokeColorHsl(int h, num s, num l, [num a = 1]) {
+ this.strokeStyle = 'hsla($h, $s%, $l%, $a)';
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setStrokeColorRgb">
+<button class="show-code">Code</button>
+void <strong>setStrokeColorRgb</strong>(<a href="../dart_core/int.html">int</a> r, <a href="../dart_core/int.html">int</a> g, <a href="../dart_core/int.html">int</a> b, [<a href="../dart_core/num.html">num</a> a = 1]) <a class="anchor-link" href="#setStrokeColorRgb"
+              title="Permalink to CanvasRenderingContext2D.setStrokeColorRgb">#</a></h4>
+<div class="doc">
+<p>Sets the color used for stroking shapes.
+
+<span class="param">r</span>, 
+<span class="param">g</span>, 
+<span class="param">b</span> are 0-255, 
+<span class="param">a</span> is 0-1.</p>
+<pre class="source">
+void setStrokeColorRgb(int r, int g, int b, [num a = 1]) {
+ this.strokeStyle = 'rgba($r, $g, $b, $a)';
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setTransform">
+<button class="show-code">Code</button>
+void <strong>setTransform</strong>(<a href="../dart_core/num.html">num</a> m11, <a href="../dart_core/num.html">num</a> m12, <a href="../dart_core/num.html">num</a> m21, <a href="../dart_core/num.html">num</a> m22, <a href="../dart_core/num.html">num</a> dx, <a href="../dart_core/num.html">num</a> dy) <a class="anchor-link" href="#setTransform"
+              title="Permalink to CanvasRenderingContext2D.setTransform">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.setTransform')
+@DocsEditable
+void setTransform(num m11, num m12, num m21, num m22, num dx, num dy) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="stroke">
+<button class="show-code">Code</button>
+void <strong>stroke</strong>() <a class="anchor-link" href="#stroke"
+              title="Permalink to CanvasRenderingContext2D.stroke">#</a></h4>
+<div class="doc">
+<p>Strokes the subpaths with the current stroke style.</p>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.stroke')
+@DocsEditable
+void stroke() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="strokeRect">
+<button class="show-code">Code</button>
+void <strong>strokeRect</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y, <a href="../dart_core/num.html">num</a> width, <a href="../dart_core/num.html">num</a> height, [<a href="../dart_core/num.html">num</a> lineWidth]) <a class="anchor-link" href="#strokeRect"
+              title="Permalink to CanvasRenderingContext2D.strokeRect">#</a></h4>
+<div class="doc">
+<p>Paints a rectangle which it starting point is at <em>(x, y)</em> and has a<em> w</em> width and a <em>h</em> height onto the canvas, using the current stroke style.</p><div id="section_88"><span id="Parameters_33"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x</code></dt> <dd>The x axis for the starting point of the rectangle.</dd> <dt><code>y</code></dt> <dd>The y axis for the starting point of the rectangle.</dd> <dt><code>w</code></dt> <dd>The rectangle's width.</dd> <dt><code>h</code></dt> <dd>The rectangle's height.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.strokeRect')
+@DocsEditable
+void strokeRect(num x, num y, num width, num height, [num lineWidth]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="strokeText">
+<button class="show-code">Code</button>
+void <strong>strokeText</strong>(<a href="../dart_core/String.html">String</a> text, <a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y, [<a href="../dart_core/num.html">num</a> maxWidth]) <a class="anchor-link" href="#strokeText"
+              title="Permalink to CanvasRenderingContext2D.strokeText">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.strokeText')
+@DocsEditable
+void strokeText(String text, num x, num y, [num maxWidth]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="transform">
+<button class="show-code">Code</button>
+void <strong>transform</strong>(<a href="../dart_core/num.html">num</a> m11, <a href="../dart_core/num.html">num</a> m12, <a href="../dart_core/num.html">num</a> m21, <a href="../dart_core/num.html">num</a> m22, <a href="../dart_core/num.html">num</a> dx, <a href="../dart_core/num.html">num</a> dy) <a class="anchor-link" href="#transform"
+              title="Permalink to CanvasRenderingContext2D.transform">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('CanvasRenderingContext2D.transform')
+@DocsEditable
+void transform(num m11, num m12, num m21, num m22, num dx, num dy) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="translate">
+<button class="show-code">Code</button>
+void <strong>translate</strong>(<a href="../dart_core/num.html">num</a> tx, <a href="../dart_core/num.html">num</a> ty) <a class="anchor-link" href="#translate"
+              title="Permalink to CanvasRenderingContext2D.translate">#</a></h4>
+<div class="doc">
+<p>Moves the origin point of the context to (x, y).</p><div id="section_94"><span id="Parameters_36"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>x</code></dt> <dd>The x axis for the point to be considered as the origin.</dd> <dt><code>y</code></dt> <dd>The x axis for the point to be considered as the origin.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('CanvasRenderingContext2D.translate')
+@DocsEditable
+void translate(num tx, num ty) native;
+</pre>
+</div>
+</div>
+</div>
+          <p class="mdn-attribution">
+          <a href="https://developer.mozilla.org">
+            <img src="../mdn-logo-tiny.png" class="mdn-logo" />
+          </a>
+          This page includes <a href="https://developer.mozilla.org/en/DOM/CanvasRenderingContext2D">content</a> from the
+          <a href="http://www.mozilla.org/">Mozilla Foundation</a> that is graciously
+          <a href="https://developer.mozilla.org/Project:Copyrights">licensed</a> under a
+          <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons: Attribution-Sharealike license</a>.
+          Mozilla has no other association with Dart or dartlang.org. We
+          encourage you to improve the web by
+          <a href="https://developer.mozilla.org/Project:en/How_to_Help">contributing</a> to
+          <a href="https://developer.mozilla.org">The Mozilla Developer Network</a>.
+          </p>
+          
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:51:58.855</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

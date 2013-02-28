@@ -1,0 +1,515 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Index class / dart:indexed_db Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:indexed_db" data-type="Index">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_indexed_db.html">dart:indexed_db</a> &rsaquo; <a href="../dart_indexed_db/Index.html">Index</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><ul class="icon">
+<li><a href="../dart_indexed_db/Cursor.html"><div class="icon-class"></div>Cursor</a></li>
+<li><a href="../dart_indexed_db/CursorWithValue.html"><div class="icon-class"></div>CursorWithValue</a></li>
+<li><a href="../dart_indexed_db/Database.html"><div class="icon-class"></div>Database</a></li>
+<li><a href="../dart_indexed_db/IdbFactory.html"><div class="icon-class"></div>IdbFactory</a></li>
+<li><div class="icon-class"></div><strong>Index</strong></li>
+<li><a href="../dart_indexed_db/KeyRange.html"><div class="icon-class"></div>KeyRange</a></li>
+<li><a href="../dart_indexed_db/ObjectStore.html"><div class="icon-class"></div>ObjectStore</a></li>
+<li><a href="../dart_indexed_db/OpenDBRequest.html"><div class="icon-class"></div>OpenDBRequest</a></li>
+<li><a href="../dart_indexed_db/Request.html"><div class="icon-class"></div>Request</a></li>
+<li><a href="../dart_indexed_db/Transaction.html"><div class="icon-class"></div>Transaction</a></li>
+<li><a href="../dart_indexed_db/VersionChangeEvent.html"><div class="icon-class"></div>VersionChangeEvent</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Index</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+@DomName('IDBIndex')
+class Index native "*IDBIndex" {
+ @DomName('IDBIndex.count')
+ Future&lt;int&gt; count([key_OR_range]) {
+  try {
+     var request;
+     if (key_OR_range != null) {
+       request = $dom_count(key_OR_range);
+     } else {
+       request = $dom_count();
+     }
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBIndex.get')
+ Future get(key) {
+   try {
+     var request = $dom_get(key);
+
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBIndex.getKey')
+ Future getKey(key) {
+   try {
+     var request = $dom_getKey(key);
+
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.immediateError(e, stacktrace);
+   }
+ }
+
+ /**
+  * Creates a stream of cursors over the records in this object store.
+  *
+  * See also:
+  *
+  * * [ObjectStore.openCursor]
+  */
+ Stream&lt;CursorWithValue&gt; openCursor({key, KeyRange range, String direction,
+     bool autoAdvance}) {
+   var key_OR_range = null;
+   if (key != null) {
+     if (range != null) {
+       throw new ArgumentError('Cannot specify both key and range.');
+     }
+     key_OR_range = key;
+   } else {
+     key_OR_range = range;
+   }
+   var request;
+   if (direction == null) {
+     request = $dom_openCursor(key_OR_range);
+   } else {
+     request = $dom_openCursor(key_OR_range, direction);
+   }
+   return ObjectStore._cursorStreamFromResult(request, autoAdvance);
+ }
+
+ /**
+  * Creates a stream of cursors over the records in this object store.
+  *
+  * See also:
+  *
+  * * [ObjectStore.openCursor]
+  */
+ Stream&lt;Cursor&gt; openKeyCursor({key, KeyRange range, String direction,
+     bool autoAdvance}) {
+   var key_OR_range = null;
+   if (key != null) {
+     if (range != null) {
+       throw new ArgumentError('Cannot specify both key and range.');
+     }
+     key_OR_range = key;
+   } else {
+     key_OR_range = range;
+   }
+   var request;
+   if (direction == null) {
+     request = $dom_openKeyCursor(key_OR_range);
+   } else {
+     request = $dom_openKeyCursor(key_OR_range, direction);
+   }
+   return ObjectStore._cursorStreamFromResult(request, autoAdvance);
+ }
+
+ 
+ @DomName('IDBIndex.keyPath')
+ @DocsEditable
+ final dynamic keyPath;
+
+ @DomName('IDBIndex.multiEntry')
+ @DocsEditable
+ final bool multiEntry;
+
+ @DomName('IDBIndex.name')
+ @DocsEditable
+ final String name;
+
+ @DomName('IDBIndex.objectStore')
+ @DocsEditable
+ final ObjectStore objectStore;
+
+ @DomName('IDBIndex.unique')
+ @DocsEditable
+ final bool unique;
+
+ @JSName('count')
+ @DomName('IDBIndex.count')
+ @DocsEditable
+ Request $dom_count([key_OR_range]) native;
+
+ @JSName('get')
+ @DomName('IDBIndex.get')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @annotation_Creates_SerializedScriptValue
+ Request $dom_get(key) native;
+
+ @JSName('getKey')
+ @DomName('IDBIndex.getKey')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @annotation_Creates_SerializedScriptValue
+ @Creates('ObjectStore')
+ Request $dom_getKey(key) native;
+
+ @JSName('openCursor')
+ @DomName('IDBIndex.openCursor')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @Creates('Cursor')
+ Request $dom_openCursor([key_OR_range, String direction]) native;
+
+ @JSName('openKeyCursor')
+ @DomName('IDBIndex.openKeyCursor')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @Creates('Cursor')
+ Request $dom_openKeyCursor([key_OR_range, String direction]) native;
+
+}
+</pre>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="keyPath">
+<button class="show-code">Code</button>
+final         <strong>keyPath</strong> <a class="anchor-link"
+            href="#keyPath"
+            title="Permalink to Index.keyPath">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBIndex.keyPath')
+@DocsEditable
+final dynamic keyPath
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="multiEntry">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>multiEntry</strong> <a class="anchor-link"
+            href="#multiEntry"
+            title="Permalink to Index.multiEntry">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBIndex.multiEntry')
+@DocsEditable
+final bool multiEntry
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="name">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>name</strong> <a class="anchor-link"
+            href="#name"
+            title="Permalink to Index.name">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBIndex.name')
+@DocsEditable
+final String name
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="objectStore">
+<button class="show-code">Code</button>
+final <a href="../dart_indexed_db/ObjectStore.html">ObjectStore</a>         <strong>objectStore</strong> <a class="anchor-link"
+            href="#objectStore"
+            title="Permalink to Index.objectStore">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBIndex.objectStore')
+@DocsEditable
+final ObjectStore objectStore
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="unique">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>unique</strong> <a class="anchor-link"
+            href="#unique"
+            title="Permalink to Index.unique">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBIndex.unique')
+@DocsEditable
+final bool unique
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="count">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/int.html">int</a>&gt; <strong>count</strong>([key_OR_range]) <a class="anchor-link" href="#count"
+              title="Permalink to Index.count">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBIndex.count')
+Future&lt;int&gt; count([key_OR_range]) {
+try {
+   var request;
+   if (key_OR_range != null) {
+     request = $dom_count(key_OR_range);
+   } else {
+     request = $dom_count();
+   }
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="get">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>get</strong>(key) <a class="anchor-link" href="#get"
+              title="Permalink to Index.get">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBIndex.get')
+Future get(key) {
+ try {
+   var request = $dom_get(key);
+
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getKey">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>getKey</strong>(key) <a class="anchor-link" href="#getKey"
+              title="Permalink to Index.getKey">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBIndex.getKey')
+Future getKey(key) {
+ try {
+   var request = $dom_getKey(key);
+
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.immediateError(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="openCursor">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_indexed_db/CursorWithValue.html">CursorWithValue</a>&gt; <strong>openCursor</strong>({key, <a href="../dart_indexed_db/KeyRange.html">KeyRange</a> range, <a href="../dart_core/String.html">String</a> direction, <a href="../dart_core/bool.html">bool</a> autoAdvance}) <a class="anchor-link" href="#openCursor"
+              title="Permalink to Index.openCursor">#</a></h4>
+<div class="doc">
+<p>Creates a stream of cursors over the records in this object store.</p>
+<p>See also:</p><ul><li><a class="crossref" href="../dart_indexed_db/ObjectStore.html#openCursor">ObjectStore.openCursor</a></li></ul>
+<pre class="source">
+Stream&lt;CursorWithValue&gt; openCursor({key, KeyRange range, String direction,
+   bool autoAdvance}) {
+ var key_OR_range = null;
+ if (key != null) {
+   if (range != null) {
+     throw new ArgumentError('Cannot specify both key and range.');
+   }
+   key_OR_range = key;
+ } else {
+   key_OR_range = range;
+ }
+ var request;
+ if (direction == null) {
+   request = $dom_openCursor(key_OR_range);
+ } else {
+   request = $dom_openCursor(key_OR_range, direction);
+ }
+ return ObjectStore._cursorStreamFromResult(request, autoAdvance);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="openKeyCursor">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_indexed_db/Cursor.html">Cursor</a>&gt; <strong>openKeyCursor</strong>({key, <a href="../dart_indexed_db/KeyRange.html">KeyRange</a> range, <a href="../dart_core/String.html">String</a> direction, <a href="../dart_core/bool.html">bool</a> autoAdvance}) <a class="anchor-link" href="#openKeyCursor"
+              title="Permalink to Index.openKeyCursor">#</a></h4>
+<div class="doc">
+<p>Creates a stream of cursors over the records in this object store.</p>
+<p>See also:</p><ul><li><a class="crossref" href="../dart_indexed_db/ObjectStore.html#openCursor">ObjectStore.openCursor</a></li></ul>
+<pre class="source">
+Stream&lt;Cursor&gt; openKeyCursor({key, KeyRange range, String direction,
+   bool autoAdvance}) {
+ var key_OR_range = null;
+ if (key != null) {
+   if (range != null) {
+     throw new ArgumentError('Cannot specify both key and range.');
+   }
+   key_OR_range = key;
+ } else {
+   key_OR_range = range;
+ }
+ var request;
+ if (direction == null) {
+   request = $dom_openKeyCursor(key_OR_range);
+ } else {
+   request = $dom_openKeyCursor(key_OR_range, direction);
+ }
+ return ObjectStore._cursorStreamFromResult(request, autoAdvance);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_count">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_count</strong>([key_OR_range]) <a class="anchor-link" href="#$dom_count"
+              title="Permalink to Index.$dom_count">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('count')
+@DomName('IDBIndex.count')
+@DocsEditable
+Request $dom_count([key_OR_range]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_get">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_get</strong>(key) <a class="anchor-link" href="#$dom_get"
+              title="Permalink to Index.$dom_get">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('get')
+@DomName('IDBIndex.get')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@annotation_Creates_SerializedScriptValue
+Request $dom_get(key) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_getKey">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_getKey</strong>(key) <a class="anchor-link" href="#$dom_getKey"
+              title="Permalink to Index.$dom_getKey">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('getKey')
+@DomName('IDBIndex.getKey')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@annotation_Creates_SerializedScriptValue
+@Creates('ObjectStore')
+Request $dom_getKey(key) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_openCursor">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_openCursor</strong>([key_OR_range, <a href="../dart_core/String.html">String</a> direction]) <a class="anchor-link" href="#$dom_openCursor"
+              title="Permalink to Index.$dom_openCursor">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('openCursor')
+@DomName('IDBIndex.openCursor')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@Creates('Cursor')
+Request $dom_openCursor([key_OR_range, String direction]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_openKeyCursor">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_openKeyCursor</strong>([key_OR_range, <a href="../dart_core/String.html">String</a> direction]) <a class="anchor-link" href="#$dom_openKeyCursor"
+              title="Permalink to Index.$dom_openKeyCursor">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('openKeyCursor')
+@DomName('IDBIndex.openKeyCursor')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@Creates('Cursor')
+Request $dom_openKeyCursor([key_OR_range, String direction]) native;
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:05.361</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

@@ -1,0 +1,3801 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Window class / dart:html Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:html" data-type="Window">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_html.html">dart:html</a> &rsaquo; <a href="../dart_html/Window.html">Window</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><ul class="icon">
+<li><a href="../dart_html/AbstractWorker.html"><div class="icon-class"></div>AbstractWorker</a></li>
+<li><a href="../dart_html/AnchorElement.html"><div class="icon-class"></div>AnchorElement</a></li>
+<li><a href="../dart_html/AnimationEvent.html"><div class="icon-class"></div>AnimationEvent</a></li>
+<li><a href="../dart_html/ApplicationCache.html"><div class="icon-class"></div>ApplicationCache</a></li>
+<li><a href="../dart_html/AreaElement.html"><div class="icon-class"></div>AreaElement</a></li>
+<li><a href="../dart_html/ArrayBuffer.html"><div class="icon-class"></div>ArrayBuffer</a></li>
+<li><a href="../dart_html/ArrayBufferView.html"><div class="icon-class"></div>ArrayBufferView</a></li>
+<li><a href="../dart_html/Attr.html"><div class="icon-class"></div>Attr</a></li>
+<li><a href="../dart_html/AudioElement.html"><div class="icon-class"></div>AudioElement</a></li>
+<li><a href="../dart_html/BarInfo.html"><div class="icon-class"></div>BarInfo</a></li>
+<li><a href="../dart_html/BaseElement.html"><div class="icon-class"></div>BaseElement</a></li>
+<li><a href="../dart_html/BatteryManager.html"><div class="icon-class"></div>BatteryManager</a></li>
+<li><a href="../dart_html/BeforeLoadEvent.html"><div class="icon-class"></div>BeforeLoadEvent</a></li>
+<li><a href="../dart_html/Blob.html"><div class="icon-class"></div>Blob</a></li>
+<li><a href="../dart_html/BodyElement.html"><div class="icon-class"></div>BodyElement</a></li>
+<li><a href="../dart_html/BRElement.html"><div class="icon-class"></div>BRElement</a></li>
+<li><a href="../dart_html/ButtonElement.html"><div class="icon-class"></div>ButtonElement</a></li>
+<li><a href="../dart_html/ButtonInputElement.html"><div class="icon-class"></div>ButtonInputElement</a></li>
+<li><a href="../dart_html/CanvasElement.html"><div class="icon-class"></div>CanvasElement</a></li>
+<li><a href="../dart_html/CanvasGradient.html"><div class="icon-class"></div>CanvasGradient</a></li>
+<li><a href="../dart_html/CanvasPattern.html"><div class="icon-class"></div>CanvasPattern</a></li>
+<li><a href="../dart_html/CanvasRenderingContext.html"><div class="icon-class"></div>CanvasRenderingContext</a></li>
+<li><a href="../dart_html/CanvasRenderingContext2D.html"><div class="icon-class"></div>CanvasRenderingContext2D</a></li>
+<li><a href="../dart_html/CDataSection.html"><div class="icon-class"></div>CDataSection</a></li>
+<li><a href="../dart_html/CharacterData.html"><div class="icon-class"></div>CharacterData</a></li>
+<li><a href="../dart_html/CheckboxInputElement.html"><div class="icon-class"></div>CheckboxInputElement</a></li>
+<li><a href="../dart_html/ClientRect.html"><div class="icon-class"></div>ClientRect</a></li>
+<li><a href="../dart_html/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_html/Comment.html"><div class="icon-class"></div>Comment</a></li>
+<li><a href="../dart_html/CompositionEvent.html"><div class="icon-class"></div>CompositionEvent</a></li>
+<li><a href="../dart_html/Console.html"><div class="icon-class"></div>Console</a></li>
+<li><a href="../dart_html/ContentElement.html"><div class="icon-class"></div>ContentElement</a></li>
+<li><a href="../dart_html/Coordinates.html"><div class="icon-class"></div>Coordinates</a></li>
+<li><a href="../dart_html/Counter.html"><div class="icon-class"></div>Counter</a></li>
+<li><a href="../dart_html/Crypto.html"><div class="icon-class"></div>Crypto</a></li>
+<li><a href="../dart_html/CssCharsetRule.html"><div class="icon-class"></div>CssCharsetRule</a></li>
+<li><a href="../dart_html/CssClassSet.html"><div class="icon-class"></div>CssClassSet</a></li>
+<li><a href="../dart_html/CssFontFaceRule.html"><div class="icon-class"></div>CssFontFaceRule</a></li>
+<li><a href="../dart_html/CssHostRule.html"><div class="icon-class"></div>CssHostRule</a></li>
+<li><a href="../dart_html/CssImportRule.html"><div class="icon-class"></div>CssImportRule</a></li>
+<li><a href="../dart_html/CssKeyframeRule.html"><div class="icon-class"></div>CssKeyframeRule</a></li>
+<li><a href="../dart_html/CssKeyframesRule.html"><div class="icon-class"></div>CssKeyframesRule</a></li>
+<li><a href="../dart_html/CssMatrix.html"><div class="icon-class"></div>CssMatrix</a></li>
+<li><a href="../dart_html/CssMediaRule.html"><div class="icon-class"></div>CssMediaRule</a></li>
+<li><a href="../dart_html/CssPageRule.html"><div class="icon-class"></div>CssPageRule</a></li>
+<li><a href="../dart_html/CssPrimitiveValue.html"><div class="icon-class"></div>CssPrimitiveValue</a></li>
+<li><a href="../dart_html/CssRule.html"><div class="icon-class"></div>CssRule</a></li>
+<li><a href="../dart_html/CssStyleDeclaration.html"><div class="icon-class"></div>CssStyleDeclaration</a></li>
+<li><a href="../dart_html/CssStyleRule.html"><div class="icon-class"></div>CssStyleRule</a></li>
+<li><a href="../dart_html/CssStyleSheet.html"><div class="icon-class"></div>CssStyleSheet</a></li>
+<li><a href="../dart_html/CssTransformValue.html"><div class="icon-class"></div>CssTransformValue</a></li>
+<li><a href="../dart_html/CssUnknownRule.html"><div class="icon-class"></div>CssUnknownRule</a></li>
+<li><a href="../dart_html/CssValue.html"><div class="icon-class"></div>CssValue</a></li>
+<li><a href="../dart_html/CustomEvent.html"><div class="icon-class"></div>CustomEvent</a></li>
+<li><a href="../dart_html/DataListElement.html"><div class="icon-class"></div>DataListElement</a></li>
+<li><a href="../dart_html/DataTransfer.html"><div class="icon-class"></div>DataTransfer</a></li>
+<li><a href="../dart_html/DataTransferItem.html"><div class="icon-class"></div>DataTransferItem</a></li>
+<li><a href="../dart_html/DataTransferItemList.html"><div class="icon-class"></div>DataTransferItemList</a></li>
+<li><a href="../dart_html/DataView.html"><div class="icon-class"></div>DataView</a></li>
+<li><a href="../dart_html/DateInputElement.html"><div class="icon-class"></div>DateInputElement</a></li>
+<li><a href="../dart_html/DedicatedWorkerContext.html"><div class="icon-class"></div>DedicatedWorkerContext</a></li>
+<li><a href="../dart_html/DetailsElement.html"><div class="icon-class"></div>DetailsElement</a></li>
+<li><a href="../dart_html/DeviceMotionEvent.html"><div class="icon-class"></div>DeviceMotionEvent</a></li>
+<li><a href="../dart_html/DeviceOrientationEvent.html"><div class="icon-class"></div>DeviceOrientationEvent</a></li>
+<li><a href="../dart_html/DirectoryEntry.html"><div class="icon-class"></div>DirectoryEntry</a></li>
+<li><a href="../dart_html/DirectoryEntrySync.html"><div class="icon-class"></div>DirectoryEntrySync</a></li>
+<li><a href="../dart_html/DirectoryReader.html"><div class="icon-class"></div>DirectoryReader</a></li>
+<li><a href="../dart_html/DirectoryReaderSync.html"><div class="icon-class"></div>DirectoryReaderSync</a></li>
+<li><a href="../dart_html/DivElement.html"><div class="icon-class"></div>DivElement</a></li>
+<li><a href="../dart_html/DListElement.html"><div class="icon-class"></div>DListElement</a></li>
+<li><a href="../dart_html/Document.html"><div class="icon-class"></div>Document</a></li>
+<li><a href="../dart_html/DocumentFragment.html"><div class="icon-class"></div>DocumentFragment</a></li>
+<li><a href="../dart_html/DocumentType.html"><div class="icon-class"></div>DocumentType</a></li>
+<li><a href="../dart_html/DomImplementation.html"><div class="icon-class"></div>DomImplementation</a></li>
+<li><a href="../dart_html/DomMimeType.html"><div class="icon-class"></div>DomMimeType</a></li>
+<li><a href="../dart_html/DomMimeTypeArray.html"><div class="icon-class"></div>DomMimeTypeArray</a></li>
+<li><a href="../dart_html/DomParser.html"><div class="icon-class"></div>DomParser</a></li>
+<li><a href="../dart_html/DomPlugin.html"><div class="icon-class"></div>DomPlugin</a></li>
+<li><a href="../dart_html/DomPluginArray.html"><div class="icon-class"></div>DomPluginArray</a></li>
+<li><a href="../dart_html/DomPoint.html"><div class="icon-class"></div>DomPoint</a></li>
+<li><a href="../dart_html/DomSelection.html"><div class="icon-class"></div>DomSelection</a></li>
+<li><a href="../dart_html/DomSettableTokenList.html"><div class="icon-class"></div>DomSettableTokenList</a></li>
+<li><a href="../dart_html/DomStringList.html"><div class="icon-class"></div>DomStringList</a></li>
+<li><a href="../dart_html/DomStringMap.html"><div class="icon-class"></div>DomStringMap</a></li>
+<li><a href="../dart_html/DomTokenList.html"><div class="icon-class"></div>DomTokenList</a></li>
+<li><a href="../dart_html/Element.html"><div class="icon-class"></div>Element</a></li>
+<li><a href="../dart_html/ElementTraversal.html"><div class="icon-class"></div>ElementTraversal</a></li>
+<li><a href="../dart_html/EmailInputElement.html"><div class="icon-class"></div>EmailInputElement</a></li>
+<li><a href="../dart_html/EmbedElement.html"><div class="icon-class"></div>EmbedElement</a></li>
+<li><a href="../dart_html/EntityReference.html"><div class="icon-class"></div>EntityReference</a></li>
+<li><a href="../dart_html/EntriesCallback.html"><div class="icon-interface"></div>EntriesCallback</a></li>
+<li><a href="../dart_html/Entry.html"><div class="icon-class"></div>Entry</a></li>
+<li><a href="../dart_html/EntryCallback.html"><div class="icon-interface"></div>EntryCallback</a></li>
+<li><a href="../dart_html/EntrySync.html"><div class="icon-class"></div>EntrySync</a></li>
+<li><a href="../dart_html/ErrorCallback.html"><div class="icon-interface"></div>ErrorCallback</a></li>
+<li><a href="../dart_html/ErrorEvent.html"><div class="icon-class"></div>ErrorEvent</a></li>
+<li><a href="../dart_html/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_html/EventListener.html"><div class="icon-interface"></div>EventListener</a></li>
+<li><a href="../dart_html/Events.html"><div class="icon-class"></div>Events</a></li>
+<li><a href="../dart_html/EventSource.html"><div class="icon-class"></div>EventSource</a></li>
+<li><a href="../dart_html/EventStreamProvider.html"><div class="icon-class"></div>EventStreamProvider&lt;T&gt;</a></li>
+<li><a href="../dart_html/EventTarget.html"><div class="icon-class"></div>EventTarget</a></li>
+<li><a href="../dart_html/ExtTextureFilterAnisotropic.html"><div class="icon-class"></div>ExtTextureFilterAnisotropic</a></li>
+<li><a href="../dart_html/FieldSetElement.html"><div class="icon-class"></div>FieldSetElement</a></li>
+<li><a href="../dart_html/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_html/FileCallback.html"><div class="icon-interface"></div>FileCallback</a></li>
+<li><a href="../dart_html/FileEntry.html"><div class="icon-class"></div>FileEntry</a></li>
+<li><a href="../dart_html/FileEntrySync.html"><div class="icon-class"></div>FileEntrySync</a></li>
+<li><a href="../dart_html/FileList.html"><div class="icon-class"></div>FileList</a></li>
+<li><a href="../dart_html/FileReader.html"><div class="icon-class"></div>FileReader</a></li>
+<li><a href="../dart_html/FileReaderSync.html"><div class="icon-class"></div>FileReaderSync</a></li>
+<li><a href="../dart_html/FileSystem.html"><div class="icon-class"></div>FileSystem</a></li>
+<li><a href="../dart_html/FileSystemCallback.html"><div class="icon-interface"></div>FileSystemCallback</a></li>
+<li><a href="../dart_html/FileSystemSync.html"><div class="icon-class"></div>FileSystemSync</a></li>
+<li><a href="../dart_html/FileUploadInputElement.html"><div class="icon-class"></div>FileUploadInputElement</a></li>
+<li><a href="../dart_html/FileWriter.html"><div class="icon-class"></div>FileWriter</a></li>
+<li><a href="../dart_html/FileWriterCallback.html"><div class="icon-interface"></div>FileWriterCallback</a></li>
+<li><a href="../dart_html/FileWriterSync.html"><div class="icon-class"></div>FileWriterSync</a></li>
+<li><a href="../dart_html/FixedSizeListIterator.html"><div class="icon-class"></div>FixedSizeListIterator&lt;T&gt;</a></li>
+<li><a href="../dart_html/Float32Array.html"><div class="icon-class"></div>Float32Array</a></li>
+<li><a href="../dart_html/Float64Array.html"><div class="icon-class"></div>Float64Array</a></li>
+<li><a href="../dart_html/FocusEvent.html"><div class="icon-class"></div>FocusEvent</a></li>
+<li><a href="../dart_html/FormData.html"><div class="icon-class"></div>FormData</a></li>
+<li><a href="../dart_html/FormElement.html"><div class="icon-class"></div>FormElement</a></li>
+<li><a href="../dart_html/Gamepad.html"><div class="icon-class"></div>Gamepad</a></li>
+<li><a href="../dart_html/Geolocation.html"><div class="icon-class"></div>Geolocation</a></li>
+<li><a href="../dart_html/Geoposition.html"><div class="icon-class"></div>Geoposition</a></li>
+<li><a href="../dart_html/HashChangeEvent.html"><div class="icon-class"></div>HashChangeEvent</a></li>
+<li><a href="../dart_html/HeadElement.html"><div class="icon-class"></div>HeadElement</a></li>
+<li><a href="../dart_html/HeadingElement.html"><div class="icon-class"></div>HeadingElement</a></li>
+<li><a href="../dart_html/HiddenInputElement.html"><div class="icon-class"></div>HiddenInputElement</a></li>
+<li><a href="../dart_html/History.html"><div class="icon-class"></div>History</a></li>
+<li><a href="../dart_html/HistoryBase.html"><div class="icon-class"></div>HistoryBase</a></li>
+<li><a href="../dart_html/HRElement.html"><div class="icon-class"></div>HRElement</a></li>
+<li><a href="../dart_html/HtmlAllCollection.html"><div class="icon-class"></div>HtmlAllCollection</a></li>
+<li><a href="../dart_html/HtmlCollection.html"><div class="icon-class"></div>HtmlCollection</a></li>
+<li><a href="../dart_html/HtmlDocument.html"><div class="icon-class"></div>HtmlDocument</a></li>
+<li><a href="../dart_html/HtmlElement.html"><div class="icon-class"></div>HtmlElement</a></li>
+<li><a href="../dart_html/HtmlFormControlsCollection.html"><div class="icon-class"></div>HtmlFormControlsCollection</a></li>
+<li><a href="../dart_html/HtmlOptionsCollection.html"><div class="icon-class"></div>HtmlOptionsCollection</a></li>
+<li><a href="../dart_html/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_html/HttpRequestProgressEvent.html"><div class="icon-class"></div>HttpRequestProgressEvent</a></li>
+<li><a href="../dart_html/HttpRequestUpload.html"><div class="icon-class"></div>HttpRequestUpload</a></li>
+<li><a href="../dart_html/IFrameElement.html"><div class="icon-class"></div>IFrameElement</a></li>
+<li><a href="../dart_html/ImageButtonInputElement.html"><div class="icon-class"></div>ImageButtonInputElement</a></li>
+<li><a href="../dart_html/ImageData.html"><div class="icon-class"></div>ImageData</a></li>
+<li><a href="../dart_html/ImageElement.html"><div class="icon-class"></div>ImageElement</a></li>
+<li><a href="../dart_html/InputElement.html"><div class="icon-class"></div>InputElement</a></li>
+<li><a href="../dart_html/InputElementBase.html"><div class="icon-class"></div>InputElementBase</a></li>
+<li><a href="../dart_html/Int16Array.html"><div class="icon-class"></div>Int16Array</a></li>
+<li><a href="../dart_html/Int32Array.html"><div class="icon-class"></div>Int32Array</a></li>
+<li><a href="../dart_html/Int8Array.html"><div class="icon-class"></div>Int8Array</a></li>
+<li><a href="../dart_html/JavaScriptCallFrame.html"><div class="icon-class"></div>JavaScriptCallFrame</a></li>
+<li><a href="../dart_html/KeyboardEvent.html"><div class="icon-class"></div>KeyboardEvent</a></li>
+<li><a href="../dart_html/KeyboardEventController.html"><div class="icon-class"></div>KeyboardEventController</a></li>
+<li><a href="../dart_html/KeyCode.html"><div class="icon-class"></div>KeyCode</a></li>
+<li><a href="../dart_html/KeyEvent.html"><div class="icon-class"></div>KeyEvent</a></li>
+<li><a href="../dart_html/KeygenElement.html"><div class="icon-class"></div>KeygenElement</a></li>
+<li><a href="../dart_html/KeyLocation.html"><div class="icon-class"></div>KeyLocation</a></li>
+<li><a href="../dart_html/KeyName.html"><div class="icon-class"></div>KeyName</a></li>
+<li><a href="../dart_html/LabelElement.html"><div class="icon-class"></div>LabelElement</a></li>
+<li><a href="../dart_html/LegendElement.html"><div class="icon-class"></div>LegendElement</a></li>
+<li><a href="../dart_html/LIElement.html"><div class="icon-class"></div>LIElement</a></li>
+<li><a href="../dart_html/LinkElement.html"><div class="icon-class"></div>LinkElement</a></li>
+<li><a href="../dart_html/LocalDateTimeInputElement.html"><div class="icon-class"></div>LocalDateTimeInputElement</a></li>
+<li><a href="../dart_html/LocalMediaStream.html"><div class="icon-class"></div>LocalMediaStream</a></li>
+<li><a href="../dart_html/Location.html"><div class="icon-class"></div>Location</a></li>
+<li><a href="../dart_html/LocationBase.html"><div class="icon-class"></div>LocationBase</a></li>
+<li><a href="../dart_html/MapElement.html"><div class="icon-class"></div>MapElement</a></li>
+<li><a href="../dart_html/MediaController.html"><div class="icon-class"></div>MediaController</a></li>
+<li><a href="../dart_html/MediaElement.html"><div class="icon-class"></div>MediaElement</a></li>
+<li><a href="../dart_html/MediaKeyEvent.html"><div class="icon-class"></div>MediaKeyEvent</a></li>
+<li><a href="../dart_html/MediaList.html"><div class="icon-class"></div>MediaList</a></li>
+<li><a href="../dart_html/MediaQueryList.html"><div class="icon-class"></div>MediaQueryList</a></li>
+<li><a href="../dart_html/MediaQueryListListener.html"><div class="icon-class"></div>MediaQueryListListener</a></li>
+<li><a href="../dart_html/MediaSource.html"><div class="icon-class"></div>MediaSource</a></li>
+<li><a href="../dart_html/MediaStream.html"><div class="icon-class"></div>MediaStream</a></li>
+<li><a href="../dart_html/MediaStreamEvent.html"><div class="icon-class"></div>MediaStreamEvent</a></li>
+<li><a href="../dart_html/MediaStreamTrack.html"><div class="icon-class"></div>MediaStreamTrack</a></li>
+<li><a href="../dart_html/MediaStreamTrackEvent.html"><div class="icon-class"></div>MediaStreamTrackEvent</a></li>
+<li><a href="../dart_html/MemoryInfo.html"><div class="icon-class"></div>MemoryInfo</a></li>
+<li><a href="../dart_html/MenuElement.html"><div class="icon-class"></div>MenuElement</a></li>
+<li><a href="../dart_html/MessageChannel.html"><div class="icon-class"></div>MessageChannel</a></li>
+<li><a href="../dart_html/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_html/MessagePort.html"><div class="icon-class"></div>MessagePort</a></li>
+<li><a href="../dart_html/Metadata.html"><div class="icon-class"></div>Metadata</a></li>
+<li><a href="../dart_html/MetadataCallback.html"><div class="icon-interface"></div>MetadataCallback</a></li>
+<li><a href="../dart_html/MetaElement.html"><div class="icon-class"></div>MetaElement</a></li>
+<li><a href="../dart_html/MeterElement.html"><div class="icon-class"></div>MeterElement</a></li>
+<li><a href="../dart_html/ModElement.html"><div class="icon-class"></div>ModElement</a></li>
+<li><a href="../dart_html/MonthInputElement.html"><div class="icon-class"></div>MonthInputElement</a></li>
+<li><a href="../dart_html/MouseEvent.html"><div class="icon-class"></div>MouseEvent</a></li>
+<li><a href="../dart_html/MutationCallback.html"><div class="icon-interface"></div>MutationCallback</a></li>
+<li><a href="../dart_html/MutationEvent.html"><div class="icon-class"></div>MutationEvent</a></li>
+<li><a href="../dart_html/MutationObserver.html"><div class="icon-class"></div>MutationObserver</a></li>
+<li><a href="../dart_html/MutationRecord.html"><div class="icon-class"></div>MutationRecord</a></li>
+<li><a href="../dart_html/Navigator.html"><div class="icon-class"></div>Navigator</a></li>
+<li><a href="../dart_html/Node.html"><div class="icon-class"></div>Node</a></li>
+<li><a href="../dart_html/NodeFilter.html"><div class="icon-class"></div>NodeFilter</a></li>
+<li><a href="../dart_html/NodeIterator.html"><div class="icon-class"></div>NodeIterator</a></li>
+<li><a href="../dart_html/NodeList.html"><div class="icon-class"></div>NodeList</a></li>
+<li><a href="../dart_html/Notation.html"><div class="icon-class"></div>Notation</a></li>
+<li><a href="../dart_html/Notification.html"><div class="icon-class"></div>Notification</a></li>
+<li><a href="../dart_html/NotificationCenter.html"><div class="icon-class"></div>NotificationCenter</a></li>
+<li><a href="../dart_html/NotificationPermissionCallback.html"><div class="icon-interface"></div>NotificationPermissionCallback</a></li>
+<li><a href="../dart_html/NumberInputElement.html"><div class="icon-class"></div>NumberInputElement</a></li>
+<li><a href="../dart_html/ObjectElement.html"><div class="icon-class"></div>ObjectElement</a></li>
+<li><a href="../dart_html/OesElementIndexUint.html"><div class="icon-class"></div>OesElementIndexUint</a></li>
+<li><a href="../dart_html/OesStandardDerivatives.html"><div class="icon-class"></div>OesStandardDerivatives</a></li>
+<li><a href="../dart_html/OesTextureFloat.html"><div class="icon-class"></div>OesTextureFloat</a></li>
+<li><a href="../dart_html/OesVertexArrayObject.html"><div class="icon-class"></div>OesVertexArrayObject</a></li>
+<li><a href="../dart_html/OListElement.html"><div class="icon-class"></div>OListElement</a></li>
+<li><a href="../dart_html/OptGroupElement.html"><div class="icon-class"></div>OptGroupElement</a></li>
+<li><a href="../dart_html/OptionElement.html"><div class="icon-class"></div>OptionElement</a></li>
+<li><a href="../dart_html/OutputElement.html"><div class="icon-class"></div>OutputElement</a></li>
+<li><a href="../dart_html/OverflowEvent.html"><div class="icon-class"></div>OverflowEvent</a></li>
+<li><a href="../dart_html/PagePopupController.html"><div class="icon-class"></div>PagePopupController</a></li>
+<li><a href="../dart_html/PageTransitionEvent.html"><div class="icon-class"></div>PageTransitionEvent</a></li>
+<li><a href="../dart_html/ParagraphElement.html"><div class="icon-class"></div>ParagraphElement</a></li>
+<li><a href="../dart_html/ParamElement.html"><div class="icon-class"></div>ParamElement</a></li>
+<li><a href="../dart_html/PasswordInputElement.html"><div class="icon-class"></div>PasswordInputElement</a></li>
+<li><a href="../dart_html/Performance.html"><div class="icon-class"></div>Performance</a></li>
+<li><a href="../dart_html/PerformanceNavigation.html"><div class="icon-class"></div>PerformanceNavigation</a></li>
+<li><a href="../dart_html/PerformanceTiming.html"><div class="icon-class"></div>PerformanceTiming</a></li>
+<li><a href="../dart_html/PopStateEvent.html"><div class="icon-class"></div>PopStateEvent</a></li>
+<li><a href="../dart_html/PreElement.html"><div class="icon-class"></div>PreElement</a></li>
+<li><a href="../dart_html/ProcessingInstruction.html"><div class="icon-class"></div>ProcessingInstruction</a></li>
+<li><a href="../dart_html/ProgressElement.html"><div class="icon-class"></div>ProgressElement</a></li>
+<li><a href="../dart_html/ProgressEvent.html"><div class="icon-class"></div>ProgressEvent</a></li>
+<li><a href="../dart_html/QuoteElement.html"><div class="icon-class"></div>QuoteElement</a></li>
+<li><a href="../dart_html/RadioButtonInputElement.html"><div class="icon-class"></div>RadioButtonInputElement</a></li>
+<li><a href="../dart_html/RadioNodeList.html"><div class="icon-class"></div>RadioNodeList</a></li>
+<li><a href="../dart_html/Range.html"><div class="icon-class"></div>Range</a></li>
+<li><a href="../dart_html/RangeInputElement.html"><div class="icon-class"></div>RangeInputElement</a></li>
+<li><a href="../dart_html/RangeInputElementBase.html"><div class="icon-class"></div>RangeInputElementBase</a></li>
+<li><a href="../dart_html/ReadyState.html"><div class="icon-class"></div>ReadyState</a></li>
+<li><a href="../dart_html/ReceivePortSync.html"><div class="icon-class"></div>ReceivePortSync</a></li>
+<li><a href="../dart_html/Rect.html"><div class="icon-class"></div>Rect</a></li>
+<li><a href="../dart_html/RequestAnimationFrameCallback.html"><div class="icon-interface"></div>RequestAnimationFrameCallback</a></li>
+<li><a href="../dart_html/ResetButtonInputElement.html"><div class="icon-class"></div>ResetButtonInputElement</a></li>
+<li><a href="../dart_html/RgbColor.html"><div class="icon-class"></div>RgbColor</a></li>
+<li><a href="../dart_html/RtcDataChannel.html"><div class="icon-class"></div>RtcDataChannel</a></li>
+<li><a href="../dart_html/RtcDataChannelEvent.html"><div class="icon-class"></div>RtcDataChannelEvent</a></li>
+<li><a href="../dart_html/RtcdtmfSender.html"><div class="icon-class"></div>RtcdtmfSender</a></li>
+<li><a href="../dart_html/RtcdtmfToneChangeEvent.html"><div class="icon-class"></div>RtcdtmfToneChangeEvent</a></li>
+<li><a href="../dart_html/RtcErrorCallback.html"><div class="icon-interface"></div>RtcErrorCallback</a></li>
+<li><a href="../dart_html/RtcIceCandidate.html"><div class="icon-class"></div>RtcIceCandidate</a></li>
+<li><a href="../dart_html/RtcIceCandidateEvent.html"><div class="icon-class"></div>RtcIceCandidateEvent</a></li>
+<li><a href="../dart_html/RtcPeerConnection.html"><div class="icon-class"></div>RtcPeerConnection</a></li>
+<li><a href="../dart_html/RtcSessionDescription.html"><div class="icon-class"></div>RtcSessionDescription</a></li>
+<li><a href="../dart_html/RtcSessionDescriptionCallback.html"><div class="icon-interface"></div>RtcSessionDescriptionCallback</a></li>
+<li><a href="../dart_html/RtcStatsCallback.html"><div class="icon-interface"></div>RtcStatsCallback</a></li>
+<li><a href="../dart_html/RtcStatsElement.html"><div class="icon-class"></div>RtcStatsElement</a></li>
+<li><a href="../dart_html/RtcStatsReport.html"><div class="icon-class"></div>RtcStatsReport</a></li>
+<li><a href="../dart_html/RtcStatsResponse.html"><div class="icon-class"></div>RtcStatsResponse</a></li>
+<li><a href="../dart_html/Screen.html"><div class="icon-class"></div>Screen</a></li>
+<li><a href="../dart_html/ScriptElement.html"><div class="icon-class"></div>ScriptElement</a></li>
+<li><a href="../dart_html/ScriptProfile.html"><div class="icon-class"></div>ScriptProfile</a></li>
+<li><a href="../dart_html/ScriptProfileNode.html"><div class="icon-class"></div>ScriptProfileNode</a></li>
+<li><a href="../dart_html/ScrollAlignment.html"><div class="icon-class"></div>ScrollAlignment</a></li>
+<li><a href="../dart_html/SearchInputElement.html"><div class="icon-class"></div>SearchInputElement</a></li>
+<li><a href="../dart_html/SelectElement.html"><div class="icon-class"></div>SelectElement</a></li>
+<li><a href="../dart_html/ShadowElement.html"><div class="icon-class"></div>ShadowElement</a></li>
+<li><a href="../dart_html/ShadowRoot.html"><div class="icon-class"></div>ShadowRoot</a></li>
+<li><a href="../dart_html/SharedWorker.html"><div class="icon-class"></div>SharedWorker</a></li>
+<li><a href="../dart_html/SharedWorkerContext.html"><div class="icon-class"></div>SharedWorkerContext</a></li>
+<li><a href="../dart_html/SourceBuffer.html"><div class="icon-class"></div>SourceBuffer</a></li>
+<li><a href="../dart_html/SourceBufferList.html"><div class="icon-class"></div>SourceBufferList</a></li>
+<li><a href="../dart_html/SourceElement.html"><div class="icon-class"></div>SourceElement</a></li>
+<li><a href="../dart_html/SpanElement.html"><div class="icon-class"></div>SpanElement</a></li>
+<li><a href="../dart_html/SpeechGrammar.html"><div class="icon-class"></div>SpeechGrammar</a></li>
+<li><a href="../dart_html/SpeechGrammarList.html"><div class="icon-class"></div>SpeechGrammarList</a></li>
+<li><a href="../dart_html/SpeechInputEvent.html"><div class="icon-class"></div>SpeechInputEvent</a></li>
+<li><a href="../dart_html/SpeechInputResult.html"><div class="icon-class"></div>SpeechInputResult</a></li>
+<li><a href="../dart_html/SpeechRecognition.html"><div class="icon-class"></div>SpeechRecognition</a></li>
+<li><a href="../dart_html/SpeechRecognitionAlternative.html"><div class="icon-class"></div>SpeechRecognitionAlternative</a></li>
+<li><a href="../dart_html/SpeechRecognitionEvent.html"><div class="icon-class"></div>SpeechRecognitionEvent</a></li>
+<li><a href="../dart_html/SpeechRecognitionResult.html"><div class="icon-class"></div>SpeechRecognitionResult</a></li>
+<li><a href="../dart_html/Storage.html"><div class="icon-class"></div>Storage</a></li>
+<li><a href="../dart_html/StorageEvent.html"><div class="icon-class"></div>StorageEvent</a></li>
+<li><a href="../dart_html/StorageInfo.html"><div class="icon-class"></div>StorageInfo</a></li>
+<li><a href="../dart_html/StorageInfoErrorCallback.html"><div class="icon-interface"></div>StorageInfoErrorCallback</a></li>
+<li><a href="../dart_html/StorageInfoQuotaCallback.html"><div class="icon-interface"></div>StorageInfoQuotaCallback</a></li>
+<li><a href="../dart_html/StorageInfoUsageCallback.html"><div class="icon-interface"></div>StorageInfoUsageCallback</a></li>
+<li><a href="../dart_html/StringCallback.html"><div class="icon-interface"></div>StringCallback</a></li>
+<li><a href="../dart_html/StyleElement.html"><div class="icon-class"></div>StyleElement</a></li>
+<li><a href="../dart_html/StyleMedia.html"><div class="icon-class"></div>StyleMedia</a></li>
+<li><a href="../dart_html/StyleSheet.html"><div class="icon-class"></div>StyleSheet</a></li>
+<li><a href="../dart_html/SubmitButtonInputElement.html"><div class="icon-class"></div>SubmitButtonInputElement</a></li>
+<li><a href="../dart_html/TableCaptionElement.html"><div class="icon-class"></div>TableCaptionElement</a></li>
+<li><a href="../dart_html/TableCellElement.html"><div class="icon-class"></div>TableCellElement</a></li>
+<li><a href="../dart_html/TableColElement.html"><div class="icon-class"></div>TableColElement</a></li>
+<li><a href="../dart_html/TableElement.html"><div class="icon-class"></div>TableElement</a></li>
+<li><a href="../dart_html/TableRowElement.html"><div class="icon-class"></div>TableRowElement</a></li>
+<li><a href="../dart_html/TableSectionElement.html"><div class="icon-class"></div>TableSectionElement</a></li>
+<li><a href="../dart_html/TelephoneInputElement.html"><div class="icon-class"></div>TelephoneInputElement</a></li>
+<li><a href="../dart_html/Text.html"><div class="icon-class"></div>Text</a></li>
+<li><a href="../dart_html/TextAreaElement.html"><div class="icon-class"></div>TextAreaElement</a></li>
+<li><a href="../dart_html/TextEvent.html"><div class="icon-class"></div>TextEvent</a></li>
+<li><a href="../dart_html/TextInputElement.html"><div class="icon-class"></div>TextInputElement</a></li>
+<li><a href="../dart_html/TextInputElementBase.html"><div class="icon-class"></div>TextInputElementBase</a></li>
+<li><a href="../dart_html/TextMetrics.html"><div class="icon-class"></div>TextMetrics</a></li>
+<li><a href="../dart_html/TextTrack.html"><div class="icon-class"></div>TextTrack</a></li>
+<li><a href="../dart_html/TextTrackCue.html"><div class="icon-class"></div>TextTrackCue</a></li>
+<li><a href="../dart_html/TextTrackCueList.html"><div class="icon-class"></div>TextTrackCueList</a></li>
+<li><a href="../dart_html/TextTrackList.html"><div class="icon-class"></div>TextTrackList</a></li>
+<li><a href="../dart_html/TimeInputElement.html"><div class="icon-class"></div>TimeInputElement</a></li>
+<li><a href="../dart_html/TimeoutHandler.html"><div class="icon-interface"></div>TimeoutHandler</a></li>
+<li><a href="../dart_html/TimeRanges.html"><div class="icon-class"></div>TimeRanges</a></li>
+<li><a href="../dart_html/TitleElement.html"><div class="icon-class"></div>TitleElement</a></li>
+<li><a href="../dart_html/Touch.html"><div class="icon-class"></div>Touch</a></li>
+<li><a href="../dart_html/TouchEvent.html"><div class="icon-class"></div>TouchEvent</a></li>
+<li><a href="../dart_html/TouchList.html"><div class="icon-class"></div>TouchList</a></li>
+<li><a href="../dart_html/TrackElement.html"><div class="icon-class"></div>TrackElement</a></li>
+<li><a href="../dart_html/TrackEvent.html"><div class="icon-class"></div>TrackEvent</a></li>
+<li><a href="../dart_html/TransitionEvent.html"><div class="icon-class"></div>TransitionEvent</a></li>
+<li><a href="../dart_html/TreeWalker.html"><div class="icon-class"></div>TreeWalker</a></li>
+<li><a href="../dart_html/UIEvent.html"><div class="icon-class"></div>UIEvent</a></li>
+<li><a href="../dart_html/Uint16Array.html"><div class="icon-class"></div>Uint16Array</a></li>
+<li><a href="../dart_html/Uint32Array.html"><div class="icon-class"></div>Uint32Array</a></li>
+<li><a href="../dart_html/Uint8Array.html"><div class="icon-class"></div>Uint8Array</a></li>
+<li><a href="../dart_html/Uint8ClampedArray.html"><div class="icon-class"></div>Uint8ClampedArray</a></li>
+<li><a href="../dart_html/UListElement.html"><div class="icon-class"></div>UListElement</a></li>
+<li><a href="../dart_html/UnknownElement.html"><div class="icon-class"></div>UnknownElement</a></li>
+<li><a href="../dart_html/Url.html"><div class="icon-class"></div>Url</a></li>
+<li><a href="../dart_html/UrlInputElement.html"><div class="icon-class"></div>UrlInputElement</a></li>
+<li><a href="../dart_html/ValidityState.html"><div class="icon-class"></div>ValidityState</a></li>
+<li><a href="../dart_html/VideoElement.html"><div class="icon-class"></div>VideoElement</a></li>
+<li><a href="../dart_html/VoidCallback.html"><div class="icon-interface"></div>VoidCallback</a></li>
+<li><a href="../dart_html/WebGLActiveInfo.html"><div class="icon-class"></div>WebGLActiveInfo</a></li>
+<li><a href="../dart_html/WebGLBuffer.html"><div class="icon-class"></div>WebGLBuffer</a></li>
+<li><a href="../dart_html/WebGLCompressedTextureS3TC.html"><div class="icon-class"></div>WebGLCompressedTextureS3TC</a></li>
+<li><a href="../dart_html/WebGLContextAttributes.html"><div class="icon-class"></div>WebGLContextAttributes</a></li>
+<li><a href="../dart_html/WebGLContextEvent.html"><div class="icon-class"></div>WebGLContextEvent</a></li>
+<li><a href="../dart_html/WebGLDebugRendererInfo.html"><div class="icon-class"></div>WebGLDebugRendererInfo</a></li>
+<li><a href="../dart_html/WebGLDebugShaders.html"><div class="icon-class"></div>WebGLDebugShaders</a></li>
+<li><a href="../dart_html/WebGLDepthTexture.html"><div class="icon-class"></div>WebGLDepthTexture</a></li>
+<li><a href="../dart_html/WebGLFramebuffer.html"><div class="icon-class"></div>WebGLFramebuffer</a></li>
+<li><a href="../dart_html/WebGLLoseContext.html"><div class="icon-class"></div>WebGLLoseContext</a></li>
+<li><a href="../dart_html/WebGLProgram.html"><div class="icon-class"></div>WebGLProgram</a></li>
+<li><a href="../dart_html/WebGLRenderbuffer.html"><div class="icon-class"></div>WebGLRenderbuffer</a></li>
+<li><a href="../dart_html/WebGLRenderingContext.html"><div class="icon-class"></div>WebGLRenderingContext</a></li>
+<li><a href="../dart_html/WebGLShader.html"><div class="icon-class"></div>WebGLShader</a></li>
+<li><a href="../dart_html/WebGLShaderPrecisionFormat.html"><div class="icon-class"></div>WebGLShaderPrecisionFormat</a></li>
+<li><a href="../dart_html/WebGLTexture.html"><div class="icon-class"></div>WebGLTexture</a></li>
+<li><a href="../dart_html/WebGLUniformLocation.html"><div class="icon-class"></div>WebGLUniformLocation</a></li>
+<li><a href="../dart_html/WebGLVertexArrayObject.html"><div class="icon-class"></div>WebGLVertexArrayObject</a></li>
+<li><a href="../dart_html/WebKitCssFilterRule.html"><div class="icon-class"></div>WebKitCssFilterRule</a></li>
+<li><a href="../dart_html/WebKitCssFilterValue.html"><div class="icon-class"></div>WebKitCssFilterValue</a></li>
+<li><a href="../dart_html/WebKitCssMixFunctionValue.html"><div class="icon-class"></div>WebKitCssMixFunctionValue</a></li>
+<li><a href="../dart_html/WebKitNamedFlow.html"><div class="icon-class"></div>WebKitNamedFlow</a></li>
+<li><a href="../dart_html/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_html/WeekInputElement.html"><div class="icon-class"></div>WeekInputElement</a></li>
+<li><a href="../dart_html/WheelEvent.html"><div class="icon-class"></div>WheelEvent</a></li>
+<li><div class="icon-class"></div><strong>Window</strong></li>
+<li><a href="../dart_html/WindowBase.html"><div class="icon-class"></div>WindowBase</a></li>
+<li><a href="../dart_html/Worker.html"><div class="icon-class"></div>Worker</a></li>
+<li><a href="../dart_html/WorkerContext.html"><div class="icon-class"></div>WorkerContext</a></li>
+<li><a href="../dart_html/WorkerLocation.html"><div class="icon-class"></div>WorkerLocation</a></li>
+<li><a href="../dart_html/WorkerNavigator.html"><div class="icon-class"></div>WorkerNavigator</a></li>
+<li><a href="../dart_html/XmlSerializer.html"><div class="icon-class"></div>XmlSerializer</a></li>
+<li><a href="../dart_html/XPathEvaluator.html"><div class="icon-class"></div>XPathEvaluator</a></li>
+<li><a href="../dart_html/XPathExpression.html"><div class="icon-class"></div>XPathExpression</a></li>
+<li><a href="../dart_html/XPathNSResolver.html"><div class="icon-class"></div>XPathNSResolver</a></li>
+<li><a href="../dart_html/XPathResult.html"><div class="icon-class"></div>XPathResult</a></li>
+<li><a href="../dart_html/XsltProcessor.html"><div class="icon-class"></div>XsltProcessor</a></li>
+<li><a href="../dart_html/DomError.html"><div class="icon-exception"></div>DomError</a></li>
+<li><a href="../dart_html/DomException.html"><div class="icon-exception"></div>DomException</a></li>
+<li><a href="../dart_html/EventException.html"><div class="icon-exception"></div>EventException</a></li>
+<li><a href="../dart_html/FileError.html"><div class="icon-exception"></div>FileError</a></li>
+<li><a href="../dart_html/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../dart_html/HttpRequestException.html"><div class="icon-exception"></div>HttpRequestException</a></li>
+<li><a href="../dart_html/MediaError.html"><div class="icon-exception"></div>MediaError</a></li>
+<li><a href="../dart_html/MediaKeyError.html"><div class="icon-exception"></div>MediaKeyError</a></li>
+<li><a href="../dart_html/NavigatorUserMediaError.html"><div class="icon-exception"></div>NavigatorUserMediaError</a></li>
+<li><a href="../dart_html/PositionError.html"><div class="icon-exception"></div>PositionError</a></li>
+<li><a href="../dart_html/RangeException.html"><div class="icon-exception"></div>RangeException</a></li>
+<li><a href="../dart_html/SpeechRecognitionError.html"><div class="icon-exception"></div>SpeechRecognitionError</a></li>
+<li><a href="../dart_html/XPathException.html"><div class="icon-exception"></div>XPathException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Window</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+@DomName('Window')
+class Window extends EventTarget implements WindowBase native "@*DOMWindow" {
+
+ /**
+  * Executes a [callback] after the immediate execution stack has completed.
+  *
+  * This differs from using Timer.run(callback)
+  * because Timer will run in about 4-15 milliseconds, depending on browser,
+  * depending on load. [setImmediate], in contrast, makes browser-specific
+  * changes in behavior to attempt to run immediately after the current
+  * frame unwinds, causing the future to complete after all processing has
+  * completed for the current event, but before any subsequent events.
+  */
+ void setImmediate(TimeoutHandler callback) { 
+   _addMicrotaskCallback(callback);
+ }
+ /**
+  * Lookup a port by its [name].  Return null if no port is
+  * registered under [name].
+  */
+ SendPortSync lookupPort(String name) {
+   var port =
+       json.parse(document.documentElement.attributes['dart-port:$name']);
+   return _deserialize(port);
+ }
+
+ /**
+  * Register a [port] on this window under the given [name].  This
+  * port may be retrieved by any isolate (or JavaScript script)
+  * running in this window.
+  */
+ void registerPort(String name, var port) {
+   var serialized = _serialize(port);
+   document.documentElement.attributes['dart-port:$name'] =
+       json.stringify(serialized);
+ }
+
+ /**
+  * Returns a Future that completes just before the window is about to repaint
+  * so the user can draw an animation frame
+  *
+  * If you need to later cancel this animation, use [requestAnimationFrame]
+  * instead.
+  *
+  * Note: The code that runs when the future completes should call 
+  * [animationFrame] again for the animation to continue.
+  */
+ Future&lt;num&gt; get animationFrame {
+   var completer = new Completer&lt;int&gt;();
+   requestAnimationFrame(completer.complete);
+   return completer.future;
+ }
+
+ Document get document =&gt; JS('Document', '#.document', this);
+
+ WindowBase _open2(url, name) =&gt; JS('Window', '#.open(#,#)', this, url, name);
+
+ WindowBase _open3(url, name, options) =&gt;
+     JS('Window', '#.open(#,#,#)', this, url, name, options);
+
+ WindowBase open(String url, String name, [String options]) {
+   if (options == null) {
+     return _DOMWindowCrossFrame._createSafe(_open2(url, name));
+   } else {
+     return _DOMWindowCrossFrame._createSafe(_open3(url, name, options));
+   }
+ }
+
+ // API level getter and setter for Location.
+ // TODO: The cross domain safe wrapper can be inserted here or folded into
+ // _LocationWrapper.
+ Location get location {
+   // Firefox work-around for Location.  The Firefox location object cannot be
+   // made to behave like a Dart object so must be wrapped.
+   var result = _location;
+   if (_isDartLocation(result)) return result;  // e.g. on Chrome.
+   if (null == _location_wrapper) {
+     _location_wrapper = new _LocationWrapper(result);
+   }
+   return _location_wrapper;
+ }
+
+ // TODO: consider forcing users to do: window.location.assign('string').
+ /**
+  * Sets the window's location, which causes the browser to navigate to the new
+  * location. [value] may be a Location object or a string.
+  */
+ void set location(value) {
+   if (value is _LocationWrapper) {
+     _location = value._ptr;
+   } else {
+     _location = value;
+   }
+ }
+
+ _LocationWrapper _location_wrapper;  // Cached wrapped Location object.
+
+ // Native getter and setter to access raw Location object.
+ dynamic get _location =&gt; JS('Location|=Object', '#.location', this);
+ void set _location(value) {
+   JS('void', '#.location = #', this, value);
+ }
+ // Prevent compiled from thinking 'location' property is available for a Dart
+ // member.
+ @JSName('location')
+ _protect_location() native;
+
+ static _isDartLocation(thing) {
+   // On Firefox the code that implements 'is Location' fails to find the patch
+   // stub on Object.prototype and throws an exception.
+   try {
+     return thing is Location;
+   } catch (e) {
+     return false;
+   }
+ }
+
+ /**
+  * Called to draw an animation frame and then request the window to repaint
+  * after [callback] has finished (creating the animation). 
+  *
+  * Use this method only if you need to later call [cancelAnimationFrame]. If
+  * not, the preferred Dart idiom is to set animation frames by calling
+  * [animationFrame], which returns a Future.
+  *
+  * Returns a non-zero valued integer to represent the request id for this
+  * request. This value only needs to be saved if you intend to call
+  * [cancelAnimationFrame] so you can specify the particular animation to
+  * cancel.
+  *
+  * Note: The supplied [callback] needs to call [requestAnimationFrame] again
+  * for the animation to continue.
+  */
+ @DomName('DOMWindow.requestAnimationFrame')
+ int requestAnimationFrame(RequestAnimationFrameCallback callback) {
+   _ensureRequestAnimationFrame();
+   return _requestAnimationFrame(callback);
+ }
+
+ void cancelAnimationFrame(id) {
+   _ensureRequestAnimationFrame();
+   _cancelAnimationFrame(id);
+ }
+
+ @JSName('requestAnimationFrame')
+ int _requestAnimationFrame(RequestAnimationFrameCallback callback) native;
+
+ @JSName('cancelAnimationFrame')
+ void _cancelAnimationFrame(int id) native;
+
+ _ensureRequestAnimationFrame() {
+   if (JS('bool',
+          '!!(#.requestAnimationFrame &amp;&amp; #.cancelAnimationFrame)', this, this))
+     return;
+
+   JS('void',
+      r"""
+ (function($this) {
+  var vendors = ['ms', 'moz', 'webkit', 'o'];
+  for (var i = 0; i &lt; vendors.length &amp;&amp; !$this.requestAnimationFrame; ++i) {
+    $this.requestAnimationFrame = $this[vendors[i] + 'RequestAnimationFrame'];
+    $this.cancelAnimationFrame =
+        $this[vendors[i]+'CancelAnimationFrame'] ||
+        $this[vendors[i]+'CancelRequestAnimationFrame'];
+  }
+  if ($this.requestAnimationFrame &amp;&amp; $this.cancelAnimationFrame) return;
+  $this.requestAnimationFrame = function(callback) {
+     return window.setTimeout(function() {
+       callback(Date.now());
+     }, 16 /* 16ms ~= 60fps */);
+  };
+  $this.cancelAnimationFrame = function(id) { clearTimeout(id); }
+ })(#)""",
+      this);
+ }
+
+ /**
+  * Gets an instance of the Indexed DB factory to being using Indexed DB.
+  *
+  * Use [IdbFactory.supported] to check if Indexed DB is supported on the
+  * current platform.
+  */
+ @SupportedBrowser(SupportedBrowser.CHROME, '23.0')
+ @SupportedBrowser(SupportedBrowser.FIREFOX, '15.0')
+ @SupportedBrowser(SupportedBrowser.IE, '10.0')
+ @Experimental
+ IdbFactory get indexedDB =&gt;
+     JS('IdbFactory',
+        '#.indexedDB || #.webkitIndexedDB || #.mozIndexedDB',
+        this, this, this);
+
+ @DomName('Window.console')
+ Console get console =&gt; Console.safeConsole;
+
+ /// Checks if _setImmediate is supported.
+ static bool get _supportsSetImmediate =&gt;
+     JS('bool', '!!(window.setImmediate)');
+
+ // Set immediate implementation for IE
+ void _setImmediate(void callback()) {
+   JS('void', '#.setImmediate(#)', this, convertDartClosureToJS(callback, 0));
+ }
+
+
+ @DomName('DOMWindow.DOMContentLoadedEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; contentLoadedEvent = const EventStreamProvider&lt;Event&gt;('DOMContentLoaded');
+
+ @DomName('DOMWindow.beforeunloadEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; beforeUnloadEvent = const EventStreamProvider&lt;Event&gt;('beforeunload');
+
+ @DomName('DOMWindow.devicemotionEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;DeviceMotionEvent&gt; deviceMotionEvent = const EventStreamProvider&lt;DeviceMotionEvent&gt;('devicemotion');
+
+ @DomName('DOMWindow.deviceorientationEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;DeviceOrientationEvent&gt; deviceOrientationEvent = const EventStreamProvider&lt;DeviceOrientationEvent&gt;('deviceorientation');
+
+ @DomName('DOMWindow.hashchangeEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; hashChangeEvent = const EventStreamProvider&lt;Event&gt;('hashchange');
+
+ @DomName('DOMWindow.messageEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;MessageEvent&gt; messageEvent = const EventStreamProvider&lt;MessageEvent&gt;('message');
+
+ @DomName('DOMWindow.offlineEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; offlineEvent = const EventStreamProvider&lt;Event&gt;('offline');
+
+ @DomName('DOMWindow.onlineEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; onlineEvent = const EventStreamProvider&lt;Event&gt;('online');
+
+ @DomName('DOMWindow.pagehideEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; pageHideEvent = const EventStreamProvider&lt;Event&gt;('pagehide');
+
+ @DomName('DOMWindow.pageshowEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; pageShowEvent = const EventStreamProvider&lt;Event&gt;('pageshow');
+
+ @DomName('DOMWindow.popstateEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;PopStateEvent&gt; popStateEvent = const EventStreamProvider&lt;PopStateEvent&gt;('popstate');
+
+ @DomName('DOMWindow.resizeEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; resizeEvent = const EventStreamProvider&lt;Event&gt;('resize');
+
+ @DomName('DOMWindow.storageEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;StorageEvent&gt; storageEvent = const EventStreamProvider&lt;StorageEvent&gt;('storage');
+
+ @DomName('DOMWindow.unloadEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; unloadEvent = const EventStreamProvider&lt;Event&gt;('unload');
+
+ @DomName('DOMWindow.webkitAnimationEndEvent')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ static const EventStreamProvider&lt;AnimationEvent&gt; animationEndEvent = const EventStreamProvider&lt;AnimationEvent&gt;('webkitAnimationEnd');
+
+ @DomName('DOMWindow.webkitAnimationIterationEvent')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ static const EventStreamProvider&lt;AnimationEvent&gt; animationIterationEvent = const EventStreamProvider&lt;AnimationEvent&gt;('webkitAnimationIteration');
+
+ @DomName('DOMWindow.webkitAnimationStartEvent')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ static const EventStreamProvider&lt;AnimationEvent&gt; animationStartEvent = const EventStreamProvider&lt;AnimationEvent&gt;('webkitAnimationStart');
+
+ static const int PERSISTENT = 1;
+
+ static const int TEMPORARY = 0;
+
+ @DomName('DOMWindow.applicationCache')
+ @DocsEditable
+ final ApplicationCache applicationCache;
+
+ @DomName('DOMWindow.closed')
+ @DocsEditable
+ final bool closed;
+
+ @DomName('DOMWindow.crypto')
+ @DocsEditable
+ final Crypto crypto;
+
+ @DomName('DOMWindow.defaultStatus')
+ @DocsEditable
+ String defaultStatus;
+
+ @DomName('DOMWindow.defaultstatus')
+ @DocsEditable
+ String defaultstatus;
+
+ @DomName('DOMWindow.devicePixelRatio')
+ @DocsEditable
+ final num devicePixelRatio;
+
+ @DomName('DOMWindow.event')
+ @DocsEditable
+ final Event event;
+
+ @DomName('DOMWindow.history')
+ @DocsEditable
+ final History history;
+
+ @DomName('DOMWindow.innerHeight')
+ @DocsEditable
+ final int innerHeight;
+
+ @DomName('DOMWindow.innerWidth')
+ @DocsEditable
+ final int innerWidth;
+
+ @DomName('DOMWindow.localStorage')
+ @DocsEditable
+ final Storage localStorage;
+
+ @DomName('DOMWindow.locationbar')
+ @DocsEditable
+ final BarInfo locationbar;
+
+ @DomName('DOMWindow.menubar')
+ @DocsEditable
+ final BarInfo menubar;
+
+ @DomName('DOMWindow.name')
+ @DocsEditable
+ String name;
+
+ @DomName('DOMWindow.navigator')
+ @DocsEditable
+ final Navigator navigator;
+
+ @DomName('DOMWindow.offscreenBuffering')
+ @DocsEditable
+ final bool offscreenBuffering;
+
+ WindowBase get opener =&gt; _convertNativeToDart_Window(this._opener);
+ @JSName('opener')
+ @DomName('DOMWindow.opener')
+ @DocsEditable
+ @Creates('Window|=Object')
+ @Returns('Window|=Object')
+ final dynamic _opener;
+
+ @DomName('DOMWindow.outerHeight')
+ @DocsEditable
+ final int outerHeight;
+
+ @DomName('DOMWindow.outerWidth')
+ @DocsEditable
+ final int outerWidth;
+
+ @DomName('DOMWindow.pagePopupController')
+ @DocsEditable
+ final PagePopupController pagePopupController;
+
+ @DomName('DOMWindow.pageXOffset')
+ @DocsEditable
+ final int pageXOffset;
+
+ @DomName('DOMWindow.pageYOffset')
+ @DocsEditable
+ final int pageYOffset;
+
+ WindowBase get parent =&gt; _convertNativeToDart_Window(this._parent);
+ @JSName('parent')
+ @DomName('DOMWindow.parent')
+ @DocsEditable
+ @Creates('Window|=Object')
+ @Returns('Window|=Object')
+ final dynamic _parent;
+
+ @DomName('DOMWindow.performance')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.FIREFOX)
+ @SupportedBrowser(SupportedBrowser.IE)
+ final Performance performance;
+
+ @DomName('DOMWindow.personalbar')
+ @DocsEditable
+ final BarInfo personalbar;
+
+ @DomName('DOMWindow.screen')
+ @DocsEditable
+ final Screen screen;
+
+ @DomName('DOMWindow.screenLeft')
+ @DocsEditable
+ final int screenLeft;
+
+ @DomName('DOMWindow.screenTop')
+ @DocsEditable
+ final int screenTop;
+
+ @DomName('DOMWindow.screenX')
+ @DocsEditable
+ final int screenX;
+
+ @DomName('DOMWindow.screenY')
+ @DocsEditable
+ final int screenY;
+
+ @DomName('DOMWindow.scrollX')
+ @DocsEditable
+ final int scrollX;
+
+ @DomName('DOMWindow.scrollY')
+ @DocsEditable
+ final int scrollY;
+
+ @DomName('DOMWindow.scrollbars')
+ @DocsEditable
+ final BarInfo scrollbars;
+
+ WindowBase get self =&gt; _convertNativeToDart_Window(this._self);
+ @JSName('self')
+ @DomName('DOMWindow.self')
+ @DocsEditable
+ @Creates('Window|=Object')
+ @Returns('Window|=Object')
+ final dynamic _self;
+
+ @DomName('DOMWindow.sessionStorage')
+ @DocsEditable
+ final Storage sessionStorage;
+
+ @DomName('DOMWindow.status')
+ @DocsEditable
+ String status;
+
+ @DomName('DOMWindow.statusbar')
+ @DocsEditable
+ final BarInfo statusbar;
+
+ @DomName('DOMWindow.styleMedia')
+ @DocsEditable
+ final StyleMedia styleMedia;
+
+ @DomName('DOMWindow.toolbar')
+ @DocsEditable
+ final BarInfo toolbar;
+
+ WindowBase get top =&gt; _convertNativeToDart_Window(this._top);
+ @JSName('top')
+ @DomName('DOMWindow.top')
+ @DocsEditable
+ @Creates('Window|=Object')
+ @Returns('Window|=Object')
+ final dynamic _top;
+
+ @JSName('webkitNotifications')
+ @DomName('DOMWindow.webkitNotifications')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ final NotificationCenter notifications;
+
+ @JSName('webkitStorageInfo')
+ @DomName('DOMWindow.webkitStorageInfo')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ final StorageInfo storageInfo;
+
+ WindowBase get window =&gt; _convertNativeToDart_Window(this._window);
+ @JSName('window')
+ @DomName('DOMWindow.window')
+ @DocsEditable
+ @Creates('Window|=Object')
+ @Returns('Window|=Object')
+ final dynamic _window;
+
+ @JSName('addEventListener')
+ @DomName('DOMWindow.addEventListener')
+ @DocsEditable
+ void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+
+ @DomName('DOMWindow.alert')
+ @DocsEditable
+ void alert(String message) native;
+
+ @DomName('DOMWindow.atob')
+ @DocsEditable
+ String atob(String string) native;
+
+ @DomName('DOMWindow.btoa')
+ @DocsEditable
+ String btoa(String string) native;
+
+ @DomName('DOMWindow.captureEvents')
+ @DocsEditable
+ void captureEvents() native;
+
+ @JSName('clearInterval')
+ @DomName('DOMWindow.clearInterval')
+ @DocsEditable
+ void _clearInterval(int handle) native;
+
+ @JSName('clearTimeout')
+ @DomName('DOMWindow.clearTimeout')
+ @DocsEditable
+ void _clearTimeout(int handle) native;
+
+ @DomName('DOMWindow.close')
+ @DocsEditable
+ void close() native;
+
+ @DomName('DOMWindow.confirm')
+ @DocsEditable
+ bool confirm(String message) native;
+
+ @DomName('DOMWindow.dispatchEvent')
+ @DocsEditable
+ bool dispatchEvent(Event evt) native;
+
+ @DomName('DOMWindow.find')
+ @DocsEditable
+ bool find(String string, bool caseSensitive, bool backwards, bool wrap, bool wholeWord, bool searchInFrames, bool showDialog) native;
+
+ @JSName('getComputedStyle')
+ @DomName('DOMWindow.getComputedStyle')
+ @DocsEditable
+ CssStyleDeclaration $dom_getComputedStyle(Element element, String pseudoElement) native;
+
+ @JSName('getMatchedCSSRules')
+ @DomName('DOMWindow.getMatchedCSSRules')
+ @DocsEditable
+ @Returns('_CssRuleList')
+ @Creates('_CssRuleList')
+ List&lt;CssRule&gt; getMatchedCssRules(Element element, String pseudoElement) native;
+
+ @DomName('DOMWindow.getSelection')
+ @DocsEditable
+ DomSelection getSelection() native;
+
+ @DomName('DOMWindow.matchMedia')
+ @DocsEditable
+ MediaQueryList matchMedia(String query) native;
+
+ @DomName('DOMWindow.moveBy')
+ @DocsEditable
+ void moveBy(num x, num y) native;
+
+ @DomName('DOMWindow.moveTo')
+ @DocsEditable
+ void moveTo(num x, num y) native;
+
+ @DomName('DOMWindow.openDatabase')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ @Creates('SqlDatabase')
+ @Creates('SqlDatabaseSync')
+ SqlDatabase openDatabase(String name, String version, String displayName, int estimatedSize, [DatabaseCallback creationCallback]) native;
+
+ @DomName('DOMWindow.postMessage')
+ @DocsEditable
+ void postMessage(/*SerializedScriptValue*/ message, String targetOrigin, [List messagePorts]) {
+   if (?message &amp;&amp; !?messagePorts) {
+     var message_1 = convertDartToNative_SerializedScriptValue(message);
+     _postMessage_1(message_1, targetOrigin);
+     return;
+   }
+   if (?message) {
+     var message_2 = convertDartToNative_SerializedScriptValue(message);
+     _postMessage_2(message_2, targetOrigin, messagePorts);
+     return;
+   }
+   throw new ArgumentError("Incorrect number or type of arguments");
+ }
+ @JSName('postMessage')
+ @DomName('DOMWindow.postMessage')
+ @DocsEditable
+ void _postMessage_1(message, targetOrigin) native;
+ @JSName('postMessage')
+ @DomName('DOMWindow.postMessage')
+ @DocsEditable
+ void _postMessage_2(message, targetOrigin, List messagePorts) native;
+
+ @DomName('DOMWindow.print')
+ @DocsEditable
+ void print() native;
+
+ @DomName('DOMWindow.releaseEvents')
+ @DocsEditable
+ void releaseEvents() native;
+
+ @JSName('removeEventListener')
+ @DomName('DOMWindow.removeEventListener')
+ @DocsEditable
+ void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+
+ @DomName('DOMWindow.resizeBy')
+ @DocsEditable
+ void resizeBy(num x, num y) native;
+
+ @DomName('DOMWindow.resizeTo')
+ @DocsEditable
+ void resizeTo(num width, num height) native;
+
+ @DomName('DOMWindow.scroll')
+ @DocsEditable
+ void scroll(int x, int y) native;
+
+ @DomName('DOMWindow.scrollBy')
+ @DocsEditable
+ void scrollBy(int x, int y) native;
+
+ @DomName('DOMWindow.scrollTo')
+ @DocsEditable
+ void scrollTo(int x, int y) native;
+
+ @JSName('setInterval')
+ @DomName('DOMWindow.setInterval')
+ @DocsEditable
+ int _setInterval(TimeoutHandler handler, int timeout) native;
+
+ @JSName('setTimeout')
+ @DomName('DOMWindow.setTimeout')
+ @DocsEditable
+ int _setTimeout(TimeoutHandler handler, int timeout) native;
+
+ @DomName('DOMWindow.showModalDialog')
+ @DocsEditable
+ Object showModalDialog(String url, [Object dialogArgs, String featureArgs]) native;
+
+ @DomName('DOMWindow.stop')
+ @DocsEditable
+ void stop() native;
+
+ @JSName('webkitConvertPointFromNodeToPage')
+ @DomName('DOMWindow.webkitConvertPointFromNodeToPage')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ DomPoint convertPointFromNodeToPage(Node node, DomPoint p) native;
+
+ @JSName('webkitConvertPointFromPageToNode')
+ @DomName('DOMWindow.webkitConvertPointFromPageToNode')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ DomPoint convertPointFromPageToNode(Node node, DomPoint p) native;
+
+ @JSName('webkitRequestFileSystem')
+ @DomName('DOMWindow.webkitRequestFileSystem')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @Experimental
+ void requestFileSystem(int type, int size, FileSystemCallback successCallback, [ErrorCallback errorCallback]) native;
+
+ @JSName('webkitResolveLocalFileSystemURL')
+ @DomName('DOMWindow.webkitResolveLocalFileSystemURL')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @Experimental
+ void resolveLocalFileSystemUrl(String url, EntryCallback successCallback, [ErrorCallback errorCallback]) native;
+
+ @DomName('DOMWindow.onDOMContentLoaded')
+ @DocsEditable
+ Stream&lt;Event&gt; get onContentLoaded =&gt; contentLoadedEvent.forTarget(this);
+
+ @DomName('DOMWindow.onabort')
+ @DocsEditable
+ Stream&lt;Event&gt; get onAbort =&gt; Element.abortEvent.forTarget(this);
+
+ @DomName('DOMWindow.onbeforeunload')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBeforeUnload =&gt; beforeUnloadEvent.forTarget(this);
+
+ @DomName('DOMWindow.onblur')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBlur =&gt; Element.blurEvent.forTarget(this);
+
+ @DomName('DOMWindow.onchange')
+ @DocsEditable
+ Stream&lt;Event&gt; get onChange =&gt; Element.changeEvent.forTarget(this);
+
+ @DomName('DOMWindow.onclick')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onClick =&gt; Element.clickEvent.forTarget(this);
+
+ @DomName('DOMWindow.oncontextmenu')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onContextMenu =&gt; Element.contextMenuEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondblclick')
+ @DocsEditable
+ Stream&lt;Event&gt; get onDoubleClick =&gt; Element.doubleClickEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondevicemotion')
+ @DocsEditable
+ Stream&lt;DeviceMotionEvent&gt; get onDeviceMotion =&gt; deviceMotionEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondeviceorientation')
+ @DocsEditable
+ Stream&lt;DeviceOrientationEvent&gt; get onDeviceOrientation =&gt; deviceOrientationEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondrag')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDrag =&gt; Element.dragEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondragend')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragEnd =&gt; Element.dragEndEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondragenter')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragEnter =&gt; Element.dragEnterEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondragleave')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragLeave =&gt; Element.dragLeaveEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondragover')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragOver =&gt; Element.dragOverEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondragstart')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragStart =&gt; Element.dragStartEvent.forTarget(this);
+
+ @DomName('DOMWindow.ondrop')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDrop =&gt; Element.dropEvent.forTarget(this);
+
+ @DomName('DOMWindow.onerror')
+ @DocsEditable
+ Stream&lt;Event&gt; get onError =&gt; Element.errorEvent.forTarget(this);
+
+ @DomName('DOMWindow.onfocus')
+ @DocsEditable
+ Stream&lt;Event&gt; get onFocus =&gt; Element.focusEvent.forTarget(this);
+
+ @DomName('DOMWindow.onhashchange')
+ @DocsEditable
+ Stream&lt;Event&gt; get onHashChange =&gt; hashChangeEvent.forTarget(this);
+
+ @DomName('DOMWindow.oninput')
+ @DocsEditable
+ Stream&lt;Event&gt; get onInput =&gt; Element.inputEvent.forTarget(this);
+
+ @DomName('DOMWindow.oninvalid')
+ @DocsEditable
+ Stream&lt;Event&gt; get onInvalid =&gt; Element.invalidEvent.forTarget(this);
+
+ @DomName('DOMWindow.onkeydown')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyDown =&gt; Element.keyDownEvent.forTarget(this);
+
+ @DomName('DOMWindow.onkeypress')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyPress =&gt; Element.keyPressEvent.forTarget(this);
+
+ @DomName('DOMWindow.onkeyup')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyUp =&gt; Element.keyUpEvent.forTarget(this);
+
+ @DomName('DOMWindow.onload')
+ @DocsEditable
+ Stream&lt;Event&gt; get onLoad =&gt; Element.loadEvent.forTarget(this);
+
+ @DomName('DOMWindow.onmessage')
+ @DocsEditable
+ Stream&lt;MessageEvent&gt; get onMessage =&gt; messageEvent.forTarget(this);
+
+ @DomName('DOMWindow.onmousedown')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseDown =&gt; Element.mouseDownEvent.forTarget(this);
+
+ @DomName('DOMWindow.onmousemove')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseMove =&gt; Element.mouseMoveEvent.forTarget(this);
+
+ @DomName('DOMWindow.onmouseout')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseOut =&gt; Element.mouseOutEvent.forTarget(this);
+
+ @DomName('DOMWindow.onmouseover')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseOver =&gt; Element.mouseOverEvent.forTarget(this);
+
+ @DomName('DOMWindow.onmouseup')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseUp =&gt; Element.mouseUpEvent.forTarget(this);
+
+ @DomName('DOMWindow.onmousewheel')
+ @DocsEditable
+ Stream&lt;WheelEvent&gt; get onMouseWheel =&gt; Element.mouseWheelEvent.forTarget(this);
+
+ @DomName('DOMWindow.onoffline')
+ @DocsEditable
+ Stream&lt;Event&gt; get onOffline =&gt; offlineEvent.forTarget(this);
+
+ @DomName('DOMWindow.ononline')
+ @DocsEditable
+ Stream&lt;Event&gt; get onOnline =&gt; onlineEvent.forTarget(this);
+
+ @DomName('DOMWindow.onpagehide')
+ @DocsEditable
+ Stream&lt;Event&gt; get onPageHide =&gt; pageHideEvent.forTarget(this);
+
+ @DomName('DOMWindow.onpageshow')
+ @DocsEditable
+ Stream&lt;Event&gt; get onPageShow =&gt; pageShowEvent.forTarget(this);
+
+ @DomName('DOMWindow.onpopstate')
+ @DocsEditable
+ Stream&lt;PopStateEvent&gt; get onPopState =&gt; popStateEvent.forTarget(this);
+
+ @DomName('DOMWindow.onreset')
+ @DocsEditable
+ Stream&lt;Event&gt; get onReset =&gt; Element.resetEvent.forTarget(this);
+
+ @DomName('DOMWindow.onresize')
+ @DocsEditable
+ Stream&lt;Event&gt; get onResize =&gt; resizeEvent.forTarget(this);
+
+ @DomName('DOMWindow.onscroll')
+ @DocsEditable
+ Stream&lt;Event&gt; get onScroll =&gt; Element.scrollEvent.forTarget(this);
+
+ @DomName('DOMWindow.onsearch')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSearch =&gt; Element.searchEvent.forTarget(this);
+
+ @DomName('DOMWindow.onselect')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSelect =&gt; Element.selectEvent.forTarget(this);
+
+ @DomName('DOMWindow.onstorage')
+ @DocsEditable
+ Stream&lt;StorageEvent&gt; get onStorage =&gt; storageEvent.forTarget(this);
+
+ @DomName('DOMWindow.onsubmit')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSubmit =&gt; Element.submitEvent.forTarget(this);
+
+ @DomName('DOMWindow.ontouchcancel')
+ @DocsEditable
+ Stream&lt;TouchEvent&gt; get onTouchCancel =&gt; Element.touchCancelEvent.forTarget(this);
+
+ @DomName('DOMWindow.ontouchend')
+ @DocsEditable
+ Stream&lt;TouchEvent&gt; get onTouchEnd =&gt; Element.touchEndEvent.forTarget(this);
+
+ @DomName('DOMWindow.ontouchmove')
+ @DocsEditable
+ Stream&lt;TouchEvent&gt; get onTouchMove =&gt; Element.touchMoveEvent.forTarget(this);
+
+ @DomName('DOMWindow.ontouchstart')
+ @DocsEditable
+ Stream&lt;TouchEvent&gt; get onTouchStart =&gt; Element.touchStartEvent.forTarget(this);
+
+ @DomName('DOMWindow.onunload')
+ @DocsEditable
+ Stream&lt;Event&gt; get onUnload =&gt; unloadEvent.forTarget(this);
+
+ @DomName('DOMWindow.onwebkitAnimationEnd')
+ @DocsEditable
+ Stream&lt;AnimationEvent&gt; get onAnimationEnd =&gt; animationEndEvent.forTarget(this);
+
+ @DomName('DOMWindow.onwebkitAnimationIteration')
+ @DocsEditable
+ Stream&lt;AnimationEvent&gt; get onAnimationIteration =&gt; animationIterationEvent.forTarget(this);
+
+ @DomName('DOMWindow.onwebkitAnimationStart')
+ @DocsEditable
+ Stream&lt;AnimationEvent&gt; get onAnimationStart =&gt; animationStartEvent.forTarget(this);
+
+ @DomName('DOMWindow.onwebkitTransitionEnd')
+ @DocsEditable
+ Stream&lt;TransitionEvent&gt; get onTransitionEnd =&gt; Element.transitionEndEvent.forTarget(this);
+
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_html/EventTarget.html">EventTarget</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>Window</strong></span></p>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_html/WindowBase.html">WindowBase</a></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="animationEndEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/AnimationEvent.html">AnimationEvent</a>&gt;         <strong>animationEndEvent</strong> <a class="anchor-link"
+            href="#animationEndEvent"
+            title="Permalink to Window.animationEndEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.webkitAnimationEndEvent')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+static const EventStreamProvider&lt;AnimationEvent&gt; animationEndEvent = const EventStreamProvider&lt;AnimationEvent&gt;('webkitAnimationEnd')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="animationIterationEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/AnimationEvent.html">AnimationEvent</a>&gt;         <strong>animationIterationEvent</strong> <a class="anchor-link"
+            href="#animationIterationEvent"
+            title="Permalink to Window.animationIterationEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.webkitAnimationIterationEvent')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+static const EventStreamProvider&lt;AnimationEvent&gt; animationIterationEvent = const EventStreamProvider&lt;AnimationEvent&gt;('webkitAnimationIteration')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="animationStartEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/AnimationEvent.html">AnimationEvent</a>&gt;         <strong>animationStartEvent</strong> <a class="anchor-link"
+            href="#animationStartEvent"
+            title="Permalink to Window.animationStartEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.webkitAnimationStartEvent')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+static const EventStreamProvider&lt;AnimationEvent&gt; animationStartEvent = const EventStreamProvider&lt;AnimationEvent&gt;('webkitAnimationStart')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="beforeUnloadEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>beforeUnloadEvent</strong> <a class="anchor-link"
+            href="#beforeUnloadEvent"
+            title="Permalink to Window.beforeUnloadEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.beforeunloadEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; beforeUnloadEvent = const EventStreamProvider&lt;Event&gt;('beforeunload')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="contentLoadedEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>contentLoadedEvent</strong> <a class="anchor-link"
+            href="#contentLoadedEvent"
+            title="Permalink to Window.contentLoadedEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.DOMContentLoadedEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; contentLoadedEvent = const EventStreamProvider&lt;Event&gt;('DOMContentLoaded')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="deviceMotionEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/DeviceMotionEvent.html">DeviceMotionEvent</a>&gt;         <strong>deviceMotionEvent</strong> <a class="anchor-link"
+            href="#deviceMotionEvent"
+            title="Permalink to Window.deviceMotionEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.devicemotionEvent')
+@DocsEditable
+static const EventStreamProvider&lt;DeviceMotionEvent&gt; deviceMotionEvent = const EventStreamProvider&lt;DeviceMotionEvent&gt;('devicemotion')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="deviceOrientationEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/DeviceOrientationEvent.html">DeviceOrientationEvent</a>&gt;         <strong>deviceOrientationEvent</strong> <a class="anchor-link"
+            href="#deviceOrientationEvent"
+            title="Permalink to Window.deviceOrientationEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.deviceorientationEvent')
+@DocsEditable
+static const EventStreamProvider&lt;DeviceOrientationEvent&gt; deviceOrientationEvent = const EventStreamProvider&lt;DeviceOrientationEvent&gt;('deviceorientation')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hashChangeEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>hashChangeEvent</strong> <a class="anchor-link"
+            href="#hashChangeEvent"
+            title="Permalink to Window.hashChangeEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.hashchangeEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; hashChangeEvent = const EventStreamProvider&lt;Event&gt;('hashchange')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="messageEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/MessageEvent.html">MessageEvent</a>&gt;         <strong>messageEvent</strong> <a class="anchor-link"
+            href="#messageEvent"
+            title="Permalink to Window.messageEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.messageEvent')
+@DocsEditable
+static const EventStreamProvider&lt;MessageEvent&gt; messageEvent = const EventStreamProvider&lt;MessageEvent&gt;('message')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="offlineEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>offlineEvent</strong> <a class="anchor-link"
+            href="#offlineEvent"
+            title="Permalink to Window.offlineEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.offlineEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; offlineEvent = const EventStreamProvider&lt;Event&gt;('offline')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onlineEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onlineEvent</strong> <a class="anchor-link"
+            href="#onlineEvent"
+            title="Permalink to Window.onlineEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onlineEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; onlineEvent = const EventStreamProvider&lt;Event&gt;('online')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pageHideEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>pageHideEvent</strong> <a class="anchor-link"
+            href="#pageHideEvent"
+            title="Permalink to Window.pageHideEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.pagehideEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; pageHideEvent = const EventStreamProvider&lt;Event&gt;('pagehide')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pageShowEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>pageShowEvent</strong> <a class="anchor-link"
+            href="#pageShowEvent"
+            title="Permalink to Window.pageShowEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.pageshowEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; pageShowEvent = const EventStreamProvider&lt;Event&gt;('pageshow')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PERSISTENT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PERSISTENT</strong> <a class="anchor-link"
+            href="#PERSISTENT"
+            title="Permalink to Window.PERSISTENT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PERSISTENT = 1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="popStateEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/PopStateEvent.html">PopStateEvent</a>&gt;         <strong>popStateEvent</strong> <a class="anchor-link"
+            href="#popStateEvent"
+            title="Permalink to Window.popStateEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.popstateEvent')
+@DocsEditable
+static const EventStreamProvider&lt;PopStateEvent&gt; popStateEvent = const EventStreamProvider&lt;PopStateEvent&gt;('popstate')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="resizeEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>resizeEvent</strong> <a class="anchor-link"
+            href="#resizeEvent"
+            title="Permalink to Window.resizeEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.resizeEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; resizeEvent = const EventStreamProvider&lt;Event&gt;('resize')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="storageEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/StorageEvent.html">StorageEvent</a>&gt;         <strong>storageEvent</strong> <a class="anchor-link"
+            href="#storageEvent"
+            title="Permalink to Window.storageEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.storageEvent')
+@DocsEditable
+static const EventStreamProvider&lt;StorageEvent&gt; storageEvent = const EventStreamProvider&lt;StorageEvent&gt;('storage')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="TEMPORARY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>TEMPORARY</strong> <a class="anchor-link"
+            href="#TEMPORARY"
+            title="Permalink to Window.TEMPORARY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+TEMPORARY = 0
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="unloadEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>unloadEvent</strong> <a class="anchor-link"
+            href="#unloadEvent"
+            title="Permalink to Window.unloadEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.unloadEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; unloadEvent = const EventStreamProvider&lt;Event&gt;('unload')
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="animationFrame">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/num.html">num</a>&gt;         <strong>animationFrame</strong> <a class="anchor-link"
+            href="#animationFrame"
+            title="Permalink to Window.animationFrame">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a Future that completes just before the window is about to repaint
+so the user can draw an animation frame</p>
+<p>If you need to later cancel this animation, use <a class="crossref" href="../dart_html/Window.html#requestAnimationFrame">requestAnimationFrame</a>
+instead.</p>
+<p>Note: The code that runs when the future completes should call 
+<a class="crossref" href="../dart_html/Window.html#animationFrame">animationFrame</a> again for the animation to continue.</p>
+<pre class="source">
+Future&lt;num&gt; get animationFrame {
+ var completer = new Completer&lt;int&gt;();
+ requestAnimationFrame(completer.complete);
+ return completer.future;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="applicationCache">
+<button class="show-code">Code</button>
+final <a href="../dart_html/ApplicationCache.html">ApplicationCache</a>         <strong>applicationCache</strong> <a class="anchor-link"
+            href="#applicationCache"
+            title="Permalink to Window.applicationCache">#</a>
+        </h4>
+        <div class="doc">
+<p>An &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/nsIDOMOfflineResourceList">nsIDOMOfflineResourceList&lt;/a>&lt;/code>
+ object providing access to the offline resources for the window.</p>
+<pre class="source">
+@DomName('DOMWindow.applicationCache')
+@DocsEditable
+final ApplicationCache applicationCache
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="closed">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>closed</strong> <a class="anchor-link"
+            href="#closed"
+            title="Permalink to Window.closed">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Indicates whether this window has been closed.</p>
+<pre><code>print(window.closed); // 'false'
+window.close();
+print(window.closed); // 'true'
+</code></pre>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/WindowBase.html">WindowBase</a> </div></div>
+<pre class="source">
+@DomName('DOMWindow.closed')
+@DocsEditable
+final bool closed
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="console">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Console.html">Console</a>         <strong>console</strong> <a class="anchor-link"
+            href="#console"
+            title="Permalink to Window.console">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Window.console')
+Console get console =&gt; Console.safeConsole;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="crypto">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Crypto.html">Crypto</a>         <strong>crypto</strong> <a class="anchor-link"
+            href="#crypto"
+            title="Permalink to Window.crypto">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the browser crypto object.</p>
+<pre class="source">
+@DomName('DOMWindow.crypto')
+@DocsEditable
+final Crypto crypto
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="defaultStatus">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>defaultStatus</strong> <a class="anchor-link"
+            href="#defaultStatus"
+            title="Permalink to Window.defaultStatus">#</a>
+        </h4>
+        <div class="doc">
+<p>Gets/sets the status bar text for the given window.</p>
+<pre class="source">
+@DomName('DOMWindow.defaultStatus')
+@DocsEditable
+String defaultStatus
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="defaultstatus">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>defaultstatus</strong> <a class="anchor-link"
+            href="#defaultstatus"
+            title="Permalink to Window.defaultstatus">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.defaultstatus')
+@DocsEditable
+String defaultstatus
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="devicePixelRatio">
+<button class="show-code">Code</button>
+final <a href="../dart_core/num.html">num</a>         <strong>devicePixelRatio</strong> <a class="anchor-link"
+            href="#devicePixelRatio"
+            title="Permalink to Window.devicePixelRatio">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.devicePixelRatio')
+@DocsEditable
+final num devicePixelRatio
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="document">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Document.html">Document</a>         <strong>document</strong> <a class="anchor-link"
+            href="#document"
+            title="Permalink to Window.document">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+Document get document =&gt; JS('Document', '#.document', this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="event">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Event.html">Event</a>         <strong>event</strong> <a class="anchor-link"
+            href="#event"
+            title="Permalink to Window.event">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.event')
+@DocsEditable
+final Event event
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="history">
+<button class="show-code">Code</button>
+final <a href="../dart_html/History.html">History</a>         <strong>history</strong> <a class="anchor-link"
+            href="#history"
+            title="Permalink to Window.history">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a reference to the history object.</p>
+<pre class="source">
+@DomName('DOMWindow.history')
+@DocsEditable
+final History history
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="indexedDB">
+<button class="show-code">Code</button>
+final <a href="../dart_indexed_db/IdbFactory.html">IdbFactory</a>         <strong>indexedDB</strong> <a class="anchor-link"
+            href="#indexedDB"
+            title="Permalink to Window.indexedDB">#</a>
+        </h4>
+        <div class="doc">
+<p>Gets an instance of the Indexed DB factory to being using Indexed DB.</p>
+<p>Use <code>IdbFactory.supported</code> to check if Indexed DB is supported on the
+current platform.</p>
+<pre class="source">
+@SupportedBrowser(SupportedBrowser.CHROME, '23.0')
+@SupportedBrowser(SupportedBrowser.FIREFOX, '15.0')
+@SupportedBrowser(SupportedBrowser.IE, '10.0')
+@Experimental
+IdbFactory get indexedDB =&gt;
+   JS('IdbFactory',
+      '#.indexedDB || #.webkitIndexedDB || #.mozIndexedDB',
+      this, this, this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="innerHeight">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>innerHeight</strong> <a class="anchor-link"
+            href="#innerHeight"
+            title="Permalink to Window.innerHeight">#</a>
+        </h4>
+        <div class="doc">
+<p>Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.</p>
+<pre class="source">
+@DomName('DOMWindow.innerHeight')
+@DocsEditable
+final int innerHeight
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="innerWidth">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>innerWidth</strong> <a class="anchor-link"
+            href="#innerWidth"
+            title="Permalink to Window.innerWidth">#</a>
+        </h4>
+        <div class="doc">
+<p>Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.</p>
+<pre class="source">
+@DomName('DOMWindow.innerWidth')
+@DocsEditable
+final int innerWidth
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="localStorage">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Storage.html">Storage</a>         <strong>localStorage</strong> <a class="anchor-link"
+            href="#localStorage"
+            title="Permalink to Window.localStorage">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a reference to the local storage object used to store data that may only be accessed by the origin that created it.</p>
+<pre class="source">
+@DomName('DOMWindow.localStorage')
+@DocsEditable
+final Storage localStorage
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="location">
+<button class="show-code">Code</button>
+<a href="../dart_html/Location.html">Location</a> <strong>get location</strong> <a class="anchor-link" href="#location"
+              title="Permalink to Window.get location">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>The current location of this window.</p>
+<pre><code>Location currentLocation = window.location;
+print(currentLocation.href); // 'http://www.example.com:80/'
+</code></pre>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/WindowBase.html">WindowBase</a> </div></div>
+<pre class="source">
+Location get location {
+ // Firefox work-around for Location.  The Firefox location object cannot be
+ // made to behave like a Dart object so must be wrapped.
+ var result = _location;
+ if (_isDartLocation(result)) return result;  // e.g. on Chrome.
+ if (null == _location_wrapper) {
+   _location_wrapper = new _LocationWrapper(result);
+ }
+ return _location_wrapper;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="location=">
+<button class="show-code">Code</button>
+void <strong>set location</strong>(value) <a class="anchor-link" href="#location="
+              title="Permalink to Window.set location">#</a></h4>
+<div class="doc">
+<p>Sets the window's location, which causes the browser to navigate to the new
+location. 
+<span class="param">value</span> may be a Location object or a string.</p>
+<pre class="source">
+void set location(value) {
+ if (value is _LocationWrapper) {
+   _location = value._ptr;
+ } else {
+   _location = value;
+ }
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="locationbar">
+<button class="show-code">Code</button>
+final <a href="../dart_html/BarInfo.html">BarInfo</a>         <strong>locationbar</strong> <a class="anchor-link"
+            href="#locationbar"
+            title="Permalink to Window.locationbar">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the locationbar object, whose visibility can be toggled in the window.</p>
+<pre class="source">
+@DomName('DOMWindow.locationbar')
+@DocsEditable
+final BarInfo locationbar
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="menubar">
+<button class="show-code">Code</button>
+final <a href="../dart_html/BarInfo.html">BarInfo</a>         <strong>menubar</strong> <a class="anchor-link"
+            href="#menubar"
+            title="Permalink to Window.menubar">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the menubar object, whose visibility can be toggled in the window.</p>
+<pre class="source">
+@DomName('DOMWindow.menubar')
+@DocsEditable
+final BarInfo menubar
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="name">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>name</strong> <a class="anchor-link"
+            href="#name"
+            title="Permalink to Window.name">#</a>
+        </h4>
+        <div class="doc">
+<p>Gets/sets the name of the window.</p>
+<pre class="source">
+@DomName('DOMWindow.name')
+@DocsEditable
+String name
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="navigator">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Navigator.html">Navigator</a>         <strong>navigator</strong> <a class="anchor-link"
+            href="#navigator"
+            title="Permalink to Window.navigator">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a reference to the navigator object.</p>
+<pre class="source">
+@DomName('DOMWindow.navigator')
+@DocsEditable
+final Navigator navigator
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="notifications">
+<button class="show-code">Code</button>
+final <a href="../dart_html/NotificationCenter.html">NotificationCenter</a>         <strong>notifications</strong> <a class="anchor-link"
+            href="#notifications"
+            title="Permalink to Window.notifications">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@JSName('webkitNotifications')
+@DomName('DOMWindow.webkitNotifications')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+final NotificationCenter notifications
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="offscreenBuffering">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>offscreenBuffering</strong> <a class="anchor-link"
+            href="#offscreenBuffering"
+            title="Permalink to Window.offscreenBuffering">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.offscreenBuffering')
+@DocsEditable
+final bool offscreenBuffering
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="on">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Events.html">Events</a>         <strong>on</strong> <a class="anchor-link"
+            href="#on"
+            title="Permalink to Window.on">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>This is an ease-of-use accessor for event streams which should only be
+used when an explicit accessor is not available.</p>
+<pre class="source">
+Events get on =&gt; new Events(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onAbort">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onAbort</strong> <a class="anchor-link"
+            href="#onAbort"
+            title="Permalink to Window.onAbort">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for abort events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onabort')
+@DocsEditable
+Stream&lt;Event&gt; get onAbort =&gt; Element.abortEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onAnimationEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/AnimationEvent.html">AnimationEvent</a>&gt;         <strong>onAnimationEnd</strong> <a class="anchor-link"
+            href="#onAnimationEnd"
+            title="Permalink to Window.onAnimationEnd">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onwebkitAnimationEnd')
+@DocsEditable
+Stream&lt;AnimationEvent&gt; get onAnimationEnd =&gt; animationEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onAnimationIteration">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/AnimationEvent.html">AnimationEvent</a>&gt;         <strong>onAnimationIteration</strong> <a class="anchor-link"
+            href="#onAnimationIteration"
+            title="Permalink to Window.onAnimationIteration">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onwebkitAnimationIteration')
+@DocsEditable
+Stream&lt;AnimationEvent&gt; get onAnimationIteration =&gt; animationIterationEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onAnimationStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/AnimationEvent.html">AnimationEvent</a>&gt;         <strong>onAnimationStart</strong> <a class="anchor-link"
+            href="#onAnimationStart"
+            title="Permalink to Window.onAnimationStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onwebkitAnimationStart')
+@DocsEditable
+Stream&lt;AnimationEvent&gt; get onAnimationStart =&gt; animationStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBeforeUnload">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforeUnload</strong> <a class="anchor-link"
+            href="#onBeforeUnload"
+            title="Permalink to Window.onBeforeUnload">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for before-unload events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onbeforeunload')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforeUnload =&gt; beforeUnloadEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBlur">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBlur</strong> <a class="anchor-link"
+            href="#onBlur"
+            title="Permalink to Window.onBlur">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for blur events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onblur')
+@DocsEditable
+Stream&lt;Event&gt; get onBlur =&gt; Element.blurEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onChange</strong> <a class="anchor-link"
+            href="#onChange"
+            title="Permalink to Window.onChange">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for change events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onchange')
+@DocsEditable
+Stream&lt;Event&gt; get onChange =&gt; Element.changeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onClick">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onClick</strong> <a class="anchor-link"
+            href="#onClick"
+            title="Permalink to Window.onClick">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for click events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onclick')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onClick =&gt; Element.clickEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onContentLoaded">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onContentLoaded</strong> <a class="anchor-link"
+            href="#onContentLoaded"
+            title="Permalink to Window.onContentLoaded">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onDOMContentLoaded')
+@DocsEditable
+Stream&lt;Event&gt; get onContentLoaded =&gt; contentLoadedEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onContextMenu">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onContextMenu</strong> <a class="anchor-link"
+            href="#onContextMenu"
+            title="Permalink to Window.onContextMenu">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for right-click events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.oncontextmenu')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onContextMenu =&gt; Element.contextMenuEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDeviceMotion">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/DeviceMotionEvent.html">DeviceMotionEvent</a>&gt;         <strong>onDeviceMotion</strong> <a class="anchor-link"
+            href="#onDeviceMotion"
+            title="Permalink to Window.onDeviceMotion">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondevicemotion')
+@DocsEditable
+Stream&lt;DeviceMotionEvent&gt; get onDeviceMotion =&gt; deviceMotionEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDeviceOrientation">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/DeviceOrientationEvent.html">DeviceOrientationEvent</a>&gt;         <strong>onDeviceOrientation</strong> <a class="anchor-link"
+            href="#onDeviceOrientation"
+            title="Permalink to Window.onDeviceOrientation">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondeviceorientation')
+@DocsEditable
+Stream&lt;DeviceOrientationEvent&gt; get onDeviceOrientation =&gt; deviceOrientationEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDoubleClick">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onDoubleClick</strong> <a class="anchor-link"
+            href="#onDoubleClick"
+            title="Permalink to Window.onDoubleClick">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondblclick')
+@DocsEditable
+Stream&lt;Event&gt; get onDoubleClick =&gt; Element.doubleClickEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDrag">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDrag</strong> <a class="anchor-link"
+            href="#onDrag"
+            title="Permalink to Window.onDrag">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondrag')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDrag =&gt; Element.dragEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragEnd</strong> <a class="anchor-link"
+            href="#onDragEnd"
+            title="Permalink to Window.onDragEnd">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondragend')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragEnd =&gt; Element.dragEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragEnter">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragEnter</strong> <a class="anchor-link"
+            href="#onDragEnter"
+            title="Permalink to Window.onDragEnter">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondragenter')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragEnter =&gt; Element.dragEnterEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragLeave">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragLeave</strong> <a class="anchor-link"
+            href="#onDragLeave"
+            title="Permalink to Window.onDragLeave">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondragleave')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragLeave =&gt; Element.dragLeaveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragOver">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragOver</strong> <a class="anchor-link"
+            href="#onDragOver"
+            title="Permalink to Window.onDragOver">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondragover')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragOver =&gt; Element.dragOverEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragStart</strong> <a class="anchor-link"
+            href="#onDragStart"
+            title="Permalink to Window.onDragStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondragstart')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragStart =&gt; Element.dragStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDrop">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDrop</strong> <a class="anchor-link"
+            href="#onDrop"
+            title="Permalink to Window.onDrop">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ondrop')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDrop =&gt; Element.dropEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onError</strong> <a class="anchor-link"
+            href="#onError"
+            title="Permalink to Window.onError">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for errors raised on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onerror')
+@DocsEditable
+Stream&lt;Event&gt; get onError =&gt; Element.errorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onFocus">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onFocus</strong> <a class="anchor-link"
+            href="#onFocus"
+            title="Permalink to Window.onFocus">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for focus events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onfocus')
+@DocsEditable
+Stream&lt;Event&gt; get onFocus =&gt; Element.focusEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onHashChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onHashChange</strong> <a class="anchor-link"
+            href="#onHashChange"
+            title="Permalink to Window.onHashChange">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.</p>
+<pre class="source">
+@DomName('DOMWindow.onhashchange')
+@DocsEditable
+Stream&lt;Event&gt; get onHashChange =&gt; hashChangeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onInput">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onInput</strong> <a class="anchor-link"
+            href="#onInput"
+            title="Permalink to Window.onInput">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.oninput')
+@DocsEditable
+Stream&lt;Event&gt; get onInput =&gt; Element.inputEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onInvalid">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onInvalid</strong> <a class="anchor-link"
+            href="#onInvalid"
+            title="Permalink to Window.onInvalid">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.oninvalid')
+@DocsEditable
+Stream&lt;Event&gt; get onInvalid =&gt; Element.invalidEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyDown">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyDown</strong> <a class="anchor-link"
+            href="#onKeyDown"
+            title="Permalink to Window.onKeyDown">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for keydown events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onkeydown')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyDown =&gt; Element.keyDownEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyPress">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyPress</strong> <a class="anchor-link"
+            href="#onKeyPress"
+            title="Permalink to Window.onKeyPress">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for keypress events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onkeypress')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyPress =&gt; Element.keyPressEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyUp">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyUp</strong> <a class="anchor-link"
+            href="#onKeyUp"
+            title="Permalink to Window.onKeyUp">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for keyup events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onkeyup')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyUp =&gt; Element.keyUpEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onLoad">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onLoad</strong> <a class="anchor-link"
+            href="#onLoad"
+            title="Permalink to Window.onLoad">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for window loading.</p>
+<pre class="source">
+@DomName('DOMWindow.onload')
+@DocsEditable
+Stream&lt;Event&gt; get onLoad =&gt; Element.loadEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMessage">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MessageEvent.html">MessageEvent</a>&gt;         <strong>onMessage</strong> <a class="anchor-link"
+            href="#onMessage"
+            title="Permalink to Window.onMessage">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onmessage')
+@DocsEditable
+Stream&lt;MessageEvent&gt; get onMessage =&gt; messageEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseDown">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseDown</strong> <a class="anchor-link"
+            href="#onMouseDown"
+            title="Permalink to Window.onMouseDown">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for mousedown events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onmousedown')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseDown =&gt; Element.mouseDownEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseMove">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseMove</strong> <a class="anchor-link"
+            href="#onMouseMove"
+            title="Permalink to Window.onMouseMove">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for mousemove events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onmousemove')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseMove =&gt; Element.mouseMoveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseOut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseOut</strong> <a class="anchor-link"
+            href="#onMouseOut"
+            title="Permalink to Window.onMouseOut">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for mouseout events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onmouseout')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseOut =&gt; Element.mouseOutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseOver">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseOver</strong> <a class="anchor-link"
+            href="#onMouseOver"
+            title="Permalink to Window.onMouseOver">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for mouseover events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onmouseover')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseOver =&gt; Element.mouseOverEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseUp">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseUp</strong> <a class="anchor-link"
+            href="#onMouseUp"
+            title="Permalink to Window.onMouseUp">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for mouseup events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onmouseup')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseUp =&gt; Element.mouseUpEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseWheel">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/WheelEvent.html">WheelEvent</a>&gt;         <strong>onMouseWheel</strong> <a class="anchor-link"
+            href="#onMouseWheel"
+            title="Permalink to Window.onMouseWheel">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onmousewheel')
+@DocsEditable
+Stream&lt;WheelEvent&gt; get onMouseWheel =&gt; Element.mouseWheelEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onOffline">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onOffline</strong> <a class="anchor-link"
+            href="#onOffline"
+            title="Permalink to Window.onOffline">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onoffline')
+@DocsEditable
+Stream&lt;Event&gt; get onOffline =&gt; offlineEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onOnline">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onOnline</strong> <a class="anchor-link"
+            href="#onOnline"
+            title="Permalink to Window.onOnline">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ononline')
+@DocsEditable
+Stream&lt;Event&gt; get onOnline =&gt; onlineEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onPageHide">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onPageHide</strong> <a class="anchor-link"
+            href="#onPageHide"
+            title="Permalink to Window.onPageHide">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for pagehide events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onpagehide')
+@DocsEditable
+Stream&lt;Event&gt; get onPageHide =&gt; pageHideEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onPageShow">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onPageShow</strong> <a class="anchor-link"
+            href="#onPageShow"
+            title="Permalink to Window.onPageShow">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for pageshow events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onpageshow')
+@DocsEditable
+Stream&lt;Event&gt; get onPageShow =&gt; pageShowEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onPopState">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/PopStateEvent.html">PopStateEvent</a>&gt;         <strong>onPopState</strong> <a class="anchor-link"
+            href="#onPopState"
+            title="Permalink to Window.onPopState">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for popstate events, which are fired when navigating to a session history entry representing a state object.</p>
+<pre class="source">
+@DomName('DOMWindow.onpopstate')
+@DocsEditable
+Stream&lt;PopStateEvent&gt; get onPopState =&gt; popStateEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onReset">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onReset</strong> <a class="anchor-link"
+            href="#onReset"
+            title="Permalink to Window.onReset">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for reset events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onreset')
+@DocsEditable
+Stream&lt;Event&gt; get onReset =&gt; Element.resetEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onResize">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onResize</strong> <a class="anchor-link"
+            href="#onResize"
+            title="Permalink to Window.onResize">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for window resizing.</p>
+<pre class="source">
+@DomName('DOMWindow.onresize')
+@DocsEditable
+Stream&lt;Event&gt; get onResize =&gt; resizeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onScroll">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onScroll</strong> <a class="anchor-link"
+            href="#onScroll"
+            title="Permalink to Window.onScroll">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for window scrolling.</p>
+<pre class="source">
+@DomName('DOMWindow.onscroll')
+@DocsEditable
+Stream&lt;Event&gt; get onScroll =&gt; Element.scrollEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSearch">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSearch</strong> <a class="anchor-link"
+            href="#onSearch"
+            title="Permalink to Window.onSearch">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onsearch')
+@DocsEditable
+Stream&lt;Event&gt; get onSearch =&gt; Element.searchEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSelect">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSelect</strong> <a class="anchor-link"
+            href="#onSelect"
+            title="Permalink to Window.onSelect">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for window selection.</p>
+<pre class="source">
+@DomName('DOMWindow.onselect')
+@DocsEditable
+Stream&lt;Event&gt; get onSelect =&gt; Element.selectEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onStorage">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/StorageEvent.html">StorageEvent</a>&gt;         <strong>onStorage</strong> <a class="anchor-link"
+            href="#onStorage"
+            title="Permalink to Window.onStorage">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onstorage')
+@DocsEditable
+Stream&lt;StorageEvent&gt; get onStorage =&gt; storageEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSubmit">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSubmit</strong> <a class="anchor-link"
+            href="#onSubmit"
+            title="Permalink to Window.onSubmit">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for submits on window forms.</p>
+<pre class="source">
+@DomName('DOMWindow.onsubmit')
+@DocsEditable
+Stream&lt;Event&gt; get onSubmit =&gt; Element.submitEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTouchCancel">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchCancel</strong> <a class="anchor-link"
+            href="#onTouchCancel"
+            title="Permalink to Window.onTouchCancel">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ontouchcancel')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchCancel =&gt; Element.touchCancelEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTouchEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchEnd</strong> <a class="anchor-link"
+            href="#onTouchEnd"
+            title="Permalink to Window.onTouchEnd">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ontouchend')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchEnd =&gt; Element.touchEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTouchMove">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchMove</strong> <a class="anchor-link"
+            href="#onTouchMove"
+            title="Permalink to Window.onTouchMove">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ontouchmove')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchMove =&gt; Element.touchMoveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTouchStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchStart</strong> <a class="anchor-link"
+            href="#onTouchStart"
+            title="Permalink to Window.onTouchStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.ontouchstart')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchStart =&gt; Element.touchStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTransitionEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TransitionEvent.html">TransitionEvent</a>&gt;         <strong>onTransitionEnd</strong> <a class="anchor-link"
+            href="#onTransitionEnd"
+            title="Permalink to Window.onTransitionEnd">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.onwebkitTransitionEnd')
+@DocsEditable
+Stream&lt;TransitionEvent&gt; get onTransitionEnd =&gt; Element.transitionEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onUnload">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onUnload</strong> <a class="anchor-link"
+            href="#onUnload"
+            title="Permalink to Window.onUnload">#</a>
+        </h4>
+        <div class="doc">
+<p>An event handler property for unload events on the window.</p>
+<pre class="source">
+@DomName('DOMWindow.onunload')
+@DocsEditable
+Stream&lt;Event&gt; get onUnload =&gt; unloadEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="opener">
+<button class="show-code">Code</button>
+final <a href="../dart_html/WindowBase.html">WindowBase</a>         <strong>opener</strong> <a class="anchor-link"
+            href="#opener"
+            title="Permalink to Window.opener">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>A reference to the window that opened this one.</p>
+<pre><code>Window thisWindow = window;
+WindowBase otherWindow = thisWindow.open('http://www.example.com/', 'foo');
+print(otherWindow.opener == thisWindow); // 'true'
+</code></pre>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/WindowBase.html">WindowBase</a> </div></div>
+<pre class="source">
+WindowBase get opener =&gt; _convertNativeToDart_Window(this._opener);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="outerHeight">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>outerHeight</strong> <a class="anchor-link"
+            href="#outerHeight"
+            title="Permalink to Window.outerHeight">#</a>
+        </h4>
+        <div class="doc">
+<p>Gets the height of the outside of the browser window.</p>
+<pre class="source">
+@DomName('DOMWindow.outerHeight')
+@DocsEditable
+final int outerHeight
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="outerWidth">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>outerWidth</strong> <a class="anchor-link"
+            href="#outerWidth"
+            title="Permalink to Window.outerWidth">#</a>
+        </h4>
+        <div class="doc">
+<p>Gets the width of the outside of the browser window.</p>
+<pre class="source">
+@DomName('DOMWindow.outerWidth')
+@DocsEditable
+final int outerWidth
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pagePopupController">
+<button class="show-code">Code</button>
+final <a href="../dart_html/PagePopupController.html">PagePopupController</a>         <strong>pagePopupController</strong> <a class="anchor-link"
+            href="#pagePopupController"
+            title="Permalink to Window.pagePopupController">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.pagePopupController')
+@DocsEditable
+final PagePopupController pagePopupController
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pageXOffset">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>pageXOffset</strong> <a class="anchor-link"
+            href="#pageXOffset"
+            title="Permalink to Window.pageXOffset">#</a>
+        </h4>
+        <div class="doc">
+<p>An alias for &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/DOM/window.scrollX">window.scrollX&lt;/a>&lt;/code>
+.</p>
+<pre class="source">
+@DomName('DOMWindow.pageXOffset')
+@DocsEditable
+final int pageXOffset
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pageYOffset">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>pageYOffset</strong> <a class="anchor-link"
+            href="#pageYOffset"
+            title="Permalink to Window.pageYOffset">#</a>
+        </h4>
+        <div class="doc">
+<p>An alias for &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/DOM/window.scrollY">window.scrollY&lt;/a>&lt;/code></p>
+<pre class="source">
+@DomName('DOMWindow.pageYOffset')
+@DocsEditable
+final int pageYOffset
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="parent">
+<button class="show-code">Code</button>
+final <a href="../dart_html/WindowBase.html">WindowBase</a>         <strong>parent</strong> <a class="anchor-link"
+            href="#parent"
+            title="Permalink to Window.parent">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>A reference to the parent of this window.</p>
+<p>If this <a class="crossref" href="../dart_html/WindowBase.html">WindowBase</a> has no parent, <a class="crossref" href="../dart_html/Window.html#parent">parent</a> will return a reference to
+the <a class="crossref" href="../dart_html/WindowBase.html">WindowBase</a> itself.</p>
+<pre><code>IFrameElement myIFrame = new IFrameElement();
+window.document.body.elements.add(myIFrame);
+print(myIframe.contentWindow.parent == window) // 'true'
+
+print(window.parent == window) // 'true'
+</code></pre>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/WindowBase.html">WindowBase</a> </div></div>
+<pre class="source">
+WindowBase get parent =&gt; _convertNativeToDart_Window(this._parent);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="performance">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Performance.html">Performance</a>         <strong>performance</strong> <a class="anchor-link"
+            href="#performance"
+            title="Permalink to Window.performance">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.performance')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.FIREFOX)
+@SupportedBrowser(SupportedBrowser.IE)
+final Performance performance
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="personalbar">
+<button class="show-code">Code</button>
+final <a href="../dart_html/BarInfo.html">BarInfo</a>         <strong>personalbar</strong> <a class="anchor-link"
+            href="#personalbar"
+            title="Permalink to Window.personalbar">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the personalbar object, whose visibility can be toggled in the window.</p>
+<pre class="source">
+@DomName('DOMWindow.personalbar')
+@DocsEditable
+final BarInfo personalbar
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="screen">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Screen.html">Screen</a>         <strong>screen</strong> <a class="anchor-link"
+            href="#screen"
+            title="Permalink to Window.screen">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a reference to the screen object associated with the window.</p>
+<pre class="source">
+@DomName('DOMWindow.screen')
+@DocsEditable
+final Screen screen
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="screenLeft">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>screenLeft</strong> <a class="anchor-link"
+            href="#screenLeft"
+            title="Permalink to Window.screenLeft">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.screenLeft')
+@DocsEditable
+final int screenLeft
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="screenTop">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>screenTop</strong> <a class="anchor-link"
+            href="#screenTop"
+            title="Permalink to Window.screenTop">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.screenTop')
+@DocsEditable
+final int screenTop
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="screenX">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>screenX</strong> <a class="anchor-link"
+            href="#screenX"
+            title="Permalink to Window.screenX">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the horizontal distance of the left border of the user's browser from the left side of the screen.</p>
+<pre class="source">
+@DomName('DOMWindow.screenX')
+@DocsEditable
+final int screenX
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="screenY">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>screenY</strong> <a class="anchor-link"
+            href="#screenY"
+            title="Permalink to Window.screenY">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the vertical distance of the top border of the user's browser from the top side of the screen.</p>
+<pre class="source">
+@DomName('DOMWindow.screenY')
+@DocsEditable
+final int screenY
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="scrollbars">
+<button class="show-code">Code</button>
+final <a href="../dart_html/BarInfo.html">BarInfo</a>         <strong>scrollbars</strong> <a class="anchor-link"
+            href="#scrollbars"
+            title="Permalink to Window.scrollbars">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the scrollbars object, whose visibility can be toggled in the window.</p>
+<pre class="source">
+@DomName('DOMWindow.scrollbars')
+@DocsEditable
+final BarInfo scrollbars
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="scrollX">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>scrollX</strong> <a class="anchor-link"
+            href="#scrollX"
+            title="Permalink to Window.scrollX">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the number of pixels that the document has already been scrolled horizontally.</p>
+<pre class="source">
+@DomName('DOMWindow.scrollX')
+@DocsEditable
+final int scrollX
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="scrollY">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>scrollY</strong> <a class="anchor-link"
+            href="#scrollY"
+            title="Permalink to Window.scrollY">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the number of pixels that the document has already been scrolled vertically.</p>
+<pre class="source">
+@DomName('DOMWindow.scrollY')
+@DocsEditable
+final int scrollY
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="self">
+<button class="show-code">Code</button>
+final <a href="../dart_html/WindowBase.html">WindowBase</a>         <strong>self</strong> <a class="anchor-link"
+            href="#self"
+            title="Permalink to Window.self">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WindowBase get self =&gt; _convertNativeToDart_Window(this._self);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="sessionStorage">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Storage.html">Storage</a>         <strong>sessionStorage</strong> <a class="anchor-link"
+            href="#sessionStorage"
+            title="Permalink to Window.sessionStorage">#</a>
+        </h4>
+        <div class="doc">
+<p>A storage object for storing data within a single page session.</p>
+<pre class="source">
+@DomName('DOMWindow.sessionStorage')
+@DocsEditable
+final Storage sessionStorage
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="status">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>status</strong> <a class="anchor-link"
+            href="#status"
+            title="Permalink to Window.status">#</a>
+        </h4>
+        <div class="doc">
+<p>Gets/sets the text in the statusbar at the bottom of the browser.</p>
+<pre class="source">
+@DomName('DOMWindow.status')
+@DocsEditable
+String status
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="statusbar">
+<button class="show-code">Code</button>
+final <a href="../dart_html/BarInfo.html">BarInfo</a>         <strong>statusbar</strong> <a class="anchor-link"
+            href="#statusbar"
+            title="Permalink to Window.statusbar">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the statusbar object, whose visibility can be toggled in the window.</p>
+<pre class="source">
+@DomName('DOMWindow.statusbar')
+@DocsEditable
+final BarInfo statusbar
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="storageInfo">
+<button class="show-code">Code</button>
+final <a href="../dart_html/StorageInfo.html">StorageInfo</a>         <strong>storageInfo</strong> <a class="anchor-link"
+            href="#storageInfo"
+            title="Permalink to Window.storageInfo">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@JSName('webkitStorageInfo')
+@DomName('DOMWindow.webkitStorageInfo')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+final StorageInfo storageInfo
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="styleMedia">
+<button class="show-code">Code</button>
+final <a href="../dart_html/StyleMedia.html">StyleMedia</a>         <strong>styleMedia</strong> <a class="anchor-link"
+            href="#styleMedia"
+            title="Permalink to Window.styleMedia">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('DOMWindow.styleMedia')
+@DocsEditable
+final StyleMedia styleMedia
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="toolbar">
+<button class="show-code">Code</button>
+final <a href="../dart_html/BarInfo.html">BarInfo</a>         <strong>toolbar</strong> <a class="anchor-link"
+            href="#toolbar"
+            title="Permalink to Window.toolbar">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the toolbar object, whose visibility can be toggled in the window.</p>
+<pre class="source">
+@DomName('DOMWindow.toolbar')
+@DocsEditable
+final BarInfo toolbar
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="top">
+<button class="show-code">Code</button>
+final <a href="../dart_html/WindowBase.html">WindowBase</a>         <strong>top</strong> <a class="anchor-link"
+            href="#top"
+            title="Permalink to Window.top">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>A reference to the topmost window in the window hierarchy.</p>
+<p>If this <a class="crossref" href="../dart_html/WindowBase.html">WindowBase</a> is the topmost <a class="crossref" href="../dart_html/WindowBase.html">WindowBase</a>, <a class="crossref" href="../dart_html/Window.html#top">top</a> will return a
+reference to the <a class="crossref" href="../dart_html/WindowBase.html">WindowBase</a> itself.</p>
+<pre><code>// Add an IFrame to the current window.
+IFrameElement myIFrame = new IFrameElement();
+window.document.body.elements.add(myIFrame);
+
+// Add an IFrame inside of the other IFrame.
+IFrameElement innerIFrame = new IFrameElement();
+myIFrame.elements.add(innerIFrame);
+
+print(myIframe.contentWindow.top == window) // 'true'
+print(innerIFrame.contentWindow.top == window) // 'true'
+
+print(window.top == window) // 'true'
+</code></pre>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/WindowBase.html">WindowBase</a> </div></div>
+<pre class="source">
+WindowBase get top =&gt; _convertNativeToDart_Window(this._top);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="window">
+<button class="show-code">Code</button>
+final <a href="../dart_html/WindowBase.html">WindowBase</a>         <strong>window</strong> <a class="anchor-link"
+            href="#window"
+            title="Permalink to Window.window">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WindowBase get window =&gt; _convertNativeToDart_Window(this._window);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="alert">
+<button class="show-code">Code</button>
+void <strong>alert</strong>(<a href="../dart_core/String.html">String</a> message) <a class="anchor-link" href="#alert"
+              title="Permalink to Window.alert">#</a></h4>
+<div class="doc">
+<p>Displays an alert dialog.</p>
+<pre class="source">
+@DomName('DOMWindow.alert')
+@DocsEditable
+void alert(String message) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="atob">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>atob</strong>(<a href="../dart_core/String.html">String</a> string) <a class="anchor-link" href="#atob"
+              title="Permalink to Window.atob">#</a></h4>
+<div class="doc">
+<p>Decodes a string of data which has been encoded using base-64 encoding.</p>
+<pre class="source">
+@DomName('DOMWindow.atob')
+@DocsEditable
+String atob(String string) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="btoa">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>btoa</strong>(<a href="../dart_core/String.html">String</a> string) <a class="anchor-link" href="#btoa"
+              title="Permalink to Window.btoa">#</a></h4>
+<div class="doc">
+<p>Creates a base-64 encoded ASCII string from a string of binary data.</p>
+<pre class="source">
+@DomName('DOMWindow.btoa')
+@DocsEditable
+String btoa(String string) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="cancelAnimationFrame">
+<button class="show-code">Code</button>
+void <strong>cancelAnimationFrame</strong>(id) <a class="anchor-link" href="#cancelAnimationFrame"
+              title="Permalink to Window.cancelAnimationFrame">#</a></h4>
+<div class="doc">
+<pre class="source">
+void cancelAnimationFrame(id) {
+ _ensureRequestAnimationFrame();
+ _cancelAnimationFrame(id);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="captureEvents">
+<button class="show-code">Code</button>
+void <strong>captureEvents</strong>() <a class="anchor-link" href="#captureEvents"
+              title="Permalink to Window.captureEvents">#</a></h4>
+<div class="doc">
+<p>Registers the window to capture all events of the specified type.</p>
+<pre class="source">
+@DomName('DOMWindow.captureEvents')
+@DocsEditable
+void captureEvents() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="close">
+<button class="show-code">Code</button>
+void <strong>close</strong>() <a class="anchor-link" href="#close"
+              title="Permalink to Window.close">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Closes the window.</p>
+<p>This method should only succeed if the <a class="crossref" href="../dart_html/WindowBase.html">WindowBase</a> object is
+<strong>script-closeable</strong> and the window calling <a class="crossref" href="../dart_html/Window.html#close">close</a> is allowed to navigate
+the window.</p>
+<p>A window is script-closeable if it is either a window
+that was opened by another window, or if it is a window with only one
+document in its history.</p>
+<p>A window might not be allowed to navigate, and therefore close, another
+window due to browser security features.</p>
+<pre><code>var other = window.open('http://www.example.com', 'foo');
+// Closes other window, as it is script-closeable.
+other.close();
+print(other.closed()); // 'true'
+
+window.location('http://www.mysite.com', 'foo');
+// Does not close this window, as the history has changed.
+window.close();
+print(window.closed()); // 'false'
+</code></pre>
+<p>See also:</p><ul><li><a href="http://www.w3.org/TR/html5/browsers.html#dom-window-close">Window close discussion</a> from the W3C</li></ul>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/WindowBase.html">WindowBase</a> </div></div>
+<pre class="source">
+@DomName('DOMWindow.close')
+@DocsEditable
+void close() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="confirm">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>confirm</strong>(<a href="../dart_core/String.html">String</a> message) <a class="anchor-link" href="#confirm"
+              title="Permalink to Window.confirm">#</a></h4>
+<div class="doc">
+<p>Displays a dialog with a message that the user needs to respond to.</p>
+<pre class="source">
+@DomName('DOMWindow.confirm')
+@DocsEditable
+bool confirm(String message) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="convertPointFromNodeToPage">
+<button class="show-code">Code</button>
+<a href="../dart_html/DomPoint.html">DomPoint</a> <strong>convertPointFromNodeToPage</strong>(<a href="../dart_html/Node.html">Node</a> node, <a href="../dart_html/DomPoint.html">DomPoint</a> p) <a class="anchor-link" href="#convertPointFromNodeToPage"
+              title="Permalink to Window.convertPointFromNodeToPage">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('webkitConvertPointFromNodeToPage')
+@DomName('DOMWindow.webkitConvertPointFromNodeToPage')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+DomPoint convertPointFromNodeToPage(Node node, DomPoint p) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="convertPointFromPageToNode">
+<button class="show-code">Code</button>
+<a href="../dart_html/DomPoint.html">DomPoint</a> <strong>convertPointFromPageToNode</strong>(<a href="../dart_html/Node.html">Node</a> node, <a href="../dart_html/DomPoint.html">DomPoint</a> p) <a class="anchor-link" href="#convertPointFromPageToNode"
+              title="Permalink to Window.convertPointFromPageToNode">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('webkitConvertPointFromPageToNode')
+@DomName('DOMWindow.webkitConvertPointFromPageToNode')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+DomPoint convertPointFromPageToNode(Node node, DomPoint p) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="dispatchEvent">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>dispatchEvent</strong>(<a href="../dart_html/Event.html">Event</a> evt) <a class="anchor-link" href="#dispatchEvent"
+              title="Permalink to Window.dispatchEvent">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('DOMWindow.dispatchEvent')
+@DocsEditable
+bool dispatchEvent(Event evt) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="find">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>find</strong>(<a href="../dart_core/String.html">String</a> string, <a href="../dart_core/bool.html">bool</a> caseSensitive, <a href="../dart_core/bool.html">bool</a> backwards, <a href="../dart_core/bool.html">bool</a> wrap, <a href="../dart_core/bool.html">bool</a> wholeWord, <a href="../dart_core/bool.html">bool</a> searchInFrames, <a href="../dart_core/bool.html">bool</a> showDialog) <a class="anchor-link" href="#find"
+              title="Permalink to Window.find">#</a></h4>
+<div class="doc">
+<p>Searches for a given string in a window.</p>
+<pre class="source">
+@DomName('DOMWindow.find')
+@DocsEditable
+bool find(String string, bool caseSensitive, bool backwards, bool wrap, bool wholeWord, bool searchInFrames, bool showDialog) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getMatchedCssRules">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/CssRule.html">CssRule</a>&gt; <strong>getMatchedCssRules</strong>(<a href="../dart_html/Element.html">Element</a> element, <a href="../dart_core/String.html">String</a> pseudoElement) <a class="anchor-link" href="#getMatchedCssRules"
+              title="Permalink to Window.getMatchedCssRules">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('getMatchedCSSRules')
+@DomName('DOMWindow.getMatchedCSSRules')
+@DocsEditable
+@Returns('_CssRuleList')
+@Creates('_CssRuleList')
+List&lt;CssRule&gt; getMatchedCssRules(Element element, String pseudoElement) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getSelection">
+<button class="show-code">Code</button>
+<a href="../dart_html/DomSelection.html">DomSelection</a> <strong>getSelection</strong>() <a class="anchor-link" href="#getSelection"
+              title="Permalink to Window.getSelection">#</a></h4>
+<div class="doc">
+<p>Returns the selection object representing the selected item(s).</p>
+<pre class="source">
+@DomName('DOMWindow.getSelection')
+@DocsEditable
+DomSelection getSelection() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lookupPort">
+<button class="show-code">Code</button>
+<a href="../dart_isolate/SendPortSync.html">SendPortSync</a> <strong>lookupPort</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#lookupPort"
+              title="Permalink to Window.lookupPort">#</a></h4>
+<div class="doc">
+<p>Lookup a port by its 
+<span class="param">name</span>.  Return null if no port is
+registered under 
+<span class="param">name</span>.</p>
+<pre class="source">
+SendPortSync lookupPort(String name) {
+ var port =
+     json.parse(document.documentElement.attributes['dart-port:$name']);
+ return _deserialize(port);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="matchMedia">
+<button class="show-code">Code</button>
+<a href="../dart_html/MediaQueryList.html">MediaQueryList</a> <strong>matchMedia</strong>(<a href="../dart_core/String.html">String</a> query) <a class="anchor-link" href="#matchMedia"
+              title="Permalink to Window.matchMedia">#</a></h4>
+<div class="doc">
+<p>Returns a &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/DOM/MediaQueryList">MediaQueryList&lt;/a>&lt;/code>
+ object representing the specified media query string.</p>
+<pre class="source">
+@DomName('DOMWindow.matchMedia')
+@DocsEditable
+MediaQueryList matchMedia(String query) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="moveBy">
+<button class="show-code">Code</button>
+void <strong>moveBy</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y) <a class="anchor-link" href="#moveBy"
+              title="Permalink to Window.moveBy">#</a></h4>
+<div class="doc">
+<p>Moves the current window by a specified amount.</p>
+<pre class="source">
+@DomName('DOMWindow.moveBy')
+@DocsEditable
+void moveBy(num x, num y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="moveTo">
+<button class="show-code">Code</button>
+void <strong>moveTo</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y) <a class="anchor-link" href="#moveTo"
+              title="Permalink to Window.moveTo">#</a></h4>
+<div class="doc">
+<p>Moves the window to the specified coordinates.</p>
+<pre class="source">
+@DomName('DOMWindow.moveTo')
+@DocsEditable
+void moveTo(num x, num y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="open">
+<button class="show-code">Code</button>
+<a href="../dart_html/WindowBase.html">WindowBase</a> <strong>open</strong>(<a href="../dart_core/String.html">String</a> url, <a href="../dart_core/String.html">String</a> name, [<a href="../dart_core/String.html">String</a> options]) <a class="anchor-link" href="#open"
+              title="Permalink to Window.open">#</a></h4>
+<div class="doc">
+<pre class="source">
+WindowBase open(String url, String name, [String options]) {
+ if (options == null) {
+   return _DOMWindowCrossFrame._createSafe(_open2(url, name));
+ } else {
+   return _DOMWindowCrossFrame._createSafe(_open3(url, name, options));
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="openDatabase">
+<button class="show-code">Code</button>
+<a href="../dart_web_sql/SqlDatabase.html">SqlDatabase</a> <strong>openDatabase</strong>(<a href="../dart_core/String.html">String</a> name, <a href="../dart_core/String.html">String</a> version, <a href="../dart_core/String.html">String</a> displayName, <a href="../dart_core/int.html">int</a> estimatedSize, [<a href="../dart_web_sql/DatabaseCallback.html">DatabaseCallback</a> creationCallback]) <a class="anchor-link" href="#openDatabase"
+              title="Permalink to Window.openDatabase">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('DOMWindow.openDatabase')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+@Creates('SqlDatabase')
+@Creates('SqlDatabaseSync')
+SqlDatabase openDatabase(String name, String version, String displayName, int estimatedSize, [DatabaseCallback creationCallback]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="postMessage">
+<button class="show-code">Code</button>
+void <strong>postMessage</strong>(message, <a href="../dart_core/String.html">String</a> targetOrigin, [<a href="../dart_core/List.html">List</a> messagePorts]) <a class="anchor-link" href="#postMessage"
+              title="Permalink to Window.postMessage">#</a></h4>
+<div class="doc">
+<p>Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first, in a secure manner.</p>
+<pre class="source">
+@DomName('DOMWindow.postMessage')
+@DocsEditable
+void postMessage(/*SerializedScriptValue*/ message, String targetOrigin, [List messagePorts]) {
+ if (?message &amp;&amp; !?messagePorts) {
+   var message_1 = convertDartToNative_SerializedScriptValue(message);
+   _postMessage_1(message_1, targetOrigin);
+   return;
+ }
+ if (?message) {
+   var message_2 = convertDartToNative_SerializedScriptValue(message);
+   _postMessage_2(message_2, targetOrigin, messagePorts);
+   return;
+ }
+ throw new ArgumentError("Incorrect number or type of arguments");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="print">
+<button class="show-code">Code</button>
+void <strong>print</strong>() <a class="anchor-link" href="#print"
+              title="Permalink to Window.print">#</a></h4>
+<div class="doc">
+<p>Opens the Print Dialog to print the current document.</p>
+<pre class="source">
+@DomName('DOMWindow.print')
+@DocsEditable
+void print() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="registerPort">
+<button class="show-code">Code</button>
+void <strong>registerPort</strong>(<a href="../dart_core/String.html">String</a> name, port) <a class="anchor-link" href="#registerPort"
+              title="Permalink to Window.registerPort">#</a></h4>
+<div class="doc">
+<p>Register a 
+<span class="param">port</span> on this window under the given 
+<span class="param">name</span>.  This
+port may be retrieved by any isolate (or JavaScript script)
+running in this window.</p>
+<pre class="source">
+void registerPort(String name, var port) {
+ var serialized = _serialize(port);
+ document.documentElement.attributes['dart-port:$name'] =
+     json.stringify(serialized);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="releaseEvents">
+<button class="show-code">Code</button>
+void <strong>releaseEvents</strong>() <a class="anchor-link" href="#releaseEvents"
+              title="Permalink to Window.releaseEvents">#</a></h4>
+<div class="doc">
+<p>Releases the window from trapping events of a specific type.</p>
+<pre class="source">
+@DomName('DOMWindow.releaseEvents')
+@DocsEditable
+void releaseEvents() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="requestAnimationFrame">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>requestAnimationFrame</strong>(<a href="../dart_html/RequestAnimationFrameCallback.html">RequestAnimationFrameCallback</a> callback) <a class="anchor-link" href="#requestAnimationFrame"
+              title="Permalink to Window.requestAnimationFrame">#</a></h4>
+<div class="doc">
+<p>Called to draw an animation frame and then request the window to repaint
+after 
+<span class="param">callback</span> has finished (creating the animation). </p>
+<p>Use this method only if you need to later call <a class="crossref" href="../dart_html/Window.html#cancelAnimationFrame">cancelAnimationFrame</a>. If
+not, the preferred Dart idiom is to set animation frames by calling
+<a class="crossref" href="../dart_html/Window.html#animationFrame">animationFrame</a>, which returns a Future.</p>
+<p>Returns a non-zero valued integer to represent the request id for this
+request. This value only needs to be saved if you intend to call
+<a class="crossref" href="../dart_html/Window.html#cancelAnimationFrame">cancelAnimationFrame</a> so you can specify the particular animation to
+cancel.</p>
+<p>Note: The supplied 
+<span class="param">callback</span> needs to call <a class="crossref" href="../dart_html/Window.html#requestAnimationFrame">requestAnimationFrame</a> again
+for the animation to continue.</p>
+<pre class="source">
+@DomName('DOMWindow.requestAnimationFrame')
+int requestAnimationFrame(RequestAnimationFrameCallback callback) {
+ _ensureRequestAnimationFrame();
+ return _requestAnimationFrame(callback);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="requestFileSystem">
+<button class="show-code">Code</button>
+void <strong>requestFileSystem</strong>(<a href="../dart_core/int.html">int</a> type, <a href="../dart_core/int.html">int</a> size, <a href="../dart_html/FileSystemCallback.html">FileSystemCallback</a> successCallback, [<a href="../dart_html/ErrorCallback.html">ErrorCallback</a> errorCallback]) <a class="anchor-link" href="#requestFileSystem"
+              title="Permalink to Window.requestFileSystem">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('webkitRequestFileSystem')
+@DomName('DOMWindow.webkitRequestFileSystem')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@Experimental
+void requestFileSystem(int type, int size, FileSystemCallback successCallback, [ErrorCallback errorCallback]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="resizeBy">
+<button class="show-code">Code</button>
+void <strong>resizeBy</strong>(<a href="../dart_core/num.html">num</a> x, <a href="../dart_core/num.html">num</a> y) <a class="anchor-link" href="#resizeBy"
+              title="Permalink to Window.resizeBy">#</a></h4>
+<div class="doc">
+<p>Resizes the current window by a certain amount.</p>
+<pre class="source">
+@DomName('DOMWindow.resizeBy')
+@DocsEditable
+void resizeBy(num x, num y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="resizeTo">
+<button class="show-code">Code</button>
+void <strong>resizeTo</strong>(<a href="../dart_core/num.html">num</a> width, <a href="../dart_core/num.html">num</a> height) <a class="anchor-link" href="#resizeTo"
+              title="Permalink to Window.resizeTo">#</a></h4>
+<div class="doc">
+<p>Dynamically resizes window.</p>
+<pre class="source">
+@DomName('DOMWindow.resizeTo')
+@DocsEditable
+void resizeTo(num width, num height) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="resolveLocalFileSystemUrl">
+<button class="show-code">Code</button>
+void <strong>resolveLocalFileSystemUrl</strong>(<a href="../dart_core/String.html">String</a> url, <a href="../dart_html/EntryCallback.html">EntryCallback</a> successCallback, [<a href="../dart_html/ErrorCallback.html">ErrorCallback</a> errorCallback]) <a class="anchor-link" href="#resolveLocalFileSystemUrl"
+              title="Permalink to Window.resolveLocalFileSystemUrl">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('webkitResolveLocalFileSystemURL')
+@DomName('DOMWindow.webkitResolveLocalFileSystemURL')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@Experimental
+void resolveLocalFileSystemUrl(String url, EntryCallback successCallback, [ErrorCallback errorCallback]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="scroll">
+<button class="show-code">Code</button>
+void <strong>scroll</strong>(<a href="../dart_core/int.html">int</a> x, <a href="../dart_core/int.html">int</a> y) <a class="anchor-link" href="#scroll"
+              title="Permalink to Window.scroll">#</a></h4>
+<div class="doc">
+<p>Scrolls the window to a particular place in the document.</p>
+<pre class="source">
+@DomName('DOMWindow.scroll')
+@DocsEditable
+void scroll(int x, int y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="scrollBy">
+<button class="show-code">Code</button>
+void <strong>scrollBy</strong>(<a href="../dart_core/int.html">int</a> x, <a href="../dart_core/int.html">int</a> y) <a class="anchor-link" href="#scrollBy"
+              title="Permalink to Window.scrollBy">#</a></h4>
+<div class="doc">
+<p>Scrolls the document in the window by the given amount.</p>
+<pre class="source">
+@DomName('DOMWindow.scrollBy')
+@DocsEditable
+void scrollBy(int x, int y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="scrollTo">
+<button class="show-code">Code</button>
+void <strong>scrollTo</strong>(<a href="../dart_core/int.html">int</a> x, <a href="../dart_core/int.html">int</a> y) <a class="anchor-link" href="#scrollTo"
+              title="Permalink to Window.scrollTo">#</a></h4>
+<div class="doc">
+<p>Scrolls to a particular set of coordinates in the document.</p>
+<pre class="source">
+@DomName('DOMWindow.scrollTo')
+@DocsEditable
+void scrollTo(int x, int y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setImmediate">
+<button class="show-code">Code</button>
+void <strong>setImmediate</strong>(<a href="../dart_html/TimeoutHandler.html">TimeoutHandler</a> callback) <a class="anchor-link" href="#setImmediate"
+              title="Permalink to Window.setImmediate">#</a></h4>
+<div class="doc">
+<p>Executes a 
+<span class="param">callback</span> after the immediate execution stack has completed.</p>
+<p>This differs from using Timer.run(callback)
+because Timer will run in about 4-15 milliseconds, depending on browser,
+depending on load. <a class="crossref" href="../dart_html/Window.html#setImmediate">setImmediate</a>, in contrast, makes browser-specific
+changes in behavior to attempt to run immediately after the current
+frame unwinds, causing the future to complete after all processing has
+completed for the current event, but before any subsequent events.</p>
+<pre class="source">
+void setImmediate(TimeoutHandler callback) { 
+ _addMicrotaskCallback(callback);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="showModalDialog">
+<button class="show-code">Code</button>
+<a href="../dart_core/Object.html">Object</a> <strong>showModalDialog</strong>(<a href="../dart_core/String.html">String</a> url, [<a href="../dart_core/Object.html">Object</a> dialogArgs, <a href="../dart_core/String.html">String</a> featureArgs]) <a class="anchor-link" href="#showModalDialog"
+              title="Permalink to Window.showModalDialog">#</a></h4>
+<div class="doc">
+<p>Displays a modal dialog.</p>
+<pre class="source">
+@DomName('DOMWindow.showModalDialog')
+@DocsEditable
+Object showModalDialog(String url, [Object dialogArgs, String featureArgs]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="stop">
+<button class="show-code">Code</button>
+void <strong>stop</strong>() <a class="anchor-link" href="#stop"
+              title="Permalink to Window.stop">#</a></h4>
+<div class="doc">
+<p>This method stops window loading.</p>
+<pre class="source">
+@DomName('DOMWindow.stop')
+@DocsEditable
+void stop() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_addEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_addEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_addEventListener"
+              title="Permalink to Window.$dom_addEventListener">#</a></h4>
+<div class="doc">
+<p>Register an event handler to a specific event type on the window.</p>
+<pre class="source">
+@JSName('addEventListener')
+@DomName('DOMWindow.addEventListener')
+@DocsEditable
+void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_getComputedStyle">
+<button class="show-code">Code</button>
+<a href="../dart_html/CssStyleDeclaration.html">CssStyleDeclaration</a> <strong>$dom_getComputedStyle</strong>(<a href="../dart_html/Element.html">Element</a> element, <a href="../dart_core/String.html">String</a> pseudoElement) <a class="anchor-link" href="#$dom_getComputedStyle"
+              title="Permalink to Window.$dom_getComputedStyle">#</a></h4>
+<div class="doc">
+<p>Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.</p>
+<pre class="source">
+@JSName('getComputedStyle')
+@DomName('DOMWindow.getComputedStyle')
+@DocsEditable
+CssStyleDeclaration $dom_getComputedStyle(Element element, String pseudoElement) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_removeEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_removeEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_removeEventListener"
+              title="Permalink to Window.$dom_removeEventListener">#</a></h4>
+<div class="doc">
+<p>Removes an event listener from the window.</p>
+<pre class="source">
+@JSName('removeEventListener')
+@DomName('DOMWindow.removeEventListener')
+@DocsEditable
+void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+</div>
+          <p class="mdn-attribution">
+          <a href="https://developer.mozilla.org">
+            <img src="../mdn-logo-tiny.png" class="mdn-logo" />
+          </a>
+          This page includes <a href="https://developer.mozilla.org/en/DOM/window">content</a> from the
+          <a href="http://www.mozilla.org/">Mozilla Foundation</a> that is graciously
+          <a href="https://developer.mozilla.org/Project:Copyrights">licensed</a> under a
+          <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons: Attribution-Sharealike license</a>.
+          Mozilla has no other association with Dart or dartlang.org. We
+          encourage you to improve the web by
+          <a href="https://developer.mozilla.org/Project:en/How_to_Help">contributing</a> to
+          <a href="https://developer.mozilla.org">The Mozilla Developer Network</a>.
+          </p>
+          
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:31.997</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

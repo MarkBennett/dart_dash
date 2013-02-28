@@ -1,0 +1,524 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>RuneIterator class / dart:core Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:core" data-type="RuneIterator">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_core.html">dart:core</a> &rsaquo; <a href="../dart_core/RuneIterator.html">RuneIterator</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><ul class="icon">
+<li><a href="../dart_core/BidirectionalIterator.html"><div class="icon-class"></div>BidirectionalIterator&lt;T&gt;</a></li>
+<li><a href="../dart_core/bool.html"><div class="icon-class"></div>bool</a></li>
+<li><a href="../dart_core/Collection.html"><div class="icon-class"></div>Collection&lt;E&gt;</a></li>
+<li><a href="../dart_core/Comparable.html"><div class="icon-class"></div>Comparable&lt;T&gt;</a></li>
+<li><a href="../dart_core/Comparator.html"><div class="icon-interface"></div>Comparator&lt;T&gt;</a></li>
+<li><a href="../dart_core/Date.html"><div class="icon-class"></div>Date</a></li>
+<li><a href="../dart_core/DateTime.html"><div class="icon-class"></div>DateTime</a></li>
+<li><a href="../dart_core/double.html"><div class="icon-class"></div>double</a></li>
+<li><a href="../dart_core/Duration.html"><div class="icon-class"></div>Duration</a></li>
+<li><a href="../dart_core/Expando.html"><div class="icon-class"></div>Expando&lt;T&gt;</a></li>
+<li><a href="../dart_core/Expect.html"><div class="icon-class"></div>Expect</a></li>
+<li><a href="../dart_core/Function.html"><div class="icon-class"></div>Function</a></li>
+<li><a href="../dart_core/int.html"><div class="icon-class"></div>int</a></li>
+<li><a href="../dart_core/InvocationMirror.html"><div class="icon-class"></div>InvocationMirror</a></li>
+<li><a href="../dart_core/Iterable.html"><div class="icon-class"></div>Iterable&lt;E&gt;</a></li>
+<li><a href="../dart_core/Iterator.html"><div class="icon-class"></div>Iterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/List.html"><div class="icon-class"></div>List&lt;E&gt;</a></li>
+<li><a href="../dart_core/Map.html"><div class="icon-class"></div>Map&lt;K, V&gt;</a></li>
+<li><a href="../dart_core/Match.html"><div class="icon-class"></div>Match</a></li>
+<li><a href="../dart_core/num.html"><div class="icon-class"></div>num</a></li>
+<li><a href="../dart_core/Object.html"><div class="icon-class"></div>Object</a></li>
+<li><a href="../dart_core/Options.html"><div class="icon-class"></div>Options</a></li>
+<li><a href="../dart_core/Pattern.html"><div class="icon-class"></div>Pattern</a></li>
+<li><a href="../dart_core/RegExp.html"><div class="icon-class"></div>RegExp</a></li>
+<li><div class="icon-class"></div><strong>RuneIterator</strong></li>
+<li><a href="../dart_core/Runes.html"><div class="icon-class"></div>Runes</a></li>
+<li><a href="../dart_core/Set.html"><div class="icon-class"></div>Set&lt;E&gt;</a></li>
+<li><a href="../dart_core/Stopwatch.html"><div class="icon-class"></div>Stopwatch</a></li>
+<li><a href="../dart_core/String.html"><div class="icon-class"></div>String</a></li>
+<li><a href="../dart_core/StringBuffer.html"><div class="icon-class"></div>StringBuffer</a></li>
+<li><a href="../dart_core/StringSink.html"><div class="icon-class"></div>StringSink</a></li>
+<li><a href="../dart_core/Type.html"><div class="icon-class"></div>Type</a></li>
+<li><a href="../dart_core/AbstractClassInstantiationError.html"><div class="icon-exception"></div>AbstractClassInstantiationError</a></li>
+<li><a href="../dart_core/ArgumentError.html"><div class="icon-exception"></div>ArgumentError</a></li>
+<li><a href="../dart_core/AssertionError.html"><div class="icon-exception"></div>AssertionError</a></li>
+<li><a href="../dart_core/CastError.html"><div class="icon-exception"></div>CastError</a></li>
+<li><a href="../dart_core/ConcurrentModificationError.html"><div class="icon-exception"></div>ConcurrentModificationError</a></li>
+<li><a href="../dart_core/Error.html"><div class="icon-exception"></div>Error</a></li>
+<li><a href="../dart_core/Exception.html"><div class="icon-exception"></div>Exception</a></li>
+<li><a href="../dart_core/ExpectException.html"><div class="icon-exception"></div>ExpectException</a></li>
+<li><a href="../dart_core/FallThroughError.html"><div class="icon-exception"></div>FallThroughError</a></li>
+<li><a href="../dart_core/FormatException.html"><div class="icon-exception"></div>FormatException</a></li>
+<li><a href="../dart_core/IllegalJSRegExpException.html"><div class="icon-exception"></div>IllegalJSRegExpException</a></li>
+<li><a href="../dart_core/IntegerDivisionByZeroException.html"><div class="icon-exception"></div>IntegerDivisionByZeroException</a></li>
+<li><a href="../dart_core/NoSuchMethodError.html"><div class="icon-exception"></div>NoSuchMethodError</a></li>
+<li><a href="../dart_core/NullThrownError.html"><div class="icon-exception"></div>NullThrownError</a></li>
+<li><a href="../dart_core/OutOfMemoryError.html"><div class="icon-exception"></div>OutOfMemoryError</a></li>
+<li><a href="../dart_core/RangeError.html"><div class="icon-exception"></div>RangeError</a></li>
+<li><a href="../dart_core/RuntimeError.html"><div class="icon-exception"></div>RuntimeError</a></li>
+<li><a href="../dart_core/StackOverflowError.html"><div class="icon-exception"></div>StackOverflowError</a></li>
+<li><a href="../dart_core/StateError.html"><div class="icon-exception"></div>StateError</a></li>
+<li><a href="../dart_core/TypeError.html"><div class="icon-exception"></div>TypeError</a></li>
+<li><a href="../dart_core/UnimplementedError.html"><div class="icon-exception"></div>UnimplementedError</a></li>
+<li><a href="../dart_core/UnsupportedError.html"><div class="icon-exception"></div>UnsupportedError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>RuneIterator</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p><a class="crossref" href="../dart_core/Iterator.html">Iterator</a> for reading Unicode code points out of a Dart string. </p>
+<pre class="source">
+class RuneIterator implements BidirectionalIterator&lt;int&gt; {
+ /** String being iterated. */
+ final String string;
+ /** Position before the current code point. */
+ int _position;
+ /** Position after the current code point. */
+ int _nextPosition;
+ /**
+  * Current code point.
+  *
+  * If the iterator has hit either end, the [_currentCodePoint] is null
+  * and [: _position == _nextPosition :].
+  */
+ int _currentCodePoint;
+
+ /** Create an iterator positioned at the beginning of the string. */
+ RuneIterator(String string)
+     : this.string = string, _position = 0, _nextPosition = 0;
+
+ /**
+  * Create an iterator positioned before the [index]th code unit of the string.
+  *
+  * When created, there is no [current] value.
+  * A [moveNext] will use the rune starting at [index] the current value,
+  * and a [movePrevious] will use the rune ending just before [index] as the
+  * the current value.
+  *
+  * It is an error if the [index] position is in the middle of a surrogate
+  * pair.
+  */
+ RuneIterator.at(String string, int index)
+     : string = string, _position = index, _nextPosition = index {
+   if (index &lt; 0 || index &gt; string.length) {
+     throw new RangeError.range(index, 0, string.length);
+   }
+   _checkSplitSurrogate(index);
+ }
+
+ /** Throw an error if the index is in the middle of a surrogate pair. */
+ void _checkSplitSurrogate(int index) {
+   if (index &gt; 0 &amp;&amp; index &lt; string.length &amp;&amp;
+       _isLeadSurrogate(string.codeUnitAt(index - 1)) &amp;&amp;
+       _isTrailSurrogate(string.codeUnitAt(index))) {
+     throw new ArgumentError("Index inside surrogate pair: $index");
+   }
+ }
+
+ /**
+  * Returns the starting position of the current rune in the string.
+  *
+  * Returns null if the [current] rune is null.
+  */
+ int get rawIndex =&gt; (_position != _nextPosition) ? _position : null;
+
+ /**
+  * Resets the iterator to the rune at the specified index of the string.
+  *
+  * Setting a negative [rawIndex], or one greater than or equal to
+  * [:string.length:],
+  * is an error. So is setting it in the middle of a surrogate pair.
+  *
+  * Setting the position to the end of then string will set [current] to null.
+  */
+ void set rawIndex(int rawIndex) {
+   if (rawIndex &gt;= string.length) {
+     throw new RangeError.range(rawIndex, 0, string.length - 1);
+   }
+   reset(rawIndex);
+   moveNext();
+ }
+
+ /**
+  * Resets the iterator to the given index into the string.
+  *
+  * After this the [current] value is unset.
+  * You must call [moveNext] make the rune at the position current,
+  * or [movePrevious] for the last rune before the position.
+  *
+  * Setting a negative [rawIndex], or one greater than [:string.length:],
+  * is an error. So is setting it in the middle of a surrogate pair.
+  */
+ void reset([int rawIndex = 0]) {
+   if (rawIndex &lt; 0 || rawIndex &gt; string.length) {
+     throw new RangeError.range(rawIndex, 0, string.length);
+   }
+   _checkSplitSurrogate(rawIndex);
+   _position = _nextPosition = rawIndex;
+   _currentCodePoint = null;
+ }
+
+ /** The rune starting at the current position in the string. */
+ int get current =&gt; _currentCodePoint;
+
+ /**
+  * The number of code units comprising the current rune.
+  *
+  * Returns zero if there is no current rune ([current] is null).
+  */
+ int get currentSize =&gt; _nextPosition - _position;
+
+ /**
+  * A string containing the current rune.
+  *
+  * For runes outside the basic multilingual plane, this will be
+  * a two-character String.
+  *
+  * Returns null if [current] is null.
+  */
+ String get currentAsString {
+   if (_position == _nextPosition) return null;
+   if (_position + 1 == _nextPosition) return string[_position];
+   return string.substring(_position, _nextPosition);
+ }
+
+ bool moveNext() {
+   _position = _nextPosition;
+   if (_position == string.length) {
+     _currentCodePoint = null;
+     return false;
+   }
+   int codeUnit = string.codeUnitAt(_position);
+   int nextPosition = _position + 1;
+   if (_isLeadSurrogate(codeUnit) &amp;&amp; nextPosition &lt; string.length) {
+     int nextCodeUnit = string.codeUnitAt(nextPosition);
+     if (_isTrailSurrogate(nextCodeUnit)) {
+       _nextPosition = nextPosition + 1;
+       _currentCodePoint = _combineSurrogatePair(codeUnit, nextCodeUnit);
+       return true;
+     }
+   }
+   _nextPosition = nextPosition;
+   _currentCodePoint = codeUnit;
+   return true;
+ }
+
+ bool movePrevious() {
+   _nextPosition = _position;
+   if (_position == 0) {
+     _currentCodePoint = null;
+     return false;
+   }
+   int position = _position - 1;
+   int codeUnit = string.codeUnitAt(position);
+   if (_isTrailSurrogate(codeUnit) &amp;&amp; position &gt; 0) {
+     int prevCodeUnit = string.codeUnitAt(position - 1);
+     if (_isLeadSurrogate(prevCodeUnit)) {
+       _position = position - 1;
+       _currentCodePoint = _combineSurrogatePair(prevCodeUnit, codeUnit);
+       return true;
+     }
+   }
+   _position = position;
+   _currentCodePoint = codeUnit;
+   return true;
+ }
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_core/BidirectionalIterator.html">BidirectionalIterator&lt;int&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="RuneIterator">
+<button class="show-code">Code</button>
+new <strong>RuneIterator</strong>(<a href="../dart_core/String.html">String</a> string) <a class="anchor-link" href="#RuneIterator"
+              title="Permalink to RuneIterator.RuneIterator">#</a></h4>
+<div class="doc">
+<p>Create an iterator positioned at the beginning of the string. </p>
+<pre class="source">
+RuneIterator(String string)
+   : this.string = string, _position = 0, _nextPosition = 0;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="RuneIterator.at">
+<button class="show-code">Code</button>
+new <strong>RuneIterator.at</strong>(<a href="../dart_core/String.html">String</a> string, <a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#RuneIterator.at"
+              title="Permalink to RuneIterator.RuneIterator.at">#</a></h4>
+<div class="doc">
+<p>Create an iterator positioned before the 
+<span class="param">index</span>th code unit of the string.</p>
+<p>When created, there is no <a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> value.
+A <a class="crossref" href="../dart_core/RuneIterator.html#moveNext">moveNext</a> will use the rune starting at 
+<span class="param">index</span> the current value,
+and a <a class="crossref" href="../dart_core/RuneIterator.html#movePrevious">movePrevious</a> will use the rune ending just before 
+<span class="param">index</span> as the
+the current value.</p>
+<p>It is an error if the 
+<span class="param">index</span> position is in the middle of a surrogate
+pair.</p>
+<pre class="source">
+RuneIterator.at(String string, int index)
+   : string = string, _position = index, _nextPosition = index {
+ if (index &lt; 0 || index &gt; string.length) {
+   throw new RangeError.range(index, 0, string.length);
+ }
+ _checkSplitSurrogate(index);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="current">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>current</strong> <a class="anchor-link"
+            href="#current"
+            title="Permalink to RuneIterator.current">#</a>
+        </h4>
+        <div class="doc">
+<p>The rune starting at the current position in the string. </p>
+<pre class="source">
+int get current =&gt; _currentCodePoint;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="currentAsString">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>currentAsString</strong> <a class="anchor-link"
+            href="#currentAsString"
+            title="Permalink to RuneIterator.currentAsString">#</a>
+        </h4>
+        <div class="doc">
+<p>A string containing the current rune.</p>
+<p>For runes outside the basic multilingual plane, this will be
+a two-character String.</p>
+<p>Returns null if <a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> is null.</p>
+<pre class="source">
+String get currentAsString {
+ if (_position == _nextPosition) return null;
+ if (_position + 1 == _nextPosition) return string[_position];
+ return string.substring(_position, _nextPosition);
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="currentSize">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>currentSize</strong> <a class="anchor-link"
+            href="#currentSize"
+            title="Permalink to RuneIterator.currentSize">#</a>
+        </h4>
+        <div class="doc">
+<p>The number of code units comprising the current rune.</p>
+<p>Returns zero if there is no current rune (<a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> is null).</p>
+<pre class="source">
+int get currentSize =&gt; _nextPosition - _position;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="rawIndex">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>get rawIndex</strong> <a class="anchor-link" href="#rawIndex"
+              title="Permalink to RuneIterator.get rawIndex">#</a></h4>
+<div class="doc">
+<p>Returns the starting position of the current rune in the string.</p>
+<p>Returns null if the <a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> rune is null.</p>
+<pre class="source">
+int get rawIndex =&gt; (_position != _nextPosition) ? _position : null;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="rawIndex=">
+<button class="show-code">Code</button>
+void <strong>set rawIndex</strong>(<a href="../dart_core/int.html">int</a> rawIndex) <a class="anchor-link" href="#rawIndex="
+              title="Permalink to RuneIterator.set rawIndex">#</a></h4>
+<div class="doc">
+<p>Resets the iterator to the rune at the specified index of the string.</p>
+<p>Setting a negative 
+<span class="param">rawIndex</span>, or one greater than or equal to
+<code>string.length</code>,
+is an error. So is setting it in the middle of a surrogate pair.</p>
+<p>Setting the position to the end of then string will set <a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> to null.</p>
+<pre class="source">
+void set rawIndex(int rawIndex) {
+ if (rawIndex &gt;= string.length) {
+   throw new RangeError.range(rawIndex, 0, string.length - 1);
+ }
+ reset(rawIndex);
+ moveNext();
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="string">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>string</strong> <a class="anchor-link"
+            href="#string"
+            title="Permalink to RuneIterator.string">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+string
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="moveNext">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>moveNext</strong>() <a class="anchor-link" href="#moveNext"
+              title="Permalink to RuneIterator.moveNext">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Moves to the next element. Returns true if <a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> contains the next
+element. Returns false, if no element was left.</p>
+<p>It is safe to invoke <a class="crossref" href="../dart_core/RuneIterator.html#moveNext">moveNext</a> even when the iterator is already
+positioned after the last element. In this case <a class="crossref" href="../dart_core/RuneIterator.html#moveNext">moveNext</a> has no effect.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterator.html">Iterator</a>&lt;<a href="../dart_core/RuneIterator.html">T</a>&gt; </div></div>
+<pre class="source">
+bool moveNext() {
+ _position = _nextPosition;
+ if (_position == string.length) {
+   _currentCodePoint = null;
+   return false;
+ }
+ int codeUnit = string.codeUnitAt(_position);
+ int nextPosition = _position + 1;
+ if (_isLeadSurrogate(codeUnit) &amp;&amp; nextPosition &lt; string.length) {
+   int nextCodeUnit = string.codeUnitAt(nextPosition);
+   if (_isTrailSurrogate(nextCodeUnit)) {
+     _nextPosition = nextPosition + 1;
+     _currentCodePoint = _combineSurrogatePair(codeUnit, nextCodeUnit);
+     return true;
+   }
+ }
+ _nextPosition = nextPosition;
+ _currentCodePoint = codeUnit;
+ return true;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="movePrevious">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>movePrevious</strong>() <a class="anchor-link" href="#movePrevious"
+              title="Permalink to RuneIterator.movePrevious">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Move back to the previous element.</p>
+<p>Returns true and updates <a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> if successful. Returns false
+and sets <a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> to null if there is no previous element.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/BidirectionalIterator.html">BidirectionalIterator</a>&lt;<a href="../dart_core/int.html">int</a>&gt; </div></div>
+<pre class="source">
+bool movePrevious() {
+ _nextPosition = _position;
+ if (_position == 0) {
+   _currentCodePoint = null;
+   return false;
+ }
+ int position = _position - 1;
+ int codeUnit = string.codeUnitAt(position);
+ if (_isTrailSurrogate(codeUnit) &amp;&amp; position &gt; 0) {
+   int prevCodeUnit = string.codeUnitAt(position - 1);
+   if (_isLeadSurrogate(prevCodeUnit)) {
+     _position = position - 1;
+     _currentCodePoint = _combineSurrogatePair(prevCodeUnit, codeUnit);
+     return true;
+   }
+ }
+ _position = position;
+ _currentCodePoint = codeUnit;
+ return true;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="reset">
+<button class="show-code">Code</button>
+void <strong>reset</strong>([<a href="../dart_core/int.html">int</a> rawIndex = 0]) <a class="anchor-link" href="#reset"
+              title="Permalink to RuneIterator.reset">#</a></h4>
+<div class="doc">
+<p>Resets the iterator to the given index into the string.</p>
+<p>After this the <a class="crossref" href="../dart_core/RuneIterator.html#current">current</a> value is unset.
+You must call <a class="crossref" href="../dart_core/RuneIterator.html#moveNext">moveNext</a> make the rune at the position current,
+or <a class="crossref" href="../dart_core/RuneIterator.html#movePrevious">movePrevious</a> for the last rune before the position.</p>
+<p>Setting a negative 
+<span class="param">rawIndex</span>, or one greater than <code>string.length</code>,
+is an error. So is setting it in the middle of a surrogate pair.</p>
+<pre class="source">
+void reset([int rawIndex = 0]) {
+ if (rawIndex &lt; 0 || rawIndex &gt; string.length) {
+   throw new RangeError.range(rawIndex, 0, string.length);
+ }
+ _checkSplitSurrogate(rawIndex);
+ _position = _nextPosition = rawIndex;
+ _currentCodePoint = null;
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:23.201</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

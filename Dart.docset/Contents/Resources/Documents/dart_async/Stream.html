@@ -1,0 +1,1840 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Stream&lt;T&gt; abstract class / dart:async Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:async" data-type="Stream&amp;lt;T&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_async.html">dart:async</a> &rsaquo; <a href="../dart_async/Stream.html">Stream&lt;T&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><ul class="icon">
+<li><a href="../dart_async/CollectionSink.html"><div class="icon-class"></div>CollectionSink&lt;T&gt;</a></li>
+<li><a href="../dart_async/Completer.html"><div class="icon-class"></div>Completer&lt;T&gt;</a></li>
+<li><a href="../dart_async/DeferredLibrary.html"><div class="icon-class"></div>DeferredLibrary</a></li>
+<li><a href="../dart_async/EventTransformStream.html"><div class="icon-class"></div>EventTransformStream&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/Future.html"><div class="icon-class"></div>Future&lt;T&gt;</a></li>
+<li><div class="icon-class"></div><strong>Stream&lt;T&gt;</strong></li>
+<li><a href="../dart_async/StreamConsumer.html"><div class="icon-class"></div>StreamConsumer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamController.html"><div class="icon-class"></div>StreamController&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamEventTransformer.html"><div class="icon-class"></div>StreamEventTransformer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamSink.html"><div class="icon-class"></div>StreamSink&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamSinkView.html"><div class="icon-class"></div>StreamSinkView&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamSubscription.html"><div class="icon-class"></div>StreamSubscription&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamTransformer.html"><div class="icon-class"></div>StreamTransformer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamView.html"><div class="icon-class"></div>StreamView&lt;T&gt;</a></li>
+<li><a href="../dart_async/Timer.html"><div class="icon-class"></div>Timer</a></li>
+<li><a href="../dart_async/AsyncError.html"><div class="icon-exception"></div>AsyncError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Stream&lt;T&gt;</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A source of asynchronous data events.</p>
+<p>A Stream provides a sequence of events. Each event is either a data event or
+an error event, representing the result of a single computation. When the
+Stream is exhausted, it may send a single "done" event.</p>
+<p>You can <a class="crossref" href="../dart_async/Stream.html#listen">listen</a> on a stream to receive the events it sends. When you listen,
+you receive a <a class="crossref" href="../dart_async/StreamSubscription.html">StreamSubscription</a> object that can be used to stop listening,
+or to temporarily pause events from the stream.</p>
+<p>When an event is fired, the listeners at that time are informed.
+If a listener is added or removed while an event is being fired, the change
+will only take effect after the event is completely fired.</p>
+<p>Streams always respect "pause" requests. If necessary they need to buffer
+their input, but often, and preferably, they can simply request their input
+to pause too.</p>
+<p>There are two kinds of streams: The normal "single-subscription" streams and
+"broadcast" streams.</p>
+<p>A single-subscription stream allows only a single listener at a time.
+It holds back events until it gets a listener, and it may exhaust
+itself when the listener is unsubscribed, even if the stream wasn't done.</p>
+<p>Single-subscription streams are generally used for streaming parts of
+contiguous data like file I/O.</p>
+<p>A broadcast stream allows any number of listeners, and it fires
+its events when they are ready, whether there are listeners or not.</p>
+<p>Broadcast streams are used for independent events/observers.</p>
+<p>The default implementation of <a class="crossref" href="../dart_async/Stream.html#isBroadcast">isBroadcast</a> returns false.
+A broadcast stream inheriting from <a class="crossref" href="../dart_async/Stream.html#Stream">Stream</a> must override <a class="crossref" href="../dart_async/Stream.html#isBroadcast">isBroadcast</a>
+to return <code>true</code>.</p>
+<pre class="source">
+abstract class Stream&lt;T&gt; {
+ Stream();
+
+ /**
+  * Creates a new single-subscription stream from the future.
+  *
+  * When the future completes, the stream will fire one event, either
+  * data or error, and then close with a done-event.
+  */
+ factory Stream.fromFuture(Future&lt;T&gt; future) {
+   _StreamImpl&lt;T&gt; stream = new _SingleStreamImpl&lt;T&gt;();
+   future.then((value) {
+       stream._add(value);
+       stream._close();
+     },
+     onError: (error) {
+       stream._signalError(error);
+       stream._close();
+     });
+   return stream;
+ }
+
+ /**
+  * Creates a single-subscription stream that gets its data from [data].
+  */
+ factory Stream.fromIterable(Iterable&lt;T&gt; data) {
+   _PendingEvents iterableEvents = new _IterablePendingEvents&lt;T&gt;(data);
+   return new _GeneratedSingleStreamImpl&lt;T&gt;(iterableEvents);
+ }
+
+ /**
+  * Reports whether this stream is a broadcast stream.
+  */
+ bool get isBroadcast =&gt; false;
+
+ /**
+  * Returns a multi-subscription stream that produces the same events as this.
+  *
+  * If this stream is single-subscription, return a new stream that allows
+  * multiple subscribers. It will subscribe to this stream when its first
+  * subscriber is added, and unsubscribe again when the last subscription is
+  * cancelled.
+  *
+  * If this stream is already a broadcast stream, it is returned unmodified.
+  */
+ Stream&lt;T&gt; asBroadcastStream() {
+   if (isBroadcast) return this;
+   return new _SingleStreamMultiplexer&lt;T&gt;(this);
+ }
+
+ /**
+  * Adds a subscription to this stream.
+  *
+  * On each data event from this stream, the subscriber's [onData] handler
+  * is called. If [onData] is null, nothing happens.
+  *
+  * On errors from this stream, the [onError] handler is given a
+  * [AsyncError] object describing the error.
+  *
+  * If this stream closes, the [onDone] handler is called.
+  *
+  * If [unsubscribeOnError] is true, the subscription is ended when
+  * the first error is reported. The default is false.
+  */
+ StreamSubscription&lt;T&gt; listen(void onData(T event),
+                              { void onError(AsyncError error),
+                                void onDone(),
+                                bool unsubscribeOnError});
+
+ /**
+  * Creates a new stream from this stream that discards some data events.
+  *
+  * The new stream sends the same error and done events as this stream,
+  * but it only sends the data events that satisfy the [test].
+  */
+ Stream&lt;T&gt; where(bool test(T event)) {
+   return new _WhereStream&lt;T&gt;(this, test);
+ }
+
+ /**
+  * Creates a new stream that converts each element of this stream
+  * to a new value using the [convert] function.
+  */
+ Stream map(convert(T event)) {
+   return new _MapStream&lt;T, dynamic&gt;(this, convert);
+ }
+
+ /**
+  * Creates a wrapper Stream that intercepts some errors from this stream.
+  *
+  * If this stream sends an error that matches [test], then it is intercepted
+  * by the [handle] function.
+  *
+  * An [AsyncError] [:e:] is matched by a test function if [:test(e):] returns
+  * true. If [test] is omitted, every error is considered matching.
+  *
+  * If the error is intercepted, the [handle] function can decide what to do
+  * with it. It can throw if it wants to raise a new (or the same) error,
+  * or simply return to make the stream forget the error.
+  *
+  * If you need to transform an error into a data event, use the more generic
+  * [Stream.transformEvent] to handle the event by writing a data event to
+  * the output sink
+  */
+ Stream&lt;T&gt; handleError(void handle(AsyncError error), { bool test(error) }) {
+   return new _HandleErrorStream&lt;T&gt;(this, handle, test);
+ }
+
+ /**
+  * Creates a new stream from this stream that converts each element
+  * into zero or more events.
+  *
+  * Each incoming event is converted to an [Iterable] of new events,
+  * and each of these new events are then sent by the returned stream
+  * in order.
+  */
+ Stream expand(Iterable convert(T value)) {
+   return new _ExpandStream&lt;T, dynamic&gt;(this, convert);
+ }
+
+ /**
+  * Binds this stream as the input of the provided [StreamConsumer].
+  */
+ Future pipe(StreamConsumer&lt;T, dynamic&gt; streamConsumer) {
+   return streamConsumer.consume(this);
+ }
+
+ /**
+  * Chains this stream as the input of the provided [StreamTransformer].
+  *
+  * Returns the result of [:streamTransformer.bind:] itself.
+  */
+ Stream transform(StreamTransformer&lt;T, dynamic&gt; streamTransformer) {
+   return streamTransformer.bind(this);
+ }
+
+ /** Reduces a sequence of values by repeatedly applying [combine]. */
+ Future reduce(var initialValue, combine(var previous, T element)) {
+   _FutureImpl result = new _FutureImpl();
+   var value = initialValue;
+   StreamSubscription subscription;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ element) {
+       _runUserCode(
+         () =&gt; combine(value, element),
+         (result) { value = result; },
+         _cancelAndError(subscription, result)
+       );
+     },
+     onError: (AsyncError e) {
+       result._setError(e);
+     },
+     onDone: () {
+       result._setValue(value);
+     },
+     unsubscribeOnError: true);
+   return result;
+ }
+
+ // Deprecated method, previously called 'pipe', retained for compatibility.
+ Future pipeInto(StreamSink&lt;T&gt; sink,
+                 {void onError(AsyncError error),
+                  bool unsubscribeOnError}) {
+   _FutureImpl&lt;T&gt; result = new _FutureImpl&lt;T&gt;();
+   this.listen(
+       sink.add,
+       onError: sink.signalError,
+       onDone: () {
+         sink.close();
+         result._setValue(null);
+       },
+       unsubscribeOnError: unsubscribeOnError);
+   return result;
+ }
+
+
+ /**
+  * Checks whether [match] occurs in the elements provided by this stream.
+  *
+  * Completes the [Future] when the answer is known.
+  * If this stream reports an error, the [Future] will report that error.
+  */
+ Future&lt;bool&gt; contains(T match) {
+   _FutureImpl&lt;bool&gt; future = new _FutureImpl&lt;bool&gt;();
+   StreamSubscription subscription;
+   subscription = this.listen(
+       // TODO(ahe): Restore type when feature is implemented in dart2js
+       // checked mode. http://dartbug.com/7733
+       (/*T*/ element) {
+         _runUserCode(
+           () =&gt; (element == match),
+           (bool isMatch) {
+             if (isMatch) {
+               subscription.cancel();
+               future._setValue(true);
+             }
+           },
+           _cancelAndError(subscription, future)
+         );
+       },
+       onError: future._setError,
+       onDone: () {
+         future._setValue(false);
+       },
+       unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Checks whether [test] accepts all elements provided by this stream.
+  *
+  * Completes the [Future] when the answer is known.
+  * If this stream reports an error, the [Future] will report that error.
+  */
+ Future&lt;bool&gt; every(bool test(T element)) {
+   _FutureImpl&lt;bool&gt; future = new _FutureImpl&lt;bool&gt;();
+   StreamSubscription subscription;
+   subscription = this.listen(
+       // TODO(ahe): Restore type when feature is implemented in dart2js
+       // checked mode. http://dartbug.com/7733
+       (/*T*/ element) {
+         _runUserCode(
+           () =&gt; test(element),
+           (bool isMatch) {
+             if (!isMatch) {
+               subscription.cancel();
+               future._setValue(false);
+             }
+           },
+           _cancelAndError(subscription, future)
+         );
+       },
+       onError: future._setError,
+       onDone: () {
+         future._setValue(true);
+       },
+       unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Checks whether [test] accepts any element provided by this stream.
+  *
+  * Completes the [Future] when the answer is known.
+  * If this stream reports an error, the [Future] will report that error.
+  */
+ Future&lt;bool&gt; any(bool test(T element)) {
+   _FutureImpl&lt;bool&gt; future = new _FutureImpl&lt;bool&gt;();
+   StreamSubscription subscription;
+   subscription = this.listen(
+       // TODO(ahe): Restore type when feature is implemented in dart2js
+       // checked mode. http://dartbug.com/7733
+       (/*T*/ element) {
+         _runUserCode(
+           () =&gt; test(element),
+           (bool isMatch) {
+             if (isMatch) {
+               subscription.cancel();
+               future._setValue(true);
+             }
+           },
+           _cancelAndError(subscription, future)
+         );
+       },
+       onError: future._setError,
+       onDone: () {
+         future._setValue(false);
+       },
+       unsubscribeOnError: true);
+   return future;
+ }
+
+
+ /** Counts the elements in the stream. */
+ Future&lt;int&gt; get length {
+   _FutureImpl&lt;int&gt; future = new _FutureImpl&lt;int&gt;();
+   int count = 0;
+   this.listen(
+     (_) { count++; },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(count);
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Finds the least element in the stream.
+  *
+  * If the stream is empty, the result is [:null:].
+  * Otherwise the result is a value from the stream that is not greater
+  * than any other value from the stream (according to [compare], which must
+  * be a [Comparator]).
+  *
+  * If [compare] is omitted, it defaults to [Comparable.compare].
+  */
+ Future&lt;T&gt; min([int compare(T a, T b)]) {
+   if (compare == null) {
+     var defaultCompare = Comparable.compare;
+     compare = defaultCompare;
+   }
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   StreamSubscription subscription;
+   T min = null;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       min = value;
+       subscription.onData((T value) {
+         _runUserCode(
+           () =&gt; compare(min, value) &gt; 0,
+           (bool foundSmaller) {
+             if (foundSmaller) {
+               min = value;
+             }
+           },
+           _cancelAndError(subscription, future)
+         );
+       });
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(min);
+     },
+     unsubscribeOnError: true
+   );
+   return future;
+ }
+
+ /**
+  * Finds the largest element in the stream.
+  *
+  * If the stream is empty, the result is [:null:].
+  * Otherwise the result is an value from the stream that is not smaller
+  * than any other value from the stream (according to [compare], which must
+  * be a [Comparator]).
+  *
+  * If [compare] is omitted, it defaults to [Comparable.compare].
+  */
+ Future&lt;T&gt; max([int compare(T a, T b)]) {
+   if (compare == null)  {
+     var defaultCompare = Comparable.compare;
+     compare = defaultCompare;
+   }
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   StreamSubscription subscription;
+   T max = null;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       max = value;
+       subscription.onData((T value) {
+         _runUserCode(
+           () =&gt; compare(max, value) &lt; 0,
+           (bool foundGreater) {
+             if (foundGreater) {
+               max = value;
+             }
+           },
+           _cancelAndError(subscription, future)
+         );
+       });
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(max);
+     },
+     unsubscribeOnError: true
+   );
+   return future;
+ }
+
+ /** Reports whether this stream contains any elements. */
+ Future&lt;bool&gt; get isEmpty {
+   _FutureImpl&lt;bool&gt; future = new _FutureImpl&lt;bool&gt;();
+   StreamSubscription subscription;
+   subscription = this.listen(
+     (_) {
+       subscription.cancel();
+       future._setValue(false);
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(true);
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /** Collects the data of this stream in a [List]. */
+ Future&lt;List&lt;T&gt;&gt; toList() {
+   List&lt;T&gt; result = &lt;T&gt;[];
+   _FutureImpl&lt;List&lt;T&gt;&gt; future = new _FutureImpl&lt;List&lt;T&gt;&gt;();
+   this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ data) {
+       result.add(data);
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(result);
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /** Collects the data of this stream in a [Set]. */
+ Future&lt;Set&lt;T&gt;&gt; toSet() {
+   Set&lt;T&gt; result = new Set&lt;T&gt;();
+   _FutureImpl&lt;Set&lt;T&gt;&gt; future = new _FutureImpl&lt;Set&lt;T&gt;&gt;();
+   this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ data) {
+       result.add(data);
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(result);
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Provides at most the first [n] values of this stream.
+  *
+  * Forwards the first [n] data events of this stream, and all error
+  * events, to the returned stream, and ends with a done event.
+  *
+  * If this stream produces fewer than [count] values before it's done,
+  * so will the returned stream.
+  */
+ Stream&lt;T&gt; take(int count) {
+   return new _TakeStream(this, count);
+ }
+
+ /**
+  * Forwards data events while [test] is successful.
+  *
+  * The returned stream provides the same events as this stream as long
+  * as [test] returns [:true:] for the event data. The stream is done
+  * when either this stream is done, or when this stream first provides
+  * a value that [test] doesn't accept.
+  */
+ Stream&lt;T&gt; takeWhile(bool test(T value)) {
+   return new _TakeWhileStream(this, test);
+ }
+
+ /**
+  * Skips the first [count] data events from this stream.
+  */
+ Stream&lt;T&gt; skip(int count) {
+   return new _SkipStream(this, count);
+ }
+
+ /**
+  * Skip data events from this stream while they are matched by [test].
+  *
+  * Error and done events are provided by the returned stream unmodified.
+  *
+  * Starting with the first data event where [test] returns true for the
+  * event data, the returned stream will have the same events as this stream.
+  */
+ Stream&lt;T&gt; skipWhile(bool test(T value)) {
+   return new _SkipWhileStream(this, test);
+ }
+
+ /**
+  * Skips data events if they are equal to the previous data event.
+  *
+  * The returned stream provides the same events as this stream, except
+  * that it never provides two consequtive data events that are equal.
+  *
+  * Equality is determined by the provided [equals] method. If that is
+  * omitted, the '==' operator on the last provided data element is used.
+  */
+ Stream&lt;T&gt; distinct([bool equals(T previous, T next)]) {
+   return new _DistinctStream(this, equals);
+ }
+
+ /**
+  * Returns the first element.
+  *
+  * If [this] is empty throws a [StateError]. Otherwise this method is
+  * equivalent to [:this.elementAt(0):]
+  */
+ Future&lt;T&gt; get first {
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   StreamSubscription subscription;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       future._setValue(value);
+       subscription.cancel();
+       return;
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setError(new AsyncError(new StateError("No elements")));
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Returns the last element.
+  *
+  * If [this] is empty throws a [StateError].
+  */
+ Future&lt;T&gt; get last {
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   T result = null;
+   bool foundResult = false;
+   StreamSubscription subscription;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       foundResult = true;
+       result = value;
+     },
+     onError: future._setError,
+     onDone: () {
+       if (foundResult) {
+         future._setValue(result);
+         return;
+       }
+       future._setError(new AsyncError(new StateError("No elements")));
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Returns the single element.
+  *
+  * If [this] is empty or has more than one element throws a [StateError].
+  */
+ Future&lt;T&gt; get single {
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   T result = null;
+   bool foundResult = false;
+   StreamSubscription subscription;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       if (foundResult) {
+         // This is the second element we get.
+         Error error = new StateError("More than one element");
+         future._setError(new AsyncError(error));
+         subscription.cancel();
+         return;
+       }
+       foundResult = true;
+       result = value;
+     },
+     onError: future._setError,
+     onDone: () {
+       if (foundResult) {
+         future._setValue(result);
+         return;
+       }
+       future._setError(new AsyncError(new StateError("No elements")));
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Finds the first element of this stream matching [test].
+  *
+  * Returns a future that is filled with the first element of this stream
+  * that [test] returns true for.
+  *
+  * If no such element is found before this stream is done, and a
+  * [defaultValue] function is provided, the result of calling [defaultValue]
+  * becomes the value of the future.
+  *
+  * If an error occurs, or if this stream ends without finding a match and
+  * with no [defaultValue] function provided, the future will receive an
+  * error.
+  */
+ Future&lt;T&gt; firstMatching(bool test(T value), {T defaultValue()}) {
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   StreamSubscription subscription;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       _runUserCode(
+         () =&gt; test(value),
+         (bool isMatch) {
+           if (isMatch) {
+             subscription.cancel();
+             future._setValue(value);
+           }
+         },
+         _cancelAndError(subscription, future)
+       );
+     },
+     onError: future._setError,
+     onDone: () {
+       if (defaultValue != null) {
+         _runUserCode(defaultValue, future._setValue, future._setError);
+         return;
+       }
+       future._setError(
+           new AsyncError(new StateError("firstMatch ended without match")));
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Finds the last element in this stream matching [test].
+  *
+  * As [firstMatching], except that the last matching element is found.
+  * That means that the result cannot be provided before this stream
+  * is done.
+  */
+ Future&lt;T&gt; lastMatching(bool test(T value), {T defaultValue()}) {
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   T result = null;
+   bool foundResult = false;
+   StreamSubscription subscription;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       _runUserCode(
+         () =&gt; true == test(value),
+         (bool isMatch) {
+           if (isMatch) {
+             foundResult = true;
+             result = value;
+           }
+         },
+         _cancelAndError(subscription, future)
+       );
+     },
+     onError: future._setError,
+     onDone: () {
+       if (foundResult) {
+         future._setValue(result);
+         return;
+       }
+       if (defaultValue != null) {
+         _runUserCode(defaultValue, future._setValue, future._setError);
+         return;
+       }
+       future._setError(
+           new AsyncError(new StateError("lastMatch ended without match")));
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Finds the single element in this stream matching [test].
+  *
+  * Like [lastMatch], except that it is an error if more than one
+  * matching element occurs in the stream.
+  */
+ Future&lt;T&gt; singleMatching(bool test(T value)) {
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   T result = null;
+   bool foundResult = false;
+   StreamSubscription subscription;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       _runUserCode(
+         () =&gt; true == test(value),
+         (bool isMatch) {
+           if (isMatch) {
+             if (foundResult) {
+               subscription.cancel();
+               future._setError(new AsyncError(
+                   new StateError('Multiple matches for "single"')));
+               return;
+             }
+             foundResult = true;
+             result = value;
+           }
+         },
+         _cancelAndError(subscription, future)
+       );
+     },
+     onError: future._setError,
+     onDone: () {
+       if (foundResult) {
+         future._setValue(result);
+         return;
+       }
+       future._setError(
+           new AsyncError(new StateError("single ended without match")));
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+
+ /**
+  * Returns the value of the [index]th data event of this stream.
+  *
+  * If an error event occurs, the future will end with this error.
+  *
+  * If this stream provides fewer than [index] elements before closing,
+  * an error is reported.
+  */
+ Future&lt;T&gt; elementAt(int index) {
+   if (index is! int || index &lt; 0) throw new ArgumentError(index);
+   _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+   StreamSubscription subscription;
+   subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ value) {
+       if (index == 0) {
+         future._setValue(value);
+         subscription.cancel();
+         return;
+       }
+       index -= 1;
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setError(new AsyncError(
+           new StateError("Not enough elements for elementAt")));
+     },
+     unsubscribeOnError: true);
+   return future;
+ }
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_async/EventTransformStream.html">EventTransformStream&lt;S, T&gt;</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/HttpClientResponse.html">HttpClientResponse</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/HttpRequest.html">HttpRequest</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/HttpServer.html">HttpServer</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_isolate/IsolateStream.html">IsolateStream</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/RawSecureServerSocket.html">RawSecureServerSocket</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/RawServerSocket.html">RawServerSocket</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/RawSocket.html">RawSocket</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/SecureServerSocket.html">SecureServerSocket</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/ServerSocket.html">ServerSocket</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/Socket.html">Socket</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_async/StreamView.html">StreamView&lt;T&gt;</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/WebSocket.html">WebSocket</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Stream">
+<button class="show-code">Code</button>
+new <strong>Stream</strong>() <a class="anchor-link" href="#Stream"
+              title="Permalink to Stream&lt;T&gt;.Stream">#</a></h4>
+<div class="doc">
+<pre class="source">
+Stream();
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Stream.fromFuture">
+<button class="show-code">Code</button>
+factory <strong>Stream.fromFuture</strong>(<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; future) <a class="anchor-link" href="#Stream.fromFuture"
+              title="Permalink to Stream&lt;T&gt;.Stream.fromFuture">#</a></h4>
+<div class="doc">
+<p>Creates a new single-subscription stream from the future.</p>
+<p>When the future completes, the stream will fire one event, either
+data or error, and then close with a done-event.</p>
+<pre class="source">
+factory Stream.fromFuture(Future&lt;T&gt; future) {
+ _StreamImpl&lt;T&gt; stream = new _SingleStreamImpl&lt;T&gt;();
+ future.then((value) {
+     stream._add(value);
+     stream._close();
+   },
+   onError: (error) {
+     stream._signalError(error);
+     stream._close();
+   });
+ return stream;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Stream.fromIterable">
+<button class="show-code">Code</button>
+factory <strong>Stream.fromIterable</strong>(<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; data) <a class="anchor-link" href="#Stream.fromIterable"
+              title="Permalink to Stream&lt;T&gt;.Stream.fromIterable">#</a></h4>
+<div class="doc">
+<p>Creates a single-subscription stream that gets its data from 
+<span class="param">data</span>.</p>
+<pre class="source">
+factory Stream.fromIterable(Iterable&lt;T&gt; data) {
+ _PendingEvents iterableEvents = new _IterablePendingEvents&lt;T&gt;(data);
+ return new _GeneratedSingleStreamImpl&lt;T&gt;(iterableEvents);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="first">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt;         <strong>first</strong> <a class="anchor-link"
+            href="#first"
+            title="Permalink to Stream&lt;T&gt;.first">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the first element.</p>
+<p>If <code>this</code> is empty throws a <code>StateError</code>. Otherwise this method is
+equivalent to <code>this.elementAt(0)</code></p>
+<pre class="source">
+Future&lt;T&gt; get first {
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ StreamSubscription subscription;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     future._setValue(value);
+     subscription.cancel();
+     return;
+   },
+   onError: future._setError,
+   onDone: () {
+     future._setError(new AsyncError(new StateError("No elements")));
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isBroadcast">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isBroadcast</strong> <a class="anchor-link"
+            href="#isBroadcast"
+            title="Permalink to Stream&lt;T&gt;.isBroadcast">#</a>
+        </h4>
+        <div class="doc">
+<p>Reports whether this stream is a broadcast stream.</p>
+<pre class="source">
+bool get isBroadcast =&gt; false;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt;         <strong>isEmpty</strong> <a class="anchor-link"
+            href="#isEmpty"
+            title="Permalink to Stream&lt;T&gt;.isEmpty">#</a>
+        </h4>
+        <div class="doc">
+<p>Reports whether this stream contains any elements. </p>
+<pre class="source">
+Future&lt;bool&gt; get isEmpty {
+ _FutureImpl&lt;bool&gt; future = new _FutureImpl&lt;bool&gt;();
+ StreamSubscription subscription;
+ subscription = this.listen(
+   (_) {
+     subscription.cancel();
+     future._setValue(false);
+   },
+   onError: future._setError,
+   onDone: () {
+     future._setValue(true);
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="last">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt;         <strong>last</strong> <a class="anchor-link"
+            href="#last"
+            title="Permalink to Stream&lt;T&gt;.last">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the last element.</p>
+<p>If <code>this</code> is empty throws a <code>StateError</code>.</p>
+<pre class="source">
+Future&lt;T&gt; get last {
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ T result = null;
+ bool foundResult = false;
+ StreamSubscription subscription;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     foundResult = true;
+     result = value;
+   },
+   onError: future._setError,
+   onDone: () {
+     if (foundResult) {
+       future._setValue(result);
+       return;
+     }
+     future._setError(new AsyncError(new StateError("No elements")));
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="length">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/int.html">int</a>&gt;         <strong>length</strong> <a class="anchor-link"
+            href="#length"
+            title="Permalink to Stream&lt;T&gt;.length">#</a>
+        </h4>
+        <div class="doc">
+<p>Counts the elements in the stream. </p>
+<pre class="source">
+Future&lt;int&gt; get length {
+ _FutureImpl&lt;int&gt; future = new _FutureImpl&lt;int&gt;();
+ int count = 0;
+ this.listen(
+   (_) { count++; },
+   onError: future._setError,
+   onDone: () {
+     future._setValue(count);
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="single">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt;         <strong>single</strong> <a class="anchor-link"
+            href="#single"
+            title="Permalink to Stream&lt;T&gt;.single">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the single element.</p>
+<p>If <code>this</code> is empty or has more than one element throws a <code>StateError</code>.</p>
+<pre class="source">
+Future&lt;T&gt; get single {
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ T result = null;
+ bool foundResult = false;
+ StreamSubscription subscription;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     if (foundResult) {
+       // This is the second element we get.
+       Error error = new StateError("More than one element");
+       future._setError(new AsyncError(error));
+       subscription.cancel();
+       return;
+     }
+     foundResult = true;
+     result = value;
+   },
+   onError: future._setError,
+   onDone: () {
+     if (foundResult) {
+       future._setValue(result);
+       return;
+     }
+     future._setError(new AsyncError(new StateError("No elements")));
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="any">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>any</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_async/Stream.html">T</a> element)) <a class="anchor-link" href="#any"
+              title="Permalink to Stream&lt;T&gt;.any">#</a></h4>
+<div class="doc">
+<p>Checks whether 
+<span class="param">test</span> accepts any element provided by this stream.</p>
+<p>Completes the <a class="crossref" href="../dart_async/Future.html">Future</a> when the answer is known.
+If this stream reports an error, the <a class="crossref" href="../dart_async/Future.html">Future</a> will report that error.</p>
+<pre class="source">
+Future&lt;bool&gt; any(bool test(T element)) {
+ _FutureImpl&lt;bool&gt; future = new _FutureImpl&lt;bool&gt;();
+ StreamSubscription subscription;
+ subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ element) {
+       _runUserCode(
+         () =&gt; test(element),
+         (bool isMatch) {
+           if (isMatch) {
+             subscription.cancel();
+             future._setValue(true);
+           }
+         },
+         _cancelAndError(subscription, future)
+       );
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(false);
+     },
+     unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="asBroadcastStream">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>asBroadcastStream</strong>() <a class="anchor-link" href="#asBroadcastStream"
+              title="Permalink to Stream&lt;T&gt;.asBroadcastStream">#</a></h4>
+<div class="doc">
+<p>Returns a multi-subscription stream that produces the same events as this.</p>
+<p>If this stream is single-subscription, return a new stream that allows
+multiple subscribers. It will subscribe to this stream when its first
+subscriber is added, and unsubscribe again when the last subscription is
+cancelled.</p>
+<p>If this stream is already a broadcast stream, it is returned unmodified.</p>
+<pre class="source">
+Stream&lt;T&gt; asBroadcastStream() {
+ if (isBroadcast) return this;
+ return new _SingleStreamMultiplexer&lt;T&gt;(this);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="contains">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>contains</strong>(<a href="../dart_async/Stream.html">T</a> match) <a class="anchor-link" href="#contains"
+              title="Permalink to Stream&lt;T&gt;.contains">#</a></h4>
+<div class="doc">
+<p>Checks whether 
+<span class="param">match</span> occurs in the elements provided by this stream.</p>
+<p>Completes the <a class="crossref" href="../dart_async/Future.html">Future</a> when the answer is known.
+If this stream reports an error, the <a class="crossref" href="../dart_async/Future.html">Future</a> will report that error.</p>
+<pre class="source">
+Future&lt;bool&gt; contains(T match) {
+ _FutureImpl&lt;bool&gt; future = new _FutureImpl&lt;bool&gt;();
+ StreamSubscription subscription;
+ subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ element) {
+       _runUserCode(
+         () =&gt; (element == match),
+         (bool isMatch) {
+           if (isMatch) {
+             subscription.cancel();
+             future._setValue(true);
+           }
+         },
+         _cancelAndError(subscription, future)
+       );
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(false);
+     },
+     unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="distinct">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>distinct</strong>([<a href="../dart_core/bool.html">bool</a> equals(<a href="../dart_async/Stream.html">T</a> previous, <a href="../dart_async/Stream.html">T</a> next)]) <a class="anchor-link" href="#distinct"
+              title="Permalink to Stream&lt;T&gt;.distinct">#</a></h4>
+<div class="doc">
+<p>Skips data events if they are equal to the previous data event.</p>
+<p>The returned stream provides the same events as this stream, except
+that it never provides two consequtive data events that are equal.</p>
+<p>Equality is determined by the provided 
+<span class="param">equals</span> method. If that is
+omitted, the '==' operator on the last provided data element is used.</p>
+<pre class="source">
+Stream&lt;T&gt; distinct([bool equals(T previous, T next)]) {
+ return new _DistinctStream(this, equals);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="elementAt">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>elementAt</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#elementAt"
+              title="Permalink to Stream&lt;T&gt;.elementAt">#</a></h4>
+<div class="doc">
+<p>Returns the value of the 
+<span class="param">index</span>th data event of this stream.</p>
+<p>If an error event occurs, the future will end with this error.</p>
+<p>If this stream provides fewer than 
+<span class="param">index</span> elements before closing,
+an error is reported.</p>
+<pre class="source">
+Future&lt;T&gt; elementAt(int index) {
+ if (index is! int || index &lt; 0) throw new ArgumentError(index);
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ StreamSubscription subscription;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     if (index == 0) {
+       future._setValue(value);
+       subscription.cancel();
+       return;
+     }
+     index -= 1;
+   },
+   onError: future._setError,
+   onDone: () {
+     future._setError(new AsyncError(
+         new StateError("Not enough elements for elementAt")));
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="every">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>every</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_async/Stream.html">T</a> element)) <a class="anchor-link" href="#every"
+              title="Permalink to Stream&lt;T&gt;.every">#</a></h4>
+<div class="doc">
+<p>Checks whether 
+<span class="param">test</span> accepts all elements provided by this stream.</p>
+<p>Completes the <a class="crossref" href="../dart_async/Future.html">Future</a> when the answer is known.
+If this stream reports an error, the <a class="crossref" href="../dart_async/Future.html">Future</a> will report that error.</p>
+<pre class="source">
+Future&lt;bool&gt; every(bool test(T element)) {
+ _FutureImpl&lt;bool&gt; future = new _FutureImpl&lt;bool&gt;();
+ StreamSubscription subscription;
+ subscription = this.listen(
+     // TODO(ahe): Restore type when feature is implemented in dart2js
+     // checked mode. http://dartbug.com/7733
+     (/*T*/ element) {
+       _runUserCode(
+         () =&gt; test(element),
+         (bool isMatch) {
+           if (!isMatch) {
+             subscription.cancel();
+             future._setValue(false);
+           }
+         },
+         _cancelAndError(subscription, future)
+       );
+     },
+     onError: future._setError,
+     onDone: () {
+       future._setValue(true);
+     },
+     unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="expand">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a> <strong>expand</strong>(<a href="../dart_core/Iterable.html">Iterable</a> convert(<a href="../dart_async/Stream.html">T</a> value)) <a class="anchor-link" href="#expand"
+              title="Permalink to Stream&lt;T&gt;.expand">#</a></h4>
+<div class="doc">
+<p>Creates a new stream from this stream that converts each element
+into zero or more events.</p>
+<p>Each incoming event is converted to an <code>Iterable</code> of new events,
+and each of these new events are then sent by the returned stream
+in order.</p>
+<pre class="source">
+Stream expand(Iterable convert(T value)) {
+ return new _ExpandStream&lt;T, dynamic&gt;(this, convert);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="firstMatching">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>firstMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_async/Stream.html">T</a> value), {<a href="../dart_async/Stream.html">T</a> defaultValue()}) <a class="anchor-link" href="#firstMatching"
+              title="Permalink to Stream&lt;T&gt;.firstMatching">#</a></h4>
+<div class="doc">
+<p>Finds the first element of this stream matching 
+<span class="param">test</span>.</p>
+<p>Returns a future that is filled with the first element of this stream
+that 
+<span class="param">test</span> returns true for.</p>
+<p>If no such element is found before this stream is done, and a
+
+<span class="param">defaultValue</span> function is provided, the result of calling 
+<span class="param">defaultValue</span>
+becomes the value of the future.</p>
+<p>If an error occurs, or if this stream ends without finding a match and
+with no 
+<span class="param">defaultValue</span> function provided, the future will receive an
+error.</p>
+<pre class="source">
+Future&lt;T&gt; firstMatching(bool test(T value), {T defaultValue()}) {
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ StreamSubscription subscription;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     _runUserCode(
+       () =&gt; test(value),
+       (bool isMatch) {
+         if (isMatch) {
+           subscription.cancel();
+           future._setValue(value);
+         }
+       },
+       _cancelAndError(subscription, future)
+     );
+   },
+   onError: future._setError,
+   onDone: () {
+     if (defaultValue != null) {
+       _runUserCode(defaultValue, future._setValue, future._setError);
+       return;
+     }
+     future._setError(
+         new AsyncError(new StateError("firstMatch ended without match")));
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="handleError">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>handleError</strong>(void handle(<a href="../dart_async/AsyncError.html">AsyncError</a> error), {<a href="../dart_core/bool.html">bool</a> test(error)}) <a class="anchor-link" href="#handleError"
+              title="Permalink to Stream&lt;T&gt;.handleError">#</a></h4>
+<div class="doc">
+<p>Creates a wrapper Stream that intercepts some errors from this stream.</p>
+<p>If this stream sends an error that matches 
+<span class="param">test</span>, then it is intercepted
+by the 
+<span class="param">handle</span> function.</p>
+<p>An [AsyncError] [:e:] is matched by a test function if <code>test(e)</code> returns
+true. If 
+<span class="param">test</span> is omitted, every error is considered matching.</p>
+<p>If the error is intercepted, the 
+<span class="param">handle</span> function can decide what to do
+with it. It can throw if it wants to raise a new (or the same) error,
+or simply return to make the stream forget the error.</p>
+<p>If you need to transform an error into a data event, use the more generic
+<code>Stream.transformEvent</code> to handle the event by writing a data event to
+the output sink</p>
+<pre class="source">
+Stream&lt;T&gt; handleError(void handle(AsyncError error), { bool test(error) }) {
+ return new _HandleErrorStream&lt;T&gt;(this, handle, test);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lastMatching">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>lastMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_async/Stream.html">T</a> value), {<a href="../dart_async/Stream.html">T</a> defaultValue()}) <a class="anchor-link" href="#lastMatching"
+              title="Permalink to Stream&lt;T&gt;.lastMatching">#</a></h4>
+<div class="doc">
+<p>Finds the last element in this stream matching 
+<span class="param">test</span>.</p>
+<p>As <a class="crossref" href="../dart_async/Stream.html#firstMatching">firstMatching</a>, except that the last matching element is found.
+That means that the result cannot be provided before this stream
+is done.</p>
+<pre class="source">
+Future&lt;T&gt; lastMatching(bool test(T value), {T defaultValue()}) {
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ T result = null;
+ bool foundResult = false;
+ StreamSubscription subscription;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     _runUserCode(
+       () =&gt; true == test(value),
+       (bool isMatch) {
+         if (isMatch) {
+           foundResult = true;
+           result = value;
+         }
+       },
+       _cancelAndError(subscription, future)
+     );
+   },
+   onError: future._setError,
+   onDone: () {
+     if (foundResult) {
+       future._setValue(result);
+       return;
+     }
+     if (defaultValue != null) {
+       _runUserCode(defaultValue, future._setValue, future._setError);
+       return;
+     }
+     future._setError(
+         new AsyncError(new StateError("lastMatch ended without match")));
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="listen">
+abstract <a href="../dart_async/StreamSubscription.html">StreamSubscription</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>listen</strong>(void onData(<a href="../dart_async/Stream.html">T</a> event), {void onError(<a href="../dart_async/AsyncError.html">AsyncError</a> error), void onDone(), <a href="../dart_core/bool.html">bool</a> unsubscribeOnError}) <a class="anchor-link" href="#listen"
+              title="Permalink to Stream&lt;T&gt;.listen">#</a></h4>
+<div class="doc">
+<p>Adds a subscription to this stream.</p>
+<p>On each data event from this stream, the subscriber's 
+<span class="param">onData</span> handler
+is called. If 
+<span class="param">onData</span> is null, nothing happens.</p>
+<p>On errors from this stream, the 
+<span class="param">onError</span> handler is given a
+<a class="crossref" href="../dart_async/AsyncError.html">AsyncError</a> object describing the error.</p>
+<p>If this stream closes, the 
+<span class="param">onDone</span> handler is called.</p>
+<p>If 
+<span class="param">unsubscribeOnError</span> is true, the subscription is ended when
+the first error is reported. The default is false.</p>
+</div>
+</div>
+<div class="method"><h4 id="map">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a> <strong>map</strong>(convert(<a href="../dart_async/Stream.html">T</a> event)) <a class="anchor-link" href="#map"
+              title="Permalink to Stream&lt;T&gt;.map">#</a></h4>
+<div class="doc">
+<p>Creates a new stream that converts each element of this stream
+to a new value using the 
+<span class="param">convert</span> function.</p>
+<pre class="source">
+Stream map(convert(T event)) {
+ return new _MapStream&lt;T, dynamic&gt;(this, convert);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="max">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>max</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_async/Stream.html">T</a> a, <a href="../dart_async/Stream.html">T</a> b)]) <a class="anchor-link" href="#max"
+              title="Permalink to Stream&lt;T&gt;.max">#</a></h4>
+<div class="doc">
+<p>Finds the largest element in the stream.</p>
+<p>If the stream is empty, the result is <code>null</code>.
+Otherwise the result is an value from the stream that is not smaller
+than any other value from the stream (according to 
+<span class="param">compare</span>, which must
+be a <code>Comparator</code>).</p>
+<p>If 
+<span class="param">compare</span> is omitted, it defaults to <code>Comparable.compare</code>.</p>
+<pre class="source">
+Future&lt;T&gt; max([int compare(T a, T b)]) {
+ if (compare == null)  {
+   var defaultCompare = Comparable.compare;
+   compare = defaultCompare;
+ }
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ StreamSubscription subscription;
+ T max = null;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     max = value;
+     subscription.onData((T value) {
+       _runUserCode(
+         () =&gt; compare(max, value) &lt; 0,
+         (bool foundGreater) {
+           if (foundGreater) {
+             max = value;
+           }
+         },
+         _cancelAndError(subscription, future)
+       );
+     });
+   },
+   onError: future._setError,
+   onDone: () {
+     future._setValue(max);
+   },
+   unsubscribeOnError: true
+ );
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="min">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>min</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_async/Stream.html">T</a> a, <a href="../dart_async/Stream.html">T</a> b)]) <a class="anchor-link" href="#min"
+              title="Permalink to Stream&lt;T&gt;.min">#</a></h4>
+<div class="doc">
+<p>Finds the least element in the stream.</p>
+<p>If the stream is empty, the result is <code>null</code>.
+Otherwise the result is a value from the stream that is not greater
+than any other value from the stream (according to 
+<span class="param">compare</span>, which must
+be a <code>Comparator</code>).</p>
+<p>If 
+<span class="param">compare</span> is omitted, it defaults to <code>Comparable.compare</code>.</p>
+<pre class="source">
+Future&lt;T&gt; min([int compare(T a, T b)]) {
+ if (compare == null) {
+   var defaultCompare = Comparable.compare;
+   compare = defaultCompare;
+ }
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ StreamSubscription subscription;
+ T min = null;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     min = value;
+     subscription.onData((T value) {
+       _runUserCode(
+         () =&gt; compare(min, value) &gt; 0,
+         (bool foundSmaller) {
+           if (foundSmaller) {
+             min = value;
+           }
+         },
+         _cancelAndError(subscription, future)
+       );
+     });
+   },
+   onError: future._setError,
+   onDone: () {
+     future._setValue(min);
+   },
+   unsubscribeOnError: true
+ );
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="pipe">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>pipe</strong>(<a href="../dart_async/StreamConsumer.html">StreamConsumer</a>&lt;<a href="../dart_async/Stream.html">T</a>, dynamic&gt; streamConsumer) <a class="anchor-link" href="#pipe"
+              title="Permalink to Stream&lt;T&gt;.pipe">#</a></h4>
+<div class="doc">
+<p>Binds this stream as the input of the provided <a class="crossref" href="../dart_async/StreamConsumer.html">StreamConsumer</a>.</p>
+<pre class="source">
+Future pipe(StreamConsumer&lt;T, dynamic&gt; streamConsumer) {
+ return streamConsumer.consume(this);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="pipeInto">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>pipeInto</strong>(<a href="../dart_async/StreamSink.html">StreamSink</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; sink, {void onError(<a href="../dart_async/AsyncError.html">AsyncError</a> error), <a href="../dart_core/bool.html">bool</a> unsubscribeOnError}) <a class="anchor-link" href="#pipeInto"
+              title="Permalink to Stream&lt;T&gt;.pipeInto">#</a></h4>
+<div class="doc">
+<pre class="source">
+Future pipeInto(StreamSink&lt;T&gt; sink,
+               {void onError(AsyncError error),
+                bool unsubscribeOnError}) {
+ _FutureImpl&lt;T&gt; result = new _FutureImpl&lt;T&gt;();
+ this.listen(
+     sink.add,
+     onError: sink.signalError,
+     onDone: () {
+       sink.close();
+       result._setValue(null);
+     },
+     unsubscribeOnError: unsubscribeOnError);
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="reduce">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>reduce</strong>(initialValue, combine(previous, <a href="../dart_async/Stream.html">T</a> element)) <a class="anchor-link" href="#reduce"
+              title="Permalink to Stream&lt;T&gt;.reduce">#</a></h4>
+<div class="doc">
+<p>Reduces a sequence of values by repeatedly applying 
+<span class="param">combine</span>. </p>
+<pre class="source">
+Future reduce(var initialValue, combine(var previous, T element)) {
+ _FutureImpl result = new _FutureImpl();
+ var value = initialValue;
+ StreamSubscription subscription;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ element) {
+     _runUserCode(
+       () =&gt; combine(value, element),
+       (result) { value = result; },
+       _cancelAndError(subscription, result)
+     );
+   },
+   onError: (AsyncError e) {
+     result._setError(e);
+   },
+   onDone: () {
+     result._setValue(value);
+   },
+   unsubscribeOnError: true);
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="singleMatching">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>singleMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_async/Stream.html">T</a> value)) <a class="anchor-link" href="#singleMatching"
+              title="Permalink to Stream&lt;T&gt;.singleMatching">#</a></h4>
+<div class="doc">
+<p>Finds the single element in this stream matching 
+<span class="param">test</span>.</p>
+<p>Like <code>lastMatch</code>, except that it is an error if more than one
+matching element occurs in the stream.</p>
+<pre class="source">
+Future&lt;T&gt; singleMatching(bool test(T value)) {
+ _FutureImpl&lt;T&gt; future = new _FutureImpl&lt;T&gt;();
+ T result = null;
+ bool foundResult = false;
+ StreamSubscription subscription;
+ subscription = this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ value) {
+     _runUserCode(
+       () =&gt; true == test(value),
+       (bool isMatch) {
+         if (isMatch) {
+           if (foundResult) {
+             subscription.cancel();
+             future._setError(new AsyncError(
+                 new StateError('Multiple matches for "single"')));
+             return;
+           }
+           foundResult = true;
+           result = value;
+         }
+       },
+       _cancelAndError(subscription, future)
+     );
+   },
+   onError: future._setError,
+   onDone: () {
+     if (foundResult) {
+       future._setValue(result);
+       return;
+     }
+     future._setError(
+         new AsyncError(new StateError("single ended without match")));
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="skip">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>skip</strong>(<a href="../dart_core/int.html">int</a> count) <a class="anchor-link" href="#skip"
+              title="Permalink to Stream&lt;T&gt;.skip">#</a></h4>
+<div class="doc">
+<p>Skips the first 
+<span class="param">count</span> data events from this stream.</p>
+<pre class="source">
+Stream&lt;T&gt; skip(int count) {
+ return new _SkipStream(this, count);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="skipWhile">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>skipWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_async/Stream.html">T</a> value)) <a class="anchor-link" href="#skipWhile"
+              title="Permalink to Stream&lt;T&gt;.skipWhile">#</a></h4>
+<div class="doc">
+<p>Skip data events from this stream while they are matched by 
+<span class="param">test</span>.</p>
+<p>Error and done events are provided by the returned stream unmodified.</p>
+<p>Starting with the first data event where 
+<span class="param">test</span> returns true for the
+event data, the returned stream will have the same events as this stream.</p>
+<pre class="source">
+Stream&lt;T&gt; skipWhile(bool test(T value)) {
+ return new _SkipWhileStream(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="take">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>take</strong>(<a href="../dart_core/int.html">int</a> count) <a class="anchor-link" href="#take"
+              title="Permalink to Stream&lt;T&gt;.take">#</a></h4>
+<div class="doc">
+<p>Provides at most the first <code>n</code> values of this stream.</p>
+<p>Forwards the first <code>n</code> data events of this stream, and all error
+events, to the returned stream, and ends with a done event.</p>
+<p>If this stream produces fewer than 
+<span class="param">count</span> values before it's done,
+so will the returned stream.</p>
+<pre class="source">
+Stream&lt;T&gt; take(int count) {
+ return new _TakeStream(this, count);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="takeWhile">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>takeWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_async/Stream.html">T</a> value)) <a class="anchor-link" href="#takeWhile"
+              title="Permalink to Stream&lt;T&gt;.takeWhile">#</a></h4>
+<div class="doc">
+<p>Forwards data events while 
+<span class="param">test</span> is successful.</p>
+<p>The returned stream provides the same events as this stream as long
+as 
+<span class="param">test</span> returns <code>true</code> for the event data. The stream is done
+when either this stream is done, or when this stream first provides
+a value that 
+<span class="param">test</span> doesn't accept.</p>
+<pre class="source">
+Stream&lt;T&gt; takeWhile(bool test(T value)) {
+ return new _TakeWhileStream(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toList">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt;&gt; <strong>toList</strong>() <a class="anchor-link" href="#toList"
+              title="Permalink to Stream&lt;T&gt;.toList">#</a></h4>
+<div class="doc">
+<p>Collects the data of this stream in a <code>List</code>. </p>
+<pre class="source">
+Future&lt;List&lt;T&gt;&gt; toList() {
+ List&lt;T&gt; result = &lt;T&gt;[];
+ _FutureImpl&lt;List&lt;T&gt;&gt; future = new _FutureImpl&lt;List&lt;T&gt;&gt;();
+ this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ data) {
+     result.add(data);
+   },
+   onError: future._setError,
+   onDone: () {
+     future._setValue(result);
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toSet">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/Set.html">Set</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt;&gt; <strong>toSet</strong>() <a class="anchor-link" href="#toSet"
+              title="Permalink to Stream&lt;T&gt;.toSet">#</a></h4>
+<div class="doc">
+<p>Collects the data of this stream in a <code>Set</code>. </p>
+<pre class="source">
+Future&lt;Set&lt;T&gt;&gt; toSet() {
+ Set&lt;T&gt; result = new Set&lt;T&gt;();
+ _FutureImpl&lt;Set&lt;T&gt;&gt; future = new _FutureImpl&lt;Set&lt;T&gt;&gt;();
+ this.listen(
+   // TODO(ahe): Restore type when feature is implemented in dart2js
+   // checked mode. http://dartbug.com/7733
+   (/*T*/ data) {
+     result.add(data);
+   },
+   onError: future._setError,
+   onDone: () {
+     future._setValue(result);
+   },
+   unsubscribeOnError: true);
+ return future;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="transform">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a> <strong>transform</strong>(<a href="../dart_async/StreamTransformer.html">StreamTransformer</a>&lt;<a href="../dart_async/Stream.html">T</a>, dynamic&gt; streamTransformer) <a class="anchor-link" href="#transform"
+              title="Permalink to Stream&lt;T&gt;.transform">#</a></h4>
+<div class="doc">
+<p>Chains this stream as the input of the provided <a class="crossref" href="../dart_async/StreamTransformer.html">StreamTransformer</a>.</p>
+<p>Returns the result of <code>streamTransformer.bind</code> itself.</p>
+<pre class="source">
+Stream transform(StreamTransformer&lt;T, dynamic&gt; streamTransformer) {
+ return streamTransformer.bind(this);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="where">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/Stream.html">T</a>&gt; <strong>where</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_async/Stream.html">T</a> event)) <a class="anchor-link" href="#where"
+              title="Permalink to Stream&lt;T&gt;.where">#</a></h4>
+<div class="doc">
+<p>Creates a new stream from this stream that discards some data events.</p>
+<p>The new stream sends the same error and done events as this stream,
+but it only sends the data events that satisfy the 
+<span class="param">test</span>.</p>
+<pre class="source">
+Stream&lt;T&gt; where(bool test(T event)) {
+ return new _WhereStream&lt;T&gt;(this, test);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:19.682</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

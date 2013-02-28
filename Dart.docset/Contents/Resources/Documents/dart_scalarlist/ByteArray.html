@@ -1,0 +1,854 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ByteArray abstract class / dart:scalarlist Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:scalarlist" data-type="ByteArray">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_scalarlist.html">dart:scalarlist</a> &rsaquo; <a href="../dart_scalarlist/ByteArray.html">ByteArray</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><ul class="icon">
+<li><div class="icon-class"></div><strong>ByteArray</strong></li>
+<li><a href="../dart_scalarlist/ByteArrayViewable.html"><div class="icon-class"></div>ByteArrayViewable</a></li>
+<li><a href="../dart_scalarlist/Float32List.html"><div class="icon-class"></div>Float32List</a></li>
+<li><a href="../dart_scalarlist/Float32x4.html"><div class="icon-class"></div>Float32x4</a></li>
+<li><a href="../dart_scalarlist/Float32x4List.html"><div class="icon-class"></div>Float32x4List</a></li>
+<li><a href="../dart_scalarlist/Float64List.html"><div class="icon-class"></div>Float64List</a></li>
+<li><a href="../dart_scalarlist/Int16List.html"><div class="icon-class"></div>Int16List</a></li>
+<li><a href="../dart_scalarlist/Int32List.html"><div class="icon-class"></div>Int32List</a></li>
+<li><a href="../dart_scalarlist/Int64List.html"><div class="icon-class"></div>Int64List</a></li>
+<li><a href="../dart_scalarlist/Int8List.html"><div class="icon-class"></div>Int8List</a></li>
+<li><a href="../dart_scalarlist/Uint16List.html"><div class="icon-class"></div>Uint16List</a></li>
+<li><a href="../dart_scalarlist/Uint32List.html"><div class="icon-class"></div>Uint32List</a></li>
+<li><a href="../dart_scalarlist/Uint32x4.html"><div class="icon-class"></div>Uint32x4</a></li>
+<li><a href="../dart_scalarlist/Uint64List.html"><div class="icon-class"></div>Uint64List</a></li>
+<li><a href="../dart_scalarlist/Uint8ClampedList.html"><div class="icon-class"></div>Uint8ClampedList</a></li>
+<li><a href="../dart_scalarlist/Uint8List.html"><div class="icon-class"></div>Uint8List</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ByteArray</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A random-access sequence of bytes that also provides random access to
+the fixed-width integers and floating point numbers represented by
+those bytes. Byte arrays may be used to pack and unpack data from
+external sources (such as networks or files systems), and to process
+large quantities of numerical data more efficiently than would be possible
+with ordinary <code>List</code> implementations. Byte arrays can save space, by
+eliminating the need for object headers, and time, by eliminating the
+need for data copies. Finally, Byte arrays may be used to intentionally
+reinterpret the bytes representing one arithmetic type as another.
+For example this code fragment determine what 64-bit signed integer
+is represented by the bytes of a 64-bit floating point number:</p>
+<pre><code>var ba = new Uint8List(8).asByteArray();
+ba.setFloat64(0, 3.14159265358979323846);
+int huh = ba.getInt64(0);
+</code></pre>
+<pre class="source">
+abstract class ByteArray {
+ /**
+  * Returns the length of this byte array, in bytes.
+  */
+ int lengthInBytes();
+
+ // TODO(lrn): Change the signature to match String.substring.
+ /**
+  * Returns a [ByteArray] _view_ of a portion of this byte array.
+  * The returned byte array consists of [length] bytes starting
+  * at position [start] in this byte array. The returned byte array
+  * is backed by the same data as this byte array. In other words,
+  * changes to the returned byte array are visible in this byte array
+  * and vice-versa.
+  *
+  * Throws [RangeError] if [start] or [length] are negative, or
+  * if `start + length` is greater than the length of this byte array.
+  *
+  * Throws [ArgumentError] if [length] is negative.
+  */
+ ByteArray subByteArray([int start, int length]);
+
+ /**
+  * Returns the (possibly negative) integer represented by the byte at the
+  * specified [byteOffset] in this byte array, in two's complement binary
+  * representation. The return value will be between -128 and 127, inclusive.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * greater than or equal to the length of this byte array.
+  */
+ int getInt8(int byteOffset);
+
+ /**
+  * Sets the byte at the specified [byteOffset] in this byte array to the
+  * two's complement binary representation of the specified [value], which
+  * must fit in a single byte. In other words, [value] must be between
+  * -128 and 127, inclusive.
+  *
+  * Returns `byteOffset + 1`, which is the offset of the first byte in the
+  * array after the byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * greater than or equal to the length of this byte array.
+  *
+  * Throws [ArgumentError] if [value] is less than -128 or
+  * greater than 127.
+  */
+ int setInt8(int byteOffset, int value);
+
+ /**
+  * Returns the positive integer represented by the byte at the specified
+  * [byteOffset] in this byte array, in unsigned binary form. The
+  * return value will be between 0 and 255, inclusive.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * greater than or equal to the length of this byte array.
+  */
+ int getUint8(int byteOffset);
+
+ /**
+  * Sets the byte at the specified [byteOffset] in this byte array to the
+  * unsigned binary representation of the specified [value], which must fit
+  * in a single byte. in other words, [value] must be between 0 and 255,
+  * inclusive.
+  *
+  * Returns `byteOffset + 1`, which is the offset of the first byte in the
+  * array after the byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative,
+  * or greater than or equal to the length of this byte array.
+  *
+  * Throws [ArgumentError] if [value] is negative or
+  * greater than 255.
+  */
+ int setUint8(int byteOffset, int value);
+
+ /**
+  * Returns the (possibly negative) integer represented by the two bytes at
+  * the specified [byteOffset] in this byte array, in two's complement binary
+  * form. The return value will be between 2&lt;sup&gt;15&lt;/sup&gt; and 2&lt;sup&gt;15 - 1,
+  * inclusive.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 2` is greater than the length of this byte array.
+  */
+ int getInt16(int byteOffset);
+
+ /**
+  * Sets the two bytes starting at the specified [byteOffset] in this
+  * byte array to the two's complement binary representation of the specified
+  * [value], which must fit in two bytes. In other words, [value] must lie
+  * between 2&lt;sup&gt;15&lt;/sup&gt; and 2&lt;sup&gt;15 - 1, inclusive.
+  *
+  * Returns `byteOffset + 2`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 2` is greater than the length of this byte array.
+  *
+  * Throws [ArgumentError] if [value] is less than 2&lt;sup&gt;15&lt;/sup&gt;
+  * or greater than 2&lt;sup&gt;15 - 1.
+  */
+ int setInt16(int byteOffset, int value);
+
+ /**
+  * Returns the positive integer represented by the two bytes starting
+  * at the specified [byteOffset] in this byte array, in unsigned binary
+  * form. The return value will be between 0 and  2&lt;sup&gt;16 - 1, inclusive.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 2` is greater than the length of this byte array.
+  */
+ int getUint16(int byteOffset);
+
+ /**
+  * Sets the two bytes starting at the specified [byteOffset] in this byte
+  * array to the unsigned binary representation of the specified [value],
+  * which must fit in two bytes. in other words, [value] must be between
+  * 0 and 2&lt;sup&gt;16 - 1, inclusive.
+  *
+  * Returns `byteOffset + 2`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 2` is greater than the length of this byte array.
+  *
+  * Throws [ArgumentError] if [value] is negative or
+  * greater than 2&lt;sup&gt;16 - 1.
+  */
+ int setUint16(int byteOffset, int value);
+
+ /**
+  * Returns the (possibly negative) integer represented by the four bytes at
+  * the specified [byteOffset] in this byte array, in two's complement binary
+  * form. The return value will be between 2&lt;sup&gt;31&lt;/sup&gt; and 2&lt;sup&gt;31 - 1,
+  * inclusive.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 4` is greater than the length of this byte array.
+  */
+ int getInt32(int byteOffset);
+
+ /**
+  * Sets the four bytes starting at the specified [byteOffset] in this
+  * byte array to the two's complement binary representation of the specified
+  * [value], which must fit in four bytes. In other words, [value] must lie
+  * between 2&lt;sup&gt;31&lt;/sup&gt; and 2&lt;sup&gt;31 - 1, inclusive.
+  *
+  * Returns `byteOffset + 4`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 4` is greater than the length of this byte array.
+  *
+  * Throws [ArgumentError] if [value] is less than 2&lt;sup&gt;31&lt;/sup&gt;
+  * or greater than 2&lt;sup&gt;31 - 1.
+  */
+ int setInt32(int byteOffset, int value);
+
+ /**
+  * Returns the positive integer represented by the four bytes starting
+  * at the specified [byteOffset] in this byte array, in unsigned binary
+  * form. The return value will be between 0 and  2&lt;sup&gt;32 - 1, inclusive.
+  *
+  */
+ int getUint32(int byteOffset);
+
+ /**
+  * Sets the four bytes starting at the specified [byteOffset] in this byte
+  * array to the unsigned binary representation of the specified [value],
+  * which must fit in four bytes. in other words, [value] must be between
+  * 0 and 2&lt;sup&gt;32 - 1, inclusive.
+  *
+  * Returns `byteOffset + 4`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 4` is greater than the length of this byte array.
+  *
+  * Throws [ArgumentError] if [value] is negative or
+  * greater than 2&lt;sup&gt;32 - 1.
+  */
+ int setUint32(int byteOffset, int value);
+
+ /**
+  * Returns the (possibly negative) integer represented by the eight bytes at
+  * the specified [byteOffset] in this byte array, in two's complement binary
+  * form. The return value will be between 2&lt;sup&gt;63&lt;/sup&gt; and 2&lt;sup&gt;63 - 1,
+  * inclusive.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 8` is greater than the length of this byte array.
+  */
+ int getInt64(int byteOffset);
+
+ /**
+  * Sets the eight bytes starting at the specified [byteOffset] in this
+  * byte array to the two's complement binary representation of the specified
+  * [value], which must fit in eight bytes. In other words, [value] must lie
+  * between 2&lt;sup&gt;63&lt;/sup&gt; and 2&lt;sup&gt;63 - 1, inclusive.
+  *
+  * Returns `byteOffset + 8`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 8` is greater than the length of this byte array.
+  *
+  * Throws [ArgumentError] if [value] is less than 2&lt;sup&gt;63&lt;/sup&gt;
+  * or greater than 2&lt;sup&gt;63 - 1.
+  */
+ int setInt64(int byteOffset, int value);
+
+ /**
+  * Returns the positive integer represented by the eight bytes starting
+  * at the specified [byteOffset] in this byte array, in unsigned binary
+  * form. The return value will be between 0 and  2&lt;sup&gt;64 - 1, inclusive.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 8` is greater than the length of this byte array.
+  */
+ int getUint64(int byteOffset);
+
+ /**
+  * Sets the eight bytes starting at the specified [byteOffset] in this byte
+  * array to the unsigned binary representation of the specified [value],
+  * which must fit in eight bytes. in other words, [value] must be between
+  * 0 and 2&lt;sup&gt;64 - 1, inclusive.
+  *
+  * Returns `byteOffset + 8`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 8` is greater than the length of this byte array.
+  *
+  * Throws [ArgumentError] if [value] is negative or
+  * greater than 2&lt;sup&gt;64 - 1.
+  */
+ int setUint64(int byteOffset, int value);
+
+ /**
+  * Returns the Float32x4 number represented by the 16 bytes at
+  * the specified [byteOffset] in this byte array.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 16` is greater than the length of this byte array.
+  */
+ Float32x4 getFloat32x4(int byteOffset);
+
+ /**
+  * Sets the sixteen bytes starting at the specified [byteOffset] in this
+  * byte array to the Float32x4 representation of the specified [value].
+  *
+  *
+  * Returns `byteOffset + 16`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 16` is greater than the length of this byte array.
+  */
+ int setFloat32x4(int byteOffset, Float32x4 value);
+
+
+ /**
+  * Returns the floating point number represented by the four bytes at
+  * the specified [byteOffset] in this byte array, in IEEE 754
+  * single-precision binary floating-point format (binary32).
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 4` is greater than the length of this byte array.
+  */
+ double getFloat32(int byteOffset);
+
+ /**
+  * Sets the four bytes starting at the specified [byteOffset] in this
+  * byte array to the IEEE 754 single-precision binary floating-point
+  * (binary32) representation of the specified [value].
+  *
+  * **Note that this method can lose precision.** The input [value] is
+  * a 64-bit floating point value, which will be converted to 32-bit
+  * floating point value by IEEE 754 rounding rules before it is stored.
+  * If [value] cannot be represented exactly as a binary32, it will be
+  * converted to the nearest binary32 value.  If two binary32 values are
+  * equally close, the one whose least significant bit is zero will be used.
+  * Note that finite (but large) values can be converted to infinity, and
+  * small non-zero values can be converted to zero.
+  *
+  * Returns `byteOffset + 4`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 4` is greater than the length of this byte array.
+  */
+ int setFloat32(int byteOffset, double value);
+
+ /**
+  * Returns the floating point number represented by the eight bytes at
+  * the specified [byteOffset] in this byte array, in IEEE 754
+  * double-precision binary floating-point format (binary64).
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 8` is greater than the length of this byte array.
+  */
+ double getFloat64(int byteOffset);
+
+ /**
+  * Sets the eight bytes starting at the specified [byteOffset] in this
+  * byte array to the IEEE 754 double-precision binary floating-point
+  * (binary64) representation of the specified [value].
+  *
+  * Returns `byteOffset + 8`, which is the offset of the first byte in the
+  * array after the last byte that was set by this call. This return value can
+  * be passed as the [byteOffset] parameter to a subsequent `setXxx` call.
+  *
+  * Throws [RangeError] if [byteOffset] is negative, or
+  * `byteOffset + 8` is greater than the length of this byte array.
+  */
+ int setFloat64(int byteOffset, double value);
+}
+</pre>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="getFloat32">
+abstract <a href="../dart_core/double.html">double</a> <strong>getFloat32</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getFloat32"
+              title="Permalink to ByteArray.getFloat32">#</a></h4>
+<div class="doc">
+<p>Returns the floating point number represented by the four bytes at
+the specified 
+<span class="param">byteOffset</span> in this byte array, in IEEE 754
+single-precision binary floating-point format (binary32).</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 4</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getFloat32x4">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>getFloat32x4</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getFloat32x4"
+              title="Permalink to ByteArray.getFloat32x4">#</a></h4>
+<div class="doc">
+<p>Returns the Float32x4 number represented by the 16 bytes at
+the specified 
+<span class="param">byteOffset</span> in this byte array.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 16</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getFloat64">
+abstract <a href="../dart_core/double.html">double</a> <strong>getFloat64</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getFloat64"
+              title="Permalink to ByteArray.getFloat64">#</a></h4>
+<div class="doc">
+<p>Returns the floating point number represented by the eight bytes at
+the specified 
+<span class="param">byteOffset</span> in this byte array, in IEEE 754
+double-precision binary floating-point format (binary64).</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 8</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getInt16">
+abstract <a href="../dart_core/int.html">int</a> <strong>getInt16</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getInt16"
+              title="Permalink to ByteArray.getInt16">#</a></h4>
+<div class="doc">
+<p>Returns the (possibly negative) integer represented by the two bytes at
+the specified 
+<span class="param">byteOffset</span> in this byte array, in two's complement binary
+form. The return value will be between 2&lt;sup>15&lt;/sup> and 2&lt;sup>15 - 1,
+inclusive.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 2</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getInt32">
+abstract <a href="../dart_core/int.html">int</a> <strong>getInt32</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getInt32"
+              title="Permalink to ByteArray.getInt32">#</a></h4>
+<div class="doc">
+<p>Returns the (possibly negative) integer represented by the four bytes at
+the specified 
+<span class="param">byteOffset</span> in this byte array, in two's complement binary
+form. The return value will be between 2&lt;sup>31&lt;/sup> and 2&lt;sup>31 - 1,
+inclusive.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 4</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getInt64">
+abstract <a href="../dart_core/int.html">int</a> <strong>getInt64</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getInt64"
+              title="Permalink to ByteArray.getInt64">#</a></h4>
+<div class="doc">
+<p>Returns the (possibly negative) integer represented by the eight bytes at
+the specified 
+<span class="param">byteOffset</span> in this byte array, in two's complement binary
+form. The return value will be between 2&lt;sup>63&lt;/sup> and 2&lt;sup>63 - 1,
+inclusive.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 8</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getInt8">
+abstract <a href="../dart_core/int.html">int</a> <strong>getInt8</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getInt8"
+              title="Permalink to ByteArray.getInt8">#</a></h4>
+<div class="doc">
+<p>Returns the (possibly negative) integer represented by the byte at the
+specified 
+<span class="param">byteOffset</span> in this byte array, in two's complement binary
+representation. The return value will be between -128 and 127, inclusive.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+greater than or equal to the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getUint16">
+abstract <a href="../dart_core/int.html">int</a> <strong>getUint16</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getUint16"
+              title="Permalink to ByteArray.getUint16">#</a></h4>
+<div class="doc">
+<p>Returns the positive integer represented by the two bytes starting
+at the specified 
+<span class="param">byteOffset</span> in this byte array, in unsigned binary
+form. The return value will be between 0 and  2&lt;sup>16 - 1, inclusive.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 2</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getUint32">
+abstract <a href="../dart_core/int.html">int</a> <strong>getUint32</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getUint32"
+              title="Permalink to ByteArray.getUint32">#</a></h4>
+<div class="doc">
+<p>Returns the positive integer represented by the four bytes starting
+at the specified 
+<span class="param">byteOffset</span> in this byte array, in unsigned binary
+form. The return value will be between 0 and  2&lt;sup>32 - 1, inclusive.</p>
+</div>
+</div>
+<div class="method"><h4 id="getUint64">
+abstract <a href="../dart_core/int.html">int</a> <strong>getUint64</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getUint64"
+              title="Permalink to ByteArray.getUint64">#</a></h4>
+<div class="doc">
+<p>Returns the positive integer represented by the eight bytes starting
+at the specified 
+<span class="param">byteOffset</span> in this byte array, in unsigned binary
+form. The return value will be between 0 and  2&lt;sup>64 - 1, inclusive.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 8</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="getUint8">
+abstract <a href="../dart_core/int.html">int</a> <strong>getUint8</strong>(<a href="../dart_core/int.html">int</a> byteOffset) <a class="anchor-link" href="#getUint8"
+              title="Permalink to ByteArray.getUint8">#</a></h4>
+<div class="doc">
+<p>Returns the positive integer represented by the byte at the specified
+
+<span class="param">byteOffset</span> in this byte array, in unsigned binary form. The
+return value will be between 0 and 255, inclusive.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+greater than or equal to the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="lengthInBytes">
+abstract <a href="../dart_core/int.html">int</a> <strong>lengthInBytes</strong>() <a class="anchor-link" href="#lengthInBytes"
+              title="Permalink to ByteArray.lengthInBytes">#</a></h4>
+<div class="doc">
+<p>Returns the length of this byte array, in bytes.</p>
+</div>
+</div>
+<div class="method"><h4 id="setFloat32">
+abstract <a href="../dart_core/int.html">int</a> <strong>setFloat32</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/double.html">double</a> value) <a class="anchor-link" href="#setFloat32"
+              title="Permalink to ByteArray.setFloat32">#</a></h4>
+<div class="doc">
+<p>Sets the four bytes starting at the specified 
+<span class="param">byteOffset</span> in this
+byte array to the IEEE 754 single-precision binary floating-point
+(binary32) representation of the specified 
+<span class="param">value</span>.</p>
+<p><strong>Note that this method can lose precision.</strong> The input 
+<span class="param">value</span> is
+a 64-bit floating point value, which will be converted to 32-bit
+floating point value by IEEE 754 rounding rules before it is stored.
+If 
+<span class="param">value</span> cannot be represented exactly as a binary32, it will be
+converted to the nearest binary32 value.  If two binary32 values are
+equally close, the one whose least significant bit is zero will be used.
+Note that finite (but large) values can be converted to infinity, and
+small non-zero values can be converted to zero.</p>
+<p>Returns <code>byteOffset + 4</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 4</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="setFloat32x4">
+abstract <a href="../dart_core/int.html">int</a> <strong>setFloat32x4</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> value) <a class="anchor-link" href="#setFloat32x4"
+              title="Permalink to ByteArray.setFloat32x4">#</a></h4>
+<div class="doc">
+<p>Sets the sixteen bytes starting at the specified 
+<span class="param">byteOffset</span> in this
+byte array to the Float32x4 representation of the specified 
+<span class="param">value</span>.</p>
+<p>Returns <code>byteOffset + 16</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 16</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="setFloat64">
+abstract <a href="../dart_core/int.html">int</a> <strong>setFloat64</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/double.html">double</a> value) <a class="anchor-link" href="#setFloat64"
+              title="Permalink to ByteArray.setFloat64">#</a></h4>
+<div class="doc">
+<p>Sets the eight bytes starting at the specified 
+<span class="param">byteOffset</span> in this
+byte array to the IEEE 754 double-precision binary floating-point
+(binary64) representation of the specified 
+<span class="param">value</span>.</p>
+<p>Returns <code>byteOffset + 8</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 8</code> is greater than the length of this byte array.</p>
+</div>
+</div>
+<div class="method"><h4 id="setInt16">
+abstract <a href="../dart_core/int.html">int</a> <strong>setInt16</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/int.html">int</a> value) <a class="anchor-link" href="#setInt16"
+              title="Permalink to ByteArray.setInt16">#</a></h4>
+<div class="doc">
+<p>Sets the two bytes starting at the specified 
+<span class="param">byteOffset</span> in this
+byte array to the two's complement binary representation of the specified
+
+<span class="param">value</span>, which must fit in two bytes. In other words, 
+<span class="param">value</span> must lie
+between 2&lt;sup>15&lt;/sup> and 2&lt;sup>15 - 1, inclusive.</p>
+<p>Returns <code>byteOffset + 2</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 2</code> is greater than the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">value</span> is less than 2&lt;sup>15&lt;/sup>
+or greater than 2&lt;sup>15 - 1.</p>
+</div>
+</div>
+<div class="method"><h4 id="setInt32">
+abstract <a href="../dart_core/int.html">int</a> <strong>setInt32</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/int.html">int</a> value) <a class="anchor-link" href="#setInt32"
+              title="Permalink to ByteArray.setInt32">#</a></h4>
+<div class="doc">
+<p>Sets the four bytes starting at the specified 
+<span class="param">byteOffset</span> in this
+byte array to the two's complement binary representation of the specified
+
+<span class="param">value</span>, which must fit in four bytes. In other words, 
+<span class="param">value</span> must lie
+between 2&lt;sup>31&lt;/sup> and 2&lt;sup>31 - 1, inclusive.</p>
+<p>Returns <code>byteOffset + 4</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 4</code> is greater than the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">value</span> is less than 2&lt;sup>31&lt;/sup>
+or greater than 2&lt;sup>31 - 1.</p>
+</div>
+</div>
+<div class="method"><h4 id="setInt64">
+abstract <a href="../dart_core/int.html">int</a> <strong>setInt64</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/int.html">int</a> value) <a class="anchor-link" href="#setInt64"
+              title="Permalink to ByteArray.setInt64">#</a></h4>
+<div class="doc">
+<p>Sets the eight bytes starting at the specified 
+<span class="param">byteOffset</span> in this
+byte array to the two's complement binary representation of the specified
+
+<span class="param">value</span>, which must fit in eight bytes. In other words, 
+<span class="param">value</span> must lie
+between 2&lt;sup>63&lt;/sup> and 2&lt;sup>63 - 1, inclusive.</p>
+<p>Returns <code>byteOffset + 8</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 8</code> is greater than the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">value</span> is less than 2&lt;sup>63&lt;/sup>
+or greater than 2&lt;sup>63 - 1.</p>
+</div>
+</div>
+<div class="method"><h4 id="setInt8">
+abstract <a href="../dart_core/int.html">int</a> <strong>setInt8</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/int.html">int</a> value) <a class="anchor-link" href="#setInt8"
+              title="Permalink to ByteArray.setInt8">#</a></h4>
+<div class="doc">
+<p>Sets the byte at the specified 
+<span class="param">byteOffset</span> in this byte array to the
+two's complement binary representation of the specified 
+<span class="param">value</span>, which
+must fit in a single byte. In other words, 
+<span class="param">value</span> must be between
+-128 and 127, inclusive.</p>
+<p>Returns <code>byteOffset + 1</code>, which is the offset of the first byte in the
+array after the byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+greater than or equal to the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">value</span> is less than -128 or
+greater than 127.</p>
+</div>
+</div>
+<div class="method"><h4 id="setUint16">
+abstract <a href="../dart_core/int.html">int</a> <strong>setUint16</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/int.html">int</a> value) <a class="anchor-link" href="#setUint16"
+              title="Permalink to ByteArray.setUint16">#</a></h4>
+<div class="doc">
+<p>Sets the two bytes starting at the specified 
+<span class="param">byteOffset</span> in this byte
+array to the unsigned binary representation of the specified 
+<span class="param">value</span>,
+which must fit in two bytes. in other words, 
+<span class="param">value</span> must be between
+0 and 2&lt;sup>16 - 1, inclusive.</p>
+<p>Returns <code>byteOffset + 2</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 2</code> is greater than the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">value</span> is negative or
+greater than 2&lt;sup>16 - 1.</p>
+</div>
+</div>
+<div class="method"><h4 id="setUint32">
+abstract <a href="../dart_core/int.html">int</a> <strong>setUint32</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/int.html">int</a> value) <a class="anchor-link" href="#setUint32"
+              title="Permalink to ByteArray.setUint32">#</a></h4>
+<div class="doc">
+<p>Sets the four bytes starting at the specified 
+<span class="param">byteOffset</span> in this byte
+array to the unsigned binary representation of the specified 
+<span class="param">value</span>,
+which must fit in four bytes. in other words, 
+<span class="param">value</span> must be between
+0 and 2&lt;sup>32 - 1, inclusive.</p>
+<p>Returns <code>byteOffset + 4</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 4</code> is greater than the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">value</span> is negative or
+greater than 2&lt;sup>32 - 1.</p>
+</div>
+</div>
+<div class="method"><h4 id="setUint64">
+abstract <a href="../dart_core/int.html">int</a> <strong>setUint64</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/int.html">int</a> value) <a class="anchor-link" href="#setUint64"
+              title="Permalink to ByteArray.setUint64">#</a></h4>
+<div class="doc">
+<p>Sets the eight bytes starting at the specified 
+<span class="param">byteOffset</span> in this byte
+array to the unsigned binary representation of the specified 
+<span class="param">value</span>,
+which must fit in eight bytes. in other words, 
+<span class="param">value</span> must be between
+0 and 2&lt;sup>64 - 1, inclusive.</p>
+<p>Returns <code>byteOffset + 8</code>, which is the offset of the first byte in the
+array after the last byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative, or
+<code>byteOffset + 8</code> is greater than the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">value</span> is negative or
+greater than 2&lt;sup>64 - 1.</p>
+</div>
+</div>
+<div class="method"><h4 id="setUint8">
+abstract <a href="../dart_core/int.html">int</a> <strong>setUint8</strong>(<a href="../dart_core/int.html">int</a> byteOffset, <a href="../dart_core/int.html">int</a> value) <a class="anchor-link" href="#setUint8"
+              title="Permalink to ByteArray.setUint8">#</a></h4>
+<div class="doc">
+<p>Sets the byte at the specified 
+<span class="param">byteOffset</span> in this byte array to the
+unsigned binary representation of the specified 
+<span class="param">value</span>, which must fit
+in a single byte. in other words, 
+<span class="param">value</span> must be between 0 and 255,
+inclusive.</p>
+<p>Returns <code>byteOffset + 1</code>, which is the offset of the first byte in the
+array after the byte that was set by this call. This return value can
+be passed as the 
+<span class="param">byteOffset</span> parameter to a subsequent <code>setXxx</code> call.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">byteOffset</span> is negative,
+or greater than or equal to the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">value</span> is negative or
+greater than 255.</p>
+</div>
+</div>
+<div class="method"><h4 id="subByteArray">
+abstract <a href="../dart_scalarlist/ByteArray.html">ByteArray</a> <strong>subByteArray</strong>([<a href="../dart_core/int.html">int</a> start, <a href="../dart_core/int.html">int</a> length]) <a class="anchor-link" href="#subByteArray"
+              title="Permalink to ByteArray.subByteArray">#</a></h4>
+<div class="doc">
+<p>Returns a <a class="crossref" href="../dart_scalarlist/ByteArray.html">ByteArray</a> <em>view</em> of a portion of this byte array.
+The returned byte array consists of 
+<span class="param">length</span> bytes starting
+at position 
+<span class="param">start</span> in this byte array. The returned byte array
+is backed by the same data as this byte array. In other words,
+changes to the returned byte array are visible in this byte array
+and vice-versa.</p>
+<p>Throws <code>RangeError</code> if 
+<span class="param">start</span> or 
+<span class="param">length</span> are negative, or
+if <code>start + length</code> is greater than the length of this byte array.</p>
+<p>Throws <code>ArgumentError</code> if 
+<span class="param">length</span> is negative.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:16.481</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

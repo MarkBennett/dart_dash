@@ -1,0 +1,884 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>BasicRule class / serialization Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="serialization" data-type="BasicRule">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../serialization.html">serialization</a> &rsaquo; <a href="../serialization/BasicRule.html">BasicRule</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><ul class="icon">
+<li><div class="icon-class"></div><strong>BasicRule</strong></li>
+<li><a href="../serialization/ClosureRule.html"><div class="icon-class"></div>ClosureRule</a></li>
+<li><a href="../serialization/Constructor.html"><div class="icon-class"></div>Constructor</a></li>
+<li><a href="../serialization/ConstructType.html"><div class="icon-interface"></div>ConstructType</a></li>
+<li><a href="../serialization/CustomRule.html"><div class="icon-class"></div>CustomRule</a></li>
+<li><a href="../serialization/DesignatedRuleForObject.html"><div class="icon-class"></div>DesignatedRuleForObject</a></li>
+<li><a href="../serialization/Format.html"><div class="icon-class"></div>Format</a></li>
+<li><a href="../serialization/GetStateType.html"><div class="icon-interface"></div>GetStateType</a></li>
+<li><a href="../serialization/ListRule.html"><div class="icon-class"></div>ListRule</a></li>
+<li><a href="../serialization/ListRuleEssential.html"><div class="icon-class"></div>ListRuleEssential</a></li>
+<li><a href="../serialization/MapRule.html"><div class="icon-class"></div>MapRule</a></li>
+<li><a href="../serialization/MirrorRule.html"><div class="icon-class"></div>MirrorRule</a></li>
+<li><a href="../serialization/NamedObjectRule.html"><div class="icon-class"></div>NamedObjectRule</a></li>
+<li><a href="../serialization/NonEssentialStateType.html"><div class="icon-interface"></div>NonEssentialStateType</a></li>
+<li><a href="../serialization/PrimitiveRule.html"><div class="icon-class"></div>PrimitiveRule</a></li>
+<li><a href="../serialization/Reader.html"><div class="icon-class"></div>Reader</a></li>
+<li><a href="../serialization/ReaderOrWriter.html"><div class="icon-class"></div>ReaderOrWriter</a></li>
+<li><a href="../serialization/Reference.html"><div class="icon-class"></div>Reference</a></li>
+<li><a href="../serialization/Serialization.html"><div class="icon-class"></div>Serialization</a></li>
+<li><a href="../serialization/SerializationRule.html"><div class="icon-class"></div>SerializationRule</a></li>
+<li><a href="../serialization/SetWithFunction.html"><div class="icon-interface"></div>SetWithFunction</a></li>
+<li><a href="../serialization/SimpleFlatFormat.html"><div class="icon-class"></div>SimpleFlatFormat</a></li>
+<li><a href="../serialization/SimpleJsonFormat.html"><div class="icon-class"></div>SimpleJsonFormat</a></li>
+<li><a href="../serialization/SimpleMapFormat.html"><div class="icon-class"></div>SimpleMapFormat</a></li>
+<li><a href="../serialization/Trace.html"><div class="icon-class"></div>Trace</a></li>
+<li><a href="../serialization/Writer.html"><div class="icon-class"></div>Writer</a></li>
+<li><a href="../serialization/SerializationException.html"><div class="icon-exception"></div>SerializationException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>BasicRule</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>This is the basic rule for handling "normal" objects, which have a list of
+fields and a constructor, as opposed to simple types or collections. It uses
+mirrors to access the state, and can also use them to figure out the list
+of fields and the constructor if it's not provided.</p>
+<p>If you call <a class="crossref" href="../serialization/Serialization.html#addRule">Serialization.addRule</a>, this is what you get.</p>
+<pre class="source">
+class BasicRule extends SerializationRule {
+ /**
+  * The [type] is used both to find fields and to verify if the object is one
+  * that we handle.
+  */
+ final ClassMirror type;
+
+ /** Used to create new objects when reading. */
+ Constructor constructor;
+
+ /** This holds onto our list of fields, and can also calculate them. */
+ _FieldList fields;
+
+ /**
+  * Instances can either use maps or lists to hold the object's state. The list
+  * representation is much more compact and used by default. The map
+  * representation is more human-readable. The default is to use lists.
+  */
+ bool useMaps = false;
+
+ // TODO(alanknight) Change the type parameter once we have class literals.
+ // Issue 6282.
+ // TODO(alanknight) Does the comment for this format properly?
+ /**
+  * Create this rule. Right now the user is obliged to pass a ClassMirror,
+  * but once we allow class literals (Issue 6282) it will support that. The
+  * other parameters can all be left as null, and are optional on the
+  * [Serialization.addRule] method which is the normal caller for this.
+  * [constructorName] is the constructor, if not the default.
+  * [constructorFields] are the fields required to call the constructor, which
+  *   is the essential state. They don't have to be actual fields,
+  *   getter/setter pairs or getter/constructor pairs are fine. Note that
+  *   the constructorFields do not need to be strings, they can be arbitrary
+  *   values. For non-strings, these will be treated as constant values to be
+  *   used instead of data read from the objects.
+  * [regularFields] are the non-essential fields. They don't have to be actual
+  *   fields, getter/setter pairs are fine. If this is null, it's assumed
+  *   that we should figure them out.
+  * [excludeFields] lets you tell it to find the fields automatically, but
+  *   omit some that would otherwise be included.
+  */
+ BasicRule(ClassMirror this.type, String constructorName,
+     List constructorFields, List regularFields,
+     List excludeFields) {
+   _findFields(constructorFields, regularFields, excludeFields);
+   constructor = new Constructor(
+       type, constructorName, fields.constructorFieldIndices());
+   configureForLists();
+ }
+
+ /**
+  * Sometimes it's necessary to treat fields of an object differently, based
+  * on the containing object. For example, by default a list treats its
+  * contents as non-essential state, so it will be populated only after all
+  * objects have been created. An object may have a list which is used in its
+  * constructor and must be fully created before the owning object can be
+  * created. Alternatively, it may not be possible to set a field directly,
+  * and some other method must be called to set it, perhaps calling a method
+  * on the owning object to add each individual element.
+  *
+  * This method lets you designate a function to use to set the value of a
+  * field. It also makes the contents of that field be treated as essential,
+  * which currently only has meaning if the field is a list. This is done
+  * because you might set a list field's special treatment function to add
+  * each item individually and that will only work if those objects already
+  * exist.
+  *
+  * For example, to serialize a Serialization, we need its rules to be
+  * individually added rather than just setting the rules field.
+  *      ..addRuleFor(new Serialization()).setFieldWith('rules',
+  *          (InstanceMirror s, List rules) {
+  *            rules.forEach((x) =&gt; s.reflectee.addRule(x));
+  * Note that the function is passed the owning object as well as the field
+  * value, but that it is passed as a mirror.
+  */
+ setFieldWith(String fieldName, SetWithFunction setWith) {
+   fields.addAllByName([fieldName]);
+   _NamedField field = fields.named(fieldName);
+   Function setter = (setWith == null) ? field.defaultSetter : setWith;
+   field.customSetter = setter;
+ }
+
+ /** Return the name of the constructor used to create new instances on read.*/
+ String get constructorName =&gt; constructor.name;
+
+ /** Return the list of field names to be passed to the constructor.*/
+ List&lt;String&gt; get constructorFields =&gt; fields.constructorFieldNames();
+
+ /** Return the list of field names not used in the constructor. */
+ List&lt;String&gt; get regularFields =&gt; fields.regularFieldNames();
+
+ String toString() =&gt; "Basic Rule for ${type.simpleName}";
+
+ /**
+  * Configure this instance to use maps by field name as its output.
+  * Instances can either produce maps or lists. The list representation
+  * is much more compact and used by default. The map representation is
+  * much easier to debug. The default is to use lists.
+  */
+ configureForMaps() {
+   useMaps = true;
+ }
+
+ /**
+  * Configure this instance to use lists accessing fields by index as its
+  * output. Instances can either produce maps or lists. The list representation
+  * is much more compact and used by default. The map representation is
+  * much easier to debug. The default is to use lists.
+  */
+ configureForLists() {
+   useMaps = false;
+ }
+
+ /** Create either a list or a map to hold the object's state, depending
+  * on the [useMaps] variable. If using a Map, we wrap it in order to keep
+  * the protocol compatible. See [configureForLists]/[configureForMaps].
+  */
+  createStateHolder() =&gt;
+    useMaps ? new _MapWrapper(fields.contents) : new List(fields.length);
+
+ /**
+  * Wrap the state if it's passed in as a map, and if the keys are references,
+  * resolve them to the strings we expect. We leave the previous keys in there
+  * as well, as they shouldn't be harmful, and it costs more to remove them.
+  */
+  makeIndexableByNumber(state) {
+    if (!(state is Map)) return state;
+    // TODO(alanknight): This is quite inefficient, and we do it twice per
+    // instance. If the keys are references, we need to turn them into strings
+    // before we can look at indexing them by field position. It's also eager,
+    // but we know our keys are always primitives, so we don't have to worry
+    // about their instances not having been created yet.
+    var newState = new Map();
+    for (var each in state.keys) {
+      var newKey = (each is Reference) ? each.inflated() : each;
+      newState[newKey] = state[each];
+    }
+    return new _MapWrapper.fromMap(newState, fields.contents);
+  }
+
+ /**
+  * Extract the state from [object] using an instanceMirror and the field
+  * names in [fields]. Call the function [callback] on each value.
+  */
+ extractState(object, Function callback, Writer w) {
+   var result = createStateHolder();
+   var mirror = reflect(object);
+
+   keysAndValues(fields).forEach(
+       (index, field) {
+         var value = _value(mirror, field);
+         callback(field.name);
+         callback(checkForEssentialLists(index, value));
+         result[index] = value;
+       });
+   return _unwrap(result);
+ }
+
+ flatten(state, Writer writer) {
+   if (state is List) {
+     keysAndValues(state).forEach((index, value) {
+       state[index] = writer._referenceFor(value);
+     });
+   } else {
+     var newState = new Map();
+     keysAndValues(state).forEach((key, value) {
+       newState[writer._referenceFor(key)] = writer._referenceFor(value);
+     });
+     return newState;
+   }
+ }
+
+ /**
+  * If the value is a List, and the field is a constructor field or
+  * otherwise specially designated, we wrap it in something that indicates
+  * a restriction on the rules that can be used. Which in this case amounts
+  * to designating the rule, since we so far only have one rule per object.
+  */
+ checkForEssentialLists(index, value) {
+   if (value is List &amp;&amp; fields.contents[index].isEssential) {
+     return new DesignatedRuleForObject(value,
+         (SerializationRule rule) =&gt; rule is ListRuleEssential);
+   } else {
+     return value;
+   }
+ }
+
+ /** Remove any MapWrapper from the extracted state. */
+ _unwrap(result) =&gt; (result is _MapWrapper) ? result.asMap() : result;
+
+ /**
+  * Call the designated constructor with the appropriate fields from [state],
+  * first resolving references in the context of [reader].
+  */
+ inflateEssential(state, Reader reader) {
+   InstanceMirror mirror = constructor.constructFrom(
+       makeIndexableByNumber(state), reader);
+   return mirror.reflectee;
+ }
+
+ /** For all [state] not required in the constructor, set it in the [object],
+  * resolving references in the context of [reader].
+  */
+ inflateNonEssential(rawState, object, Reader reader) {
+   InstanceMirror mirror = reflect(object);
+   var state = makeIndexableByNumber(rawState);
+   fields.forEachRegularField( (_Field field) {
+     var value = reader.inflateReference(state[field.index]);
+     field.setValue(mirror, value);
+   });
+ }
+
+ /**
+  * Determine if this rule applies to the object in question. In our case
+  * this is true if the type mirrors are the same.
+  */
+ // TODO(alanknight): This seems likely to be slow. Verify. Other options?
+ bool appliesTo(object, Writer w) =&gt; reflect(object).type == type;
+
+ /**
+  * Given the various field lists provided by the user, construct the list
+  * of field names that we want.
+  */
+ void _findFields(List constructorFields, List regularFields,
+     List excludeFields) {
+   fields = new _FieldList(type);
+   fields.constructorFields = constructorFields;
+   fields.regular = regularFields;
+   // TODO(alanknight): The order of this matters. It shouldn't.
+   fields.exclude = excludeFields;
+   fields.figureOutFields();
+ }
+
+ bool get hasVariableLengthEntries =&gt; false;
+
+ int get dataLength =&gt; fields.length;
+
+ /**
+  * Extract the value of [field] from the object reflected
+  * by [mirror].
+  */
+ // TODO(alanknight): The framework should be resilient if there are fields
+ // it expects that are missing, either for the case of de-serializing to a
+ // different definition, or for the case that tree-shaking has removed state.
+ // TODO(alanknight): This, and other places, rely on synchronous access to
+ // mirrors. Should be changed to use a synchronous API once one is available,
+ // or to be async, but that would be extremely ugly.
+ _value(InstanceMirror mirror, _Field field) =&gt; field.valueIn(mirror);
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../serialization/SerializationRule.html">SerializationRule</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>BasicRule</strong></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="BasicRule">
+<button class="show-code">Code</button>
+new <strong>BasicRule</strong>(<a href="../dart_mirrors/ClassMirror.html">ClassMirror</a> type, <a href="../dart_core/String.html">String</a> constructorName, <a href="../dart_core/List.html">List</a> constructorFields, <a href="../dart_core/List.html">List</a> regularFields, <a href="../dart_core/List.html">List</a> excludeFields) <a class="anchor-link" href="#BasicRule"
+              title="Permalink to BasicRule.BasicRule">#</a></h4>
+<div class="doc">
+<p>Create this rule. Right now the user is obliged to pass a ClassMirror,
+but once we allow class literals (Issue 6282) it will support that. The
+other parameters can all be left as null, and are optional on the
+<a class="crossref" href="../serialization/Serialization.html#addRule">Serialization.addRule</a> method which is the normal caller for this.
+
+<span class="param">constructorName</span> is the constructor, if not the default.
+
+<span class="param">constructorFields</span> are the fields required to call the constructor, which
+  is the essential state. They don't have to be actual fields,
+  getter/setter pairs or getter/constructor pairs are fine. Note that
+  the constructorFields do not need to be strings, they can be arbitrary
+  values. For non-strings, these will be treated as constant values to be
+  used instead of data read from the objects.
+
+<span class="param">regularFields</span> are the non-essential fields. They don't have to be actual
+  fields, getter/setter pairs are fine. If this is null, it's assumed
+  that we should figure them out.
+
+<span class="param">excludeFields</span> lets you tell it to find the fields automatically, but
+  omit some that would otherwise be included.</p>
+<pre class="source">
+BasicRule(ClassMirror this.type, String constructorName,
+   List constructorFields, List regularFields,
+   List excludeFields) {
+ _findFields(constructorFields, regularFields, excludeFields);
+ constructor = new Constructor(
+     type, constructorName, fields.constructorFieldIndices());
+ configureForLists();
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="constructor">
+<button class="show-code">Code</button>
+<a href="../serialization/Constructor.html">Constructor</a>         <strong>constructor</strong> <a class="anchor-link"
+            href="#constructor"
+            title="Permalink to BasicRule.constructor">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+constructor
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="constructorFields">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt;         <strong>constructorFields</strong> <a class="anchor-link"
+            href="#constructorFields"
+            title="Permalink to BasicRule.constructorFields">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the list of field names to be passed to the constructor.</p>
+<pre class="source">
+List&lt;String&gt; get constructorFields =&gt; fields.constructorFieldNames();
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="constructorName">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>constructorName</strong> <a class="anchor-link"
+            href="#constructorName"
+            title="Permalink to BasicRule.constructorName">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the name of the constructor used to create new instances on read.</p>
+<pre class="source">
+String get constructorName =&gt; constructor.name;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="dataLength">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>dataLength</strong> <a class="anchor-link"
+            href="#dataLength"
+            title="Permalink to BasicRule.dataLength">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>If the data is fixed length, return it here. The format may or may not
+make use of this, depending on whether it already has enough information
+to determine the length on its own. If <a class="crossref" href="../serialization/BasicRule.html#hasVariableLengthEntries">hasVariableLengthEntries</a> is true
+this is ignored.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+int get dataLength =&gt; fields.length;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="fields">
+<button class="show-code">Code</button>
+<a href="../serialization/_FieldList.html">_FieldList</a>         <strong>fields</strong> <a class="anchor-link"
+            href="#fields"
+            title="Permalink to BasicRule.fields">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+fields
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hasVariableLengthEntries">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>hasVariableLengthEntries</strong> <a class="anchor-link"
+            href="#hasVariableLengthEntries"
+            title="Permalink to BasicRule.hasVariableLengthEntries">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Return true if the data this rule returns is variable length, so a
+length needs to be written for it if the format requires that. Return
+false if the results are always the same length.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+bool get hasVariableLengthEntries =&gt; false;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="mustBePrimary">
+<button class="show-code">Code</button>
+final         <strong>mustBePrimary</strong> <a class="anchor-link"
+            href="#mustBePrimary"
+            title="Permalink to BasicRule.mustBePrimary">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>Return true if this rule should only be applied when we are the first
+rule found that applies to this object. This may or may not be a hack
+that will disappear once we have better support for multiple rules.
+We want to have multiple different rules that apply to the same object. We
+also want to have multiple different rules that might exclusively apply
+to the same object. So, we want either ListRule or ListRuleEssential, and
+only one of them can be there. But on the other hand, we may want both
+ListRule and BasicRule. So we identify the kinds of rules that can share.
+If mustBePrimary returns true, then this rule will only be chosen if no
+other rule has been found yet. This means that the ordering of rules in
+the serialization is significant, which is unpleasant, but we'll have
+to see how bad it is.</p>
+<pre class="source">
+get mustBePrimary =&gt; false;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="number">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>get number</strong> <a class="anchor-link" href="#number"
+              title="Permalink to BasicRule.get number">#</a></h4>
+<div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>Rules belong uniquely to a particular Serialization instance, and can
+be identified within it by number.</p>
+<pre class="source">
+int get number =&gt; _number;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="number=">
+<button class="show-code">Code</button>
+void <strong>set number</strong>(x) <a class="anchor-link" href="#number="
+              title="Permalink to BasicRule.set number">#</a></h4>
+<div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>Rules belong uniquely to a particular Serialization instance, and can
+be identified within it by number.</p>
+<pre class="source">
+void set number(x) {
+ if (_number != null &amp;&amp; _number != x) throw
+     new SerializationException("Rule numbers cannot be changed, once set");
+ _number = x;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="regularFields">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt;         <strong>regularFields</strong> <a class="anchor-link"
+            href="#regularFields"
+            title="Permalink to BasicRule.regularFields">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the list of field names not used in the constructor. </p>
+<pre class="source">
+List&lt;String&gt; get regularFields =&gt; fields.regularFieldNames();
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="storesStateAsLists">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>storesStateAsLists</strong> <a class="anchor-link"
+            href="#storesStateAsLists"
+            title="Permalink to BasicRule.storesStateAsLists">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>Allows rules to tell us how they expect to store their state. If this
+isn't specified we can also just look at the data to tell.</p>
+<pre class="source">
+bool get storesStateAsLists =&gt; false;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="storesStateAsMaps">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>storesStateAsMaps</strong> <a class="anchor-link"
+            href="#storesStateAsMaps"
+            title="Permalink to BasicRule.storesStateAsMaps">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<pre class="source">
+bool get storesStateAsMaps =&gt; false;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="storesStateAsPrimitives">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>storesStateAsPrimitives</strong> <a class="anchor-link"
+            href="#storesStateAsPrimitives"
+            title="Permalink to BasicRule.storesStateAsPrimitives">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<pre class="source">
+bool get storesStateAsPrimitives =&gt; false;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="type">
+<button class="show-code">Code</button>
+final <a href="../dart_mirrors/ClassMirror.html">ClassMirror</a>         <strong>type</strong> <a class="anchor-link"
+            href="#type"
+            title="Permalink to BasicRule.type">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+type
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="useMaps">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>useMaps</strong> <a class="anchor-link"
+            href="#useMaps"
+            title="Permalink to BasicRule.useMaps">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+useMaps = false
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="appliesTo">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>appliesTo</strong>(object, <a href="../serialization/Writer.html">Writer</a> w) <a class="anchor-link" href="#appliesTo"
+              title="Permalink to BasicRule.appliesTo">#</a></h4>
+<div class="doc">
+<p>Determine if this rule applies to the object in question. In our case
+this is true if the type mirrors are the same.</p>
+<pre class="source">
+bool appliesTo(object, Writer w) =&gt; reflect(object).type == type;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="checkForEssentialLists">
+<button class="show-code">Code</button>
+<strong>checkForEssentialLists</strong>(index, value) <a class="anchor-link" href="#checkForEssentialLists"
+              title="Permalink to BasicRule.checkForEssentialLists">#</a></h4>
+<div class="doc">
+<p>If the value is a List, and the field is a constructor field or
+otherwise specially designated, we wrap it in something that indicates
+a restriction on the rules that can be used. Which in this case amounts
+to designating the rule, since we so far only have one rule per object.</p>
+<pre class="source">
+checkForEssentialLists(index, value) {
+ if (value is List &amp;&amp; fields.contents[index].isEssential) {
+   return new DesignatedRuleForObject(value,
+       (SerializationRule rule) =&gt; rule is ListRuleEssential);
+ } else {
+   return value;
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="configureForLists">
+<button class="show-code">Code</button>
+<strong>configureForLists</strong>() <a class="anchor-link" href="#configureForLists"
+              title="Permalink to BasicRule.configureForLists">#</a></h4>
+<div class="doc">
+<p>Configure this instance to use lists accessing fields by index as its
+output. Instances can either produce maps or lists. The list representation
+is much more compact and used by default. The map representation is
+much easier to debug. The default is to use lists.</p>
+<pre class="source">
+configureForLists() {
+ useMaps = false;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="configureForMaps">
+<button class="show-code">Code</button>
+<strong>configureForMaps</strong>() <a class="anchor-link" href="#configureForMaps"
+              title="Permalink to BasicRule.configureForMaps">#</a></h4>
+<div class="doc">
+<p>Configure this instance to use maps by field name as its output.
+Instances can either produce maps or lists. The list representation
+is much more compact and used by default. The map representation is
+much easier to debug. The default is to use lists.</p>
+<pre class="source">
+configureForMaps() {
+ useMaps = true;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createStateHolder">
+<button class="show-code">Code</button>
+<strong>createStateHolder</strong>() <a class="anchor-link" href="#createStateHolder"
+              title="Permalink to BasicRule.createStateHolder">#</a></h4>
+<div class="doc">
+<p>Create either a list or a map to hold the object's state, depending
+on the <a class="crossref" href="../serialization/BasicRule.html#useMaps">useMaps</a> variable. If using a Map, we wrap it in order to keep
+the protocol compatible. See <a class="crossref" href="../serialization/BasicRule.html#configureForLists">configureForLists</a>/<a class="crossref" href="../serialization/BasicRule.html#configureForMaps">configureForMaps</a>.</p>
+<pre class="source">
+createStateHolder() =&gt;
+ useMaps ? new _MapWrapper(fields.contents) : new List(fields.length);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="extractState">
+<button class="show-code">Code</button>
+<strong>extractState</strong>(object, <a href="../dart_core/Function.html">Function</a> callback, <a href="../serialization/Writer.html">Writer</a> w) <a class="anchor-link" href="#extractState"
+              title="Permalink to BasicRule.extractState">#</a></h4>
+<div class="doc">
+<p>Extract the state from 
+<span class="param">object</span> using an instanceMirror and the field
+names in <a class="crossref" href="../serialization/BasicRule.html#fields">fields</a>. Call the function 
+<span class="param">callback</span> on each value.</p>
+<pre class="source">
+extractState(object, Function callback, Writer w) {
+ var result = createStateHolder();
+ var mirror = reflect(object);
+
+ keysAndValues(fields).forEach(
+     (index, field) {
+       var value = _value(mirror, field);
+       callback(field.name);
+       callback(checkForEssentialLists(index, value));
+       result[index] = value;
+     });
+ return _unwrap(result);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="flatten">
+<button class="show-code">Code</button>
+<strong>flatten</strong>(state, <a href="../serialization/Writer.html">Writer</a> writer) <a class="anchor-link" href="#flatten"
+              title="Permalink to BasicRule.flatten">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Given the variables representing the state of an object, flatten it
+by turning object pointers into Reference objects where needed. This
+destructively modifies the state object.</p>
+<p>This has a default implementation which assumes that object is indexable,
+so either conforms to Map or List. Subclasses may override to do something
+different, including returning a new state object to be used in place
+of the original.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+flatten(state, Writer writer) {
+ if (state is List) {
+   keysAndValues(state).forEach((index, value) {
+     state[index] = writer._referenceFor(value);
+   });
+ } else {
+   var newState = new Map();
+   keysAndValues(state).forEach((key, value) {
+     newState[writer._referenceFor(key)] = writer._referenceFor(value);
+   });
+   return newState;
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="inflateEssential">
+<button class="show-code">Code</button>
+<strong>inflateEssential</strong>(state, <a href="../serialization/Reader.html">Reader</a> reader) <a class="anchor-link" href="#inflateEssential"
+              title="Permalink to BasicRule.inflateEssential">#</a></h4>
+<div class="doc">
+<p>Call the designated constructor with the appropriate fields from 
+<span class="param">state</span>,
+first resolving references in the context of 
+<span class="param">reader</span>.</p>
+<pre class="source">
+inflateEssential(state, Reader reader) {
+ InstanceMirror mirror = constructor.constructFrom(
+     makeIndexableByNumber(state), reader);
+ return mirror.reflectee;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="inflateNonEssential">
+<button class="show-code">Code</button>
+<strong>inflateNonEssential</strong>(rawState, object, <a href="../serialization/Reader.html">Reader</a> reader) <a class="anchor-link" href="#inflateNonEssential"
+              title="Permalink to BasicRule.inflateNonEssential">#</a></h4>
+<div class="doc">
+<p>For all <code>state</code> not required in the constructor, set it in the 
+<span class="param">object</span>,
+resolving references in the context of 
+<span class="param">reader</span>.</p>
+<pre class="source">
+inflateNonEssential(rawState, object, Reader reader) {
+ InstanceMirror mirror = reflect(object);
+ var state = makeIndexableByNumber(rawState);
+ fields.forEachRegularField( (_Field field) {
+   var value = reader.inflateReference(state[field.index]);
+   field.setValue(mirror, value);
+ });
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="makeIndexableByNumber">
+<button class="show-code">Code</button>
+<strong>makeIndexableByNumber</strong>(state) <a class="anchor-link" href="#makeIndexableByNumber"
+              title="Permalink to BasicRule.makeIndexableByNumber">#</a></h4>
+<div class="doc">
+<p>Wrap the state if it's passed in as a map, and if the keys are references,
+resolve them to the strings we expect. We leave the previous keys in there
+as well, as they shouldn't be harmful, and it costs more to remove them.</p>
+<pre class="source">
+makeIndexableByNumber(state) {
+ if (!(state is Map)) return state;
+ // TODO(alanknight): This is quite inefficient, and we do it twice per
+ // instance. If the keys are references, we need to turn them into strings
+ // before we can look at indexing them by field position. It's also eager,
+ // but we know our keys are always primitives, so we don't have to worry
+ // about their instances not having been created yet.
+ var newState = new Map();
+ for (var each in state.keys) {
+   var newKey = (each is Reference) ? each.inflated() : each;
+   newState[newKey] = state[each];
+ }
+ return new _MapWrapper.fromMap(newState, fields.contents);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setFieldWith">
+<button class="show-code">Code</button>
+<strong>setFieldWith</strong>(<a href="../dart_core/String.html">String</a> fieldName, <a href="../serialization/SetWithFunction.html">SetWithFunction</a> setWith) <a class="anchor-link" href="#setFieldWith"
+              title="Permalink to BasicRule.setFieldWith">#</a></h4>
+<div class="doc">
+<p>Sometimes it's necessary to treat fields of an object differently, based
+on the containing object. For example, by default a list treats its
+contents as non-essential state, so it will be populated only after all
+objects have been created. An object may have a list which is used in its
+constructor and must be fully created before the owning object can be
+created. Alternatively, it may not be possible to set a field directly,
+and some other method must be called to set it, perhaps calling a method
+on the owning object to add each individual element.</p>
+<p>This method lets you designate a function to use to set the value of a
+field. It also makes the contents of that field be treated as essential,
+which currently only has meaning if the field is a list. This is done
+because you might set a list field's special treatment function to add
+each item individually and that will only work if those objects already
+exist.</p>
+<p>For example, to serialize a Serialization, we need its rules to be
+individually added rather than just setting the rules field.</p>
+<pre><code> ..addRuleFor(new Serialization()).setFieldWith('rules',
+     (InstanceMirror s, List rules) {
+       rules.forEach((x) =&gt; s.reflectee.addRule(x));
+</code></pre>
+<p>Note that the function is passed the owning object as well as the field
+value, but that it is passed as a mirror.</p>
+<pre class="source">
+setFieldWith(String fieldName, SetWithFunction setWith) {
+ fields.addAllByName([fieldName]);
+ _NamedField field = fields.named(fieldName);
+ Function setter = (setWith == null) ? field.defaultSetter : setWith;
+ field.customSetter = setter;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="shouldUseReferenceFor">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>shouldUseReferenceFor</strong>(object, <a href="../serialization/Writer.html">Writer</a> writer) <a class="anchor-link" href="#shouldUseReferenceFor"
+              title="Permalink to BasicRule.shouldUseReferenceFor">#</a></h4>
+<div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>If we have 
+<span class="param">object</span> as part of our state, should we represent that
+directly, or should we make a reference for it. By default, true.
+This may also delegate to 
+<span class="param">writer</span>.</p>
+<pre class="source">
+bool shouldUseReferenceFor(object, Writer writer) =&gt; true;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to BasicRule.toString">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() =&gt; "Basic Rule for ${type.simpleName}";
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:06.193</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

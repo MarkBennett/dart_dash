@@ -1,0 +1,358 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Process abstract class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="Process">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/Process.html">Process</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="../dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><a href="../dart_io/IOSink.html"><div class="icon-class"></div>IOSink&lt;T&gt;</a></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><div class="icon-class"></div><strong>Process</strong></li>
+<li><a href="../dart_io/ProcessOptions.html"><div class="icon-class"></div>ProcessOptions</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="../dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/DirectoryIOException.html"><div class="icon-exception"></div>DirectoryIOException</a></li>
+<li><a href="../dart_io/FileIOException.html"><div class="icon-exception"></div>FileIOException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/HttpParserException.html"><div class="icon-exception"></div>HttpParserException</a></li>
+<li><a href="../dart_io/MimeParserException.html"><div class="icon-exception"></div>MimeParserException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/RedirectLimitExceededException.html"><div class="icon-exception"></div>RedirectLimitExceededException</a></li>
+<li><a href="../dart_io/RedirectLoopException.html"><div class="icon-exception"></div>RedirectLoopException</a></li>
+<li><a href="../dart_io/SocketIOException.html"><div class="icon-exception"></div>SocketIOException</a></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Process</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p><a class="crossref" href="../dart_io/Process.html">Process</a> is used to start new processes using the static
+<a class="crossref" href="../dart_io/Process.html#start">start</a> and <a class="crossref" href="../dart_io/Process.html#run">run</a> methods.</p>
+<pre class="source">
+abstract class Process {
+ /**
+  * Starts a process running the [executable] with the specified
+  * [arguments]. Returns a [:Future&lt;Process&gt;:] that completes with a
+  * Process instance when the process has been successfully
+  * started. That [Process] object can be used to interact with the
+  * process. If the process cannot be started the returned [Future]
+  * completes with an exception.
+  *
+  * An optional [ProcessOptions] object can be passed to specify
+  * options other than the executable and the arguments.
+  *
+  * Users must read all data coming on the [stdout] and [stderr]
+  * streams of processes started with [:Process.start:]. If the user
+  * does not read all data on the streams the underlying system
+  * resources will not be freed since there is still pending data.
+  */
+ external static Future&lt;Process&gt; start(String executable,
+                                       List&lt;String&gt; arguments,
+                                       [ProcessOptions options]);
+
+ /**
+  * Starts a process and runs it non-interactively to completion. The
+  * process run is [executable] with the specified [arguments].
+  *
+  * An optional [ProcessOptions] object can be passed to specify
+  * options other than the executable and the arguments.
+  *
+  * Returns a [:Future&lt;ProcessResult&gt;:] that completes with the
+  * result of running the process, i.e., exit code, standard out and
+  * standard in.
+  */
+ external static Future&lt;ProcessResult&gt; run(String executable,
+                                           List&lt;String&gt; arguments,
+                                           [ProcessOptions options]);
+
+ /**
+  * Returns the standard output stream of the process as a [:Stream:].
+  *
+  * Throws an [UnsupportedError] if the process is
+  * non-interactive.
+  */
+ Stream&lt;List&lt;int&gt;&gt; get stdout;
+
+ /**
+  * Returns the standard error stream of the process as a [:Stream:].
+  *
+  * Throws an [UnsupportedError] if the process is
+  * non-interactive.
+  */
+ Stream&lt;List&lt;int&gt;&gt; get stderr;
+
+ /**
+  * Returns the standard input stream of the process as an [IOSink].
+  *
+  * Throws an [UnsupportedError] if the process is
+  * non-interactive.
+  */
+ IOSink&lt;Process&gt; get stdin;
+
+ /**
+  * Returns a [:Future:] which completes with the exit code of the process
+  * when the process completes.
+  *
+  * Throws an [UnsupportedError] if the process is
+  * non-interactive.
+  */
+ Future&lt;int&gt; exitCode;
+
+ /**
+  * On Windows, [kill] kills the process, ignoring the [signal]
+  * flag. On Posix systems, [kill] sends [signal] to the
+  * process. Depending on the signal giving, it'll have different
+  * meanings. When the process terminates as a result of calling
+  * [kill] [onExit] is called.
+  *
+  * Returns [:true:] if the process is successfully killed (the
+  * signal is successfully sent). Returns [:false:] if the process
+  * could not be killed (the signal could not be sent). Usually,
+  * a [:false:] return value from kill means that the process is
+  * already dead.
+  */
+ bool kill([ProcessSignal signal = ProcessSignal.SIGTERM]);
+}
+</pre>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="start">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/Process.html">Process</a>&gt; <strong>start</strong>(<a href="../dart_core/String.html">String</a> executable, <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt; arguments, [<a href="../dart_io/ProcessOptions.html">ProcessOptions</a> options]) <a class="anchor-link" href="#start"
+              title="Permalink to Process.start">#</a></h4>
+<div class="doc">
+<p>Starts a process running the 
+<span class="param">executable</span> with the specified
+
+<span class="param">arguments</span>. Returns a <code>Future&lt;Process&gt;</code> that completes with a
+Process instance when the process has been successfully
+started. That <a class="crossref" href="../dart_io/Process.html">Process</a> object can be used to interact with the
+process. If the process cannot be started the returned <code>Future</code>
+completes with an exception.</p>
+<p>An optional <a class="crossref" href="../dart_io/ProcessOptions.html">ProcessOptions</a> object can be passed to specify
+options other than the executable and the arguments.</p>
+<p>Users must read all data coming on the <a class="crossref" href="../dart_io/Process.html#stdout">stdout</a> and <a class="crossref" href="../dart_io/Process.html#stderr">stderr</a>
+streams of processes started with <code>Process.start</code>. If the user
+does not read all data on the streams the underlying system
+resources will not be freed since there is still pending data.</p>
+<pre class="source">
+external static Future&lt;Process&gt; start(String executable,
+                                     List&lt;String&gt; arguments,
+                                     [ProcessOptions options]);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="run">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/ProcessResult.html">ProcessResult</a>&gt; <strong>run</strong>(<a href="../dart_core/String.html">String</a> executable, <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt; arguments, [<a href="../dart_io/ProcessOptions.html">ProcessOptions</a> options]) <a class="anchor-link" href="#run"
+              title="Permalink to Process.run">#</a></h4>
+<div class="doc">
+<p>Starts a process and runs it non-interactively to completion. The
+process run is 
+<span class="param">executable</span> with the specified 
+<span class="param">arguments</span>.</p>
+<p>An optional <a class="crossref" href="../dart_io/ProcessOptions.html">ProcessOptions</a> object can be passed to specify
+options other than the executable and the arguments.</p>
+<p>Returns a <code>Future&lt;ProcessResult&gt;</code> that completes with the
+result of running the process, i.e., exit code, standard out and
+standard in.</p>
+<pre class="source">
+external static Future&lt;ProcessResult&gt; run(String executable,
+                                         List&lt;String&gt; arguments,
+                                         [ProcessOptions options]);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="exitCode">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/int.html">int</a>&gt;         <strong>exitCode</strong> <a class="anchor-link"
+            href="#exitCode"
+            title="Permalink to Process.exitCode">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+exitCode
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stderr">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;&gt;         <strong>stderr</strong> <a class="anchor-link"
+            href="#stderr"
+            title="Permalink to Process.stderr">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the standard error stream of the process as a <code>Stream</code>.</p>
+<p>Throws an <code>UnsupportedError</code> if the process is
+non-interactive.</p>
+<pre class="source">
+Stream&lt;List&lt;int&gt;&gt; get stderr;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stdin">
+<button class="show-code">Code</button>
+final <a href="../dart_io/IOSink.html">IOSink</a>&lt;<a href="../dart_io/Process.html">Process</a>&gt;         <strong>stdin</strong> <a class="anchor-link"
+            href="#stdin"
+            title="Permalink to Process.stdin">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the standard input stream of the process as an <a class="crossref" href="../dart_io/IOSink.html">IOSink</a>.</p>
+<p>Throws an <code>UnsupportedError</code> if the process is
+non-interactive.</p>
+<pre class="source">
+IOSink&lt;Process&gt; get stdin;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stdout">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;&gt;         <strong>stdout</strong> <a class="anchor-link"
+            href="#stdout"
+            title="Permalink to Process.stdout">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the standard output stream of the process as a <code>Stream</code>.</p>
+<p>Throws an <code>UnsupportedError</code> if the process is
+non-interactive.</p>
+<pre class="source">
+Stream&lt;List&lt;int&gt;&gt; get stdout;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="kill">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>kill</strong>([<a href="../dart_io/ProcessSignal.html">ProcessSignal</a> signal = ProcessSignal.SIGTERM]) <a class="anchor-link" href="#kill"
+              title="Permalink to Process.kill">#</a></h4>
+<div class="doc">
+<p>On Windows, <a class="crossref" href="../dart_io/Process.html#kill">kill</a> kills the process, ignoring the 
+<span class="param">signal</span>
+flag. On Posix systems, <a class="crossref" href="../dart_io/Process.html#kill">kill</a> sends 
+<span class="param">signal</span> to the
+process. Depending on the signal giving, it'll have different
+meanings. When the process terminates as a result of calling
+[kill] [onExit] is called.</p>
+<p>Returns <code>true</code> if the process is successfully killed (the
+signal is successfully sent). Returns <code>false</code> if the process
+could not be killed (the signal could not be sent). Usually,
+a <code>false</code> return value from kill means that the process is
+already dead.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:07.927</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

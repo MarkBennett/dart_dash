@@ -1,0 +1,363 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Request class / dart:indexed_db Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:indexed_db" data-type="Request">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_indexed_db.html">dart:indexed_db</a> &rsaquo; <a href="../dart_indexed_db/Request.html">Request</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><ul class="icon">
+<li><a href="../dart_indexed_db/Cursor.html"><div class="icon-class"></div>Cursor</a></li>
+<li><a href="../dart_indexed_db/CursorWithValue.html"><div class="icon-class"></div>CursorWithValue</a></li>
+<li><a href="../dart_indexed_db/Database.html"><div class="icon-class"></div>Database</a></li>
+<li><a href="../dart_indexed_db/IdbFactory.html"><div class="icon-class"></div>IdbFactory</a></li>
+<li><a href="../dart_indexed_db/Index.html"><div class="icon-class"></div>Index</a></li>
+<li><a href="../dart_indexed_db/KeyRange.html"><div class="icon-class"></div>KeyRange</a></li>
+<li><a href="../dart_indexed_db/ObjectStore.html"><div class="icon-class"></div>ObjectStore</a></li>
+<li><a href="../dart_indexed_db/OpenDBRequest.html"><div class="icon-class"></div>OpenDBRequest</a></li>
+<li><div class="icon-class"></div><strong>Request</strong></li>
+<li><a href="../dart_indexed_db/Transaction.html"><div class="icon-class"></div>Transaction</a></li>
+<li><a href="../dart_indexed_db/VersionChangeEvent.html"><div class="icon-class"></div>VersionChangeEvent</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Request</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+@DocsEditable
+@DomName('IDBRequest')
+class Request extends EventTarget native "*IDBRequest" {
+
+ @DomName('IDBRequest.errorEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; errorEvent = const EventStreamProvider&lt;Event&gt;('error');
+
+ @DomName('IDBRequest.successEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; successEvent = const EventStreamProvider&lt;Event&gt;('success');
+
+ @DomName('IDBRequest.error')
+ @DocsEditable
+ final DomError error;
+
+ @DomName('IDBRequest.readyState')
+ @DocsEditable
+ final String readyState;
+
+ dynamic get result =&gt; _convertNativeToDart_IDBAny(this._result);
+ @JSName('result')
+ @DomName('IDBRequest.result')
+ @DocsEditable
+ @Creates('Null')
+ final dynamic _result;
+
+ @DomName('IDBRequest.source')
+ @DocsEditable
+ @Creates('Null')
+ final dynamic source;
+
+ @DomName('IDBRequest.transaction')
+ @DocsEditable
+ final Transaction transaction;
+
+ @JSName('webkitErrorMessage')
+ @DomName('IDBRequest.webkitErrorMessage')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ final String errorMessage;
+
+ @JSName('addEventListener')
+ @DomName('IDBRequest.addEventListener')
+ @DocsEditable
+ void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+
+ @DomName('IDBRequest.dispatchEvent')
+ @DocsEditable
+ bool dispatchEvent(Event evt) native;
+
+ @JSName('removeEventListener')
+ @DomName('IDBRequest.removeEventListener')
+ @DocsEditable
+ void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+
+ @DomName('IDBRequest.onerror')
+ @DocsEditable
+ Stream&lt;Event&gt; get onError =&gt; errorEvent.forTarget(this);
+
+ @DomName('IDBRequest.onsuccess')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSuccess =&gt; successEvent.forTarget(this);
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_html/EventTarget.html">EventTarget</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>Request</strong></span></p>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_indexed_db/OpenDBRequest.html">OpenDBRequest</a></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="errorEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>errorEvent</strong> <a class="anchor-link"
+            href="#errorEvent"
+            title="Permalink to Request.errorEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBRequest.errorEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; errorEvent = const EventStreamProvider&lt;Event&gt;('error')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="successEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>successEvent</strong> <a class="anchor-link"
+            href="#successEvent"
+            title="Permalink to Request.successEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBRequest.successEvent')
+@DocsEditable
+static const EventStreamProvider&lt;Event&gt; successEvent = const EventStreamProvider&lt;Event&gt;('success')
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="error">
+<button class="show-code">Code</button>
+final <a href="../dart_html/DomError.html">DomError</a>         <strong>error</strong> <a class="anchor-link"
+            href="#error"
+            title="Permalink to Request.error">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBRequest.error')
+@DocsEditable
+final DomError error
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="errorMessage">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>errorMessage</strong> <a class="anchor-link"
+            href="#errorMessage"
+            title="Permalink to Request.errorMessage">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@JSName('webkitErrorMessage')
+@DomName('IDBRequest.webkitErrorMessage')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+final String errorMessage
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="on">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Events.html">Events</a>         <strong>on</strong> <a class="anchor-link"
+            href="#on"
+            title="Permalink to Request.on">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>This is an ease-of-use accessor for event streams which should only be
+used when an explicit accessor is not available.</p>
+<pre class="source">
+Events get on =&gt; new Events(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onError</strong> <a class="anchor-link"
+            href="#onError"
+            title="Permalink to Request.onError">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBRequest.onerror')
+@DocsEditable
+Stream&lt;Event&gt; get onError =&gt; errorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSuccess">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSuccess</strong> <a class="anchor-link"
+            href="#onSuccess"
+            title="Permalink to Request.onSuccess">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBRequest.onsuccess')
+@DocsEditable
+Stream&lt;Event&gt; get onSuccess =&gt; successEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="readyState">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>readyState</strong> <a class="anchor-link"
+            href="#readyState"
+            title="Permalink to Request.readyState">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBRequest.readyState')
+@DocsEditable
+final String readyState
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="result">
+<button class="show-code">Code</button>
+final         <strong>result</strong> <a class="anchor-link"
+            href="#result"
+            title="Permalink to Request.result">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+dynamic get result =&gt; _convertNativeToDart_IDBAny(this._result);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="source">
+<button class="show-code">Code</button>
+final         <strong>source</strong> <a class="anchor-link"
+            href="#source"
+            title="Permalink to Request.source">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBRequest.source')
+@DocsEditable
+@Creates('Null')
+final dynamic source
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="transaction">
+<button class="show-code">Code</button>
+final <a href="../dart_indexed_db/Transaction.html">Transaction</a>         <strong>transaction</strong> <a class="anchor-link"
+            href="#transaction"
+            title="Permalink to Request.transaction">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('IDBRequest.transaction')
+@DocsEditable
+final Transaction transaction
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="dispatchEvent">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>dispatchEvent</strong>(<a href="../dart_html/Event.html">Event</a> evt) <a class="anchor-link" href="#dispatchEvent"
+              title="Permalink to Request.dispatchEvent">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('IDBRequest.dispatchEvent')
+@DocsEditable
+bool dispatchEvent(Event evt) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_addEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_addEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_addEventListener"
+              title="Permalink to Request.$dom_addEventListener">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('addEventListener')
+@DomName('IDBRequest.addEventListener')
+@DocsEditable
+void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_removeEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_removeEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_removeEventListener"
+              title="Permalink to Request.$dom_removeEventListener">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('removeEventListener')
+@DomName('IDBRequest.removeEventListener')
+@DocsEditable
+void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:05.319</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

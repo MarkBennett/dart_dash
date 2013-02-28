@@ -1,0 +1,825 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>SplayTreeMap&lt;K, V&gt; class / dart:collection Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:collection" data-type="SplayTreeMap&amp;lt;K, V&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_collection.html">dart:collection</a> &rsaquo; <a href="../dart_collection/SplayTreeMap.html">SplayTreeMap&lt;K, V&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><ul class="icon">
+<li><a href="../dart_collection/Arrays.html"><div class="icon-class"></div>Arrays</a></li>
+<li><a href="../dart_collection/Collections.html"><div class="icon-class"></div>Collections</a></li>
+<li><a href="../dart_collection/DoubleLinkedQueue.html"><div class="icon-class"></div>DoubleLinkedQueue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/DoubleLinkedQueueEntry.html"><div class="icon-class"></div>DoubleLinkedQueueEntry&lt;E&gt;</a></li>
+<li><a href="../dart_collection/HashMap.html"><div class="icon-class"></div>HashMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/HashSet.html"><div class="icon-class"></div>HashSet&lt;E&gt;</a></li>
+<li><a href="../dart_collection/HasNextIterator.html"><div class="icon-class"></div>HasNextIterator&lt;E&gt;</a></li>
+<li><a href="../dart_collection/IterableMixinWorkaround.html"><div class="icon-class"></div>IterableMixinWorkaround</a></li>
+<li><a href="../dart_collection/LinkedHashMap.html"><div class="icon-class"></div>LinkedHashMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/LinkedHashSet.html"><div class="icon-class"></div>LinkedHashSet&lt;E&gt;</a></li>
+<li><a href="../dart_collection/ListQueue.html"><div class="icon-class"></div>ListQueue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/Maps.html"><div class="icon-class"></div>Maps</a></li>
+<li><a href="../dart_collection/Queue.html"><div class="icon-class"></div>Queue&lt;E&gt;</a></li>
+<li><div class="icon-class"></div><strong>SplayTreeMap&lt;K, V&gt;</strong></li>
+<li><a href="../dart_collection/SplayTreeNode.html"><div class="icon-class"></div>SplayTreeNode&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/UnmodifiableListView.html"><div class="icon-class"></div>UnmodifiableListView&lt;E&gt;</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>SplayTreeMap&lt;K extends Comparable&lt;K&gt;, V&gt;</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A splay tree is a self-balancing binary
+search tree with the additional property that recently accessed
+elements are quick to access again. It performs basic operations
+such as insertion, look-up and removal in O(log(n)) amortized time.</p>
+<p>This implementation is a Dart version of the JavaScript
+implementation in the V8 project.</p>
+<pre class="source">
+class SplayTreeMap&lt;K extends Comparable&lt;K&gt;, V&gt; implements Map&lt;K, V&gt; {
+
+ // The root node of the splay tree. It will contain either the last
+ // element inserted, or the last element looked up.
+ SplayTreeNode&lt;K, V&gt; _root;
+
+ // The dummy node used when performing a splay on the tree. It is a
+ // local field of the class to avoid allocating a node each time a
+ // splay is performed.
+ SplayTreeNode&lt;K, V&gt; _dummy;
+
+ // Number of elements in the splay tree.
+ int _count;
+
+ /**
+  * Counter incremented whenever the keys in the map changes.
+  *
+  * Used to detect concurrent modifications.
+  */
+ int _modificationCount = 0;
+ /**
+  * Counter incremented whenever the tree structure changes.
+  *
+  * Used to detect that an in-place traversal cannot use
+  * cached information that relies on the tree structure.
+  */
+ int _splayCount = 0;
+
+ SplayTreeMap() :
+   _dummy = new SplayTreeNode&lt;K, V&gt;(null, null),
+   _count = 0;
+
+ /**
+  * Perform the splay operation for the given key. Moves the node with
+  * the given key to the top of the tree.  If no node has the given
+  * key, the last node on the search path is moved to the top of the
+  * tree. This is the simplified top-down splaying algorithm from:
+  * "Self-adjusting Binary Search Trees" by Sleator and Tarjan.
+  *
+  * Returns the result of comparing the new root of the tree to [key].
+  * Returns -1 if the table is empty.
+  */
+ int _splay(K key) {
+   if (_root == null) return -1;
+
+   // The right child of the dummy node will hold
+   // the L tree of the algorithm.  The left child of the dummy node
+   // will hold the R tree of the algorithm.  Using a dummy node, left
+   // and right will always be nodes and we avoid special cases.
+   SplayTreeNode&lt;K, V&gt; left = _dummy;
+   SplayTreeNode&lt;K, V&gt; right = _dummy;
+   SplayTreeNode&lt;K, V&gt; current = _root;
+   int comp;
+   while (true) {
+     comp = current.key.compareTo(key);
+     if (comp &gt; 0) {
+       if (current.left == null) break;
+       comp = current.left.key.compareTo(key);
+       if (comp &gt; 0) {
+         // Rotate right.
+         SplayTreeNode&lt;K, V&gt; tmp = current.left;
+         current.left = tmp.right;
+         tmp.right = current;
+         current = tmp;
+         if (current.left == null) break;
+       }
+       // Link right.
+       right.left = current;
+       right = current;
+       current = current.left;
+     } else if (comp &lt; 0) {
+       if (current.right == null) break;
+       comp = current.right.key.compareTo(key);
+       if (comp &lt; 0) {
+         // Rotate left.
+         SplayTreeNode&lt;K, V&gt; tmp = current.right;
+         current.right = tmp.left;
+         tmp.left = current;
+         current = tmp;
+         if (current.right == null) break;
+       }
+       // Link left.
+       left.right = current;
+       left = current;
+       current = current.right;
+     } else {
+       break;
+     }
+   }
+   // Assemble.
+   left.right = current.left;
+   right.left = current.right;
+   current.left = _dummy.right;
+   current.right = _dummy.left;
+   _root = current;
+
+   _dummy.right = null;
+   _dummy.left = null;
+   _splayCount++;
+   return comp;
+ }
+
+ V operator [](K key) {
+   if (_root != null) {
+     int comp = _splay(key);
+     if (comp == 0) return _root.value;
+   }
+   return null;
+ }
+
+ V remove(K key) {
+   if (_root == null) return null;
+   int comp = _splay(key);
+   if (comp != 0) return null;
+   V value = _root.value;
+
+   _count--;
+   // assert(_count &gt;= 0);
+   if (_root.left == null) {
+     _root = _root.right;
+   } else {
+     SplayTreeNode&lt;K, V&gt; right = _root.right;
+     _root = _root.left;
+     // Splay to make sure that the new root has an empty right child.
+     _splay(key);
+     // Insert the original right child as the right child of the new
+     // root.
+     _root.right = right;
+   }
+   _modificationCount++;
+   return value;
+ }
+
+ void operator []=(K key, V value) {
+   if (_root == null) {
+     _count++;
+     _root = new SplayTreeNode(key, value);
+     _modificationCount++;
+     return;
+   }
+   // Splay on the key to move the last node on the search path for
+   // the key to the root of the tree.
+   int comp = _splay(key);
+   if (comp == 0) {
+     _root.value = value;
+     return;
+   }
+   _addNewRoot(key, value, comp);
+ }
+
+ /**
+  * Adds a new root node with the given [key] or [value].
+  *
+  * The [comp] value is the result of comparing the existing root's key
+  * with key.
+  */
+ void _addNewRoot(K key, V value, int comp) {
+   SplayTreeNode&lt;K, V&gt; node = new SplayTreeNode(key, value);
+   // assert(_count &gt;= 0);
+   _count++;
+   if (comp &lt; 0) {
+     node.left = _root;
+     node.right = _root.right;
+     _root.right = null;
+   } else {
+     node.right = _root;
+     node.left = _root.left;
+     _root.left = null;
+   }
+   _root = node;
+   _modificationCount++;
+ }
+
+ V putIfAbsent(K key, V ifAbsent()) {
+   if (_root == null) {
+     V value = ifAbsent();
+     if (_root != null) {
+       throw new ConcurrentModificationError(this);
+     }
+     _root = new SplayTreeNode(key, value);
+     _count++;
+     _modificationCount++;
+     return value;
+   }
+   int comp = _splay(key);
+   if (comp == 0) return _root.value;
+   int modificationCount = _modificationCount;
+   int splayCount = _splayCount;
+   V value = ifAbsent();
+   if (modificationCount != _modificationCount) {
+     throw new ConcurrentModificationError(this);
+   }
+   if (splayCount != _splayCount) {
+     comp = _splay(key);
+     // Key is still not there, otherwise _modificationCount would be changed.
+     assert(comp != 0);
+   }
+   _addNewRoot(key, value, comp);
+   return value;
+ }
+
+ bool get isEmpty {
+   // assert(!((_root == null) &amp;&amp; (_count != 0)));
+   // assert(!((_count == 0) &amp;&amp; (_root != null)));
+   return (_root == null);
+ }
+
+ void forEach(void f(K key, V value)) {
+   Iterator&lt;SplayTreeNode&lt;K, V&gt;&gt; nodes =
+       new _SplayTreeNodeIterator&lt;K, V&gt;(this);
+   while (nodes.moveNext()) {
+     SplayTreeNode&lt;K, V&gt; node = nodes.current;
+     f(node.key, node.value);
+   }
+ }
+
+ int get length {
+   return _count;
+ }
+
+ void clear() {
+   _root = null;
+   _count = 0;
+ }
+
+ bool containsKey(K key) {
+   return _splay(key) == 0;
+ }
+
+ bool containsValue(V value) {
+   bool found = false;
+   bool visit(SplayTreeNode node) {
+     if (node == null) return false;
+     if (node.value == value) return true;
+     // TODO(lrn): Do we want to handle the case where node.value.operator==
+     // modifies the map?
+     return visit(node.left) || visit(node.right);
+   }
+   return visit(_root);
+ }
+
+ Iterable&lt;K&gt; get keys =&gt; new _SplayTreeKeyIterable(this);
+
+ Iterable&lt;V&gt; get values =&gt; new _SplayTreeValueIterable(this);
+
+ String toString() {
+   return Maps.mapToString(this);
+ }
+
+ /**
+  * Get the first key in the map. Returns [null] if the map is empty.
+  */
+ K firstKey() {
+   if (_root == null) return null;
+   SplayTreeNode&lt;K, V&gt; node = _root;
+   while (node.left != null) {
+     node = node.left;
+   }
+   // Maybe implement a splay-method that can splay the minimum without
+   // performing comparisons.
+   _splay(node.key);
+   return node.key;
+ }
+
+ /**
+  * Get the last key in the map. Returns [null] if the map is empty.
+  */
+ K lastKey() {
+   if (_root == null) return null;
+   SplayTreeNode&lt;K, V&gt; node = _root;
+   while (node.right != null) {
+     node = node.right;
+   }
+   // Maybe implement a splay-method that can splay the maximum without
+   // performing comparisons.
+   _splay(node.key);
+   return node.key;
+ }
+
+ /**
+  * Get the last key in the map that is strictly smaller than [key]. Returns
+  * [null] if no key was not found.
+  */
+ K lastKeyBefore(K key) {
+   if (_root == null) return null;
+   int comp = _splay(key);
+   if (comp &lt; 0) return _root.key;
+   SplayTreeNode&lt;K, V&gt; node = _root.left;
+   if (node == null) return null;
+   while (node.right != null) {
+     node = node.right;
+   }
+   return node.key;
+ }
+
+ /**
+  * Get the first key in the map that is strictly larger than [key]. Returns
+  * [null] if no key was not found.
+  */
+ K firstKeyAfter(K key) {
+   if (_root == null) return null;
+   int comp = _splay(key);
+   if (comp &gt; 0) return _root.key;
+   SplayTreeNode&lt;K, V&gt; node = _root.right;
+   if (node == null) return null;
+   while (node.left != null) {
+     node = node.left;
+   }
+   return node.key;
+ }
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_core/Map.html">Map&lt;K, V&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="SplayTreeMap">
+<button class="show-code">Code</button>
+new <strong>SplayTreeMap</strong>() <a class="anchor-link" href="#SplayTreeMap"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.SplayTreeMap">#</a></h4>
+<div class="doc">
+<pre class="source">
+SplayTreeMap() :
+ _dummy = new SplayTreeNode&lt;K, V&gt;(null, null),
+ _count = 0;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isEmpty</strong> <a class="anchor-link"
+            href="#isEmpty"
+            title="Permalink to SplayTreeMap&lt;K, V&gt;.isEmpty">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns true if there is no {key, value} pair in the map.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+bool get isEmpty {
+ // assert(!((_root == null) &amp;&amp; (_count != 0)));
+ // assert(!((_count == 0) &amp;&amp; (_root != null)));
+ return (_root == null);
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="keys">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>&gt;         <strong>keys</strong> <a class="anchor-link"
+            href="#keys"
+            title="Permalink to SplayTreeMap&lt;K, V&gt;.keys">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>The keys of <code>this</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+Iterable&lt;K&gt; get keys =&gt; new _SplayTreeKeyIterable(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="length">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>length</strong> <a class="anchor-link"
+            href="#length"
+            title="Permalink to SplayTreeMap&lt;K, V&gt;.length">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>The number of {key, value} pairs in the map.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+int get length {
+ return _count;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="values">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/SplayTreeMap.html">V</a>&gt;         <strong>values</strong> <a class="anchor-link"
+            href="#values"
+            title="Permalink to SplayTreeMap&lt;K, V&gt;.values">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>The values of <code>this</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+Iterable&lt;V&gt; get values =&gt; new _SplayTreeValueIterable(this);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method"><h4 id="[]">
+<button class="show-code">Code</button>
+<a href="../dart_collection/SplayTreeMap.html">V</a> <strong>operator []</strong>(<a href="../dart_collection/SplayTreeMap.html">K</a> key) <a class="anchor-link" href="#[]"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.operator []">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns the value for the given 
+<span class="param">key</span> or null if 
+<span class="param">key</span> is not
+in the map. Because null values are supported, one should either
+use containsKey to distinguish between an absent key and a null
+value, or use the <a class="crossref" href="../dart_collection/SplayTreeMap.html#putIfAbsent">putIfAbsent</a> method.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+V operator [](K key) {
+ if (_root != null) {
+   int comp = _splay(key);
+   if (comp == 0) return _root.value;
+ }
+ return null;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="[]=">
+<button class="show-code">Code</button>
+void <strong>operator []=</strong>(<a href="../dart_collection/SplayTreeMap.html">K</a> key, <a href="../dart_collection/SplayTreeMap.html">V</a> value) <a class="anchor-link" href="#[]="
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.operator []=">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Associates the 
+<span class="param">key</span> with the given 
+<span class="param">value</span>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+void operator []=(K key, V value) {
+ if (_root == null) {
+   _count++;
+   _root = new SplayTreeNode(key, value);
+   _modificationCount++;
+   return;
+ }
+ // Splay on the key to move the last node on the search path for
+ // the key to the root of the tree.
+ int comp = _splay(key);
+ if (comp == 0) {
+   _root.value = value;
+   return;
+ }
+ _addNewRoot(key, value, comp);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="clear">
+<button class="show-code">Code</button>
+void <strong>clear</strong>() <a class="anchor-link" href="#clear"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.clear">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Removes all pairs from the map.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+void clear() {
+ _root = null;
+ _count = 0;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="containsKey">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>containsKey</strong>(<a href="../dart_collection/SplayTreeMap.html">K</a> key) <a class="anchor-link" href="#containsKey"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.containsKey">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns whether this map contains the given 
+<span class="param">key</span>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+bool containsKey(K key) {
+ return _splay(key) == 0;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="containsValue">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>containsValue</strong>(<a href="../dart_collection/SplayTreeMap.html">V</a> value) <a class="anchor-link" href="#containsValue"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.containsValue">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns whether this map contains the given 
+<span class="param">value</span>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+bool containsValue(V value) {
+ bool found = false;
+ bool visit(SplayTreeNode node) {
+   if (node == null) return false;
+   if (node.value == value) return true;
+   // TODO(lrn): Do we want to handle the case where node.value.operator==
+   // modifies the map?
+   return visit(node.left) || visit(node.right);
+ }
+ return visit(_root);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="firstKey">
+<button class="show-code">Code</button>
+<a href="../dart_collection/SplayTreeMap.html">K</a> <strong>firstKey</strong>() <a class="anchor-link" href="#firstKey"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.firstKey">#</a></h4>
+<div class="doc">
+<p>Get the first key in the map. Returns <code>null</code> if the map is empty.</p>
+<pre class="source">
+K firstKey() {
+ if (_root == null) return null;
+ SplayTreeNode&lt;K, V&gt; node = _root;
+ while (node.left != null) {
+   node = node.left;
+ }
+ // Maybe implement a splay-method that can splay the minimum without
+ // performing comparisons.
+ _splay(node.key);
+ return node.key;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="firstKeyAfter">
+<button class="show-code">Code</button>
+<a href="../dart_collection/SplayTreeMap.html">K</a> <strong>firstKeyAfter</strong>(<a href="../dart_collection/SplayTreeMap.html">K</a> key) <a class="anchor-link" href="#firstKeyAfter"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.firstKeyAfter">#</a></h4>
+<div class="doc">
+<p>Get the first key in the map that is strictly larger than 
+<span class="param">key</span>. Returns
+<code>null</code> if no key was not found.</p>
+<pre class="source">
+K firstKeyAfter(K key) {
+ if (_root == null) return null;
+ int comp = _splay(key);
+ if (comp &gt; 0) return _root.key;
+ SplayTreeNode&lt;K, V&gt; node = _root.right;
+ if (node == null) return null;
+ while (node.left != null) {
+   node = node.left;
+ }
+ return node.key;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="forEach">
+<button class="show-code">Code</button>
+void <strong>forEach</strong>(void f(<a href="../dart_collection/SplayTreeMap.html">K</a> key, <a href="../dart_collection/SplayTreeMap.html">V</a> value)) <a class="anchor-link" href="#forEach"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.forEach">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Applies 
+<span class="param">f</span> to each {key, value} pair of the map.</p>
+<p>It is an error to add or remove keys from the map during iteration.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+void forEach(void f(K key, V value)) {
+ Iterator&lt;SplayTreeNode&lt;K, V&gt;&gt; nodes =
+     new _SplayTreeNodeIterator&lt;K, V&gt;(this);
+ while (nodes.moveNext()) {
+   SplayTreeNode&lt;K, V&gt; node = nodes.current;
+   f(node.key, node.value);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lastKey">
+<button class="show-code">Code</button>
+<a href="../dart_collection/SplayTreeMap.html">K</a> <strong>lastKey</strong>() <a class="anchor-link" href="#lastKey"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.lastKey">#</a></h4>
+<div class="doc">
+<p>Get the last key in the map. Returns <code>null</code> if the map is empty.</p>
+<pre class="source">
+K lastKey() {
+ if (_root == null) return null;
+ SplayTreeNode&lt;K, V&gt; node = _root;
+ while (node.right != null) {
+   node = node.right;
+ }
+ // Maybe implement a splay-method that can splay the maximum without
+ // performing comparisons.
+ _splay(node.key);
+ return node.key;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lastKeyBefore">
+<button class="show-code">Code</button>
+<a href="../dart_collection/SplayTreeMap.html">K</a> <strong>lastKeyBefore</strong>(<a href="../dart_collection/SplayTreeMap.html">K</a> key) <a class="anchor-link" href="#lastKeyBefore"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.lastKeyBefore">#</a></h4>
+<div class="doc">
+<p>Get the last key in the map that is strictly smaller than 
+<span class="param">key</span>. Returns
+<code>null</code> if no key was not found.</p>
+<pre class="source">
+K lastKeyBefore(K key) {
+ if (_root == null) return null;
+ int comp = _splay(key);
+ if (comp &lt; 0) return _root.key;
+ SplayTreeNode&lt;K, V&gt; node = _root.left;
+ if (node == null) return null;
+ while (node.right != null) {
+   node = node.right;
+ }
+ return node.key;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="putIfAbsent">
+<button class="show-code">Code</button>
+<a href="../dart_collection/SplayTreeMap.html">V</a> <strong>putIfAbsent</strong>(<a href="../dart_collection/SplayTreeMap.html">K</a> key, <a href="../dart_collection/SplayTreeMap.html">V</a> ifAbsent()) <a class="anchor-link" href="#putIfAbsent"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.putIfAbsent">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>If 
+<span class="param">key</span> is not associated to a value, calls 
+<span class="param">ifAbsent</span> and
+updates the map by mapping 
+<span class="param">key</span> to the value returned by
+
+<span class="param">ifAbsent</span>. Returns the value in the map.</p>
+<p>It is an error to add or remove keys from map during the call to
+
+<span class="param">ifAbsent</span>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+V putIfAbsent(K key, V ifAbsent()) {
+ if (_root == null) {
+   V value = ifAbsent();
+   if (_root != null) {
+     throw new ConcurrentModificationError(this);
+   }
+   _root = new SplayTreeNode(key, value);
+   _count++;
+   _modificationCount++;
+   return value;
+ }
+ int comp = _splay(key);
+ if (comp == 0) return _root.value;
+ int modificationCount = _modificationCount;
+ int splayCount = _splayCount;
+ V value = ifAbsent();
+ if (modificationCount != _modificationCount) {
+   throw new ConcurrentModificationError(this);
+ }
+ if (splayCount != _splayCount) {
+   comp = _splay(key);
+   // Key is still not there, otherwise _modificationCount would be changed.
+   assert(comp != 0);
+ }
+ _addNewRoot(key, value, comp);
+ return value;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="remove">
+<button class="show-code">Code</button>
+<a href="../dart_collection/SplayTreeMap.html">V</a> <strong>remove</strong>(<a href="../dart_collection/SplayTreeMap.html">K</a> key) <a class="anchor-link" href="#remove"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.remove">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Removes the association for the given 
+<span class="param">key</span>. Returns the value for
+
+<span class="param">key</span> in the map or null if 
+<span class="param">key</span> is not in the map. Note that values
+can be null and a returned null value does not always imply that the
+key is absent.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_collection/SplayTreeMap.html">K</a>, <a href="../dart_collection/SplayTreeMap.html">V</a>&gt; </div></div>
+<pre class="source">
+V remove(K key) {
+ if (_root == null) return null;
+ int comp = _splay(key);
+ if (comp != 0) return null;
+ V value = _root.value;
+
+ _count--;
+ // assert(_count &gt;= 0);
+ if (_root.left == null) {
+   _root = _root.right;
+ } else {
+   SplayTreeNode&lt;K, V&gt; right = _root.right;
+   _root = _root.left;
+   // Splay to make sure that the new root has an empty right child.
+   _splay(key);
+   // Insert the original right child as the right child of the new
+   // root.
+   _root.right = right;
+ }
+ _modificationCount++;
+ return value;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to SplayTreeMap&lt;K, V&gt;.toString">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() {
+ return Maps.mapToString(this);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:21.594</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

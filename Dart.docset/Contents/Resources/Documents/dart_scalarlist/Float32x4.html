@@ -1,0 +1,486 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Float32x4 abstract class / dart:scalarlist Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:scalarlist" data-type="Float32x4">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_scalarlist.html">dart:scalarlist</a> &rsaquo; <a href="../dart_scalarlist/Float32x4.html">Float32x4</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><ul class="icon">
+<li><a href="../dart_scalarlist/ByteArray.html"><div class="icon-class"></div>ByteArray</a></li>
+<li><a href="../dart_scalarlist/ByteArrayViewable.html"><div class="icon-class"></div>ByteArrayViewable</a></li>
+<li><a href="../dart_scalarlist/Float32List.html"><div class="icon-class"></div>Float32List</a></li>
+<li><div class="icon-class"></div><strong>Float32x4</strong></li>
+<li><a href="../dart_scalarlist/Float32x4List.html"><div class="icon-class"></div>Float32x4List</a></li>
+<li><a href="../dart_scalarlist/Float64List.html"><div class="icon-class"></div>Float64List</a></li>
+<li><a href="../dart_scalarlist/Int16List.html"><div class="icon-class"></div>Int16List</a></li>
+<li><a href="../dart_scalarlist/Int32List.html"><div class="icon-class"></div>Int32List</a></li>
+<li><a href="../dart_scalarlist/Int64List.html"><div class="icon-class"></div>Int64List</a></li>
+<li><a href="../dart_scalarlist/Int8List.html"><div class="icon-class"></div>Int8List</a></li>
+<li><a href="../dart_scalarlist/Uint16List.html"><div class="icon-class"></div>Uint16List</a></li>
+<li><a href="../dart_scalarlist/Uint32List.html"><div class="icon-class"></div>Uint32List</a></li>
+<li><a href="../dart_scalarlist/Uint32x4.html"><div class="icon-class"></div>Uint32x4</a></li>
+<li><a href="../dart_scalarlist/Uint64List.html"><div class="icon-class"></div>Uint64List</a></li>
+<li><a href="../dart_scalarlist/Uint8ClampedList.html"><div class="icon-class"></div>Uint8ClampedList</a></li>
+<li><a href="../dart_scalarlist/Uint8List.html"><div class="icon-class"></div>Uint8List</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Float32x4</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Interface of Dart Float32x4 and operations.
+Float32x4 stores 4 32-bit floating point values in "lanes".
+The lanes are "x", "y", "z", and "w" respectively.</p>
+<pre class="source">
+abstract class Float32x4 {
+ external factory Float32x4(double x, double y, double z, double w);
+ external factory Float32x4.zero();
+
+ /// Addition operator.
+ Float32x4 operator+(Float32x4 other);
+ /// Negate operator.
+ Float32x4 operator-();
+ /// Subtraction operator.
+ Float32x4 operator-(Float32x4 other);
+ /// Multiplication operator.
+ Float32x4 operator*(Float32x4 other);
+ /// Division operator.
+ Float32x4 operator/(Float32x4 other);
+
+ /// Relational less than.
+ Uint32x4 lessThan(Float32x4 other);
+ /// Relational less than or equal.
+ Uint32x4 lessThanOrEqual(Float32x4 other);
+ /// Relational greater than.
+ Uint32x4 greaterThan(Float32x4 other);
+ /// Relational greater than or equal.
+ Uint32x4 greaterThanOrEqual(Float32x4 other);
+ /// Relational equal.
+ Uint32x4 equal(Float32x4 other);
+ /// Relational not-equal.
+ Uint32x4 notEqual(Float32x4 other);
+
+ /// Returns a copy of [this] each lane being scaled by [s].
+ Float32x4 scale(double s);
+ /// Returns the absolute value of this [Simd128Float32].
+ Float32x4 abs();
+ /// Clamps [this] to be in the range [lowerLimit]-[upperLimit].
+ Float32x4 clamp(Float32x4 lowerLimit,
+                        Float32x4 upperLimit);
+
+ /// Extracted x value.
+ double get x;
+ /// Extracted y value.
+ double get y;
+ /// Extracted z value.
+ double get z;
+ /// Extracted w value.
+ double get w;
+
+ /// Returns a new [Float32x4] with [this]' x value in all four lanes.
+ Float32x4 get xxxx;
+ /// Returns a new [Float32x4] with [this]' y value in all four lanes.
+ Float32x4 get yyyy;
+ /// Returns a new [Float32x4] with [this]' z value in all four lanes.
+ Float32x4 get zzzz;
+ /// Returns a new [Float32x4] with [this]' w value in all four lanes.
+ Float32x4 get wwww;
+ // TODO(johnmccutchan): Add all 256 possible combinations.
+
+ /// Returns a new [Float32x4] copied from [this] with a new x value.
+ Float32x4 withX(double x);
+ /// Returns a new [Float32x4] copied from [this] with a new y value.
+ Float32x4 withY(double y);
+ /// Returns a new [Float32x4] copied from [this] with a new z value.
+ Float32x4 withZ(double z);
+ /// Returns a new [Float32x4] copied from [this] with a new w value.
+ Float32x4 withW(double w);
+
+ /// Returns the lane-wise minimum value in [this] or [other].
+ Float32x4 min(Float32x4 other);
+
+ /// Returns the lane-wise maximum value in [this] or [other].
+ Float32x4 max(Float32x4 other);
+
+ /// Returns the square root of [this].
+ Float32x4 sqrt();
+
+ /// Returns the reciprocal of [this].
+ Float32x4 reciprocal();
+
+ /// Returns the square root of the reciprocal of [this].
+ Float32x4 reciprocalSqrt();
+
+ /// Returns a bit-wise copy of [this] as a [Uint32x4].
+ Uint32x4 toUint32x4();
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Float32x4">
+<button class="show-code">Code</button>
+factory <strong>Float32x4</strong>(<a href="../dart_core/double.html">double</a> x, <a href="../dart_core/double.html">double</a> y, <a href="../dart_core/double.html">double</a> z, <a href="../dart_core/double.html">double</a> w) <a class="anchor-link" href="#Float32x4"
+              title="Permalink to Float32x4.Float32x4">#</a></h4>
+<div class="doc">
+<pre class="source">
+external factory Float32x4(double x, double y, double z, double w);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Float32x4.zero">
+<button class="show-code">Code</button>
+factory <strong>Float32x4.zero</strong>() <a class="anchor-link" href="#Float32x4.zero"
+              title="Permalink to Float32x4.Float32x4.zero">#</a></h4>
+<div class="doc">
+<pre class="source">
+external factory Float32x4.zero();
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="w">
+<button class="show-code">Code</button>
+final <a href="../dart_core/double.html">double</a>         <strong>w</strong> <a class="anchor-link"
+            href="#w"
+            title="Permalink to Float32x4.w">#</a>
+        </h4>
+        <div class="doc">
+<p>Extracted w value.</p>
+<pre class="source">
+double get w;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="wwww">
+<button class="show-code">Code</button>
+final <a href="../dart_scalarlist/Float32x4.html">Float32x4</a>         <strong>wwww</strong> <a class="anchor-link"
+            href="#wwww"
+            title="Permalink to Float32x4.wwww">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Float32x4.html#Float32x4">Float32x4</a> with <code>this</code>' w value in all four lanes.</p>
+<pre class="source">
+Float32x4 get wwww;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="x">
+<button class="show-code">Code</button>
+final <a href="../dart_core/double.html">double</a>         <strong>x</strong> <a class="anchor-link"
+            href="#x"
+            title="Permalink to Float32x4.x">#</a>
+        </h4>
+        <div class="doc">
+<p>Extracted x value.</p>
+<pre class="source">
+double get x;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="xxxx">
+<button class="show-code">Code</button>
+final <a href="../dart_scalarlist/Float32x4.html">Float32x4</a>         <strong>xxxx</strong> <a class="anchor-link"
+            href="#xxxx"
+            title="Permalink to Float32x4.xxxx">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Float32x4.html#Float32x4">Float32x4</a> with <code>this</code>' x value in all four lanes.</p>
+<pre class="source">
+Float32x4 get xxxx;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="y">
+<button class="show-code">Code</button>
+final <a href="../dart_core/double.html">double</a>         <strong>y</strong> <a class="anchor-link"
+            href="#y"
+            title="Permalink to Float32x4.y">#</a>
+        </h4>
+        <div class="doc">
+<p>Extracted y value.</p>
+<pre class="source">
+double get y;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="yyyy">
+<button class="show-code">Code</button>
+final <a href="../dart_scalarlist/Float32x4.html">Float32x4</a>         <strong>yyyy</strong> <a class="anchor-link"
+            href="#yyyy"
+            title="Permalink to Float32x4.yyyy">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Float32x4.html#Float32x4">Float32x4</a> with <code>this</code>' y value in all four lanes.</p>
+<pre class="source">
+Float32x4 get yyyy;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="z">
+<button class="show-code">Code</button>
+final <a href="../dart_core/double.html">double</a>         <strong>z</strong> <a class="anchor-link"
+            href="#z"
+            title="Permalink to Float32x4.z">#</a>
+        </h4>
+        <div class="doc">
+<p>Extracted z value.</p>
+<pre class="source">
+double get z;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="zzzz">
+<button class="show-code">Code</button>
+final <a href="../dart_scalarlist/Float32x4.html">Float32x4</a>         <strong>zzzz</strong> <a class="anchor-link"
+            href="#zzzz"
+            title="Permalink to Float32x4.zzzz">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Float32x4.html#Float32x4">Float32x4</a> with <code>this</code>' z value in all four lanes.</p>
+<pre class="source">
+Float32x4 get zzzz;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method"><h4 id="+">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>operator +</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#+"
+              title="Permalink to Float32x4.operator +">#</a></h4>
+<div class="doc">
+<p>Addition operator.</p>
+</div>
+</div>
+<div class="method"><h4 id="unary-">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>operator -</strong>() <a class="anchor-link" href="#unary-"
+              title="Permalink to Float32x4.operator -">#</a></h4>
+<div class="doc">
+<p>Negate operator.</p>
+</div>
+</div>
+<div class="method"><h4 id="-">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>operator -</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#-"
+              title="Permalink to Float32x4.operator -">#</a></h4>
+<div class="doc">
+<p>Subtraction operator.</p>
+</div>
+</div>
+<div class="method"><h4 id="*">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>operator *</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#*"
+              title="Permalink to Float32x4.operator *">#</a></h4>
+<div class="doc">
+<p>Multiplication operator.</p>
+</div>
+</div>
+<div class="method"><h4 id="/">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>operator /</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#/"
+              title="Permalink to Float32x4.operator /">#</a></h4>
+<div class="doc">
+<p>Division operator.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="abs">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>abs</strong>() <a class="anchor-link" href="#abs"
+              title="Permalink to Float32x4.abs">#</a></h4>
+<div class="doc">
+<p>Returns the absolute value of this <code>Simd128Float32</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="clamp">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>clamp</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> lowerLimit, <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> upperLimit) <a class="anchor-link" href="#clamp"
+              title="Permalink to Float32x4.clamp">#</a></h4>
+<div class="doc">
+<p>Clamps <code>this</code> to be in the range 
+<span class="param">lowerLimit</span>-
+<span class="param">upperLimit</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="equal">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>equal</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#equal"
+              title="Permalink to Float32x4.equal">#</a></h4>
+<div class="doc">
+<p>Relational equal.</p>
+</div>
+</div>
+<div class="method"><h4 id="greaterThan">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>greaterThan</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#greaterThan"
+              title="Permalink to Float32x4.greaterThan">#</a></h4>
+<div class="doc">
+<p>Relational greater than.</p>
+</div>
+</div>
+<div class="method"><h4 id="greaterThanOrEqual">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>greaterThanOrEqual</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#greaterThanOrEqual"
+              title="Permalink to Float32x4.greaterThanOrEqual">#</a></h4>
+<div class="doc">
+<p>Relational greater than or equal.</p>
+</div>
+</div>
+<div class="method"><h4 id="lessThan">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>lessThan</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#lessThan"
+              title="Permalink to Float32x4.lessThan">#</a></h4>
+<div class="doc">
+<p>Relational less than.</p>
+</div>
+</div>
+<div class="method"><h4 id="lessThanOrEqual">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>lessThanOrEqual</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#lessThanOrEqual"
+              title="Permalink to Float32x4.lessThanOrEqual">#</a></h4>
+<div class="doc">
+<p>Relational less than or equal.</p>
+</div>
+</div>
+<div class="method"><h4 id="max">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>max</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#max"
+              title="Permalink to Float32x4.max">#</a></h4>
+<div class="doc">
+<p>Returns the lane-wise maximum value in <code>this</code> or 
+<span class="param">other</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="min">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>min</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#min"
+              title="Permalink to Float32x4.min">#</a></h4>
+<div class="doc">
+<p>Returns the lane-wise minimum value in <code>this</code> or 
+<span class="param">other</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="notEqual">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>notEqual</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> other) <a class="anchor-link" href="#notEqual"
+              title="Permalink to Float32x4.notEqual">#</a></h4>
+<div class="doc">
+<p>Relational not-equal.</p>
+</div>
+</div>
+<div class="method"><h4 id="reciprocal">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>reciprocal</strong>() <a class="anchor-link" href="#reciprocal"
+              title="Permalink to Float32x4.reciprocal">#</a></h4>
+<div class="doc">
+<p>Returns the reciprocal of <code>this</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="reciprocalSqrt">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>reciprocalSqrt</strong>() <a class="anchor-link" href="#reciprocalSqrt"
+              title="Permalink to Float32x4.reciprocalSqrt">#</a></h4>
+<div class="doc">
+<p>Returns the square root of the reciprocal of <code>this</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="scale">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>scale</strong>(<a href="../dart_core/double.html">double</a> s) <a class="anchor-link" href="#scale"
+              title="Permalink to Float32x4.scale">#</a></h4>
+<div class="doc">
+<p>Returns a copy of <code>this</code> each lane being scaled by 
+<span class="param">s</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="sqrt">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>sqrt</strong>() <a class="anchor-link" href="#sqrt"
+              title="Permalink to Float32x4.sqrt">#</a></h4>
+<div class="doc">
+<p>Returns the square root of <code>this</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="toUint32x4">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>toUint32x4</strong>() <a class="anchor-link" href="#toUint32x4"
+              title="Permalink to Float32x4.toUint32x4">#</a></h4>
+<div class="doc">
+<p>Returns a bit-wise copy of <code>this</code> as a <a class="crossref" href="../dart_scalarlist/Uint32x4.html">Uint32x4</a>.</p>
+</div>
+</div>
+<div class="method"><h4 id="withW">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>withW</strong>(<a href="../dart_core/double.html">double</a> w) <a class="anchor-link" href="#withW"
+              title="Permalink to Float32x4.withW">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Float32x4.html#Float32x4">Float32x4</a> copied from <code>this</code> with a new w value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withX">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>withX</strong>(<a href="../dart_core/double.html">double</a> x) <a class="anchor-link" href="#withX"
+              title="Permalink to Float32x4.withX">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Float32x4.html#Float32x4">Float32x4</a> copied from <code>this</code> with a new x value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withY">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>withY</strong>(<a href="../dart_core/double.html">double</a> y) <a class="anchor-link" href="#withY"
+              title="Permalink to Float32x4.withY">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Float32x4.html#Float32x4">Float32x4</a> copied from <code>this</code> with a new y value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withZ">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>withZ</strong>(<a href="../dart_core/double.html">double</a> z) <a class="anchor-link" href="#withZ"
+              title="Permalink to Float32x4.withZ">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Float32x4.html#Float32x4">Float32x4</a> copied from <code>this</code> with a new z value.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:12.803</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

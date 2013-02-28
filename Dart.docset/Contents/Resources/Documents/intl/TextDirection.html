@@ -1,0 +1,206 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>TextDirection class / intl Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="intl" data-type="TextDirection">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../intl.html">intl</a> &rsaquo; <a href="../intl/TextDirection.html">TextDirection</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><ul class="icon">
+<li><a href="../intl/Bidi.html"><div class="icon-class"></div>Bidi</a></li>
+<li><a href="../intl/BidiFormatter.html"><div class="icon-class"></div>BidiFormatter</a></li>
+<li><a href="../intl/DateFormat.html"><div class="icon-class"></div>DateFormat</a></li>
+<li><a href="../intl/Intl.html"><div class="icon-class"></div>Intl</a></li>
+<li><div class="icon-class"></div><strong>TextDirection</strong></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>TextDirection</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Bidi stands for Bi-directional text.
+According to http://en.wikipedia.org/wiki/Bi-directional_text:
+Bi-directional text is text containing text in both text directionalities,
+both right-to-left (RTL) and left-to-right (LTR). It generally involves text
+containing different types of alphabets, but may also refer to boustrophedon,
+which is changing text directionality in each row.</p>
+<p>This file provides some utility classes for determining directionality of
+text, switching CSS layout from LTR to RTL, and other normalizing utilities
+needed when switching between RTL and LTR formatting.</p>
+<p>It defines the TextDirection class which is used to represent directionality
+of text,
+In most cases, it is preferable to use bidi<em>formatter.dart, which provides
+bidi functionality in the given directional context, instead of using
+bidi</em>utils.dart directly.</p>
+<pre class="source">
+class TextDirection {
+ static const LTR = const TextDirection._('LTR', 'ltr');
+ static const RTL = const TextDirection._('RTL', 'rtl');
+ // If the directionality of the text cannot be determined and we are not using
+ // the context direction (or if the context direction is unknown), then the
+ // text falls back on the more common ltr direction.
+ static const UNKNOWN = const TextDirection._('UNKNOWN', 'ltr');
+
+ /**
+  * Textual representation of the directionality constant. One of
+  * 'LTR', 'RTL', or 'UNKNOWN'.
+  */
+ final String value;
+
+ /** Textual representation of the directionality when used in span tag. */
+ final String spanText;
+
+ const TextDirection._(this.value, this.spanText);
+
+ /**
+  * Returns true if [otherDirection] is known to be different from this
+  * direction.
+  */
+ bool isDirectionChange(TextDirection otherDirection) {
+   return otherDirection != TextDirection.UNKNOWN &amp;&amp; this != otherDirection;
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="LTR">
+<button class="show-code">Code</button>
+const         <strong>LTR</strong> <a class="anchor-link"
+            href="#LTR"
+            title="Permalink to TextDirection.LTR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LTR = const TextDirection._('LTR', 'ltr')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="RTL">
+<button class="show-code">Code</button>
+const         <strong>RTL</strong> <a class="anchor-link"
+            href="#RTL"
+            title="Permalink to TextDirection.RTL">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+RTL = const TextDirection._('RTL', 'rtl')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="UNKNOWN">
+<button class="show-code">Code</button>
+const         <strong>UNKNOWN</strong> <a class="anchor-link"
+            href="#UNKNOWN"
+            title="Permalink to TextDirection.UNKNOWN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+UNKNOWN = const TextDirection._('UNKNOWN', 'ltr')
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="spanText">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>spanText</strong> <a class="anchor-link"
+            href="#spanText"
+            title="Permalink to TextDirection.spanText">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+spanText
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="value">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>value</strong> <a class="anchor-link"
+            href="#value"
+            title="Permalink to TextDirection.value">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+value
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="isDirectionChange">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>isDirectionChange</strong>(<a href="../intl/TextDirection.html">TextDirection</a> otherDirection) <a class="anchor-link" href="#isDirectionChange"
+              title="Permalink to TextDirection.isDirectionChange">#</a></h4>
+<div class="doc">
+<p>Returns true if 
+<span class="param">otherDirection</span> is known to be different from this
+direction.</p>
+<pre class="source">
+bool isDirectionChange(TextDirection otherDirection) {
+ return otherDirection != TextDirection.UNKNOWN &amp;&amp; this != otherDirection;
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:02.861</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

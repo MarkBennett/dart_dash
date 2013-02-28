@@ -1,0 +1,2201 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>KeyCode abstract class / dart:html Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:html" data-type="KeyCode">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_html.html">dart:html</a> &rsaquo; <a href="../dart_html/KeyCode.html">KeyCode</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><ul class="icon">
+<li><a href="../dart_html/AbstractWorker.html"><div class="icon-class"></div>AbstractWorker</a></li>
+<li><a href="../dart_html/AnchorElement.html"><div class="icon-class"></div>AnchorElement</a></li>
+<li><a href="../dart_html/AnimationEvent.html"><div class="icon-class"></div>AnimationEvent</a></li>
+<li><a href="../dart_html/ApplicationCache.html"><div class="icon-class"></div>ApplicationCache</a></li>
+<li><a href="../dart_html/AreaElement.html"><div class="icon-class"></div>AreaElement</a></li>
+<li><a href="../dart_html/ArrayBuffer.html"><div class="icon-class"></div>ArrayBuffer</a></li>
+<li><a href="../dart_html/ArrayBufferView.html"><div class="icon-class"></div>ArrayBufferView</a></li>
+<li><a href="../dart_html/Attr.html"><div class="icon-class"></div>Attr</a></li>
+<li><a href="../dart_html/AudioElement.html"><div class="icon-class"></div>AudioElement</a></li>
+<li><a href="../dart_html/BarInfo.html"><div class="icon-class"></div>BarInfo</a></li>
+<li><a href="../dart_html/BaseElement.html"><div class="icon-class"></div>BaseElement</a></li>
+<li><a href="../dart_html/BatteryManager.html"><div class="icon-class"></div>BatteryManager</a></li>
+<li><a href="../dart_html/BeforeLoadEvent.html"><div class="icon-class"></div>BeforeLoadEvent</a></li>
+<li><a href="../dart_html/Blob.html"><div class="icon-class"></div>Blob</a></li>
+<li><a href="../dart_html/BodyElement.html"><div class="icon-class"></div>BodyElement</a></li>
+<li><a href="../dart_html/BRElement.html"><div class="icon-class"></div>BRElement</a></li>
+<li><a href="../dart_html/ButtonElement.html"><div class="icon-class"></div>ButtonElement</a></li>
+<li><a href="../dart_html/ButtonInputElement.html"><div class="icon-class"></div>ButtonInputElement</a></li>
+<li><a href="../dart_html/CanvasElement.html"><div class="icon-class"></div>CanvasElement</a></li>
+<li><a href="../dart_html/CanvasGradient.html"><div class="icon-class"></div>CanvasGradient</a></li>
+<li><a href="../dart_html/CanvasPattern.html"><div class="icon-class"></div>CanvasPattern</a></li>
+<li><a href="../dart_html/CanvasRenderingContext.html"><div class="icon-class"></div>CanvasRenderingContext</a></li>
+<li><a href="../dart_html/CanvasRenderingContext2D.html"><div class="icon-class"></div>CanvasRenderingContext2D</a></li>
+<li><a href="../dart_html/CDataSection.html"><div class="icon-class"></div>CDataSection</a></li>
+<li><a href="../dart_html/CharacterData.html"><div class="icon-class"></div>CharacterData</a></li>
+<li><a href="../dart_html/CheckboxInputElement.html"><div class="icon-class"></div>CheckboxInputElement</a></li>
+<li><a href="../dart_html/ClientRect.html"><div class="icon-class"></div>ClientRect</a></li>
+<li><a href="../dart_html/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_html/Comment.html"><div class="icon-class"></div>Comment</a></li>
+<li><a href="../dart_html/CompositionEvent.html"><div class="icon-class"></div>CompositionEvent</a></li>
+<li><a href="../dart_html/Console.html"><div class="icon-class"></div>Console</a></li>
+<li><a href="../dart_html/ContentElement.html"><div class="icon-class"></div>ContentElement</a></li>
+<li><a href="../dart_html/Coordinates.html"><div class="icon-class"></div>Coordinates</a></li>
+<li><a href="../dart_html/Counter.html"><div class="icon-class"></div>Counter</a></li>
+<li><a href="../dart_html/Crypto.html"><div class="icon-class"></div>Crypto</a></li>
+<li><a href="../dart_html/CssCharsetRule.html"><div class="icon-class"></div>CssCharsetRule</a></li>
+<li><a href="../dart_html/CssClassSet.html"><div class="icon-class"></div>CssClassSet</a></li>
+<li><a href="../dart_html/CssFontFaceRule.html"><div class="icon-class"></div>CssFontFaceRule</a></li>
+<li><a href="../dart_html/CssHostRule.html"><div class="icon-class"></div>CssHostRule</a></li>
+<li><a href="../dart_html/CssImportRule.html"><div class="icon-class"></div>CssImportRule</a></li>
+<li><a href="../dart_html/CssKeyframeRule.html"><div class="icon-class"></div>CssKeyframeRule</a></li>
+<li><a href="../dart_html/CssKeyframesRule.html"><div class="icon-class"></div>CssKeyframesRule</a></li>
+<li><a href="../dart_html/CssMatrix.html"><div class="icon-class"></div>CssMatrix</a></li>
+<li><a href="../dart_html/CssMediaRule.html"><div class="icon-class"></div>CssMediaRule</a></li>
+<li><a href="../dart_html/CssPageRule.html"><div class="icon-class"></div>CssPageRule</a></li>
+<li><a href="../dart_html/CssPrimitiveValue.html"><div class="icon-class"></div>CssPrimitiveValue</a></li>
+<li><a href="../dart_html/CssRule.html"><div class="icon-class"></div>CssRule</a></li>
+<li><a href="../dart_html/CssStyleDeclaration.html"><div class="icon-class"></div>CssStyleDeclaration</a></li>
+<li><a href="../dart_html/CssStyleRule.html"><div class="icon-class"></div>CssStyleRule</a></li>
+<li><a href="../dart_html/CssStyleSheet.html"><div class="icon-class"></div>CssStyleSheet</a></li>
+<li><a href="../dart_html/CssTransformValue.html"><div class="icon-class"></div>CssTransformValue</a></li>
+<li><a href="../dart_html/CssUnknownRule.html"><div class="icon-class"></div>CssUnknownRule</a></li>
+<li><a href="../dart_html/CssValue.html"><div class="icon-class"></div>CssValue</a></li>
+<li><a href="../dart_html/CustomEvent.html"><div class="icon-class"></div>CustomEvent</a></li>
+<li><a href="../dart_html/DataListElement.html"><div class="icon-class"></div>DataListElement</a></li>
+<li><a href="../dart_html/DataTransfer.html"><div class="icon-class"></div>DataTransfer</a></li>
+<li><a href="../dart_html/DataTransferItem.html"><div class="icon-class"></div>DataTransferItem</a></li>
+<li><a href="../dart_html/DataTransferItemList.html"><div class="icon-class"></div>DataTransferItemList</a></li>
+<li><a href="../dart_html/DataView.html"><div class="icon-class"></div>DataView</a></li>
+<li><a href="../dart_html/DateInputElement.html"><div class="icon-class"></div>DateInputElement</a></li>
+<li><a href="../dart_html/DedicatedWorkerContext.html"><div class="icon-class"></div>DedicatedWorkerContext</a></li>
+<li><a href="../dart_html/DetailsElement.html"><div class="icon-class"></div>DetailsElement</a></li>
+<li><a href="../dart_html/DeviceMotionEvent.html"><div class="icon-class"></div>DeviceMotionEvent</a></li>
+<li><a href="../dart_html/DeviceOrientationEvent.html"><div class="icon-class"></div>DeviceOrientationEvent</a></li>
+<li><a href="../dart_html/DirectoryEntry.html"><div class="icon-class"></div>DirectoryEntry</a></li>
+<li><a href="../dart_html/DirectoryEntrySync.html"><div class="icon-class"></div>DirectoryEntrySync</a></li>
+<li><a href="../dart_html/DirectoryReader.html"><div class="icon-class"></div>DirectoryReader</a></li>
+<li><a href="../dart_html/DirectoryReaderSync.html"><div class="icon-class"></div>DirectoryReaderSync</a></li>
+<li><a href="../dart_html/DivElement.html"><div class="icon-class"></div>DivElement</a></li>
+<li><a href="../dart_html/DListElement.html"><div class="icon-class"></div>DListElement</a></li>
+<li><a href="../dart_html/Document.html"><div class="icon-class"></div>Document</a></li>
+<li><a href="../dart_html/DocumentFragment.html"><div class="icon-class"></div>DocumentFragment</a></li>
+<li><a href="../dart_html/DocumentType.html"><div class="icon-class"></div>DocumentType</a></li>
+<li><a href="../dart_html/DomImplementation.html"><div class="icon-class"></div>DomImplementation</a></li>
+<li><a href="../dart_html/DomMimeType.html"><div class="icon-class"></div>DomMimeType</a></li>
+<li><a href="../dart_html/DomMimeTypeArray.html"><div class="icon-class"></div>DomMimeTypeArray</a></li>
+<li><a href="../dart_html/DomParser.html"><div class="icon-class"></div>DomParser</a></li>
+<li><a href="../dart_html/DomPlugin.html"><div class="icon-class"></div>DomPlugin</a></li>
+<li><a href="../dart_html/DomPluginArray.html"><div class="icon-class"></div>DomPluginArray</a></li>
+<li><a href="../dart_html/DomPoint.html"><div class="icon-class"></div>DomPoint</a></li>
+<li><a href="../dart_html/DomSelection.html"><div class="icon-class"></div>DomSelection</a></li>
+<li><a href="../dart_html/DomSettableTokenList.html"><div class="icon-class"></div>DomSettableTokenList</a></li>
+<li><a href="../dart_html/DomStringList.html"><div class="icon-class"></div>DomStringList</a></li>
+<li><a href="../dart_html/DomStringMap.html"><div class="icon-class"></div>DomStringMap</a></li>
+<li><a href="../dart_html/DomTokenList.html"><div class="icon-class"></div>DomTokenList</a></li>
+<li><a href="../dart_html/Element.html"><div class="icon-class"></div>Element</a></li>
+<li><a href="../dart_html/ElementTraversal.html"><div class="icon-class"></div>ElementTraversal</a></li>
+<li><a href="../dart_html/EmailInputElement.html"><div class="icon-class"></div>EmailInputElement</a></li>
+<li><a href="../dart_html/EmbedElement.html"><div class="icon-class"></div>EmbedElement</a></li>
+<li><a href="../dart_html/EntityReference.html"><div class="icon-class"></div>EntityReference</a></li>
+<li><a href="../dart_html/EntriesCallback.html"><div class="icon-interface"></div>EntriesCallback</a></li>
+<li><a href="../dart_html/Entry.html"><div class="icon-class"></div>Entry</a></li>
+<li><a href="../dart_html/EntryCallback.html"><div class="icon-interface"></div>EntryCallback</a></li>
+<li><a href="../dart_html/EntrySync.html"><div class="icon-class"></div>EntrySync</a></li>
+<li><a href="../dart_html/ErrorCallback.html"><div class="icon-interface"></div>ErrorCallback</a></li>
+<li><a href="../dart_html/ErrorEvent.html"><div class="icon-class"></div>ErrorEvent</a></li>
+<li><a href="../dart_html/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_html/EventListener.html"><div class="icon-interface"></div>EventListener</a></li>
+<li><a href="../dart_html/Events.html"><div class="icon-class"></div>Events</a></li>
+<li><a href="../dart_html/EventSource.html"><div class="icon-class"></div>EventSource</a></li>
+<li><a href="../dart_html/EventStreamProvider.html"><div class="icon-class"></div>EventStreamProvider&lt;T&gt;</a></li>
+<li><a href="../dart_html/EventTarget.html"><div class="icon-class"></div>EventTarget</a></li>
+<li><a href="../dart_html/ExtTextureFilterAnisotropic.html"><div class="icon-class"></div>ExtTextureFilterAnisotropic</a></li>
+<li><a href="../dart_html/FieldSetElement.html"><div class="icon-class"></div>FieldSetElement</a></li>
+<li><a href="../dart_html/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_html/FileCallback.html"><div class="icon-interface"></div>FileCallback</a></li>
+<li><a href="../dart_html/FileEntry.html"><div class="icon-class"></div>FileEntry</a></li>
+<li><a href="../dart_html/FileEntrySync.html"><div class="icon-class"></div>FileEntrySync</a></li>
+<li><a href="../dart_html/FileList.html"><div class="icon-class"></div>FileList</a></li>
+<li><a href="../dart_html/FileReader.html"><div class="icon-class"></div>FileReader</a></li>
+<li><a href="../dart_html/FileReaderSync.html"><div class="icon-class"></div>FileReaderSync</a></li>
+<li><a href="../dart_html/FileSystem.html"><div class="icon-class"></div>FileSystem</a></li>
+<li><a href="../dart_html/FileSystemCallback.html"><div class="icon-interface"></div>FileSystemCallback</a></li>
+<li><a href="../dart_html/FileSystemSync.html"><div class="icon-class"></div>FileSystemSync</a></li>
+<li><a href="../dart_html/FileUploadInputElement.html"><div class="icon-class"></div>FileUploadInputElement</a></li>
+<li><a href="../dart_html/FileWriter.html"><div class="icon-class"></div>FileWriter</a></li>
+<li><a href="../dart_html/FileWriterCallback.html"><div class="icon-interface"></div>FileWriterCallback</a></li>
+<li><a href="../dart_html/FileWriterSync.html"><div class="icon-class"></div>FileWriterSync</a></li>
+<li><a href="../dart_html/FixedSizeListIterator.html"><div class="icon-class"></div>FixedSizeListIterator&lt;T&gt;</a></li>
+<li><a href="../dart_html/Float32Array.html"><div class="icon-class"></div>Float32Array</a></li>
+<li><a href="../dart_html/Float64Array.html"><div class="icon-class"></div>Float64Array</a></li>
+<li><a href="../dart_html/FocusEvent.html"><div class="icon-class"></div>FocusEvent</a></li>
+<li><a href="../dart_html/FormData.html"><div class="icon-class"></div>FormData</a></li>
+<li><a href="../dart_html/FormElement.html"><div class="icon-class"></div>FormElement</a></li>
+<li><a href="../dart_html/Gamepad.html"><div class="icon-class"></div>Gamepad</a></li>
+<li><a href="../dart_html/Geolocation.html"><div class="icon-class"></div>Geolocation</a></li>
+<li><a href="../dart_html/Geoposition.html"><div class="icon-class"></div>Geoposition</a></li>
+<li><a href="../dart_html/HashChangeEvent.html"><div class="icon-class"></div>HashChangeEvent</a></li>
+<li><a href="../dart_html/HeadElement.html"><div class="icon-class"></div>HeadElement</a></li>
+<li><a href="../dart_html/HeadingElement.html"><div class="icon-class"></div>HeadingElement</a></li>
+<li><a href="../dart_html/HiddenInputElement.html"><div class="icon-class"></div>HiddenInputElement</a></li>
+<li><a href="../dart_html/History.html"><div class="icon-class"></div>History</a></li>
+<li><a href="../dart_html/HistoryBase.html"><div class="icon-class"></div>HistoryBase</a></li>
+<li><a href="../dart_html/HRElement.html"><div class="icon-class"></div>HRElement</a></li>
+<li><a href="../dart_html/HtmlAllCollection.html"><div class="icon-class"></div>HtmlAllCollection</a></li>
+<li><a href="../dart_html/HtmlCollection.html"><div class="icon-class"></div>HtmlCollection</a></li>
+<li><a href="../dart_html/HtmlDocument.html"><div class="icon-class"></div>HtmlDocument</a></li>
+<li><a href="../dart_html/HtmlElement.html"><div class="icon-class"></div>HtmlElement</a></li>
+<li><a href="../dart_html/HtmlFormControlsCollection.html"><div class="icon-class"></div>HtmlFormControlsCollection</a></li>
+<li><a href="../dart_html/HtmlOptionsCollection.html"><div class="icon-class"></div>HtmlOptionsCollection</a></li>
+<li><a href="../dart_html/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_html/HttpRequestProgressEvent.html"><div class="icon-class"></div>HttpRequestProgressEvent</a></li>
+<li><a href="../dart_html/HttpRequestUpload.html"><div class="icon-class"></div>HttpRequestUpload</a></li>
+<li><a href="../dart_html/IFrameElement.html"><div class="icon-class"></div>IFrameElement</a></li>
+<li><a href="../dart_html/ImageButtonInputElement.html"><div class="icon-class"></div>ImageButtonInputElement</a></li>
+<li><a href="../dart_html/ImageData.html"><div class="icon-class"></div>ImageData</a></li>
+<li><a href="../dart_html/ImageElement.html"><div class="icon-class"></div>ImageElement</a></li>
+<li><a href="../dart_html/InputElement.html"><div class="icon-class"></div>InputElement</a></li>
+<li><a href="../dart_html/InputElementBase.html"><div class="icon-class"></div>InputElementBase</a></li>
+<li><a href="../dart_html/Int16Array.html"><div class="icon-class"></div>Int16Array</a></li>
+<li><a href="../dart_html/Int32Array.html"><div class="icon-class"></div>Int32Array</a></li>
+<li><a href="../dart_html/Int8Array.html"><div class="icon-class"></div>Int8Array</a></li>
+<li><a href="../dart_html/JavaScriptCallFrame.html"><div class="icon-class"></div>JavaScriptCallFrame</a></li>
+<li><a href="../dart_html/KeyboardEvent.html"><div class="icon-class"></div>KeyboardEvent</a></li>
+<li><a href="../dart_html/KeyboardEventController.html"><div class="icon-class"></div>KeyboardEventController</a></li>
+<li><div class="icon-class"></div><strong>KeyCode</strong></li>
+<li><a href="../dart_html/KeyEvent.html"><div class="icon-class"></div>KeyEvent</a></li>
+<li><a href="../dart_html/KeygenElement.html"><div class="icon-class"></div>KeygenElement</a></li>
+<li><a href="../dart_html/KeyLocation.html"><div class="icon-class"></div>KeyLocation</a></li>
+<li><a href="../dart_html/KeyName.html"><div class="icon-class"></div>KeyName</a></li>
+<li><a href="../dart_html/LabelElement.html"><div class="icon-class"></div>LabelElement</a></li>
+<li><a href="../dart_html/LegendElement.html"><div class="icon-class"></div>LegendElement</a></li>
+<li><a href="../dart_html/LIElement.html"><div class="icon-class"></div>LIElement</a></li>
+<li><a href="../dart_html/LinkElement.html"><div class="icon-class"></div>LinkElement</a></li>
+<li><a href="../dart_html/LocalDateTimeInputElement.html"><div class="icon-class"></div>LocalDateTimeInputElement</a></li>
+<li><a href="../dart_html/LocalMediaStream.html"><div class="icon-class"></div>LocalMediaStream</a></li>
+<li><a href="../dart_html/Location.html"><div class="icon-class"></div>Location</a></li>
+<li><a href="../dart_html/LocationBase.html"><div class="icon-class"></div>LocationBase</a></li>
+<li><a href="../dart_html/MapElement.html"><div class="icon-class"></div>MapElement</a></li>
+<li><a href="../dart_html/MediaController.html"><div class="icon-class"></div>MediaController</a></li>
+<li><a href="../dart_html/MediaElement.html"><div class="icon-class"></div>MediaElement</a></li>
+<li><a href="../dart_html/MediaKeyEvent.html"><div class="icon-class"></div>MediaKeyEvent</a></li>
+<li><a href="../dart_html/MediaList.html"><div class="icon-class"></div>MediaList</a></li>
+<li><a href="../dart_html/MediaQueryList.html"><div class="icon-class"></div>MediaQueryList</a></li>
+<li><a href="../dart_html/MediaQueryListListener.html"><div class="icon-class"></div>MediaQueryListListener</a></li>
+<li><a href="../dart_html/MediaSource.html"><div class="icon-class"></div>MediaSource</a></li>
+<li><a href="../dart_html/MediaStream.html"><div class="icon-class"></div>MediaStream</a></li>
+<li><a href="../dart_html/MediaStreamEvent.html"><div class="icon-class"></div>MediaStreamEvent</a></li>
+<li><a href="../dart_html/MediaStreamTrack.html"><div class="icon-class"></div>MediaStreamTrack</a></li>
+<li><a href="../dart_html/MediaStreamTrackEvent.html"><div class="icon-class"></div>MediaStreamTrackEvent</a></li>
+<li><a href="../dart_html/MemoryInfo.html"><div class="icon-class"></div>MemoryInfo</a></li>
+<li><a href="../dart_html/MenuElement.html"><div class="icon-class"></div>MenuElement</a></li>
+<li><a href="../dart_html/MessageChannel.html"><div class="icon-class"></div>MessageChannel</a></li>
+<li><a href="../dart_html/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_html/MessagePort.html"><div class="icon-class"></div>MessagePort</a></li>
+<li><a href="../dart_html/Metadata.html"><div class="icon-class"></div>Metadata</a></li>
+<li><a href="../dart_html/MetadataCallback.html"><div class="icon-interface"></div>MetadataCallback</a></li>
+<li><a href="../dart_html/MetaElement.html"><div class="icon-class"></div>MetaElement</a></li>
+<li><a href="../dart_html/MeterElement.html"><div class="icon-class"></div>MeterElement</a></li>
+<li><a href="../dart_html/ModElement.html"><div class="icon-class"></div>ModElement</a></li>
+<li><a href="../dart_html/MonthInputElement.html"><div class="icon-class"></div>MonthInputElement</a></li>
+<li><a href="../dart_html/MouseEvent.html"><div class="icon-class"></div>MouseEvent</a></li>
+<li><a href="../dart_html/MutationCallback.html"><div class="icon-interface"></div>MutationCallback</a></li>
+<li><a href="../dart_html/MutationEvent.html"><div class="icon-class"></div>MutationEvent</a></li>
+<li><a href="../dart_html/MutationObserver.html"><div class="icon-class"></div>MutationObserver</a></li>
+<li><a href="../dart_html/MutationRecord.html"><div class="icon-class"></div>MutationRecord</a></li>
+<li><a href="../dart_html/Navigator.html"><div class="icon-class"></div>Navigator</a></li>
+<li><a href="../dart_html/Node.html"><div class="icon-class"></div>Node</a></li>
+<li><a href="../dart_html/NodeFilter.html"><div class="icon-class"></div>NodeFilter</a></li>
+<li><a href="../dart_html/NodeIterator.html"><div class="icon-class"></div>NodeIterator</a></li>
+<li><a href="../dart_html/NodeList.html"><div class="icon-class"></div>NodeList</a></li>
+<li><a href="../dart_html/Notation.html"><div class="icon-class"></div>Notation</a></li>
+<li><a href="../dart_html/Notification.html"><div class="icon-class"></div>Notification</a></li>
+<li><a href="../dart_html/NotificationCenter.html"><div class="icon-class"></div>NotificationCenter</a></li>
+<li><a href="../dart_html/NotificationPermissionCallback.html"><div class="icon-interface"></div>NotificationPermissionCallback</a></li>
+<li><a href="../dart_html/NumberInputElement.html"><div class="icon-class"></div>NumberInputElement</a></li>
+<li><a href="../dart_html/ObjectElement.html"><div class="icon-class"></div>ObjectElement</a></li>
+<li><a href="../dart_html/OesElementIndexUint.html"><div class="icon-class"></div>OesElementIndexUint</a></li>
+<li><a href="../dart_html/OesStandardDerivatives.html"><div class="icon-class"></div>OesStandardDerivatives</a></li>
+<li><a href="../dart_html/OesTextureFloat.html"><div class="icon-class"></div>OesTextureFloat</a></li>
+<li><a href="../dart_html/OesVertexArrayObject.html"><div class="icon-class"></div>OesVertexArrayObject</a></li>
+<li><a href="../dart_html/OListElement.html"><div class="icon-class"></div>OListElement</a></li>
+<li><a href="../dart_html/OptGroupElement.html"><div class="icon-class"></div>OptGroupElement</a></li>
+<li><a href="../dart_html/OptionElement.html"><div class="icon-class"></div>OptionElement</a></li>
+<li><a href="../dart_html/OutputElement.html"><div class="icon-class"></div>OutputElement</a></li>
+<li><a href="../dart_html/OverflowEvent.html"><div class="icon-class"></div>OverflowEvent</a></li>
+<li><a href="../dart_html/PagePopupController.html"><div class="icon-class"></div>PagePopupController</a></li>
+<li><a href="../dart_html/PageTransitionEvent.html"><div class="icon-class"></div>PageTransitionEvent</a></li>
+<li><a href="../dart_html/ParagraphElement.html"><div class="icon-class"></div>ParagraphElement</a></li>
+<li><a href="../dart_html/ParamElement.html"><div class="icon-class"></div>ParamElement</a></li>
+<li><a href="../dart_html/PasswordInputElement.html"><div class="icon-class"></div>PasswordInputElement</a></li>
+<li><a href="../dart_html/Performance.html"><div class="icon-class"></div>Performance</a></li>
+<li><a href="../dart_html/PerformanceNavigation.html"><div class="icon-class"></div>PerformanceNavigation</a></li>
+<li><a href="../dart_html/PerformanceTiming.html"><div class="icon-class"></div>PerformanceTiming</a></li>
+<li><a href="../dart_html/PopStateEvent.html"><div class="icon-class"></div>PopStateEvent</a></li>
+<li><a href="../dart_html/PreElement.html"><div class="icon-class"></div>PreElement</a></li>
+<li><a href="../dart_html/ProcessingInstruction.html"><div class="icon-class"></div>ProcessingInstruction</a></li>
+<li><a href="../dart_html/ProgressElement.html"><div class="icon-class"></div>ProgressElement</a></li>
+<li><a href="../dart_html/ProgressEvent.html"><div class="icon-class"></div>ProgressEvent</a></li>
+<li><a href="../dart_html/QuoteElement.html"><div class="icon-class"></div>QuoteElement</a></li>
+<li><a href="../dart_html/RadioButtonInputElement.html"><div class="icon-class"></div>RadioButtonInputElement</a></li>
+<li><a href="../dart_html/RadioNodeList.html"><div class="icon-class"></div>RadioNodeList</a></li>
+<li><a href="../dart_html/Range.html"><div class="icon-class"></div>Range</a></li>
+<li><a href="../dart_html/RangeInputElement.html"><div class="icon-class"></div>RangeInputElement</a></li>
+<li><a href="../dart_html/RangeInputElementBase.html"><div class="icon-class"></div>RangeInputElementBase</a></li>
+<li><a href="../dart_html/ReadyState.html"><div class="icon-class"></div>ReadyState</a></li>
+<li><a href="../dart_html/ReceivePortSync.html"><div class="icon-class"></div>ReceivePortSync</a></li>
+<li><a href="../dart_html/Rect.html"><div class="icon-class"></div>Rect</a></li>
+<li><a href="../dart_html/RequestAnimationFrameCallback.html"><div class="icon-interface"></div>RequestAnimationFrameCallback</a></li>
+<li><a href="../dart_html/ResetButtonInputElement.html"><div class="icon-class"></div>ResetButtonInputElement</a></li>
+<li><a href="../dart_html/RgbColor.html"><div class="icon-class"></div>RgbColor</a></li>
+<li><a href="../dart_html/RtcDataChannel.html"><div class="icon-class"></div>RtcDataChannel</a></li>
+<li><a href="../dart_html/RtcDataChannelEvent.html"><div class="icon-class"></div>RtcDataChannelEvent</a></li>
+<li><a href="../dart_html/RtcdtmfSender.html"><div class="icon-class"></div>RtcdtmfSender</a></li>
+<li><a href="../dart_html/RtcdtmfToneChangeEvent.html"><div class="icon-class"></div>RtcdtmfToneChangeEvent</a></li>
+<li><a href="../dart_html/RtcErrorCallback.html"><div class="icon-interface"></div>RtcErrorCallback</a></li>
+<li><a href="../dart_html/RtcIceCandidate.html"><div class="icon-class"></div>RtcIceCandidate</a></li>
+<li><a href="../dart_html/RtcIceCandidateEvent.html"><div class="icon-class"></div>RtcIceCandidateEvent</a></li>
+<li><a href="../dart_html/RtcPeerConnection.html"><div class="icon-class"></div>RtcPeerConnection</a></li>
+<li><a href="../dart_html/RtcSessionDescription.html"><div class="icon-class"></div>RtcSessionDescription</a></li>
+<li><a href="../dart_html/RtcSessionDescriptionCallback.html"><div class="icon-interface"></div>RtcSessionDescriptionCallback</a></li>
+<li><a href="../dart_html/RtcStatsCallback.html"><div class="icon-interface"></div>RtcStatsCallback</a></li>
+<li><a href="../dart_html/RtcStatsElement.html"><div class="icon-class"></div>RtcStatsElement</a></li>
+<li><a href="../dart_html/RtcStatsReport.html"><div class="icon-class"></div>RtcStatsReport</a></li>
+<li><a href="../dart_html/RtcStatsResponse.html"><div class="icon-class"></div>RtcStatsResponse</a></li>
+<li><a href="../dart_html/Screen.html"><div class="icon-class"></div>Screen</a></li>
+<li><a href="../dart_html/ScriptElement.html"><div class="icon-class"></div>ScriptElement</a></li>
+<li><a href="../dart_html/ScriptProfile.html"><div class="icon-class"></div>ScriptProfile</a></li>
+<li><a href="../dart_html/ScriptProfileNode.html"><div class="icon-class"></div>ScriptProfileNode</a></li>
+<li><a href="../dart_html/ScrollAlignment.html"><div class="icon-class"></div>ScrollAlignment</a></li>
+<li><a href="../dart_html/SearchInputElement.html"><div class="icon-class"></div>SearchInputElement</a></li>
+<li><a href="../dart_html/SelectElement.html"><div class="icon-class"></div>SelectElement</a></li>
+<li><a href="../dart_html/ShadowElement.html"><div class="icon-class"></div>ShadowElement</a></li>
+<li><a href="../dart_html/ShadowRoot.html"><div class="icon-class"></div>ShadowRoot</a></li>
+<li><a href="../dart_html/SharedWorker.html"><div class="icon-class"></div>SharedWorker</a></li>
+<li><a href="../dart_html/SharedWorkerContext.html"><div class="icon-class"></div>SharedWorkerContext</a></li>
+<li><a href="../dart_html/SourceBuffer.html"><div class="icon-class"></div>SourceBuffer</a></li>
+<li><a href="../dart_html/SourceBufferList.html"><div class="icon-class"></div>SourceBufferList</a></li>
+<li><a href="../dart_html/SourceElement.html"><div class="icon-class"></div>SourceElement</a></li>
+<li><a href="../dart_html/SpanElement.html"><div class="icon-class"></div>SpanElement</a></li>
+<li><a href="../dart_html/SpeechGrammar.html"><div class="icon-class"></div>SpeechGrammar</a></li>
+<li><a href="../dart_html/SpeechGrammarList.html"><div class="icon-class"></div>SpeechGrammarList</a></li>
+<li><a href="../dart_html/SpeechInputEvent.html"><div class="icon-class"></div>SpeechInputEvent</a></li>
+<li><a href="../dart_html/SpeechInputResult.html"><div class="icon-class"></div>SpeechInputResult</a></li>
+<li><a href="../dart_html/SpeechRecognition.html"><div class="icon-class"></div>SpeechRecognition</a></li>
+<li><a href="../dart_html/SpeechRecognitionAlternative.html"><div class="icon-class"></div>SpeechRecognitionAlternative</a></li>
+<li><a href="../dart_html/SpeechRecognitionEvent.html"><div class="icon-class"></div>SpeechRecognitionEvent</a></li>
+<li><a href="../dart_html/SpeechRecognitionResult.html"><div class="icon-class"></div>SpeechRecognitionResult</a></li>
+<li><a href="../dart_html/Storage.html"><div class="icon-class"></div>Storage</a></li>
+<li><a href="../dart_html/StorageEvent.html"><div class="icon-class"></div>StorageEvent</a></li>
+<li><a href="../dart_html/StorageInfo.html"><div class="icon-class"></div>StorageInfo</a></li>
+<li><a href="../dart_html/StorageInfoErrorCallback.html"><div class="icon-interface"></div>StorageInfoErrorCallback</a></li>
+<li><a href="../dart_html/StorageInfoQuotaCallback.html"><div class="icon-interface"></div>StorageInfoQuotaCallback</a></li>
+<li><a href="../dart_html/StorageInfoUsageCallback.html"><div class="icon-interface"></div>StorageInfoUsageCallback</a></li>
+<li><a href="../dart_html/StringCallback.html"><div class="icon-interface"></div>StringCallback</a></li>
+<li><a href="../dart_html/StyleElement.html"><div class="icon-class"></div>StyleElement</a></li>
+<li><a href="../dart_html/StyleMedia.html"><div class="icon-class"></div>StyleMedia</a></li>
+<li><a href="../dart_html/StyleSheet.html"><div class="icon-class"></div>StyleSheet</a></li>
+<li><a href="../dart_html/SubmitButtonInputElement.html"><div class="icon-class"></div>SubmitButtonInputElement</a></li>
+<li><a href="../dart_html/TableCaptionElement.html"><div class="icon-class"></div>TableCaptionElement</a></li>
+<li><a href="../dart_html/TableCellElement.html"><div class="icon-class"></div>TableCellElement</a></li>
+<li><a href="../dart_html/TableColElement.html"><div class="icon-class"></div>TableColElement</a></li>
+<li><a href="../dart_html/TableElement.html"><div class="icon-class"></div>TableElement</a></li>
+<li><a href="../dart_html/TableRowElement.html"><div class="icon-class"></div>TableRowElement</a></li>
+<li><a href="../dart_html/TableSectionElement.html"><div class="icon-class"></div>TableSectionElement</a></li>
+<li><a href="../dart_html/TelephoneInputElement.html"><div class="icon-class"></div>TelephoneInputElement</a></li>
+<li><a href="../dart_html/Text.html"><div class="icon-class"></div>Text</a></li>
+<li><a href="../dart_html/TextAreaElement.html"><div class="icon-class"></div>TextAreaElement</a></li>
+<li><a href="../dart_html/TextEvent.html"><div class="icon-class"></div>TextEvent</a></li>
+<li><a href="../dart_html/TextInputElement.html"><div class="icon-class"></div>TextInputElement</a></li>
+<li><a href="../dart_html/TextInputElementBase.html"><div class="icon-class"></div>TextInputElementBase</a></li>
+<li><a href="../dart_html/TextMetrics.html"><div class="icon-class"></div>TextMetrics</a></li>
+<li><a href="../dart_html/TextTrack.html"><div class="icon-class"></div>TextTrack</a></li>
+<li><a href="../dart_html/TextTrackCue.html"><div class="icon-class"></div>TextTrackCue</a></li>
+<li><a href="../dart_html/TextTrackCueList.html"><div class="icon-class"></div>TextTrackCueList</a></li>
+<li><a href="../dart_html/TextTrackList.html"><div class="icon-class"></div>TextTrackList</a></li>
+<li><a href="../dart_html/TimeInputElement.html"><div class="icon-class"></div>TimeInputElement</a></li>
+<li><a href="../dart_html/TimeoutHandler.html"><div class="icon-interface"></div>TimeoutHandler</a></li>
+<li><a href="../dart_html/TimeRanges.html"><div class="icon-class"></div>TimeRanges</a></li>
+<li><a href="../dart_html/TitleElement.html"><div class="icon-class"></div>TitleElement</a></li>
+<li><a href="../dart_html/Touch.html"><div class="icon-class"></div>Touch</a></li>
+<li><a href="../dart_html/TouchEvent.html"><div class="icon-class"></div>TouchEvent</a></li>
+<li><a href="../dart_html/TouchList.html"><div class="icon-class"></div>TouchList</a></li>
+<li><a href="../dart_html/TrackElement.html"><div class="icon-class"></div>TrackElement</a></li>
+<li><a href="../dart_html/TrackEvent.html"><div class="icon-class"></div>TrackEvent</a></li>
+<li><a href="../dart_html/TransitionEvent.html"><div class="icon-class"></div>TransitionEvent</a></li>
+<li><a href="../dart_html/TreeWalker.html"><div class="icon-class"></div>TreeWalker</a></li>
+<li><a href="../dart_html/UIEvent.html"><div class="icon-class"></div>UIEvent</a></li>
+<li><a href="../dart_html/Uint16Array.html"><div class="icon-class"></div>Uint16Array</a></li>
+<li><a href="../dart_html/Uint32Array.html"><div class="icon-class"></div>Uint32Array</a></li>
+<li><a href="../dart_html/Uint8Array.html"><div class="icon-class"></div>Uint8Array</a></li>
+<li><a href="../dart_html/Uint8ClampedArray.html"><div class="icon-class"></div>Uint8ClampedArray</a></li>
+<li><a href="../dart_html/UListElement.html"><div class="icon-class"></div>UListElement</a></li>
+<li><a href="../dart_html/UnknownElement.html"><div class="icon-class"></div>UnknownElement</a></li>
+<li><a href="../dart_html/Url.html"><div class="icon-class"></div>Url</a></li>
+<li><a href="../dart_html/UrlInputElement.html"><div class="icon-class"></div>UrlInputElement</a></li>
+<li><a href="../dart_html/ValidityState.html"><div class="icon-class"></div>ValidityState</a></li>
+<li><a href="../dart_html/VideoElement.html"><div class="icon-class"></div>VideoElement</a></li>
+<li><a href="../dart_html/VoidCallback.html"><div class="icon-interface"></div>VoidCallback</a></li>
+<li><a href="../dart_html/WebGLActiveInfo.html"><div class="icon-class"></div>WebGLActiveInfo</a></li>
+<li><a href="../dart_html/WebGLBuffer.html"><div class="icon-class"></div>WebGLBuffer</a></li>
+<li><a href="../dart_html/WebGLCompressedTextureS3TC.html"><div class="icon-class"></div>WebGLCompressedTextureS3TC</a></li>
+<li><a href="../dart_html/WebGLContextAttributes.html"><div class="icon-class"></div>WebGLContextAttributes</a></li>
+<li><a href="../dart_html/WebGLContextEvent.html"><div class="icon-class"></div>WebGLContextEvent</a></li>
+<li><a href="../dart_html/WebGLDebugRendererInfo.html"><div class="icon-class"></div>WebGLDebugRendererInfo</a></li>
+<li><a href="../dart_html/WebGLDebugShaders.html"><div class="icon-class"></div>WebGLDebugShaders</a></li>
+<li><a href="../dart_html/WebGLDepthTexture.html"><div class="icon-class"></div>WebGLDepthTexture</a></li>
+<li><a href="../dart_html/WebGLFramebuffer.html"><div class="icon-class"></div>WebGLFramebuffer</a></li>
+<li><a href="../dart_html/WebGLLoseContext.html"><div class="icon-class"></div>WebGLLoseContext</a></li>
+<li><a href="../dart_html/WebGLProgram.html"><div class="icon-class"></div>WebGLProgram</a></li>
+<li><a href="../dart_html/WebGLRenderbuffer.html"><div class="icon-class"></div>WebGLRenderbuffer</a></li>
+<li><a href="../dart_html/WebGLRenderingContext.html"><div class="icon-class"></div>WebGLRenderingContext</a></li>
+<li><a href="../dart_html/WebGLShader.html"><div class="icon-class"></div>WebGLShader</a></li>
+<li><a href="../dart_html/WebGLShaderPrecisionFormat.html"><div class="icon-class"></div>WebGLShaderPrecisionFormat</a></li>
+<li><a href="../dart_html/WebGLTexture.html"><div class="icon-class"></div>WebGLTexture</a></li>
+<li><a href="../dart_html/WebGLUniformLocation.html"><div class="icon-class"></div>WebGLUniformLocation</a></li>
+<li><a href="../dart_html/WebGLVertexArrayObject.html"><div class="icon-class"></div>WebGLVertexArrayObject</a></li>
+<li><a href="../dart_html/WebKitCssFilterRule.html"><div class="icon-class"></div>WebKitCssFilterRule</a></li>
+<li><a href="../dart_html/WebKitCssFilterValue.html"><div class="icon-class"></div>WebKitCssFilterValue</a></li>
+<li><a href="../dart_html/WebKitCssMixFunctionValue.html"><div class="icon-class"></div>WebKitCssMixFunctionValue</a></li>
+<li><a href="../dart_html/WebKitNamedFlow.html"><div class="icon-class"></div>WebKitNamedFlow</a></li>
+<li><a href="../dart_html/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_html/WeekInputElement.html"><div class="icon-class"></div>WeekInputElement</a></li>
+<li><a href="../dart_html/WheelEvent.html"><div class="icon-class"></div>WheelEvent</a></li>
+<li><a href="../dart_html/Window.html"><div class="icon-class"></div>Window</a></li>
+<li><a href="../dart_html/WindowBase.html"><div class="icon-class"></div>WindowBase</a></li>
+<li><a href="../dart_html/Worker.html"><div class="icon-class"></div>Worker</a></li>
+<li><a href="../dart_html/WorkerContext.html"><div class="icon-class"></div>WorkerContext</a></li>
+<li><a href="../dart_html/WorkerLocation.html"><div class="icon-class"></div>WorkerLocation</a></li>
+<li><a href="../dart_html/WorkerNavigator.html"><div class="icon-class"></div>WorkerNavigator</a></li>
+<li><a href="../dart_html/XmlSerializer.html"><div class="icon-class"></div>XmlSerializer</a></li>
+<li><a href="../dart_html/XPathEvaluator.html"><div class="icon-class"></div>XPathEvaluator</a></li>
+<li><a href="../dart_html/XPathExpression.html"><div class="icon-class"></div>XPathExpression</a></li>
+<li><a href="../dart_html/XPathNSResolver.html"><div class="icon-class"></div>XPathNSResolver</a></li>
+<li><a href="../dart_html/XPathResult.html"><div class="icon-class"></div>XPathResult</a></li>
+<li><a href="../dart_html/XsltProcessor.html"><div class="icon-class"></div>XsltProcessor</a></li>
+<li><a href="../dart_html/DomError.html"><div class="icon-exception"></div>DomError</a></li>
+<li><a href="../dart_html/DomException.html"><div class="icon-exception"></div>DomException</a></li>
+<li><a href="../dart_html/EventException.html"><div class="icon-exception"></div>EventException</a></li>
+<li><a href="../dart_html/FileError.html"><div class="icon-exception"></div>FileError</a></li>
+<li><a href="../dart_html/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../dart_html/HttpRequestException.html"><div class="icon-exception"></div>HttpRequestException</a></li>
+<li><a href="../dart_html/MediaError.html"><div class="icon-exception"></div>MediaError</a></li>
+<li><a href="../dart_html/MediaKeyError.html"><div class="icon-exception"></div>MediaKeyError</a></li>
+<li><a href="../dart_html/NavigatorUserMediaError.html"><div class="icon-exception"></div>NavigatorUserMediaError</a></li>
+<li><a href="../dart_html/PositionError.html"><div class="icon-exception"></div>PositionError</a></li>
+<li><a href="../dart_html/RangeException.html"><div class="icon-exception"></div>RangeException</a></li>
+<li><a href="../dart_html/SpeechRecognitionError.html"><div class="icon-exception"></div>SpeechRecognitionError</a></li>
+<li><a href="../dart_html/XPathException.html"><div class="icon-exception"></div>XPathException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>KeyCode</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Defines the keycode values for keys that are returned by 
+KeyboardEvent.keyCode.</p>
+<p>Important note: There is substantial divergence in how different browsers
+handle keycodes and their variants in different locales/keyboard layouts. We
+provide these constants to help make code processing keys more readable.</p>
+<pre class="source">
+abstract class KeyCode {
+ // These constant names were borrowed from Closure's Keycode enumeration
+ // class.
+ // http://closure-library.googlecode.com/svn/docs/closure_goog_events_keycodes.js.source.html  
+ static const int WIN_KEY_FF_LINUX = 0;
+ static const int MAC_ENTER = 3;
+ static const int BACKSPACE = 8;
+ static const int TAB = 9;
+ /** NUM_CENTER is also NUMLOCK for FF and Safari on Mac. */
+ static const int NUM_CENTER = 12;
+ static const int ENTER = 13;
+ static const int SHIFT = 16;
+ static const int CTRL = 17;
+ static const int ALT = 18;
+ static const int PAUSE = 19;
+ static const int CAPS_LOCK = 20;
+ static const int ESC = 27;
+ static const int SPACE = 32;
+ static const int PAGE_UP = 33;
+ static const int PAGE_DOWN = 34;
+ static const int END = 35;
+ static const int HOME = 36;
+ static const int LEFT = 37;
+ static const int UP = 38;
+ static const int RIGHT = 39;
+ static const int DOWN = 40;
+ static const int NUM_NORTH_EAST = 33;
+ static const int NUM_SOUTH_EAST = 34;
+ static const int NUM_SOUTH_WEST = 35;
+ static const int NUM_NORTH_WEST = 36;
+ static const int NUM_WEST = 37;
+ static const int NUM_NORTH = 38;
+ static const int NUM_EAST = 39;
+ static const int NUM_SOUTH = 40;
+ static const int PRINT_SCREEN = 44;
+ static const int INSERT = 45;
+ static const int NUM_INSERT = 45;
+ static const int DELETE = 46;
+ static const int NUM_DELETE = 46;
+ static const int ZERO = 48;
+ static const int ONE = 49;
+ static const int TWO = 50;
+ static const int THREE = 51;
+ static const int FOUR = 52;
+ static const int FIVE = 53;
+ static const int SIX = 54;
+ static const int SEVEN = 55;
+ static const int EIGHT = 56;
+ static const int NINE = 57;
+ static const int FF_SEMICOLON = 59;
+ static const int FF_EQUALS = 61;
+ /**
+  * CAUTION: The question mark is for US-keyboard layouts. It varies
+  * for other locales and keyboard layouts.
+  */
+ static const int QUESTION_MARK = 63;
+ static const int A = 65;
+ static const int B = 66;
+ static const int C = 67;
+ static const int D = 68;
+ static const int E = 69;
+ static const int F = 70;
+ static const int G = 71;
+ static const int H = 72;
+ static const int I = 73;
+ static const int J = 74;
+ static const int K = 75;
+ static const int L = 76;
+ static const int M = 77;
+ static const int N = 78;
+ static const int O = 79;
+ static const int P = 80;
+ static const int Q = 81;
+ static const int R = 82;
+ static const int S = 83;
+ static const int T = 84;
+ static const int U = 85;
+ static const int V = 86;
+ static const int W = 87;
+ static const int X = 88;
+ static const int Y = 89;
+ static const int Z = 90;
+ static const int META = 91;
+ static const int WIN_KEY_LEFT = 91;
+ static const int WIN_KEY_RIGHT = 92;
+ static const int CONTEXT_MENU = 93;
+ static const int NUM_ZERO = 96;
+ static const int NUM_ONE = 97;
+ static const int NUM_TWO = 98;
+ static const int NUM_THREE = 99;
+ static const int NUM_FOUR = 100;
+ static const int NUM_FIVE = 101;
+ static const int NUM_SIX = 102;
+ static const int NUM_SEVEN = 103;
+ static const int NUM_EIGHT = 104;
+ static const int NUM_NINE = 105;
+ static const int NUM_MULTIPLY = 106;
+ static const int NUM_PLUS = 107;
+ static const int NUM_MINUS = 109;
+ static const int NUM_PERIOD = 110;
+ static const int NUM_DIVISION = 111;
+ static const int F1 = 112;
+ static const int F2 = 113;
+ static const int F3 = 114;
+ static const int F4 = 115;
+ static const int F5 = 116;
+ static const int F6 = 117;
+ static const int F7 = 118;
+ static const int F8 = 119;
+ static const int F9 = 120;
+ static const int F10 = 121;
+ static const int F11 = 122;
+ static const int F12 = 123;
+ static const int NUMLOCK = 144;
+ static const int SCROLL_LOCK = 145;
+
+ // OS-specific media keys like volume controls and browser controls.
+ static const int FIRST_MEDIA_KEY = 166;
+ static const int LAST_MEDIA_KEY = 183;
+
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int SEMICOLON = 186;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int DASH = 189;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int EQUALS = 187;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int COMMA = 188;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int PERIOD = 190;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int SLASH = 191;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int APOSTROPHE = 192;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int TILDE = 192;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int SINGLE_QUOTE = 222;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int OPEN_SQUARE_BRACKET = 219;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int BACKSLASH = 220;
+ /**
+  * CAUTION: This constant requires localization for other locales and keyboard
+  * layouts.
+  */
+ static const int CLOSE_SQUARE_BRACKET = 221;
+ static const int WIN_KEY = 224;
+ static const int MAC_FF_META = 224;
+ static const int WIN_IME = 229;
+
+ /** A sentinel value if the keycode could not be determined. */
+ static const int UNKNOWN = -1;
+
+ /**
+  * Returns true if the keyCode produces a (US keyboard) character.
+  * Note: This does not (yet) cover characters on non-US keyboards (Russian,
+  * Hebrew, etc.).
+  */
+ static bool isCharacterKey(int keyCode) {
+   if ((keyCode &gt;= ZERO &amp;&amp; keyCode &lt;= NINE) ||
+       (keyCode &gt;= NUM_ZERO &amp;&amp; keyCode &lt;= NUM_MULTIPLY) ||
+       (keyCode &gt;= A &amp;&amp; keyCode &lt;= Z)) {
+     return true;
+   }
+
+   // Safari sends zero key code for non-latin characters.
+   if (_Device.isWebKit &amp;&amp; keyCode == 0) {
+     return true;
+   }
+
+   return (keyCode == SPACE || keyCode == QUESTION_MARK || keyCode == NUM_PLUS
+       || keyCode == NUM_MINUS || keyCode == NUM_PERIOD ||
+       keyCode == NUM_DIVISION || keyCode == SEMICOLON ||
+       keyCode == FF_SEMICOLON || keyCode == DASH || keyCode == EQUALS ||
+       keyCode == FF_EQUALS || keyCode == COMMA || keyCode == PERIOD ||
+       keyCode == SLASH || keyCode == APOSTROPHE || keyCode == SINGLE_QUOTE ||
+       keyCode == OPEN_SQUARE_BRACKET || keyCode == BACKSLASH ||
+       keyCode == CLOSE_SQUARE_BRACKET);
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="A">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>A</strong> <a class="anchor-link"
+            href="#A"
+            title="Permalink to KeyCode.A">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+A = 65
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ALT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ALT</strong> <a class="anchor-link"
+            href="#ALT"
+            title="Permalink to KeyCode.ALT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ALT = 18
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="APOSTROPHE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>APOSTROPHE</strong> <a class="anchor-link"
+            href="#APOSTROPHE"
+            title="Permalink to KeyCode.APOSTROPHE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+APOSTROPHE = 192
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="B">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>B</strong> <a class="anchor-link"
+            href="#B"
+            title="Permalink to KeyCode.B">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+B = 66
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="BACKSLASH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>BACKSLASH</strong> <a class="anchor-link"
+            href="#BACKSLASH"
+            title="Permalink to KeyCode.BACKSLASH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+BACKSLASH = 220
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="BACKSPACE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>BACKSPACE</strong> <a class="anchor-link"
+            href="#BACKSPACE"
+            title="Permalink to KeyCode.BACKSPACE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+BACKSPACE = 8
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="C">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>C</strong> <a class="anchor-link"
+            href="#C"
+            title="Permalink to KeyCode.C">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+C = 67
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CAPS_LOCK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CAPS_LOCK</strong> <a class="anchor-link"
+            href="#CAPS_LOCK"
+            title="Permalink to KeyCode.CAPS_LOCK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CAPS_LOCK = 20
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CLOSE_SQUARE_BRACKET">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CLOSE_SQUARE_BRACKET</strong> <a class="anchor-link"
+            href="#CLOSE_SQUARE_BRACKET"
+            title="Permalink to KeyCode.CLOSE_SQUARE_BRACKET">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CLOSE_SQUARE_BRACKET = 221
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="COMMA">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>COMMA</strong> <a class="anchor-link"
+            href="#COMMA"
+            title="Permalink to KeyCode.COMMA">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+COMMA = 188
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CONTEXT_MENU">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CONTEXT_MENU</strong> <a class="anchor-link"
+            href="#CONTEXT_MENU"
+            title="Permalink to KeyCode.CONTEXT_MENU">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CONTEXT_MENU = 93
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CTRL">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CTRL</strong> <a class="anchor-link"
+            href="#CTRL"
+            title="Permalink to KeyCode.CTRL">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CTRL = 17
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="D">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>D</strong> <a class="anchor-link"
+            href="#D"
+            title="Permalink to KeyCode.D">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+D = 68
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="DASH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>DASH</strong> <a class="anchor-link"
+            href="#DASH"
+            title="Permalink to KeyCode.DASH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+DASH = 189
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="DELETE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>DELETE</strong> <a class="anchor-link"
+            href="#DELETE"
+            title="Permalink to KeyCode.DELETE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+DELETE = 46
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="DOWN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>DOWN</strong> <a class="anchor-link"
+            href="#DOWN"
+            title="Permalink to KeyCode.DOWN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+DOWN = 40
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="E">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>E</strong> <a class="anchor-link"
+            href="#E"
+            title="Permalink to KeyCode.E">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+E = 69
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="EIGHT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>EIGHT</strong> <a class="anchor-link"
+            href="#EIGHT"
+            title="Permalink to KeyCode.EIGHT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+EIGHT = 56
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="END">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>END</strong> <a class="anchor-link"
+            href="#END"
+            title="Permalink to KeyCode.END">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+END = 35
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ENTER">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ENTER</strong> <a class="anchor-link"
+            href="#ENTER"
+            title="Permalink to KeyCode.ENTER">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ENTER = 13
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="EQUALS">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>EQUALS</strong> <a class="anchor-link"
+            href="#EQUALS"
+            title="Permalink to KeyCode.EQUALS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+EQUALS = 187
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ESC">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ESC</strong> <a class="anchor-link"
+            href="#ESC"
+            title="Permalink to KeyCode.ESC">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ESC = 27
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F</strong> <a class="anchor-link"
+            href="#F"
+            title="Permalink to KeyCode.F">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F = 70
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F1">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F1</strong> <a class="anchor-link"
+            href="#F1"
+            title="Permalink to KeyCode.F1">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F1 = 112
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F10">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F10</strong> <a class="anchor-link"
+            href="#F10"
+            title="Permalink to KeyCode.F10">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F10 = 121
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F11">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F11</strong> <a class="anchor-link"
+            href="#F11"
+            title="Permalink to KeyCode.F11">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F11 = 122
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F12">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F12</strong> <a class="anchor-link"
+            href="#F12"
+            title="Permalink to KeyCode.F12">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F12 = 123
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F2">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F2</strong> <a class="anchor-link"
+            href="#F2"
+            title="Permalink to KeyCode.F2">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F2 = 113
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F3">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F3</strong> <a class="anchor-link"
+            href="#F3"
+            title="Permalink to KeyCode.F3">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F3 = 114
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F4">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F4</strong> <a class="anchor-link"
+            href="#F4"
+            title="Permalink to KeyCode.F4">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F4 = 115
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F5">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F5</strong> <a class="anchor-link"
+            href="#F5"
+            title="Permalink to KeyCode.F5">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F5 = 116
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F6">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F6</strong> <a class="anchor-link"
+            href="#F6"
+            title="Permalink to KeyCode.F6">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F6 = 117
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F7">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F7</strong> <a class="anchor-link"
+            href="#F7"
+            title="Permalink to KeyCode.F7">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F7 = 118
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F8">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F8</strong> <a class="anchor-link"
+            href="#F8"
+            title="Permalink to KeyCode.F8">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F8 = 119
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="F9">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>F9</strong> <a class="anchor-link"
+            href="#F9"
+            title="Permalink to KeyCode.F9">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+F9 = 120
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FF_EQUALS">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FF_EQUALS</strong> <a class="anchor-link"
+            href="#FF_EQUALS"
+            title="Permalink to KeyCode.FF_EQUALS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FF_EQUALS = 61
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FF_SEMICOLON">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FF_SEMICOLON</strong> <a class="anchor-link"
+            href="#FF_SEMICOLON"
+            title="Permalink to KeyCode.FF_SEMICOLON">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FF_SEMICOLON = 59
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FIRST_MEDIA_KEY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FIRST_MEDIA_KEY</strong> <a class="anchor-link"
+            href="#FIRST_MEDIA_KEY"
+            title="Permalink to KeyCode.FIRST_MEDIA_KEY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FIRST_MEDIA_KEY = 166
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FIVE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FIVE</strong> <a class="anchor-link"
+            href="#FIVE"
+            title="Permalink to KeyCode.FIVE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FIVE = 53
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FOUR">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FOUR</strong> <a class="anchor-link"
+            href="#FOUR"
+            title="Permalink to KeyCode.FOUR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FOUR = 52
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="G">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>G</strong> <a class="anchor-link"
+            href="#G"
+            title="Permalink to KeyCode.G">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+G = 71
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="H">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>H</strong> <a class="anchor-link"
+            href="#H"
+            title="Permalink to KeyCode.H">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+H = 72
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOME">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>HOME</strong> <a class="anchor-link"
+            href="#HOME"
+            title="Permalink to KeyCode.HOME">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOME = 36
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="I">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>I</strong> <a class="anchor-link"
+            href="#I"
+            title="Permalink to KeyCode.I">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+I = 73
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="INSERT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>INSERT</strong> <a class="anchor-link"
+            href="#INSERT"
+            title="Permalink to KeyCode.INSERT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+INSERT = 45
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="J">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>J</strong> <a class="anchor-link"
+            href="#J"
+            title="Permalink to KeyCode.J">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+J = 74
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="K">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>K</strong> <a class="anchor-link"
+            href="#K"
+            title="Permalink to KeyCode.K">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+K = 75
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="L">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>L</strong> <a class="anchor-link"
+            href="#L"
+            title="Permalink to KeyCode.L">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+L = 76
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LAST_MEDIA_KEY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>LAST_MEDIA_KEY</strong> <a class="anchor-link"
+            href="#LAST_MEDIA_KEY"
+            title="Permalink to KeyCode.LAST_MEDIA_KEY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LAST_MEDIA_KEY = 183
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LEFT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>LEFT</strong> <a class="anchor-link"
+            href="#LEFT"
+            title="Permalink to KeyCode.LEFT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LEFT = 37
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="M">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>M</strong> <a class="anchor-link"
+            href="#M"
+            title="Permalink to KeyCode.M">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+M = 77
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MAC_ENTER">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MAC_ENTER</strong> <a class="anchor-link"
+            href="#MAC_ENTER"
+            title="Permalink to KeyCode.MAC_ENTER">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MAC_ENTER = 3
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MAC_FF_META">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MAC_FF_META</strong> <a class="anchor-link"
+            href="#MAC_FF_META"
+            title="Permalink to KeyCode.MAC_FF_META">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MAC_FF_META = 224
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="META">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>META</strong> <a class="anchor-link"
+            href="#META"
+            title="Permalink to KeyCode.META">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+META = 91
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="N">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>N</strong> <a class="anchor-link"
+            href="#N"
+            title="Permalink to KeyCode.N">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+N = 78
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NINE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NINE</strong> <a class="anchor-link"
+            href="#NINE"
+            title="Permalink to KeyCode.NINE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NINE = 57
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_CENTER">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_CENTER</strong> <a class="anchor-link"
+            href="#NUM_CENTER"
+            title="Permalink to KeyCode.NUM_CENTER">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_CENTER = 12
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_DELETE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_DELETE</strong> <a class="anchor-link"
+            href="#NUM_DELETE"
+            title="Permalink to KeyCode.NUM_DELETE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_DELETE = 46
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_DIVISION">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_DIVISION</strong> <a class="anchor-link"
+            href="#NUM_DIVISION"
+            title="Permalink to KeyCode.NUM_DIVISION">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_DIVISION = 111
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_EAST">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_EAST</strong> <a class="anchor-link"
+            href="#NUM_EAST"
+            title="Permalink to KeyCode.NUM_EAST">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_EAST = 39
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_EIGHT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_EIGHT</strong> <a class="anchor-link"
+            href="#NUM_EIGHT"
+            title="Permalink to KeyCode.NUM_EIGHT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_EIGHT = 104
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_FIVE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_FIVE</strong> <a class="anchor-link"
+            href="#NUM_FIVE"
+            title="Permalink to KeyCode.NUM_FIVE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_FIVE = 101
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_FOUR">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_FOUR</strong> <a class="anchor-link"
+            href="#NUM_FOUR"
+            title="Permalink to KeyCode.NUM_FOUR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_FOUR = 100
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_INSERT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_INSERT</strong> <a class="anchor-link"
+            href="#NUM_INSERT"
+            title="Permalink to KeyCode.NUM_INSERT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_INSERT = 45
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_MINUS">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_MINUS</strong> <a class="anchor-link"
+            href="#NUM_MINUS"
+            title="Permalink to KeyCode.NUM_MINUS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_MINUS = 109
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_MULTIPLY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_MULTIPLY</strong> <a class="anchor-link"
+            href="#NUM_MULTIPLY"
+            title="Permalink to KeyCode.NUM_MULTIPLY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_MULTIPLY = 106
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_NINE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_NINE</strong> <a class="anchor-link"
+            href="#NUM_NINE"
+            title="Permalink to KeyCode.NUM_NINE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_NINE = 105
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_NORTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_NORTH</strong> <a class="anchor-link"
+            href="#NUM_NORTH"
+            title="Permalink to KeyCode.NUM_NORTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_NORTH = 38
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_NORTH_EAST">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_NORTH_EAST</strong> <a class="anchor-link"
+            href="#NUM_NORTH_EAST"
+            title="Permalink to KeyCode.NUM_NORTH_EAST">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_NORTH_EAST = 33
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_NORTH_WEST">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_NORTH_WEST</strong> <a class="anchor-link"
+            href="#NUM_NORTH_WEST"
+            title="Permalink to KeyCode.NUM_NORTH_WEST">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_NORTH_WEST = 36
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_ONE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_ONE</strong> <a class="anchor-link"
+            href="#NUM_ONE"
+            title="Permalink to KeyCode.NUM_ONE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_ONE = 97
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_PERIOD">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_PERIOD</strong> <a class="anchor-link"
+            href="#NUM_PERIOD"
+            title="Permalink to KeyCode.NUM_PERIOD">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_PERIOD = 110
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_PLUS">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_PLUS</strong> <a class="anchor-link"
+            href="#NUM_PLUS"
+            title="Permalink to KeyCode.NUM_PLUS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_PLUS = 107
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_SEVEN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_SEVEN</strong> <a class="anchor-link"
+            href="#NUM_SEVEN"
+            title="Permalink to KeyCode.NUM_SEVEN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_SEVEN = 103
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_SIX">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_SIX</strong> <a class="anchor-link"
+            href="#NUM_SIX"
+            title="Permalink to KeyCode.NUM_SIX">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_SIX = 102
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_SOUTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_SOUTH</strong> <a class="anchor-link"
+            href="#NUM_SOUTH"
+            title="Permalink to KeyCode.NUM_SOUTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_SOUTH = 40
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_SOUTH_EAST">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_SOUTH_EAST</strong> <a class="anchor-link"
+            href="#NUM_SOUTH_EAST"
+            title="Permalink to KeyCode.NUM_SOUTH_EAST">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_SOUTH_EAST = 34
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_SOUTH_WEST">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_SOUTH_WEST</strong> <a class="anchor-link"
+            href="#NUM_SOUTH_WEST"
+            title="Permalink to KeyCode.NUM_SOUTH_WEST">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_SOUTH_WEST = 35
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_THREE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_THREE</strong> <a class="anchor-link"
+            href="#NUM_THREE"
+            title="Permalink to KeyCode.NUM_THREE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_THREE = 99
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_TWO">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_TWO</strong> <a class="anchor-link"
+            href="#NUM_TWO"
+            title="Permalink to KeyCode.NUM_TWO">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_TWO = 98
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_WEST">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_WEST</strong> <a class="anchor-link"
+            href="#NUM_WEST"
+            title="Permalink to KeyCode.NUM_WEST">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_WEST = 37
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_ZERO">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUM_ZERO</strong> <a class="anchor-link"
+            href="#NUM_ZERO"
+            title="Permalink to KeyCode.NUM_ZERO">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_ZERO = 96
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUMLOCK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NUMLOCK</strong> <a class="anchor-link"
+            href="#NUMLOCK"
+            title="Permalink to KeyCode.NUMLOCK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUMLOCK = 144
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="O">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>O</strong> <a class="anchor-link"
+            href="#O"
+            title="Permalink to KeyCode.O">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+O = 79
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ONE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ONE</strong> <a class="anchor-link"
+            href="#ONE"
+            title="Permalink to KeyCode.ONE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ONE = 49
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="OPEN_SQUARE_BRACKET">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>OPEN_SQUARE_BRACKET</strong> <a class="anchor-link"
+            href="#OPEN_SQUARE_BRACKET"
+            title="Permalink to KeyCode.OPEN_SQUARE_BRACKET">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+OPEN_SQUARE_BRACKET = 219
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="P">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>P</strong> <a class="anchor-link"
+            href="#P"
+            title="Permalink to KeyCode.P">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+P = 80
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PAGE_DOWN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PAGE_DOWN</strong> <a class="anchor-link"
+            href="#PAGE_DOWN"
+            title="Permalink to KeyCode.PAGE_DOWN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PAGE_DOWN = 34
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PAGE_UP">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PAGE_UP</strong> <a class="anchor-link"
+            href="#PAGE_UP"
+            title="Permalink to KeyCode.PAGE_UP">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PAGE_UP = 33
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PAUSE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PAUSE</strong> <a class="anchor-link"
+            href="#PAUSE"
+            title="Permalink to KeyCode.PAUSE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PAUSE = 19
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PERIOD">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PERIOD</strong> <a class="anchor-link"
+            href="#PERIOD"
+            title="Permalink to KeyCode.PERIOD">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PERIOD = 190
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PRINT_SCREEN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PRINT_SCREEN</strong> <a class="anchor-link"
+            href="#PRINT_SCREEN"
+            title="Permalink to KeyCode.PRINT_SCREEN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PRINT_SCREEN = 44
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="Q">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>Q</strong> <a class="anchor-link"
+            href="#Q"
+            title="Permalink to KeyCode.Q">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+Q = 81
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="QUESTION_MARK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>QUESTION_MARK</strong> <a class="anchor-link"
+            href="#QUESTION_MARK"
+            title="Permalink to KeyCode.QUESTION_MARK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+QUESTION_MARK = 63
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="R">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>R</strong> <a class="anchor-link"
+            href="#R"
+            title="Permalink to KeyCode.R">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+R = 82
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="RIGHT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>RIGHT</strong> <a class="anchor-link"
+            href="#RIGHT"
+            title="Permalink to KeyCode.RIGHT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+RIGHT = 39
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="S">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>S</strong> <a class="anchor-link"
+            href="#S"
+            title="Permalink to KeyCode.S">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+S = 83
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SCROLL_LOCK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SCROLL_LOCK</strong> <a class="anchor-link"
+            href="#SCROLL_LOCK"
+            title="Permalink to KeyCode.SCROLL_LOCK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SCROLL_LOCK = 145
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SEMICOLON">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SEMICOLON</strong> <a class="anchor-link"
+            href="#SEMICOLON"
+            title="Permalink to KeyCode.SEMICOLON">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SEMICOLON = 186
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SEVEN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SEVEN</strong> <a class="anchor-link"
+            href="#SEVEN"
+            title="Permalink to KeyCode.SEVEN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SEVEN = 55
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SHIFT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SHIFT</strong> <a class="anchor-link"
+            href="#SHIFT"
+            title="Permalink to KeyCode.SHIFT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SHIFT = 16
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SINGLE_QUOTE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SINGLE_QUOTE</strong> <a class="anchor-link"
+            href="#SINGLE_QUOTE"
+            title="Permalink to KeyCode.SINGLE_QUOTE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SINGLE_QUOTE = 222
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIX">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SIX</strong> <a class="anchor-link"
+            href="#SIX"
+            title="Permalink to KeyCode.SIX">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIX = 54
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SLASH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SLASH</strong> <a class="anchor-link"
+            href="#SLASH"
+            title="Permalink to KeyCode.SLASH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SLASH = 191
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SPACE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SPACE</strong> <a class="anchor-link"
+            href="#SPACE"
+            title="Permalink to KeyCode.SPACE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SPACE = 32
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="T">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>T</strong> <a class="anchor-link"
+            href="#T"
+            title="Permalink to KeyCode.T">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+T = 84
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="TAB">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>TAB</strong> <a class="anchor-link"
+            href="#TAB"
+            title="Permalink to KeyCode.TAB">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+TAB = 9
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="THREE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>THREE</strong> <a class="anchor-link"
+            href="#THREE"
+            title="Permalink to KeyCode.THREE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+THREE = 51
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="TILDE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>TILDE</strong> <a class="anchor-link"
+            href="#TILDE"
+            title="Permalink to KeyCode.TILDE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+TILDE = 192
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="TWO">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>TWO</strong> <a class="anchor-link"
+            href="#TWO"
+            title="Permalink to KeyCode.TWO">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+TWO = 50
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="U">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>U</strong> <a class="anchor-link"
+            href="#U"
+            title="Permalink to KeyCode.U">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+U = 85
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="UNKNOWN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>UNKNOWN</strong> <a class="anchor-link"
+            href="#UNKNOWN"
+            title="Permalink to KeyCode.UNKNOWN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+UNKNOWN = -1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="UP">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>UP</strong> <a class="anchor-link"
+            href="#UP"
+            title="Permalink to KeyCode.UP">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+UP = 38
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="V">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>V</strong> <a class="anchor-link"
+            href="#V"
+            title="Permalink to KeyCode.V">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+V = 86
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="W">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>W</strong> <a class="anchor-link"
+            href="#W"
+            title="Permalink to KeyCode.W">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+W = 87
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="WIN_IME">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>WIN_IME</strong> <a class="anchor-link"
+            href="#WIN_IME"
+            title="Permalink to KeyCode.WIN_IME">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WIN_IME = 229
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="WIN_KEY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>WIN_KEY</strong> <a class="anchor-link"
+            href="#WIN_KEY"
+            title="Permalink to KeyCode.WIN_KEY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WIN_KEY = 224
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="WIN_KEY_FF_LINUX">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>WIN_KEY_FF_LINUX</strong> <a class="anchor-link"
+            href="#WIN_KEY_FF_LINUX"
+            title="Permalink to KeyCode.WIN_KEY_FF_LINUX">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WIN_KEY_FF_LINUX = 0
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="WIN_KEY_LEFT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>WIN_KEY_LEFT</strong> <a class="anchor-link"
+            href="#WIN_KEY_LEFT"
+            title="Permalink to KeyCode.WIN_KEY_LEFT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WIN_KEY_LEFT = 91
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="WIN_KEY_RIGHT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>WIN_KEY_RIGHT</strong> <a class="anchor-link"
+            href="#WIN_KEY_RIGHT"
+            title="Permalink to KeyCode.WIN_KEY_RIGHT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WIN_KEY_RIGHT = 92
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="X">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>X</strong> <a class="anchor-link"
+            href="#X"
+            title="Permalink to KeyCode.X">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+X = 88
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="Y">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>Y</strong> <a class="anchor-link"
+            href="#Y"
+            title="Permalink to KeyCode.Y">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+Y = 89
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="Z">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>Z</strong> <a class="anchor-link"
+            href="#Z"
+            title="Permalink to KeyCode.Z">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+Z = 90
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ZERO">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ZERO</strong> <a class="anchor-link"
+            href="#ZERO"
+            title="Permalink to KeyCode.ZERO">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ZERO = 48
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="isCharacterKey">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>isCharacterKey</strong>(<a href="../dart_core/int.html">int</a> keyCode) <a class="anchor-link" href="#isCharacterKey"
+              title="Permalink to KeyCode.isCharacterKey">#</a></h4>
+<div class="doc">
+<p>Returns true if the keyCode produces a (US keyboard) character.
+Note: This does not (yet) cover characters on non-US keyboards (Russian,
+Hebrew, etc.).</p>
+<pre class="source">
+static bool isCharacterKey(int keyCode) {
+ if ((keyCode &gt;= ZERO &amp;&amp; keyCode &lt;= NINE) ||
+     (keyCode &gt;= NUM_ZERO &amp;&amp; keyCode &lt;= NUM_MULTIPLY) ||
+     (keyCode &gt;= A &amp;&amp; keyCode &lt;= Z)) {
+   return true;
+ }
+
+ // Safari sends zero key code for non-latin characters.
+ if (_Device.isWebKit &amp;&amp; keyCode == 0) {
+   return true;
+ }
+
+ return (keyCode == SPACE || keyCode == QUESTION_MARK || keyCode == NUM_PLUS
+     || keyCode == NUM_MINUS || keyCode == NUM_PERIOD ||
+     keyCode == NUM_DIVISION || keyCode == SEMICOLON ||
+     keyCode == FF_SEMICOLON || keyCode == DASH || keyCode == EQUALS ||
+     keyCode == FF_EQUALS || keyCode == COMMA || keyCode == PERIOD ||
+     keyCode == SLASH || keyCode == APOSTROPHE || keyCode == SINGLE_QUOTE ||
+     keyCode == OPEN_SQUARE_BRACKET || keyCode == BACKSLASH ||
+     keyCode == CLOSE_SQUARE_BRACKET);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:28.914</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

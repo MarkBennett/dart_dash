@@ -1,0 +1,411 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>IOSink&lt;T&gt; class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="IOSink&amp;lt;T&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/IOSink.html">IOSink&lt;T&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="../dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><div class="icon-class"></div><strong>IOSink&lt;T&gt;</strong></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="../dart_io/ProcessOptions.html"><div class="icon-class"></div>ProcessOptions</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="../dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/DirectoryIOException.html"><div class="icon-exception"></div>DirectoryIOException</a></li>
+<li><a href="../dart_io/FileIOException.html"><div class="icon-exception"></div>FileIOException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/HttpParserException.html"><div class="icon-exception"></div>HttpParserException</a></li>
+<li><a href="../dart_io/MimeParserException.html"><div class="icon-exception"></div>MimeParserException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/RedirectLimitExceededException.html"><div class="icon-exception"></div>RedirectLimitExceededException</a></li>
+<li><a href="../dart_io/RedirectLoopException.html"><div class="icon-exception"></div>RedirectLoopException</a></li>
+<li><a href="../dart_io/SocketIOException.html"><div class="icon-exception"></div>SocketIOException</a></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>IOSink&lt;T&gt;</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Helper class to wrap a [StreamConsumer<List<int>, T>] and provide utility
+functions for writing to the StreamConsumer directly. The <a class="crossref" href="../dart_io/IOSink.html#IOSink">IOSink</a>
+buffers the input given by <a class="crossref" href="../dart_io/IOSink.html#add">add</a> and <a class="crossref" href="../dart_io/IOSink.html#addString">addString</a> and will delay a <a class="crossref" href="../dart_io/IOSink.html#consume">consume</a>
+or <a class="crossref" href="../dart_io/IOSink.html#addStream">addStream</a> until the buffer is flushed.</p>
+<p>When the <a class="crossref" href="../dart_io/IOSink.html#IOSink">IOSink</a> is bound to a stream (through either <a class="crossref" href="../dart_io/IOSink.html#consume">consume</a>
+or <a class="crossref" href="../dart_io/IOSink.html#addStream">addStream</a>) any call to the <a class="crossref" href="../dart_io/IOSink.html#IOSink">IOSink</a> will throw a
+<code>StateError</code>.</p>
+<pre class="source">
+class IOSink&lt;T&gt; implements StreamConsumer&lt;List&lt;int&gt;, T&gt; {
+ final StreamConsumer&lt;List&lt;int&gt;, T&gt; _target;
+
+ StreamController&lt;List&lt;int&gt;&gt; _controllerInstance;
+ Future&lt;T&gt; _pipeFuture;
+ StreamSubscription&lt;List&lt;int&gt;&gt; _bindSubscription;
+ bool _paused = true;
+
+ IOSink(StreamConsumer&lt;List&lt;int&gt;, T&gt; target) : _target = target;
+
+ /**
+  * Provide functionality for piping to the [IOSink].
+  */
+ Future&lt;T&gt; consume(Stream&lt;List&lt;int&gt;&gt; stream) {
+   if (_isBound) {
+     throw new StateError("IOSink is already bound to a stream");
+   }
+   return _fillFromStream(stream);
+ }
+
+ /**
+  * Like [consume], but will not close the target when done.
+  */
+ Future&lt;T&gt; addStream(Stream&lt;List&lt;int&gt;&gt; stream) {
+   if (_isBound) {
+     throw new StateError("IOSink is already bound to a stream");
+   }
+   return _fillFromStream(stream, unbind: true);
+ }
+
+ /**
+  * Write a list of bytes to the target.
+  */
+ void add(List&lt;int&gt; data) {
+   if (_isBound) {
+     throw new StateError("IOSink is already bound to a stream");
+   }
+   _controller.add(data);
+ }
+
+ /**
+  * Write a String to the target.
+  */
+ void addString(String string, [Encoding encoding = Encoding.UTF_8]) {
+   add(_encodeString(string, encoding));
+ }
+
+ /**
+  * Close the target.
+  */
+ void close() {
+   if (_isBound) {
+     throw new StateError("IOSink is already bound to a stream");
+   }
+   _controller.close();
+ }
+
+ /**
+  * Get future that will complete when all data has been written to
+  * the IOSink and it has been closed.
+  */
+ Future&lt;T&gt; get done {
+   _controller;
+   return _pipeFuture.then((_) =&gt; this);
+ }
+
+ StreamController&lt;List&lt;int&gt;&gt; get _controller {
+   if (_controllerInstance == null) {
+     _controllerInstance = new StreamController&lt;List&lt;int&gt;&gt;(
+         onPauseStateChange: _onPauseStateChange,
+         onSubscriptionStateChange: _onSubscriptionStateChange);
+     _pipeFuture = _controller.stream.pipe(_target);
+   }
+   return _controllerInstance;
+ }
+
+ bool get _isBound =&gt; _bindSubscription != null;
+
+ void _onPauseStateChange() {
+   _paused = _controller.isPaused;
+   if (_controller.isPaused) {
+     _pause();
+   } else {
+     _resume();
+   }
+ }
+
+ void _pause() {
+   if (_bindSubscription != null) {
+     try {
+       // The subscription can be canceled at this point.
+       _bindSubscription.pause();
+     } catch (e) {
+     }
+   }
+ }
+
+ void _resume() {
+   if (_bindSubscription != null) {
+     try {
+       // The subscription can be canceled at this point.
+       _bindSubscription.resume();
+     } catch (e) {
+     }
+   }
+ }
+
+ void _onSubscriptionStateChange() {
+   if (_controller.hasSubscribers) {
+     _paused = false;
+     _resume();
+   } else {
+     if (_bindSubscription != null) {
+       _bindSubscription.cancel();
+       _bindSubscription = null;
+     }
+   }
+ }
+
+ Future&lt;T&gt; _fillFromStream(Stream&lt;List&lt;int&gt;&gt; stream, {unbind: false}) {
+   _controller;
+   Completer&lt;T&gt; unbindCompleter;
+   if (unbind) {
+     unbindCompleter = new Completer&lt;T&gt;();
+   }
+   _bindSubscription = stream.listen(
+       _controller.add,
+       onDone: () {
+         _bindSubscription = null;
+         if (unbind) {
+           unbindCompleter.complete(null);
+         } else {
+           _controller.close();
+         }
+       },
+       onError: _controller.signalError);
+   if (_paused) _pause();
+   if (unbind) {
+     return unbindCompleter.future;
+   } else {
+     return _pipeFuture;
+   }
+ }
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_io/HttpClientRequest.html">HttpClientRequest</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/HttpResponse.html">HttpResponse</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/Socket.html">Socket</a></span></p>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_async/StreamConsumer.html">StreamConsumer&lt;List&lt;int&gt;, T&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="IOSink">
+<button class="show-code">Code</button>
+new <strong>IOSink</strong>(<a href="../dart_async/StreamConsumer.html">StreamConsumer</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;, <a href="../dart_io/IOSink.html">T</a>&gt; target) <a class="anchor-link" href="#IOSink"
+              title="Permalink to IOSink&lt;T&gt;.IOSink">#</a></h4>
+<div class="doc">
+<pre class="source">
+IOSink(StreamConsumer&lt;List&lt;int&gt;, T&gt; target) : _target = target;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="done">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/IOSink.html">T</a>&gt;         <strong>done</strong> <a class="anchor-link"
+            href="#done"
+            title="Permalink to IOSink&lt;T&gt;.done">#</a>
+        </h4>
+        <div class="doc">
+<p>Get future that will complete when all data has been written to
+the IOSink and it has been closed.</p>
+<pre class="source">
+Future&lt;T&gt; get done {
+ _controller;
+ return _pipeFuture.then((_) =&gt; this);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add">
+<button class="show-code">Code</button>
+void <strong>add</strong>(<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt; data) <a class="anchor-link" href="#add"
+              title="Permalink to IOSink&lt;T&gt;.add">#</a></h4>
+<div class="doc">
+<p>Write a list of bytes to the target.</p>
+<pre class="source">
+void add(List&lt;int&gt; data) {
+ if (_isBound) {
+   throw new StateError("IOSink is already bound to a stream");
+ }
+ _controller.add(data);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="addStream">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/IOSink.html">T</a>&gt; <strong>addStream</strong>(<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;&gt; stream) <a class="anchor-link" href="#addStream"
+              title="Permalink to IOSink&lt;T&gt;.addStream">#</a></h4>
+<div class="doc">
+<p>Like <a class="crossref" href="../dart_io/IOSink.html#consume">consume</a>, but will not close the target when done.</p>
+<pre class="source">
+Future&lt;T&gt; addStream(Stream&lt;List&lt;int&gt;&gt; stream) {
+ if (_isBound) {
+   throw new StateError("IOSink is already bound to a stream");
+ }
+ return _fillFromStream(stream, unbind: true);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="addString">
+<button class="show-code">Code</button>
+void <strong>addString</strong>(<a href="../dart_core/String.html">String</a> string, [<a href="../dart_io/Encoding.html">Encoding</a> encoding = Encoding.UTF_8]) <a class="anchor-link" href="#addString"
+              title="Permalink to IOSink&lt;T&gt;.addString">#</a></h4>
+<div class="doc">
+<p>Write a String to the target.</p>
+<pre class="source">
+void addString(String string, [Encoding encoding = Encoding.UTF_8]) {
+ add(_encodeString(string, encoding));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="close">
+<button class="show-code">Code</button>
+void <strong>close</strong>() <a class="anchor-link" href="#close"
+              title="Permalink to IOSink&lt;T&gt;.close">#</a></h4>
+<div class="doc">
+<p>Close the target.</p>
+<pre class="source">
+void close() {
+ if (_isBound) {
+   throw new StateError("IOSink is already bound to a stream");
+ }
+ _controller.close();
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="consume">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/IOSink.html">T</a>&gt; <strong>consume</strong>(<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;&gt; stream) <a class="anchor-link" href="#consume"
+              title="Permalink to IOSink&lt;T&gt;.consume">#</a></h4>
+<div class="doc">
+<p>Provide functionality for piping to the <a class="crossref" href="../dart_io/IOSink.html#IOSink">IOSink</a>.</p>
+<pre class="source">
+Future&lt;T&gt; consume(Stream&lt;List&lt;int&gt;&gt; stream) {
+ if (_isBound) {
+   throw new StateError("IOSink is already bound to a stream");
+ }
+ return _fillFromStream(stream);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:08.481</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

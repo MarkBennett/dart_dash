@@ -1,0 +1,3151 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ForeignObjectElement class / dart:svg Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:svg" data-type="ForeignObjectElement">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_svg.html">dart:svg</a> &rsaquo; <a href="../dart_svg/ForeignObjectElement.html">ForeignObjectElement</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><ul class="icon">
+<li><a href="../dart_svg/AElement.html"><div class="icon-class"></div>AElement</a></li>
+<li><a href="../dart_svg/AltGlyphElement.html"><div class="icon-class"></div>AltGlyphElement</a></li>
+<li><a href="../dart_svg/Angle.html"><div class="icon-class"></div>Angle</a></li>
+<li><a href="../dart_svg/AnimatedAngle.html"><div class="icon-class"></div>AnimatedAngle</a></li>
+<li><a href="../dart_svg/AnimatedBoolean.html"><div class="icon-class"></div>AnimatedBoolean</a></li>
+<li><a href="../dart_svg/AnimatedEnumeration.html"><div class="icon-class"></div>AnimatedEnumeration</a></li>
+<li><a href="../dart_svg/AnimatedInteger.html"><div class="icon-class"></div>AnimatedInteger</a></li>
+<li><a href="../dart_svg/AnimatedLength.html"><div class="icon-class"></div>AnimatedLength</a></li>
+<li><a href="../dart_svg/AnimatedLengthList.html"><div class="icon-class"></div>AnimatedLengthList</a></li>
+<li><a href="../dart_svg/AnimatedNumber.html"><div class="icon-class"></div>AnimatedNumber</a></li>
+<li><a href="../dart_svg/AnimatedNumberList.html"><div class="icon-class"></div>AnimatedNumberList</a></li>
+<li><a href="../dart_svg/AnimatedPreserveAspectRatio.html"><div class="icon-class"></div>AnimatedPreserveAspectRatio</a></li>
+<li><a href="../dart_svg/AnimatedRect.html"><div class="icon-class"></div>AnimatedRect</a></li>
+<li><a href="../dart_svg/AnimatedString.html"><div class="icon-class"></div>AnimatedString</a></li>
+<li><a href="../dart_svg/AnimatedTransformList.html"><div class="icon-class"></div>AnimatedTransformList</a></li>
+<li><a href="../dart_svg/AnimateElement.html"><div class="icon-class"></div>AnimateElement</a></li>
+<li><a href="../dart_svg/AnimateMotionElement.html"><div class="icon-class"></div>AnimateMotionElement</a></li>
+<li><a href="../dart_svg/AnimateTransformElement.html"><div class="icon-class"></div>AnimateTransformElement</a></li>
+<li><a href="../dart_svg/AnimationElement.html"><div class="icon-class"></div>AnimationElement</a></li>
+<li><a href="../dart_svg/CircleElement.html"><div class="icon-class"></div>CircleElement</a></li>
+<li><a href="../dart_svg/ClipPathElement.html"><div class="icon-class"></div>ClipPathElement</a></li>
+<li><a href="../dart_svg/Color.html"><div class="icon-class"></div>Color</a></li>
+<li><a href="../dart_svg/DefsElement.html"><div class="icon-class"></div>DefsElement</a></li>
+<li><a href="../dart_svg/DescElement.html"><div class="icon-class"></div>DescElement</a></li>
+<li><a href="../dart_svg/ElementInstance.html"><div class="icon-class"></div>ElementInstance</a></li>
+<li><a href="../dart_svg/ElementTimeControl.html"><div class="icon-class"></div>ElementTimeControl</a></li>
+<li><a href="../dart_svg/EllipseElement.html"><div class="icon-class"></div>EllipseElement</a></li>
+<li><a href="../dart_svg/ExternalResourcesRequired.html"><div class="icon-class"></div>ExternalResourcesRequired</a></li>
+<li><a href="../dart_svg/FEBlendElement.html"><div class="icon-class"></div>FEBlendElement</a></li>
+<li><a href="../dart_svg/FEColorMatrixElement.html"><div class="icon-class"></div>FEColorMatrixElement</a></li>
+<li><a href="../dart_svg/FEComponentTransferElement.html"><div class="icon-class"></div>FEComponentTransferElement</a></li>
+<li><a href="../dart_svg/FECompositeElement.html"><div class="icon-class"></div>FECompositeElement</a></li>
+<li><a href="../dart_svg/FEConvolveMatrixElement.html"><div class="icon-class"></div>FEConvolveMatrixElement</a></li>
+<li><a href="../dart_svg/FEDiffuseLightingElement.html"><div class="icon-class"></div>FEDiffuseLightingElement</a></li>
+<li><a href="../dart_svg/FEDisplacementMapElement.html"><div class="icon-class"></div>FEDisplacementMapElement</a></li>
+<li><a href="../dart_svg/FEDistantLightElement.html"><div class="icon-class"></div>FEDistantLightElement</a></li>
+<li><a href="../dart_svg/FEFloodElement.html"><div class="icon-class"></div>FEFloodElement</a></li>
+<li><a href="../dart_svg/FEFuncAElement.html"><div class="icon-class"></div>FEFuncAElement</a></li>
+<li><a href="../dart_svg/FEFuncBElement.html"><div class="icon-class"></div>FEFuncBElement</a></li>
+<li><a href="../dart_svg/FEFuncGElement.html"><div class="icon-class"></div>FEFuncGElement</a></li>
+<li><a href="../dart_svg/FEFuncRElement.html"><div class="icon-class"></div>FEFuncRElement</a></li>
+<li><a href="../dart_svg/FEGaussianBlurElement.html"><div class="icon-class"></div>FEGaussianBlurElement</a></li>
+<li><a href="../dart_svg/FEImageElement.html"><div class="icon-class"></div>FEImageElement</a></li>
+<li><a href="../dart_svg/FEMergeElement.html"><div class="icon-class"></div>FEMergeElement</a></li>
+<li><a href="../dart_svg/FEMergeNodeElement.html"><div class="icon-class"></div>FEMergeNodeElement</a></li>
+<li><a href="../dart_svg/FEMorphologyElement.html"><div class="icon-class"></div>FEMorphologyElement</a></li>
+<li><a href="../dart_svg/FEOffsetElement.html"><div class="icon-class"></div>FEOffsetElement</a></li>
+<li><a href="../dart_svg/FEPointLightElement.html"><div class="icon-class"></div>FEPointLightElement</a></li>
+<li><a href="../dart_svg/FESpecularLightingElement.html"><div class="icon-class"></div>FESpecularLightingElement</a></li>
+<li><a href="../dart_svg/FESpotLightElement.html"><div class="icon-class"></div>FESpotLightElement</a></li>
+<li><a href="../dart_svg/FETileElement.html"><div class="icon-class"></div>FETileElement</a></li>
+<li><a href="../dart_svg/FETurbulenceElement.html"><div class="icon-class"></div>FETurbulenceElement</a></li>
+<li><a href="../dart_svg/FilterElement.html"><div class="icon-class"></div>FilterElement</a></li>
+<li><a href="../dart_svg/FilterPrimitiveStandardAttributes.html"><div class="icon-class"></div>FilterPrimitiveStandardAttributes</a></li>
+<li><a href="../dart_svg/FitToViewBox.html"><div class="icon-class"></div>FitToViewBox</a></li>
+<li><div class="icon-class"></div><strong>ForeignObjectElement</strong></li>
+<li><a href="../dart_svg/GElement.html"><div class="icon-class"></div>GElement</a></li>
+<li><a href="../dart_svg/ImageElement.html"><div class="icon-class"></div>ImageElement</a></li>
+<li><a href="../dart_svg/LangSpace.html"><div class="icon-class"></div>LangSpace</a></li>
+<li><a href="../dart_svg/Length.html"><div class="icon-class"></div>Length</a></li>
+<li><a href="../dart_svg/LengthList.html"><div class="icon-class"></div>LengthList</a></li>
+<li><a href="../dart_svg/LinearGradientElement.html"><div class="icon-class"></div>LinearGradientElement</a></li>
+<li><a href="../dart_svg/LineElement.html"><div class="icon-class"></div>LineElement</a></li>
+<li><a href="../dart_svg/Locatable.html"><div class="icon-class"></div>Locatable</a></li>
+<li><a href="../dart_svg/MarkerElement.html"><div class="icon-class"></div>MarkerElement</a></li>
+<li><a href="../dart_svg/MaskElement.html"><div class="icon-class"></div>MaskElement</a></li>
+<li><a href="../dart_svg/Matrix.html"><div class="icon-class"></div>Matrix</a></li>
+<li><a href="../dart_svg/MetadataElement.html"><div class="icon-class"></div>MetadataElement</a></li>
+<li><a href="../dart_svg/Number.html"><div class="icon-class"></div>Number</a></li>
+<li><a href="../dart_svg/NumberList.html"><div class="icon-class"></div>NumberList</a></li>
+<li><a href="../dart_svg/Paint.html"><div class="icon-class"></div>Paint</a></li>
+<li><a href="../dart_svg/PathElement.html"><div class="icon-class"></div>PathElement</a></li>
+<li><a href="../dart_svg/PathSeg.html"><div class="icon-class"></div>PathSeg</a></li>
+<li><a href="../dart_svg/PathSegArcAbs.html"><div class="icon-class"></div>PathSegArcAbs</a></li>
+<li><a href="../dart_svg/PathSegArcRel.html"><div class="icon-class"></div>PathSegArcRel</a></li>
+<li><a href="../dart_svg/PathSegClosePath.html"><div class="icon-class"></div>PathSegClosePath</a></li>
+<li><a href="../dart_svg/PathSegCurvetoCubicAbs.html"><div class="icon-class"></div>PathSegCurvetoCubicAbs</a></li>
+<li><a href="../dart_svg/PathSegCurvetoCubicRel.html"><div class="icon-class"></div>PathSegCurvetoCubicRel</a></li>
+<li><a href="../dart_svg/PathSegCurvetoCubicSmoothAbs.html"><div class="icon-class"></div>PathSegCurvetoCubicSmoothAbs</a></li>
+<li><a href="../dart_svg/PathSegCurvetoCubicSmoothRel.html"><div class="icon-class"></div>PathSegCurvetoCubicSmoothRel</a></li>
+<li><a href="../dart_svg/PathSegCurvetoQuadraticAbs.html"><div class="icon-class"></div>PathSegCurvetoQuadraticAbs</a></li>
+<li><a href="../dart_svg/PathSegCurvetoQuadraticRel.html"><div class="icon-class"></div>PathSegCurvetoQuadraticRel</a></li>
+<li><a href="../dart_svg/PathSegCurvetoQuadraticSmoothAbs.html"><div class="icon-class"></div>PathSegCurvetoQuadraticSmoothAbs</a></li>
+<li><a href="../dart_svg/PathSegCurvetoQuadraticSmoothRel.html"><div class="icon-class"></div>PathSegCurvetoQuadraticSmoothRel</a></li>
+<li><a href="../dart_svg/PathSegLinetoAbs.html"><div class="icon-class"></div>PathSegLinetoAbs</a></li>
+<li><a href="../dart_svg/PathSegLinetoHorizontalAbs.html"><div class="icon-class"></div>PathSegLinetoHorizontalAbs</a></li>
+<li><a href="../dart_svg/PathSegLinetoHorizontalRel.html"><div class="icon-class"></div>PathSegLinetoHorizontalRel</a></li>
+<li><a href="../dart_svg/PathSegLinetoRel.html"><div class="icon-class"></div>PathSegLinetoRel</a></li>
+<li><a href="../dart_svg/PathSegLinetoVerticalAbs.html"><div class="icon-class"></div>PathSegLinetoVerticalAbs</a></li>
+<li><a href="../dart_svg/PathSegLinetoVerticalRel.html"><div class="icon-class"></div>PathSegLinetoVerticalRel</a></li>
+<li><a href="../dart_svg/PathSegList.html"><div class="icon-class"></div>PathSegList</a></li>
+<li><a href="../dart_svg/PathSegMovetoAbs.html"><div class="icon-class"></div>PathSegMovetoAbs</a></li>
+<li><a href="../dart_svg/PathSegMovetoRel.html"><div class="icon-class"></div>PathSegMovetoRel</a></li>
+<li><a href="../dart_svg/PatternElement.html"><div class="icon-class"></div>PatternElement</a></li>
+<li><a href="../dart_svg/Point.html"><div class="icon-class"></div>Point</a></li>
+<li><a href="../dart_svg/PointList.html"><div class="icon-class"></div>PointList</a></li>
+<li><a href="../dart_svg/PolygonElement.html"><div class="icon-class"></div>PolygonElement</a></li>
+<li><a href="../dart_svg/PolylineElement.html"><div class="icon-class"></div>PolylineElement</a></li>
+<li><a href="../dart_svg/PreserveAspectRatio.html"><div class="icon-class"></div>PreserveAspectRatio</a></li>
+<li><a href="../dart_svg/RadialGradientElement.html"><div class="icon-class"></div>RadialGradientElement</a></li>
+<li><a href="../dart_svg/Rect.html"><div class="icon-class"></div>Rect</a></li>
+<li><a href="../dart_svg/RectElement.html"><div class="icon-class"></div>RectElement</a></li>
+<li><a href="../dart_svg/RenderingIntent.html"><div class="icon-class"></div>RenderingIntent</a></li>
+<li><a href="../dart_svg/ScriptElement.html"><div class="icon-class"></div>ScriptElement</a></li>
+<li><a href="../dart_svg/SetElement.html"><div class="icon-class"></div>SetElement</a></li>
+<li><a href="../dart_svg/StopElement.html"><div class="icon-class"></div>StopElement</a></li>
+<li><a href="../dart_svg/StringList.html"><div class="icon-class"></div>StringList</a></li>
+<li><a href="../dart_svg/StyledElement.html"><div class="icon-class"></div>StyledElement</a></li>
+<li><a href="../dart_svg/StyleElement.html"><div class="icon-class"></div>StyleElement</a></li>
+<li><a href="../dart_svg/SvgDocument.html"><div class="icon-class"></div>SvgDocument</a></li>
+<li><a href="../dart_svg/SvgElement.html"><div class="icon-class"></div>SvgElement</a></li>
+<li><a href="../dart_svg/SvgSvgElement.html"><div class="icon-class"></div>SvgSvgElement</a></li>
+<li><a href="../dart_svg/SwitchElement.html"><div class="icon-class"></div>SwitchElement</a></li>
+<li><a href="../dart_svg/SymbolElement.html"><div class="icon-class"></div>SymbolElement</a></li>
+<li><a href="../dart_svg/Tests.html"><div class="icon-class"></div>Tests</a></li>
+<li><a href="../dart_svg/TextContentElement.html"><div class="icon-class"></div>TextContentElement</a></li>
+<li><a href="../dart_svg/TextElement.html"><div class="icon-class"></div>TextElement</a></li>
+<li><a href="../dart_svg/TextPathElement.html"><div class="icon-class"></div>TextPathElement</a></li>
+<li><a href="../dart_svg/TextPositioningElement.html"><div class="icon-class"></div>TextPositioningElement</a></li>
+<li><a href="../dart_svg/TitleElement.html"><div class="icon-class"></div>TitleElement</a></li>
+<li><a href="../dart_svg/Transform.html"><div class="icon-class"></div>Transform</a></li>
+<li><a href="../dart_svg/Transformable.html"><div class="icon-class"></div>Transformable</a></li>
+<li><a href="../dart_svg/TransformList.html"><div class="icon-class"></div>TransformList</a></li>
+<li><a href="../dart_svg/TSpanElement.html"><div class="icon-class"></div>TSpanElement</a></li>
+<li><a href="../dart_svg/UnitTypes.html"><div class="icon-class"></div>UnitTypes</a></li>
+<li><a href="../dart_svg/UriReference.html"><div class="icon-class"></div>UriReference</a></li>
+<li><a href="../dart_svg/UseElement.html"><div class="icon-class"></div>UseElement</a></li>
+<li><a href="../dart_svg/ViewElement.html"><div class="icon-class"></div>ViewElement</a></li>
+<li><a href="../dart_svg/ViewSpec.html"><div class="icon-class"></div>ViewSpec</a></li>
+<li><a href="../dart_svg/ZoomAndPan.html"><div class="icon-class"></div>ZoomAndPan</a></li>
+<li><a href="../dart_svg/ZoomEvent.html"><div class="icon-class"></div>ZoomEvent</a></li>
+<li><a href="../dart_svg/SvgException.html"><div class="icon-exception"></div>SvgException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ForeignObjectElement</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The &lt;code>SVGForeignObjectElement&lt;/code> interface provides access to the properties of &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/SVG/Element/foreignObject">&lt;foreignObject&gt;&lt;/a>&lt;/code>
+ elements, as well as methods to manipulate them.</p>
+<pre class="source">
+@DocsEditable
+@DomName('SVGForeignObjectElement')
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.FIREFOX)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+class ForeignObjectElement extends StyledElement implements Transformable, Tests, ExternalResourcesRequired, LangSpace native "*SVGForeignObjectElement" {
+
+ @DomName('SVGForeignObjectElement.SVGForeignObjectElement')
+ @DocsEditable
+ factory ForeignObjectElement() =&gt; _SvgElementFactoryProvider.createSvgElement_tag("foreignObject");
+
+ /// Checks if this type is supported on the current platform.
+ static bool get supported =&gt; SvgElement.isTagSupported('foreignObject') &amp;&amp; (new SvgElement.tag('foreignObject') is ForeignObjectElement);
+
+ @DomName('SVGForeignObjectElement.height')
+ @DocsEditable
+ final AnimatedLength height;
+
+ @DomName('SVGForeignObjectElement.width')
+ @DocsEditable
+ final AnimatedLength width;
+
+ @DomName('SVGForeignObjectElement.x')
+ @DocsEditable
+ final AnimatedLength x;
+
+ @DomName('SVGForeignObjectElement.y')
+ @DocsEditable
+ final AnimatedLength y;
+
+ // From SVGExternalResourcesRequired
+
+ @DomName('SVGForeignObjectElement.externalResourcesRequired')
+ @DocsEditable
+ final AnimatedBoolean externalResourcesRequired;
+
+ // From SVGLangSpace
+
+ @DomName('SVGForeignObjectElement.xmllang')
+ @DocsEditable
+ String xmllang;
+
+ @DomName('SVGForeignObjectElement.xmlspace')
+ @DocsEditable
+ String xmlspace;
+
+ // From SVGLocatable
+
+ @DomName('SVGForeignObjectElement.farthestViewportElement')
+ @DocsEditable
+ final SvgElement farthestViewportElement;
+
+ @DomName('SVGForeignObjectElement.nearestViewportElement')
+ @DocsEditable
+ final SvgElement nearestViewportElement;
+
+ @DomName('SVGForeignObjectElement.getBBox')
+ @DocsEditable
+ Rect getBBox() native;
+
+ @JSName('getCTM')
+ @DomName('SVGForeignObjectElement.getCTM')
+ @DocsEditable
+ Matrix getCtm() native;
+
+ @JSName('getScreenCTM')
+ @DomName('SVGForeignObjectElement.getScreenCTM')
+ @DocsEditable
+ Matrix getScreenCtm() native;
+
+ @DomName('SVGForeignObjectElement.getTransformToElement')
+ @DocsEditable
+ Matrix getTransformToElement(SvgElement element) native;
+
+ // From SVGTests
+
+ @DomName('SVGForeignObjectElement.requiredExtensions')
+ @DocsEditable
+ final StringList requiredExtensions;
+
+ @DomName('SVGForeignObjectElement.requiredFeatures')
+ @DocsEditable
+ final StringList requiredFeatures;
+
+ @DomName('SVGForeignObjectElement.systemLanguage')
+ @DocsEditable
+ final StringList systemLanguage;
+
+ @DomName('SVGForeignObjectElement.hasExtension')
+ @DocsEditable
+ bool hasExtension(String extension) native;
+
+ // From SVGTransformable
+
+ @DomName('SVGForeignObjectElement.transform')
+ @DocsEditable
+ final AnimatedTransformList transform;
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_html/EventTarget.html">EventTarget</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><a href="../dart_html/Node.html">Node</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><a href="../dart_html/Element.html">Element</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><a href="../dart_svg/SvgElement.html">SvgElement</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><a href="../dart_svg/StyledElement.html">StyledElement</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>ForeignObjectElement</strong></span></p>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_svg/LangSpace.html">LangSpace</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_svg/ExternalResourcesRequired.html">ExternalResourcesRequired</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_svg/Tests.html">Tests</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_svg/Transformable.html">Transformable</a></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="supported">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>supported</strong> <a class="anchor-link"
+            href="#supported"
+            title="Permalink to ForeignObjectElement.supported">#</a>
+        </h4>
+        <div class="doc">
+<p>Checks if this type is supported on the current platform.</p>
+<pre class="source">
+static bool get supported =&gt; SvgElement.isTagSupported('foreignObject') &amp;&amp; (new SvgElement.tag('foreignObject') is ForeignObjectElement);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="ForeignObjectElement">
+<button class="show-code">Code</button>
+factory <strong>ForeignObjectElement</strong>() <a class="anchor-link" href="#ForeignObjectElement"
+              title="Permalink to ForeignObjectElement.ForeignObjectElement">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.SVGForeignObjectElement')
+@DocsEditable
+factory ForeignObjectElement() =&gt; _SvgElementFactoryProvider.createSvgElement_tag("foreignObject");
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field inherited"><h4 id="$dom_attributes">
+<button class="show-code">Code</button>
+final <a href="../dart_html/_NamedNodeMap.html">_NamedNodeMap</a>         <strong>$dom_attributes</strong> <a class="anchor-link"
+            href="#$dom_attributes"
+            title="Permalink to ForeignObjectElement.$dom_attributes">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('attributes')
+@DomName('Node.attributes')
+@DocsEditable
+final _NamedNodeMap $dom_attributes
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_childElementCount">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>$dom_childElementCount</strong> <a class="anchor-link"
+            href="#$dom_childElementCount"
+            title="Permalink to ForeignObjectElement.$dom_childElementCount">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The number of child nodes that are elements.</p>
+<pre class="source">
+@JSName('childElementCount')
+@DomName('Element.childElementCount')
+@DocsEditable
+final int $dom_childElementCount
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_childNodes">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt;         <strong>$dom_childNodes</strong> <a class="anchor-link"
+            href="#$dom_childNodes"
+            title="Permalink to ForeignObjectElement.$dom_childNodes">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('childNodes')
+@DomName('Node.childNodes')
+@DocsEditable
+@Returns('NodeList')
+@Creates('NodeList')
+final List&lt;Node&gt; $dom_childNodes
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_children">
+<button class="show-code">Code</button>
+final <a href="../dart_html/HtmlCollection.html">HtmlCollection</a>         <strong>$dom_children</strong> <a class="anchor-link"
+            href="#$dom_children"
+            title="Permalink to ForeignObjectElement.$dom_children">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<pre class="source">
+HtmlCollection get $dom_children {
+ throw new UnsupportedError("Cannot get dom_children on SVG.");
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_className">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>$dom_className</strong> <a class="anchor-link"
+            href="#$dom_className"
+            title="Permalink to ForeignObjectElement.$dom_className">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets/sets the class of the element.</p>
+<pre class="source">
+@JSName('className')
+@DomName('Element.className')
+@DocsEditable
+String $dom_className
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_firstChild">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>$dom_firstChild</strong> <a class="anchor-link"
+            href="#$dom_firstChild"
+            title="Permalink to ForeignObjectElement.$dom_firstChild">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('firstChild')
+@DomName('Node.firstChild')
+@DocsEditable
+final Node $dom_firstChild
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_firstElementChild">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>$dom_firstElementChild</strong> <a class="anchor-link"
+            href="#$dom_firstElementChild"
+            title="Permalink to ForeignObjectElement.$dom_firstElementChild">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The first direct child element of an element, or &lt;code>null&lt;/code> if the element has no child elements.</p>
+<pre class="source">
+@JSName('firstElementChild')
+@DomName('Element.firstElementChild')
+@DocsEditable
+final Element $dom_firstElementChild
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_lastChild">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>$dom_lastChild</strong> <a class="anchor-link"
+            href="#$dom_lastChild"
+            title="Permalink to ForeignObjectElement.$dom_lastChild">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('lastChild')
+@DomName('Node.lastChild')
+@DocsEditable
+final Node $dom_lastChild
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_lastElementChild">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>$dom_lastElementChild</strong> <a class="anchor-link"
+            href="#$dom_lastElementChild"
+            title="Permalink to ForeignObjectElement.$dom_lastElementChild">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The last direct child element of an element, or &lt;code>null&lt;/code> if the element has no child elements.</p>
+<pre class="source">
+@JSName('lastElementChild')
+@DomName('Element.lastElementChild')
+@DocsEditable
+final Element $dom_lastElementChild
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_localName">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>$dom_localName</strong> <a class="anchor-link"
+            href="#$dom_localName"
+            title="Permalink to ForeignObjectElement.$dom_localName">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('localName')
+@DomName('Node.localName')
+@DocsEditable
+final String $dom_localName
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_namespaceUri">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>$dom_namespaceUri</strong> <a class="anchor-link"
+            href="#$dom_namespaceUri"
+            title="Permalink to ForeignObjectElement.$dom_namespaceUri">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('namespaceURI')
+@DomName('Node.namespaceURI')
+@DocsEditable
+final String $dom_namespaceUri
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_svgClassName">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/AnimatedString.html">AnimatedString</a>         <strong>$dom_svgClassName</strong> <a class="anchor-link"
+            href="#$dom_svgClassName"
+            title="Permalink to ForeignObjectElement.$dom_svgClassName">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_svg/StyledElement.html">StyledElement</a> </div><div class="doc">
+<pre class="source">
+AnimatedString get $dom_svgClassName =&gt; JS("AnimatedString", "#.className", this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="attributes">
+<button class="show-code">Code</button>
+<a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/String.html">String</a>&gt;         <strong>attributes</strong> <a class="anchor-link"
+            href="#attributes"
+            title="Permalink to ForeignObjectElement.attributes">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>All attributes on this element.</p>
+<p>Any modifications to the attribute map will automatically be applied to
+this element.</p>
+<p>This only includes attributes which are not in a namespace
+(such as 'xlink:href'), additional attributes can be accessed via
+<code>getNamespacedAttributes</code>.</p>
+<pre class="source">
+Map&lt;String, String&gt; get attributes =&gt; new _ElementAttributeMap(this);
+</pre>
+<pre class="source">
+void set attributes(Map&lt;String, String&gt; value) {
+ Map&lt;String, String&gt; attributes = this.attributes;
+ attributes.clear();
+ for (String key in value.keys) {
+   attributes[key] = value[key];
+ }
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="children">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Element.html">Element</a>&gt;         <strong>children</strong> <a class="anchor-link"
+            href="#children"
+            title="Permalink to ForeignObjectElement.children">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<div class="inherited">
+<p>List of the direct children of this element.</p>
+<p>This collection can be used to add and remove elements from the document.</p>
+<pre><code>var item = new DivElement();
+item.text = 'Something';
+document.body.children.add(item) // Item is now displayed on the page.
+for (var element in document.body.children) {
+  element.style.background = 'red'; // Turns every child of body red.
+}
+</code></pre>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/Element.html">Element</a> </div></div>
+<pre class="source">
+List&lt;Element&gt; get children =&gt; new FilteredElementList(this);
+</pre>
+<pre class="source">
+void set children(List&lt;Element&gt; value) {
+ final children = this.children;
+ children.clear();
+ children.addAll(value);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="classes">
+<button class="show-code">Code</button>
+<a href="../dart_html/CssClassSet.html">CssClassSet</a> <strong>get classes</strong> <a class="anchor-link" href="#classes"
+              title="Permalink to ForeignObjectElement.get classes">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<div class="inherited">
+<p>The set of CSS classes applied to this element.</p>
+<p>This set makes it easy to add, remove or toggle the classes applied to
+this element.</p>
+<pre><code>element.classes.add('selected');
+element.classes.toggle('isOnline');
+element.classes.remove('selected');
+</code></pre>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/Element.html">Element</a> </div></div>
+<pre class="source">
+CssClassSet get classes {
+ if (_cssClassSet == null) {
+   _cssClassSet = new _AttributeClassSet(this);
+ }
+ return _cssClassSet;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="classes=">
+<button class="show-code">Code</button>
+void <strong>set classes</strong>(<a href="../dart_core/Collection.html">Collection</a>&lt;<a href="../dart_core/String.html">String</a>&gt; value) <a class="anchor-link" href="#classes="
+              title="Permalink to ForeignObjectElement.set classes">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+void set classes(Collection&lt;String&gt; value) {
+ CssClassSet classSet = classes;
+ classSet.clear();
+ classSet.addAll(value);
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="clientHeight">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>clientHeight</strong> <a class="anchor-link"
+            href="#clientHeight"
+            title="Permalink to ForeignObjectElement.clientHeight">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The inner height of an element.</p>
+<pre class="source">
+@DomName('Element.clientHeight')
+@DocsEditable
+final int clientHeight
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="clientLeft">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>clientLeft</strong> <a class="anchor-link"
+            href="#clientLeft"
+            title="Permalink to ForeignObjectElement.clientLeft">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The width of the left border of an element.</p>
+<pre class="source">
+@DomName('Element.clientLeft')
+@DocsEditable
+final int clientLeft
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="clientTop">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>clientTop</strong> <a class="anchor-link"
+            href="#clientTop"
+            title="Permalink to ForeignObjectElement.clientTop">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The width of the top border of an element.</p>
+<pre class="source">
+@DomName('Element.clientTop')
+@DocsEditable
+final int clientTop
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="clientWidth">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>clientWidth</strong> <a class="anchor-link"
+            href="#clientWidth"
+            title="Permalink to ForeignObjectElement.clientWidth">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The inner width of an element.</p>
+<pre class="source">
+@DomName('Element.clientWidth')
+@DocsEditable
+final int clientWidth
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="contentEditable">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>contentEditable</strong> <a class="anchor-link"
+            href="#contentEditable"
+            title="Permalink to ForeignObjectElement.contentEditable">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets/sets whether or not the element is editable.</p>
+<pre class="source">
+@DomName('Element.contentEditable')
+@DocsEditable
+String contentEditable
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="dataset">
+<button class="show-code">Code</button>
+<a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/String.html">String</a>&gt;         <strong>dataset</strong> <a class="anchor-link"
+            href="#dataset"
+            title="Permalink to ForeignObjectElement.dataset">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Allows access to all custom data attributes (data-*) set on this element.</p>
+<p>The keys for the map must follow these rules:</p><ul><li>The name must not begin with 'xml'.</li><li>The name cannot contain a semi-colon (';').</li><li>The name cannot contain any capital letters.</li></ul>
+<p>Any keys from markup will be converted to camel-cased keys in the map.</p>
+<p>For example, HTML specified as:</p>
+<pre><code>&lt;div data-my-random-value='value'&gt;&lt;/div&gt;
+</code></pre>
+<p>Would be accessed in Dart as:</p>
+<pre><code>var value = element.dataset['myRandomValue'];
+</code></pre>
+<p>See also:</p><ul><li><a href="http://www.w3.org/TR/html5/global-attributes.html#custom-data-attribute">Custom data attributes</a></li></ul>
+<pre class="source">
+Map&lt;String, String&gt; get dataset =&gt;
+ new _DataAttributeMap(attributes);
+</pre>
+<pre class="source">
+void set dataset(Map&lt;String, String&gt; value) {
+ final data = this.dataset;
+ data.clear();
+ for (String key in value.keys) {
+   data[key] = value[key];
+ }
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="dir">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>dir</strong> <a class="anchor-link"
+            href="#dir"
+            title="Permalink to ForeignObjectElement.dir">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets/sets the directionality of the element.</p>
+<pre class="source">
+@DomName('Element.dir')
+@DocsEditable
+String dir
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="document">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Document.html">Document</a>         <strong>document</strong> <a class="anchor-link"
+            href="#document"
+            title="Permalink to ForeignObjectElement.document">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('ownerDocument')
+@DomName('Node.ownerDocument')
+@DocsEditable
+final Document document
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="draggable">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>draggable</strong> <a class="anchor-link"
+            href="#draggable"
+            title="Permalink to ForeignObjectElement.draggable">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.draggable')
+@DocsEditable
+bool draggable
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="dropzone">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>dropzone</strong> <a class="anchor-link"
+            href="#dropzone"
+            title="Permalink to ForeignObjectElement.dropzone">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('webkitdropzone')
+@DomName('Element.webkitdropzone')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+String dropzone
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="externalResourcesRequired">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/AnimatedBoolean.html">AnimatedBoolean</a>         <strong>externalResourcesRequired</strong> <a class="anchor-link"
+            href="#externalResourcesRequired"
+            title="Permalink to ForeignObjectElement.externalResourcesRequired">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.externalResourcesRequired')
+@DocsEditable
+final AnimatedBoolean externalResourcesRequired
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="farthestViewportElement">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/SvgElement.html">SvgElement</a>         <strong>farthestViewportElement</strong> <a class="anchor-link"
+            href="#farthestViewportElement"
+            title="Permalink to ForeignObjectElement.farthestViewportElement">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.farthestViewportElement')
+@DocsEditable
+final SvgElement farthestViewportElement
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="height">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/AnimatedLength.html">AnimatedLength</a>         <strong>height</strong> <a class="anchor-link"
+            href="#height"
+            title="Permalink to ForeignObjectElement.height">#</a>
+        </h4>
+        <div class="doc">
+<p>Corresponds to attribute 
+&lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/SVG/Attribute/height">height&lt;/a>&lt;/code> on the given &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/SVG/Element/foreignObject">&lt;foreignObject&gt;&lt;/a>&lt;/code>
+ element.</p>
+<pre class="source">
+@DomName('SVGForeignObjectElement.height')
+@DocsEditable
+final AnimatedLength height
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="hidden">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>hidden</strong> <a class="anchor-link"
+            href="#hidden"
+            title="Permalink to ForeignObjectElement.hidden">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.hidden')
+@DocsEditable
+bool hidden
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="id">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>id</strong> <a class="anchor-link"
+            href="#id"
+            title="Permalink to ForeignObjectElement.id">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<pre class="source">
+String get id =&gt; JS("String", "#.id", this);
+</pre>
+<pre class="source">
+void set id(String value) {
+ JS("void", "#.id = #", this, value);
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="innerHtml">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>innerHtml</strong> <a class="anchor-link"
+            href="#innerHtml"
+            title="Permalink to ForeignObjectElement.innerHtml">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<pre class="source">
+String get innerHtml {
+ final container = new Element.tag("div");
+ final SvgElement cloned = this.clone(true);
+ container.children.addAll(cloned.children);
+ return container.innerHtml;
+}
+</pre>
+<pre class="source">
+void set innerHtml(String svg) {
+ final container = new Element.tag("div");
+ // Wrap the SVG string in &lt;svg&gt; so that SvgElements are created, rather than
+ // HTMLElements.
+ container.innerHtml = '&lt;svg version="1.1"&gt;$svg&lt;/svg&gt;';
+ this.children = container.children[0].children;
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="isContentEditable">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isContentEditable</strong> <a class="anchor-link"
+            href="#isContentEditable"
+            title="Permalink to ForeignObjectElement.isContentEditable">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Indicates whether or not the content of the element can be edited. Read only.</p>
+<pre class="source">
+@DomName('Element.isContentEditable')
+@DocsEditable
+final bool isContentEditable
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="lang">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>lang</strong> <a class="anchor-link"
+            href="#lang"
+            title="Permalink to ForeignObjectElement.lang">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets/sets the language of an element's attributes, text, and element contents.</p>
+<pre class="source">
+@DomName('Element.lang')
+@DocsEditable
+String lang
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="nearestViewportElement">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/SvgElement.html">SvgElement</a>         <strong>nearestViewportElement</strong> <a class="anchor-link"
+            href="#nearestViewportElement"
+            title="Permalink to ForeignObjectElement.nearestViewportElement">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.nearestViewportElement')
+@DocsEditable
+final SvgElement nearestViewportElement
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nextElementSibling">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>nextElementSibling</strong> <a class="anchor-link"
+            href="#nextElementSibling"
+            title="Permalink to ForeignObjectElement.nextElementSibling">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The element immediately following the given one in the tree, or &lt;code>null&lt;/code> if there's no sibling node.</p>
+<pre class="source">
+@DomName('Element.nextElementSibling')
+@DocsEditable
+final Element nextElementSibling
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nextNode">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>nextNode</strong> <a class="anchor-link"
+            href="#nextNode"
+            title="Permalink to ForeignObjectElement.nextNode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('nextSibling')
+@DomName('Node.nextSibling')
+@DocsEditable
+final Node nextNode
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nodes">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt;         <strong>nodes</strong> <a class="anchor-link"
+            href="#nodes"
+            title="Permalink to ForeignObjectElement.nodes">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+List&lt;Node&gt; get nodes {
+ return new _ChildNodeListLazy(this);
+}
+</pre>
+<pre class="source">
+void set nodes(Collection&lt;Node&gt; value) {
+ // Copy list first since we don't want liveness during iteration.
+ // TODO(jacobr): there is a better way to do this.
+ List copy = new List.from(value);
+ text = '';
+ for (Node node in copy) {
+   $dom_appendChild(node);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nodeType">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>nodeType</strong> <a class="anchor-link"
+            href="#nodeType"
+            title="Permalink to ForeignObjectElement.nodeType">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.nodeType')
+@DocsEditable
+final int nodeType
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nodeValue">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>nodeValue</strong> <a class="anchor-link"
+            href="#nodeValue"
+            title="Permalink to ForeignObjectElement.nodeValue">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.nodeValue')
+@DocsEditable
+final String nodeValue
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="offsetHeight">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>offsetHeight</strong> <a class="anchor-link"
+            href="#offsetHeight"
+            title="Permalink to ForeignObjectElement.offsetHeight">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The height of an element, relative to the layout.</p>
+<pre class="source">
+@DomName('Element.offsetHeight')
+@DocsEditable
+final int offsetHeight
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="offsetLeft">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>offsetLeft</strong> <a class="anchor-link"
+            href="#offsetLeft"
+            title="Permalink to ForeignObjectElement.offsetLeft">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The distance from this element's left border to its &lt;code>offsetParent&lt;/code>'s left border.</p>
+<pre class="source">
+@DomName('Element.offsetLeft')
+@DocsEditable
+final int offsetLeft
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="offsetParent">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>offsetParent</strong> <a class="anchor-link"
+            href="#offsetParent"
+            title="Permalink to ForeignObjectElement.offsetParent">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The element from which all offset calculations are currently computed.</p>
+<pre class="source">
+@DomName('Element.offsetParent')
+@DocsEditable
+final Element offsetParent
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="offsetTop">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>offsetTop</strong> <a class="anchor-link"
+            href="#offsetTop"
+            title="Permalink to ForeignObjectElement.offsetTop">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The distance from this element's top border to its &lt;code>offsetParent&lt;/code>'s top border.</p>
+<pre class="source">
+@DomName('Element.offsetTop')
+@DocsEditable
+final int offsetTop
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="offsetWidth">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>offsetWidth</strong> <a class="anchor-link"
+            href="#offsetWidth"
+            title="Permalink to ForeignObjectElement.offsetWidth">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The width of an element, relative to the layout.</p>
+<pre class="source">
+@DomName('Element.offsetWidth')
+@DocsEditable
+final int offsetWidth
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="on">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Events.html">Events</a>         <strong>on</strong> <a class="anchor-link"
+            href="#on"
+            title="Permalink to ForeignObjectElement.on">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>This is an ease-of-use accessor for event streams which should only be
+used when an explicit accessor is not available.</p>
+<pre class="source">
+Events get on =&gt; new Events(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onAbort">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onAbort</strong> <a class="anchor-link"
+            href="#onAbort"
+            title="Permalink to ForeignObjectElement.onAbort">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onabort')
+@DocsEditable
+Stream&lt;Event&gt; get onAbort =&gt; abortEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onBeforeCopy">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforeCopy</strong> <a class="anchor-link"
+            href="#onBeforeCopy"
+            title="Permalink to ForeignObjectElement.onBeforeCopy">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onbeforecopy')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforeCopy =&gt; beforeCopyEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onBeforeCut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforeCut</strong> <a class="anchor-link"
+            href="#onBeforeCut"
+            title="Permalink to ForeignObjectElement.onBeforeCut">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onbeforecut')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforeCut =&gt; beforeCutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onBeforePaste">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforePaste</strong> <a class="anchor-link"
+            href="#onBeforePaste"
+            title="Permalink to ForeignObjectElement.onBeforePaste">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onbeforepaste')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforePaste =&gt; beforePasteEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onBlur">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBlur</strong> <a class="anchor-link"
+            href="#onBlur"
+            title="Permalink to ForeignObjectElement.onBlur">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the blur event.</p>
+<pre class="source">
+@DomName('Element.onblur')
+@DocsEditable
+Stream&lt;Event&gt; get onBlur =&gt; blurEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onChange</strong> <a class="anchor-link"
+            href="#onChange"
+            title="Permalink to ForeignObjectElement.onChange">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the change event.</p>
+<pre class="source">
+@DomName('Element.onchange')
+@DocsEditable
+Stream&lt;Event&gt; get onChange =&gt; changeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onClick">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onClick</strong> <a class="anchor-link"
+            href="#onClick"
+            title="Permalink to ForeignObjectElement.onClick">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the click event.</p>
+<pre class="source">
+@DomName('Element.onclick')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onClick =&gt; clickEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onContextMenu">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onContextMenu</strong> <a class="anchor-link"
+            href="#onContextMenu"
+            title="Permalink to ForeignObjectElement.onContextMenu">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the contextmenu event.</p>
+<pre class="source">
+@DomName('Element.oncontextmenu')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onContextMenu =&gt; contextMenuEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onCopy">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onCopy</strong> <a class="anchor-link"
+            href="#onCopy"
+            title="Permalink to ForeignObjectElement.onCopy">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the copy event.</p>
+<pre class="source">
+@DomName('Element.oncopy')
+@DocsEditable
+Stream&lt;Event&gt; get onCopy =&gt; copyEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onCut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onCut</strong> <a class="anchor-link"
+            href="#onCut"
+            title="Permalink to ForeignObjectElement.onCut">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the cut event.</p>
+<pre class="source">
+@DomName('Element.oncut')
+@DocsEditable
+Stream&lt;Event&gt; get onCut =&gt; cutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onDoubleClick">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onDoubleClick</strong> <a class="anchor-link"
+            href="#onDoubleClick"
+            title="Permalink to ForeignObjectElement.onDoubleClick">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the dblclick event.</p>
+<pre class="source">
+@DomName('Element.ondblclick')
+@DocsEditable
+Stream&lt;Event&gt; get onDoubleClick =&gt; doubleClickEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onDrag">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDrag</strong> <a class="anchor-link"
+            href="#onDrag"
+            title="Permalink to ForeignObjectElement.onDrag">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ondrag')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDrag =&gt; dragEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onDragEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragEnd</strong> <a class="anchor-link"
+            href="#onDragEnd"
+            title="Permalink to ForeignObjectElement.onDragEnd">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ondragend')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragEnd =&gt; dragEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onDragEnter">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragEnter</strong> <a class="anchor-link"
+            href="#onDragEnter"
+            title="Permalink to ForeignObjectElement.onDragEnter">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ondragenter')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragEnter =&gt; dragEnterEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onDragLeave">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragLeave</strong> <a class="anchor-link"
+            href="#onDragLeave"
+            title="Permalink to ForeignObjectElement.onDragLeave">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ondragleave')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragLeave =&gt; dragLeaveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onDragOver">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragOver</strong> <a class="anchor-link"
+            href="#onDragOver"
+            title="Permalink to ForeignObjectElement.onDragOver">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ondragover')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragOver =&gt; dragOverEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onDragStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragStart</strong> <a class="anchor-link"
+            href="#onDragStart"
+            title="Permalink to ForeignObjectElement.onDragStart">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ondragstart')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragStart =&gt; dragStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onDrop">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDrop</strong> <a class="anchor-link"
+            href="#onDrop"
+            title="Permalink to ForeignObjectElement.onDrop">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ondrop')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDrop =&gt; dropEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onError</strong> <a class="anchor-link"
+            href="#onError"
+            title="Permalink to ForeignObjectElement.onError">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onerror')
+@DocsEditable
+Stream&lt;Event&gt; get onError =&gt; errorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onFocus">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onFocus</strong> <a class="anchor-link"
+            href="#onFocus"
+            title="Permalink to ForeignObjectElement.onFocus">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the focus event.</p>
+<pre class="source">
+@DomName('Element.onfocus')
+@DocsEditable
+Stream&lt;Event&gt; get onFocus =&gt; focusEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onFullscreenChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onFullscreenChange</strong> <a class="anchor-link"
+            href="#onFullscreenChange"
+            title="Permalink to ForeignObjectElement.onFullscreenChange">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onwebkitfullscreenchange')
+@DocsEditable
+Stream&lt;Event&gt; get onFullscreenChange =&gt; fullscreenChangeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onFullscreenError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onFullscreenError</strong> <a class="anchor-link"
+            href="#onFullscreenError"
+            title="Permalink to ForeignObjectElement.onFullscreenError">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onwebkitfullscreenerror')
+@DocsEditable
+Stream&lt;Event&gt; get onFullscreenError =&gt; fullscreenErrorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onInput">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onInput</strong> <a class="anchor-link"
+            href="#onInput"
+            title="Permalink to ForeignObjectElement.onInput">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.oninput')
+@DocsEditable
+Stream&lt;Event&gt; get onInput =&gt; inputEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onInvalid">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onInvalid</strong> <a class="anchor-link"
+            href="#onInvalid"
+            title="Permalink to ForeignObjectElement.onInvalid">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.oninvalid')
+@DocsEditable
+Stream&lt;Event&gt; get onInvalid =&gt; invalidEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onKeyDown">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyDown</strong> <a class="anchor-link"
+            href="#onKeyDown"
+            title="Permalink to ForeignObjectElement.onKeyDown">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the keydown event.</p>
+<pre class="source">
+@DomName('Element.onkeydown')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyDown =&gt; keyDownEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onKeyPress">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyPress</strong> <a class="anchor-link"
+            href="#onKeyPress"
+            title="Permalink to ForeignObjectElement.onKeyPress">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the keypress event.</p>
+<pre class="source">
+@DomName('Element.onkeypress')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyPress =&gt; keyPressEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onKeyUp">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyUp</strong> <a class="anchor-link"
+            href="#onKeyUp"
+            title="Permalink to ForeignObjectElement.onKeyUp">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the keyup event.</p>
+<pre class="source">
+@DomName('Element.onkeyup')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyUp =&gt; keyUpEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onLoad">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onLoad</strong> <a class="anchor-link"
+            href="#onLoad"
+            title="Permalink to ForeignObjectElement.onLoad">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onload')
+@DocsEditable
+Stream&lt;Event&gt; get onLoad =&gt; loadEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onMouseDown">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseDown</strong> <a class="anchor-link"
+            href="#onMouseDown"
+            title="Permalink to ForeignObjectElement.onMouseDown">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the mousedown event.</p>
+<pre class="source">
+@DomName('Element.onmousedown')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseDown =&gt; mouseDownEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onMouseMove">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseMove</strong> <a class="anchor-link"
+            href="#onMouseMove"
+            title="Permalink to ForeignObjectElement.onMouseMove">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the mousemove event.</p>
+<pre class="source">
+@DomName('Element.onmousemove')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseMove =&gt; mouseMoveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onMouseOut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseOut</strong> <a class="anchor-link"
+            href="#onMouseOut"
+            title="Permalink to ForeignObjectElement.onMouseOut">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the mouseout event.</p>
+<pre class="source">
+@DomName('Element.onmouseout')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseOut =&gt; mouseOutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onMouseOver">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseOver</strong> <a class="anchor-link"
+            href="#onMouseOver"
+            title="Permalink to ForeignObjectElement.onMouseOver">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the mouseover event.</p>
+<pre class="source">
+@DomName('Element.onmouseover')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseOver =&gt; mouseOverEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onMouseUp">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseUp</strong> <a class="anchor-link"
+            href="#onMouseUp"
+            title="Permalink to ForeignObjectElement.onMouseUp">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the mouseup event.</p>
+<pre class="source">
+@DomName('Element.onmouseup')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseUp =&gt; mouseUpEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onMouseWheel">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/WheelEvent.html">WheelEvent</a>&gt;         <strong>onMouseWheel</strong> <a class="anchor-link"
+            href="#onMouseWheel"
+            title="Permalink to ForeignObjectElement.onMouseWheel">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onmousewheel')
+@DocsEditable
+Stream&lt;WheelEvent&gt; get onMouseWheel =&gt; mouseWheelEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onPaste">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onPaste</strong> <a class="anchor-link"
+            href="#onPaste"
+            title="Permalink to ForeignObjectElement.onPaste">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the paste event.</p>
+<pre class="source">
+@DomName('Element.onpaste')
+@DocsEditable
+Stream&lt;Event&gt; get onPaste =&gt; pasteEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onReset">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onReset</strong> <a class="anchor-link"
+            href="#onReset"
+            title="Permalink to ForeignObjectElement.onReset">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onreset')
+@DocsEditable
+Stream&lt;Event&gt; get onReset =&gt; resetEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onScroll">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onScroll</strong> <a class="anchor-link"
+            href="#onScroll"
+            title="Permalink to ForeignObjectElement.onScroll">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Returns the event handling code for the scroll event.</p>
+<pre class="source">
+@DomName('Element.onscroll')
+@DocsEditable
+Stream&lt;Event&gt; get onScroll =&gt; scrollEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onSearch">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSearch</strong> <a class="anchor-link"
+            href="#onSearch"
+            title="Permalink to ForeignObjectElement.onSearch">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onsearch')
+@DocsEditable
+Stream&lt;Event&gt; get onSearch =&gt; searchEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onSelect">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSelect</strong> <a class="anchor-link"
+            href="#onSelect"
+            title="Permalink to ForeignObjectElement.onSelect">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onselect')
+@DocsEditable
+Stream&lt;Event&gt; get onSelect =&gt; selectEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onSelectStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSelectStart</strong> <a class="anchor-link"
+            href="#onSelectStart"
+            title="Permalink to ForeignObjectElement.onSelectStart">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onselectstart')
+@DocsEditable
+Stream&lt;Event&gt; get onSelectStart =&gt; selectStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onSubmit">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSubmit</strong> <a class="anchor-link"
+            href="#onSubmit"
+            title="Permalink to ForeignObjectElement.onSubmit">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onsubmit')
+@DocsEditable
+Stream&lt;Event&gt; get onSubmit =&gt; submitEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onTouchCancel">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchCancel</strong> <a class="anchor-link"
+            href="#onTouchCancel"
+            title="Permalink to ForeignObjectElement.onTouchCancel">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ontouchcancel')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchCancel =&gt; touchCancelEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onTouchEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchEnd</strong> <a class="anchor-link"
+            href="#onTouchEnd"
+            title="Permalink to ForeignObjectElement.onTouchEnd">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ontouchend')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchEnd =&gt; touchEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onTouchEnter">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchEnter</strong> <a class="anchor-link"
+            href="#onTouchEnter"
+            title="Permalink to ForeignObjectElement.onTouchEnter">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ontouchenter')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchEnter =&gt; touchEnterEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onTouchLeave">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchLeave</strong> <a class="anchor-link"
+            href="#onTouchLeave"
+            title="Permalink to ForeignObjectElement.onTouchLeave">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ontouchleave')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchLeave =&gt; touchLeaveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onTouchMove">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchMove</strong> <a class="anchor-link"
+            href="#onTouchMove"
+            title="Permalink to ForeignObjectElement.onTouchMove">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ontouchmove')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchMove =&gt; touchMoveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onTouchStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchStart</strong> <a class="anchor-link"
+            href="#onTouchStart"
+            title="Permalink to ForeignObjectElement.onTouchStart">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.ontouchstart')
+@DocsEditable
+Stream&lt;TouchEvent&gt; get onTouchStart =&gt; touchStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="onTransitionEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TransitionEvent.html">TransitionEvent</a>&gt;         <strong>onTransitionEnd</strong> <a class="anchor-link"
+            href="#onTransitionEnd"
+            title="Permalink to ForeignObjectElement.onTransitionEnd">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.onwebkitTransitionEnd')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.FIREFOX)
+@SupportedBrowser(SupportedBrowser.IE, '10')
+@SupportedBrowser(SupportedBrowser.SAFARI)
+Stream&lt;TransitionEvent&gt; get onTransitionEnd =&gt; transitionEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="outerHtml">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>outerHtml</strong> <a class="anchor-link"
+            href="#outerHtml"
+            title="Permalink to ForeignObjectElement.outerHtml">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.</p>
+<pre class="source">
+@JSName('outerHTML')
+@DomName('Element.outerHTML')
+@DocsEditable
+final String outerHtml
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="ownerSvgElement">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/SvgSvgElement.html">SvgSvgElement</a>         <strong>ownerSvgElement</strong> <a class="anchor-link"
+            href="#ownerSvgElement"
+            title="Permalink to ForeignObjectElement.ownerSvgElement">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<p>The nearest ancestor &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/SVG/Element/svg">&lt;svg&gt;&lt;/a>&lt;/code>
+ element. &lt;code>Null&lt;/code> if the given element is the outermost svg element.</p>
+<pre class="source">
+@JSName('ownerSVGElement')
+@DomName('SVGElement.ownerSVGElement')
+@DocsEditable
+final SvgSvgElement ownerSvgElement
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="parent">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>parent</strong> <a class="anchor-link"
+            href="#parent"
+            title="Permalink to ForeignObjectElement.parent">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('parentElement')
+@DomName('Node.parentElement')
+@DocsEditable
+final Element parent
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="parentNode">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>parentNode</strong> <a class="anchor-link"
+            href="#parentNode"
+            title="Permalink to ForeignObjectElement.parentNode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.parentNode')
+@DocsEditable
+final Node parentNode
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="previousElementSibling">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>previousElementSibling</strong> <a class="anchor-link"
+            href="#previousElementSibling"
+            title="Permalink to ForeignObjectElement.previousElementSibling">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The element immediately preceding the given one in the tree, or &lt;code>null&lt;/code> if there is no sibling element.</p>
+<pre class="source">
+@DomName('Element.previousElementSibling')
+@DocsEditable
+final Element previousElementSibling
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="previousNode">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>previousNode</strong> <a class="anchor-link"
+            href="#previousNode"
+            title="Permalink to ForeignObjectElement.previousNode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('previousSibling')
+@DomName('Node.previousSibling')
+@DocsEditable
+final Node previousNode
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="pseudo">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>pseudo</strong> <a class="anchor-link"
+            href="#pseudo"
+            title="Permalink to ForeignObjectElement.pseudo">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('webkitPseudo')
+@DomName('Element.webkitPseudo')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+String pseudo
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="requiredExtensions">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/StringList.html">StringList</a>         <strong>requiredExtensions</strong> <a class="anchor-link"
+            href="#requiredExtensions"
+            title="Permalink to ForeignObjectElement.requiredExtensions">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.requiredExtensions')
+@DocsEditable
+final StringList requiredExtensions
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="requiredFeatures">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/StringList.html">StringList</a>         <strong>requiredFeatures</strong> <a class="anchor-link"
+            href="#requiredFeatures"
+            title="Permalink to ForeignObjectElement.requiredFeatures">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.requiredFeatures')
+@DocsEditable
+final StringList requiredFeatures
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="scrollHeight">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>scrollHeight</strong> <a class="anchor-link"
+            href="#scrollHeight"
+            title="Permalink to ForeignObjectElement.scrollHeight">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The scroll view height of an element.</p>
+<pre class="source">
+@DomName('Element.scrollHeight')
+@DocsEditable
+final int scrollHeight
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="scrollLeft">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a>         <strong>scrollLeft</strong> <a class="anchor-link"
+            href="#scrollLeft"
+            title="Permalink to ForeignObjectElement.scrollLeft">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets/sets the left scroll offset of an element.</p>
+<pre class="source">
+@DomName('Element.scrollLeft')
+@DocsEditable
+int scrollLeft
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="scrollTop">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a>         <strong>scrollTop</strong> <a class="anchor-link"
+            href="#scrollTop"
+            title="Permalink to ForeignObjectElement.scrollTop">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets/sets the top scroll offset of an element.</p>
+<pre class="source">
+@DomName('Element.scrollTop')
+@DocsEditable
+int scrollTop
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="scrollWidth">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>scrollWidth</strong> <a class="anchor-link"
+            href="#scrollWidth"
+            title="Permalink to ForeignObjectElement.scrollWidth">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The scroll view width of an element.</p>
+<pre class="source">
+@DomName('Element.scrollWidth')
+@DocsEditable
+final int scrollWidth
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="shadowRoot">
+<button class="show-code">Code</button>
+final <a href="../dart_html/ShadowRoot.html">ShadowRoot</a>         <strong>shadowRoot</strong> <a class="anchor-link"
+            href="#shadowRoot"
+            title="Permalink to ForeignObjectElement.shadowRoot">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('webkitShadowRoot')
+@DomName('Element.webkitShadowRoot')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+final ShadowRoot shadowRoot
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="spellcheck">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>spellcheck</strong> <a class="anchor-link"
+            href="#spellcheck"
+            title="Permalink to ForeignObjectElement.spellcheck">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Controls &lt;a title="en/Controlling<em>spell</em>checking<em>in</em>HTML<em>forms" rel="internal" href="https://developer.mozilla.org/en/HTML/Controlling</em>spell<em>checking</em>in<em>HTML</em>forms">spell-checking&lt;/a> (present on all HTML&nbsp;elements)</p>
+<pre class="source">
+@DomName('Element.spellcheck')
+@DocsEditable
+bool spellcheck
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="style">
+<button class="show-code">Code</button>
+final <a href="../dart_html/CssStyleDeclaration.html">CssStyleDeclaration</a>         <strong>style</strong> <a class="anchor-link"
+            href="#style"
+            title="Permalink to ForeignObjectElement.style">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>An object representing the declarations of an element's style attributes.</p>
+<pre class="source">
+@DomName('Element.style')
+@DocsEditable
+final CssStyleDeclaration style
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="systemLanguage">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/StringList.html">StringList</a>         <strong>systemLanguage</strong> <a class="anchor-link"
+            href="#systemLanguage"
+            title="Permalink to ForeignObjectElement.systemLanguage">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.systemLanguage')
+@DocsEditable
+final StringList systemLanguage
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="tabIndex">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a>         <strong>tabIndex</strong> <a class="anchor-link"
+            href="#tabIndex"
+            title="Permalink to ForeignObjectElement.tabIndex">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets/sets the position of the element in the tabbing order.</p>
+<pre class="source">
+@DomName('Element.tabIndex')
+@DocsEditable
+int tabIndex
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="tagName">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>tagName</strong> <a class="anchor-link"
+            href="#tagName"
+            title="Permalink to ForeignObjectElement.tagName">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The name of the tag for the given element.</p>
+<pre class="source">
+@DomName('Element.tagName')
+@DocsEditable
+final String tagName
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="text">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>text</strong> <a class="anchor-link"
+            href="#text"
+            title="Permalink to ForeignObjectElement.text">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('textContent')
+@DomName('Node.textContent')
+@DocsEditable
+String text
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="title">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>title</strong> <a class="anchor-link"
+            href="#title"
+            title="Permalink to ForeignObjectElement.title">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>A string that appears in a popup box when mouse is over the element.</p>
+<pre class="source">
+@DomName('Element.title')
+@DocsEditable
+String title
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="transform">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/AnimatedTransformList.html">AnimatedTransformList</a>         <strong>transform</strong> <a class="anchor-link"
+            href="#transform"
+            title="Permalink to ForeignObjectElement.transform">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.transform')
+@DocsEditable
+final AnimatedTransformList transform
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="translate">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>translate</strong> <a class="anchor-link"
+            href="#translate"
+            title="Permalink to ForeignObjectElement.translate">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.translate')
+@DocsEditable
+bool translate
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="viewportElement">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/SvgElement.html">SvgElement</a>         <strong>viewportElement</strong> <a class="anchor-link"
+            href="#viewportElement"
+            title="Permalink to ForeignObjectElement.viewportElement">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<p>The element which established the current viewport. Often, the nearest ancestor &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/SVG/Element/svg">&lt;svg&gt;&lt;/a>&lt;/code>
+ element. &lt;code>Null&lt;/code> if the given element is the outermost svg element.</p>
+<pre class="source">
+@DomName('SVGElement.viewportElement')
+@DocsEditable
+final SvgElement viewportElement
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="width">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/AnimatedLength.html">AnimatedLength</a>         <strong>width</strong> <a class="anchor-link"
+            href="#width"
+            title="Permalink to ForeignObjectElement.width">#</a>
+        </h4>
+        <div class="doc">
+<p>Corresponds to attribute 
+&lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/SVG/Attribute/width">width&lt;/a>&lt;/code> on the given &lt;code>&lt;a rel="custom" href="https://developer.mozilla.org/en/SVG/Element/foreignObject">&lt;foreignObject&gt;&lt;/a>&lt;/code>
+ element.</p>
+<pre class="source">
+@DomName('SVGForeignObjectElement.width')
+@DocsEditable
+final AnimatedLength width
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="x">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/AnimatedLength.html">AnimatedLength</a>         <strong>x</strong> <a class="anchor-link"
+            href="#x"
+            title="Permalink to ForeignObjectElement.x">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.x')
+@DocsEditable
+final AnimatedLength x
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="xmlbase">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>xmlbase</strong> <a class="anchor-link"
+            href="#xmlbase"
+            title="Permalink to ForeignObjectElement.xmlbase">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<p>Corresponds to attribute 
+&lt;code>&lt;a rel="internal" href="https://developer.mozilla.org/en/SVG/Attribute/xml%3Abase" class="new">xml:base&lt;/a>&lt;/code> on the given element.</p>
+<pre class="source">
+@DomName('SVGElement.xmlbase')
+@DocsEditable
+String xmlbase
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="xmllang">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>xmllang</strong> <a class="anchor-link"
+            href="#xmllang"
+            title="Permalink to ForeignObjectElement.xmllang">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.xmllang')
+@DocsEditable
+String xmllang
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="xmlspace">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>xmlspace</strong> <a class="anchor-link"
+            href="#xmlspace"
+            title="Permalink to ForeignObjectElement.xmlspace">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.xmlspace')
+@DocsEditable
+String xmlspace
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="xtag">
+<button class="show-code">Code</button>
+var         <strong>xtag</strong> <a class="anchor-link"
+            href="#xtag"
+            title="Permalink to ForeignObjectElement.xtag">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Experimental support for <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">web components</a>. This field stores a
+reference to the component implementation. It was inspired by Mozilla's
+<a href="http://x-tags.org/">x-tags</a> project. Please note: in the future it may be possible to
+<code>extend Element</code> from your class, in which case this field will be
+deprecated and will simply return this <code>Element</code> object.</p>
+<pre class="source">
+@Creates('Null')  // Set from Dart code; does not instantiate a native type.
+var xtag
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="y">
+<button class="show-code">Code</button>
+final <a href="../dart_svg/AnimatedLength.html">AnimatedLength</a>         <strong>y</strong> <a class="anchor-link"
+            href="#y"
+            title="Permalink to ForeignObjectElement.y">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.y')
+@DocsEditable
+final AnimatedLength y
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="append">
+<button class="show-code">Code</button>
+void <strong>append</strong>(<a href="../dart_html/Element.html">Element</a> e) <a class="anchor-link" href="#append"
+              title="Permalink to ForeignObjectElement.append">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Adds the specified element to after the last child of this element.</p>
+<pre class="source">
+void append(Element e) {
+ this.children.add(e);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="appendHtml">
+<button class="show-code">Code</button>
+void <strong>appendHtml</strong>(<a href="../dart_core/String.html">String</a> text) <a class="anchor-link" href="#appendHtml"
+              title="Permalink to ForeignObjectElement.appendHtml">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Parses the specified text as HTML and adds the resulting node after the
+last child of this element.</p>
+<pre class="source">
+void appendHtml(String text) {
+ this.insertAdjacentHtml('beforeend', text);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="appendText">
+<button class="show-code">Code</button>
+void <strong>appendText</strong>(<a href="../dart_core/String.html">String</a> text) <a class="anchor-link" href="#appendText"
+              title="Permalink to ForeignObjectElement.appendText">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Adds the specified text as a text node after the last child of this
+element.</p>
+<pre class="source">
+void appendText(String text) {
+ this.insertAdjacentText('beforeend', text);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="blur">
+<button class="show-code">Code</button>
+void <strong>blur</strong>() <a class="anchor-link" href="#blur"
+              title="Permalink to ForeignObjectElement.blur">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Removes keyboard focus from the current element.</p>
+<pre class="source">
+@DomName('Element.blur')
+@DocsEditable
+void blur() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="click">
+<button class="show-code">Code</button>
+void <strong>click</strong>() <a class="anchor-link" href="#click"
+              title="Permalink to ForeignObjectElement.click">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<pre class="source">
+void click() {
+ throw new UnsupportedError("Cannot invoke click SVG.");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="clone">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>clone</strong>(<a href="../dart_core/bool.html">bool</a> deep) <a class="anchor-link" href="#clone"
+              title="Permalink to ForeignObjectElement.clone">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('cloneNode')
+@DomName('Node.cloneNode')
+@DocsEditable
+Node clone(bool deep) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="contains">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>contains</strong>(<a href="../dart_html/Node.html">Node</a> other) <a class="anchor-link" href="#contains"
+              title="Permalink to ForeignObjectElement.contains">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.contains')
+@DocsEditable
+bool contains(Node other) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="createShadowRoot">
+<button class="show-code">Code</button>
+<a href="../dart_html/ShadowRoot.html">ShadowRoot</a> <strong>createShadowRoot</strong>() <a class="anchor-link" href="#createShadowRoot"
+              title="Permalink to ForeignObjectElement.createShadowRoot">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('webkitCreateShadowRoot')
+@DomName('Element.webkitCreateShadowRoot')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME, '25')
+@Experimental
+ShadowRoot createShadowRoot() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="dispatchEvent">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>dispatchEvent</strong>(<a href="../dart_html/Event.html">Event</a> event) <a class="anchor-link" href="#dispatchEvent"
+              title="Permalink to ForeignObjectElement.dispatchEvent">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.dispatchEvent')
+@DocsEditable
+bool dispatchEvent(Event event) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="focus">
+<button class="show-code">Code</button>
+void <strong>focus</strong>() <a class="anchor-link" href="#focus"
+              title="Permalink to ForeignObjectElement.focus">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Gives keyboard focus to the current element.</p>
+<pre class="source">
+@DomName('Element.focus')
+@DocsEditable
+void focus() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getBBox">
+<button class="show-code">Code</button>
+<a href="../dart_svg/Rect.html">Rect</a> <strong>getBBox</strong>() <a class="anchor-link" href="#getBBox"
+              title="Permalink to ForeignObjectElement.getBBox">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.getBBox')
+@DocsEditable
+Rect getBBox() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="getBoundingClientRect">
+<button class="show-code">Code</button>
+<a href="../dart_html/ClientRect.html">ClientRect</a> <strong>getBoundingClientRect</strong>() <a class="anchor-link" href="#getBoundingClientRect"
+              title="Permalink to ForeignObjectElement.getBoundingClientRect">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.getBoundingClientRect')
+@DocsEditable
+ClientRect getBoundingClientRect() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="getClientRects">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/ClientRect.html">ClientRect</a>&gt; <strong>getClientRects</strong>() <a class="anchor-link" href="#getClientRects"
+              title="Permalink to ForeignObjectElement.getClientRects">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.getClientRects')
+@DocsEditable
+@Returns('_ClientRectList')
+@Creates('_ClientRectList')
+List&lt;ClientRect&gt; getClientRects() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="getComputedStyle">
+<button class="show-code">Code</button>
+<a href="../dart_html/CssStyleDeclaration.html">CssStyleDeclaration</a> <strong>getComputedStyle</strong>([<a href="../dart_core/String.html">String</a> pseudoElement]) <a class="anchor-link" href="#getComputedStyle"
+              title="Permalink to ForeignObjectElement.getComputedStyle">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>The set of all CSS values applied to this element, including inherited
+and default values.</p>
+<p>The computedStyle contains values that are inherited from other
+sources, such as parent elements or stylesheets. This differs from the
+<code>style</code> property, which contains only the values specified directly on this
+element.</p>
+<p>PseudoElement can be values such as <code>::after</code>, <code>::before</code>, <code>::marker</code>,
+<code>::line-marker</code>.</p>
+<p>See also:</p><ul><li><a href="http://docs.webplatform.org/wiki/tutorials/inheritance_and_cascade">CSS Inheritance and Cascade</a></li><li><a href="http://docs.webplatform.org/wiki/css/selectors/pseudo-elements">Pseudo-elements</a></li></ul>
+<pre class="source">
+CssStyleDeclaration getComputedStyle([String pseudoElement]) {
+ if (pseudoElement == null) {
+   pseudoElement = '';
+ }
+ // TODO(jacobr): last param should be null, see b/5045788
+ return window.$dom_getComputedStyle(this, pseudoElement);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="getCTM">
+abstract <a href="../dart_svg/Matrix.html">Matrix</a> <strong>getCTM</strong>() <a class="anchor-link" href="#getCTM"
+              title="Permalink to ForeignObjectElement.getCTM">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_svg/Transformable.html">Transformable</a> </div><div class="doc">
+</div>
+</div>
+<div class="method"><h4 id="getCtm">
+<button class="show-code">Code</button>
+<a href="../dart_svg/Matrix.html">Matrix</a> <strong>getCtm</strong>() <a class="anchor-link" href="#getCtm"
+              title="Permalink to ForeignObjectElement.getCtm">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('getCTM')
+@DomName('SVGForeignObjectElement.getCTM')
+@DocsEditable
+Matrix getCtm() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="getNamespacedAttributes">
+<button class="show-code">Code</button>
+<a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/String.html">String</a>&gt; <strong>getNamespacedAttributes</strong>(<a href="../dart_core/String.html">String</a> namespace) <a class="anchor-link" href="#getNamespacedAttributes"
+              title="Permalink to ForeignObjectElement.getNamespacedAttributes">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Gets a map for manipulating the attributes of a particular namespace.</p>
+<p>This is primarily useful for SVG attributes such as xref:link.</p>
+<pre class="source">
+Map&lt;String, String&gt; getNamespacedAttributes(String namespace) {
+ return new _NamespacedAttributeMap(this, namespace);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="getPresentationAttribute">
+<button class="show-code">Code</button>
+<a href="../dart_html/CssValue.html">CssValue</a> <strong>getPresentationAttribute</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#getPresentationAttribute"
+              title="Permalink to ForeignObjectElement.getPresentationAttribute">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_svg/StyledElement.html">StyledElement</a> </div><div class="doc">
+<pre class="source">
+@DomName('SVGStyledElement.getPresentationAttribute')
+@DocsEditable
+CssValue getPresentationAttribute(String name) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="getScreenCTM">
+abstract <a href="../dart_svg/Matrix.html">Matrix</a> <strong>getScreenCTM</strong>() <a class="anchor-link" href="#getScreenCTM"
+              title="Permalink to ForeignObjectElement.getScreenCTM">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_svg/Transformable.html">Transformable</a> </div><div class="doc">
+</div>
+</div>
+<div class="method"><h4 id="getScreenCtm">
+<button class="show-code">Code</button>
+<a href="../dart_svg/Matrix.html">Matrix</a> <strong>getScreenCtm</strong>() <a class="anchor-link" href="#getScreenCtm"
+              title="Permalink to ForeignObjectElement.getScreenCtm">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('getScreenCTM')
+@DomName('SVGForeignObjectElement.getScreenCTM')
+@DocsEditable
+Matrix getScreenCtm() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getTransformToElement">
+<button class="show-code">Code</button>
+<a href="../dart_svg/Matrix.html">Matrix</a> <strong>getTransformToElement</strong>(<a href="../dart_svg/SvgElement.html">SvgElement</a> element) <a class="anchor-link" href="#getTransformToElement"
+              title="Permalink to ForeignObjectElement.getTransformToElement">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.getTransformToElement')
+@DocsEditable
+Matrix getTransformToElement(SvgElement element) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="hasChildNodes">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>hasChildNodes</strong>() <a class="anchor-link" href="#hasChildNodes"
+              title="Permalink to ForeignObjectElement.hasChildNodes">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.hasChildNodes')
+@DocsEditable
+bool hasChildNodes() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="hasExtension">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>hasExtension</strong>(<a href="../dart_core/String.html">String</a> extension) <a class="anchor-link" href="#hasExtension"
+              title="Permalink to ForeignObjectElement.hasExtension">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('SVGForeignObjectElement.hasExtension')
+@DocsEditable
+bool hasExtension(String extension) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="insertAdjacentElement">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a> <strong>insertAdjacentElement</strong>(<a href="../dart_core/String.html">String</a> where, <a href="../dart_html/Element.html">Element</a> element) <a class="anchor-link" href="#insertAdjacentElement"
+              title="Permalink to ForeignObjectElement.insertAdjacentElement">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<div class="inherited">
+<p>Inserts 
+<span class="param">element</span> into the DOM at the specified location.</p>
+<p>To see the possible values for 
+<span class="param">where</span>, read the doc for
+<code>insertAdjacentHtml</code>.</p>
+<p>See also:</p><ul><li><code>insertAdjacentHtml</code></li></ul>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/Element.html">Element</a> </div></div>
+<pre class="source">
+@DomName('Element.insertAdjacentHTML')
+Element insertAdjacentElement(String where, Element element) {
+ throw new UnsupportedError("Cannot invoke insertAdjacentElement on SVG.");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="insertAdjacentHtml">
+<button class="show-code">Code</button>
+void <strong>insertAdjacentHtml</strong>(<a href="../dart_core/String.html">String</a> where, <a href="../dart_core/String.html">String</a> text) <a class="anchor-link" href="#insertAdjacentHtml"
+              title="Permalink to ForeignObjectElement.insertAdjacentHtml">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<div class="inherited">
+<p>Parses text as an HTML fragment and inserts it into the DOM at the
+specified location.</p>
+<p>The 
+<span class="param">where</span> parameter indicates where to insert the HTML fragment:</p><ul><li>'beforeBegin': Immediately before this element.</li><li>'afterBegin': As the first child of this element.</li><li>'beforeEnd': As the last child of this element.</li><li>
+<p>'afterEnd': Immediately after this element.</p>
+<p>var html = '&lt;div class="something">content&lt;/div>';
+// Inserts as the first child
+document.body.insertAdjacentHtml('afterBegin', html);
+var createdElement = document.body.children<code>0</code>;
+print(createdElement.classes<code>0</code>); // Prints 'something'</p></li></ul>
+<p>See also:</p><ul><li><code>insertAdjacentText</code></li><li><code>insertAdjacentElement</code></li></ul>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/Element.html">Element</a> </div></div>
+<pre class="source">
+@DomName('Element.insertAdjacentHTML')
+void insertAdjacentHtml(String where, String text) {
+ throw new UnsupportedError("Cannot invoke insertAdjacentHtml on SVG.");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="insertAdjacentText">
+<button class="show-code">Code</button>
+void <strong>insertAdjacentText</strong>(<a href="../dart_core/String.html">String</a> where, <a href="../dart_core/String.html">String</a> text) <a class="anchor-link" href="#insertAdjacentText"
+              title="Permalink to ForeignObjectElement.insertAdjacentText">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_svg/SvgElement.html">SvgElement</a> </div><div class="doc">
+<div class="inherited">
+<p>Creates a text node and inserts it into the DOM at the specified location.</p>
+<p>To see the possible values for 
+<span class="param">where</span>, read the doc for
+<code>insertAdjacentHtml</code>.</p>
+<p>See also:</p><ul><li><code>insertAdjacentHtml</code></li></ul>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_html/Element.html">Element</a> </div></div>
+<pre class="source">
+@DomName('Element.insertAdjacentText')
+void insertAdjacentText(String where, String text) {
+ throw new UnsupportedError("Cannot invoke insertAdjacentText on SVG.");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="insertBefore">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>insertBefore</strong>(<a href="../dart_html/Node.html">Node</a> newChild, <a href="../dart_html/Node.html">Node</a> refChild) <a class="anchor-link" href="#insertBefore"
+              title="Permalink to ForeignObjectElement.insertBefore">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.insertBefore')
+@DocsEditable
+Node insertBefore(Node newChild, Node refChild) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="matches">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>matches</strong>(<a href="../dart_core/String.html">String</a> selectors) <a class="anchor-link" href="#matches"
+              title="Permalink to ForeignObjectElement.matches">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Checks if this element matches the CSS selectors.</p>
+<pre class="source">
+@Experimental
+bool matches(String selectors) {
+ if (JS('bool', '!!#.matches', this)) {
+   return JS('bool', '#.matches(#)', this, selectors);
+ } else if (JS('bool', '!!#.webkitMatchesSelector', this)) {
+   return JS('bool', '#.webkitMatchesSelector(#)', this, selectors);
+ } else if (JS('bool', '!!#.mozMatchesSelector', this)) {
+   return JS('bool', '#.mozMatchesSelector(#)', this, selectors);
+ } else if (JS('bool', '!!#.msMatchesSelector', this)) {
+   return JS('bool', '#.msMatchesSelector(#)', this, selectors);
+ }
+ throw new UnsupportedError("Not supported on this platform");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="onCreated">
+<button class="show-code">Code</button>
+void <strong>onCreated</strong>() <a class="anchor-link" href="#onCreated"
+              title="Permalink to ForeignObjectElement.onCreated">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Called by the DOM when this element has been instantiated.</p>
+<pre class="source">
+@Experimental
+void onCreated() {}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="query">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a> <strong>query</strong>(<a href="../dart_core/String.html">String</a> selectors) <a class="anchor-link" href="#query"
+              title="Permalink to ForeignObjectElement.query">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Finds the first descendant element of this element that matches the
+specified group of selectors.</p>
+<p>
+<span class="param">selectors</span> should be a string using CSS selector syntax.</p>
+<pre><code>// Gets the first descendant with the class 'classname'
+var element = element.query('.className');
+// Gets the element with id 'id'
+var element = element.query('#id');
+// Gets the first descendant [ImageElement]
+var img = element.query('img');
+</code></pre>
+<p>See also:</p><ul><li><a href="http://docs.webplatform.org/wiki/css/selectors">CSS Selectors</a></li></ul>
+<pre class="source">
+Element query(String selectors) =&gt; $dom_querySelector(selectors);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="queryAll">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Element.html">Element</a>&gt; <strong>queryAll</strong>(<a href="../dart_core/String.html">String</a> selectors) <a class="anchor-link" href="#queryAll"
+              title="Permalink to ForeignObjectElement.queryAll">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Finds all descendent elements of this element that match the specified
+group of selectors.</p>
+<p>
+<span class="param">selectors</span> should be a string using CSS selector syntax.</p>
+<pre><code>var items = element.query('.itemClassName');
+</code></pre>
+<pre class="source">
+List&lt;Element&gt; queryAll(String selectors) =&gt;
+ new _FrozenElementList._wrap($dom_querySelectorAll(selectors));
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="remove">
+<button class="show-code">Code</button>
+void <strong>remove</strong>() <a class="anchor-link" href="#remove"
+              title="Permalink to ForeignObjectElement.remove">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Removes this node from the DOM.</p>
+<pre class="source">
+@DomName('Node.removeChild')
+void remove() {
+ // TODO(jacobr): should we throw an exception if parent is already null?
+ // TODO(vsm): Use the native remove when available.
+ if (this.parentNode != null) {
+   final Node parent = this.parentNode;
+   parentNode.$dom_removeChild(this);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="replaceWith">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>replaceWith</strong>(<a href="../dart_html/Node.html">Node</a> otherNode) <a class="anchor-link" href="#replaceWith"
+              title="Permalink to ForeignObjectElement.replaceWith">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Replaces this node with another node.</p>
+<pre class="source">
+@DomName('Node.replaceChild')
+Node replaceWith(Node otherNode) {
+ try {
+   final Node parent = this.parentNode;
+   parent.$dom_replaceChild(otherNode, this);
+ } catch (e) {
+
+ };
+ return this;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="requestFullscreen">
+<button class="show-code">Code</button>
+void <strong>requestFullscreen</strong>() <a class="anchor-link" href="#requestFullscreen"
+              title="Permalink to ForeignObjectElement.requestFullscreen">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('webkitRequestFullscreen')
+@DomName('Element.webkitRequestFullscreen')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+void requestFullscreen() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="requestFullScreen">
+<button class="show-code">Code</button>
+void <strong>requestFullScreen</strong>(<a href="../dart_core/int.html">int</a> flags) <a class="anchor-link" href="#requestFullScreen"
+              title="Permalink to ForeignObjectElement.requestFullScreen">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Asynchronously asks the browser to make the element full-screen.</p>
+<pre class="source">
+@JSName('webkitRequestFullScreen')
+@DomName('Element.webkitRequestFullScreen')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+void requestFullScreen(int flags) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="requestPointerLock">
+<button class="show-code">Code</button>
+void <strong>requestPointerLock</strong>() <a class="anchor-link" href="#requestPointerLock"
+              title="Permalink to ForeignObjectElement.requestPointerLock">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('webkitRequestPointerLock')
+@DomName('Element.webkitRequestPointerLock')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+void requestPointerLock() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="scrollByLines">
+<button class="show-code">Code</button>
+void <strong>scrollByLines</strong>(<a href="../dart_core/int.html">int</a> lines) <a class="anchor-link" href="#scrollByLines"
+              title="Permalink to ForeignObjectElement.scrollByLines">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.scrollByLines')
+@DocsEditable
+void scrollByLines(int lines) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="scrollByPages">
+<button class="show-code">Code</button>
+void <strong>scrollByPages</strong>(<a href="../dart_core/int.html">int</a> pages) <a class="anchor-link" href="#scrollByPages"
+              title="Permalink to ForeignObjectElement.scrollByPages">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@DomName('Element.scrollByPages')
+@DocsEditable
+void scrollByPages(int pages) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="scrollIntoView">
+<button class="show-code">Code</button>
+void <strong>scrollIntoView</strong>([<a href="../dart_html/ScrollAlignment.html">ScrollAlignment</a> alignment]) <a class="anchor-link" href="#scrollIntoView"
+              title="Permalink to ForeignObjectElement.scrollIntoView">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p>Scrolls this element into view.</p>
+<p>Only one of of the alignment options may be specified at a time.</p>
+<p>If no options are specified then this will attempt to scroll the minimum
+amount needed to bring the element into view.</p>
+<p>Note that alignCenter is currently only supported on WebKit platforms. If
+alignCenter is specified but not supported then this will fall back to
+alignTop.</p>
+<p>See also:</p><ul><li><a href="http://docs.webplatform.org/wiki/dom/methods/scrollIntoView">scrollIntoView</a></li><li><a href="http://docs.webplatform.org/wiki/dom/methods/scrollIntoViewIfNeeded">scrollIntoViewIfNeeded</a></li></ul>
+<pre class="source">
+void scrollIntoView([ScrollAlignment alignment]) {
+ var hasScrollIntoViewIfNeeded = false;
+ hasScrollIntoViewIfNeeded =
+     JS('bool', '!!(#.scrollIntoViewIfNeeded)', this);
+ if (alignment == ScrollAlignment.TOP) {
+   this.$dom_scrollIntoView(true);
+ } else if (alignment == ScrollAlignment.BOTTOM) {
+   this.$dom_scrollIntoView(false);
+ } else if (hasScrollIntoViewIfNeeded) {
+   if (alignment == ScrollAlignment.CENTER) {
+     this.$dom_scrollIntoViewIfNeeded(true);
+   } else {
+     this.$dom_scrollIntoViewIfNeeded();
+   }
+ } else {
+   this.$dom_scrollIntoView();
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_addEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_addEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_addEventListener"
+              title="Permalink to ForeignObjectElement.$dom_addEventListener">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('addEventListener')
+@DomName('Node.addEventListener')
+@DocsEditable
+void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_appendChild">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>$dom_appendChild</strong>(<a href="../dart_html/Node.html">Node</a> newChild) <a class="anchor-link" href="#$dom_appendChild"
+              title="Permalink to ForeignObjectElement.$dom_appendChild">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('appendChild')
+@DomName('Node.appendChild')
+@DocsEditable
+Node $dom_appendChild(Node newChild) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_getAttribute">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>$dom_getAttribute</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#$dom_getAttribute"
+              title="Permalink to ForeignObjectElement.$dom_getAttribute">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Retrieve the value of the named attribute from the current node.</p>
+<pre class="source">
+@JSName('getAttribute')
+@DomName('Element.getAttribute')
+@DocsEditable
+String $dom_getAttribute(String name) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_getAttributeNS">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>$dom_getAttributeNS</strong>(<a href="../dart_core/String.html">String</a> namespaceURI, <a href="../dart_core/String.html">String</a> localName) <a class="anchor-link" href="#$dom_getAttributeNS"
+              title="Permalink to ForeignObjectElement.$dom_getAttributeNS">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Retrieve the value of the attribute with the specified name and namespace, from the current node.</p>
+<pre class="source">
+@JSName('getAttributeNS')
+@DomName('Element.getAttributeNS')
+@DocsEditable
+String $dom_getAttributeNS(String namespaceURI, String localName) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_getElementsByClassName">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt; <strong>$dom_getElementsByClassName</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#$dom_getElementsByClassName"
+              title="Permalink to ForeignObjectElement.$dom_getElementsByClassName">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('getElementsByClassName')
+@DomName('Element.getElementsByClassName')
+@DocsEditable
+@Returns('NodeList')
+@Creates('NodeList')
+List&lt;Node&gt; $dom_getElementsByClassName(String name) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_getElementsByTagName">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt; <strong>$dom_getElementsByTagName</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#$dom_getElementsByTagName"
+              title="Permalink to ForeignObjectElement.$dom_getElementsByTagName">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Retrieve a set of all descendant elements, of a particular tag name, from the current element.</p>
+<pre class="source">
+@JSName('getElementsByTagName')
+@DomName('Element.getElementsByTagName')
+@DocsEditable
+@Returns('NodeList')
+@Creates('NodeList')
+List&lt;Node&gt; $dom_getElementsByTagName(String name) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_hasAttribute">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>$dom_hasAttribute</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#$dom_hasAttribute"
+              title="Permalink to ForeignObjectElement.$dom_hasAttribute">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Check if the element has the specified attribute, or not.</p>
+<pre class="source">
+@JSName('hasAttribute')
+@DomName('Element.hasAttribute')
+@DocsEditable
+bool $dom_hasAttribute(String name) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_hasAttributeNS">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>$dom_hasAttributeNS</strong>(<a href="../dart_core/String.html">String</a> namespaceURI, <a href="../dart_core/String.html">String</a> localName) <a class="anchor-link" href="#$dom_hasAttributeNS"
+              title="Permalink to ForeignObjectElement.$dom_hasAttributeNS">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Check if the element has the specified attribute, in the specified namespace, or not.</p>
+<pre class="source">
+@JSName('hasAttributeNS')
+@DomName('Element.hasAttributeNS')
+@DocsEditable
+bool $dom_hasAttributeNS(String namespaceURI, String localName) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_querySelector">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a> <strong>$dom_querySelector</strong>(<a href="../dart_core/String.html">String</a> selectors) <a class="anchor-link" href="#$dom_querySelector"
+              title="Permalink to ForeignObjectElement.$dom_querySelector">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('querySelector')
+@DomName('Element.querySelector')
+@DocsEditable
+Element $dom_querySelector(String selectors) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_querySelectorAll">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt; <strong>$dom_querySelectorAll</strong>(<a href="../dart_core/String.html">String</a> selectors) <a class="anchor-link" href="#$dom_querySelectorAll"
+              title="Permalink to ForeignObjectElement.$dom_querySelectorAll">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('querySelectorAll')
+@DomName('Element.querySelectorAll')
+@DocsEditable
+@Returns('NodeList')
+@Creates('NodeList')
+List&lt;Node&gt; $dom_querySelectorAll(String selectors) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_removeAttribute">
+<button class="show-code">Code</button>
+void <strong>$dom_removeAttribute</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#$dom_removeAttribute"
+              title="Permalink to ForeignObjectElement.$dom_removeAttribute">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Remove the named attribute from the current node.</p>
+<pre class="source">
+@JSName('removeAttribute')
+@DomName('Element.removeAttribute')
+@DocsEditable
+void $dom_removeAttribute(String name) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_removeAttributeNS">
+<button class="show-code">Code</button>
+void <strong>$dom_removeAttributeNS</strong>(<a href="../dart_core/String.html">String</a> namespaceURI, <a href="../dart_core/String.html">String</a> localName) <a class="anchor-link" href="#$dom_removeAttributeNS"
+              title="Permalink to ForeignObjectElement.$dom_removeAttributeNS">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Remove the attribute with the specified name and namespace, from the current node.</p>
+<pre class="source">
+@JSName('removeAttributeNS')
+@DomName('Element.removeAttributeNS')
+@DocsEditable
+void $dom_removeAttributeNS(String namespaceURI, String localName) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_removeChild">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>$dom_removeChild</strong>(<a href="../dart_html/Node.html">Node</a> oldChild) <a class="anchor-link" href="#$dom_removeChild"
+              title="Permalink to ForeignObjectElement.$dom_removeChild">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('removeChild')
+@DomName('Node.removeChild')
+@DocsEditable
+Node $dom_removeChild(Node oldChild) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_removeEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_removeEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_removeEventListener"
+              title="Permalink to ForeignObjectElement.$dom_removeEventListener">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('removeEventListener')
+@DomName('Node.removeEventListener')
+@DocsEditable
+void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_replaceChild">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>$dom_replaceChild</strong>(<a href="../dart_html/Node.html">Node</a> newChild, <a href="../dart_html/Node.html">Node</a> oldChild) <a class="anchor-link" href="#$dom_replaceChild"
+              title="Permalink to ForeignObjectElement.$dom_replaceChild">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('replaceChild')
+@DomName('Node.replaceChild')
+@DocsEditable
+Node $dom_replaceChild(Node newChild, Node oldChild) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_scrollIntoView">
+<button class="show-code">Code</button>
+void <strong>$dom_scrollIntoView</strong>([<a href="../dart_core/bool.html">bool</a> alignWithTop]) <a class="anchor-link" href="#$dom_scrollIntoView"
+              title="Permalink to ForeignObjectElement.$dom_scrollIntoView">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Scrolls the page until the element gets into the view.</p>
+<pre class="source">
+@JSName('scrollIntoView')
+@DomName('Element.scrollIntoView')
+@DocsEditable
+void $dom_scrollIntoView([bool alignWithTop]) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_scrollIntoViewIfNeeded">
+<button class="show-code">Code</button>
+void <strong>$dom_scrollIntoViewIfNeeded</strong>([<a href="../dart_core/bool.html">bool</a> centerIfNeeded]) <a class="anchor-link" href="#$dom_scrollIntoViewIfNeeded"
+              title="Permalink to ForeignObjectElement.$dom_scrollIntoViewIfNeeded">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<pre class="source">
+@JSName('scrollIntoViewIfNeeded')
+@DomName('Element.scrollIntoViewIfNeeded')
+@DocsEditable
+void $dom_scrollIntoViewIfNeeded([bool centerIfNeeded]) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_setAttribute">
+<button class="show-code">Code</button>
+void <strong>$dom_setAttribute</strong>(<a href="../dart_core/String.html">String</a> name, <a href="../dart_core/String.html">String</a> value) <a class="anchor-link" href="#$dom_setAttribute"
+              title="Permalink to ForeignObjectElement.$dom_setAttribute">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Set the value of the named attribute from the current node.</p>
+<pre class="source">
+@JSName('setAttribute')
+@DomName('Element.setAttribute')
+@DocsEditable
+void $dom_setAttribute(String name, String value) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_setAttributeNS">
+<button class="show-code">Code</button>
+void <strong>$dom_setAttributeNS</strong>(<a href="../dart_core/String.html">String</a> namespaceURI, <a href="../dart_core/String.html">String</a> qualifiedName, <a href="../dart_core/String.html">String</a> value) <a class="anchor-link" href="#$dom_setAttributeNS"
+              title="Permalink to ForeignObjectElement.$dom_setAttributeNS">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Element.html">Element</a> </div><div class="doc">
+<p> Set the value of the attribute with the specified name and namespace, from the current node.</p>
+<pre class="source">
+@JSName('setAttributeNS')
+@DomName('Element.setAttributeNS')
+@DocsEditable
+void $dom_setAttributeNS(String namespaceURI, String qualifiedName, String value) native;
+</pre>
+</div>
+</div>
+</div>
+          <p class="mdn-attribution">
+          <a href="https://developer.mozilla.org">
+            <img src="../mdn-logo-tiny.png" class="mdn-logo" />
+          </a>
+          This page includes <a href="https://developer.mozilla.org/en/DOM/element">content</a> from the
+          <a href="http://www.mozilla.org/">Mozilla Foundation</a> that is graciously
+          <a href="https://developer.mozilla.org/Project:Copyrights">licensed</a> under a
+          <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons: Attribution-Sharealike license</a>.
+          Mozilla has no other association with Dart or dartlang.org. We
+          encourage you to improve the web by
+          <a href="https://developer.mozilla.org/Project:en/How_to_Help">contributing</a> to
+          <a href="https://developer.mozilla.org">The Mozilla Developer Network</a>.
+          </p>
+          
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:41.962</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

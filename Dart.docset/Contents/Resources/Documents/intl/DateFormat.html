@@ -1,0 +1,2234 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>DateFormat class / intl Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="intl" data-type="DateFormat">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../intl.html">intl</a> &rsaquo; <a href="../intl/DateFormat.html">DateFormat</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><ul class="icon">
+<li><a href="../intl/Bidi.html"><div class="icon-class"></div>Bidi</a></li>
+<li><a href="../intl/BidiFormatter.html"><div class="icon-class"></div>BidiFormatter</a></li>
+<li><div class="icon-class"></div><strong>DateFormat</strong></li>
+<li><a href="../intl/Intl.html"><div class="icon-class"></div>Intl</a></li>
+<li><a href="../intl/TextDirection.html"><div class="icon-class"></div>TextDirection</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>DateFormat</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>DateFormat is for formatting and parsing dates in a locale-sensitive
+manner.
+It allows the user to choose from a set of standard date time formats as well
+as specify a customized pattern under certain locales. Date elements that
+vary across locales include month name, week name, field order, etc.
+We also allow the user to use any customized pattern to parse or format
+date-time strings under certain locales. Date elements that vary across
+locales include month name, weekname, field, order, etc.</p>
+<p>The actual date for the locales must be obtained. This can currently be done
+in one of three ways, determined by which library you import. If you only
+want to use en_US formatting you can use it directly, as a copy of that
+locale is hard-coded into the formatter. In all other cases,
+the <code>initializeDateFormatting</code> method must be called and will return a future
+that is complete once the locale data is available. The result of the future
+isn't important, but the data for that locale is available to the date
+formatting and parsing once it completes.</p>
+<p>The easiest option is that the data may be available locally, imported in a
+library that contains data for all the locales.</p>
+<pre><code>  import 'package:intl/date_symbol_data_local.dart';
+  initializeDateFormatting("en_US", null).then((_) =&gt; runMyCode());
+</code></pre>
+<p>If we are running outside of a browser, we may want to read the data
+from files in the file system.</p>
+<pre><code>  import 'package:intl/date_symbol_data_file.dart';
+  initializeDateFormatting("de_DE", null).then((_) =&gt; runMyCode());
+</code></pre>
+<p>If we are running in a browser, we may want to read the data from the
+server using the XmlHttpRequest mechanism.</p>
+<pre><code>  import 'package:intl/date_symbol_data_http_request.dart';
+  initializeDateFormatting("pt_BR", null).then((_) =&gt; runMyCode());
+</code></pre>
+<p>The code in example/basic/basic_example.dart shows a full example of
+using this mechanism.</p>
+<p>Once we have the locale data, we need to specify the particular format.
+This library uses the ICU/JDK date/time pattern specification both for
+complete format specifications and also the abbreviated "skeleton" form
+which can also adapt to different locales and is preferred where available.</p>
+<p>Skeletons: These can be specified either as the ICU constant name or as the
+skeleton to which it resolves. The supported set of skeletons is as follows</p>
+<pre><code> ICU Name                   Skeleton
+ --------                   --------
+ DAY                          d
+ ABBR_WEEKDAY                 E
+ WEEKDAY                      EEEE
+ ABBR_STANDALONE_MONTH        LLL
+ STANDALONE_MONTH             LLLL
+ NUM_MONTH                    M
+ NUM_MONTH_DAY                Md
+ NUM_MONTH_WEEKDAY_DAY        MEd
+ ABBR_MONTH                   MMM
+ ABBR_MONTH_DAY               MMMd
+ ABBR_MONTH_WEEKDAY_DAY       MMMEd
+ MONTH                        MMMM
+ MONTH_DAY                    MMMMd
+ MONTH_WEEKDAY_DAY            MMMMEEEEd
+ ABBR_QUARTER                 QQQ
+ QUARTER                      QQQQ
+ YEAR                         y
+ YEAR_NUM_MONTH               yM
+ YEAR_NUM_MONTH_DAY           yMd
+ YEAR_NUM_MONTH_WEEKDAY_DAY   yMEd
+ YEAR_ABBR_MONTH              yMMM
+ YEAR_ABBR_MONTH_DAY          yMMMd
+ YEAR_ABBR_MONTH_WEEKDAY_DAY  yMMMEd
+ YEAR_MONTH                   yMMMM
+ YEAR_MONTH_DAY               yMMMMd
+ YEAR_MONTH_WEEKDAY_DAY       yMMMMEEEEd
+ YEAR_ABBR_QUARTER            yQQQ
+ YEAR_QUARTER                 yQQQQ
+ HOUR24                       H
+ HOUR24_MINUTE                Hm
+ HOUR24_MINUTE_SECOND         Hms
+ HOUR                         j
+ HOUR_MINUTE                  jm
+ HOUR_MINUTE_SECOND           jms
+ HOUR_MINUTE_GENERIC_TZ       jmv
+ HOUR_MINUTE_TZ               jmz
+ HOUR_GENERIC_TZ              jv
+ HOUR_TZ                      jz
+ MINUTE                       m
+ MINUTE_SECOND                ms
+ SECOND                       s
+</code></pre>
+<p>Examples Using the US Locale:</p>
+<pre><code> Pattern                           Result
+ ----------------                  -------
+ new DateFormat.yMd()             -&gt; 07/10/1996
+ new DateFormat("yMd")            -&gt; 07/10/1996
+ new DateFormat.yMMMMd("en_US")   -&gt; July 10, 1996
+ new DateFormat("Hm", "en_US")    -&gt; 12:08 PM
+ new DateFormat.yMd().Hm()        -&gt; 07/10/1996 12:08 PM
+</code></pre>
+<p>Explicit Pattern Syntax: Formats can also be specified with a pattern string.
+The skeleton forms will resolve to explicit patterns of this form, but will
+also adapt to different patterns in different locales.
+The following characters are reserved:</p>
+<pre><code>Symbol   Meaning                Presentation        Example
+------   -------                ------------        -------
+G        era designator         (Text)              AD
+y        year                   (Number)            1996
+M        month in year          (Text &amp; Number)     July &amp; 07
+L        standalone month       (Text &amp; Number)     July &amp; 07
+d        day in month           (Number)            10
+c        standalone day         (Number)            10
+h        hour in am/pm (1~12)   (Number)            12
+H        hour in day (0~23)     (Number)            0
+m        minute in hour         (Number)            30
+s        second in minute       (Number)            55
+S        fractional second      (Number)            978
+E        day of week            (Text)              Tuesday
+D        day in year            (Number)            189
+a        am/pm marker           (Text)              PM
+k        hour in day (1~24)     (Number)            24
+K        hour in am/pm (0~11)   (Number)            0
+z        time zone              (Text)              Pacific Standard Time
+Z        time zone (RFC 822)    (Number)            -0800
+v        time zone (generic)    (Text)              Pacific Time
+Q        quarter                (Text)              Q3
+'        escape for text        (Delimiter)         'Date='
+''       single quote           (Literal)           'o''clock'
+</code></pre>
+<p>The count of pattern letters determine the format.</p>
+<p><strong>Text</strong>:
+<em> 5 pattern letters--use narrow form for standalone. Otherwise does not apply
+</em> 4 or more pattern letters--use full form,
+<em> 3 pattern letters--use short or abbreviated form if one exists
+</em> less than 3--use numeric form if one exists</p>
+<p><strong>Number</strong>: the minimum number of digits. Shorter numbers are zero-padded to
+this amount (e.g. if "m" produces "6", "mm" produces "06"). Year is handled
+specially; that is, if the count of 'y' is 2, the Year will be truncated to
+2 digits. (e.g., if "yyyy" produces "1997", "yy" produces "97".) Unlike other
+fields, fractional seconds are padded on the right with zero.</p>
+<p><strong>(Text &amp; Number)</strong>: 3 or over, use text, otherwise use number.</p>
+<p>Any characters not in the pattern will be treated as quoted text. For
+instance, characters like ':', '.', ' ', '#' and '@' will appear in the
+resulting text even though they are not enclosed in single quotes. In our
+current pattern usage, not all letters have meanings. But those unused
+letters are strongly discouraged to be used as quoted text without quotes,
+because we may use other letters as pattern characters in the future.</p>
+<p>Examples Using the US Locale:</p>
+<pre><code>Format Pattern                     Result
+--------------                     -------
+"yyyy.MM.dd G 'at' HH:mm:ss vvvv"  1996.07.10 AD at 15:08:56 Pacific Time
+"EEE, MMM d, ''yy"                 Wed, July 10, '96
+"h:mm a"                           12:08 PM
+"hh 'o''clock' a, zzzz"            12 o'clock PM, Pacific Daylight Time
+"K:mm a, vvv"                      0:00 PM, PT
+"yyyyy.MMMMM.dd GGG hh:mm aaa"     01996.July.10 AD 12:08 PM
+</code></pre>
+<p>When parsing a date string using the abbreviated year pattern ("yy"),
+DateFormat must interpret the abbreviated year relative to some
+century. It does this by adjusting dates to be within 80 years before and 20
+years after the time the parse function is called. For example, using a
+pattern of "MM/dd/yy" and a DateParse instance created on Jan 1, 1997,
+the string "01/11/12" would be interpreted as Jan 11, 2012 while the string
+"05/04/64" would be interpreted as May 4, 1964. During parsing, only
+strings consisting of exactly two digits, as defined by {@link
+java.lang.Character#isDigit(char)}, will be parsed into the default
+century. Any other numeric string, such as a one digit string, a three or
+more digit string will be interpreted as its face value.</p>
+<p>If the year pattern does not have exactly two 'y' characters, the year is
+interpreted literally, regardless of the number of digits. So using the
+pattern "MM/dd/yyyy", "01/11/12" parses to Jan 11, 12 A.D.</p>
+<pre class="source">
+class DateFormat {
+
+ /**
+  * Creates a new DateFormat, using the format specified by [newPattern]. For
+  * forms that match one of our predefined skeletons, we look up the
+  * corresponding pattern in [locale] (or in the default locale if none is
+  * specified) and use the resulting full format string. This is the
+  * preferred usage, but if [newPattern] does not match one of the skeletons,
+  * then it is used as a format directly, but will not be adapted to suit
+  * the locale.
+  *
+  * For example, in an en_US locale, specifying the skeleton
+  *     new DateFormat('yMEd');
+  * or the explicit
+  *     new DateFormat('EEE, M/d/y');
+  * would produce the same result, a date of the form
+  *     Wed, 6/27/2012
+  * The first version would produce a different format string if used in
+  * another locale, but the second format would always be the same.
+  *
+  * If [locale] does not exist in our set of supported locales then an
+  * [ArgumentError] is thrown.
+  */
+ DateFormat([String newPattern, String locale]) {
+   // TODO(alanknight): It should be possible to specify multiple skeletons eg
+   // date, time, timezone all separately. Adding many or named parameters to
+   // the constructor seems awkward, especially with the possibility of
+   // confusion with the locale. A "fluent" interface with cascading on an
+   // instance might work better? A list of patterns is also possible.
+   _locale = Intl.verifiedLocale(locale, localeExists);
+   addPattern(newPattern);
+ }
+
+ /**
+  * Return a string representing [date] formatted according to our locale
+  * and internal format.
+  */
+ String format(DateTime date) {
+   // TODO(efortuna): read optional TimeZone argument (or similar)?
+   var result = new StringBuffer();
+   _formatFields.forEach((field) =&gt; result.add(field.format(date)));
+   return result.toString();
+ }
+
+ /**
+  * Returns a date string indicating how long ago (3 hours, 2 minutes)
+  * something has happened or how long in the future something will happen
+  * given a [reference] DateTime relative to the current time.
+  */
+ String formatDuration(DateTime reference) {
+   return '';
+ }
+
+ /**
+  * Formats a string indicating how long ago (negative [duration]) or how far
+  * in the future (positive [duration]) some time is with respect to a
+  * reference [date].
+  */
+ String formatDurationFrom(Duration duration, DateTime date) {
+   return '';
+ }
+
+ /**
+  * Given user input, attempt to parse the [inputString] into the anticipated
+  * format, treating it as being in the local timezone.
+  */
+ DateTime parse(String inputString, [utc = false]) {
+   // TODO(alanknight): The Closure code refers to special parsing of numeric
+   // values with no delimiters, which we currently don't do. Should we?
+   var dateFields = new _DateBuilder();
+   if (utc) dateFields.utc=true;
+   var stream = new _Stream(inputString);
+   _formatFields.forEach(
+       (each) =&gt; each.parse(stream, dateFields));
+   return dateFields.asDate();
+ }
+
+ /**
+  * Given user input, attempt to parse the [inputString] into the anticipated
+  * format, treating it as being in UTC.
+  */
+ DateTime parseUTC(String inputString) {
+   return parse(inputString, true);
+ }
+
+ /**
+  * Return the locale code in which we operate, e.g. 'en_US' or 'pt'.
+  */
+ String get locale =&gt; _locale;
+
+ /**
+  * Returns a list of all locales for which we have date formatting
+  * information.
+  */
+ static List&lt;String&gt; allLocalesWithSymbols() =&gt; dateTimeSymbols.keys.toList();
+
+ /**
+  * The named constructors for this class are all conveniences for creating
+  * instances using one of the known "skeleton" formats, and having code
+  * completion support for discovering those formats.
+  * So,
+  *     new DateFormat.yMd("en_US")
+  * is equivalent to
+  *     new DateFormat("yMd", "en_US")
+  * To create a compound format you can use these constructors in combination
+  * with the add_ methods below. e.g.
+  *     new DateFormat.yMd().add_Hms();
+  * If the optional [locale] is omitted, the format will be created using the
+  * default locale in [Intl.systemLocale].
+  */
+ DateFormat.d([locale]) : this("d", locale);
+ DateFormat.E([locale]) : this("E", locale);
+ DateFormat.EEEE([locale]) : this("EEEE", locale);
+ DateFormat.LLL([locale]) : this("LLL", locale);
+ DateFormat.LLLL([locale]) : this("LLLL", locale);
+ DateFormat.M([locale]) : this("M", locale);
+ DateFormat.Md([locale]) : this("Md", locale);
+ DateFormat.MEd([locale]) : this("MEd", locale);
+ DateFormat.MMM([locale]) : this("MMM", locale);
+ DateFormat.MMMd([locale]) : this("MMMd", locale);
+ DateFormat.MMMEd([locale]) : this("MMMEd", locale);
+ DateFormat.MMMM([locale]) : this("MMMM", locale);
+ DateFormat.MMMMd([locale]) : this("MMMMd", locale);
+ DateFormat.MMMMEEEEd([locale]) : this("MMMMEEEEd", locale);
+ DateFormat.QQQ([locale]) : this("QQQ", locale);
+ DateFormat.QQQQ([locale]) : this("QQQQ", locale);
+ DateFormat.y([locale]) : this("y", locale);
+ DateFormat.yM([locale]) : this("yM", locale);
+ DateFormat.yMd([locale]) : this("yMd", locale);
+ DateFormat.yMEd([locale]) : this("yMEd", locale);
+ DateFormat.yMMM([locale]) : this("yMMM", locale);
+ DateFormat.yMMMd([locale]) : this("yMMMd", locale);
+ DateFormat.yMMMEd([locale]) : this("yMMMEd", locale);
+ DateFormat.yMMMM([locale]) : this("yMMMM", locale);
+ DateFormat.yMMMMd([locale]) : this("yMMMMd", locale);
+ DateFormat.yMMMMEEEEd([locale]) : this("yMMMMEEEEd", locale);
+ DateFormat.yQQQ([locale]) : this("yQQQ", locale);
+ DateFormat.yQQQQ([locale]) : this("yQQQQ", locale);
+ DateFormat.H([locale]) : this("H", locale);
+ DateFormat.Hm([locale]) : this("Hm", locale);
+ DateFormat.Hms([locale]) : this("Hms", locale);
+ DateFormat.j([locale]) : this("j", locale);
+ DateFormat.jm([locale]) : this("jm", locale);
+ DateFormat.jms([locale]) : this("jms", locale);
+ DateFormat.jmv([locale]) : this("jmv", locale);
+ DateFormat.jmz([locale]) : this("jmz", locale);
+ DateFormat.jv([locale]) : this("jv", locale);
+ DateFormat.jz([locale]) : this("jz", locale);
+ DateFormat.m([locale]) : this("m", locale);
+ DateFormat.ms([locale]) : this("ms", locale);
+ DateFormat.s([locale]) : this("s", locale);
+
+ /**
+  * The "add_*" methods append a particular skeleton to the format, or set
+  * it as the only format if none was previously set. These are primarily
+  * useful for creating compound formats. For example
+  *       new DateFormat.yMd().add_Hms();
+  * would create a date format that prints both the date and the time.
+  */
+ DateFormat add_d() =&gt; addPattern("d");
+ DateFormat add_E() =&gt; addPattern("E");
+ DateFormat add_EEEE() =&gt; addPattern("EEEE");
+ DateFormat add_LLL() =&gt; addPattern("LLL");
+ DateFormat add_LLLL() =&gt; addPattern("LLLL");
+ DateFormat add_M() =&gt; addPattern("M");
+ DateFormat add_Md() =&gt; addPattern("Md");
+ DateFormat add_MEd() =&gt; addPattern("MEd");
+ DateFormat add_MMM() =&gt; addPattern("MMM");
+ DateFormat add_MMMd() =&gt; addPattern("MMMd");
+ DateFormat add_MMMEd() =&gt; addPattern("MMMEd");
+ DateFormat add_MMMM() =&gt; addPattern("MMMM");
+ DateFormat add_MMMMd() =&gt; addPattern("MMMMd");
+ DateFormat add_MMMMEEEEd() =&gt; addPattern("MMMMEEEEd");
+ DateFormat add_QQQ() =&gt; addPattern("QQQ");
+ DateFormat add_QQQQ() =&gt; addPattern("QQQQ");
+ DateFormat add_y() =&gt; addPattern("y");
+ DateFormat add_yM() =&gt; addPattern("yM");
+ DateFormat add_yMd() =&gt; addPattern("yMd");
+ DateFormat add_yMEd() =&gt; addPattern("yMEd");
+ DateFormat add_yMMM() =&gt; addPattern("yMMM");
+ DateFormat add_yMMMd() =&gt; addPattern("yMMMd");
+ DateFormat add_yMMMEd() =&gt; addPattern("yMMMEd");
+ DateFormat add_yMMMM() =&gt; addPattern("yMMMM");
+ DateFormat add_yMMMMd() =&gt; addPattern("yMMMMd");
+ DateFormat add_yMMMMEEEEd() =&gt; addPattern("yMMMMEEEEd");
+ DateFormat add_yQQQ() =&gt; addPattern("yQQQ");
+ DateFormat add_yQQQQ() =&gt; addPattern("yQQQQ");
+ DateFormat add_H() =&gt; addPattern("H");
+ DateFormat add_Hm() =&gt; addPattern("Hm");
+ DateFormat add_Hms() =&gt; addPattern("Hms");
+ DateFormat add_j() =&gt; addPattern("j");
+ DateFormat add_jm() =&gt; addPattern("jm");
+ DateFormat add_jms() =&gt; addPattern("jms");
+ DateFormat add_jmv() =&gt; addPattern("jmv");
+ DateFormat add_jmz() =&gt; addPattern("jmz");
+ DateFormat add_jv() =&gt; addPattern("jv");
+ DateFormat add_jz() =&gt; addPattern("jz");
+ DateFormat add_m() =&gt; addPattern("m");
+ DateFormat add_ms() =&gt; addPattern("ms");
+ DateFormat add_s() =&gt; addPattern("s");
+
+ /**
+  * For each of the skeleton formats we also allow the use of the corresponding
+  * ICU constant names.
+  */
+ static const String ABBR_MONTH = 'MMM';
+ static const String DAY = 'd';
+ static const String ABBR_WEEKDAY = 'E';
+ static const String WEEKDAY = 'EEEE';
+ static const String ABBR_STANDALONE_MONTH = 'LLL';
+ static const String STANDALONE_MONTH = 'LLLL';
+ static const String NUM_MONTH = 'M';
+ static const String NUM_MONTH_DAY = 'Md';
+ static const String NUM_MONTH_WEEKDAY_DAY = 'MEd';
+ static const String ABBR_MONTH_DAY = 'MMMd';
+ static const String ABBR_MONTH_WEEKDAY_DAY = 'MMMEd';
+ static const String MONTH = 'MMMM';
+ static const String MONTH_DAY = 'MMMMd';
+ static const String MONTH_WEEKDAY_DAY = 'MMMMEEEEd';
+ static const String ABBR_QUARTER = 'QQQ';
+ static const String QUARTER = 'QQQQ';
+ static const String YEAR = 'y';
+ static const String YEAR_NUM_MONTH = 'yM';
+ static const String YEAR_NUM_MONTH_DAY = 'yMd';
+ static const String YEAR_NUM_MONTH_WEEKDAY_DAY = 'yMEd';
+ static const String YEAR_ABBR_MONTH = 'yMMM';
+ static const String YEAR_ABBR_MONTH_DAY = 'yMMMd';
+ static const String YEAR_ABBR_MONTH_WEEKDAY_DAY = 'yMMMEd';
+ static const String YEAR_MONTH = 'yMMMM';
+ static const String YEAR_MONTH_DAY = 'yMMMMd';
+ static const String YEAR_MONTH_WEEKDAY_DAY = 'yMMMMEEEEd';
+ static const String YEAR_ABBR_QUARTER = 'yQQQ';
+ static const String YEAR_QUARTER = 'yQQQQ';
+ static const String HOUR24 = 'H';
+ static const String HOUR24_MINUTE = 'Hm';
+ static const String HOUR24_MINUTE_SECOND = 'Hms';
+ static const String HOUR = 'j';
+ static const String HOUR_MINUTE = 'jm';
+ static const String HOUR_MINUTE_SECOND = 'jms';
+ static const String HOUR_MINUTE_GENERIC_TZ = 'jmv';
+ static const String HOUR_MINUTE_TZ = 'jmz';
+ static const String HOUR_GENERIC_TZ = 'jv';
+ static const String HOUR_TZ = 'jz';
+ static const String MINUTE = 'm';
+ static const String MINUTE_SECOND = 'ms';
+ static const String SECOND = 's';
+
+ /** The locale in which we operate, e.g. 'en_US', or 'pt'. */
+ String _locale;
+
+ /**
+  * The full template string. This may have been specified directly, or
+  * it may have been derived from a skeleton and the locale information
+  * on how to interpret that skeleton.
+  */
+ String _pattern;
+
+ /**
+  * We parse the format string into individual [_DateFormatField] objects
+  * that are used to do the actual formatting and parsing. Do not use
+  * this variable directly, use the getter [_formatFields].
+  */
+ List&lt;_DateFormatField&gt; _formatFieldsPrivate;
+
+ /**
+  * Getter for [_formatFieldsPrivate] that lazily initializes it.
+  */
+ get _formatFields {
+   if (_formatFieldsPrivate == null) {
+     if (_pattern == null) _useDefaultPattern();
+     _formatFieldsPrivate = parsePattern(_pattern);
+   }
+   return _formatFieldsPrivate;
+ }
+
+ /**
+  * We are being asked to do formatting without having set any pattern.
+  * Use a default.
+  */
+ _useDefaultPattern() {
+   add_yMMMMd();
+   add_jms();
+ }
+
+ /**
+  * A series of regular expressions used to parse a format string into its
+  * component fields.
+  */
+ static List&lt;Pattern&gt; _matchers = [
+     // Quoted String - anything between single quotes, with escaping
+     //   of single quotes by doubling them.
+     // e.g. in the pattern "hh 'o''clock'" will match 'o''clock'
+     new RegExp("^\'(?:[^\']|\'\')*\'"),
+     // Fields - any sequence of 1 or more of the same field characters.
+     // e.g. in "hh:mm:ss" will match hh, mm, and ss. But in "hms" would
+     // match each letter individually.
+     new RegExp(
+       "^(?:G+|y+|M+|k+|S+|E+|a+|h+|K+|H+|c+|L+|Q+|d+|m+|s+|v+|z+|Z+)"),
+     // Everything else - A sequence that is not quotes or field characters.
+     // e.g. in "hh:mm:ss" will match the colons.
+     new RegExp("^[^\'GyMkSEahKHcLQdmsvzZ]+")
+ ];
+
+ /**
+  * Set our pattern, appending it to any existing patterns. Also adds a single
+  * space to separate the two.
+  */
+ _appendPattern(String inputPattern, [String separator = ' ']) {
+   if (_pattern == null) {
+     _pattern = inputPattern;
+   } else {
+     _pattern = "$_pattern$separator$inputPattern";
+   }
+ }
+
+ /**
+  * Add [inputPattern] to this instance as a pattern. If there was a previous
+  * pattern, then this appends to it, separating the two by [separator].
+  * [inputPattern] is first looked up in our list of known skeletons.
+  * If it's found there, then use the corresponding pattern for this locale.
+  * If it's not, then treat [inputPattern] as an explicit pattern.
+  */
+ DateFormat addPattern(String inputPattern, [String separator = ' ']) {
+   // TODO(alanknight): This is an expensive operation. Caching recently used
+   // formats, or possibly introducing an entire "locale" object that would
+   // cache patterns for that locale could be a good optimization.
+   // If we have already parsed the format fields, reset them.
+   _formatFieldsPrivate = null;
+   if (inputPattern == null) return this;
+   if (!_availableSkeletons.containsKey(inputPattern)) {
+     _appendPattern(inputPattern, separator);
+   } else {
+     _appendPattern(_availableSkeletons[inputPattern], separator);
+   }
+   return this;
+ }
+
+ /** Return the pattern that we use to format dates.*/
+ get pattern =&gt; _pattern;
+
+ /** Return the skeletons for our current locale. */
+ Map get _availableSkeletons {
+   return dateTimePatterns[locale];
+ }
+
+ /**
+  * Set the locale. If the locale can't be found, we also look up
+  * based on alternative versions, e.g. if we have no 'en_CA' we will
+  * look for 'en' as a fallback. It will also translate en-ca into en_CA.
+  * Null is also considered a valid value for [newLocale], indicating
+  * to use the default.
+  */
+ _setLocale(String newLocale) {
+   _locale = Intl.verifiedLocale(newLocale, localeExists);
+ }
+
+ /**
+  * Return true if the locale exists, or if it is null. The null case
+  * is interpreted to mean that we use the default locale.
+  */
+ static bool localeExists(localeName) {
+   if (localeName == null) return false;
+   return dateTimeSymbols.containsKey(localeName);
+ }
+
+ static List get _fieldConstructors =&gt; [
+     (pattern, parent) =&gt; new _DateFormatQuotedField(pattern, parent),
+     (pattern, parent) =&gt; new _DateFormatPatternField(pattern, parent),
+     (pattern, parent) =&gt; new _DateFormatLiteralField(pattern, parent)];
+
+ /** Parse the template pattern and return a list of field objects.*/
+ List parsePattern(String pattern) {
+   if (pattern == null) return null;
+   return _reverse(_parsePatternHelper(pattern));
+ }
+
+ /** Recursive helper for parsing the template pattern. */
+ List _parsePatternHelper(String pattern) {
+   if (pattern.isEmpty) return [];
+
+   var matched = _match(pattern);
+   if (matched == null) return [];
+
+   var parsed = _parsePatternHelper(
+                     pattern.substring(matched.fullPattern().length));
+   parsed.add(matched);
+   return parsed;
+ }
+
+ /** Find elements in a string that are patterns for specific fields.*/
+ _DateFormatField _match(String pattern) {
+   for (var i = 0; i &lt; _matchers.length; i++) {
+     var regex = _matchers[i];
+     var match = regex.firstMatch(pattern);
+     if (match != null) {
+       return _fieldConstructors[i](match.group(0), this);
+     }
+   }
+ }
+
+ /** Polyfill for missing library function. */
+ List _reverse(List list) {
+   // TODO(alanknight): Use standardized list reverse when implemented.
+   // See Issue 2804.
+   var result = new List();
+   for (var i = list.length-1; i &gt;= 0; i--) {
+     result.addLast(list[i]);
+   }
+   return result;
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="ABBR_MONTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>ABBR_MONTH</strong> <a class="anchor-link"
+            href="#ABBR_MONTH"
+            title="Permalink to DateFormat.ABBR_MONTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ABBR_MONTH = 'MMM'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ABBR_MONTH_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>ABBR_MONTH_DAY</strong> <a class="anchor-link"
+            href="#ABBR_MONTH_DAY"
+            title="Permalink to DateFormat.ABBR_MONTH_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ABBR_MONTH_DAY = 'MMMd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ABBR_MONTH_WEEKDAY_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>ABBR_MONTH_WEEKDAY_DAY</strong> <a class="anchor-link"
+            href="#ABBR_MONTH_WEEKDAY_DAY"
+            title="Permalink to DateFormat.ABBR_MONTH_WEEKDAY_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ABBR_MONTH_WEEKDAY_DAY = 'MMMEd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ABBR_QUARTER">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>ABBR_QUARTER</strong> <a class="anchor-link"
+            href="#ABBR_QUARTER"
+            title="Permalink to DateFormat.ABBR_QUARTER">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ABBR_QUARTER = 'QQQ'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ABBR_STANDALONE_MONTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>ABBR_STANDALONE_MONTH</strong> <a class="anchor-link"
+            href="#ABBR_STANDALONE_MONTH"
+            title="Permalink to DateFormat.ABBR_STANDALONE_MONTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ABBR_STANDALONE_MONTH = 'LLL'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ABBR_WEEKDAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>ABBR_WEEKDAY</strong> <a class="anchor-link"
+            href="#ABBR_WEEKDAY"
+            title="Permalink to DateFormat.ABBR_WEEKDAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ABBR_WEEKDAY = 'E'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>DAY</strong> <a class="anchor-link"
+            href="#DAY"
+            title="Permalink to DateFormat.DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+DAY = 'd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR</strong> <a class="anchor-link"
+            href="#HOUR"
+            title="Permalink to DateFormat.HOUR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR = 'j'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR24">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR24</strong> <a class="anchor-link"
+            href="#HOUR24"
+            title="Permalink to DateFormat.HOUR24">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR24 = 'H'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR24_MINUTE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR24_MINUTE</strong> <a class="anchor-link"
+            href="#HOUR24_MINUTE"
+            title="Permalink to DateFormat.HOUR24_MINUTE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR24_MINUTE = 'Hm'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR24_MINUTE_SECOND">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR24_MINUTE_SECOND</strong> <a class="anchor-link"
+            href="#HOUR24_MINUTE_SECOND"
+            title="Permalink to DateFormat.HOUR24_MINUTE_SECOND">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR24_MINUTE_SECOND = 'Hms'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR_GENERIC_TZ">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR_GENERIC_TZ</strong> <a class="anchor-link"
+            href="#HOUR_GENERIC_TZ"
+            title="Permalink to DateFormat.HOUR_GENERIC_TZ">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR_GENERIC_TZ = 'jv'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR_MINUTE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR_MINUTE</strong> <a class="anchor-link"
+            href="#HOUR_MINUTE"
+            title="Permalink to DateFormat.HOUR_MINUTE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR_MINUTE = 'jm'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR_MINUTE_GENERIC_TZ">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR_MINUTE_GENERIC_TZ</strong> <a class="anchor-link"
+            href="#HOUR_MINUTE_GENERIC_TZ"
+            title="Permalink to DateFormat.HOUR_MINUTE_GENERIC_TZ">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR_MINUTE_GENERIC_TZ = 'jmv'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR_MINUTE_SECOND">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR_MINUTE_SECOND</strong> <a class="anchor-link"
+            href="#HOUR_MINUTE_SECOND"
+            title="Permalink to DateFormat.HOUR_MINUTE_SECOND">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR_MINUTE_SECOND = 'jms'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR_MINUTE_TZ">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR_MINUTE_TZ</strong> <a class="anchor-link"
+            href="#HOUR_MINUTE_TZ"
+            title="Permalink to DateFormat.HOUR_MINUTE_TZ">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR_MINUTE_TZ = 'jmz'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HOUR_TZ">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>HOUR_TZ</strong> <a class="anchor-link"
+            href="#HOUR_TZ"
+            title="Permalink to DateFormat.HOUR_TZ">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HOUR_TZ = 'jz'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MINUTE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>MINUTE</strong> <a class="anchor-link"
+            href="#MINUTE"
+            title="Permalink to DateFormat.MINUTE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MINUTE = 'm'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MINUTE_SECOND">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>MINUTE_SECOND</strong> <a class="anchor-link"
+            href="#MINUTE_SECOND"
+            title="Permalink to DateFormat.MINUTE_SECOND">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MINUTE_SECOND = 'ms'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MONTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>MONTH</strong> <a class="anchor-link"
+            href="#MONTH"
+            title="Permalink to DateFormat.MONTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MONTH = 'MMMM'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MONTH_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>MONTH_DAY</strong> <a class="anchor-link"
+            href="#MONTH_DAY"
+            title="Permalink to DateFormat.MONTH_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MONTH_DAY = 'MMMMd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MONTH_WEEKDAY_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>MONTH_WEEKDAY_DAY</strong> <a class="anchor-link"
+            href="#MONTH_WEEKDAY_DAY"
+            title="Permalink to DateFormat.MONTH_WEEKDAY_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MONTH_WEEKDAY_DAY = 'MMMMEEEEd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_MONTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>NUM_MONTH</strong> <a class="anchor-link"
+            href="#NUM_MONTH"
+            title="Permalink to DateFormat.NUM_MONTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_MONTH = 'M'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_MONTH_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>NUM_MONTH_DAY</strong> <a class="anchor-link"
+            href="#NUM_MONTH_DAY"
+            title="Permalink to DateFormat.NUM_MONTH_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_MONTH_DAY = 'Md'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NUM_MONTH_WEEKDAY_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>NUM_MONTH_WEEKDAY_DAY</strong> <a class="anchor-link"
+            href="#NUM_MONTH_WEEKDAY_DAY"
+            title="Permalink to DateFormat.NUM_MONTH_WEEKDAY_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NUM_MONTH_WEEKDAY_DAY = 'MEd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="QUARTER">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>QUARTER</strong> <a class="anchor-link"
+            href="#QUARTER"
+            title="Permalink to DateFormat.QUARTER">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+QUARTER = 'QQQQ'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SECOND">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>SECOND</strong> <a class="anchor-link"
+            href="#SECOND"
+            title="Permalink to DateFormat.SECOND">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SECOND = 's'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STANDALONE_MONTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>STANDALONE_MONTH</strong> <a class="anchor-link"
+            href="#STANDALONE_MONTH"
+            title="Permalink to DateFormat.STANDALONE_MONTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STANDALONE_MONTH = 'LLLL'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="WEEKDAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>WEEKDAY</strong> <a class="anchor-link"
+            href="#WEEKDAY"
+            title="Permalink to DateFormat.WEEKDAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WEEKDAY = 'EEEE'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR</strong> <a class="anchor-link"
+            href="#YEAR"
+            title="Permalink to DateFormat.YEAR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR = 'y'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_ABBR_MONTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_ABBR_MONTH</strong> <a class="anchor-link"
+            href="#YEAR_ABBR_MONTH"
+            title="Permalink to DateFormat.YEAR_ABBR_MONTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_ABBR_MONTH = 'yMMM'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_ABBR_MONTH_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_ABBR_MONTH_DAY</strong> <a class="anchor-link"
+            href="#YEAR_ABBR_MONTH_DAY"
+            title="Permalink to DateFormat.YEAR_ABBR_MONTH_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_ABBR_MONTH_DAY = 'yMMMd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_ABBR_MONTH_WEEKDAY_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_ABBR_MONTH_WEEKDAY_DAY</strong> <a class="anchor-link"
+            href="#YEAR_ABBR_MONTH_WEEKDAY_DAY"
+            title="Permalink to DateFormat.YEAR_ABBR_MONTH_WEEKDAY_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_ABBR_MONTH_WEEKDAY_DAY = 'yMMMEd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_ABBR_QUARTER">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_ABBR_QUARTER</strong> <a class="anchor-link"
+            href="#YEAR_ABBR_QUARTER"
+            title="Permalink to DateFormat.YEAR_ABBR_QUARTER">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_ABBR_QUARTER = 'yQQQ'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_MONTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_MONTH</strong> <a class="anchor-link"
+            href="#YEAR_MONTH"
+            title="Permalink to DateFormat.YEAR_MONTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_MONTH = 'yMMMM'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_MONTH_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_MONTH_DAY</strong> <a class="anchor-link"
+            href="#YEAR_MONTH_DAY"
+            title="Permalink to DateFormat.YEAR_MONTH_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_MONTH_DAY = 'yMMMMd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_MONTH_WEEKDAY_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_MONTH_WEEKDAY_DAY</strong> <a class="anchor-link"
+            href="#YEAR_MONTH_WEEKDAY_DAY"
+            title="Permalink to DateFormat.YEAR_MONTH_WEEKDAY_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_MONTH_WEEKDAY_DAY = 'yMMMMEEEEd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_NUM_MONTH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_NUM_MONTH</strong> <a class="anchor-link"
+            href="#YEAR_NUM_MONTH"
+            title="Permalink to DateFormat.YEAR_NUM_MONTH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_NUM_MONTH = 'yM'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_NUM_MONTH_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_NUM_MONTH_DAY</strong> <a class="anchor-link"
+            href="#YEAR_NUM_MONTH_DAY"
+            title="Permalink to DateFormat.YEAR_NUM_MONTH_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_NUM_MONTH_DAY = 'yMd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_NUM_MONTH_WEEKDAY_DAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_NUM_MONTH_WEEKDAY_DAY</strong> <a class="anchor-link"
+            href="#YEAR_NUM_MONTH_WEEKDAY_DAY"
+            title="Permalink to DateFormat.YEAR_NUM_MONTH_WEEKDAY_DAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_NUM_MONTH_WEEKDAY_DAY = 'yMEd'
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="YEAR_QUARTER">
+<button class="show-code">Code</button>
+const <a href="../dart_core/String.html">String</a>         <strong>YEAR_QUARTER</strong> <a class="anchor-link"
+            href="#YEAR_QUARTER"
+            title="Permalink to DateFormat.YEAR_QUARTER">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+YEAR_QUARTER = 'yQQQQ'
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="allLocalesWithSymbols">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt; <strong>allLocalesWithSymbols</strong>() <a class="anchor-link" href="#allLocalesWithSymbols"
+              title="Permalink to DateFormat.allLocalesWithSymbols">#</a></h4>
+<div class="doc">
+<p>Returns a list of all locales for which we have date formatting
+information.</p>
+<pre class="source">
+static List&lt;String&gt; allLocalesWithSymbols() =&gt; dateTimeSymbols.keys.toList();
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="localeExists">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>localeExists</strong>(localeName) <a class="anchor-link" href="#localeExists"
+              title="Permalink to DateFormat.localeExists">#</a></h4>
+<div class="doc">
+<p>Return true if the locale exists, or if it is null. The null case
+is interpreted to mean that we use the default locale.</p>
+<pre class="source">
+static bool localeExists(localeName) {
+ if (localeName == null) return false;
+ return dateTimeSymbols.containsKey(localeName);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="DateFormat">
+<button class="show-code">Code</button>
+new <strong>DateFormat</strong>([<a href="../dart_core/String.html">String</a> newPattern, <a href="../dart_core/String.html">String</a> locale]) <a class="anchor-link" href="#DateFormat"
+              title="Permalink to DateFormat.DateFormat">#</a></h4>
+<div class="doc">
+<p>Creates a new DateFormat, using the format specified by 
+<span class="param">newPattern</span>. For
+forms that match one of our predefined skeletons, we look up the
+corresponding pattern in 
+<span class="param">locale</span> (or in the default locale if none is
+specified) and use the resulting full format string. This is the
+preferred usage, but if 
+<span class="param">newPattern</span> does not match one of the skeletons,
+then it is used as a format directly, but will not be adapted to suit
+the locale.</p>
+<p>For example, in an en_US locale, specifying the skeleton</p>
+<pre><code>new DateFormat('yMEd');
+</code></pre>
+<p>or the explicit</p>
+<pre><code>new DateFormat('EEE, M/d/y');
+</code></pre>
+<p>would produce the same result, a date of the form</p>
+<pre><code>Wed, 6/27/2012
+</code></pre>
+<p>The first version would produce a different format string if used in
+another locale, but the second format would always be the same.</p>
+<p>If 
+<span class="param">locale</span> does not exist in our set of supported locales then an
+<code>ArgumentError</code> is thrown.</p>
+<pre class="source">
+DateFormat([String newPattern, String locale]) {
+ // TODO(alanknight): It should be possible to specify multiple skeletons eg
+ // date, time, timezone all separately. Adding many or named parameters to
+ // the constructor seems awkward, especially with the possibility of
+ // confusion with the locale. A "fluent" interface with cascading on an
+ // instance might work better? A list of patterns is also possible.
+ _locale = Intl.verifiedLocale(locale, localeExists);
+ addPattern(newPattern);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.d">
+<button class="show-code">Code</button>
+new <strong>DateFormat.d</strong>([locale]) <a class="anchor-link" href="#DateFormat.d"
+              title="Permalink to DateFormat.DateFormat.d">#</a></h4>
+<div class="doc">
+<p>The named constructors for this class are all conveniences for creating
+instances using one of the known "skeleton" formats, and having code
+completion support for discovering those formats.
+So,</p>
+<pre><code>new DateFormat.yMd("en_US")
+</code></pre>
+<p>is equivalent to</p>
+<pre><code>new DateFormat("yMd", "en_US")
+</code></pre>
+<p>To create a compound format you can use these constructors in combination
+with the add_ methods below. e.g.</p>
+<pre><code>new DateFormat.yMd().add_Hms();
+</code></pre>
+<p>If the optional 
+<span class="param">locale</span> is omitted, the format will be created using the
+default locale in <a class="crossref" href="../intl/Intl.html#systemLocale">Intl.systemLocale</a>.</p>
+<pre class="source">
+DateFormat.d([locale]) : this("d", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.E">
+<button class="show-code">Code</button>
+new <strong>DateFormat.E</strong>([locale]) <a class="anchor-link" href="#DateFormat.E"
+              title="Permalink to DateFormat.DateFormat.E">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.E([locale]) : this("E", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.EEEE">
+<button class="show-code">Code</button>
+new <strong>DateFormat.EEEE</strong>([locale]) <a class="anchor-link" href="#DateFormat.EEEE"
+              title="Permalink to DateFormat.DateFormat.EEEE">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.EEEE([locale]) : this("EEEE", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.H">
+<button class="show-code">Code</button>
+new <strong>DateFormat.H</strong>([locale]) <a class="anchor-link" href="#DateFormat.H"
+              title="Permalink to DateFormat.DateFormat.H">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.H([locale]) : this("H", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.Hm">
+<button class="show-code">Code</button>
+new <strong>DateFormat.Hm</strong>([locale]) <a class="anchor-link" href="#DateFormat.Hm"
+              title="Permalink to DateFormat.DateFormat.Hm">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.Hm([locale]) : this("Hm", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.Hms">
+<button class="show-code">Code</button>
+new <strong>DateFormat.Hms</strong>([locale]) <a class="anchor-link" href="#DateFormat.Hms"
+              title="Permalink to DateFormat.DateFormat.Hms">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.Hms([locale]) : this("Hms", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.j">
+<button class="show-code">Code</button>
+new <strong>DateFormat.j</strong>([locale]) <a class="anchor-link" href="#DateFormat.j"
+              title="Permalink to DateFormat.DateFormat.j">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.j([locale]) : this("j", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.jm">
+<button class="show-code">Code</button>
+new <strong>DateFormat.jm</strong>([locale]) <a class="anchor-link" href="#DateFormat.jm"
+              title="Permalink to DateFormat.DateFormat.jm">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.jm([locale]) : this("jm", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.jms">
+<button class="show-code">Code</button>
+new <strong>DateFormat.jms</strong>([locale]) <a class="anchor-link" href="#DateFormat.jms"
+              title="Permalink to DateFormat.DateFormat.jms">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.jms([locale]) : this("jms", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.jmv">
+<button class="show-code">Code</button>
+new <strong>DateFormat.jmv</strong>([locale]) <a class="anchor-link" href="#DateFormat.jmv"
+              title="Permalink to DateFormat.DateFormat.jmv">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.jmv([locale]) : this("jmv", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.jmz">
+<button class="show-code">Code</button>
+new <strong>DateFormat.jmz</strong>([locale]) <a class="anchor-link" href="#DateFormat.jmz"
+              title="Permalink to DateFormat.DateFormat.jmz">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.jmz([locale]) : this("jmz", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.jv">
+<button class="show-code">Code</button>
+new <strong>DateFormat.jv</strong>([locale]) <a class="anchor-link" href="#DateFormat.jv"
+              title="Permalink to DateFormat.DateFormat.jv">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.jv([locale]) : this("jv", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.jz">
+<button class="show-code">Code</button>
+new <strong>DateFormat.jz</strong>([locale]) <a class="anchor-link" href="#DateFormat.jz"
+              title="Permalink to DateFormat.DateFormat.jz">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.jz([locale]) : this("jz", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.LLL">
+<button class="show-code">Code</button>
+new <strong>DateFormat.LLL</strong>([locale]) <a class="anchor-link" href="#DateFormat.LLL"
+              title="Permalink to DateFormat.DateFormat.LLL">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.LLL([locale]) : this("LLL", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.LLLL">
+<button class="show-code">Code</button>
+new <strong>DateFormat.LLLL</strong>([locale]) <a class="anchor-link" href="#DateFormat.LLLL"
+              title="Permalink to DateFormat.DateFormat.LLLL">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.LLLL([locale]) : this("LLLL", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.M">
+<button class="show-code">Code</button>
+new <strong>DateFormat.M</strong>([locale]) <a class="anchor-link" href="#DateFormat.M"
+              title="Permalink to DateFormat.DateFormat.M">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.M([locale]) : this("M", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.m">
+<button class="show-code">Code</button>
+new <strong>DateFormat.m</strong>([locale]) <a class="anchor-link" href="#DateFormat.m"
+              title="Permalink to DateFormat.DateFormat.m">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.m([locale]) : this("m", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.Md">
+<button class="show-code">Code</button>
+new <strong>DateFormat.Md</strong>([locale]) <a class="anchor-link" href="#DateFormat.Md"
+              title="Permalink to DateFormat.DateFormat.Md">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.Md([locale]) : this("Md", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.MEd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.MEd</strong>([locale]) <a class="anchor-link" href="#DateFormat.MEd"
+              title="Permalink to DateFormat.DateFormat.MEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.MEd([locale]) : this("MEd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.MMM">
+<button class="show-code">Code</button>
+new <strong>DateFormat.MMM</strong>([locale]) <a class="anchor-link" href="#DateFormat.MMM"
+              title="Permalink to DateFormat.DateFormat.MMM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.MMM([locale]) : this("MMM", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.MMMd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.MMMd</strong>([locale]) <a class="anchor-link" href="#DateFormat.MMMd"
+              title="Permalink to DateFormat.DateFormat.MMMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.MMMd([locale]) : this("MMMd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.MMMEd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.MMMEd</strong>([locale]) <a class="anchor-link" href="#DateFormat.MMMEd"
+              title="Permalink to DateFormat.DateFormat.MMMEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.MMMEd([locale]) : this("MMMEd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.MMMM">
+<button class="show-code">Code</button>
+new <strong>DateFormat.MMMM</strong>([locale]) <a class="anchor-link" href="#DateFormat.MMMM"
+              title="Permalink to DateFormat.DateFormat.MMMM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.MMMM([locale]) : this("MMMM", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.MMMMd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.MMMMd</strong>([locale]) <a class="anchor-link" href="#DateFormat.MMMMd"
+              title="Permalink to DateFormat.DateFormat.MMMMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.MMMMd([locale]) : this("MMMMd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.MMMMEEEEd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.MMMMEEEEd</strong>([locale]) <a class="anchor-link" href="#DateFormat.MMMMEEEEd"
+              title="Permalink to DateFormat.DateFormat.MMMMEEEEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.MMMMEEEEd([locale]) : this("MMMMEEEEd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.ms">
+<button class="show-code">Code</button>
+new <strong>DateFormat.ms</strong>([locale]) <a class="anchor-link" href="#DateFormat.ms"
+              title="Permalink to DateFormat.DateFormat.ms">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.ms([locale]) : this("ms", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.QQQ">
+<button class="show-code">Code</button>
+new <strong>DateFormat.QQQ</strong>([locale]) <a class="anchor-link" href="#DateFormat.QQQ"
+              title="Permalink to DateFormat.DateFormat.QQQ">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.QQQ([locale]) : this("QQQ", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.QQQQ">
+<button class="show-code">Code</button>
+new <strong>DateFormat.QQQQ</strong>([locale]) <a class="anchor-link" href="#DateFormat.QQQQ"
+              title="Permalink to DateFormat.DateFormat.QQQQ">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.QQQQ([locale]) : this("QQQQ", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.s">
+<button class="show-code">Code</button>
+new <strong>DateFormat.s</strong>([locale]) <a class="anchor-link" href="#DateFormat.s"
+              title="Permalink to DateFormat.DateFormat.s">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.s([locale]) : this("s", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.y">
+<button class="show-code">Code</button>
+new <strong>DateFormat.y</strong>([locale]) <a class="anchor-link" href="#DateFormat.y"
+              title="Permalink to DateFormat.DateFormat.y">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.y([locale]) : this("y", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yM">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yM</strong>([locale]) <a class="anchor-link" href="#DateFormat.yM"
+              title="Permalink to DateFormat.DateFormat.yM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yM([locale]) : this("yM", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yMd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yMd</strong>([locale]) <a class="anchor-link" href="#DateFormat.yMd"
+              title="Permalink to DateFormat.DateFormat.yMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yMd([locale]) : this("yMd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yMEd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yMEd</strong>([locale]) <a class="anchor-link" href="#DateFormat.yMEd"
+              title="Permalink to DateFormat.DateFormat.yMEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yMEd([locale]) : this("yMEd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yMMM">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yMMM</strong>([locale]) <a class="anchor-link" href="#DateFormat.yMMM"
+              title="Permalink to DateFormat.DateFormat.yMMM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yMMM([locale]) : this("yMMM", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yMMMd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yMMMd</strong>([locale]) <a class="anchor-link" href="#DateFormat.yMMMd"
+              title="Permalink to DateFormat.DateFormat.yMMMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yMMMd([locale]) : this("yMMMd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yMMMEd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yMMMEd</strong>([locale]) <a class="anchor-link" href="#DateFormat.yMMMEd"
+              title="Permalink to DateFormat.DateFormat.yMMMEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yMMMEd([locale]) : this("yMMMEd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yMMMM">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yMMMM</strong>([locale]) <a class="anchor-link" href="#DateFormat.yMMMM"
+              title="Permalink to DateFormat.DateFormat.yMMMM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yMMMM([locale]) : this("yMMMM", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yMMMMd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yMMMMd</strong>([locale]) <a class="anchor-link" href="#DateFormat.yMMMMd"
+              title="Permalink to DateFormat.DateFormat.yMMMMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yMMMMd([locale]) : this("yMMMMd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yMMMMEEEEd">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yMMMMEEEEd</strong>([locale]) <a class="anchor-link" href="#DateFormat.yMMMMEEEEd"
+              title="Permalink to DateFormat.DateFormat.yMMMMEEEEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yMMMMEEEEd([locale]) : this("yMMMMEEEEd", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yQQQ">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yQQQ</strong>([locale]) <a class="anchor-link" href="#DateFormat.yQQQ"
+              title="Permalink to DateFormat.DateFormat.yQQQ">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yQQQ([locale]) : this("yQQQ", locale);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="DateFormat.yQQQQ">
+<button class="show-code">Code</button>
+new <strong>DateFormat.yQQQQ</strong>([locale]) <a class="anchor-link" href="#DateFormat.yQQQQ"
+              title="Permalink to DateFormat.DateFormat.yQQQQ">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat.yQQQQ([locale]) : this("yQQQQ", locale);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="locale">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>locale</strong> <a class="anchor-link"
+            href="#locale"
+            title="Permalink to DateFormat.locale">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the locale code in which we operate, e.g. 'en_US' or 'pt'.</p>
+<pre class="source">
+String get locale =&gt; _locale;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pattern">
+<button class="show-code">Code</button>
+final         <strong>pattern</strong> <a class="anchor-link"
+            href="#pattern"
+            title="Permalink to DateFormat.pattern">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the pattern that we use to format dates.</p>
+<pre class="source">
+get pattern =&gt; _pattern;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add_d">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_d</strong>() <a class="anchor-link" href="#add_d"
+              title="Permalink to DateFormat.add_d">#</a></h4>
+<div class="doc">
+<p>The "add_*" methods append a particular skeleton to the format, or set
+it as the only format if none was previously set. These are primarily
+useful for creating compound formats. For example</p>
+<pre><code>  new DateFormat.yMd().add_Hms();
+</code></pre>
+<p>would create a date format that prints both the date and the time.</p>
+<pre class="source">
+DateFormat add_d() =&gt; addPattern("d");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_E">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_E</strong>() <a class="anchor-link" href="#add_E"
+              title="Permalink to DateFormat.add_E">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_E() =&gt; addPattern("E");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_EEEE">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_EEEE</strong>() <a class="anchor-link" href="#add_EEEE"
+              title="Permalink to DateFormat.add_EEEE">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_EEEE() =&gt; addPattern("EEEE");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_H">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_H</strong>() <a class="anchor-link" href="#add_H"
+              title="Permalink to DateFormat.add_H">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_H() =&gt; addPattern("H");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_Hm">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_Hm</strong>() <a class="anchor-link" href="#add_Hm"
+              title="Permalink to DateFormat.add_Hm">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_Hm() =&gt; addPattern("Hm");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_Hms">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_Hms</strong>() <a class="anchor-link" href="#add_Hms"
+              title="Permalink to DateFormat.add_Hms">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_Hms() =&gt; addPattern("Hms");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_j">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_j</strong>() <a class="anchor-link" href="#add_j"
+              title="Permalink to DateFormat.add_j">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_j() =&gt; addPattern("j");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_jm">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_jm</strong>() <a class="anchor-link" href="#add_jm"
+              title="Permalink to DateFormat.add_jm">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_jm() =&gt; addPattern("jm");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_jms">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_jms</strong>() <a class="anchor-link" href="#add_jms"
+              title="Permalink to DateFormat.add_jms">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_jms() =&gt; addPattern("jms");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_jmv">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_jmv</strong>() <a class="anchor-link" href="#add_jmv"
+              title="Permalink to DateFormat.add_jmv">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_jmv() =&gt; addPattern("jmv");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_jmz">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_jmz</strong>() <a class="anchor-link" href="#add_jmz"
+              title="Permalink to DateFormat.add_jmz">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_jmz() =&gt; addPattern("jmz");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_jv">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_jv</strong>() <a class="anchor-link" href="#add_jv"
+              title="Permalink to DateFormat.add_jv">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_jv() =&gt; addPattern("jv");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_jz">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_jz</strong>() <a class="anchor-link" href="#add_jz"
+              title="Permalink to DateFormat.add_jz">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_jz() =&gt; addPattern("jz");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_LLL">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_LLL</strong>() <a class="anchor-link" href="#add_LLL"
+              title="Permalink to DateFormat.add_LLL">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_LLL() =&gt; addPattern("LLL");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_LLLL">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_LLLL</strong>() <a class="anchor-link" href="#add_LLLL"
+              title="Permalink to DateFormat.add_LLLL">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_LLLL() =&gt; addPattern("LLLL");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_M">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_M</strong>() <a class="anchor-link" href="#add_M"
+              title="Permalink to DateFormat.add_M">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_M() =&gt; addPattern("M");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_m">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_m</strong>() <a class="anchor-link" href="#add_m"
+              title="Permalink to DateFormat.add_m">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_m() =&gt; addPattern("m");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_Md">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_Md</strong>() <a class="anchor-link" href="#add_Md"
+              title="Permalink to DateFormat.add_Md">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_Md() =&gt; addPattern("Md");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_MEd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_MEd</strong>() <a class="anchor-link" href="#add_MEd"
+              title="Permalink to DateFormat.add_MEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_MEd() =&gt; addPattern("MEd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_MMM">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_MMM</strong>() <a class="anchor-link" href="#add_MMM"
+              title="Permalink to DateFormat.add_MMM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_MMM() =&gt; addPattern("MMM");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_MMMd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_MMMd</strong>() <a class="anchor-link" href="#add_MMMd"
+              title="Permalink to DateFormat.add_MMMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_MMMd() =&gt; addPattern("MMMd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_MMMEd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_MMMEd</strong>() <a class="anchor-link" href="#add_MMMEd"
+              title="Permalink to DateFormat.add_MMMEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_MMMEd() =&gt; addPattern("MMMEd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_MMMM">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_MMMM</strong>() <a class="anchor-link" href="#add_MMMM"
+              title="Permalink to DateFormat.add_MMMM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_MMMM() =&gt; addPattern("MMMM");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_MMMMd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_MMMMd</strong>() <a class="anchor-link" href="#add_MMMMd"
+              title="Permalink to DateFormat.add_MMMMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_MMMMd() =&gt; addPattern("MMMMd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_MMMMEEEEd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_MMMMEEEEd</strong>() <a class="anchor-link" href="#add_MMMMEEEEd"
+              title="Permalink to DateFormat.add_MMMMEEEEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_MMMMEEEEd() =&gt; addPattern("MMMMEEEEd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_ms">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_ms</strong>() <a class="anchor-link" href="#add_ms"
+              title="Permalink to DateFormat.add_ms">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_ms() =&gt; addPattern("ms");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_QQQ">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_QQQ</strong>() <a class="anchor-link" href="#add_QQQ"
+              title="Permalink to DateFormat.add_QQQ">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_QQQ() =&gt; addPattern("QQQ");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_QQQQ">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_QQQQ</strong>() <a class="anchor-link" href="#add_QQQQ"
+              title="Permalink to DateFormat.add_QQQQ">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_QQQQ() =&gt; addPattern("QQQQ");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_s">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_s</strong>() <a class="anchor-link" href="#add_s"
+              title="Permalink to DateFormat.add_s">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_s() =&gt; addPattern("s");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_y">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_y</strong>() <a class="anchor-link" href="#add_y"
+              title="Permalink to DateFormat.add_y">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_y() =&gt; addPattern("y");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yM">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yM</strong>() <a class="anchor-link" href="#add_yM"
+              title="Permalink to DateFormat.add_yM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yM() =&gt; addPattern("yM");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yMd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yMd</strong>() <a class="anchor-link" href="#add_yMd"
+              title="Permalink to DateFormat.add_yMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yMd() =&gt; addPattern("yMd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yMEd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yMEd</strong>() <a class="anchor-link" href="#add_yMEd"
+              title="Permalink to DateFormat.add_yMEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yMEd() =&gt; addPattern("yMEd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yMMM">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yMMM</strong>() <a class="anchor-link" href="#add_yMMM"
+              title="Permalink to DateFormat.add_yMMM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yMMM() =&gt; addPattern("yMMM");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yMMMd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yMMMd</strong>() <a class="anchor-link" href="#add_yMMMd"
+              title="Permalink to DateFormat.add_yMMMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yMMMd() =&gt; addPattern("yMMMd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yMMMEd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yMMMEd</strong>() <a class="anchor-link" href="#add_yMMMEd"
+              title="Permalink to DateFormat.add_yMMMEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yMMMEd() =&gt; addPattern("yMMMEd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yMMMM">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yMMMM</strong>() <a class="anchor-link" href="#add_yMMMM"
+              title="Permalink to DateFormat.add_yMMMM">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yMMMM() =&gt; addPattern("yMMMM");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yMMMMd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yMMMMd</strong>() <a class="anchor-link" href="#add_yMMMMd"
+              title="Permalink to DateFormat.add_yMMMMd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yMMMMd() =&gt; addPattern("yMMMMd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yMMMMEEEEd">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yMMMMEEEEd</strong>() <a class="anchor-link" href="#add_yMMMMEEEEd"
+              title="Permalink to DateFormat.add_yMMMMEEEEd">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yMMMMEEEEd() =&gt; addPattern("yMMMMEEEEd");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yQQQ">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yQQQ</strong>() <a class="anchor-link" href="#add_yQQQ"
+              title="Permalink to DateFormat.add_yQQQ">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yQQQ() =&gt; addPattern("yQQQ");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="add_yQQQQ">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>add_yQQQQ</strong>() <a class="anchor-link" href="#add_yQQQQ"
+              title="Permalink to DateFormat.add_yQQQQ">#</a></h4>
+<div class="doc">
+<pre class="source">
+DateFormat add_yQQQQ() =&gt; addPattern("yQQQQ");
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="addPattern">
+<button class="show-code">Code</button>
+<a href="../intl/DateFormat.html">DateFormat</a> <strong>addPattern</strong>(<a href="../dart_core/String.html">String</a> inputPattern, [<a href="../dart_core/String.html">String</a> separator = ' ']) <a class="anchor-link" href="#addPattern"
+              title="Permalink to DateFormat.addPattern">#</a></h4>
+<div class="doc">
+<p>Add 
+<span class="param">inputPattern</span> to this instance as a pattern. If there was a previous
+pattern, then this appends to it, separating the two by 
+<span class="param">separator</span>.
+
+<span class="param">inputPattern</span> is first looked up in our list of known skeletons.
+If it's found there, then use the corresponding pattern for this locale.
+If it's not, then treat 
+<span class="param">inputPattern</span> as an explicit pattern.</p>
+<pre class="source">
+DateFormat addPattern(String inputPattern, [String separator = ' ']) {
+ // TODO(alanknight): This is an expensive operation. Caching recently used
+ // formats, or possibly introducing an entire "locale" object that would
+ // cache patterns for that locale could be a good optimization.
+ // If we have already parsed the format fields, reset them.
+ _formatFieldsPrivate = null;
+ if (inputPattern == null) return this;
+ if (!_availableSkeletons.containsKey(inputPattern)) {
+   _appendPattern(inputPattern, separator);
+ } else {
+   _appendPattern(_availableSkeletons[inputPattern], separator);
+ }
+ return this;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="format">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>format</strong>(<a href="../dart_core/DateTime.html">DateTime</a> date) <a class="anchor-link" href="#format"
+              title="Permalink to DateFormat.format">#</a></h4>
+<div class="doc">
+<p>Return a string representing 
+<span class="param">date</span> formatted according to our locale
+and internal format.</p>
+<pre class="source">
+String format(DateTime date) {
+ // TODO(efortuna): read optional TimeZone argument (or similar)?
+ var result = new StringBuffer();
+ _formatFields.forEach((field) =&gt; result.add(field.format(date)));
+ return result.toString();
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="formatDuration">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>formatDuration</strong>(<a href="../dart_core/DateTime.html">DateTime</a> reference) <a class="anchor-link" href="#formatDuration"
+              title="Permalink to DateFormat.formatDuration">#</a></h4>
+<div class="doc">
+<p>Returns a date string indicating how long ago (3 hours, 2 minutes)
+something has happened or how long in the future something will happen
+given a 
+<span class="param">reference</span> DateTime relative to the current time.</p>
+<pre class="source">
+String formatDuration(DateTime reference) {
+ return '';
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="formatDurationFrom">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>formatDurationFrom</strong>(<a href="../dart_core/Duration.html">Duration</a> duration, <a href="../dart_core/DateTime.html">DateTime</a> date) <a class="anchor-link" href="#formatDurationFrom"
+              title="Permalink to DateFormat.formatDurationFrom">#</a></h4>
+<div class="doc">
+<p>Formats a string indicating how long ago (negative 
+<span class="param">duration</span>) or how far
+in the future (positive 
+<span class="param">duration</span>) some time is with respect to a
+reference 
+<span class="param">date</span>.</p>
+<pre class="source">
+String formatDurationFrom(Duration duration, DateTime date) {
+ return '';
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parse">
+<button class="show-code">Code</button>
+<a href="../dart_core/DateTime.html">DateTime</a> <strong>parse</strong>(<a href="../dart_core/String.html">String</a> inputString, [utc = false]) <a class="anchor-link" href="#parse"
+              title="Permalink to DateFormat.parse">#</a></h4>
+<div class="doc">
+<p>Given user input, attempt to parse the 
+<span class="param">inputString</span> into the anticipated
+format, treating it as being in the local timezone.</p>
+<pre class="source">
+DateTime parse(String inputString, [utc = false]) {
+ // TODO(alanknight): The Closure code refers to special parsing of numeric
+ // values with no delimiters, which we currently don't do. Should we?
+ var dateFields = new _DateBuilder();
+ if (utc) dateFields.utc=true;
+ var stream = new _Stream(inputString);
+ _formatFields.forEach(
+     (each) =&gt; each.parse(stream, dateFields));
+ return dateFields.asDate();
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parsePattern">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a> <strong>parsePattern</strong>(<a href="../dart_core/String.html">String</a> pattern) <a class="anchor-link" href="#parsePattern"
+              title="Permalink to DateFormat.parsePattern">#</a></h4>
+<div class="doc">
+<p>Parse the template pattern and return a list of field objects.</p>
+<pre class="source">
+List parsePattern(String pattern) {
+ if (pattern == null) return null;
+ return _reverse(_parsePatternHelper(pattern));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parseUTC">
+<button class="show-code">Code</button>
+<a href="../dart_core/DateTime.html">DateTime</a> <strong>parseUTC</strong>(<a href="../dart_core/String.html">String</a> inputString) <a class="anchor-link" href="#parseUTC"
+              title="Permalink to DateFormat.parseUTC">#</a></h4>
+<div class="doc">
+<p>Given user input, attempt to parse the 
+<span class="param">inputString</span> into the anticipated
+format, treating it as being in UTC.</p>
+<pre class="source">
+DateTime parseUTC(String inputString) {
+ return parse(inputString, true);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:03.560</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

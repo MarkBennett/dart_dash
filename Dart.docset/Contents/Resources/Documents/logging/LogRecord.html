@@ -1,0 +1,215 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>LogRecord class / logging Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="logging" data-type="LogRecord">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../logging.html">logging</a> &rsaquo; <a href="../logging/LogRecord.html">LogRecord</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><ul class="icon">
+<li><a href="../logging/Level.html"><div class="icon-class"></div>Level</a></li>
+<li><a href="../logging/Logger.html"><div class="icon-class"></div>Logger</a></li>
+<li><a href="../logging/LoggerEvents.html"><div class="icon-class"></div>LoggerEvents</a></li>
+<li><a href="../logging/LoggerHandler.html"><div class="icon-interface"></div>LoggerHandler</a></li>
+<li><a href="../logging/LoggerHandlerList.html"><div class="icon-class"></div>LoggerHandlerList</a></li>
+<li><div class="icon-class"></div><strong>LogRecord</strong></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>LogRecord</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A log entry representation used to propagate information from <a class="crossref" href="../logging/Logger.html">Logger</a> to
+individual <code>Handler</code>s.</p>
+<pre class="source">
+class LogRecord {
+ final Level level;
+ final String message;
+
+ /** Logger where this record is stored. */
+ final String loggerName;
+
+ /** Time when this record was created. */
+ final DateTime time;
+
+ /** Unique sequence number greater than all log records created before it. */
+ final int sequenceNumber;
+
+ static int _nextNumber = 0;
+
+ /** Associated exception (if any) when recording errors messages. */
+ Exception exception;
+
+ /** Associated exception message (if any) when recording errors messages. */
+ String exceptionText;
+
+ LogRecord(
+     this.level, this.message, this.loggerName,
+     [time, this.exception, this.exceptionText]) :
+   this.time = (time == null) ? new DateTime.now() : time,
+   this.sequenceNumber = LogRecord._nextNumber++;
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="LogRecord">
+<button class="show-code">Code</button>
+new <strong>LogRecord</strong>(<a href="../logging/Level.html">Level</a> level, <a href="../dart_core/String.html">String</a> message, <a href="../dart_core/String.html">String</a> loggerName, [time, <a href="../dart_core/Exception.html">Exception</a> exception, <a href="../dart_core/String.html">String</a> exceptionText]) <a class="anchor-link" href="#LogRecord"
+              title="Permalink to LogRecord.LogRecord">#</a></h4>
+<div class="doc">
+<pre class="source">
+LogRecord(
+   this.level, this.message, this.loggerName,
+   [time, this.exception, this.exceptionText]) :
+ this.time = (time == null) ? new DateTime.now() : time,
+ this.sequenceNumber = LogRecord._nextNumber++;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="exception">
+<button class="show-code">Code</button>
+<a href="../dart_core/Exception.html">Exception</a>         <strong>exception</strong> <a class="anchor-link"
+            href="#exception"
+            title="Permalink to LogRecord.exception">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+exception
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="exceptionText">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>exceptionText</strong> <a class="anchor-link"
+            href="#exceptionText"
+            title="Permalink to LogRecord.exceptionText">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+exceptionText
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="level">
+<button class="show-code">Code</button>
+final <a href="../logging/Level.html">Level</a>         <strong>level</strong> <a class="anchor-link"
+            href="#level"
+            title="Permalink to LogRecord.level">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+level
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="loggerName">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>loggerName</strong> <a class="anchor-link"
+            href="#loggerName"
+            title="Permalink to LogRecord.loggerName">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+loggerName
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="message">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>message</strong> <a class="anchor-link"
+            href="#message"
+            title="Permalink to LogRecord.message">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+message
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="sequenceNumber">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>sequenceNumber</strong> <a class="anchor-link"
+            href="#sequenceNumber"
+            title="Permalink to LogRecord.sequenceNumber">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+sequenceNumber
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="time">
+<button class="show-code">Code</button>
+final <a href="../dart_core/DateTime.html">DateTime</a>         <strong>time</strong> <a class="anchor-link"
+            href="#time"
+            title="Permalink to LogRecord.time">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+time
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:03.684</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

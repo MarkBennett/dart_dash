@@ -1,0 +1,107 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ErrorFormatter typedef / matcher Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="matcher" data-type="ErrorFormatter">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../matcher.html">matcher</a> &rsaquo; <a href="../matcher/ErrorFormatter.html">ErrorFormatter</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><ul class="icon">
+<li><a href="../matcher/BaseMatcher.html"><div class="icon-class"></div>BaseMatcher</a></li>
+<li><a href="../matcher/CustomMatcher.html"><div class="icon-class"></div>CustomMatcher</a></li>
+<li><a href="../matcher/DefaultFailureHandler.html"><div class="icon-class"></div>DefaultFailureHandler</a></li>
+<li><a href="../matcher/Description.html"><div class="icon-class"></div>Description</a></li>
+<li><div class="icon-interface"></div><strong>ErrorFormatter</strong></li>
+<li><a href="../matcher/FailureHandler.html"><div class="icon-class"></div>FailureHandler</a></li>
+<li><a href="../matcher/isInstanceOf.html"><div class="icon-class"></div>isInstanceOf&lt;T&gt;</a></li>
+<li><a href="../matcher/Matcher.html"><div class="icon-class"></div>Matcher</a></li>
+<li><a href="../matcher/MatchState.html"><div class="icon-class"></div>MatchState</a></li>
+<li><a href="../matcher/StringDescription.html"><div class="icon-class"></div>StringDescription</a></li>
+<li><a href="../matcher/Throws.html"><div class="icon-class"></div>Throws</a></li>
+<li><a href="../matcher/TypeMatcher.html"><div class="icon-class"></div>TypeMatcher</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ErrorFormatter</strong>
+          typedef
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The ErrorFormatter type is used for functions that
+can be used to build up error reports upon <a class="crossref" href="../matcher.html#expect">expect</a> failures.
+There is one built-in implementation (<code>defaultErrorFormatter</code>)
+which is used by the default failure handler. If the failure handler
+is replaced it may be desirable to replace the <code>stringDescription</code>
+error formatter with another.</p>
+<pre class="source">
+typedef String ErrorFormatter(actual, Matcher matcher, String reason,
+   MatchState matchState, bool verbose);
+</pre>
+</div>
+<div class="method"><h4 id="ErrorFormatter">
+<button class="show-code">Code</button>
+typedef <a href="../dart_core/String.html">String</a> ErrorFormatter(actual, <a href="../matcher/Matcher.html">Matcher</a> matcher, <a href="../dart_core/String.html">String</a> reason, <a href="../matcher/MatchState.html">MatchState</a> matchState, <a href="../dart_core/bool.html">bool</a> verbose) <a class="anchor-link" href="#ErrorFormatter"
+              title="Permalink to ErrorFormatter">#</a></h4>
+<div class="doc">
+<pre class="source">
+typedef String ErrorFormatter(actual, Matcher matcher, String reason,
+   MatchState matchState, bool verbose);
+</pre>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:04.359</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

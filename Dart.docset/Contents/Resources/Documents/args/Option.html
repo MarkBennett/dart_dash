@@ -1,0 +1,234 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Option class / args Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="args" data-type="Option">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../args.html">args</a> &rsaquo; <a href="../args/Option.html">Option</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><ul class="icon">
+<li><a href="../args/ArgParser.html"><div class="icon-class"></div>ArgParser</a></li>
+<li><a href="../args/ArgResults.html"><div class="icon-class"></div>ArgResults</a></li>
+<li><div class="icon-class"></div><strong>Option</strong></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Option</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A command-line option. Includes both flags and options which take a value.</p>
+<pre class="source">
+class Option {
+ final String name;
+ final String abbreviation;
+ final List allowed;
+ final defaultValue;
+ final Function callback;
+ final String help;
+ final Map&lt;String, String&gt; allowedHelp;
+ final bool isFlag;
+ final bool negatable;
+ final bool allowMultiple;
+
+ Option(this.name, this.abbreviation, this.help, this.allowed,
+     this.allowedHelp, this.defaultValue, this.callback, {this.isFlag,
+     this.negatable, this.allowMultiple: false});
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Option">
+<button class="show-code">Code</button>
+new <strong>Option</strong>(<a href="../dart_core/String.html">String</a> name, <a href="../dart_core/String.html">String</a> abbreviation, <a href="../dart_core/String.html">String</a> help, <a href="../dart_core/List.html">List</a> allowed, <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/String.html">String</a>&gt; allowedHelp, defaultValue, <a href="../dart_core/Function.html">Function</a> callback, {<a href="../dart_core/bool.html">bool</a> isFlag, <a href="../dart_core/bool.html">bool</a> negatable, <a href="../dart_core/bool.html">bool</a> allowMultiple: false}) <a class="anchor-link" href="#Option"
+              title="Permalink to Option.Option">#</a></h4>
+<div class="doc">
+<pre class="source">
+Option(this.name, this.abbreviation, this.help, this.allowed,
+   this.allowedHelp, this.defaultValue, this.callback, {this.isFlag,
+   this.negatable, this.allowMultiple: false});
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="abbreviation">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>abbreviation</strong> <a class="anchor-link"
+            href="#abbreviation"
+            title="Permalink to Option.abbreviation">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+abbreviation
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="allowed">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>         <strong>allowed</strong> <a class="anchor-link"
+            href="#allowed"
+            title="Permalink to Option.allowed">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+allowed
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="allowedHelp">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/String.html">String</a>&gt;         <strong>allowedHelp</strong> <a class="anchor-link"
+            href="#allowedHelp"
+            title="Permalink to Option.allowedHelp">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+allowedHelp
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="allowMultiple">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>allowMultiple</strong> <a class="anchor-link"
+            href="#allowMultiple"
+            title="Permalink to Option.allowMultiple">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+allowMultiple
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="callback">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Function.html">Function</a>         <strong>callback</strong> <a class="anchor-link"
+            href="#callback"
+            title="Permalink to Option.callback">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+callback
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="defaultValue">
+<button class="show-code">Code</button>
+final         <strong>defaultValue</strong> <a class="anchor-link"
+            href="#defaultValue"
+            title="Permalink to Option.defaultValue">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+defaultValue
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="help">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>help</strong> <a class="anchor-link"
+            href="#help"
+            title="Permalink to Option.help">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+help
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isFlag">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isFlag</strong> <a class="anchor-link"
+            href="#isFlag"
+            title="Permalink to Option.isFlag">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+isFlag
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="name">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>name</strong> <a class="anchor-link"
+            href="#name"
+            title="Permalink to Option.name">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+name
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="negatable">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>negatable</strong> <a class="anchor-link"
+            href="#negatable"
+            title="Permalink to Option.negatable">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+negatable
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:18.462</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

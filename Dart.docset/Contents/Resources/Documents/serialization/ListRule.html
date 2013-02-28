@@ -1,0 +1,398 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ListRule class / serialization Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="serialization" data-type="ListRule">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../serialization.html">serialization</a> &rsaquo; <a href="../serialization/ListRule.html">ListRule</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><ul class="icon">
+<li><a href="../serialization/BasicRule.html"><div class="icon-class"></div>BasicRule</a></li>
+<li><a href="../serialization/ClosureRule.html"><div class="icon-class"></div>ClosureRule</a></li>
+<li><a href="../serialization/Constructor.html"><div class="icon-class"></div>Constructor</a></li>
+<li><a href="../serialization/ConstructType.html"><div class="icon-interface"></div>ConstructType</a></li>
+<li><a href="../serialization/CustomRule.html"><div class="icon-class"></div>CustomRule</a></li>
+<li><a href="../serialization/DesignatedRuleForObject.html"><div class="icon-class"></div>DesignatedRuleForObject</a></li>
+<li><a href="../serialization/Format.html"><div class="icon-class"></div>Format</a></li>
+<li><a href="../serialization/GetStateType.html"><div class="icon-interface"></div>GetStateType</a></li>
+<li><div class="icon-class"></div><strong>ListRule</strong></li>
+<li><a href="../serialization/ListRuleEssential.html"><div class="icon-class"></div>ListRuleEssential</a></li>
+<li><a href="../serialization/MapRule.html"><div class="icon-class"></div>MapRule</a></li>
+<li><a href="../serialization/MirrorRule.html"><div class="icon-class"></div>MirrorRule</a></li>
+<li><a href="../serialization/NamedObjectRule.html"><div class="icon-class"></div>NamedObjectRule</a></li>
+<li><a href="../serialization/NonEssentialStateType.html"><div class="icon-interface"></div>NonEssentialStateType</a></li>
+<li><a href="../serialization/PrimitiveRule.html"><div class="icon-class"></div>PrimitiveRule</a></li>
+<li><a href="../serialization/Reader.html"><div class="icon-class"></div>Reader</a></li>
+<li><a href="../serialization/ReaderOrWriter.html"><div class="icon-class"></div>ReaderOrWriter</a></li>
+<li><a href="../serialization/Reference.html"><div class="icon-class"></div>Reference</a></li>
+<li><a href="../serialization/Serialization.html"><div class="icon-class"></div>Serialization</a></li>
+<li><a href="../serialization/SerializationRule.html"><div class="icon-class"></div>SerializationRule</a></li>
+<li><a href="../serialization/SetWithFunction.html"><div class="icon-interface"></div>SetWithFunction</a></li>
+<li><a href="../serialization/SimpleFlatFormat.html"><div class="icon-class"></div>SimpleFlatFormat</a></li>
+<li><a href="../serialization/SimpleJsonFormat.html"><div class="icon-class"></div>SimpleJsonFormat</a></li>
+<li><a href="../serialization/SimpleMapFormat.html"><div class="icon-class"></div>SimpleMapFormat</a></li>
+<li><a href="../serialization/Trace.html"><div class="icon-class"></div>Trace</a></li>
+<li><a href="../serialization/Writer.html"><div class="icon-class"></div>Writer</a></li>
+<li><a href="../serialization/SerializationException.html"><div class="icon-exception"></div>SerializationException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ListRule</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>This rule handles things that implement List. It will recreate them as
+whatever the default implemenation of List is on the target platform.</p>
+<pre class="source">
+class ListRule extends SerializationRule {
+
+ appliesTo(object, Writer w) =&gt; object is List;
+
+ bool get storesStateAsLists =&gt; true;
+
+ List extractState(List list, f, Writer w) {
+   var result = new List();
+   for (var each in list) {
+     result.add(each);
+     f(each);
+   }
+   return result;
+ }
+
+ inflateEssential(List state, Reader r) =&gt; new List();
+
+ // For a list, we consider all of its state non-essential and add it
+ // after creation.
+ inflateNonEssential(List state, List newList, Reader r) {
+   populateContents(state, newList, r);
+ }
+
+ void populateContents(List state, List newList, Reader r) {
+   for(var each in state) {
+     newList.add(r.inflateReference(each));
+   }
+ }
+
+ bool get hasVariableLengthEntries =&gt; true;
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../serialization/SerializationRule.html">SerializationRule</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>ListRule</strong></span></p>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../serialization/ListRuleEssential.html">ListRuleEssential</a></span></p>
+<div>
+<h3>Properties</h3>
+<div class="field inherited"><h4 id="dataLength">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>dataLength</strong> <a class="anchor-link"
+            href="#dataLength"
+            title="Permalink to ListRule.dataLength">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>If the data is fixed length, return it here. The format may or may not
+make use of this, depending on whether it already has enough information
+to determine the length on its own. If <a class="crossref" href="../serialization/ListRule.html#hasVariableLengthEntries">hasVariableLengthEntries</a> is true
+this is ignored.</p>
+<pre class="source">
+int get dataLength =&gt; 0;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hasVariableLengthEntries">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>hasVariableLengthEntries</strong> <a class="anchor-link"
+            href="#hasVariableLengthEntries"
+            title="Permalink to ListRule.hasVariableLengthEntries">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Return true if the data this rule returns is variable length, so a
+length needs to be written for it if the format requires that. Return
+false if the results are always the same length.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+bool get hasVariableLengthEntries =&gt; true;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="mustBePrimary">
+<button class="show-code">Code</button>
+final         <strong>mustBePrimary</strong> <a class="anchor-link"
+            href="#mustBePrimary"
+            title="Permalink to ListRule.mustBePrimary">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>Return true if this rule should only be applied when we are the first
+rule found that applies to this object. This may or may not be a hack
+that will disappear once we have better support for multiple rules.
+We want to have multiple different rules that apply to the same object. We
+also want to have multiple different rules that might exclusively apply
+to the same object. So, we want either ListRule or ListRuleEssential, and
+only one of them can be there. But on the other hand, we may want both
+ListRule and BasicRule. So we identify the kinds of rules that can share.
+If mustBePrimary returns true, then this rule will only be chosen if no
+other rule has been found yet. This means that the ordering of rules in
+the serialization is significant, which is unpleasant, but we'll have
+to see how bad it is.</p>
+<pre class="source">
+get mustBePrimary =&gt; false;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="number">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>get number</strong> <a class="anchor-link" href="#number"
+              title="Permalink to ListRule.get number">#</a></h4>
+<div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>Rules belong uniquely to a particular Serialization instance, and can
+be identified within it by number.</p>
+<pre class="source">
+int get number =&gt; _number;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="number=">
+<button class="show-code">Code</button>
+void <strong>set number</strong>(x) <a class="anchor-link" href="#number="
+              title="Permalink to ListRule.set number">#</a></h4>
+<div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>Rules belong uniquely to a particular Serialization instance, and can
+be identified within it by number.</p>
+<pre class="source">
+void set number(x) {
+ if (_number != null &amp;&amp; _number != x) throw
+     new SerializationException("Rule numbers cannot be changed, once set");
+ _number = x;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="storesStateAsLists">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>storesStateAsLists</strong> <a class="anchor-link"
+            href="#storesStateAsLists"
+            title="Permalink to ListRule.storesStateAsLists">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Allows rules to tell us how they expect to store their state. If this
+isn't specified we can also just look at the data to tell.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+bool get storesStateAsLists =&gt; true;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="storesStateAsMaps">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>storesStateAsMaps</strong> <a class="anchor-link"
+            href="#storesStateAsMaps"
+            title="Permalink to ListRule.storesStateAsMaps">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<pre class="source">
+bool get storesStateAsMaps =&gt; false;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="storesStateAsPrimitives">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>storesStateAsPrimitives</strong> <a class="anchor-link"
+            href="#storesStateAsPrimitives"
+            title="Permalink to ListRule.storesStateAsPrimitives">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<pre class="source">
+bool get storesStateAsPrimitives =&gt; false;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="appliesTo">
+<button class="show-code">Code</button>
+<strong>appliesTo</strong>(object, <a href="../serialization/Writer.html">Writer</a> w) <a class="anchor-link" href="#appliesTo"
+              title="Permalink to ListRule.appliesTo">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Return true if this rule applies to this object, in the context
+where we're writing it, false otherwise.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+appliesTo(object, Writer w) =&gt; object is List;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="extractState">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a> <strong>extractState</strong>(<a href="../dart_core/List.html">List</a> list, f, <a href="../serialization/Writer.html">Writer</a> w) <a class="anchor-link" href="#extractState"
+              title="Permalink to ListRule.extractState">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>This extracts the state from the object, calling 
+<span class="param">f</span> for each value
+as it is extracted, and returning an object representing the whole
+state at the end. The state that results will still have direct
+pointers to objects, rather than references.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+List extractState(List list, f, Writer w) {
+ var result = new List();
+ for (var each in list) {
+   result.add(each);
+   f(each);
+ }
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="flatten">
+<button class="show-code">Code</button>
+<strong>flatten</strong>(state, <a href="../serialization/Writer.html">Writer</a> writer) <a class="anchor-link" href="#flatten"
+              title="Permalink to ListRule.flatten">#</a></h4>
+<div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>Given the variables representing the state of an object, flatten it
+by turning object pointers into Reference objects where needed. This
+destructively modifies the state object.</p>
+<p>This has a default implementation which assumes that object is indexable,
+so either conforms to Map or List. Subclasses may override to do something
+different, including returning a new state object to be used in place
+of the original.</p>
+<pre class="source">
+flatten(state, Writer writer) {
+ keysAndValues(state).forEach((key, value) {
+   var reference = writer._referenceFor(value);
+   state[key] = reference;
+ });
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="inflateEssential">
+<button class="show-code">Code</button>
+<strong>inflateEssential</strong>(<a href="../dart_core/List.html">List</a> state, <a href="../serialization/Reader.html">Reader</a> r) <a class="anchor-link" href="#inflateEssential"
+              title="Permalink to ListRule.inflateEssential">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Create the new object corresponding to 
+<span class="param">state</span> using the rules
+from <code>reader</code>. This may involve recursively inflating "essential"
+references in the state, which are those that are required for the
+object's constructor. It is up to the rule what state is considered
+essential.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+inflateEssential(List state, Reader r) =&gt; new List();
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="inflateNonEssential">
+<button class="show-code">Code</button>
+<strong>inflateNonEssential</strong>(<a href="../dart_core/List.html">List</a> state, <a href="../dart_core/List.html">List</a> newList, <a href="../serialization/Reader.html">Reader</a> r) <a class="anchor-link" href="#inflateNonEssential"
+              title="Permalink to ListRule.inflateNonEssential">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>The <code>object</code> has already been created. Set any of its non-essential
+variables from the representation in 
+<span class="param">state</span>. Where there are references
+to other objects they are resolved in the context of <code>reader</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div></div>
+<pre class="source">
+inflateNonEssential(List state, List newList, Reader r) {
+ populateContents(state, newList, r);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="populateContents">
+<button class="show-code">Code</button>
+void <strong>populateContents</strong>(<a href="../dart_core/List.html">List</a> state, <a href="../dart_core/List.html">List</a> newList, <a href="../serialization/Reader.html">Reader</a> r) <a class="anchor-link" href="#populateContents"
+              title="Permalink to ListRule.populateContents">#</a></h4>
+<div class="doc">
+<pre class="source">
+void populateContents(List state, List newList, Reader r) {
+ for(var each in state) {
+   newList.add(r.inflateReference(each));
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="shouldUseReferenceFor">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>shouldUseReferenceFor</strong>(object, <a href="../serialization/Writer.html">Writer</a> writer) <a class="anchor-link" href="#shouldUseReferenceFor"
+              title="Permalink to ListRule.shouldUseReferenceFor">#</a></h4>
+<div class="inherited-from">inherited from <a href="../serialization/SerializationRule.html">SerializationRule</a> </div><div class="doc">
+<p>If we have 
+<span class="param">object</span> as part of our state, should we represent that
+directly, or should we make a reference for it. By default, true.
+This may also delegate to 
+<span class="param">writer</span>.</p>
+<pre class="source">
+bool shouldUseReferenceFor(object, Writer writer) =&gt; true;
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:07.102</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

@@ -1,0 +1,147 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Responder class / mock Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="mock" data-type="Responder">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../mock.html">mock</a> &rsaquo; <a href="../mock/Responder.html">Responder</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><ul class="icon">
+<li><a href="../mock/Action.html"><div class="icon-class"></div>Action</a></li>
+<li><a href="../mock/Behavior.html"><div class="icon-class"></div>Behavior</a></li>
+<li><a href="../mock/CallMatcher.html"><div class="icon-class"></div>CallMatcher</a></li>
+<li><a href="../mock/LogEntry.html"><div class="icon-class"></div>LogEntry</a></li>
+<li><a href="../mock/LogEntryList.html"><div class="icon-class"></div>LogEntryList</a></li>
+<li><a href="../mock/Mock.html"><div class="icon-class"></div>Mock</a></li>
+<li><div class="icon-class"></div><strong>Responder</strong></li>
+<li><a href="../mock/StepValidator.html"><div class="icon-interface"></div>StepValidator</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Responder</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The behavior of a method call in the mock library is specified
+with <a class="crossref" href="../mock/Responder.html#Responder">Responder</a>s. A <a class="crossref" href="../mock/Responder.html#Responder">Responder</a> has a <a class="crossref" href="../mock/Responder.html#value">value</a> to throw
+or return (depending on the type of <a class="crossref" href="../mock/Responder.html#action">action</a>),
+and can either be one-shot, multi-shot, or infinitely repeating,
+depending on the value of [count (1, greater than 1, or 0 respectively).</p>
+<pre class="source">
+class Responder {
+ var value;
+ Action action;
+ int count;
+ Responder(this.value, [this.count = 1, this.action = Action.RETURN]);
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Responder">
+<button class="show-code">Code</button>
+new <strong>Responder</strong>(value, [<a href="../dart_core/int.html">int</a> count = 1, <a href="../mock/Action.html">Action</a> action = Action.RETURN]) <a class="anchor-link" href="#Responder"
+              title="Permalink to Responder.Responder">#</a></h4>
+<div class="doc">
+<pre class="source">
+Responder(this.value, [this.count = 1, this.action = Action.RETURN]);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="action">
+<button class="show-code">Code</button>
+<a href="../mock/Action.html">Action</a>         <strong>action</strong> <a class="anchor-link"
+            href="#action"
+            title="Permalink to Responder.action">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+action
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="count">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a>         <strong>count</strong> <a class="anchor-link"
+            href="#count"
+            title="Permalink to Responder.count">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+count
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="value">
+<button class="show-code">Code</button>
+var         <strong>value</strong> <a class="anchor-link"
+            href="#value"
+            title="Permalink to Responder.value">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+value
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:05.250</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

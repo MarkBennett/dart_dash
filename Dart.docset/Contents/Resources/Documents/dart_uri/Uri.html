@@ -1,0 +1,726 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Uri class / dart:uri Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:uri" data-type="Uri">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_uri.html">dart:uri</a> &rsaquo; <a href="../dart_uri/Uri.html">Uri</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><ul class="icon">
+<li><div class="icon-class"></div><strong>Uri</strong></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Uri</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A parsed URI, inspired by Closure's <a href="http://closure-library.googlecode.com/svn/docs/class_goog_Uri.html">URI</a> class. Implements <a href="http://tools.ietf.org/html/rfc3986#section-4.3)">RFC-3986</a>.</p>
+<pre class="source">
+class Uri {
+ final String scheme;
+ final String userInfo;
+ final String domain;
+ final int port;
+ final String path;
+ final String query;
+ final String fragment;
+
+ /**
+  * Deprecated. Please use [parse] instead.
+  */
+ Uri.fromString(String uri) : this._fromMatch(_splitRe.firstMatch(uri));
+
+ static Uri parse(String uri) =&gt; new Uri._fromMatch(_splitRe.firstMatch(uri));
+
+ Uri._fromMatch(Match m) :
+   this.fromComponents(scheme: _emptyIfNull(m[_COMPONENT_SCHEME]),
+                       userInfo: _emptyIfNull(m[_COMPONENT_USER_INFO]),
+                       domain: _emptyIfNull(m[_COMPONENT_DOMAIN]),
+                       port: _parseIntOrZero(m[_COMPONENT_PORT]),
+                       path: _emptyIfNull(m[_COMPONENT_PATH]),
+                       query: _emptyIfNull(m[_COMPONENT_QUERY_DATA]),
+                       fragment: _emptyIfNull(m[_COMPONENT_FRAGMENT]));
+
+ const Uri.fromComponents({this.scheme: "",
+                           this.userInfo: "",
+                           this.domain: "",
+                           this.port: 0,
+                           this.path: "",
+                           this.query: "",
+                           this.fragment: ""});
+
+ Uri(String uri) : this.fromString(uri);
+
+ static String _emptyIfNull(String val) =&gt; val != null ? val : '';
+
+ static int _parseIntOrZero(String val) {
+   if (val != null &amp;&amp; val != '') {
+     return int.parse(val);
+   } else {
+     return 0;
+   }
+ }
+
+ // NOTE: This code was ported from: closure-library/closure/goog/uri/utils.js
+ static final RegExp _splitRe = new RegExp(
+     '^'
+     '(?:'
+       '([^:/?#.]+)'                   // scheme - ignore special characters
+                                       // used by other URL parts such as :,
+                                       // ?, /, #, and .
+     ':)?'
+     '(?://'
+       '(?:([^/?#]*)@)?'               // userInfo
+       '([\\w\\d\\-\\u0100-\\uffff.%]*)'
+                                       // domain - restrict to letters,
+                                       // digits, dashes, dots, percent
+                                       // escapes, and unicode characters.
+       '(?::([0-9]+))?'                // port
+     ')?'
+     '([^?#]+)?'                       // path
+     '(?:\\?([^#]*))?'                 // query
+     '(?:#(.*))?'                      // fragment
+     '\$');
+
+ static const _COMPONENT_SCHEME = 1;
+ static const _COMPONENT_USER_INFO = 2;
+ static const _COMPONENT_DOMAIN = 3;
+ static const _COMPONENT_PORT = 4;
+ static const _COMPONENT_PATH = 5;
+ static const _COMPONENT_QUERY_DATA = 6;
+ static const _COMPONENT_FRAGMENT = 7;
+
+ /**
+  * Returns `true` if the URI is absolute.
+  */
+ bool get isAbsolute {
+   if ("" == scheme) return false;
+   if ("" != fragment) return false;
+   return true;
+
+   /* absolute-URI  = scheme ":" hier-part [ "?" query ]
+    * hier-part   = "//" authority path-abempty
+    *             / path-absolute
+    *             / path-rootless
+    *             / path-empty
+    *
+    * path          = path-abempty    ; begins with "/" or is empty
+    *               / path-absolute   ; begins with "/" but not "//"
+    *               / path-noscheme   ; begins with a non-colon segment
+    *               / path-rootless   ; begins with a segment
+    *               / path-empty      ; zero characters
+    *
+    * path-abempty  = *( "/" segment )
+    * path-absolute = "/" [ segment-nz *( "/" segment ) ]
+    * path-noscheme = segment-nz-nc *( "/" segment )
+    * path-rootless = segment-nz *( "/" segment )
+    * path-empty    = 0&lt;pchar&gt;
+    * segment       = *pchar
+    * segment-nz    = 1*pchar
+    * segment-nz-nc = 1*( unreserved / pct-encoded / sub-delims / "@" )
+    *               ; non-zero-length segment without any colon ":"
+    *
+    * pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"
+    */
+ }
+
+ Uri resolve(String uri) {
+   return resolveUri(Uri.parse(uri));
+ }
+
+ Uri resolveUri(Uri reference) {
+   // From RFC 3986.
+   String targetScheme;
+   String targetUserInfo;
+   String targetDomain;
+   int targetPort;
+   String targetPath;
+   String targetQuery;
+   if (reference.scheme != "") {
+     targetScheme = reference.scheme;
+     targetUserInfo = reference.userInfo;
+     targetDomain = reference.domain;
+     targetPort = reference.port;
+     targetPath = removeDotSegments(reference.path);
+     targetQuery = reference.query;
+   } else {
+     if (reference.hasAuthority) {
+       targetUserInfo = reference.userInfo;
+       targetDomain = reference.domain;
+       targetPort = reference.port;
+       targetPath = removeDotSegments(reference.path);
+       targetQuery = reference.query;
+     } else {
+       if (reference.path == "") {
+         targetPath = this.path;
+         if (reference.query != "") {
+           targetQuery = reference.query;
+         } else {
+           targetQuery = this.query;
+         }
+       } else {
+         if (reference.path.startsWith("/")) {
+           targetPath = removeDotSegments(reference.path);
+         } else {
+           targetPath = removeDotSegments(merge(this.path, reference.path));
+         }
+         targetQuery = reference.query;
+       }
+       targetUserInfo = this.userInfo;
+       targetDomain = this.domain;
+       targetPort = this.port;
+     }
+     targetScheme = this.scheme;
+   }
+   return new Uri.fromComponents(scheme: targetScheme,
+                                 userInfo: targetUserInfo,
+                                 domain: targetDomain,
+                                 port: targetPort,
+                                 path: targetPath,
+                                 query: targetQuery,
+                                 fragment: reference.fragment);
+ }
+
+ bool get hasAuthority {
+   return (userInfo != "") || (domain != "") || (port != 0);
+ }
+
+ /**
+  * For http/https schemes returns URI's [origin][] - scheme://domain:port.
+  * For all other schemes throws ArgumentError.
+  * [origin]: http://www.w3.org/TR/2011/WD-html5-20110405/origin-0.html#origin
+  */
+ String get origin {
+   if (scheme == "") {
+     // TODO(aprelev@gmail.com): Use StateException instead
+     throw new ArgumentError("Cannot use origin without a scheme");
+   }
+   if (scheme != "http" &amp;&amp; scheme != "https") {
+     // TODO(aprelev@gmail.com): Use StateException instead
+     throw new ArgumentError(
+       "origin is applicable to http/https schemes only. Not \'$scheme\'");
+   }
+   StringBuffer sb = new StringBuffer();
+   sb.add(scheme);
+   sb.add(":");
+   if (domain == null || domain == "") {
+     // TODO(aprelev@gmail.com): Use StateException instead
+     throw new ArgumentError("Cannot use origin without a domain");
+   }
+
+   sb.add("//");
+   sb.add(domain);
+   if (port != 0) {
+     sb.add(":");
+     sb.add(port);
+   }
+   return sb.toString();
+ }
+
+ String toString() {
+   StringBuffer sb = new StringBuffer();
+   _addIfNonEmpty(sb, scheme, scheme, ':');
+   if (hasAuthority || (scheme == "file")) {
+     sb.add("//");
+     _addIfNonEmpty(sb, userInfo, userInfo, "@");
+     sb.add(domain == null ? "null" : domain);
+     if (port != 0) {
+       sb.add(":");
+       sb.add(port.toString());
+     }
+   }
+   sb.add(path == null ? "null" : path);
+   _addIfNonEmpty(sb, query, "?", query);
+   _addIfNonEmpty(sb, fragment, "#", fragment);
+   return sb.toString();
+ }
+
+ bool operator==(other) {
+   if (other is! Uri) return false;
+   Uri uri = other;
+   return scheme == uri.scheme &amp;&amp;
+       userInfo == uri.userInfo &amp;&amp;
+       domain == uri.domain &amp;&amp;
+       port == uri.port &amp;&amp;
+       path == uri.path &amp;&amp;
+       query == uri.query &amp;&amp;
+       fragment == uri.fragment;
+ }
+
+ int get hashCode {
+   int combine(part, current) {
+     // The sum is truncated to 30 bits to make sure it fits into a Smi.
+     return (current * 31 + part.hashCode) &amp; 0x3FFFFFFF;
+   }
+   return combine(scheme, combine(userInfo, combine(domain, combine(port,
+       combine(path, combine(query, combine(fragment, 1)))))));
+ }
+
+ static void _addIfNonEmpty(StringBuffer sb, String test,
+                            String first, String second) {
+   if ("" != test) {
+     sb.add(first == null ? "null" : first);
+     sb.add(second == null ? "null" : second);
+   }
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="parse">
+<button class="show-code">Code</button>
+<a href="../dart_uri/Uri.html">Uri</a> <strong>parse</strong>(<a href="../dart_core/String.html">String</a> uri) <a class="anchor-link" href="#parse"
+              title="Permalink to Uri.parse">#</a></h4>
+<div class="doc">
+<pre class="source">
+static Uri parse(String uri) =&gt; new Uri._fromMatch(_splitRe.firstMatch(uri));
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Uri">
+<button class="show-code">Code</button>
+new <strong>Uri</strong>(<a href="../dart_core/String.html">String</a> uri) <a class="anchor-link" href="#Uri"
+              title="Permalink to Uri.Uri">#</a></h4>
+<div class="doc">
+<pre class="source">
+Uri(String uri) : this.fromString(uri);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Uri.fromComponents">
+<button class="show-code">Code</button>
+const <strong>Uri.fromComponents</strong>({<a href="../dart_core/String.html">String</a> scheme: "", <a href="../dart_core/String.html">String</a> userInfo: "", <a href="../dart_core/String.html">String</a> domain: "", <a href="../dart_core/int.html">int</a> port: 0, <a href="../dart_core/String.html">String</a> path: "", <a href="../dart_core/String.html">String</a> query: "", <a href="../dart_core/String.html">String</a> fragment: ""}) <a class="anchor-link" href="#Uri.fromComponents"
+              title="Permalink to Uri.Uri.fromComponents">#</a></h4>
+<div class="doc">
+<pre class="source">
+const Uri.fromComponents({this.scheme: "",
+                         this.userInfo: "",
+                         this.domain: "",
+                         this.port: 0,
+                         this.path: "",
+                         this.query: "",
+                         this.fragment: ""});
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Uri.fromString">
+<button class="show-code">Code</button>
+new <strong>Uri.fromString</strong>(<a href="../dart_core/String.html">String</a> uri) <a class="anchor-link" href="#Uri.fromString"
+              title="Permalink to Uri.Uri.fromString">#</a></h4>
+<div class="doc">
+<p>Deprecated. Please use <a class="crossref" href="../dart_uri/Uri.html#parse">parse</a> instead.</p>
+<pre class="source">
+Uri.fromString(String uri) : this._fromMatch(_splitRe.firstMatch(uri));
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="domain">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>domain</strong> <a class="anchor-link"
+            href="#domain"
+            title="Permalink to Uri.domain">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+domain
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="fragment">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>fragment</strong> <a class="anchor-link"
+            href="#fragment"
+            title="Permalink to Uri.fragment">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+fragment
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hasAuthority">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>hasAuthority</strong> <a class="anchor-link"
+            href="#hasAuthority"
+            title="Permalink to Uri.hasAuthority">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+bool get hasAuthority {
+ return (userInfo != "") || (domain != "") || (port != 0);
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hashCode">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>hashCode</strong> <a class="anchor-link"
+            href="#hashCode"
+            title="Permalink to Uri.hashCode">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Get a hash code for this object.</p>
+<p>All objects have hash codes. Hash codes are guaranteed to be the
+same for objects that are equal when compared using the equality
+operator <code>==</code>. Other than that there are no guarantees about
+the hash codes. They will not be consistent between runs and
+there are no distribution guarantees.</p>
+<p>If a subclass overrides <a class="crossref" href="../dart_uri/Uri.html#hashCode">hashCode</a> it should override the
+equality operator as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+int get hashCode {
+ int combine(part, current) {
+   // The sum is truncated to 30 bits to make sure it fits into a Smi.
+   return (current * 31 + part.hashCode) &amp; 0x3FFFFFFF;
+ }
+ return combine(scheme, combine(userInfo, combine(domain, combine(port,
+     combine(path, combine(query, combine(fragment, 1)))))));
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isAbsolute">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isAbsolute</strong> <a class="anchor-link"
+            href="#isAbsolute"
+            title="Permalink to Uri.isAbsolute">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns <code>true</code> if the URI is absolute.</p>
+<pre class="source">
+bool get isAbsolute {
+ if ("" == scheme) return false;
+ if ("" != fragment) return false;
+ return true;
+
+ /* absolute-URI  = scheme ":" hier-part [ "?" query ]
+  * hier-part   = "//" authority path-abempty
+  *             / path-absolute
+  *             / path-rootless
+  *             / path-empty
+  *
+  * path          = path-abempty    ; begins with "/" or is empty
+  *               / path-absolute   ; begins with "/" but not "//"
+  *               / path-noscheme   ; begins with a non-colon segment
+  *               / path-rootless   ; begins with a segment
+  *               / path-empty      ; zero characters
+  *
+  * path-abempty  = *( "/" segment )
+  * path-absolute = "/" [ segment-nz *( "/" segment ) ]
+  * path-noscheme = segment-nz-nc *( "/" segment )
+  * path-rootless = segment-nz *( "/" segment )
+  * path-empty    = 0&lt;pchar&gt;
+  * segment       = *pchar
+  * segment-nz    = 1*pchar
+  * segment-nz-nc = 1*( unreserved / pct-encoded / sub-delims / "@" )
+  *               ; non-zero-length segment without any colon ":"
+  *
+  * pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"
+  */
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="origin">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>origin</strong> <a class="anchor-link"
+            href="#origin"
+            title="Permalink to Uri.origin">#</a>
+        </h4>
+        <div class="doc">
+<p>For http/https schemes returns URI's <a href="http://www.w3.org/TR/2011/WD-html5-20110405/origin-0.html#origin">origin</a> - scheme://domain:port.
+For all other schemes throws ArgumentError.</p>
+<pre class="source">
+String get origin {
+ if (scheme == "") {
+   // TODO(aprelev@gmail.com): Use StateException instead
+   throw new ArgumentError("Cannot use origin without a scheme");
+ }
+ if (scheme != "http" &amp;&amp; scheme != "https") {
+   // TODO(aprelev@gmail.com): Use StateException instead
+   throw new ArgumentError(
+     "origin is applicable to http/https schemes only. Not \'$scheme\'");
+ }
+ StringBuffer sb = new StringBuffer();
+ sb.add(scheme);
+ sb.add(":");
+ if (domain == null || domain == "") {
+   // TODO(aprelev@gmail.com): Use StateException instead
+   throw new ArgumentError("Cannot use origin without a domain");
+ }
+
+ sb.add("//");
+ sb.add(domain);
+ if (port != 0) {
+   sb.add(":");
+   sb.add(port);
+ }
+ return sb.toString();
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="path">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>path</strong> <a class="anchor-link"
+            href="#path"
+            title="Permalink to Uri.path">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+path
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="port">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>port</strong> <a class="anchor-link"
+            href="#port"
+            title="Permalink to Uri.port">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+port
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="query">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>query</strong> <a class="anchor-link"
+            href="#query"
+            title="Permalink to Uri.query">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+query
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="scheme">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>scheme</strong> <a class="anchor-link"
+            href="#scheme"
+            title="Permalink to Uri.scheme">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+scheme
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="userInfo">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>userInfo</strong> <a class="anchor-link"
+            href="#userInfo"
+            title="Permalink to Uri.userInfo">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+userInfo
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method"><h4 id="==">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>operator ==</strong>(other) <a class="anchor-link" href="#=="
+              title="Permalink to Uri.operator ==">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>The equality operator.</p>
+<p>The default behavior for all <code>Object</code>s is to return true if and
+only if <code>this</code> and 
+<span class="param">other</span> are the same object.</p>
+<p>If a subclass overrides the equality operator it should override
+the <a class="crossref" href="../dart_uri/Uri.html#hashCode">hashCode</a> method as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+bool operator==(other) {
+ if (other is! Uri) return false;
+ Uri uri = other;
+ return scheme == uri.scheme &amp;&amp;
+     userInfo == uri.userInfo &amp;&amp;
+     domain == uri.domain &amp;&amp;
+     port == uri.port &amp;&amp;
+     path == uri.path &amp;&amp;
+     query == uri.query &amp;&amp;
+     fragment == uri.fragment;
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="resolve">
+<button class="show-code">Code</button>
+<a href="../dart_uri/Uri.html">Uri</a> <strong>resolve</strong>(<a href="../dart_core/String.html">String</a> uri) <a class="anchor-link" href="#resolve"
+              title="Permalink to Uri.resolve">#</a></h4>
+<div class="doc">
+<pre class="source">
+Uri resolve(String uri) {
+ return resolveUri(Uri.parse(uri));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="resolveUri">
+<button class="show-code">Code</button>
+<a href="../dart_uri/Uri.html">Uri</a> <strong>resolveUri</strong>(<a href="../dart_uri/Uri.html">Uri</a> reference) <a class="anchor-link" href="#resolveUri"
+              title="Permalink to Uri.resolveUri">#</a></h4>
+<div class="doc">
+<pre class="source">
+Uri resolveUri(Uri reference) {
+ // From RFC 3986.
+ String targetScheme;
+ String targetUserInfo;
+ String targetDomain;
+ int targetPort;
+ String targetPath;
+ String targetQuery;
+ if (reference.scheme != "") {
+   targetScheme = reference.scheme;
+   targetUserInfo = reference.userInfo;
+   targetDomain = reference.domain;
+   targetPort = reference.port;
+   targetPath = removeDotSegments(reference.path);
+   targetQuery = reference.query;
+ } else {
+   if (reference.hasAuthority) {
+     targetUserInfo = reference.userInfo;
+     targetDomain = reference.domain;
+     targetPort = reference.port;
+     targetPath = removeDotSegments(reference.path);
+     targetQuery = reference.query;
+   } else {
+     if (reference.path == "") {
+       targetPath = this.path;
+       if (reference.query != "") {
+         targetQuery = reference.query;
+       } else {
+         targetQuery = this.query;
+       }
+     } else {
+       if (reference.path.startsWith("/")) {
+         targetPath = removeDotSegments(reference.path);
+       } else {
+         targetPath = removeDotSegments(merge(this.path, reference.path));
+       }
+       targetQuery = reference.query;
+     }
+     targetUserInfo = this.userInfo;
+     targetDomain = this.domain;
+     targetPort = this.port;
+   }
+   targetScheme = this.scheme;
+ }
+ return new Uri.fromComponents(scheme: targetScheme,
+                               userInfo: targetUserInfo,
+                               domain: targetDomain,
+                               port: targetPort,
+                               path: targetPath,
+                               query: targetQuery,
+                               fragment: reference.fragment);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to Uri.toString">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() {
+ StringBuffer sb = new StringBuffer();
+ _addIfNonEmpty(sb, scheme, scheme, ':');
+ if (hasAuthority || (scheme == "file")) {
+   sb.add("//");
+   _addIfNonEmpty(sb, userInfo, userInfo, "@");
+   sb.add(domain == null ? "null" : domain);
+   if (port != 0) {
+     sb.add(":");
+     sb.add(port.toString());
+   }
+ }
+ sb.add(path == null ? "null" : path);
+ _addIfNonEmpty(sb, query, "?", query);
+ _addIfNonEmpty(sb, fragment, "#", fragment);
+ return sb.toString();
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:59.902</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

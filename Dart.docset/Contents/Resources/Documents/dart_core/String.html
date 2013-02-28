@@ -1,0 +1,756 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>String abstract class / dart:core Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:core" data-type="String">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_core.html">dart:core</a> &rsaquo; <a href="../dart_core/String.html">String</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><ul class="icon">
+<li><a href="../dart_core/BidirectionalIterator.html"><div class="icon-class"></div>BidirectionalIterator&lt;T&gt;</a></li>
+<li><a href="../dart_core/bool.html"><div class="icon-class"></div>bool</a></li>
+<li><a href="../dart_core/Collection.html"><div class="icon-class"></div>Collection&lt;E&gt;</a></li>
+<li><a href="../dart_core/Comparable.html"><div class="icon-class"></div>Comparable&lt;T&gt;</a></li>
+<li><a href="../dart_core/Comparator.html"><div class="icon-interface"></div>Comparator&lt;T&gt;</a></li>
+<li><a href="../dart_core/Date.html"><div class="icon-class"></div>Date</a></li>
+<li><a href="../dart_core/DateTime.html"><div class="icon-class"></div>DateTime</a></li>
+<li><a href="../dart_core/double.html"><div class="icon-class"></div>double</a></li>
+<li><a href="../dart_core/Duration.html"><div class="icon-class"></div>Duration</a></li>
+<li><a href="../dart_core/Expando.html"><div class="icon-class"></div>Expando&lt;T&gt;</a></li>
+<li><a href="../dart_core/Expect.html"><div class="icon-class"></div>Expect</a></li>
+<li><a href="../dart_core/Function.html"><div class="icon-class"></div>Function</a></li>
+<li><a href="../dart_core/int.html"><div class="icon-class"></div>int</a></li>
+<li><a href="../dart_core/InvocationMirror.html"><div class="icon-class"></div>InvocationMirror</a></li>
+<li><a href="../dart_core/Iterable.html"><div class="icon-class"></div>Iterable&lt;E&gt;</a></li>
+<li><a href="../dart_core/Iterator.html"><div class="icon-class"></div>Iterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/List.html"><div class="icon-class"></div>List&lt;E&gt;</a></li>
+<li><a href="../dart_core/Map.html"><div class="icon-class"></div>Map&lt;K, V&gt;</a></li>
+<li><a href="../dart_core/Match.html"><div class="icon-class"></div>Match</a></li>
+<li><a href="../dart_core/num.html"><div class="icon-class"></div>num</a></li>
+<li><a href="../dart_core/Object.html"><div class="icon-class"></div>Object</a></li>
+<li><a href="../dart_core/Options.html"><div class="icon-class"></div>Options</a></li>
+<li><a href="../dart_core/Pattern.html"><div class="icon-class"></div>Pattern</a></li>
+<li><a href="../dart_core/RegExp.html"><div class="icon-class"></div>RegExp</a></li>
+<li><a href="../dart_core/RuneIterator.html"><div class="icon-class"></div>RuneIterator</a></li>
+<li><a href="../dart_core/Runes.html"><div class="icon-class"></div>Runes</a></li>
+<li><a href="../dart_core/Set.html"><div class="icon-class"></div>Set&lt;E&gt;</a></li>
+<li><a href="../dart_core/Stopwatch.html"><div class="icon-class"></div>Stopwatch</a></li>
+<li><div class="icon-class"></div><strong>String</strong></li>
+<li><a href="../dart_core/StringBuffer.html"><div class="icon-class"></div>StringBuffer</a></li>
+<li><a href="../dart_core/StringSink.html"><div class="icon-class"></div>StringSink</a></li>
+<li><a href="../dart_core/Type.html"><div class="icon-class"></div>Type</a></li>
+<li><a href="../dart_core/AbstractClassInstantiationError.html"><div class="icon-exception"></div>AbstractClassInstantiationError</a></li>
+<li><a href="../dart_core/ArgumentError.html"><div class="icon-exception"></div>ArgumentError</a></li>
+<li><a href="../dart_core/AssertionError.html"><div class="icon-exception"></div>AssertionError</a></li>
+<li><a href="../dart_core/CastError.html"><div class="icon-exception"></div>CastError</a></li>
+<li><a href="../dart_core/ConcurrentModificationError.html"><div class="icon-exception"></div>ConcurrentModificationError</a></li>
+<li><a href="../dart_core/Error.html"><div class="icon-exception"></div>Error</a></li>
+<li><a href="../dart_core/Exception.html"><div class="icon-exception"></div>Exception</a></li>
+<li><a href="../dart_core/ExpectException.html"><div class="icon-exception"></div>ExpectException</a></li>
+<li><a href="../dart_core/FallThroughError.html"><div class="icon-exception"></div>FallThroughError</a></li>
+<li><a href="../dart_core/FormatException.html"><div class="icon-exception"></div>FormatException</a></li>
+<li><a href="../dart_core/IllegalJSRegExpException.html"><div class="icon-exception"></div>IllegalJSRegExpException</a></li>
+<li><a href="../dart_core/IntegerDivisionByZeroException.html"><div class="icon-exception"></div>IntegerDivisionByZeroException</a></li>
+<li><a href="../dart_core/NoSuchMethodError.html"><div class="icon-exception"></div>NoSuchMethodError</a></li>
+<li><a href="../dart_core/NullThrownError.html"><div class="icon-exception"></div>NullThrownError</a></li>
+<li><a href="../dart_core/OutOfMemoryError.html"><div class="icon-exception"></div>OutOfMemoryError</a></li>
+<li><a href="../dart_core/RangeError.html"><div class="icon-exception"></div>RangeError</a></li>
+<li><a href="../dart_core/RuntimeError.html"><div class="icon-exception"></div>RuntimeError</a></li>
+<li><a href="../dart_core/StackOverflowError.html"><div class="icon-exception"></div>StackOverflowError</a></li>
+<li><a href="../dart_core/StateError.html"><div class="icon-exception"></div>StateError</a></li>
+<li><a href="../dart_core/TypeError.html"><div class="icon-exception"></div>TypeError</a></li>
+<li><a href="../dart_core/UnimplementedError.html"><div class="icon-exception"></div>UnimplementedError</a></li>
+<li><a href="../dart_core/UnsupportedError.html"><div class="icon-exception"></div>UnsupportedError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>String</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The String class represents sequences of characters. Strings are
+immutable. A string is represented by a sequence of Unicode UTF-16
+code units accessible through the <a class="crossref" href="../dart_core/String.html#codeUnitAt">codeUnitAt</a> or the
+<a class="crossref" href="../dart_core/String.html#codeUnits">codeUnits</a> members. Their string representation is accessible through
+the index-operator.</p>
+<p>The characters of a string are encoded in UTF-16. Decoding UTF-16, which
+combines surrogate pairs, yields Unicode code points. Following a similar
+terminology to Go we use the name "rune" for an integer representing a
+Unicode code point. The runes of a string are accessible through the <a class="crossref" href="../dart_core/String.html#runes">runes</a>
+getter.</p>
+<pre class="source">
+abstract class String implements Comparable&lt;String&gt;, Pattern {
+ /**
+  * Allocates a new String for the specified [charCodes].
+  *
+  * The [charCodes] can be UTF-16 code units or runes. If a char-code value is
+  * 16-bit it is copied verbatim. If it is greater than 16 bits it is
+  * decomposed into a surrogate pair.
+  */
+ external factory String.fromCharCodes(Iterable&lt;int&gt; charCodes);
+
+ /**
+  * Allocates a new String for the specified [charCode].
+  *
+  * The new string contains a single code unit if the [charCode] can be
+  * represented by a single UTF-16 code unit. Otherwise the [length] is 2 and
+  * the code units form a surrogate pair.
+  *
+  * It is allowed (though generally discouraged) to create a String with only
+  * one half of a surrogate pair.
+  */
+ factory String.fromCharCode(int charCode) {
+   List&lt;int&gt; charCodes = new List&lt;int&gt;.fixedLength(1, fill: charCode);
+   return new String.fromCharCodes(charCodes);
+ }
+
+ /**
+  * Gets the character (as [String]) at the given [index].
+  *
+  * The returned string represents exactly one UTF-16 code unit which may be
+  * half of a surrogate pair. For example the Unicode character for a
+  * musical G-clef ("𝄞") with rune value 0x1D11E consists of a UTF-16 surrogate
+  * pair: `0xD834` and `0xDD1E`. Using the index-operator on this string yields
+  * a String with half of a surrogate pair:
+  *
+  *     var clef = "\u{1D11E}";
+  *     clef.length;  // =&gt; 2
+  *     clef.runes.first == 0x1D11E;  // =&gt; true
+  *     clef.runes.length;  // =&gt; 1
+  *     clef.codeUnitAt(0);  // =&gt; 0xD834
+  *     clef.codeUnitAt(1);  // =&gt; 0xDD1E
+  *     // The following strings are halves of a UTF-16 surrogate pair and
+  *     // thus invalid UTF-16 strings:
+  *     clef[0];  // =&gt; a string of length 1 with code-unit value 0xD834.
+  *     clef[1];  // =&gt; a string of length 1 with code-unit value 0xDD1E.
+  *
+  * This method is equivalent to
+  * `new String.fromCharCode(this.codeUnitAt(index))`.
+  */
+ String operator [](int index);
+
+ /**
+  * Returns the 16-bit UTF-16 code unit at the given [index].
+  */
+ int codeUnitAt(int index);
+
+ /**
+  * The length of the string.
+  *
+  * Returns the number of UTF-16 code units in this string. The number
+  * of [runes] might be less, if the string contains characters outside
+  * the basic multilingual plane (plane 0).
+  */
+ int get length;
+
+ /**
+  * Returns whether the two strings are equal.
+  *
+  * This method compares each individual code unit of the strings. It does not
+  * check for Unicode equivalence. For example the two following strings both
+  * represent the string "Amélie" but, due to their different encoding will
+  * not return equal.
+  *
+  *     "Am\xe9lie"
+  *     "Ame\u{301}lie"
+  *
+  * In the first string the "é" is encoded as a single unicode code unit,
+  * whereas the second string encodes it as "e" with the combining
+  * accent character "◌́".
+  */
+ bool operator ==(var other);
+
+ /**
+  * Returns whether this string ends with [other].
+  */
+ bool endsWith(String other);
+
+ /**
+  * Returns whether this string starts with [other].
+  */
+ bool startsWith(String other);
+
+ /**
+  * Returns the first location of [other] in this string starting at
+  * [start] (inclusive).
+  * Returns -1 if [other] could not be found.
+  */
+ int indexOf(String other, [int start]);
+
+ /**
+  * Returns the last location of [other] in this string, searching
+  * backward starting at [start] (inclusive).
+  * Returns -1 if [other] could not be found.
+  */
+ int lastIndexOf(String other, [int start]);
+
+ /**
+  * Returns whether this string is empty.
+  */
+ bool get isEmpty;
+
+ /**
+  * Creates a new string by concatenating this string with [other].
+  *
+  * A sequence of strings can be concatenated by using [Iterable.join]:
+  *
+  *     var strings = ['foo', 'bar', 'geez'];
+  *     var concatenated = strings.join();
+  */
+ String concat(String other);
+
+ /**
+  * Returns a slice of this string from [startIndex] to [endIndex].
+  *
+  * If [startIndex] is omitted, it defaults to the start of the string.
+  *
+  * If [endIndex] is omitted, it defaults to the end of the string.
+  *
+  * If either index is negative, it's taken as a negative index from the
+  * end of the string. Their effective value is computed by adding the
+  * negative value to the [length] of the string.
+  *
+  * The effective indices, after  must be non-negative, no greater than the
+  * length of the string, and [endIndex] must not be less than [startIndex].
+  */
+ String slice([int startIndex, int endIndex]);
+
+ /**
+  * Returns a substring of this string in the given range.
+  * [startIndex] is inclusive and [endIndex] is exclusive.
+  */
+ String substring(int startIndex, [int endIndex]);
+
+ /**
+  * Removes leading and trailing whitespace from a string. If the string
+  * contains leading or trailing whitespace a new string with no leading and
+  * no trailing whitespace is returned. Otherwise, the string itself is
+  * returned.  Whitespace is defined as every Unicode character in the Zs, Zl
+  * and Zp categories (this includes no-break space), the spacing control
+  * characters from 9 to 13 (tab, lf, vtab, ff and cr), and 0xfeff the BOM
+  * character.
+  */
+ String trim();
+
+ /**
+  * Returns whether this string contains [other] starting
+  * at [startIndex] (inclusive).
+  */
+ bool contains(Pattern other, [int startIndex]);
+
+ /**
+  * Returns a new string where the first occurence of [from] in this string
+  * is replaced with [to].
+  */
+ String replaceFirst(Pattern from, String to);
+
+ /**
+  * Returns a new string where all occurences of [from] in this string
+  * are replaced with [replace].
+  */
+ String replaceAll(Pattern from, var replace);
+
+ /**
+  * Returns a new string where all occurences of [from] in this string
+  * are replaced with a [String] depending on [replace].
+  *
+  *
+  * The [replace] function is called with the [Match] generated
+  * by the pattern, and its result is used as replacement.
+  */
+ String replaceAllMapped(Pattern from, String replace(Match match));
+
+ /**
+  * Splits the string around matches of [pattern]. Returns
+  * a list of substrings.
+  *
+  * Splitting with an empty string pattern (`""`) splits at UTF-16 code unit
+  * boundaries and not at rune boundaries. The following two expressions
+  * are hence equivalent:
+  *
+  *     string.split("")
+  *     string.codeUnits.map((unit) =&gt; new String.fromCharCode(unit))
+  *
+  * Unless it guaranteed that the string is in the basic multilingual plane
+  * (meaning that each code unit represents a rune) it is often better to
+  * map the runes instead:
+  *
+  *     string.runes.map((rune) =&gt; new String.fromCharCode(rune))
+  */
+ List&lt;String&gt; split(Pattern pattern);
+
+ /**
+  * Splits the string on the [pattern], then converts each part and each match.
+  *
+  * The pattern is used to split the string into parts and separating matches.
+  *
+  * Each match is converted to a string by calling [onMatch]. If [onMatch]
+  * is omitted, the matched string is used.
+  *
+  * Each non-matched part is converted by a call to [onNonMatch]. If
+  * [onNonMatch] is omitted, the non-matching part is used.
+  *
+  * Then all the converted parts are combined into the resulting string.
+  */
+ String splitMapJoin(Pattern pattern,
+                     {String onMatch(Match match),
+                      String onNonMatch(String nonMatch)});
+
+ /**
+  * Returns an unmodifiable list of the UTF-16 code units of this string.
+  */
+ List&lt;int&gt; get codeUnits;
+
+ /**
+  * Returns an iterable of Unicode code-points of this string.
+  *
+  * If the string contains surrogate pairs, they will be combined and returned
+  * as one integer by this iterator. Unmatched surrogate halves are treated
+  * like valid 16-bit code-units.
+  */
+ Runes get runes;
+
+ /**
+  * If this string is not already all lower case, returns a new string
+  * where all characters are made lower case. Returns [:this:] otherwise.
+  */
+ // TODO(floitsch): document better. (See EcmaScript for description).
+ String toLowerCase();
+
+ /**
+  * If this string is not already all upper case, returns a new string
+  * where all characters are made upper case. Returns [:this:] otherwise.
+  */
+ // TODO(floitsch): document better. (See EcmaScript for description).
+ String toUpperCase();
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart__interceptors/JSString.html">JSString</a></span></p>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_core/Pattern.html">Pattern</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_core/Comparable.html">Comparable&lt;String&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="String.fromCharCode">
+<button class="show-code">Code</button>
+factory <strong>String.fromCharCode</strong>(<a href="../dart_core/int.html">int</a> charCode) <a class="anchor-link" href="#String.fromCharCode"
+              title="Permalink to String.String.fromCharCode">#</a></h4>
+<div class="doc">
+<p>Allocates a new String for the specified 
+<span class="param">charCode</span>.</p>
+<p>The new string contains a single code unit if the 
+<span class="param">charCode</span> can be
+represented by a single UTF-16 code unit. Otherwise the <a class="crossref" href="../dart_core/String.html#length">length</a> is 2 and
+the code units form a surrogate pair.</p>
+<p>It is allowed (though generally discouraged) to create a String with only
+one half of a surrogate pair.</p>
+<pre class="source">
+factory String.fromCharCode(int charCode) {
+ List&lt;int&gt; charCodes = new List&lt;int&gt;.fixedLength(1, fill: charCode);
+ return new String.fromCharCodes(charCodes);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="String.fromCharCodes">
+<button class="show-code">Code</button>
+factory <strong>String.fromCharCodes</strong>(<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/int.html">int</a>&gt; charCodes) <a class="anchor-link" href="#String.fromCharCodes"
+              title="Permalink to String.String.fromCharCodes">#</a></h4>
+<div class="doc">
+<p>Allocates a new String for the specified 
+<span class="param">charCodes</span>.</p>
+<p>The 
+<span class="param">charCodes</span> can be UTF-16 code units or runes. If a char-code value is
+16-bit it is copied verbatim. If it is greater than 16 bits it is
+decomposed into a surrogate pair.</p>
+<pre class="source">
+external factory String.fromCharCodes(Iterable&lt;int&gt; charCodes);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="codeUnits">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;         <strong>codeUnits</strong> <a class="anchor-link"
+            href="#codeUnits"
+            title="Permalink to String.codeUnits">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns an unmodifiable list of the UTF-16 code units of this string.</p>
+<pre class="source">
+List&lt;int&gt; get codeUnits;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isEmpty</strong> <a class="anchor-link"
+            href="#isEmpty"
+            title="Permalink to String.isEmpty">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns whether this string is empty.</p>
+<pre class="source">
+bool get isEmpty;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="length">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>length</strong> <a class="anchor-link"
+            href="#length"
+            title="Permalink to String.length">#</a>
+        </h4>
+        <div class="doc">
+<p>The length of the string.</p>
+<p>Returns the number of UTF-16 code units in this string. The number
+of <a class="crossref" href="../dart_core/String.html#runes">runes</a> might be less, if the string contains characters outside
+the basic multilingual plane (plane 0).</p>
+<pre class="source">
+int get length;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="runes">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Runes.html">Runes</a>         <strong>runes</strong> <a class="anchor-link"
+            href="#runes"
+            title="Permalink to String.runes">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns an iterable of Unicode code-points of this string.</p>
+<p>If the string contains surrogate pairs, they will be combined and returned
+as one integer by this iterator. Unmatched surrogate halves are treated
+like valid 16-bit code-units.</p>
+<pre class="source">
+Runes get runes;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method"><h4 id="[]">
+abstract <a href="../dart_core/String.html">String</a> <strong>operator []</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#[]"
+              title="Permalink to String.operator []">#</a></h4>
+<div class="doc">
+<p>Gets the character (as <a class="crossref" href="../dart_core/String.html">String</a>) at the given 
+<span class="param">index</span>.</p>
+<p>The returned string represents exactly one UTF-16 code unit which may be
+half of a surrogate pair. For example the Unicode character for a
+musical G-clef ("𝄞") with rune value 0x1D11E consists of a UTF-16 surrogate
+pair: <code>0xD834</code> and <code>0xDD1E</code>. Using the index-operator on this string yields
+a String with half of a surrogate pair:</p>
+<pre><code>var clef = "\u{1D11E}";
+clef.length;  // =&gt; 2
+clef.runes.first == 0x1D11E;  // =&gt; true
+clef.runes.length;  // =&gt; 1
+clef.codeUnitAt(0);  // =&gt; 0xD834
+clef.codeUnitAt(1);  // =&gt; 0xDD1E
+// The following strings are halves of a UTF-16 surrogate pair and
+// thus invalid UTF-16 strings:
+clef[0];  // =&gt; a string of length 1 with code-unit value 0xD834.
+clef[1];  // =&gt; a string of length 1 with code-unit value 0xDD1E.
+</code></pre>
+<p>This method is equivalent to
+<code>new String.fromCharCode(this.codeUnitAt(index))</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="==">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator ==</strong>(other) <a class="anchor-link" href="#=="
+              title="Permalink to String.operator ==">#</a></h4>
+<div class="doc">
+<p>Returns whether the two strings are equal.</p>
+<p>This method compares each individual code unit of the strings. It does not
+check for Unicode equivalence. For example the two following strings both
+represent the string "Amélie" but, due to their different encoding will
+not return equal.</p>
+<pre><code>"Am\xe9lie"
+"Ame\u{301}lie"
+</code></pre>
+<p>In the first string the "é" is encoded as a single unicode code unit,
+whereas the second string encodes it as "e" with the combining
+accent character "◌́".</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="allMatches">
+abstract <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/Match.html">Match</a>&gt; <strong>allMatches</strong>(<a href="../dart_core/String.html">String</a> str) <a class="anchor-link" href="#allMatches"
+              title="Permalink to String.allMatches">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Pattern.html">Pattern</a> </div><div class="doc">
+</div>
+</div>
+<div class="method"><h4 id="codeUnitAt">
+abstract <a href="../dart_core/int.html">int</a> <strong>codeUnitAt</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#codeUnitAt"
+              title="Permalink to String.codeUnitAt">#</a></h4>
+<div class="doc">
+<p>Returns the 16-bit UTF-16 code unit at the given 
+<span class="param">index</span>.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="compareTo">
+abstract <a href="../dart_core/int.html">int</a> <strong>compareTo</strong>(<a href="../dart_core/String.html">T</a> other) <a class="anchor-link" href="#compareTo"
+              title="Permalink to String.compareTo">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Comparable.html">Comparable</a> </div><div class="doc">
+<p>Compares this object to another <a class="crossref" href="../dart_core/Comparable.html">Comparable</a></p>
+<p>Returns a value like a <a class="crossref" href="../dart_core/Comparator.html">Comparator</a> when comparing <code>this</code> to 
+<span class="param">other</span>.</p>
+<p>May throw an <a class="crossref" href="../dart_core/ArgumentError.html">ArgumentError</a> if 
+<span class="param">other</span> is of a type that
+is not comparable to <code>this</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="concat">
+abstract <a href="../dart_core/String.html">String</a> <strong>concat</strong>(<a href="../dart_core/String.html">String</a> other) <a class="anchor-link" href="#concat"
+              title="Permalink to String.concat">#</a></h4>
+<div class="doc">
+<p>Creates a new string by concatenating this string with 
+<span class="param">other</span>.</p>
+<p>A sequence of strings can be concatenated by using <a class="crossref" href="../dart_core/Iterable.html#join">Iterable.join</a>:</p>
+<pre><code>var strings = ['foo', 'bar', 'geez'];
+var concatenated = strings.join();
+</code></pre>
+</div>
+</div>
+<div class="method"><h4 id="contains">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>contains</strong>(<a href="../dart_core/Pattern.html">Pattern</a> other, [<a href="../dart_core/int.html">int</a> startIndex]) <a class="anchor-link" href="#contains"
+              title="Permalink to String.contains">#</a></h4>
+<div class="doc">
+<p>Returns whether this string contains 
+<span class="param">other</span> starting
+at <a href="inclusive">startIndex</a>.</p>
+</div>
+</div>
+<div class="method"><h4 id="endsWith">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>endsWith</strong>(<a href="../dart_core/String.html">String</a> other) <a class="anchor-link" href="#endsWith"
+              title="Permalink to String.endsWith">#</a></h4>
+<div class="doc">
+<p>Returns whether this string ends with 
+<span class="param">other</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="indexOf">
+abstract <a href="../dart_core/int.html">int</a> <strong>indexOf</strong>(<a href="../dart_core/String.html">String</a> other, [<a href="../dart_core/int.html">int</a> start]) <a class="anchor-link" href="#indexOf"
+              title="Permalink to String.indexOf">#</a></h4>
+<div class="doc">
+<p>Returns the first location of 
+<span class="param">other</span> in this string starting at
+<a href="inclusive">start</a>.
+Returns -1 if 
+<span class="param">other</span> could not be found.</p>
+</div>
+</div>
+<div class="method"><h4 id="lastIndexOf">
+abstract <a href="../dart_core/int.html">int</a> <strong>lastIndexOf</strong>(<a href="../dart_core/String.html">String</a> other, [<a href="../dart_core/int.html">int</a> start]) <a class="anchor-link" href="#lastIndexOf"
+              title="Permalink to String.lastIndexOf">#</a></h4>
+<div class="doc">
+<p>Returns the last location of 
+<span class="param">other</span> in this string, searching
+backward starting at <a href="inclusive">start</a>.
+Returns -1 if 
+<span class="param">other</span> could not be found.</p>
+</div>
+</div>
+<div class="method"><h4 id="replaceAll">
+abstract <a href="../dart_core/String.html">String</a> <strong>replaceAll</strong>(<a href="../dart_core/Pattern.html">Pattern</a> from, replace) <a class="anchor-link" href="#replaceAll"
+              title="Permalink to String.replaceAll">#</a></h4>
+<div class="doc">
+<p>Returns a new string where all occurences of 
+<span class="param">from</span> in this string
+are replaced with 
+<span class="param">replace</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="replaceAllMapped">
+abstract <a href="../dart_core/String.html">String</a> <strong>replaceAllMapped</strong>(<a href="../dart_core/Pattern.html">Pattern</a> from, <a href="../dart_core/String.html">String</a> replace(<a href="../dart_core/Match.html">Match</a> match)) <a class="anchor-link" href="#replaceAllMapped"
+              title="Permalink to String.replaceAllMapped">#</a></h4>
+<div class="doc">
+<p>Returns a new string where all occurences of 
+<span class="param">from</span> in this string
+are replaced with a <a class="crossref" href="../dart_core/String.html">String</a> depending on 
+<span class="param">replace</span>.</p>
+<p>The 
+<span class="param">replace</span> function is called with the <a class="crossref" href="../dart_core/Match.html">Match</a> generated
+by the pattern, and its result is used as replacement.</p>
+</div>
+</div>
+<div class="method"><h4 id="replaceFirst">
+abstract <a href="../dart_core/String.html">String</a> <strong>replaceFirst</strong>(<a href="../dart_core/Pattern.html">Pattern</a> from, <a href="../dart_core/String.html">String</a> to) <a class="anchor-link" href="#replaceFirst"
+              title="Permalink to String.replaceFirst">#</a></h4>
+<div class="doc">
+<p>Returns a new string where the first occurence of 
+<span class="param">from</span> in this string
+is replaced with 
+<span class="param">to</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="slice">
+abstract <a href="../dart_core/String.html">String</a> <strong>slice</strong>([<a href="../dart_core/int.html">int</a> startIndex, <a href="../dart_core/int.html">int</a> endIndex]) <a class="anchor-link" href="#slice"
+              title="Permalink to String.slice">#</a></h4>
+<div class="doc">
+<p>Returns a slice of this string from 
+<span class="param">startIndex</span> to 
+<span class="param">endIndex</span>.</p>
+<p>If 
+<span class="param">startIndex</span> is omitted, it defaults to the start of the string.</p>
+<p>If 
+<span class="param">endIndex</span> is omitted, it defaults to the end of the string.</p>
+<p>If either index is negative, it's taken as a negative index from the
+end of the string. Their effective value is computed by adding the
+negative value to the <a class="crossref" href="../dart_core/String.html#length">length</a> of the string.</p>
+<p>The effective indices, after  must be non-negative, no greater than the
+length of the string, and 
+<span class="param">endIndex</span> must not be less than 
+<span class="param">startIndex</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="split">
+abstract <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt; <strong>split</strong>(<a href="../dart_core/Pattern.html">Pattern</a> pattern) <a class="anchor-link" href="#split"
+              title="Permalink to String.split">#</a></h4>
+<div class="doc">
+<p>Splits the string around matches of 
+<span class="param">pattern</span>. Returns
+a list of substrings.</p>
+<p>Splitting with an empty string pattern (<code>""</code>) splits at UTF-16 code unit
+boundaries and not at rune boundaries. The following two expressions
+are hence equivalent:</p>
+<pre><code>string.split("")
+string.codeUnits.map((unit) =&gt; new String.fromCharCode(unit))
+</code></pre>
+<p>Unless it guaranteed that the string is in the basic multilingual plane
+(meaning that each code unit represents a rune) it is often better to
+map the runes instead:</p>
+<pre><code>string.runes.map((rune) =&gt; new String.fromCharCode(rune))
+</code></pre>
+</div>
+</div>
+<div class="method"><h4 id="splitMapJoin">
+abstract <a href="../dart_core/String.html">String</a> <strong>splitMapJoin</strong>(<a href="../dart_core/Pattern.html">Pattern</a> pattern, {<a href="../dart_core/String.html">String</a> onMatch(<a href="../dart_core/Match.html">Match</a> match), <a href="../dart_core/String.html">String</a> onNonMatch(<a href="../dart_core/String.html">String</a> nonMatch)}) <a class="anchor-link" href="#splitMapJoin"
+              title="Permalink to String.splitMapJoin">#</a></h4>
+<div class="doc">
+<p>Splits the string on the 
+<span class="param">pattern</span>, then converts each part and each match.</p>
+<p>The pattern is used to split the string into parts and separating matches.</p>
+<p>Each match is converted to a string by calling 
+<span class="param">onMatch</span>. If 
+<span class="param">onMatch</span>
+is omitted, the matched string is used.</p>
+<p>Each non-matched part is converted by a call to 
+<span class="param">onNonMatch</span>. If
+
+<span class="param">onNonMatch</span> is omitted, the non-matching part is used.</p>
+<p>Then all the converted parts are combined into the resulting string.</p>
+</div>
+</div>
+<div class="method"><h4 id="startsWith">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>startsWith</strong>(<a href="../dart_core/String.html">String</a> other) <a class="anchor-link" href="#startsWith"
+              title="Permalink to String.startsWith">#</a></h4>
+<div class="doc">
+<p>Returns whether this string starts with 
+<span class="param">other</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="substring">
+abstract <a href="../dart_core/String.html">String</a> <strong>substring</strong>(<a href="../dart_core/int.html">int</a> startIndex, [<a href="../dart_core/int.html">int</a> endIndex]) <a class="anchor-link" href="#substring"
+              title="Permalink to String.substring">#</a></h4>
+<div class="doc">
+<p>Returns a substring of this string in the given range.
+
+<span class="param">startIndex</span> is inclusive and 
+<span class="param">endIndex</span> is exclusive.</p>
+</div>
+</div>
+<div class="method"><h4 id="toLowerCase">
+abstract <a href="../dart_core/String.html">String</a> <strong>toLowerCase</strong>() <a class="anchor-link" href="#toLowerCase"
+              title="Permalink to String.toLowerCase">#</a></h4>
+<div class="doc">
+<p>If this string is not already all lower case, returns a new string
+where all characters are made lower case. Returns <code>this</code> otherwise.</p>
+</div>
+</div>
+<div class="method"><h4 id="toUpperCase">
+abstract <a href="../dart_core/String.html">String</a> <strong>toUpperCase</strong>() <a class="anchor-link" href="#toUpperCase"
+              title="Permalink to String.toUpperCase">#</a></h4>
+<div class="doc">
+<p>If this string is not already all upper case, returns a new string
+where all characters are made upper case. Returns <code>this</code> otherwise.</p>
+</div>
+</div>
+<div class="method"><h4 id="trim">
+abstract <a href="../dart_core/String.html">String</a> <strong>trim</strong>() <a class="anchor-link" href="#trim"
+              title="Permalink to String.trim">#</a></h4>
+<div class="doc">
+<p>Removes leading and trailing whitespace from a string. If the string
+contains leading or trailing whitespace a new string with no leading and
+no trailing whitespace is returned. Otherwise, the string itself is
+returned.  Whitespace is defined as every Unicode character in the Zs, Zl
+and Zp categories (this includes no-break space), the spacing control
+characters from 9 to 13 (tab, lf, vtab, ff and cr), and 0xfeff the BOM
+character.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:23.459</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

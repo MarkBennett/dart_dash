@@ -1,0 +1,788 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Date abstract class / dart:core Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:core" data-type="Date">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_core.html">dart:core</a> &rsaquo; <a href="../dart_core/Date.html">Date</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><ul class="icon">
+<li><a href="../dart_core/BidirectionalIterator.html"><div class="icon-class"></div>BidirectionalIterator&lt;T&gt;</a></li>
+<li><a href="../dart_core/bool.html"><div class="icon-class"></div>bool</a></li>
+<li><a href="../dart_core/Collection.html"><div class="icon-class"></div>Collection&lt;E&gt;</a></li>
+<li><a href="../dart_core/Comparable.html"><div class="icon-class"></div>Comparable&lt;T&gt;</a></li>
+<li><a href="../dart_core/Comparator.html"><div class="icon-interface"></div>Comparator&lt;T&gt;</a></li>
+<li><div class="icon-class"></div><strong>Date</strong></li>
+<li><a href="../dart_core/DateTime.html"><div class="icon-class"></div>DateTime</a></li>
+<li><a href="../dart_core/double.html"><div class="icon-class"></div>double</a></li>
+<li><a href="../dart_core/Duration.html"><div class="icon-class"></div>Duration</a></li>
+<li><a href="../dart_core/Expando.html"><div class="icon-class"></div>Expando&lt;T&gt;</a></li>
+<li><a href="../dart_core/Expect.html"><div class="icon-class"></div>Expect</a></li>
+<li><a href="../dart_core/Function.html"><div class="icon-class"></div>Function</a></li>
+<li><a href="../dart_core/int.html"><div class="icon-class"></div>int</a></li>
+<li><a href="../dart_core/InvocationMirror.html"><div class="icon-class"></div>InvocationMirror</a></li>
+<li><a href="../dart_core/Iterable.html"><div class="icon-class"></div>Iterable&lt;E&gt;</a></li>
+<li><a href="../dart_core/Iterator.html"><div class="icon-class"></div>Iterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/List.html"><div class="icon-class"></div>List&lt;E&gt;</a></li>
+<li><a href="../dart_core/Map.html"><div class="icon-class"></div>Map&lt;K, V&gt;</a></li>
+<li><a href="../dart_core/Match.html"><div class="icon-class"></div>Match</a></li>
+<li><a href="../dart_core/num.html"><div class="icon-class"></div>num</a></li>
+<li><a href="../dart_core/Object.html"><div class="icon-class"></div>Object</a></li>
+<li><a href="../dart_core/Options.html"><div class="icon-class"></div>Options</a></li>
+<li><a href="../dart_core/Pattern.html"><div class="icon-class"></div>Pattern</a></li>
+<li><a href="../dart_core/RegExp.html"><div class="icon-class"></div>RegExp</a></li>
+<li><a href="../dart_core/RuneIterator.html"><div class="icon-class"></div>RuneIterator</a></li>
+<li><a href="../dart_core/Runes.html"><div class="icon-class"></div>Runes</a></li>
+<li><a href="../dart_core/Set.html"><div class="icon-class"></div>Set&lt;E&gt;</a></li>
+<li><a href="../dart_core/Stopwatch.html"><div class="icon-class"></div>Stopwatch</a></li>
+<li><a href="../dart_core/String.html"><div class="icon-class"></div>String</a></li>
+<li><a href="../dart_core/StringBuffer.html"><div class="icon-class"></div>StringBuffer</a></li>
+<li><a href="../dart_core/StringSink.html"><div class="icon-class"></div>StringSink</a></li>
+<li><a href="../dart_core/Type.html"><div class="icon-class"></div>Type</a></li>
+<li><a href="../dart_core/AbstractClassInstantiationError.html"><div class="icon-exception"></div>AbstractClassInstantiationError</a></li>
+<li><a href="../dart_core/ArgumentError.html"><div class="icon-exception"></div>ArgumentError</a></li>
+<li><a href="../dart_core/AssertionError.html"><div class="icon-exception"></div>AssertionError</a></li>
+<li><a href="../dart_core/CastError.html"><div class="icon-exception"></div>CastError</a></li>
+<li><a href="../dart_core/ConcurrentModificationError.html"><div class="icon-exception"></div>ConcurrentModificationError</a></li>
+<li><a href="../dart_core/Error.html"><div class="icon-exception"></div>Error</a></li>
+<li><a href="../dart_core/Exception.html"><div class="icon-exception"></div>Exception</a></li>
+<li><a href="../dart_core/ExpectException.html"><div class="icon-exception"></div>ExpectException</a></li>
+<li><a href="../dart_core/FallThroughError.html"><div class="icon-exception"></div>FallThroughError</a></li>
+<li><a href="../dart_core/FormatException.html"><div class="icon-exception"></div>FormatException</a></li>
+<li><a href="../dart_core/IllegalJSRegExpException.html"><div class="icon-exception"></div>IllegalJSRegExpException</a></li>
+<li><a href="../dart_core/IntegerDivisionByZeroException.html"><div class="icon-exception"></div>IntegerDivisionByZeroException</a></li>
+<li><a href="../dart_core/NoSuchMethodError.html"><div class="icon-exception"></div>NoSuchMethodError</a></li>
+<li><a href="../dart_core/NullThrownError.html"><div class="icon-exception"></div>NullThrownError</a></li>
+<li><a href="../dart_core/OutOfMemoryError.html"><div class="icon-exception"></div>OutOfMemoryError</a></li>
+<li><a href="../dart_core/RangeError.html"><div class="icon-exception"></div>RangeError</a></li>
+<li><a href="../dart_core/RuntimeError.html"><div class="icon-exception"></div>RuntimeError</a></li>
+<li><a href="../dart_core/StackOverflowError.html"><div class="icon-exception"></div>StackOverflowError</a></li>
+<li><a href="../dart_core/StateError.html"><div class="icon-exception"></div>StateError</a></li>
+<li><a href="../dart_core/TypeError.html"><div class="icon-exception"></div>TypeError</a></li>
+<li><a href="../dart_core/UnimplementedError.html"><div class="icon-exception"></div>UnimplementedError</a></li>
+<li><a href="../dart_core/UnsupportedError.html"><div class="icon-exception"></div>UnsupportedError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Date</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Deprecated class. Please use <a class="crossref" href="../dart_core/DateTime.html">DateTime</a> instead.</p>
+<pre class="source">
+@deprecated
+abstract class Date implements Comparable&lt;Date&gt; {
+ // Weekday constants that are returned by [weekday] method:
+ static const int MON = 1;
+ static const int TUE = 2;
+ static const int WED = 3;
+ static const int THU = 4;
+ static const int FRI = 5;
+ static const int SAT = 6;
+ static const int SUN = 7;
+ static const int DAYS_IN_WEEK = 7;
+
+ // Month constants that are returned by the [month] getter.
+ static const int JAN = 1;
+ static const int FEB = 2;
+ static const int MAR = 3;
+ static const int APR = 4;
+ static const int MAY = 5;
+ static const int JUN = 6;
+ static const int JUL = 7;
+ static const int AUG = 8;
+ static const int SEP = 9;
+ static const int OCT = 10;
+ static const int NOV = 11;
+ static const int DEC = 12;
+
+ factory Date(int year,
+              [int month = 1,
+               int day = 1,
+               int hour = 0,
+               int minute = 0,
+               int second = 0,
+               int millisecond = 0]) {
+   return new DateTime(year, month, day, hour, minute, second, millisecond);
+ }
+
+ factory Date.utc(int year,
+                  [int month = 1,
+                   int day = 1,
+                   int hour = 0,
+                   int minute = 0,
+                   int second = 0,
+                   int millisecond = 0]) {
+   return
+       new DateTime.utc(year, month, day, hour, minute, second, millisecond);
+ }
+
+ factory Date.now() =&gt; new DateTime.now();
+
+ factory Date.fromString(String formattedString)
+     =&gt; DateTime.parse(formattedString);
+
+ factory Date.fromMillisecondsSinceEpoch(int millisecondsSinceEpoch,
+                                         {bool isUtc: false}) {
+   return new DateTime.fromMillisecondsSinceEpoch(millisecondsSinceEpoch,
+                                                  isUtc: isUtc);
+ }
+
+ bool operator ==(DateTime other);
+ bool operator &lt;(DateTime other);
+ bool operator &lt;=(DateTime other);
+ bool operator &gt;(DateTime other);
+ bool operator &gt;=(DateTime other);
+
+
+ DateTime toLocal();
+ DateTime toUtc();
+
+ String get timeZoneName;
+ Duration get timeZoneOffset;
+
+ int get year;
+ int get month;
+ int get day;
+ int get hour;
+ int get minute;
+ int get second;
+ int get millisecond;
+
+ int get weekday;
+
+ int get millisecondsSinceEpoch;
+
+ bool get isUtc;
+
+ String toString();
+
+ DateTime add(Duration duration);
+ DateTime subtract(Duration duration);
+ Duration difference(DateTime other);
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_core/DateTime.html">DateTime</a></span></p>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_core/Comparable.html">Comparable&lt;Date&gt;</a></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="APR">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>APR</strong> <a class="anchor-link"
+            href="#APR"
+            title="Permalink to Date.APR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+APR = 4
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="AUG">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>AUG</strong> <a class="anchor-link"
+            href="#AUG"
+            title="Permalink to Date.AUG">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+AUG = 8
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="DAYS_IN_WEEK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>DAYS_IN_WEEK</strong> <a class="anchor-link"
+            href="#DAYS_IN_WEEK"
+            title="Permalink to Date.DAYS_IN_WEEK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+DAYS_IN_WEEK = 7
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="DEC">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>DEC</strong> <a class="anchor-link"
+            href="#DEC"
+            title="Permalink to Date.DEC">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+DEC = 12
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FEB">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FEB</strong> <a class="anchor-link"
+            href="#FEB"
+            title="Permalink to Date.FEB">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FEB = 2
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FRI">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FRI</strong> <a class="anchor-link"
+            href="#FRI"
+            title="Permalink to Date.FRI">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FRI = 5
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="JAN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>JAN</strong> <a class="anchor-link"
+            href="#JAN"
+            title="Permalink to Date.JAN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+JAN = 1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="JUL">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>JUL</strong> <a class="anchor-link"
+            href="#JUL"
+            title="Permalink to Date.JUL">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+JUL = 7
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="JUN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>JUN</strong> <a class="anchor-link"
+            href="#JUN"
+            title="Permalink to Date.JUN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+JUN = 6
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MAR">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MAR</strong> <a class="anchor-link"
+            href="#MAR"
+            title="Permalink to Date.MAR">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MAR = 3
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MAY</strong> <a class="anchor-link"
+            href="#MAY"
+            title="Permalink to Date.MAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MAY = 5
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MON">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MON</strong> <a class="anchor-link"
+            href="#MON"
+            title="Permalink to Date.MON">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MON = 1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NOV">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NOV</strong> <a class="anchor-link"
+            href="#NOV"
+            title="Permalink to Date.NOV">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NOV = 11
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="OCT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>OCT</strong> <a class="anchor-link"
+            href="#OCT"
+            title="Permalink to Date.OCT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+OCT = 10
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SAT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SAT</strong> <a class="anchor-link"
+            href="#SAT"
+            title="Permalink to Date.SAT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SAT = 6
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SEP">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SEP</strong> <a class="anchor-link"
+            href="#SEP"
+            title="Permalink to Date.SEP">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SEP = 9
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SUN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SUN</strong> <a class="anchor-link"
+            href="#SUN"
+            title="Permalink to Date.SUN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SUN = 7
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="THU">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>THU</strong> <a class="anchor-link"
+            href="#THU"
+            title="Permalink to Date.THU">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+THU = 4
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="TUE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>TUE</strong> <a class="anchor-link"
+            href="#TUE"
+            title="Permalink to Date.TUE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+TUE = 2
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="WED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>WED</strong> <a class="anchor-link"
+            href="#WED"
+            title="Permalink to Date.WED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WED = 3
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Date">
+<button class="show-code">Code</button>
+factory <strong>Date</strong>(<a href="../dart_core/int.html">int</a> year, [<a href="../dart_core/int.html">int</a> month = 1, <a href="../dart_core/int.html">int</a> day = 1, <a href="../dart_core/int.html">int</a> hour = 0, <a href="../dart_core/int.html">int</a> minute = 0, <a href="../dart_core/int.html">int</a> second = 0, <a href="../dart_core/int.html">int</a> millisecond = 0]) <a class="anchor-link" href="#Date"
+              title="Permalink to Date.Date">#</a></h4>
+<div class="doc">
+<pre class="source">
+factory Date(int year,
+            [int month = 1,
+             int day = 1,
+             int hour = 0,
+             int minute = 0,
+             int second = 0,
+             int millisecond = 0]) {
+ return new DateTime(year, month, day, hour, minute, second, millisecond);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Date.fromMillisecondsSinceEpoch">
+<button class="show-code">Code</button>
+factory <strong>Date.fromMillisecondsSinceEpoch</strong>(<a href="../dart_core/int.html">int</a> millisecondsSinceEpoch, {<a href="../dart_core/bool.html">bool</a> isUtc: false}) <a class="anchor-link" href="#Date.fromMillisecondsSinceEpoch"
+              title="Permalink to Date.Date.fromMillisecondsSinceEpoch">#</a></h4>
+<div class="doc">
+<pre class="source">
+factory Date.fromMillisecondsSinceEpoch(int millisecondsSinceEpoch,
+                                       {bool isUtc: false}) {
+ return new DateTime.fromMillisecondsSinceEpoch(millisecondsSinceEpoch,
+                                                isUtc: isUtc);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Date.fromString">
+<button class="show-code">Code</button>
+factory <strong>Date.fromString</strong>(<a href="../dart_core/String.html">String</a> formattedString) <a class="anchor-link" href="#Date.fromString"
+              title="Permalink to Date.Date.fromString">#</a></h4>
+<div class="doc">
+<pre class="source">
+factory Date.fromString(String formattedString)
+   =&gt; DateTime.parse(formattedString);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Date.now">
+<button class="show-code">Code</button>
+factory <strong>Date.now</strong>() <a class="anchor-link" href="#Date.now"
+              title="Permalink to Date.Date.now">#</a></h4>
+<div class="doc">
+<pre class="source">
+factory Date.now() =&gt; new DateTime.now();
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Date.utc">
+<button class="show-code">Code</button>
+factory <strong>Date.utc</strong>(<a href="../dart_core/int.html">int</a> year, [<a href="../dart_core/int.html">int</a> month = 1, <a href="../dart_core/int.html">int</a> day = 1, <a href="../dart_core/int.html">int</a> hour = 0, <a href="../dart_core/int.html">int</a> minute = 0, <a href="../dart_core/int.html">int</a> second = 0, <a href="../dart_core/int.html">int</a> millisecond = 0]) <a class="anchor-link" href="#Date.utc"
+              title="Permalink to Date.Date.utc">#</a></h4>
+<div class="doc">
+<pre class="source">
+factory Date.utc(int year,
+                [int month = 1,
+                 int day = 1,
+                 int hour = 0,
+                 int minute = 0,
+                 int second = 0,
+                 int millisecond = 0]) {
+ return
+     new DateTime.utc(year, month, day, hour, minute, second, millisecond);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="day">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>day</strong> <a class="anchor-link"
+            href="#day"
+            title="Permalink to Date.day">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get day;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hour">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>hour</strong> <a class="anchor-link"
+            href="#hour"
+            title="Permalink to Date.hour">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get hour;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isUtc">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isUtc</strong> <a class="anchor-link"
+            href="#isUtc"
+            title="Permalink to Date.isUtc">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+bool get isUtc;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="millisecond">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>millisecond</strong> <a class="anchor-link"
+            href="#millisecond"
+            title="Permalink to Date.millisecond">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get millisecond;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="millisecondsSinceEpoch">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>millisecondsSinceEpoch</strong> <a class="anchor-link"
+            href="#millisecondsSinceEpoch"
+            title="Permalink to Date.millisecondsSinceEpoch">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get millisecondsSinceEpoch;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="minute">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>minute</strong> <a class="anchor-link"
+            href="#minute"
+            title="Permalink to Date.minute">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get minute;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="month">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>month</strong> <a class="anchor-link"
+            href="#month"
+            title="Permalink to Date.month">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get month;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="second">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>second</strong> <a class="anchor-link"
+            href="#second"
+            title="Permalink to Date.second">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get second;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="timeZoneName">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>timeZoneName</strong> <a class="anchor-link"
+            href="#timeZoneName"
+            title="Permalink to Date.timeZoneName">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+String get timeZoneName;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="timeZoneOffset">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Duration.html">Duration</a>         <strong>timeZoneOffset</strong> <a class="anchor-link"
+            href="#timeZoneOffset"
+            title="Permalink to Date.timeZoneOffset">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+Duration get timeZoneOffset;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="weekday">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>weekday</strong> <a class="anchor-link"
+            href="#weekday"
+            title="Permalink to Date.weekday">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get weekday;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="year">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>year</strong> <a class="anchor-link"
+            href="#year"
+            title="Permalink to Date.year">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+int get year;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method"><h4 id="<">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator <</strong>(<a href="../dart_core/DateTime.html">DateTime</a> other) <a class="anchor-link" href="#<"
+              title="Permalink to Date.operator <">#</a></h4>
+<div class="doc">
+</div>
+</div>
+<div class="method"><h4 id="<=">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator <=</strong>(<a href="../dart_core/DateTime.html">DateTime</a> other) <a class="anchor-link" href="#<="
+              title="Permalink to Date.operator <=">#</a></h4>
+<div class="doc">
+</div>
+</div>
+<div class="method"><h4 id=">">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator ></strong>(<a href="../dart_core/DateTime.html">DateTime</a> other) <a class="anchor-link" href="#>"
+              title="Permalink to Date.operator >">#</a></h4>
+<div class="doc">
+</div>
+</div>
+<div class="method"><h4 id=">=">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator >=</strong>(<a href="../dart_core/DateTime.html">DateTime</a> other) <a class="anchor-link" href="#>="
+              title="Permalink to Date.operator >=">#</a></h4>
+<div class="doc">
+</div>
+</div>
+<div class="method"><h4 id="==">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator ==</strong>(<a href="../dart_core/DateTime.html">DateTime</a> other) <a class="anchor-link" href="#=="
+              title="Permalink to Date.operator ==">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>The equality operator.</p>
+<p>The default behavior for all <a class="crossref" href="../dart_core/Object.html">Object</a>s is to return true if and
+only if <code>this</code> and 
+<span class="param">other</span> are the same object.</p>
+<p>If a subclass overrides the equality operator it should override
+the <code>hashCode</code> method as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add">
+abstract <a href="../dart_core/DateTime.html">DateTime</a> <strong>add</strong>(<a href="../dart_core/Duration.html">Duration</a> duration) <a class="anchor-link" href="#add"
+              title="Permalink to Date.add">#</a></h4>
+<div class="doc">
+</div>
+</div>
+<div class="method inherited"><h4 id="compareTo">
+abstract <a href="../dart_core/int.html">int</a> <strong>compareTo</strong>(<a href="../dart_core/Date.html">T</a> other) <a class="anchor-link" href="#compareTo"
+              title="Permalink to Date.compareTo">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Comparable.html">Comparable</a> </div><div class="doc">
+<p>Compares this object to another <a class="crossref" href="../dart_core/Comparable.html">Comparable</a></p>
+<p>Returns a value like a <a class="crossref" href="../dart_core/Comparator.html">Comparator</a> when comparing <code>this</code> to 
+<span class="param">other</span>.</p>
+<p>May throw an <a class="crossref" href="../dart_core/ArgumentError.html">ArgumentError</a> if 
+<span class="param">other</span> is of a type that
+is not comparable to <code>this</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="difference">
+abstract <a href="../dart_core/Duration.html">Duration</a> <strong>difference</strong>(<a href="../dart_core/DateTime.html">DateTime</a> other) <a class="anchor-link" href="#difference"
+              title="Permalink to Date.difference">#</a></h4>
+<div class="doc">
+</div>
+</div>
+<div class="method"><h4 id="subtract">
+abstract <a href="../dart_core/DateTime.html">DateTime</a> <strong>subtract</strong>(<a href="../dart_core/Duration.html">Duration</a> duration) <a class="anchor-link" href="#subtract"
+              title="Permalink to Date.subtract">#</a></h4>
+<div class="doc">
+</div>
+</div>
+<div class="method"><h4 id="toLocal">
+abstract <a href="../dart_core/DateTime.html">DateTime</a> <strong>toLocal</strong>() <a class="anchor-link" href="#toLocal"
+              title="Permalink to Date.toLocal">#</a></h4>
+<div class="doc">
+</div>
+</div>
+<div class="method"><h4 id="toString">
+abstract <a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to Date.toString">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+</div>
+</div>
+<div class="method"><h4 id="toUtc">
+abstract <a href="../dart_core/DateTime.html">DateTime</a> <strong>toUtc</strong>() <a class="anchor-link" href="#toUtc"
+              title="Permalink to Date.toUtc">#</a></h4>
+<div class="doc">
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:27.211</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

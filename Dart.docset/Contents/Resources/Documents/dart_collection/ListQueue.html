@@ -1,0 +1,1301 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ListQueue&lt;E&gt; class / dart:collection Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:collection" data-type="ListQueue&amp;lt;E&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_collection.html">dart:collection</a> &rsaquo; <a href="../dart_collection/ListQueue.html">ListQueue&lt;E&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><ul class="icon">
+<li><a href="../dart_collection/Arrays.html"><div class="icon-class"></div>Arrays</a></li>
+<li><a href="../dart_collection/Collections.html"><div class="icon-class"></div>Collections</a></li>
+<li><a href="../dart_collection/DoubleLinkedQueue.html"><div class="icon-class"></div>DoubleLinkedQueue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/DoubleLinkedQueueEntry.html"><div class="icon-class"></div>DoubleLinkedQueueEntry&lt;E&gt;</a></li>
+<li><a href="../dart_collection/HashMap.html"><div class="icon-class"></div>HashMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/HashSet.html"><div class="icon-class"></div>HashSet&lt;E&gt;</a></li>
+<li><a href="../dart_collection/HasNextIterator.html"><div class="icon-class"></div>HasNextIterator&lt;E&gt;</a></li>
+<li><a href="../dart_collection/IterableMixinWorkaround.html"><div class="icon-class"></div>IterableMixinWorkaround</a></li>
+<li><a href="../dart_collection/LinkedHashMap.html"><div class="icon-class"></div>LinkedHashMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/LinkedHashSet.html"><div class="icon-class"></div>LinkedHashSet&lt;E&gt;</a></li>
+<li><div class="icon-class"></div><strong>ListQueue&lt;E&gt;</strong></li>
+<li><a href="../dart_collection/Maps.html"><div class="icon-class"></div>Maps</a></li>
+<li><a href="../dart_collection/Queue.html"><div class="icon-class"></div>Queue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/SplayTreeMap.html"><div class="icon-class"></div>SplayTreeMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/SplayTreeNode.html"><div class="icon-class"></div>SplayTreeNode&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/UnmodifiableListView.html"><div class="icon-class"></div>UnmodifiableListView&lt;E&gt;</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ListQueue&lt;E&gt;</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>List based <a class="crossref" href="../dart_collection/Queue.html">Queue</a>.</p>
+<p>Keeps a cyclic buffer of elements, and grows to a larger buffer when
+it fills up. This guarantees constant time peek and remove operations, and
+amortized constant time add operations.</p>
+<p>The structure is efficient for any queue or stack usage.</p>
+<p>Collection operations like <a class="crossref" href="../dart_collection/ListQueue.html#removeAll">removeAll</a> and <a class="crossref" href="../dart_collection/ListQueue.html#removeMatching">removeMatching</a> are very
+inefficient. If those are needed, use a <a class="crossref" href="../dart_collection/DoubleLinkedQueue.html">DoubleLinkedQueue</a> instead.</p>
+<pre class="source">
+class ListQueue&lt;E&gt; extends Collection&lt;E&gt; implements Queue&lt;E&gt;{
+ static const int _INITIAL_CAPACITY = 8;
+ List&lt;E&gt; _table;
+ int _head;
+ int _tail;
+ int _modificationCount = 0;
+
+ /**
+  * Create an empty queue.
+  *
+  * If [initialCapacity] is given, prepare the queue for at least that many
+  * elements.
+  */
+ ListQueue([int initialCapacity]) : _head = 0, _tail = 0 {
+   if (initialCapacity == null || initialCapacity &lt; _INITIAL_CAPACITY) {
+     initialCapacity = _INITIAL_CAPACITY;
+   } else if (!_isPowerOf2(initialCapacity)) {
+     initialCapacity = _nextPowerOf2(initialCapacity);
+   }
+   assert(_isPowerOf2(initialCapacity));
+   _table = new List&lt;E&gt;.fixedLength(initialCapacity);
+ }
+
+ /**
+  * Create a queue initially containing the elements of [source].
+  */
+ factory ListQueue.from(Iterable&lt;E&gt; source) {
+   if (source is List) {
+     int length = source.length;
+     ListQueue&lt;E&gt; queue = new ListQueue(length + 1);
+     assert(queue._table.length &gt; length);
+     List sourceList = source;
+     queue._table.setRange(0, length, sourceList, 0);
+     queue._tail = length;
+     return queue;
+   } else {
+     return new ListQueue&lt;E&gt;()..addAll(source);
+   }
+ }
+
+ // Iterable interface.
+
+ Iterator&lt;E&gt; get iterator =&gt; new _ListQueueIterator(this);
+
+ void forEach(void action (E element)) {
+   int modificationCount = _modificationCount;
+   for (int i = _head; i != _tail; i = (i + 1) &amp; (_table.length - 1)) {
+     action(_table[i]);
+     _checkModification(modificationCount);
+   }
+ }
+
+ bool get isEmpty =&gt; _head == _tail;
+
+ int get length =&gt; (_tail - _head) &amp; (_table.length - 1);
+
+ E get first {
+   if (_head == _tail) throw new StateError("No elements");
+   return _table[_head];
+ }
+
+ E get last {
+   if (_head == _tail) throw new StateError("No elements");
+   return _table[(_tail - 1) &amp; (_table.length - 1)];
+ }
+
+ E get single {
+   if (_head == _tail) throw new StateError("No elements");
+   if (length &gt; 1) throw new StateError("Too many elements");
+   return _table[_head];
+ }
+
+ E elementAt(int index) {
+   if (index &lt; 0 || index &gt; length) {
+     throw new RangeError.range(index, 0, length);
+   }
+   return _table[(_head + index) &amp; (_table.length - 1)];
+ }
+
+ List&lt;E&gt; toList() {
+   List&lt;E&gt; list = new List&lt;E&gt;(length);
+   _writeToList(list);
+   return list;
+ }
+
+ // Collection interface.
+
+ void add(E element) {
+   _add(element);
+ }
+
+ void addAll(Iterable&lt;E&gt; elements) {
+   if (elements is List) {
+     List list = elements;
+     int addCount = list.length;
+     int length = this.length;
+     if (length + addCount &gt;= _table.length) {
+       _preGrow(length + addCount);
+       // After preGrow, all elements are at the start of the list.
+       _table.setRange(length, addCount, list, 0);
+       _tail += addCount;
+     } else {
+       // Adding addCount elements won't reach _head.
+       int endSpace = _table.length - _tail;
+       if (addCount &lt; endSpace) {
+         _table.setRange(_tail, addCount, list, 0);
+         _tail += addCount;
+       } else {
+         int preSpace = addCount - endSpace;
+         _table.setRange(_tail, endSpace, list, 0);
+         _table.setRange(0, preSpace, list, endSpace);
+         _tail = preSpace;
+       }
+     }
+     _modificationCount++;
+   } else {
+     for (E element in elements) _add(element);
+   }
+ }
+
+ void remove(Object object) {
+   for (int i = _head; i != _tail; i = (i + 1) &amp; (_table.length - 1)) {
+     E element = _table[i];
+     if (element == object) {
+       _remove(i);
+       return;
+     }
+   }
+   _modificationCount++;
+ }
+
+ void removeAll(Iterable objectsToRemove) {
+   IterableMixinWorkaround.removeAllList(this, objectsToRemove);
+ }
+
+ void retainAll(Iterable objectsToRetain) {
+   IterableMixinWorkaround.retainAll(this, objectsToRetain);
+ }
+
+ void _filterMatching(bool test(E element), bool removeMatching) {
+   int index = _head;
+   int modificationCount = _modificationCount;
+   int i = _head;
+   while (i != _tail) {
+     E element = _table[i];
+     bool remove = (test(element) == removeMatching);
+     _checkModification(modificationCount);
+     if (remove) {
+       i = _remove(i);
+       modificationCount = ++_modificationCount;
+     } else {
+       i = (i + 1) &amp; (_table.length - 1);
+     }
+   }
+ }
+
+ /**
+  * Remove all elements matched by [test].
+  *
+  * This method is inefficient since it works by repeatedly removing single
+  * elements, each of which can take linear time.
+  */
+ void removeMatching(bool test(E element)) {
+   _filterMatching(test, true);
+ }
+
+ /**
+  * Remove all elements not matched by [test].
+  *
+  * This method is inefficient since it works by repeatedly removing single
+  * elements, each of which can take linear time.
+  */
+ void retainMatching(bool test(E element)) {
+   _filterMatching(test, false);
+ }
+
+ void clear() {
+   if (_head != _tail) {
+     for (int i = _head; i != _tail; i = (i + 1) &amp; (_table.length - 1)) {
+       _table[i] = null;
+     }
+     _head = _tail = 0;
+     _modificationCount++;
+   }
+ }
+
+ String toString() {
+   return Collections.collectionToString(this);
+ }
+
+ // Queue interface.
+
+ void addLast(E element) { _add(element); }
+
+ void addFirst(E element) {
+   _head = (_head - 1) &amp; (_table.length - 1);
+   _table[_head] = element;
+   if (_head == _tail) _grow();
+   _modificationCount++;
+ }
+
+ E removeFirst() {
+   if (_head == _tail) throw new StateError("No elements");
+   _modificationCount++;
+   E result = _table[_head];
+   _head = (_head + 1) &amp; (_table.length - 1);
+   return result;
+ }
+
+ E removeLast() {
+   if (_head == _tail) throw new StateError("No elements");
+   _modificationCount++;
+   _tail = (_tail - 1) &amp; (_table.length - 1);
+   return _table[_tail];
+ }
+
+ // Internal helper functions.
+
+ /**
+  * Whether [number] is a power of two.
+  *
+  * Only works for positive numbers.
+  */
+ static bool _isPowerOf2(int number) =&gt; (number &amp; (number - 1)) == 0;
+
+ /**
+  * Rounds [number] up to the nearest power of 2.
+  *
+  * If [number] is a power of 2 already, it is returned.
+  *
+  * Only works for positive numbers.
+  */
+ static int _nextPowerOf2(int number) {
+   assert(number &gt; 0);
+   number = (number &lt;&lt; 2) - 1;
+   for(;;) {
+     int nextNumber = number &amp; (number - 1);
+     if (nextNumber == 0) return number;
+     number = nextNumber;
+   }
+ }
+
+ /** Check if the queue has been modified during iteration. */
+ void _checkModification(int expectedModificationCount) {
+   if (expectedModificationCount != _modificationCount) {
+     throw new ConcurrentModificationError(this);
+   }
+ }
+
+ /** Adds element at end of queue. Used by both [add] and [addAll]. */
+ void _add(E element) {
+   _table[_tail] = element;
+   _tail = (_tail + 1) &amp; (_table.length - 1);
+   if (_head == _tail) _grow();
+   _modificationCount++;
+ }
+
+ /**
+  * Removes the element at [offset] into [_table].
+  *
+  * Removal is performed by linerarly moving elements either before or after
+  * [offset] by one position.
+  *
+  * Returns the new offset of the following element. This may be the same
+  * offset or the following offset depending on how elements are moved
+  * to fill the hole.
+  */
+ int _remove(int offset) {
+   int mask = _table.length - 1;
+   int startDistance = (offset - _head) &amp; mask;
+   int endDistance = (_tail - offset) &amp; mask;
+   if (startDistance &lt; endDistance) {
+     // Closest to start.
+     int i = offset;
+     while (i != _head) {
+       int prevOffset = (i - 1) &amp; mask;
+       _table[i] = _table[prevOffset];
+       i = prevOffset;
+     }
+     _table[_head] = null;
+     _head = (_head + 1) &amp; mask;
+     return (offset + 1) &amp; mask;
+   } else {
+     _tail = (_tail - 1) &amp; mask;
+     int i = offset;
+     while (i != _tail) {
+       int nextOffset = (i + 1) &amp; mask;
+       _table[i] = _table[nextOffset];
+       i = nextOffset;
+     }
+     _table[_tail] = null;
+     return offset;
+   }
+ }
+
+ /**
+  * Grow the table when full.
+  */
+ void _grow() {
+   List&lt;E&gt; newTable = new List&lt;E&gt;.fixedLength(_table.length * 2);
+   int split = _table.length - _head;
+   newTable.setRange(0, split, _table, _head);
+   newTable.setRange(split, _head, _table, 0);
+   _head = 0;
+   _tail = _table.length;
+   _table = newTable;
+ }
+
+ int _writeToList(List&lt;E&gt; target) {
+   assert(target.length &gt;= length);
+   if (_head &lt;= _tail) {
+     int length = _tail - _head;
+     target.setRange(0, length, _table, _head);
+     return length;
+   } else {
+     int firstPartSize = _table.length - _head;
+     target.setRange(0, firstPartSize, _table, _head);
+     target.setRange(firstPartSize, _tail, _table, 0);
+     return _tail + firstPartSize;
+   }
+ }
+
+ /** Grows the table even if it is not full. */
+ void _preGrow(int newElementCount) {
+   assert(newElementCount &gt;= length);
+   int newCapacity = _nextPowerOf2(newElementCount);
+   List&lt;E&gt; newTable = new List&lt;E&gt;.fixedLength(newCapacity);
+   _tail = _writeToList(newTable);
+   _table = newTable;
+   _head = 0;
+ }
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_core/Iterable.html">Iterable&lt;E&gt;</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><a href="../dart_core/Collection.html">Collection&lt;E&gt;</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>ListQueue&lt;E&gt;</strong></span></p>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_collection/Queue.html">Queue&lt;E&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="ListQueue">
+<button class="show-code">Code</button>
+new <strong>ListQueue</strong>([<a href="../dart_core/int.html">int</a> initialCapacity]) <a class="anchor-link" href="#ListQueue"
+              title="Permalink to ListQueue&lt;E&gt;.ListQueue">#</a></h4>
+<div class="doc">
+<p>Create an empty queue.</p>
+<p>If 
+<span class="param">initialCapacity</span> is given, prepare the queue for at least that many
+elements.</p>
+<pre class="source">
+ListQueue([int initialCapacity]) : _head = 0, _tail = 0 {
+ if (initialCapacity == null || initialCapacity &lt; _INITIAL_CAPACITY) {
+   initialCapacity = _INITIAL_CAPACITY;
+ } else if (!_isPowerOf2(initialCapacity)) {
+   initialCapacity = _nextPowerOf2(initialCapacity);
+ }
+ assert(_isPowerOf2(initialCapacity));
+ _table = new List&lt;E&gt;.fixedLength(initialCapacity);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="ListQueue.from">
+<button class="show-code">Code</button>
+factory <strong>ListQueue.from</strong>(<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; source) <a class="anchor-link" href="#ListQueue.from"
+              title="Permalink to ListQueue&lt;E&gt;.ListQueue.from">#</a></h4>
+<div class="doc">
+<p>Create a queue initially containing the elements of 
+<span class="param">source</span>.</p>
+<pre class="source">
+factory ListQueue.from(Iterable&lt;E&gt; source) {
+ if (source is List) {
+   int length = source.length;
+   ListQueue&lt;E&gt; queue = new ListQueue(length + 1);
+   assert(queue._table.length &gt; length);
+   List sourceList = source;
+   queue._table.setRange(0, length, sourceList, 0);
+   queue._tail = length;
+   return queue;
+ } else {
+   return new ListQueue&lt;E&gt;()..addAll(source);
+ }
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="first">
+<button class="show-code">Code</button>
+final <a href="../dart_collection/ListQueue.html">E</a>         <strong>first</strong> <a class="anchor-link"
+            href="#first"
+            title="Permalink to ListQueue&lt;E&gt;.first">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns the first element.</p>
+<p>If <code>this</code> is empty throws a <code>StateError</code>. Otherwise this method is
+equivalent to <code>this.elementAt(0)</code></p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+E get first {
+ if (_head == _tail) throw new StateError("No elements");
+ return _table[_head];
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isEmpty</strong> <a class="anchor-link"
+            href="#isEmpty"
+            title="Permalink to ListQueue&lt;E&gt;.isEmpty">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns true if there is no element in this collection.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+bool get isEmpty =&gt; _head == _tail;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="iterator">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterator.html">Iterator</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt;         <strong>iterator</strong> <a class="anchor-link"
+            href="#iterator"
+            title="Permalink to ListQueue&lt;E&gt;.iterator">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns an <code>Iterator</code> that iterates over this <code>Iterable</code> object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+Iterator&lt;E&gt; get iterator =&gt; new _ListQueueIterator(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="last">
+<button class="show-code">Code</button>
+final <a href="../dart_collection/ListQueue.html">E</a>         <strong>last</strong> <a class="anchor-link"
+            href="#last"
+            title="Permalink to ListQueue&lt;E&gt;.last">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns the last element.</p>
+<p>If <code>this</code> is empty throws a <code>StateError</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+E get last {
+ if (_head == _tail) throw new StateError("No elements");
+ return _table[(_tail - 1) &amp; (_table.length - 1)];
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="length">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>length</strong> <a class="anchor-link"
+            href="#length"
+            title="Permalink to ListQueue&lt;E&gt;.length">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns the number of elements in <code>this</code>.</p>
+<p>Counting all elements may be involve running through all elements and can
+therefore be slow.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+int get length =&gt; (_tail - _head) &amp; (_table.length - 1);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="single">
+<button class="show-code">Code</button>
+final <a href="../dart_collection/ListQueue.html">E</a>         <strong>single</strong> <a class="anchor-link"
+            href="#single"
+            title="Permalink to ListQueue&lt;E&gt;.single">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Returns the single element in <code>this</code>.</p>
+<p>If <code>this</code> is empty or has more than one element throws a <code>StateError</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+E get single {
+ if (_head == _tail) throw new StateError("No elements");
+ if (length &gt; 1) throw new StateError("Too many elements");
+ return _table[_head];
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add">
+<button class="show-code">Code</button>
+void <strong>add</strong>(<a href="../dart_collection/ListQueue.html">E</a> element) <a class="anchor-link" href="#add"
+              title="Permalink to ListQueue&lt;E&gt;.add">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Adds an element to this collection.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Collection.html">Collection</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void add(E element) {
+ _add(element);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="addAll">
+<button class="show-code">Code</button>
+void <strong>addAll</strong>(<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; elements) <a class="anchor-link" href="#addAll"
+              title="Permalink to ListQueue&lt;E&gt;.addAll">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Adds all of 
+<span class="param">elements</span> to this collection.</p>
+<p>Equivalent to adding each element in 
+<span class="param">elements</span> using <a class="crossref" href="../dart_collection/ListQueue.html#add">add</a>,
+but some collections may be able to optimize it.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Collection.html">Collection</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void addAll(Iterable&lt;E&gt; elements) {
+ if (elements is List) {
+   List list = elements;
+   int addCount = list.length;
+   int length = this.length;
+   if (length + addCount &gt;= _table.length) {
+     _preGrow(length + addCount);
+     // After preGrow, all elements are at the start of the list.
+     _table.setRange(length, addCount, list, 0);
+     _tail += addCount;
+   } else {
+     // Adding addCount elements won't reach _head.
+     int endSpace = _table.length - _tail;
+     if (addCount &lt; endSpace) {
+       _table.setRange(_tail, addCount, list, 0);
+       _tail += addCount;
+     } else {
+       int preSpace = addCount - endSpace;
+       _table.setRange(_tail, endSpace, list, 0);
+       _table.setRange(0, preSpace, list, endSpace);
+       _tail = preSpace;
+     }
+   }
+   _modificationCount++;
+ } else {
+   for (E element in elements) _add(element);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="addFirst">
+<button class="show-code">Code</button>
+void <strong>addFirst</strong>(<a href="../dart_collection/ListQueue.html">E</a> element) <a class="anchor-link" href="#addFirst"
+              title="Permalink to ListQueue&lt;E&gt;.addFirst">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Adds <code>value</code> at the beginning of the queue.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_collection/Queue.html">Queue</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void addFirst(E element) {
+ _head = (_head - 1) &amp; (_table.length - 1);
+ _table[_head] = element;
+ if (_head == _tail) _grow();
+ _modificationCount++;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="addLast">
+<button class="show-code">Code</button>
+void <strong>addLast</strong>(<a href="../dart_collection/ListQueue.html">E</a> element) <a class="anchor-link" href="#addLast"
+              title="Permalink to ListQueue&lt;E&gt;.addLast">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Adds <code>value</code> at the end of the queue.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_collection/Queue.html">Queue</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void addLast(E element) { _add(element); }
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="any">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>any</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#any"
+              title="Permalink to ListQueue&lt;E&gt;.any">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns true if one element of this collection satisfies the
+predicate 
+<span class="param">f</span>. Returns false otherwise.</p>
+<pre class="source">
+bool any(bool f(E element)) {
+ for (E element in this) {
+   if (f(element)) return true;
+ }
+ return false;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="clear">
+<button class="show-code">Code</button>
+void <strong>clear</strong>() <a class="anchor-link" href="#clear"
+              title="Permalink to ListQueue&lt;E&gt;.clear">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Removes all elements of this collection.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Collection.html">Collection</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void clear() {
+ if (_head != _tail) {
+   for (int i = _head; i != _tail; i = (i + 1) &amp; (_table.length - 1)) {
+     _table[i] = null;
+   }
+   _head = _tail = 0;
+   _modificationCount++;
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="contains">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>contains</strong>(<a href="../dart_collection/ListQueue.html">E</a> element) <a class="anchor-link" href="#contains"
+              title="Permalink to ListQueue&lt;E&gt;.contains">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Check whether the collection contains an element equal to 
+<span class="param">element</span>.</p>
+<pre class="source">
+bool contains(E element) {
+ for (E e in this) {
+   if (e == element) return true;
+ }
+ return false;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="elementAt">
+<button class="show-code">Code</button>
+<a href="../dart_collection/ListQueue.html">E</a> <strong>elementAt</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#elementAt"
+              title="Permalink to ListQueue&lt;E&gt;.elementAt">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns the 
+<span class="param">index</span>th element.</p>
+<p>If [this] [Iterable] has fewer than 
+<span class="param">index</span> elements throws a
+<code>RangeError</code>.</p>
+<p>Note: if <code>this</code> does not have a deterministic iteration order then the
+function may simply return any element without any iteration if there are
+at least 
+<span class="param">index</span> elements in <code>this</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+E elementAt(int index) {
+ if (index &lt; 0 || index &gt; length) {
+   throw new RangeError.range(index, 0, length);
+ }
+ return _table[(_head + index) &amp; (_table.length - 1)];
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="every">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>every</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#every"
+              title="Permalink to ListQueue&lt;E&gt;.every">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns true if every elements of this collection satisify the
+predicate 
+<span class="param">f</span>. Returns false otherwise.</p>
+<pre class="source">
+bool every(bool f(E element)) {
+ for (E element in this) {
+   if (!f(element)) return false;
+ }
+ return true;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="expand">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>expand</strong>(<a href="../dart_core/Iterable.html">Iterable</a> f(<a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#expand"
+              title="Permalink to ListQueue&lt;E&gt;.expand">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Expand each element of this <code>Iterable</code> into zero or more elements.</p>
+<p>The resulting Iterable will run through the elements returned
+by 
+<span class="param">f</span> for each element of this, in order.</p>
+<p>The returned <code>Iterable</code> is lazy, and will call 
+<span class="param">f</span> for each element
+of this every time it's iterated.</p>
+<pre class="source">
+Iterable expand(Iterable f(E element)) =&gt;
+   new ExpandIterable&lt;E, dynamic&gt;(this, f);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="firstMatching">
+<button class="show-code">Code</button>
+<a href="../dart_collection/ListQueue.html">E</a> <strong>firstMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_collection/ListQueue.html">E</a> value), {<a href="../dart_collection/ListQueue.html">E</a> orElse()}) <a class="anchor-link" href="#firstMatching"
+              title="Permalink to ListQueue&lt;E&gt;.firstMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the first element that satisfies the given predicate <code>f</code>.</p>
+<p>If none matches, the result of invoking the 
+<span class="param">orElse</span> function is
+returned. By default, when 
+<span class="param">orElse</span> is <code>null</code>, a <code>StateError</code> is
+thrown.</p>
+<pre class="source">
+E firstMatching(bool test(E value), { E orElse() }) {
+ // TODO(floitsch): check that arguments are of correct type?
+ for (E element in this) {
+   if (test(element)) return element;
+ }
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="forEach">
+<button class="show-code">Code</button>
+void <strong>forEach</strong>(void action(<a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#forEach"
+              title="Permalink to ListQueue&lt;E&gt;.forEach">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Applies the function <code>f</code> to each element of this collection.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void forEach(void action (E element)) {
+ int modificationCount = _modificationCount;
+ for (int i = _head; i != _tail; i = (i + 1) &amp; (_table.length - 1)) {
+   action(_table[i]);
+   _checkModification(modificationCount);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="join">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>join</strong>([<a href="../dart_core/String.html">String</a> separator]) <a class="anchor-link" href="#join"
+              title="Permalink to ListQueue&lt;E&gt;.join">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Convert each element to a <code>String</code> and concatenate the strings.</p>
+<p>Converts each element to a <code>String</code> by calling <code>Object.toString</code> on it.
+Then concatenates the strings, optionally separated by the 
+<span class="param">separator</span>
+string.</p>
+<pre class="source">
+String join([String separator]) {
+ Iterator&lt;E&gt; iterator = this.iterator;
+ if (!iterator.moveNext()) return "";
+ StringBuffer buffer = new StringBuffer();
+ if (separator == null || separator == "") {
+   do {
+     buffer.add("${iterator.current}");
+   } while (iterator.moveNext());
+ } else {
+   buffer.add("${iterator.current}");
+   while (iterator.moveNext()) {
+     buffer.add(separator);
+     buffer.add("${iterator.current}");
+   }
+ }
+ return buffer.toString();
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="lastMatching">
+<button class="show-code">Code</button>
+<a href="../dart_collection/ListQueue.html">E</a> <strong>lastMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_collection/ListQueue.html">E</a> value), {<a href="../dart_collection/ListQueue.html">E</a> orElse()}) <a class="anchor-link" href="#lastMatching"
+              title="Permalink to ListQueue&lt;E&gt;.lastMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the last element that satisfies the given predicate <code>f</code>.</p>
+<p>If none matches, the result of invoking the 
+<span class="param">orElse</span> function is
+returned. By default, when 
+<span class="param">orElse</span> is <code>null</code>, a <code>StateError</code> is
+thrown.</p>
+<pre class="source">
+E lastMatching(bool test(E value), {E orElse()}) {
+ // TODO(floitsch): check that arguments are of correct type?
+ E result = null;
+ bool foundMatching = false;
+ for (E element in this) {
+   if (test(element)) {
+     result = element;
+     foundMatching = true;
+   }
+ }
+ if (foundMatching) return result;
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="map">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>map</strong>(f(<a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#map"
+              title="Permalink to ListQueue&lt;E&gt;.map">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns a lazy <code>Iterable</code> where each element <code>e</code> of <code>this</code> is replaced
+by the result of <code>f(e)</code>.</p>
+<p>This method returns a view of the mapped elements. As long as the
+returned <code>Iterable</code> is not iterated over, the supplied function 
+<span class="param">f</span> will
+not be invoked. The transformed elements will not be cached. Iterating
+multiple times over the the returned <code>Iterable</code> will invoke the supplied
+function 
+<span class="param">f</span> multiple times on the same element.</p>
+<pre class="source">
+Iterable map(f(E element)) =&gt; new MappedIterable&lt;E, dynamic&gt;(this, f);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="max">
+<button class="show-code">Code</button>
+<a href="../dart_collection/ListQueue.html">E</a> <strong>max</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_collection/ListQueue.html">E</a> a, <a href="../dart_collection/ListQueue.html">E</a> b)]) <a class="anchor-link" href="#max"
+              title="Permalink to ListQueue&lt;E&gt;.max">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Find the largest element in the iterable.</p>
+<p>Returns null if the iterable is empty.
+Otherwise returns an element <code>x</code> of this <code>Iterable</code> so that
+<code>x</code> is not smaller than <code>y</code> (that is, <code>compare(x, y) &gt;= 0</code>) for all
+other elements <code>y</code> in the iterable.</p>
+<p>The 
+<span class="param">compare</span> function must be a proper [Comparator<T>]. If a function is
+not provided, 
+<span class="param">compare</span> defaults to <code>Comparable.compare</code>.</p>
+<pre class="source">
+E max([int compare(E a, E b)]) {
+ if (compare == null) compare = Comparable.compare;
+ Iterator it = iterator;
+ if (!it.moveNext()) return null;
+ E max = it.current;
+ while (it.moveNext()) {
+   E current = it.current;
+   if (compare(max, current) &lt; 0) max = current;
+ }
+ return max;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="min">
+<button class="show-code">Code</button>
+<a href="../dart_collection/ListQueue.html">E</a> <strong>min</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_collection/ListQueue.html">E</a> a, <a href="../dart_collection/ListQueue.html">E</a> b)]) <a class="anchor-link" href="#min"
+              title="Permalink to ListQueue&lt;E&gt;.min">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Find the least element in the iterable.</p>
+<p>Returns null if the iterable is empty.
+Otherwise returns an element <code>x</code> of this <code>Iterable</code> so that
+<code>x</code> is not greater than <code>y</code> (that is, <code>compare(x, y) &lt;= 0</code>) for all
+other elements <code>y</code> in the iterable.</p>
+<p>The 
+<span class="param">compare</span> function must be a proper [Comparator<T>]. If a function is
+not provided, 
+<span class="param">compare</span> defaults to <code>Comparable.compare</code>.</p>
+<pre class="source">
+E min([int compare(E a, E b)]) {
+ if (compare == null) compare = Comparable.compare;
+ Iterator it = iterator;
+ if (!it.moveNext()) return null;
+ E min = it.current;
+ while (it.moveNext()) {
+   E current = it.current;
+   if (compare(min, current) &gt; 0) min = current;
+ }
+ return min;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="reduce">
+<button class="show-code">Code</button>
+<strong>reduce</strong>(initialValue, combine(previousValue, <a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#reduce"
+              title="Permalink to ListQueue&lt;E&gt;.reduce">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Reduce a collection to a single value by iteratively combining each element
+of the collection with an existing value using the provided function.
+Use 
+<span class="param">initialValue</span> as the initial value, and the function 
+<span class="param">combine</span> to
+create a new value from the previous one and an element.</p>
+<p>Example of calculating the sum of a collection:</p>
+<p>  collection.reduce(0, (prev, element) => prev + element);</p>
+<pre class="source">
+dynamic reduce(var initialValue,
+              dynamic combine(var previousValue, E element)) {
+ var value = initialValue;
+ for (E element in this) value = combine(value, element);
+ return value;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="remove">
+<button class="show-code">Code</button>
+void <strong>remove</strong>(<a href="../dart_core/Object.html">Object</a> object) <a class="anchor-link" href="#remove"
+              title="Permalink to ListQueue&lt;E&gt;.remove">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Removes an instance of <code>element</code> from this collection.</p>
+<p>This removes only one instance of the element for collections that can
+contain the same element more than once (e.g., <code>List</code>). Which instance
+is removed is decided by the collection.</p>
+<p>Has no effect if the elements is not in this collection.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Collection.html">Collection</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void remove(Object object) {
+ for (int i = _head; i != _tail; i = (i + 1) &amp; (_table.length - 1)) {
+   E element = _table[i];
+   if (element == object) {
+     _remove(i);
+     return;
+   }
+ }
+ _modificationCount++;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeAll">
+<button class="show-code">Code</button>
+void <strong>removeAll</strong>(<a href="../dart_core/Iterable.html">Iterable</a> objectsToRemove) <a class="anchor-link" href="#removeAll"
+              title="Permalink to ListQueue&lt;E&gt;.removeAll">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Removes all of <code>elements</code> from this collection.</p>
+<p>Equivalent to calling <a class="crossref" href="../dart_collection/ListQueue.html#remove">remove</a> once for each element in
+<code>elements</code>, but may be faster for some collections.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Collection.html">Collection</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void removeAll(Iterable objectsToRemove) {
+ IterableMixinWorkaround.removeAllList(this, objectsToRemove);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeFirst">
+<button class="show-code">Code</button>
+<a href="../dart_collection/ListQueue.html">E</a> <strong>removeFirst</strong>() <a class="anchor-link" href="#removeFirst"
+              title="Permalink to ListQueue&lt;E&gt;.removeFirst">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Removes and returns the first element of this queue. Throws an
+<code>StateError</code> exception if this queue is empty.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_collection/Queue.html">Queue</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+E removeFirst() {
+ if (_head == _tail) throw new StateError("No elements");
+ _modificationCount++;
+ E result = _table[_head];
+ _head = (_head + 1) &amp; (_table.length - 1);
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeLast">
+<button class="show-code">Code</button>
+<a href="../dart_collection/ListQueue.html">E</a> <strong>removeLast</strong>() <a class="anchor-link" href="#removeLast"
+              title="Permalink to ListQueue&lt;E&gt;.removeLast">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Removes and returns the last element of the queue. Throws an
+<code>StateError</code> exception if this queue is empty.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_collection/Queue.html">Queue</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+E removeLast() {
+ if (_head == _tail) throw new StateError("No elements");
+ _modificationCount++;
+ _tail = (_tail - 1) &amp; (_table.length - 1);
+ return _table[_tail];
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeMatching">
+<button class="show-code">Code</button>
+void <strong>removeMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#removeMatching"
+              title="Permalink to ListQueue&lt;E&gt;.removeMatching">#</a></h4>
+<div class="doc">
+<p>Remove all elements matched by 
+<span class="param">test</span>.</p>
+<p>This method is inefficient since it works by repeatedly removing single
+elements, each of which can take linear time.</p>
+<pre class="source">
+void removeMatching(bool test(E element)) {
+ _filterMatching(test, true);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="retainAll">
+<button class="show-code">Code</button>
+void <strong>retainAll</strong>(<a href="../dart_core/Iterable.html">Iterable</a> objectsToRetain) <a class="anchor-link" href="#retainAll"
+              title="Permalink to ListQueue&lt;E&gt;.retainAll">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Removes all elements of this collection that are not
+in <code>elements</code>.</p>
+<p>For <code>Set</code>s, this is the intersection of the two original sets.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Collection.html">Collection</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; </div></div>
+<pre class="source">
+void retainAll(Iterable objectsToRetain) {
+ IterableMixinWorkaround.retainAll(this, objectsToRetain);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="retainMatching">
+<button class="show-code">Code</button>
+void <strong>retainMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#retainMatching"
+              title="Permalink to ListQueue&lt;E&gt;.retainMatching">#</a></h4>
+<div class="doc">
+<p>Remove all elements not matched by 
+<span class="param">test</span>.</p>
+<p>This method is inefficient since it works by repeatedly removing single
+elements, each of which can take linear time.</p>
+<pre class="source">
+void retainMatching(bool test(E element)) {
+ _filterMatching(test, false);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="singleMatching">
+<button class="show-code">Code</button>
+<a href="../dart_collection/ListQueue.html">E</a> <strong>singleMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_collection/ListQueue.html">E</a> value)) <a class="anchor-link" href="#singleMatching"
+              title="Permalink to ListQueue&lt;E&gt;.singleMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the single element that satisfies <code>f</code>. If no or more than one
+element match then a <code>StateError</code> is thrown.</p>
+<pre class="source">
+E singleMatching(bool test(E value)) {
+ // TODO(floitsch): check that argument is of correct type?
+ E result = null;
+ bool foundMatching = false;
+ for (E element in this) {
+   if (test(element)) {
+     if (foundMatching) {
+       throw new StateError("More than one matching element");
+     }
+     result = element;
+     foundMatching = true;
+   }
+ }
+ if (foundMatching) return result;
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="skip">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; <strong>skip</strong>(<a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#skip"
+              title="Permalink to ListQueue&lt;E&gt;.skip">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that skips the first 
+<span class="param">n</span> elements.</p>
+<p>If <code>this</code> has fewer than 
+<span class="param">n</span> elements, then the resulting <code>Iterable</code> will
+be empty.</p>
+<pre class="source">
+Iterable&lt;E&gt; skip(int n) {
+ return new SkipIterable&lt;E&gt;(this, n);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="skipWhile">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; <strong>skipWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_collection/ListQueue.html">E</a> value)) <a class="anchor-link" href="#skipWhile"
+              title="Permalink to ListQueue&lt;E&gt;.skipWhile">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that skips elements while 
+<span class="param">test</span> is satisfied.</p>
+<p>The filtering happens lazily. Every new <code>Iterator</code> of the returned
+<code>Iterable</code> will iterate over all elements of <code>this</code>.
+As long as the iterator's elements do not satisfy 
+<span class="param">test</span> they are
+discarded. Once an element satisfies the 
+<span class="param">test</span> the iterator stops testing
+and uses every element unconditionally.</p>
+<pre class="source">
+Iterable&lt;E&gt; skipWhile(bool test(E value)) {
+ return new SkipWhileIterable&lt;E&gt;(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="take">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; <strong>take</strong>(<a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#take"
+              title="Permalink to ListQueue&lt;E&gt;.take">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> with at most 
+<span class="param">n</span> elements.</p>
+<p>The returned <code>Iterable</code> may contain fewer than 
+<span class="param">n</span> elements, if <code>this</code>
+contains fewer than 
+<span class="param">n</span> elements.</p>
+<pre class="source">
+Iterable&lt;E&gt; take(int n) {
+ return new TakeIterable&lt;E&gt;(this, n);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="takeWhile">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; <strong>takeWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_collection/ListQueue.html">E</a> value)) <a class="anchor-link" href="#takeWhile"
+              title="Permalink to ListQueue&lt;E&gt;.takeWhile">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that stops once 
+<span class="param">test</span> is not satisfied anymore.</p>
+<p>The filtering happens lazily. Every new <code>Iterator</code> of the returned
+<code>Iterable</code> will start iterating over the elements of <code>this</code>.
+When the iterator encounters an element <code>e</code> that does not satisfy 
+<span class="param">test</span>,
+it discards <code>e</code> and moves into the finished state. That is, it will not
+ask or provide any more elements.</p>
+<pre class="source">
+Iterable&lt;E&gt; takeWhile(bool test(E value)) {
+ return new TakeWhileIterable&lt;E&gt;(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toList">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; <strong>toList</strong>() <a class="anchor-link" href="#toList"
+              title="Permalink to ListQueue&lt;E&gt;.toList">#</a></h4>
+<div class="doc">
+<pre class="source">
+List&lt;E&gt; toList() {
+ List&lt;E&gt; list = new List&lt;E&gt;(length);
+ _writeToList(list);
+ return list;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toSet">
+<button class="show-code">Code</button>
+<a href="../dart_core/Set.html">Set</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; <strong>toSet</strong>() <a class="anchor-link" href="#toSet"
+              title="Permalink to ListQueue&lt;E&gt;.toSet">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<pre class="source">
+Set&lt;E&gt; toSet() =&gt; new Set&lt;E&gt;.from(this);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to ListQueue&lt;E&gt;.toString">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() {
+ return Collections.collectionToString(this);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="where">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_collection/ListQueue.html">E</a>&gt; <strong>where</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_collection/ListQueue.html">E</a> element)) <a class="anchor-link" href="#where"
+              title="Permalink to ListQueue&lt;E&gt;.where">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns a lazy <code>Iterable</code> with all elements that satisfy the
+predicate 
+<span class="param">f</span>.</p>
+<p>This method returns a view of the mapped elements. As long as the
+returned <code>Iterable</code> is not iterated over, the supplied function 
+<span class="param">f</span> will
+not be invoked. Iterating will not cache results, and thus iterating
+multiple times over the the returned <code>Iterable</code> will invoke the supplied
+function 
+<span class="param">f</span> multiple times on the same element.</p>
+<pre class="source">
+Iterable&lt;E&gt; where(bool f(E element)) =&gt; new WhereIterable&lt;E&gt;(this, f);
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:22.138</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

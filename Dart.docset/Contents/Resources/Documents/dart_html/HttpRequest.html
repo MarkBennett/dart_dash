@@ -1,0 +1,1734 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>HttpRequest class / dart:html Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:html" data-type="HttpRequest">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_html.html">dart:html</a> &rsaquo; <a href="../dart_html/HttpRequest.html">HttpRequest</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><ul class="icon">
+<li><a href="../dart_html/AbstractWorker.html"><div class="icon-class"></div>AbstractWorker</a></li>
+<li><a href="../dart_html/AnchorElement.html"><div class="icon-class"></div>AnchorElement</a></li>
+<li><a href="../dart_html/AnimationEvent.html"><div class="icon-class"></div>AnimationEvent</a></li>
+<li><a href="../dart_html/ApplicationCache.html"><div class="icon-class"></div>ApplicationCache</a></li>
+<li><a href="../dart_html/AreaElement.html"><div class="icon-class"></div>AreaElement</a></li>
+<li><a href="../dart_html/ArrayBuffer.html"><div class="icon-class"></div>ArrayBuffer</a></li>
+<li><a href="../dart_html/ArrayBufferView.html"><div class="icon-class"></div>ArrayBufferView</a></li>
+<li><a href="../dart_html/Attr.html"><div class="icon-class"></div>Attr</a></li>
+<li><a href="../dart_html/AudioElement.html"><div class="icon-class"></div>AudioElement</a></li>
+<li><a href="../dart_html/BarInfo.html"><div class="icon-class"></div>BarInfo</a></li>
+<li><a href="../dart_html/BaseElement.html"><div class="icon-class"></div>BaseElement</a></li>
+<li><a href="../dart_html/BatteryManager.html"><div class="icon-class"></div>BatteryManager</a></li>
+<li><a href="../dart_html/BeforeLoadEvent.html"><div class="icon-class"></div>BeforeLoadEvent</a></li>
+<li><a href="../dart_html/Blob.html"><div class="icon-class"></div>Blob</a></li>
+<li><a href="../dart_html/BodyElement.html"><div class="icon-class"></div>BodyElement</a></li>
+<li><a href="../dart_html/BRElement.html"><div class="icon-class"></div>BRElement</a></li>
+<li><a href="../dart_html/ButtonElement.html"><div class="icon-class"></div>ButtonElement</a></li>
+<li><a href="../dart_html/ButtonInputElement.html"><div class="icon-class"></div>ButtonInputElement</a></li>
+<li><a href="../dart_html/CanvasElement.html"><div class="icon-class"></div>CanvasElement</a></li>
+<li><a href="../dart_html/CanvasGradient.html"><div class="icon-class"></div>CanvasGradient</a></li>
+<li><a href="../dart_html/CanvasPattern.html"><div class="icon-class"></div>CanvasPattern</a></li>
+<li><a href="../dart_html/CanvasRenderingContext.html"><div class="icon-class"></div>CanvasRenderingContext</a></li>
+<li><a href="../dart_html/CanvasRenderingContext2D.html"><div class="icon-class"></div>CanvasRenderingContext2D</a></li>
+<li><a href="../dart_html/CDataSection.html"><div class="icon-class"></div>CDataSection</a></li>
+<li><a href="../dart_html/CharacterData.html"><div class="icon-class"></div>CharacterData</a></li>
+<li><a href="../dart_html/CheckboxInputElement.html"><div class="icon-class"></div>CheckboxInputElement</a></li>
+<li><a href="../dart_html/ClientRect.html"><div class="icon-class"></div>ClientRect</a></li>
+<li><a href="../dart_html/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_html/Comment.html"><div class="icon-class"></div>Comment</a></li>
+<li><a href="../dart_html/CompositionEvent.html"><div class="icon-class"></div>CompositionEvent</a></li>
+<li><a href="../dart_html/Console.html"><div class="icon-class"></div>Console</a></li>
+<li><a href="../dart_html/ContentElement.html"><div class="icon-class"></div>ContentElement</a></li>
+<li><a href="../dart_html/Coordinates.html"><div class="icon-class"></div>Coordinates</a></li>
+<li><a href="../dart_html/Counter.html"><div class="icon-class"></div>Counter</a></li>
+<li><a href="../dart_html/Crypto.html"><div class="icon-class"></div>Crypto</a></li>
+<li><a href="../dart_html/CssCharsetRule.html"><div class="icon-class"></div>CssCharsetRule</a></li>
+<li><a href="../dart_html/CssClassSet.html"><div class="icon-class"></div>CssClassSet</a></li>
+<li><a href="../dart_html/CssFontFaceRule.html"><div class="icon-class"></div>CssFontFaceRule</a></li>
+<li><a href="../dart_html/CssHostRule.html"><div class="icon-class"></div>CssHostRule</a></li>
+<li><a href="../dart_html/CssImportRule.html"><div class="icon-class"></div>CssImportRule</a></li>
+<li><a href="../dart_html/CssKeyframeRule.html"><div class="icon-class"></div>CssKeyframeRule</a></li>
+<li><a href="../dart_html/CssKeyframesRule.html"><div class="icon-class"></div>CssKeyframesRule</a></li>
+<li><a href="../dart_html/CssMatrix.html"><div class="icon-class"></div>CssMatrix</a></li>
+<li><a href="../dart_html/CssMediaRule.html"><div class="icon-class"></div>CssMediaRule</a></li>
+<li><a href="../dart_html/CssPageRule.html"><div class="icon-class"></div>CssPageRule</a></li>
+<li><a href="../dart_html/CssPrimitiveValue.html"><div class="icon-class"></div>CssPrimitiveValue</a></li>
+<li><a href="../dart_html/CssRule.html"><div class="icon-class"></div>CssRule</a></li>
+<li><a href="../dart_html/CssStyleDeclaration.html"><div class="icon-class"></div>CssStyleDeclaration</a></li>
+<li><a href="../dart_html/CssStyleRule.html"><div class="icon-class"></div>CssStyleRule</a></li>
+<li><a href="../dart_html/CssStyleSheet.html"><div class="icon-class"></div>CssStyleSheet</a></li>
+<li><a href="../dart_html/CssTransformValue.html"><div class="icon-class"></div>CssTransformValue</a></li>
+<li><a href="../dart_html/CssUnknownRule.html"><div class="icon-class"></div>CssUnknownRule</a></li>
+<li><a href="../dart_html/CssValue.html"><div class="icon-class"></div>CssValue</a></li>
+<li><a href="../dart_html/CustomEvent.html"><div class="icon-class"></div>CustomEvent</a></li>
+<li><a href="../dart_html/DataListElement.html"><div class="icon-class"></div>DataListElement</a></li>
+<li><a href="../dart_html/DataTransfer.html"><div class="icon-class"></div>DataTransfer</a></li>
+<li><a href="../dart_html/DataTransferItem.html"><div class="icon-class"></div>DataTransferItem</a></li>
+<li><a href="../dart_html/DataTransferItemList.html"><div class="icon-class"></div>DataTransferItemList</a></li>
+<li><a href="../dart_html/DataView.html"><div class="icon-class"></div>DataView</a></li>
+<li><a href="../dart_html/DateInputElement.html"><div class="icon-class"></div>DateInputElement</a></li>
+<li><a href="../dart_html/DedicatedWorkerContext.html"><div class="icon-class"></div>DedicatedWorkerContext</a></li>
+<li><a href="../dart_html/DetailsElement.html"><div class="icon-class"></div>DetailsElement</a></li>
+<li><a href="../dart_html/DeviceMotionEvent.html"><div class="icon-class"></div>DeviceMotionEvent</a></li>
+<li><a href="../dart_html/DeviceOrientationEvent.html"><div class="icon-class"></div>DeviceOrientationEvent</a></li>
+<li><a href="../dart_html/DirectoryEntry.html"><div class="icon-class"></div>DirectoryEntry</a></li>
+<li><a href="../dart_html/DirectoryEntrySync.html"><div class="icon-class"></div>DirectoryEntrySync</a></li>
+<li><a href="../dart_html/DirectoryReader.html"><div class="icon-class"></div>DirectoryReader</a></li>
+<li><a href="../dart_html/DirectoryReaderSync.html"><div class="icon-class"></div>DirectoryReaderSync</a></li>
+<li><a href="../dart_html/DivElement.html"><div class="icon-class"></div>DivElement</a></li>
+<li><a href="../dart_html/DListElement.html"><div class="icon-class"></div>DListElement</a></li>
+<li><a href="../dart_html/Document.html"><div class="icon-class"></div>Document</a></li>
+<li><a href="../dart_html/DocumentFragment.html"><div class="icon-class"></div>DocumentFragment</a></li>
+<li><a href="../dart_html/DocumentType.html"><div class="icon-class"></div>DocumentType</a></li>
+<li><a href="../dart_html/DomImplementation.html"><div class="icon-class"></div>DomImplementation</a></li>
+<li><a href="../dart_html/DomMimeType.html"><div class="icon-class"></div>DomMimeType</a></li>
+<li><a href="../dart_html/DomMimeTypeArray.html"><div class="icon-class"></div>DomMimeTypeArray</a></li>
+<li><a href="../dart_html/DomParser.html"><div class="icon-class"></div>DomParser</a></li>
+<li><a href="../dart_html/DomPlugin.html"><div class="icon-class"></div>DomPlugin</a></li>
+<li><a href="../dart_html/DomPluginArray.html"><div class="icon-class"></div>DomPluginArray</a></li>
+<li><a href="../dart_html/DomPoint.html"><div class="icon-class"></div>DomPoint</a></li>
+<li><a href="../dart_html/DomSelection.html"><div class="icon-class"></div>DomSelection</a></li>
+<li><a href="../dart_html/DomSettableTokenList.html"><div class="icon-class"></div>DomSettableTokenList</a></li>
+<li><a href="../dart_html/DomStringList.html"><div class="icon-class"></div>DomStringList</a></li>
+<li><a href="../dart_html/DomStringMap.html"><div class="icon-class"></div>DomStringMap</a></li>
+<li><a href="../dart_html/DomTokenList.html"><div class="icon-class"></div>DomTokenList</a></li>
+<li><a href="../dart_html/Element.html"><div class="icon-class"></div>Element</a></li>
+<li><a href="../dart_html/ElementTraversal.html"><div class="icon-class"></div>ElementTraversal</a></li>
+<li><a href="../dart_html/EmailInputElement.html"><div class="icon-class"></div>EmailInputElement</a></li>
+<li><a href="../dart_html/EmbedElement.html"><div class="icon-class"></div>EmbedElement</a></li>
+<li><a href="../dart_html/EntityReference.html"><div class="icon-class"></div>EntityReference</a></li>
+<li><a href="../dart_html/EntriesCallback.html"><div class="icon-interface"></div>EntriesCallback</a></li>
+<li><a href="../dart_html/Entry.html"><div class="icon-class"></div>Entry</a></li>
+<li><a href="../dart_html/EntryCallback.html"><div class="icon-interface"></div>EntryCallback</a></li>
+<li><a href="../dart_html/EntrySync.html"><div class="icon-class"></div>EntrySync</a></li>
+<li><a href="../dart_html/ErrorCallback.html"><div class="icon-interface"></div>ErrorCallback</a></li>
+<li><a href="../dart_html/ErrorEvent.html"><div class="icon-class"></div>ErrorEvent</a></li>
+<li><a href="../dart_html/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_html/EventListener.html"><div class="icon-interface"></div>EventListener</a></li>
+<li><a href="../dart_html/Events.html"><div class="icon-class"></div>Events</a></li>
+<li><a href="../dart_html/EventSource.html"><div class="icon-class"></div>EventSource</a></li>
+<li><a href="../dart_html/EventStreamProvider.html"><div class="icon-class"></div>EventStreamProvider&lt;T&gt;</a></li>
+<li><a href="../dart_html/EventTarget.html"><div class="icon-class"></div>EventTarget</a></li>
+<li><a href="../dart_html/ExtTextureFilterAnisotropic.html"><div class="icon-class"></div>ExtTextureFilterAnisotropic</a></li>
+<li><a href="../dart_html/FieldSetElement.html"><div class="icon-class"></div>FieldSetElement</a></li>
+<li><a href="../dart_html/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_html/FileCallback.html"><div class="icon-interface"></div>FileCallback</a></li>
+<li><a href="../dart_html/FileEntry.html"><div class="icon-class"></div>FileEntry</a></li>
+<li><a href="../dart_html/FileEntrySync.html"><div class="icon-class"></div>FileEntrySync</a></li>
+<li><a href="../dart_html/FileList.html"><div class="icon-class"></div>FileList</a></li>
+<li><a href="../dart_html/FileReader.html"><div class="icon-class"></div>FileReader</a></li>
+<li><a href="../dart_html/FileReaderSync.html"><div class="icon-class"></div>FileReaderSync</a></li>
+<li><a href="../dart_html/FileSystem.html"><div class="icon-class"></div>FileSystem</a></li>
+<li><a href="../dart_html/FileSystemCallback.html"><div class="icon-interface"></div>FileSystemCallback</a></li>
+<li><a href="../dart_html/FileSystemSync.html"><div class="icon-class"></div>FileSystemSync</a></li>
+<li><a href="../dart_html/FileUploadInputElement.html"><div class="icon-class"></div>FileUploadInputElement</a></li>
+<li><a href="../dart_html/FileWriter.html"><div class="icon-class"></div>FileWriter</a></li>
+<li><a href="../dart_html/FileWriterCallback.html"><div class="icon-interface"></div>FileWriterCallback</a></li>
+<li><a href="../dart_html/FileWriterSync.html"><div class="icon-class"></div>FileWriterSync</a></li>
+<li><a href="../dart_html/FixedSizeListIterator.html"><div class="icon-class"></div>FixedSizeListIterator&lt;T&gt;</a></li>
+<li><a href="../dart_html/Float32Array.html"><div class="icon-class"></div>Float32Array</a></li>
+<li><a href="../dart_html/Float64Array.html"><div class="icon-class"></div>Float64Array</a></li>
+<li><a href="../dart_html/FocusEvent.html"><div class="icon-class"></div>FocusEvent</a></li>
+<li><a href="../dart_html/FormData.html"><div class="icon-class"></div>FormData</a></li>
+<li><a href="../dart_html/FormElement.html"><div class="icon-class"></div>FormElement</a></li>
+<li><a href="../dart_html/Gamepad.html"><div class="icon-class"></div>Gamepad</a></li>
+<li><a href="../dart_html/Geolocation.html"><div class="icon-class"></div>Geolocation</a></li>
+<li><a href="../dart_html/Geoposition.html"><div class="icon-class"></div>Geoposition</a></li>
+<li><a href="../dart_html/HashChangeEvent.html"><div class="icon-class"></div>HashChangeEvent</a></li>
+<li><a href="../dart_html/HeadElement.html"><div class="icon-class"></div>HeadElement</a></li>
+<li><a href="../dart_html/HeadingElement.html"><div class="icon-class"></div>HeadingElement</a></li>
+<li><a href="../dart_html/HiddenInputElement.html"><div class="icon-class"></div>HiddenInputElement</a></li>
+<li><a href="../dart_html/History.html"><div class="icon-class"></div>History</a></li>
+<li><a href="../dart_html/HistoryBase.html"><div class="icon-class"></div>HistoryBase</a></li>
+<li><a href="../dart_html/HRElement.html"><div class="icon-class"></div>HRElement</a></li>
+<li><a href="../dart_html/HtmlAllCollection.html"><div class="icon-class"></div>HtmlAllCollection</a></li>
+<li><a href="../dart_html/HtmlCollection.html"><div class="icon-class"></div>HtmlCollection</a></li>
+<li><a href="../dart_html/HtmlDocument.html"><div class="icon-class"></div>HtmlDocument</a></li>
+<li><a href="../dart_html/HtmlElement.html"><div class="icon-class"></div>HtmlElement</a></li>
+<li><a href="../dart_html/HtmlFormControlsCollection.html"><div class="icon-class"></div>HtmlFormControlsCollection</a></li>
+<li><a href="../dart_html/HtmlOptionsCollection.html"><div class="icon-class"></div>HtmlOptionsCollection</a></li>
+<li><div class="icon-class"></div><strong>HttpRequest</strong></li>
+<li><a href="../dart_html/HttpRequestProgressEvent.html"><div class="icon-class"></div>HttpRequestProgressEvent</a></li>
+<li><a href="../dart_html/HttpRequestUpload.html"><div class="icon-class"></div>HttpRequestUpload</a></li>
+<li><a href="../dart_html/IFrameElement.html"><div class="icon-class"></div>IFrameElement</a></li>
+<li><a href="../dart_html/ImageButtonInputElement.html"><div class="icon-class"></div>ImageButtonInputElement</a></li>
+<li><a href="../dart_html/ImageData.html"><div class="icon-class"></div>ImageData</a></li>
+<li><a href="../dart_html/ImageElement.html"><div class="icon-class"></div>ImageElement</a></li>
+<li><a href="../dart_html/InputElement.html"><div class="icon-class"></div>InputElement</a></li>
+<li><a href="../dart_html/InputElementBase.html"><div class="icon-class"></div>InputElementBase</a></li>
+<li><a href="../dart_html/Int16Array.html"><div class="icon-class"></div>Int16Array</a></li>
+<li><a href="../dart_html/Int32Array.html"><div class="icon-class"></div>Int32Array</a></li>
+<li><a href="../dart_html/Int8Array.html"><div class="icon-class"></div>Int8Array</a></li>
+<li><a href="../dart_html/JavaScriptCallFrame.html"><div class="icon-class"></div>JavaScriptCallFrame</a></li>
+<li><a href="../dart_html/KeyboardEvent.html"><div class="icon-class"></div>KeyboardEvent</a></li>
+<li><a href="../dart_html/KeyboardEventController.html"><div class="icon-class"></div>KeyboardEventController</a></li>
+<li><a href="../dart_html/KeyCode.html"><div class="icon-class"></div>KeyCode</a></li>
+<li><a href="../dart_html/KeyEvent.html"><div class="icon-class"></div>KeyEvent</a></li>
+<li><a href="../dart_html/KeygenElement.html"><div class="icon-class"></div>KeygenElement</a></li>
+<li><a href="../dart_html/KeyLocation.html"><div class="icon-class"></div>KeyLocation</a></li>
+<li><a href="../dart_html/KeyName.html"><div class="icon-class"></div>KeyName</a></li>
+<li><a href="../dart_html/LabelElement.html"><div class="icon-class"></div>LabelElement</a></li>
+<li><a href="../dart_html/LegendElement.html"><div class="icon-class"></div>LegendElement</a></li>
+<li><a href="../dart_html/LIElement.html"><div class="icon-class"></div>LIElement</a></li>
+<li><a href="../dart_html/LinkElement.html"><div class="icon-class"></div>LinkElement</a></li>
+<li><a href="../dart_html/LocalDateTimeInputElement.html"><div class="icon-class"></div>LocalDateTimeInputElement</a></li>
+<li><a href="../dart_html/LocalMediaStream.html"><div class="icon-class"></div>LocalMediaStream</a></li>
+<li><a href="../dart_html/Location.html"><div class="icon-class"></div>Location</a></li>
+<li><a href="../dart_html/LocationBase.html"><div class="icon-class"></div>LocationBase</a></li>
+<li><a href="../dart_html/MapElement.html"><div class="icon-class"></div>MapElement</a></li>
+<li><a href="../dart_html/MediaController.html"><div class="icon-class"></div>MediaController</a></li>
+<li><a href="../dart_html/MediaElement.html"><div class="icon-class"></div>MediaElement</a></li>
+<li><a href="../dart_html/MediaKeyEvent.html"><div class="icon-class"></div>MediaKeyEvent</a></li>
+<li><a href="../dart_html/MediaList.html"><div class="icon-class"></div>MediaList</a></li>
+<li><a href="../dart_html/MediaQueryList.html"><div class="icon-class"></div>MediaQueryList</a></li>
+<li><a href="../dart_html/MediaQueryListListener.html"><div class="icon-class"></div>MediaQueryListListener</a></li>
+<li><a href="../dart_html/MediaSource.html"><div class="icon-class"></div>MediaSource</a></li>
+<li><a href="../dart_html/MediaStream.html"><div class="icon-class"></div>MediaStream</a></li>
+<li><a href="../dart_html/MediaStreamEvent.html"><div class="icon-class"></div>MediaStreamEvent</a></li>
+<li><a href="../dart_html/MediaStreamTrack.html"><div class="icon-class"></div>MediaStreamTrack</a></li>
+<li><a href="../dart_html/MediaStreamTrackEvent.html"><div class="icon-class"></div>MediaStreamTrackEvent</a></li>
+<li><a href="../dart_html/MemoryInfo.html"><div class="icon-class"></div>MemoryInfo</a></li>
+<li><a href="../dart_html/MenuElement.html"><div class="icon-class"></div>MenuElement</a></li>
+<li><a href="../dart_html/MessageChannel.html"><div class="icon-class"></div>MessageChannel</a></li>
+<li><a href="../dart_html/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_html/MessagePort.html"><div class="icon-class"></div>MessagePort</a></li>
+<li><a href="../dart_html/Metadata.html"><div class="icon-class"></div>Metadata</a></li>
+<li><a href="../dart_html/MetadataCallback.html"><div class="icon-interface"></div>MetadataCallback</a></li>
+<li><a href="../dart_html/MetaElement.html"><div class="icon-class"></div>MetaElement</a></li>
+<li><a href="../dart_html/MeterElement.html"><div class="icon-class"></div>MeterElement</a></li>
+<li><a href="../dart_html/ModElement.html"><div class="icon-class"></div>ModElement</a></li>
+<li><a href="../dart_html/MonthInputElement.html"><div class="icon-class"></div>MonthInputElement</a></li>
+<li><a href="../dart_html/MouseEvent.html"><div class="icon-class"></div>MouseEvent</a></li>
+<li><a href="../dart_html/MutationCallback.html"><div class="icon-interface"></div>MutationCallback</a></li>
+<li><a href="../dart_html/MutationEvent.html"><div class="icon-class"></div>MutationEvent</a></li>
+<li><a href="../dart_html/MutationObserver.html"><div class="icon-class"></div>MutationObserver</a></li>
+<li><a href="../dart_html/MutationRecord.html"><div class="icon-class"></div>MutationRecord</a></li>
+<li><a href="../dart_html/Navigator.html"><div class="icon-class"></div>Navigator</a></li>
+<li><a href="../dart_html/Node.html"><div class="icon-class"></div>Node</a></li>
+<li><a href="../dart_html/NodeFilter.html"><div class="icon-class"></div>NodeFilter</a></li>
+<li><a href="../dart_html/NodeIterator.html"><div class="icon-class"></div>NodeIterator</a></li>
+<li><a href="../dart_html/NodeList.html"><div class="icon-class"></div>NodeList</a></li>
+<li><a href="../dart_html/Notation.html"><div class="icon-class"></div>Notation</a></li>
+<li><a href="../dart_html/Notification.html"><div class="icon-class"></div>Notification</a></li>
+<li><a href="../dart_html/NotificationCenter.html"><div class="icon-class"></div>NotificationCenter</a></li>
+<li><a href="../dart_html/NotificationPermissionCallback.html"><div class="icon-interface"></div>NotificationPermissionCallback</a></li>
+<li><a href="../dart_html/NumberInputElement.html"><div class="icon-class"></div>NumberInputElement</a></li>
+<li><a href="../dart_html/ObjectElement.html"><div class="icon-class"></div>ObjectElement</a></li>
+<li><a href="../dart_html/OesElementIndexUint.html"><div class="icon-class"></div>OesElementIndexUint</a></li>
+<li><a href="../dart_html/OesStandardDerivatives.html"><div class="icon-class"></div>OesStandardDerivatives</a></li>
+<li><a href="../dart_html/OesTextureFloat.html"><div class="icon-class"></div>OesTextureFloat</a></li>
+<li><a href="../dart_html/OesVertexArrayObject.html"><div class="icon-class"></div>OesVertexArrayObject</a></li>
+<li><a href="../dart_html/OListElement.html"><div class="icon-class"></div>OListElement</a></li>
+<li><a href="../dart_html/OptGroupElement.html"><div class="icon-class"></div>OptGroupElement</a></li>
+<li><a href="../dart_html/OptionElement.html"><div class="icon-class"></div>OptionElement</a></li>
+<li><a href="../dart_html/OutputElement.html"><div class="icon-class"></div>OutputElement</a></li>
+<li><a href="../dart_html/OverflowEvent.html"><div class="icon-class"></div>OverflowEvent</a></li>
+<li><a href="../dart_html/PagePopupController.html"><div class="icon-class"></div>PagePopupController</a></li>
+<li><a href="../dart_html/PageTransitionEvent.html"><div class="icon-class"></div>PageTransitionEvent</a></li>
+<li><a href="../dart_html/ParagraphElement.html"><div class="icon-class"></div>ParagraphElement</a></li>
+<li><a href="../dart_html/ParamElement.html"><div class="icon-class"></div>ParamElement</a></li>
+<li><a href="../dart_html/PasswordInputElement.html"><div class="icon-class"></div>PasswordInputElement</a></li>
+<li><a href="../dart_html/Performance.html"><div class="icon-class"></div>Performance</a></li>
+<li><a href="../dart_html/PerformanceNavigation.html"><div class="icon-class"></div>PerformanceNavigation</a></li>
+<li><a href="../dart_html/PerformanceTiming.html"><div class="icon-class"></div>PerformanceTiming</a></li>
+<li><a href="../dart_html/PopStateEvent.html"><div class="icon-class"></div>PopStateEvent</a></li>
+<li><a href="../dart_html/PreElement.html"><div class="icon-class"></div>PreElement</a></li>
+<li><a href="../dart_html/ProcessingInstruction.html"><div class="icon-class"></div>ProcessingInstruction</a></li>
+<li><a href="../dart_html/ProgressElement.html"><div class="icon-class"></div>ProgressElement</a></li>
+<li><a href="../dart_html/ProgressEvent.html"><div class="icon-class"></div>ProgressEvent</a></li>
+<li><a href="../dart_html/QuoteElement.html"><div class="icon-class"></div>QuoteElement</a></li>
+<li><a href="../dart_html/RadioButtonInputElement.html"><div class="icon-class"></div>RadioButtonInputElement</a></li>
+<li><a href="../dart_html/RadioNodeList.html"><div class="icon-class"></div>RadioNodeList</a></li>
+<li><a href="../dart_html/Range.html"><div class="icon-class"></div>Range</a></li>
+<li><a href="../dart_html/RangeInputElement.html"><div class="icon-class"></div>RangeInputElement</a></li>
+<li><a href="../dart_html/RangeInputElementBase.html"><div class="icon-class"></div>RangeInputElementBase</a></li>
+<li><a href="../dart_html/ReadyState.html"><div class="icon-class"></div>ReadyState</a></li>
+<li><a href="../dart_html/ReceivePortSync.html"><div class="icon-class"></div>ReceivePortSync</a></li>
+<li><a href="../dart_html/Rect.html"><div class="icon-class"></div>Rect</a></li>
+<li><a href="../dart_html/RequestAnimationFrameCallback.html"><div class="icon-interface"></div>RequestAnimationFrameCallback</a></li>
+<li><a href="../dart_html/ResetButtonInputElement.html"><div class="icon-class"></div>ResetButtonInputElement</a></li>
+<li><a href="../dart_html/RgbColor.html"><div class="icon-class"></div>RgbColor</a></li>
+<li><a href="../dart_html/RtcDataChannel.html"><div class="icon-class"></div>RtcDataChannel</a></li>
+<li><a href="../dart_html/RtcDataChannelEvent.html"><div class="icon-class"></div>RtcDataChannelEvent</a></li>
+<li><a href="../dart_html/RtcdtmfSender.html"><div class="icon-class"></div>RtcdtmfSender</a></li>
+<li><a href="../dart_html/RtcdtmfToneChangeEvent.html"><div class="icon-class"></div>RtcdtmfToneChangeEvent</a></li>
+<li><a href="../dart_html/RtcErrorCallback.html"><div class="icon-interface"></div>RtcErrorCallback</a></li>
+<li><a href="../dart_html/RtcIceCandidate.html"><div class="icon-class"></div>RtcIceCandidate</a></li>
+<li><a href="../dart_html/RtcIceCandidateEvent.html"><div class="icon-class"></div>RtcIceCandidateEvent</a></li>
+<li><a href="../dart_html/RtcPeerConnection.html"><div class="icon-class"></div>RtcPeerConnection</a></li>
+<li><a href="../dart_html/RtcSessionDescription.html"><div class="icon-class"></div>RtcSessionDescription</a></li>
+<li><a href="../dart_html/RtcSessionDescriptionCallback.html"><div class="icon-interface"></div>RtcSessionDescriptionCallback</a></li>
+<li><a href="../dart_html/RtcStatsCallback.html"><div class="icon-interface"></div>RtcStatsCallback</a></li>
+<li><a href="../dart_html/RtcStatsElement.html"><div class="icon-class"></div>RtcStatsElement</a></li>
+<li><a href="../dart_html/RtcStatsReport.html"><div class="icon-class"></div>RtcStatsReport</a></li>
+<li><a href="../dart_html/RtcStatsResponse.html"><div class="icon-class"></div>RtcStatsResponse</a></li>
+<li><a href="../dart_html/Screen.html"><div class="icon-class"></div>Screen</a></li>
+<li><a href="../dart_html/ScriptElement.html"><div class="icon-class"></div>ScriptElement</a></li>
+<li><a href="../dart_html/ScriptProfile.html"><div class="icon-class"></div>ScriptProfile</a></li>
+<li><a href="../dart_html/ScriptProfileNode.html"><div class="icon-class"></div>ScriptProfileNode</a></li>
+<li><a href="../dart_html/ScrollAlignment.html"><div class="icon-class"></div>ScrollAlignment</a></li>
+<li><a href="../dart_html/SearchInputElement.html"><div class="icon-class"></div>SearchInputElement</a></li>
+<li><a href="../dart_html/SelectElement.html"><div class="icon-class"></div>SelectElement</a></li>
+<li><a href="../dart_html/ShadowElement.html"><div class="icon-class"></div>ShadowElement</a></li>
+<li><a href="../dart_html/ShadowRoot.html"><div class="icon-class"></div>ShadowRoot</a></li>
+<li><a href="../dart_html/SharedWorker.html"><div class="icon-class"></div>SharedWorker</a></li>
+<li><a href="../dart_html/SharedWorkerContext.html"><div class="icon-class"></div>SharedWorkerContext</a></li>
+<li><a href="../dart_html/SourceBuffer.html"><div class="icon-class"></div>SourceBuffer</a></li>
+<li><a href="../dart_html/SourceBufferList.html"><div class="icon-class"></div>SourceBufferList</a></li>
+<li><a href="../dart_html/SourceElement.html"><div class="icon-class"></div>SourceElement</a></li>
+<li><a href="../dart_html/SpanElement.html"><div class="icon-class"></div>SpanElement</a></li>
+<li><a href="../dart_html/SpeechGrammar.html"><div class="icon-class"></div>SpeechGrammar</a></li>
+<li><a href="../dart_html/SpeechGrammarList.html"><div class="icon-class"></div>SpeechGrammarList</a></li>
+<li><a href="../dart_html/SpeechInputEvent.html"><div class="icon-class"></div>SpeechInputEvent</a></li>
+<li><a href="../dart_html/SpeechInputResult.html"><div class="icon-class"></div>SpeechInputResult</a></li>
+<li><a href="../dart_html/SpeechRecognition.html"><div class="icon-class"></div>SpeechRecognition</a></li>
+<li><a href="../dart_html/SpeechRecognitionAlternative.html"><div class="icon-class"></div>SpeechRecognitionAlternative</a></li>
+<li><a href="../dart_html/SpeechRecognitionEvent.html"><div class="icon-class"></div>SpeechRecognitionEvent</a></li>
+<li><a href="../dart_html/SpeechRecognitionResult.html"><div class="icon-class"></div>SpeechRecognitionResult</a></li>
+<li><a href="../dart_html/Storage.html"><div class="icon-class"></div>Storage</a></li>
+<li><a href="../dart_html/StorageEvent.html"><div class="icon-class"></div>StorageEvent</a></li>
+<li><a href="../dart_html/StorageInfo.html"><div class="icon-class"></div>StorageInfo</a></li>
+<li><a href="../dart_html/StorageInfoErrorCallback.html"><div class="icon-interface"></div>StorageInfoErrorCallback</a></li>
+<li><a href="../dart_html/StorageInfoQuotaCallback.html"><div class="icon-interface"></div>StorageInfoQuotaCallback</a></li>
+<li><a href="../dart_html/StorageInfoUsageCallback.html"><div class="icon-interface"></div>StorageInfoUsageCallback</a></li>
+<li><a href="../dart_html/StringCallback.html"><div class="icon-interface"></div>StringCallback</a></li>
+<li><a href="../dart_html/StyleElement.html"><div class="icon-class"></div>StyleElement</a></li>
+<li><a href="../dart_html/StyleMedia.html"><div class="icon-class"></div>StyleMedia</a></li>
+<li><a href="../dart_html/StyleSheet.html"><div class="icon-class"></div>StyleSheet</a></li>
+<li><a href="../dart_html/SubmitButtonInputElement.html"><div class="icon-class"></div>SubmitButtonInputElement</a></li>
+<li><a href="../dart_html/TableCaptionElement.html"><div class="icon-class"></div>TableCaptionElement</a></li>
+<li><a href="../dart_html/TableCellElement.html"><div class="icon-class"></div>TableCellElement</a></li>
+<li><a href="../dart_html/TableColElement.html"><div class="icon-class"></div>TableColElement</a></li>
+<li><a href="../dart_html/TableElement.html"><div class="icon-class"></div>TableElement</a></li>
+<li><a href="../dart_html/TableRowElement.html"><div class="icon-class"></div>TableRowElement</a></li>
+<li><a href="../dart_html/TableSectionElement.html"><div class="icon-class"></div>TableSectionElement</a></li>
+<li><a href="../dart_html/TelephoneInputElement.html"><div class="icon-class"></div>TelephoneInputElement</a></li>
+<li><a href="../dart_html/Text.html"><div class="icon-class"></div>Text</a></li>
+<li><a href="../dart_html/TextAreaElement.html"><div class="icon-class"></div>TextAreaElement</a></li>
+<li><a href="../dart_html/TextEvent.html"><div class="icon-class"></div>TextEvent</a></li>
+<li><a href="../dart_html/TextInputElement.html"><div class="icon-class"></div>TextInputElement</a></li>
+<li><a href="../dart_html/TextInputElementBase.html"><div class="icon-class"></div>TextInputElementBase</a></li>
+<li><a href="../dart_html/TextMetrics.html"><div class="icon-class"></div>TextMetrics</a></li>
+<li><a href="../dart_html/TextTrack.html"><div class="icon-class"></div>TextTrack</a></li>
+<li><a href="../dart_html/TextTrackCue.html"><div class="icon-class"></div>TextTrackCue</a></li>
+<li><a href="../dart_html/TextTrackCueList.html"><div class="icon-class"></div>TextTrackCueList</a></li>
+<li><a href="../dart_html/TextTrackList.html"><div class="icon-class"></div>TextTrackList</a></li>
+<li><a href="../dart_html/TimeInputElement.html"><div class="icon-class"></div>TimeInputElement</a></li>
+<li><a href="../dart_html/TimeoutHandler.html"><div class="icon-interface"></div>TimeoutHandler</a></li>
+<li><a href="../dart_html/TimeRanges.html"><div class="icon-class"></div>TimeRanges</a></li>
+<li><a href="../dart_html/TitleElement.html"><div class="icon-class"></div>TitleElement</a></li>
+<li><a href="../dart_html/Touch.html"><div class="icon-class"></div>Touch</a></li>
+<li><a href="../dart_html/TouchEvent.html"><div class="icon-class"></div>TouchEvent</a></li>
+<li><a href="../dart_html/TouchList.html"><div class="icon-class"></div>TouchList</a></li>
+<li><a href="../dart_html/TrackElement.html"><div class="icon-class"></div>TrackElement</a></li>
+<li><a href="../dart_html/TrackEvent.html"><div class="icon-class"></div>TrackEvent</a></li>
+<li><a href="../dart_html/TransitionEvent.html"><div class="icon-class"></div>TransitionEvent</a></li>
+<li><a href="../dart_html/TreeWalker.html"><div class="icon-class"></div>TreeWalker</a></li>
+<li><a href="../dart_html/UIEvent.html"><div class="icon-class"></div>UIEvent</a></li>
+<li><a href="../dart_html/Uint16Array.html"><div class="icon-class"></div>Uint16Array</a></li>
+<li><a href="../dart_html/Uint32Array.html"><div class="icon-class"></div>Uint32Array</a></li>
+<li><a href="../dart_html/Uint8Array.html"><div class="icon-class"></div>Uint8Array</a></li>
+<li><a href="../dart_html/Uint8ClampedArray.html"><div class="icon-class"></div>Uint8ClampedArray</a></li>
+<li><a href="../dart_html/UListElement.html"><div class="icon-class"></div>UListElement</a></li>
+<li><a href="../dart_html/UnknownElement.html"><div class="icon-class"></div>UnknownElement</a></li>
+<li><a href="../dart_html/Url.html"><div class="icon-class"></div>Url</a></li>
+<li><a href="../dart_html/UrlInputElement.html"><div class="icon-class"></div>UrlInputElement</a></li>
+<li><a href="../dart_html/ValidityState.html"><div class="icon-class"></div>ValidityState</a></li>
+<li><a href="../dart_html/VideoElement.html"><div class="icon-class"></div>VideoElement</a></li>
+<li><a href="../dart_html/VoidCallback.html"><div class="icon-interface"></div>VoidCallback</a></li>
+<li><a href="../dart_html/WebGLActiveInfo.html"><div class="icon-class"></div>WebGLActiveInfo</a></li>
+<li><a href="../dart_html/WebGLBuffer.html"><div class="icon-class"></div>WebGLBuffer</a></li>
+<li><a href="../dart_html/WebGLCompressedTextureS3TC.html"><div class="icon-class"></div>WebGLCompressedTextureS3TC</a></li>
+<li><a href="../dart_html/WebGLContextAttributes.html"><div class="icon-class"></div>WebGLContextAttributes</a></li>
+<li><a href="../dart_html/WebGLContextEvent.html"><div class="icon-class"></div>WebGLContextEvent</a></li>
+<li><a href="../dart_html/WebGLDebugRendererInfo.html"><div class="icon-class"></div>WebGLDebugRendererInfo</a></li>
+<li><a href="../dart_html/WebGLDebugShaders.html"><div class="icon-class"></div>WebGLDebugShaders</a></li>
+<li><a href="../dart_html/WebGLDepthTexture.html"><div class="icon-class"></div>WebGLDepthTexture</a></li>
+<li><a href="../dart_html/WebGLFramebuffer.html"><div class="icon-class"></div>WebGLFramebuffer</a></li>
+<li><a href="../dart_html/WebGLLoseContext.html"><div class="icon-class"></div>WebGLLoseContext</a></li>
+<li><a href="../dart_html/WebGLProgram.html"><div class="icon-class"></div>WebGLProgram</a></li>
+<li><a href="../dart_html/WebGLRenderbuffer.html"><div class="icon-class"></div>WebGLRenderbuffer</a></li>
+<li><a href="../dart_html/WebGLRenderingContext.html"><div class="icon-class"></div>WebGLRenderingContext</a></li>
+<li><a href="../dart_html/WebGLShader.html"><div class="icon-class"></div>WebGLShader</a></li>
+<li><a href="../dart_html/WebGLShaderPrecisionFormat.html"><div class="icon-class"></div>WebGLShaderPrecisionFormat</a></li>
+<li><a href="../dart_html/WebGLTexture.html"><div class="icon-class"></div>WebGLTexture</a></li>
+<li><a href="../dart_html/WebGLUniformLocation.html"><div class="icon-class"></div>WebGLUniformLocation</a></li>
+<li><a href="../dart_html/WebGLVertexArrayObject.html"><div class="icon-class"></div>WebGLVertexArrayObject</a></li>
+<li><a href="../dart_html/WebKitCssFilterRule.html"><div class="icon-class"></div>WebKitCssFilterRule</a></li>
+<li><a href="../dart_html/WebKitCssFilterValue.html"><div class="icon-class"></div>WebKitCssFilterValue</a></li>
+<li><a href="../dart_html/WebKitCssMixFunctionValue.html"><div class="icon-class"></div>WebKitCssMixFunctionValue</a></li>
+<li><a href="../dart_html/WebKitNamedFlow.html"><div class="icon-class"></div>WebKitNamedFlow</a></li>
+<li><a href="../dart_html/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_html/WeekInputElement.html"><div class="icon-class"></div>WeekInputElement</a></li>
+<li><a href="../dart_html/WheelEvent.html"><div class="icon-class"></div>WheelEvent</a></li>
+<li><a href="../dart_html/Window.html"><div class="icon-class"></div>Window</a></li>
+<li><a href="../dart_html/WindowBase.html"><div class="icon-class"></div>WindowBase</a></li>
+<li><a href="../dart_html/Worker.html"><div class="icon-class"></div>Worker</a></li>
+<li><a href="../dart_html/WorkerContext.html"><div class="icon-class"></div>WorkerContext</a></li>
+<li><a href="../dart_html/WorkerLocation.html"><div class="icon-class"></div>WorkerLocation</a></li>
+<li><a href="../dart_html/WorkerNavigator.html"><div class="icon-class"></div>WorkerNavigator</a></li>
+<li><a href="../dart_html/XmlSerializer.html"><div class="icon-class"></div>XmlSerializer</a></li>
+<li><a href="../dart_html/XPathEvaluator.html"><div class="icon-class"></div>XPathEvaluator</a></li>
+<li><a href="../dart_html/XPathExpression.html"><div class="icon-class"></div>XPathExpression</a></li>
+<li><a href="../dart_html/XPathNSResolver.html"><div class="icon-class"></div>XPathNSResolver</a></li>
+<li><a href="../dart_html/XPathResult.html"><div class="icon-class"></div>XPathResult</a></li>
+<li><a href="../dart_html/XsltProcessor.html"><div class="icon-class"></div>XsltProcessor</a></li>
+<li><a href="../dart_html/DomError.html"><div class="icon-exception"></div>DomError</a></li>
+<li><a href="../dart_html/DomException.html"><div class="icon-exception"></div>DomException</a></li>
+<li><a href="../dart_html/EventException.html"><div class="icon-exception"></div>EventException</a></li>
+<li><a href="../dart_html/FileError.html"><div class="icon-exception"></div>FileError</a></li>
+<li><a href="../dart_html/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../dart_html/HttpRequestException.html"><div class="icon-exception"></div>HttpRequestException</a></li>
+<li><a href="../dart_html/MediaError.html"><div class="icon-exception"></div>MediaError</a></li>
+<li><a href="../dart_html/MediaKeyError.html"><div class="icon-exception"></div>MediaKeyError</a></li>
+<li><a href="../dart_html/NavigatorUserMediaError.html"><div class="icon-exception"></div>NavigatorUserMediaError</a></li>
+<li><a href="../dart_html/PositionError.html"><div class="icon-exception"></div>PositionError</a></li>
+<li><a href="../dart_html/RangeException.html"><div class="icon-exception"></div>RangeException</a></li>
+<li><a href="../dart_html/SpeechRecognitionError.html"><div class="icon-exception"></div>SpeechRecognitionError</a></li>
+<li><a href="../dart_html/XPathException.html"><div class="icon-exception"></div>XPathException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>HttpRequest</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A utility for retrieving data from a URL.</p>
+<p>HttpRequest can be used to obtain data from http, ftp, and file
+protocols.</p>
+<p>For example, suppose we're developing these API docs, and we
+wish to retrieve the HTML of the top-level page and print it out.
+The easiest way to do that would be:</p>
+<pre><code>var httpRequest = HttpRequest.get('http://api.dartlang.org',
+    (request) =&gt; print(request.responseText));
+</code></pre>
+<p><strong>Important</strong>: With the default behavior of this class, your
+code making the request should be served from the same origin (domain name,
+port, and application layer protocol) as the URL you are trying to access
+with HttpRequest. However, there are ways to
+<a href="http://www.dartlang.org/articles/json-web-service/#note-on-jsonp">get around this restriction</a>.</p>
+<p>See also:</p><ul><li><a href="http://www.dartlang.org/articles/json-web-service/#getting-data">Dart article on using HttpRequests</a></li><li><a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest">JS XMLHttpRequest</a></li><li><a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest">Using XMLHttpRequest</a></li></ul>
+<pre class="source">
+@DomName('XMLHttpRequest')
+class HttpRequest extends EventTarget native "*XMLHttpRequest" {
+
+ /**
+  * Creates a URL get request for the specified [url].
+  *
+  * The server response must be a `text/` mime type for this request to
+  * succeed.
+  *
+  * This is similar to [request] but specialized for HTTP GET requests which
+  * return text content.
+  *
+  * See also:
+  *
+  * * [request]
+  */
+ static Future&lt;String&gt; getString(String url,
+     {bool withCredentials, void onProgress(ProgressEvent e)}) {
+   return request(url, withCredentials: withCredentials,
+       onProgress: onProgress).then((xhr) =&gt; xhr.responseText);
+ }
+
+ /**
+  * Creates a URL request for the specified [url].
+  *
+  * By default this will do an HTTP GET request, this can be overridden with
+  * [method].
+  *
+  * The Future is completed when the response is available.
+  *
+  * The [withCredentials] parameter specified that credentials such as a cookie
+  * (already) set in the header or
+  * [authorization headers](http://tools.ietf.org/html/rfc1945#section-10.2)
+  * should be specified for the request. Details to keep in mind when using
+  * credentials:
+  *
+  * * Using credentials is only useful for cross-origin requests.
+  * * The `Access-Control-Allow-Origin` header of `url` cannot contain a wildcard (*).
+  * * The `Access-Control-Allow-Credentials` header of `url` must be set to true.
+  * * If `Access-Control-Expose-Headers` has not been set to true, only a subset of all the response headers will be returned when calling [getAllRequestHeaders].
+  *
+  * Note that requests for file:// URIs are only supported by Chrome extensions
+  * with appropriate permissions in their manifest. Requests to file:// URIs
+  * will also never fail- the Future will always complete successfully, even
+  * when the file cannot be found.
+  *
+  * See also: [authorization headers](http://en.wikipedia.org/wiki/Basic_access_authentication).
+  */
+ static Future&lt;HttpRequest&gt; request(String url,
+     {String method, bool withCredentials, String responseType, sendData,
+     void onProgress(ProgressEvent e)}) {
+   var completer = new Completer&lt;HttpRequest&gt;();
+
+   var xhr = new HttpRequest();
+   if (method == null) {
+     method = 'GET';
+   }
+   xhr.open(method, url, true);
+
+   if (withCredentials != null) {
+     xhr.withCredentials = withCredentials;
+   }
+
+   if (responseType != null) {
+     xhr.responseType = responseType;
+   }
+
+   if (onProgress != null) {
+     xhr.onProgress.listen(onProgress);
+   }
+
+   xhr.onLoad.listen((e) {
+     // Note: file:// URIs have status of 0.
+     if ((xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) ||
+         xhr.status == 0 || xhr.status == 304) {
+       completer.complete(xhr);
+     } else {
+       completer.completeError(e);
+     }
+   });
+
+   xhr.onError.listen((e) {
+     completer.completeError(e);
+   });
+
+   if (sendData != null) {
+     xhr.send(sendData);
+   } else {
+     xhr.send();
+   }
+
+   return completer.future;
+ }
+
+ /**
+  * Checks to see if the Progress event is supported on the current platform.
+  */
+ static bool get supportsProgressEvent {
+   var xhr = new HttpRequest();
+   return JS('bool', '"onprogress" in #', xhr);
+ }
+
+ /**
+  * Checks to see if the LoadEnd event is supported on the current platform.
+  */
+ static bool get supportsLoadEndEvent {
+   var xhr = new HttpRequest();
+   return JS('bool', '"onloadend" in #', xhr);
+ }
+
+
+ @DomName('XMLHttpRequest.abortEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;ProgressEvent&gt; abortEvent = const EventStreamProvider&lt;ProgressEvent&gt;('abort');
+
+ @DomName('XMLHttpRequest.errorEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;ProgressEvent&gt; errorEvent = const EventStreamProvider&lt;ProgressEvent&gt;('error');
+
+ @DomName('XMLHttpRequest.loadEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;ProgressEvent&gt; loadEvent = const EventStreamProvider&lt;ProgressEvent&gt;('load');
+
+ @DomName('XMLHttpRequest.loadendEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;ProgressEvent&gt; loadEndEvent = const EventStreamProvider&lt;ProgressEvent&gt;('loadend');
+
+ @DomName('XMLHttpRequest.loadstartEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;ProgressEvent&gt; loadStartEvent = const EventStreamProvider&lt;ProgressEvent&gt;('loadstart');
+
+ @DomName('XMLHttpRequest.progressEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;ProgressEvent&gt; progressEvent = const EventStreamProvider&lt;ProgressEvent&gt;('progress');
+
+ @DomName('XMLHttpRequest.readystatechangeEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;ProgressEvent&gt; readyStateChangeEvent = const EventStreamProvider&lt;ProgressEvent&gt;('readystatechange');
+
+ /**
+  * General constructor for any type of request (GET, POST, etc).
+  *
+  * This call is used in conjunction with [open]:
+  *
+  *     var request = new HttpRequest();
+  *     request.open('GET', 'http://dartlang.org')
+  *     request.on.load.add((event) =&gt; print('Request complete'));
+  *
+  * is the (more verbose) equivalent of
+  *
+  *     var request = new HttpRequest.get('http://dartlang.org',
+  *         (event) =&gt; print('Request complete'));
+  */
+ @DomName('XMLHttpRequest.XMLHttpRequest')
+ @DocsEditable
+ factory HttpRequest() {
+   return HttpRequest._create_1();
+ }
+ static HttpRequest _create_1() =&gt; JS('HttpRequest', 'new XMLHttpRequest()');
+
+ static const int DONE = 4;
+
+ static const int HEADERS_RECEIVED = 2;
+
+ static const int LOADING = 3;
+
+ static const int OPENED = 1;
+
+ static const int UNSENT = 0;
+
+ /**
+  * Indicator of the current state of the request:
+  *
+  * &lt;table&gt;
+  *   &lt;tr&gt;
+  *     &lt;td&gt;Value&lt;/td&gt;
+  *     &lt;td&gt;State&lt;/td&gt;
+  *     &lt;td&gt;Meaning&lt;/td&gt;
+  *   &lt;/tr&gt;
+  *   &lt;tr&gt;
+  *     &lt;td&gt;0&lt;/td&gt;
+  *     &lt;td&gt;unsent&lt;/td&gt;
+  *     &lt;td&gt;&lt;code&gt;open()&lt;/code&gt; has not yet been called&lt;/td&gt;
+  *   &lt;/tr&gt;
+  *   &lt;tr&gt;
+  *     &lt;td&gt;1&lt;/td&gt;
+  *     &lt;td&gt;opened&lt;/td&gt;
+  *     &lt;td&gt;&lt;code&gt;send()&lt;/code&gt; has not yet been called&lt;/td&gt;
+  *   &lt;/tr&gt;
+  *   &lt;tr&gt;
+  *     &lt;td&gt;2&lt;/td&gt;
+  *     &lt;td&gt;headers received&lt;/td&gt;
+  *     &lt;td&gt;&lt;code&gt;sent()&lt;/code&gt; has been called; response headers and &lt;code&gt;status&lt;/code&gt; are available&lt;/td&gt;
+  *   &lt;/tr&gt;
+  *   &lt;tr&gt;
+  *     &lt;td&gt;3&lt;/td&gt; &lt;td&gt;loading&lt;/td&gt; &lt;td&gt;&lt;code&gt;responseText&lt;/code&gt; holds some data&lt;/td&gt;
+  *   &lt;/tr&gt;
+  *   &lt;tr&gt;
+  *     &lt;td&gt;4&lt;/td&gt; &lt;td&gt;done&lt;/td&gt; &lt;td&gt;request is complete&lt;/td&gt;
+  *   &lt;/tr&gt;
+  * &lt;/table&gt;
+  */
+ @DomName('XMLHttpRequest.readyState')
+ @DocsEditable
+ final int readyState;
+
+ /**
+  * The data received as a reponse from the request.
+  *
+  * The data could be in the
+  * form of a [String], [ArrayBuffer], [Document], [Blob], or json (also a
+  * [String]). `null` indicates request failure.
+  */
+ @DomName('XMLHttpRequest.response')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.FIREFOX)
+ @SupportedBrowser(SupportedBrowser.IE, '10')
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Creates('ArrayBuffer|Blob|Document|=Object|=List|String|num')
+ final Object response;
+
+ /**
+  * The response in string form or `null on failure.
+  */
+ @DomName('XMLHttpRequest.responseText')
+ @DocsEditable
+ final String responseText;
+
+ /**
+  * [String] telling the server the desired response format.
+  *
+  * Default is `String`.
+  * Other options are one of 'arraybuffer', 'blob', 'document', 'json',
+  * 'text'. Some newer browsers will throw NS_ERROR_DOM_INVALID_ACCESS_ERR if
+  * `responseType` is set while performing a synchronous request.
+  *
+  * See also: [MDN responseType](https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#responseType)
+  */
+ @DomName('XMLHttpRequest.responseType')
+ @DocsEditable
+ String responseType;
+
+ @JSName('responseXML')
+ /**
+  * The request response, or null on failure.
+  *
+  * The response is processed as
+  * `text/xml` stream, unless responseType = 'document' and the request is
+  * synchronous.
+  */
+ @DomName('XMLHttpRequest.responseXML')
+ @DocsEditable
+ final Document responseXml;
+
+ /**
+  * The http result code from the request (200, 404, etc).
+  * See also: [Http Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+  */
+ @DomName('XMLHttpRequest.status')
+ @DocsEditable
+ final int status;
+
+ /**
+  * The request response string (such as \"200 OK\").
+  * See also: [Http Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+  */
+ @DomName('XMLHttpRequest.statusText')
+ @DocsEditable
+ final String statusText;
+
+ /**
+  * [EventTarget] that can hold listeners to track the progress of the request.
+  * The events fired will be members of [HttpRequestUploadEvents].
+  */
+ @DomName('XMLHttpRequest.upload')
+ @DocsEditable
+ final HttpRequestUpload upload;
+
+ /**
+  * True if cross-site requests should use credentials such as cookies
+  * or authorization headers; false otherwise.
+  *
+  * This value is ignored for same-site requests.
+  */
+ @DomName('XMLHttpRequest.withCredentials')
+ @DocsEditable
+ bool withCredentials;
+
+ /**
+  * Stop the current request.
+  *
+  * The request can only be stopped if readyState is `HEADERS_RECIEVED` or
+  * `LOADING`. If this method is not in the process of being sent, the method
+  * has no effect.
+  */
+ @DomName('XMLHttpRequest.abort')
+ @DocsEditable
+ void abort() native;
+
+ @JSName('addEventListener')
+ @DomName('XMLHttpRequest.addEventListener')
+ @DocsEditable
+ void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+
+ @DomName('XMLHttpRequest.dispatchEvent')
+ @DocsEditable
+ bool dispatchEvent(Event evt) native;
+
+ /**
+  * Retrieve all the response headers from a request.
+  *
+  * `null` if no headers have been received. For multipart requests,
+  * `getAllResponseHeaders` will return the response headers for the current
+  * part of the request.
+  *
+  * See also [HTTP response headers](http://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Responses)
+  * for a list of common response headers.
+  */
+ @DomName('XMLHttpRequest.getAllResponseHeaders')
+ @DocsEditable
+ String getAllResponseHeaders() native;
+
+ /**
+  * Return the response header named `header`, or `null` if not found.
+  *
+  * See also [HTTP response headers](http://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Responses)
+  * for a list of common response headers.
+  */
+ @DomName('XMLHttpRequest.getResponseHeader')
+ @DocsEditable
+ String getResponseHeader(String header) native;
+
+ /**
+  * Specify the desired `url`, and `method` to use in making the request.
+  *
+  * By default the request is done asyncronously, with no user or password
+  * authentication information. If `async` is false, the request will be send
+  * synchronously.
+  *
+  * Calling `open` again on a currently active request is equivalent to
+  * calling `abort`.
+  */
+ @DomName('XMLHttpRequest.open')
+ @DocsEditable
+ void open(String method, String url, [bool async, String user, String password]) native;
+
+ /**
+  * Specify a particular MIME type (such as `text/xml`) desired for the
+  * response.
+  *
+  * This value must be set before the request has been sent. See also the list
+  * of [common MIME types](http://en.wikipedia.org/wiki/Internet_media_type#List_of_common_media_types)
+  */
+ @DomName('XMLHttpRequest.overrideMimeType')
+ @DocsEditable
+ void overrideMimeType(String override) native;
+
+ @JSName('removeEventListener')
+ @DomName('XMLHttpRequest.removeEventListener')
+ @DocsEditable
+ void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+
+ /**
+  * Send the request with any given `data`.
+  *
+  * See also:
+  * [send() docs](https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#send())
+  * from MDN.
+  */
+ @DomName('XMLHttpRequest.send')
+ @DocsEditable
+ void send([data]) native;
+
+ @DomName('XMLHttpRequest.setRequestHeader')
+ @DocsEditable
+ void setRequestHeader(String header, String value) native;
+
+ /**
+  * Event listeners to be notified when request has been aborted,
+  * generally due to calling `httpRequest.abort()`.
+  */
+ @DomName('XMLHttpRequest.onabort')
+ @DocsEditable
+ Stream&lt;ProgressEvent&gt; get onAbort =&gt; abortEvent.forTarget(this);
+
+ /**
+  * Event listeners to be notified when a request has failed, such as when a
+  * cross-domain error occurred or the file wasn't found on the server.
+  */
+ @DomName('XMLHttpRequest.onerror')
+ @DocsEditable
+ Stream&lt;ProgressEvent&gt; get onError =&gt; errorEvent.forTarget(this);
+
+ /**
+  * Event listeners to be notified once the request has completed
+  * *successfully*.
+  */
+ @DomName('XMLHttpRequest.onload')
+ @DocsEditable
+ Stream&lt;ProgressEvent&gt; get onLoad =&gt; loadEvent.forTarget(this);
+
+ /**
+  * Event listeners to be notified once the request has completed (on
+  * either success or failure).
+  */
+ @DomName('XMLHttpRequest.onloadend')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.FIREFOX)
+ @SupportedBrowser(SupportedBrowser.IE, '10')
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ Stream&lt;ProgressEvent&gt; get onLoadEnd =&gt; loadEndEvent.forTarget(this);
+
+ /**
+  * Event listeners to be notified when the request starts, once
+  * `httpRequest.send()` has been called.
+  */
+ @DomName('XMLHttpRequest.onloadstart')
+ @DocsEditable
+ Stream&lt;ProgressEvent&gt; get onLoadStart =&gt; loadStartEvent.forTarget(this);
+
+ /**
+  * Event listeners to be notified when data for the request
+  * is being sent or loaded.
+  *
+  * Progress events are fired every 50ms or for every byte transmitted,
+  * whichever is less frequent.
+  */
+ @DomName('XMLHttpRequest.onprogress')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.FIREFOX)
+ @SupportedBrowser(SupportedBrowser.IE, '10')
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ Stream&lt;ProgressEvent&gt; get onProgress =&gt; progressEvent.forTarget(this);
+
+ /**
+  * Event listeners to be notified every time the [HttpRequest]
+  * object's `readyState` changes values.
+  */
+ @DomName('XMLHttpRequest.onreadystatechange')
+ @DocsEditable
+ Stream&lt;ProgressEvent&gt; get onReadyStateChange =&gt; readyStateChangeEvent.forTarget(this);
+
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_html/EventTarget.html">EventTarget</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>HttpRequest</strong></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="abortEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>abortEvent</strong> <a class="anchor-link"
+            href="#abortEvent"
+            title="Permalink to HttpRequest.abortEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('XMLHttpRequest.abortEvent')
+@DocsEditable
+static const EventStreamProvider&lt;ProgressEvent&gt; abortEvent = const EventStreamProvider&lt;ProgressEvent&gt;('abort')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="DONE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>DONE</strong> <a class="anchor-link"
+            href="#DONE"
+            title="Permalink to HttpRequest.DONE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+DONE = 4
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="errorEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>errorEvent</strong> <a class="anchor-link"
+            href="#errorEvent"
+            title="Permalink to HttpRequest.errorEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('XMLHttpRequest.errorEvent')
+@DocsEditable
+static const EventStreamProvider&lt;ProgressEvent&gt; errorEvent = const EventStreamProvider&lt;ProgressEvent&gt;('error')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="HEADERS_RECEIVED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>HEADERS_RECEIVED</strong> <a class="anchor-link"
+            href="#HEADERS_RECEIVED"
+            title="Permalink to HttpRequest.HEADERS_RECEIVED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+HEADERS_RECEIVED = 2
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="loadEndEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>loadEndEvent</strong> <a class="anchor-link"
+            href="#loadEndEvent"
+            title="Permalink to HttpRequest.loadEndEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('XMLHttpRequest.loadendEvent')
+@DocsEditable
+static const EventStreamProvider&lt;ProgressEvent&gt; loadEndEvent = const EventStreamProvider&lt;ProgressEvent&gt;('loadend')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="loadEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>loadEvent</strong> <a class="anchor-link"
+            href="#loadEvent"
+            title="Permalink to HttpRequest.loadEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('XMLHttpRequest.loadEvent')
+@DocsEditable
+static const EventStreamProvider&lt;ProgressEvent&gt; loadEvent = const EventStreamProvider&lt;ProgressEvent&gt;('load')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LOADING">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>LOADING</strong> <a class="anchor-link"
+            href="#LOADING"
+            title="Permalink to HttpRequest.LOADING">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LOADING = 3
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="loadStartEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>loadStartEvent</strong> <a class="anchor-link"
+            href="#loadStartEvent"
+            title="Permalink to HttpRequest.loadStartEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('XMLHttpRequest.loadstartEvent')
+@DocsEditable
+static const EventStreamProvider&lt;ProgressEvent&gt; loadStartEvent = const EventStreamProvider&lt;ProgressEvent&gt;('loadstart')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="OPENED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>OPENED</strong> <a class="anchor-link"
+            href="#OPENED"
+            title="Permalink to HttpRequest.OPENED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+OPENED = 1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="progressEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>progressEvent</strong> <a class="anchor-link"
+            href="#progressEvent"
+            title="Permalink to HttpRequest.progressEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('XMLHttpRequest.progressEvent')
+@DocsEditable
+static const EventStreamProvider&lt;ProgressEvent&gt; progressEvent = const EventStreamProvider&lt;ProgressEvent&gt;('progress')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="readyStateChangeEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>readyStateChangeEvent</strong> <a class="anchor-link"
+            href="#readyStateChangeEvent"
+            title="Permalink to HttpRequest.readyStateChangeEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('XMLHttpRequest.readystatechangeEvent')
+@DocsEditable
+static const EventStreamProvider&lt;ProgressEvent&gt; readyStateChangeEvent = const EventStreamProvider&lt;ProgressEvent&gt;('readystatechange')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="supportsLoadEndEvent">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>supportsLoadEndEvent</strong> <a class="anchor-link"
+            href="#supportsLoadEndEvent"
+            title="Permalink to HttpRequest.supportsLoadEndEvent">#</a>
+        </h4>
+        <div class="doc">
+<p>Checks to see if the LoadEnd event is supported on the current platform.</p>
+<pre class="source">
+static bool get supportsLoadEndEvent {
+ var xhr = new HttpRequest();
+ return JS('bool', '"onloadend" in #', xhr);
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="supportsProgressEvent">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>supportsProgressEvent</strong> <a class="anchor-link"
+            href="#supportsProgressEvent"
+            title="Permalink to HttpRequest.supportsProgressEvent">#</a>
+        </h4>
+        <div class="doc">
+<p>Checks to see if the Progress event is supported on the current platform.</p>
+<pre class="source">
+static bool get supportsProgressEvent {
+ var xhr = new HttpRequest();
+ return JS('bool', '"onprogress" in #', xhr);
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="UNSENT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>UNSENT</strong> <a class="anchor-link"
+            href="#UNSENT"
+            title="Permalink to HttpRequest.UNSENT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+UNSENT = 0
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="getString">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/String.html">String</a>&gt; <strong>getString</strong>(<a href="../dart_core/String.html">String</a> url, {<a href="../dart_core/bool.html">bool</a> withCredentials, void onProgress(<a href="../dart_html/ProgressEvent.html">ProgressEvent</a> e)}) <a class="anchor-link" href="#getString"
+              title="Permalink to HttpRequest.getString">#</a></h4>
+<div class="doc">
+<p>Creates a URL get request for the specified 
+<span class="param">url</span>.</p>
+<p>The server response must be a <code>text/</code> mime type for this request to
+succeed.</p>
+<p>This is similar to <a class="crossref" href="../dart_html/HttpRequest.html#request">request</a> but specialized for HTTP GET requests which
+return text content.</p>
+<p>See also:</p><ul><li><a class="crossref" href="../dart_html/HttpRequest.html#request">request</a></li></ul>
+<pre class="source">
+static Future&lt;String&gt; getString(String url,
+   {bool withCredentials, void onProgress(ProgressEvent e)}) {
+ return request(url, withCredentials: withCredentials,
+     onProgress: onProgress).then((xhr) =&gt; xhr.responseText);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="request">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_html/HttpRequest.html">HttpRequest</a>&gt; <strong>request</strong>(<a href="../dart_core/String.html">String</a> url, {<a href="../dart_core/String.html">String</a> method, <a href="../dart_core/bool.html">bool</a> withCredentials, <a href="../dart_core/String.html">String</a> responseType, sendData, void onProgress(<a href="../dart_html/ProgressEvent.html">ProgressEvent</a> e)}) <a class="anchor-link" href="#request"
+              title="Permalink to HttpRequest.request">#</a></h4>
+<div class="doc">
+<p>Creates a URL request for the specified 
+<span class="param">url</span>.</p>
+<p>By default this will do an HTTP GET request, this can be overridden with
+
+<span class="param">method</span>.</p>
+<p>The Future is completed when the response is available.</p>
+<p>The 
+<span class="param">withCredentials</span> parameter specified that credentials such as a cookie
+(already) set in the header or
+<a href="http://tools.ietf.org/html/rfc1945#section-10.2">authorization headers</a>
+should be specified for the request. Details to keep in mind when using
+credentials:</p><ul><li>Using credentials is only useful for cross-origin requests.</li><li>The <code>Access-Control-Allow-Origin</code> header of <code>url</code> cannot contain a wildcard (*).</li><li>The <code>Access-Control-Allow-Credentials</code> header of <code>url</code> must be set to true.</li><li>If <code>Access-Control-Expose-Headers</code> has not been set to true, only a subset of all the response headers will be returned when calling <code>getAllRequestHeaders</code>.</li></ul>
+<p>Note that requests for file:// URIs are only supported by Chrome extensions
+with appropriate permissions in their manifest. Requests to file:// URIs
+will also never fail- the Future will always complete successfully, even
+when the file cannot be found.</p>
+<p>See also: <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">authorization headers</a>.</p>
+<pre class="source">
+static Future&lt;HttpRequest&gt; request(String url,
+   {String method, bool withCredentials, String responseType, sendData,
+   void onProgress(ProgressEvent e)}) {
+ var completer = new Completer&lt;HttpRequest&gt;();
+
+ var xhr = new HttpRequest();
+ if (method == null) {
+   method = 'GET';
+ }
+ xhr.open(method, url, true);
+
+ if (withCredentials != null) {
+   xhr.withCredentials = withCredentials;
+ }
+
+ if (responseType != null) {
+   xhr.responseType = responseType;
+ }
+
+ if (onProgress != null) {
+   xhr.onProgress.listen(onProgress);
+ }
+
+ xhr.onLoad.listen((e) {
+   // Note: file:// URIs have status of 0.
+   if ((xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) ||
+       xhr.status == 0 || xhr.status == 304) {
+     completer.complete(xhr);
+   } else {
+     completer.completeError(e);
+   }
+ });
+
+ xhr.onError.listen((e) {
+   completer.completeError(e);
+ });
+
+ if (sendData != null) {
+   xhr.send(sendData);
+ } else {
+   xhr.send();
+ }
+
+ return completer.future;
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="HttpRequest">
+<button class="show-code">Code</button>
+factory <strong>HttpRequest</strong>() <a class="anchor-link" href="#HttpRequest"
+              title="Permalink to HttpRequest.HttpRequest">#</a></h4>
+<div class="doc">
+<p>General constructor for any type of request (GET, POST, etc).</p>
+<p>This call is used in conjunction with <a class="crossref" href="../dart_html/HttpRequest.html#open">open</a>:</p>
+<pre><code>var request = new HttpRequest();
+request.open('GET', 'http://dartlang.org')
+request.on.load.add((event) =&gt; print('Request complete'));
+</code></pre>
+<p>is the (more verbose) equivalent of</p>
+<pre><code>var request = new HttpRequest.get('http://dartlang.org',
+    (event) =&gt; print('Request complete'));
+</code></pre>
+<pre class="source">
+@DomName('XMLHttpRequest.XMLHttpRequest')
+@DocsEditable
+factory HttpRequest() {
+ return HttpRequest._create_1();
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field inherited"><h4 id="on">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Events.html">Events</a>         <strong>on</strong> <a class="anchor-link"
+            href="#on"
+            title="Permalink to HttpRequest.on">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>This is an ease-of-use accessor for event streams which should only be
+used when an explicit accessor is not available.</p>
+<pre class="source">
+Events get on =&gt; new Events(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onAbort">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>onAbort</strong> <a class="anchor-link"
+            href="#onAbort"
+            title="Permalink to HttpRequest.onAbort">#</a>
+        </h4>
+        <div class="doc">
+<p>Event listeners to be notified when request has been aborted,
+generally due to calling <code>httpRequest.abort()</code>.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.onabort')
+@DocsEditable
+Stream&lt;ProgressEvent&gt; get onAbort =&gt; abortEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>onError</strong> <a class="anchor-link"
+            href="#onError"
+            title="Permalink to HttpRequest.onError">#</a>
+        </h4>
+        <div class="doc">
+<p>Event listeners to be notified when a request has failed, such as when a
+cross-domain error occurred or the file wasn't found on the server.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.onerror')
+@DocsEditable
+Stream&lt;ProgressEvent&gt; get onError =&gt; errorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onLoad">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>onLoad</strong> <a class="anchor-link"
+            href="#onLoad"
+            title="Permalink to HttpRequest.onLoad">#</a>
+        </h4>
+        <div class="doc">
+<p>Event listeners to be notified once the request has completed
+<em>successfully</em>.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.onload')
+@DocsEditable
+Stream&lt;ProgressEvent&gt; get onLoad =&gt; loadEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onLoadEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>onLoadEnd</strong> <a class="anchor-link"
+            href="#onLoadEnd"
+            title="Permalink to HttpRequest.onLoadEnd">#</a>
+        </h4>
+        <div class="doc">
+<p>Event listeners to be notified once the request has completed (on
+either success or failure).</p>
+<pre class="source">
+@DomName('XMLHttpRequest.onloadend')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.FIREFOX)
+@SupportedBrowser(SupportedBrowser.IE, '10')
+@SupportedBrowser(SupportedBrowser.SAFARI)
+Stream&lt;ProgressEvent&gt; get onLoadEnd =&gt; loadEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onLoadStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>onLoadStart</strong> <a class="anchor-link"
+            href="#onLoadStart"
+            title="Permalink to HttpRequest.onLoadStart">#</a>
+        </h4>
+        <div class="doc">
+<p>Event listeners to be notified when the request starts, once
+<code>httpRequest.send()</code> has been called.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.onloadstart')
+@DocsEditable
+Stream&lt;ProgressEvent&gt; get onLoadStart =&gt; loadStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onProgress">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>onProgress</strong> <a class="anchor-link"
+            href="#onProgress"
+            title="Permalink to HttpRequest.onProgress">#</a>
+        </h4>
+        <div class="doc">
+<p>Event listeners to be notified when data for the request
+is being sent or loaded.</p>
+<p>Progress events are fired every 50ms or for every byte transmitted,
+whichever is less frequent.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.onprogress')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.FIREFOX)
+@SupportedBrowser(SupportedBrowser.IE, '10')
+@SupportedBrowser(SupportedBrowser.SAFARI)
+Stream&lt;ProgressEvent&gt; get onProgress =&gt; progressEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onReadyStateChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/ProgressEvent.html">ProgressEvent</a>&gt;         <strong>onReadyStateChange</strong> <a class="anchor-link"
+            href="#onReadyStateChange"
+            title="Permalink to HttpRequest.onReadyStateChange">#</a>
+        </h4>
+        <div class="doc">
+<p>Event listeners to be notified every time the <a class="crossref" href="../dart_html/HttpRequest.html#HttpRequest">HttpRequest</a>
+object's <code>readyState</code> changes values.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.onreadystatechange')
+@DocsEditable
+Stream&lt;ProgressEvent&gt; get onReadyStateChange =&gt; readyStateChangeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="readyState">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>readyState</strong> <a class="anchor-link"
+            href="#readyState"
+            title="Permalink to HttpRequest.readyState">#</a>
+        </h4>
+        <div class="doc">
+<p>Indicator of the current state of the request:</p><table>
+  <tr>
+    <td>Value</td>
+    <td>State</td>
+    <td>Meaning</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>unsent</td>
+    <td><code>open()</code> has not yet been called</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>opened</td>
+    <td><code>send()</code> has not yet been called</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>headers received</td>
+    <td><code>sent()</code> has been called; response headers and <code>status</code> are available</td>
+  </tr>
+  <tr>
+    <td>3</td> <td>loading</td> <td><code>responseText</code> holds some data</td>
+  </tr>
+  <tr>
+    <td>4</td> <td>done</td> <td>request is complete</td>
+  </tr>
+</table>
+<pre class="source">
+@DomName('XMLHttpRequest.readyState')
+@DocsEditable
+final int readyState
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="response">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Object.html">Object</a>         <strong>response</strong> <a class="anchor-link"
+            href="#response"
+            title="Permalink to HttpRequest.response">#</a>
+        </h4>
+        <div class="doc">
+<p>The data received as a reponse from the request.</p>
+<p>The data could be in the
+form of a <code>String</code>, <a class="crossref" href="../dart_html/ArrayBuffer.html">ArrayBuffer</a>, <a class="crossref" href="../dart_html/Document.html">Document</a>, <a class="crossref" href="../dart_html/Blob.html">Blob</a>, or json (also a
+<code>String</code>). <code>null</code> indicates request failure.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.response')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.FIREFOX)
+@SupportedBrowser(SupportedBrowser.IE, '10')
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Creates('ArrayBuffer|Blob|Document|=Object|=List|String|num')
+final Object response
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="responseText">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>responseText</strong> <a class="anchor-link"
+            href="#responseText"
+            title="Permalink to HttpRequest.responseText">#</a>
+        </h4>
+        <div class="doc">
+<p>The response in string form or `null on failure.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.responseText')
+@DocsEditable
+final String responseText
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="responseType">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>responseType</strong> <a class="anchor-link"
+            href="#responseType"
+            title="Permalink to HttpRequest.responseType">#</a>
+        </h4>
+        <div class="doc">
+<p><code>String</code> telling the server the desired response format.</p>
+<p>Default is <code>String</code>.
+Other options are one of 'arraybuffer', 'blob', 'document', 'json',
+'text'. Some newer browsers will throw NS<em>ERROR</em>DOM<em>INVALID</em>ACCESS_ERR if
+<code>responseType</code> is set while performing a synchronous request.</p>
+<p>See also: <a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#responseType">MDN responseType</a></p>
+<pre class="source">
+@DomName('XMLHttpRequest.responseType')
+@DocsEditable
+String responseType
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="responseXml">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Document.html">Document</a>         <strong>responseXml</strong> <a class="anchor-link"
+            href="#responseXml"
+            title="Permalink to HttpRequest.responseXml">#</a>
+        </h4>
+        <div class="doc">
+<p>The request response, or null on failure.</p>
+<p>The response is processed as
+<code>text/xml</code> stream, unless responseType = 'document' and the request is
+synchronous.</p>
+<pre class="source">
+@JSName('responseXML')
+/**
+* The request response, or null on failure.
+*
+* The response is processed as
+* `text/xml` stream, unless responseType = 'document' and the request is
+* synchronous.
+*/
+@DomName('XMLHttpRequest.responseXML')
+@DocsEditable
+final Document responseXml
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="status">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>status</strong> <a class="anchor-link"
+            href="#status"
+            title="Permalink to HttpRequest.status">#</a>
+        </h4>
+        <div class="doc">
+<p>The http result code from the request (200, 404, etc).
+See also: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">Http Status Codes</a></p>
+<pre class="source">
+@DomName('XMLHttpRequest.status')
+@DocsEditable
+final int status
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="statusText">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>statusText</strong> <a class="anchor-link"
+            href="#statusText"
+            title="Permalink to HttpRequest.statusText">#</a>
+        </h4>
+        <div class="doc">
+<p>The request response string (such as \"200 OK\").
+See also: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">Http Status Codes</a></p>
+<pre class="source">
+@DomName('XMLHttpRequest.statusText')
+@DocsEditable
+final String statusText
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="upload">
+<button class="show-code">Code</button>
+final <a href="../dart_html/HttpRequestUpload.html">HttpRequestUpload</a>         <strong>upload</strong> <a class="anchor-link"
+            href="#upload"
+            title="Permalink to HttpRequest.upload">#</a>
+        </h4>
+        <div class="doc">
+<p><a class="crossref" href="../dart_html/EventTarget.html">EventTarget</a> that can hold listeners to track the progress of the request.
+The events fired will be members of <code>HttpRequestUploadEvents</code>.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.upload')
+@DocsEditable
+final HttpRequestUpload upload
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="withCredentials">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>withCredentials</strong> <a class="anchor-link"
+            href="#withCredentials"
+            title="Permalink to HttpRequest.withCredentials">#</a>
+        </h4>
+        <div class="doc">
+<p>True if cross-site requests should use credentials such as cookies
+or authorization headers; false otherwise.</p>
+<p>This value is ignored for same-site requests.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.withCredentials')
+@DocsEditable
+bool withCredentials
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="abort">
+<button class="show-code">Code</button>
+void <strong>abort</strong>() <a class="anchor-link" href="#abort"
+              title="Permalink to HttpRequest.abort">#</a></h4>
+<div class="doc">
+<p>Stop the current request.</p>
+<p>The request can only be stopped if readyState is <code>HEADERS_RECIEVED</code> or
+<code>LOADING</code>. If this method is not in the process of being sent, the method
+has no effect.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.abort')
+@DocsEditable
+void abort() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="dispatchEvent">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>dispatchEvent</strong>(<a href="../dart_html/Event.html">Event</a> evt) <a class="anchor-link" href="#dispatchEvent"
+              title="Permalink to HttpRequest.dispatchEvent">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('XMLHttpRequest.dispatchEvent')
+@DocsEditable
+bool dispatchEvent(Event evt) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getAllResponseHeaders">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>getAllResponseHeaders</strong>() <a class="anchor-link" href="#getAllResponseHeaders"
+              title="Permalink to HttpRequest.getAllResponseHeaders">#</a></h4>
+<div class="doc">
+<p>Retrieve all the response headers from a request.</p>
+<p><code>null</code> if no headers have been received. For multipart requests,
+<code>getAllResponseHeaders</code> will return the response headers for the current
+part of the request.</p>
+<p>See also <a href="http://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Responses">HTTP response headers</a>
+for a list of common response headers.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.getAllResponseHeaders')
+@DocsEditable
+String getAllResponseHeaders() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getResponseHeader">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>getResponseHeader</strong>(<a href="../dart_core/String.html">String</a> header) <a class="anchor-link" href="#getResponseHeader"
+              title="Permalink to HttpRequest.getResponseHeader">#</a></h4>
+<div class="doc">
+<p>Return the response header named <code>header</code>, or <code>null</code> if not found.</p>
+<p>See also <a href="http://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Responses">HTTP response headers</a>
+for a list of common response headers.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.getResponseHeader')
+@DocsEditable
+String getResponseHeader(String header) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="open">
+<button class="show-code">Code</button>
+void <strong>open</strong>(<a href="../dart_core/String.html">String</a> method, <a href="../dart_core/String.html">String</a> url, [<a href="../dart_core/bool.html">bool</a> async, <a href="../dart_core/String.html">String</a> user, <a href="../dart_core/String.html">String</a> password]) <a class="anchor-link" href="#open"
+              title="Permalink to HttpRequest.open">#</a></h4>
+<div class="doc">
+<p>Specify the desired <code>url</code>, and <code>method</code> to use in making the request.</p>
+<p>By default the request is done asyncronously, with no user or password
+authentication information. If <code>async</code> is false, the request will be send
+synchronously.</p>
+<p>Calling <code>open</code> again on a currently active request is equivalent to
+calling <code>abort</code>.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.open')
+@DocsEditable
+void open(String method, String url, [bool async, String user, String password]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="overrideMimeType">
+<button class="show-code">Code</button>
+void <strong>overrideMimeType</strong>(<a href="../dart_core/String.html">String</a> override) <a class="anchor-link" href="#overrideMimeType"
+              title="Permalink to HttpRequest.overrideMimeType">#</a></h4>
+<div class="doc">
+<p>Specify a particular MIME type (such as <code>text/xml</code>) desired for the
+response.</p>
+<p>This value must be set before the request has been sent. See also the list
+of <a href="http://en.wikipedia.org/wiki/Internet_media_type#List_of_common_media_types">common MIME types</a></p>
+<pre class="source">
+@DomName('XMLHttpRequest.overrideMimeType')
+@DocsEditable
+void overrideMimeType(String override) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="send">
+<button class="show-code">Code</button>
+void <strong>send</strong>([data]) <a class="anchor-link" href="#send"
+              title="Permalink to HttpRequest.send">#</a></h4>
+<div class="doc">
+<p>Send the request with any given <code>data</code>.</p>
+<p>See also:
+<a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#send(">send() docs</a>)
+from MDN.</p>
+<pre class="source">
+@DomName('XMLHttpRequest.send')
+@DocsEditable
+void send([data]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setRequestHeader">
+<button class="show-code">Code</button>
+void <strong>setRequestHeader</strong>(<a href="../dart_core/String.html">String</a> header, <a href="../dart_core/String.html">String</a> value) <a class="anchor-link" href="#setRequestHeader"
+              title="Permalink to HttpRequest.setRequestHeader">#</a></h4>
+<div class="doc">
+<p>Sets the value of an HTTP request header.You must call <a class="internal" title="/en/XMLHttpRequest#open()" rel="internal" href="https://developer.mozilla.org/en/nsIXMLHttpRequest#open()"><code>open()</code></a>before using this method.</p><div id="section_15"><span id="Parameters_5"></span><h6 class="editable">Parameters</h6>
+<dl> <dt><code>header</code></dt> <dd>The name of the header whose value is to be set.</dd> <dt><code>value</code></dt> <dd>The value to set as the body of the header.</dd>
+</dl>
+</div>
+<pre class="source">
+@DomName('XMLHttpRequest.setRequestHeader')
+@DocsEditable
+void setRequestHeader(String header, String value) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_addEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_addEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_addEventListener"
+              title="Permalink to HttpRequest.$dom_addEventListener">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('addEventListener')
+@DomName('XMLHttpRequest.addEventListener')
+@DocsEditable
+void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_removeEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_removeEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_removeEventListener"
+              title="Permalink to HttpRequest.$dom_removeEventListener">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('removeEventListener')
+@DomName('XMLHttpRequest.removeEventListener')
+@DocsEditable
+void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+</div>
+          <p class="mdn-attribution">
+          <a href="https://developer.mozilla.org">
+            <img src="../mdn-logo-tiny.png" class="mdn-logo" />
+          </a>
+          This page includes <a href="https://developer.mozilla.org/en/XMLHttpRequest">content</a> from the
+          <a href="http://www.mozilla.org/">Mozilla Foundation</a> that is graciously
+          <a href="https://developer.mozilla.org/Project:Copyrights">licensed</a> under a
+          <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons: Attribution-Sharealike license</a>.
+          Mozilla has no other association with Dart or dartlang.org. We
+          encourage you to improve the web by
+          <a href="https://developer.mozilla.org/Project:en/How_to_Help">contributing</a> to
+          <a href="https://developer.mozilla.org">The Mozilla Developer Network</a>.
+          </p>
+          
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:51:33.508</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

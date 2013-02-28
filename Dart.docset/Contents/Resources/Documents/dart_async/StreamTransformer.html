@@ -1,0 +1,168 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>StreamTransformer&lt;S, T&gt; abstract class / dart:async Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:async" data-type="StreamTransformer&amp;lt;S, T&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_async.html">dart:async</a> &rsaquo; <a href="../dart_async/StreamTransformer.html">StreamTransformer&lt;S, T&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><ul class="icon">
+<li><a href="../dart_async/CollectionSink.html"><div class="icon-class"></div>CollectionSink&lt;T&gt;</a></li>
+<li><a href="../dart_async/Completer.html"><div class="icon-class"></div>Completer&lt;T&gt;</a></li>
+<li><a href="../dart_async/DeferredLibrary.html"><div class="icon-class"></div>DeferredLibrary</a></li>
+<li><a href="../dart_async/EventTransformStream.html"><div class="icon-class"></div>EventTransformStream&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/Future.html"><div class="icon-class"></div>Future&lt;T&gt;</a></li>
+<li><a href="../dart_async/Stream.html"><div class="icon-class"></div>Stream&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamConsumer.html"><div class="icon-class"></div>StreamConsumer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamController.html"><div class="icon-class"></div>StreamController&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamEventTransformer.html"><div class="icon-class"></div>StreamEventTransformer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamSink.html"><div class="icon-class"></div>StreamSink&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamSinkView.html"><div class="icon-class"></div>StreamSinkView&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamSubscription.html"><div class="icon-class"></div>StreamSubscription&lt;T&gt;</a></li>
+<li><div class="icon-class"></div><strong>StreamTransformer&lt;S, T&gt;</strong></li>
+<li><a href="../dart_async/StreamView.html"><div class="icon-class"></div>StreamView&lt;T&gt;</a></li>
+<li><a href="../dart_async/Timer.html"><div class="icon-class"></div>Timer</a></li>
+<li><a href="../dart_async/AsyncError.html"><div class="icon-exception"></div>AsyncError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>StreamTransformer&lt;S, T&gt;</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The target of a <a class="crossref" href="../dart_async/Stream.html#transform">Stream.transform</a> call.</p>
+<p>The <a class="crossref" href="../dart_async/Stream.html#transform">Stream.transform</a> call will pass itself to this object and then return
+the resulting stream.</p>
+<pre class="source">
+abstract class StreamTransformer&lt;S, T&gt; {
+ /**
+  * Create a [StreamTransformer] that delegates events to the given functions.
+  *
+  * This is actually a [StreamEventTransformer] where the event handling is
+  * performed by the function arguments.
+  * If an argument is omitted, it acts as the corresponding default method from
+  * [StreamEventTransformer].
+  *
+  * Example use:
+  *
+  *     stringStream.transform(new StreamTransformer&lt;String, String&gt;(
+  *         handleData: (Strung value, StreamSink&lt;String&gt; sink) {
+  *           sink.add(value);
+  *           sink.add(value);  // Duplicate the incoming events.
+  *         }));
+  *
+  */
+ factory StreamTransformer({
+     void handleData(S data, StreamSink&lt;T&gt; sink),
+     void handleError(AsyncError error, StreamSink&lt;T&gt; sink),
+     void handleDone(StreamSink&lt;T&gt; sink)}) {
+   return new _StreamTransformerImpl&lt;S, T&gt;(handleData,
+                                           handleError,
+                                           handleDone);
+ }
+
+ Stream&lt;T&gt; bind(Stream&lt;S&gt; stream);
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_io/LineTransformer.html">LineTransformer</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_async/StreamEventTransformer.html">StreamEventTransformer&lt;S, T&gt;</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/StringDecoder.html">StringDecoder</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/StringEncoder.html">StringEncoder</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/WebSocketTransformer.html">WebSocketTransformer</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="StreamTransformer">
+<button class="show-code">Code</button>
+factory <strong>StreamTransformer</strong>({void handleData(<a href="../dart_async/StreamTransformer.html">S</a> data, <a href="../dart_async/StreamSink.html">StreamSink</a>&lt;<a href="../dart_async/StreamTransformer.html">T</a>&gt; sink), void handleError(<a href="../dart_async/AsyncError.html">AsyncError</a> error, <a href="../dart_async/StreamSink.html">StreamSink</a>&lt;<a href="../dart_async/StreamTransformer.html">T</a>&gt; sink), void handleDone(<a href="../dart_async/StreamSink.html">StreamSink</a>&lt;<a href="../dart_async/StreamTransformer.html">T</a>&gt; sink)}) <a class="anchor-link" href="#StreamTransformer"
+              title="Permalink to StreamTransformer&lt;S, T&gt;.StreamTransformer">#</a></h4>
+<div class="doc">
+<p>Create a <a class="crossref" href="../dart_async/StreamTransformer.html#StreamTransformer">StreamTransformer</a> that delegates events to the given functions.</p>
+<p>This is actually a <a class="crossref" href="../dart_async/StreamEventTransformer.html">StreamEventTransformer</a> where the event handling is
+performed by the function arguments.
+If an argument is omitted, it acts as the corresponding default method from
+<a class="crossref" href="../dart_async/StreamEventTransformer.html">StreamEventTransformer</a>.</p>
+<p>Example use:</p>
+<pre><code>stringStream.transform(new StreamTransformer&lt;String, String&gt;(
+    handleData: (Strung value, StreamSink&lt;String&gt; sink) {
+      sink.add(value);
+      sink.add(value);  // Duplicate the incoming events.
+    }));
+</code></pre>
+<pre class="source">
+factory StreamTransformer({
+   void handleData(S data, StreamSink&lt;T&gt; sink),
+   void handleError(AsyncError error, StreamSink&lt;T&gt; sink),
+   void handleDone(StreamSink&lt;T&gt; sink)}) {
+ return new _StreamTransformerImpl&lt;S, T&gt;(handleData,
+                                         handleError,
+                                         handleDone);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="bind">
+abstract <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/StreamTransformer.html">T</a>&gt; <strong>bind</strong>(<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/StreamTransformer.html">S</a>&gt; stream) <a class="anchor-link" href="#bind"
+              title="Permalink to StreamTransformer&lt;S, T&gt;.bind">#</a></h4>
+<div class="doc">
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:18.838</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

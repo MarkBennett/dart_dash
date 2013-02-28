@@ -1,0 +1,235 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>InstanceMirror abstract class / dart:mirrors Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:mirrors" data-type="InstanceMirror">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_mirrors.html">dart:mirrors</a> &rsaquo; <a href="../dart_mirrors/InstanceMirror.html">InstanceMirror</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><ul class="icon">
+<li><a href="../dart_mirrors/ClassMirror.html"><div class="icon-class"></div>ClassMirror</a></li>
+<li><a href="../dart_mirrors/ClosureMirror.html"><div class="icon-class"></div>ClosureMirror</a></li>
+<li><a href="../dart_mirrors/Comment.html"><div class="icon-class"></div>Comment</a></li>
+<li><a href="../dart_mirrors/DeclarationMirror.html"><div class="icon-class"></div>DeclarationMirror</a></li>
+<li><a href="../dart_mirrors/FunctionTypeMirror.html"><div class="icon-class"></div>FunctionTypeMirror</a></li>
+<li><div class="icon-class"></div><strong>InstanceMirror</strong></li>
+<li><a href="../dart_mirrors/IsolateMirror.html"><div class="icon-class"></div>IsolateMirror</a></li>
+<li><a href="../dart_mirrors/LibraryMirror.html"><div class="icon-class"></div>LibraryMirror</a></li>
+<li><a href="../dart_mirrors/MethodMirror.html"><div class="icon-class"></div>MethodMirror</a></li>
+<li><a href="../dart_mirrors/Mirror.html"><div class="icon-class"></div>Mirror</a></li>
+<li><a href="../dart_mirrors/MirrorSystem.html"><div class="icon-class"></div>MirrorSystem</a></li>
+<li><a href="../dart_mirrors/ObjectMirror.html"><div class="icon-class"></div>ObjectMirror</a></li>
+<li><a href="../dart_mirrors/ParameterMirror.html"><div class="icon-class"></div>ParameterMirror</a></li>
+<li><a href="../dart_mirrors/SourceLocation.html"><div class="icon-class"></div>SourceLocation</a></li>
+<li><a href="../dart_mirrors/TypedefMirror.html"><div class="icon-class"></div>TypedefMirror</a></li>
+<li><a href="../dart_mirrors/TypeMirror.html"><div class="icon-class"></div>TypeMirror</a></li>
+<li><a href="../dart_mirrors/TypeVariableMirror.html"><div class="icon-class"></div>TypeVariableMirror</a></li>
+<li><a href="../dart_mirrors/VariableMirror.html"><div class="icon-class"></div>VariableMirror</a></li>
+<li><a href="../dart_mirrors/MirroredCompilationError.html"><div class="icon-exception"></div>MirroredCompilationError</a></li>
+<li><a href="../dart_mirrors/MirroredError.html"><div class="icon-exception"></div>MirroredError</a></li>
+<li><a href="../dart_mirrors/MirroredUncaughtExceptionError.html"><div class="icon-exception"></div>MirroredUncaughtExceptionError</a></li>
+<li><a href="../dart_mirrors/MirrorException.html"><div class="icon-exception"></div>MirrorException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>InstanceMirror</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>An <a class="crossref" href="../dart_mirrors/InstanceMirror.html">InstanceMirror</a> reflects an instance of a Dart language object.</p>
+<pre class="source">
+abstract class InstanceMirror implements ObjectMirror {
+ /**
+  * A mirror on the type of the reflectee.
+  */
+ ClassMirror get type;
+
+ /**
+  * Does [reflectee] contain the instance reflected by this mirror?
+  * This will always be true in the local case (reflecting instances
+  * in the same isolate), but only true in the remote case if this
+  * mirror reflects a simple value.
+  *
+  * A value is simple if one of the following holds:
+  *  - the value is null
+  *  - the value is of type [num]
+  *  - the value is of type [bool]
+  *  - the value is of type [String]
+  */
+ bool get hasReflectee;
+
+ /**
+  * If the [InstanceMirror] reflects an instance it is meaningful to
+  * have a local reference to, we provide access to the actual
+  * instance here.
+  *
+  * If you access [reflectee] when [hasReflectee] is false, an
+  * exception is thrown.
+  */
+ get reflectee;
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_mirrors/ClosureMirror.html">ClosureMirror</a></span></p>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_mirrors/ObjectMirror.html">ObjectMirror</a></span></p>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="hasReflectee">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>hasReflectee</strong> <a class="anchor-link"
+            href="#hasReflectee"
+            title="Permalink to InstanceMirror.hasReflectee">#</a>
+        </h4>
+        <div class="doc">
+<p>Does <a class="crossref" href="../dart_mirrors/InstanceMirror.html#reflectee">reflectee</a> contain the instance reflected by this mirror?
+This will always be true in the local case (reflecting instances
+in the same isolate), but only true in the remote case if this
+mirror reflects a simple value.</p>
+<p>A value is simple if one of the following holds:
+ - the value is null
+ - the value is of type <code>num</code>
+ - the value is of type <code>bool</code>
+ - the value is of type <code>String</code></p>
+<pre class="source">
+bool get hasReflectee;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="mirrors">
+<button class="show-code">Code</button>
+final <a href="../dart_mirrors/MirrorSystem.html">MirrorSystem</a>         <strong>mirrors</strong> <a class="anchor-link"
+            href="#mirrors"
+            title="Permalink to InstanceMirror.mirrors">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_mirrors/Mirror.html">Mirror</a> </div><div class="doc">
+<p>The <a class="crossref" href="../dart_mirrors/MirrorSystem.html">MirrorSystem</a> that contains this mirror.</p>
+<pre class="source">
+MirrorSystem get mirrors;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="reflectee">
+<button class="show-code">Code</button>
+final         <strong>reflectee</strong> <a class="anchor-link"
+            href="#reflectee"
+            title="Permalink to InstanceMirror.reflectee">#</a>
+        </h4>
+        <div class="doc">
+<p>If the <a class="crossref" href="../dart_mirrors/InstanceMirror.html">InstanceMirror</a> reflects an instance it is meaningful to
+have a local reference to, we provide access to the actual
+instance here.</p>
+<p>If you access <a class="crossref" href="../dart_mirrors/InstanceMirror.html#reflectee">reflectee</a> when <a class="crossref" href="../dart_mirrors/InstanceMirror.html#hasReflectee">hasReflectee</a> is false, an
+exception is thrown.</p>
+<pre class="source">
+get reflectee;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="type">
+<button class="show-code">Code</button>
+final <a href="../dart_mirrors/ClassMirror.html">ClassMirror</a>         <strong>type</strong> <a class="anchor-link"
+            href="#type"
+            title="Permalink to InstanceMirror.type">#</a>
+        </h4>
+        <div class="doc">
+<p>A mirror on the type of the reflectee.</p>
+<pre class="source">
+ClassMirror get type;
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="getField">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_mirrors/InstanceMirror.html">InstanceMirror</a>&gt; <strong>getField</strong>(<a href="../dart_core/String.html">String</a> fieldName) <a class="anchor-link" href="#getField"
+              title="Permalink to InstanceMirror.getField">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_mirrors/ObjectMirror.html">ObjectMirror</a> </div><div class="doc">
+<p>Invokes a getter and returns a mirror on the result. The getter
+can be the implicit getter for a field or a user-defined getter
+method.</p>
+<p>TODO(turnidge): Handle ambiguous names.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="invoke">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_mirrors/InstanceMirror.html">InstanceMirror</a>&gt; <strong>invoke</strong>(<a href="../dart_core/String.html">String</a> memberName, <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/Object.html">Object</a>&gt; positionalArguments, [<a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/Object.html">Object</a>&gt; namedArguments]) <a class="anchor-link" href="#invoke"
+              title="Permalink to InstanceMirror.invoke">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_mirrors/ObjectMirror.html">ObjectMirror</a> </div><div class="doc">
+<p>Invokes the named function and returns a mirror on the result.</p>
+<p>TODO(turnidge): Properly document.
+TODO(turnidge): Handle ambiguous names.
+TODO(turnidge): Handle optional &amp; named arguments.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="setField">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_mirrors/InstanceMirror.html">InstanceMirror</a>&gt; <strong>setField</strong>(<a href="../dart_core/String.html">String</a> fieldName, <a href="../dart_core/Object.html">Object</a> value) <a class="anchor-link" href="#setField"
+              title="Permalink to InstanceMirror.setField">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_mirrors/ObjectMirror.html">ObjectMirror</a> </div><div class="doc">
+<p>Invokes a setter and returns a mirror on the result. The setter
+may be either the implicit setter for a non-final field or a
+user-defined setter method.</p>
+<p>TODO(turnidge): Handle ambiguous names.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:12.080</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

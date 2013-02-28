@@ -1,0 +1,1551 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>JsonParser class / dart:json Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:json" data-type="JsonParser">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_json.html">dart:json</a> &rsaquo; <a href="../dart_json/JsonParser.html">JsonParser</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><ul class="icon">
+<li><a href="../dart_json/BuildJsonListener.html"><div class="icon-class"></div>BuildJsonListener</a></li>
+<li><a href="../dart_json/JsonListener.html"><div class="icon-class"></div>JsonListener</a></li>
+<li><div class="icon-class"></div><strong>JsonParser</strong></li>
+<li><a href="../dart_json/ReviverJsonListener.html"><div class="icon-class"></div>ReviverJsonListener</a></li>
+<li><a href="../dart_json/JsonUnsupportedObjectError.html"><div class="icon-exception"></div>JsonUnsupportedObjectError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>JsonParser</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+class JsonParser {
+ // A simple non-recursive state-based parser for JSON.
+ //
+ // Literal values accepted in states ARRAY_EMPTY, ARRAY_COMMA, OBJECT_COLON
+ // and strings also in OBJECT_EMPTY, OBJECT_COMMA.
+ //               VALUE  STRING  :  ,  }  ]        Transitions to
+ // EMPTY            X      X                   -&gt; END
+ // ARRAY_EMPTY      X      X             @     -&gt; ARRAY_VALUE / pop
+ // ARRAY_VALUE                     @     @     -&gt; ARRAY_COMMA / pop
+ // ARRAY_COMMA      X      X                   -&gt; ARRAY_VALUE
+ // OBJECT_EMPTY            X          @        -&gt; OBJECT_KEY / pop
+ // OBJECT_KEY                   @              -&gt; OBJECT_COLON
+ // OBJECT_COLON     X      X                   -&gt; OBJECT_VALUE
+ // OBJECT_VALUE                    @  @        -&gt; OBJECT_COMMA / pop
+ // OBJECT_COMMA            X                   -&gt; OBJECT_KEY
+ // END
+ // Starting a new array or object will push the current state. The "pop"
+ // above means restoring this state and then marking it as an ended value.
+ // X means generic handling, @ means special handling for just that
+ // state - that is, values are handled generically, only punctuation
+ // cares about the current state.
+ // Values for states are chosen so bits 0 and 1 tell whether
+ // a string/value is allowed, and setting bits 0 through 2 after a value
+ // gets to the next state (not empty, doesn't allow a value).
+
+ // State building-block constants.
+ static const int INSIDE_ARRAY = 1;
+ static const int INSIDE_OBJECT = 2;
+ static const int AFTER_COLON = 3;  // Always inside object.
+
+ static const int ALLOW_STRING_MASK = 8;  // Allowed if zero.
+ static const int ALLOW_VALUE_MASK = 4;  // Allowed if zero.
+ static const int ALLOW_VALUE = 0;
+ static const int STRING_ONLY = 4;
+ static const int NO_VALUES = 12;
+
+ // Objects and arrays are "empty" until their first property/element.
+ static const int EMPTY = 0;
+ static const int NON_EMPTY = 16;
+ static const int EMPTY_MASK = 16;  // Empty if zero.
+
+
+ static const int VALUE_READ_BITS = NO_VALUES | NON_EMPTY;
+
+ // Actual states.
+ static const int STATE_INITIAL      = EMPTY | ALLOW_VALUE;
+ static const int STATE_END          = NON_EMPTY | NO_VALUES;
+
+ static const int STATE_ARRAY_EMPTY  = INSIDE_ARRAY | EMPTY | ALLOW_VALUE;
+ static const int STATE_ARRAY_VALUE  = INSIDE_ARRAY | NON_EMPTY | NO_VALUES;
+ static const int STATE_ARRAY_COMMA  = INSIDE_ARRAY | NON_EMPTY | ALLOW_VALUE;
+
+ static const int STATE_OBJECT_EMPTY = INSIDE_OBJECT | EMPTY | STRING_ONLY;
+ static const int STATE_OBJECT_KEY   = INSIDE_OBJECT | NON_EMPTY | NO_VALUES;
+ static const int STATE_OBJECT_COLON = AFTER_COLON | NON_EMPTY | ALLOW_VALUE;
+ static const int STATE_OBJECT_VALUE = AFTER_COLON | NON_EMPTY | NO_VALUES;
+ static const int STATE_OBJECT_COMMA = INSIDE_OBJECT | NON_EMPTY | STRING_ONLY;
+
+ // Character code constants.
+ static const int BACKSPACE       = 0x08;
+ static const int TAB             = 0x09;
+ static const int NEWLINE         = 0x0a;
+ static const int CARRIAGE_RETURN = 0x0d;
+ static const int FORM_FEED       = 0x0c;
+ static const int SPACE           = 0x20;
+ static const int QUOTE           = 0x22;
+ static const int PLUS            = 0x2b;
+ static const int COMMA           = 0x2c;
+ static const int MINUS           = 0x2d;
+ static const int DECIMALPOINT    = 0x2e;
+ static const int SLASH           = 0x2f;
+ static const int CHAR_0          = 0x30;
+ static const int CHAR_9          = 0x39;
+ static const int COLON           = 0x3a;
+ static const int CHAR_E          = 0x45;
+ static const int LBRACKET        = 0x5b;
+ static const int BACKSLASH       = 0x5c;
+ static const int RBRACKET        = 0x5d;
+ static const int CHAR_a          = 0x61;
+ static const int CHAR_b          = 0x62;
+ static const int CHAR_e          = 0x65;
+ static const int CHAR_f          = 0x66;
+ static const int CHAR_l          = 0x6c;
+ static const int CHAR_n          = 0x6e;
+ static const int CHAR_r          = 0x72;
+ static const int CHAR_s          = 0x73;
+ static const int CHAR_t          = 0x74;
+ static const int CHAR_u          = 0x75;
+ static const int LBRACE          = 0x7b;
+ static const int RBRACE          = 0x7d;
+
+ final String source;
+ final JsonListener listener;
+ JsonParser(this.source, this.listener);
+
+ /** Parses [source], or throws if it fails. */
+ void parse() {
+   final List&lt;int&gt; states = &lt;int&gt;[];
+   int state = STATE_INITIAL;
+   int position = 0;
+   int length = source.length;
+   while (position &lt; length) {
+     int char = source.codeUnitAt(position);
+     switch (char) {
+       case SPACE:
+       case CARRIAGE_RETURN:
+       case NEWLINE:
+       case TAB:
+         position++;
+         break;
+       case QUOTE:
+         if ((state &amp; ALLOW_STRING_MASK) != 0) fail(position);
+         position = parseString(position + 1);
+         state |= VALUE_READ_BITS;
+         break;
+       case LBRACKET:
+         if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+         listener.beginArray();
+         states.add(state);
+         state = STATE_ARRAY_EMPTY;
+         position++;
+         break;
+       case LBRACE:
+         if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+         listener.beginObject();
+         states.add(state);
+         state = STATE_OBJECT_EMPTY;
+         position++;
+         break;
+       case CHAR_n:
+         if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+         position = parseNull(position);
+         state |= VALUE_READ_BITS;
+         break;
+       case CHAR_f:
+         if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+         position = parseFalse(position);
+         state |= VALUE_READ_BITS;
+         break;
+       case CHAR_t:
+         if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+         position = parseTrue(position);
+         state |= VALUE_READ_BITS;
+         break;
+       case COLON:
+         if (state != STATE_OBJECT_KEY) fail(position);
+         listener.propertyName();
+         state = STATE_OBJECT_COLON;
+         position++;
+         break;
+       case COMMA:
+         if (state == STATE_OBJECT_VALUE) {
+           listener.propertyValue();
+           state = STATE_OBJECT_COMMA;
+           position++;
+         } else if (state == STATE_ARRAY_VALUE) {
+           listener.arrayElement();
+           state = STATE_ARRAY_COMMA;
+           position++;
+         } else {
+           fail(position);
+         }
+         break;
+       case RBRACKET:
+         if (state == STATE_ARRAY_EMPTY) {
+           listener.endArray();
+         } else if (state == STATE_ARRAY_VALUE) {
+           listener.arrayElement();
+           listener.endArray();
+         } else {
+           fail(position);
+         }
+         state = states.removeLast() | VALUE_READ_BITS;
+         position++;
+         break;
+       case RBRACE:
+         if (state == STATE_OBJECT_EMPTY) {
+           listener.endObject();
+         } else if (state == STATE_OBJECT_VALUE) {
+           listener.propertyValue();
+           listener.endObject();
+         } else {
+           fail(position);
+         }
+         state = states.removeLast() | VALUE_READ_BITS;
+         position++;
+         break;
+       default:
+         if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+         position = parseNumber(char, position);
+         state |= VALUE_READ_BITS;
+         break;
+     }
+   }
+   if (state != STATE_END) fail(position);
+ }
+
+ /**
+  * Parses a "true" literal starting at [position].
+  *
+  * [:source[position]:] must be "t".
+  */
+ int parseTrue(int position) {
+   assert(source.codeUnitAt(position) == CHAR_t);
+   if (source.length &lt; position + 4) fail(position, "Unexpected identifier");
+   if (source.codeUnitAt(position + 1) != CHAR_r ||
+       source.codeUnitAt(position + 2) != CHAR_u ||
+       source.codeUnitAt(position + 3) != CHAR_e) {
+     fail(position);
+   }
+   listener.handleBool(true);
+   return position + 4;
+ }
+
+ /**
+  * Parses a "false" literal starting at [position].
+  *
+  * [:source[position]:] must be "f".
+  */
+ int parseFalse(int position) {
+   assert(source.codeUnitAt(position) == CHAR_f);
+   if (source.length &lt; position + 5) fail(position, "Unexpected identifier");
+   if (source.codeUnitAt(position + 1) != CHAR_a ||
+       source.codeUnitAt(position + 2) != CHAR_l ||
+       source.codeUnitAt(position + 3) != CHAR_s ||
+       source.codeUnitAt(position + 4) != CHAR_e) {
+     fail(position);
+   }
+   listener.handleBool(false);
+   return position + 5;
+ }
+
+ /** Parses a "null" literal starting at [position].
+  *
+  * [:source[position]:] must be "n".
+  */
+ int parseNull(int position) {
+   assert(source.codeUnitAt(position) == CHAR_n);
+   if (source.length &lt; position + 4) fail(position, "Unexpected identifier");
+   if (source.codeUnitAt(position + 1) != CHAR_u ||
+       source.codeUnitAt(position + 2) != CHAR_l ||
+       source.codeUnitAt(position + 3) != CHAR_l) {
+     fail(position);
+   }
+   listener.handleNull();
+   return position + 4;
+ }
+
+ int parseString(int position) {
+   // Format: '"'([^\x00-\x1f\\\"]|'\\'[bfnrt/\\"])*'"'
+   // Initial position is right after first '"'.
+   int start = position;
+   int char;
+   do {
+     if (position == source.length) {
+       fail(start - 1, "Unterminated string");
+     }
+     char = source.codeUnitAt(position);
+     if (char == QUOTE) {
+       listener.handleString(source.substring(start, position));
+       return position + 1;
+     }
+     if (char &lt; SPACE) {
+       fail(position, "Control character in string");
+     }
+     position++;
+   } while (char != BACKSLASH);
+   // Backslash escape detected. Collect character codes for rest of string.
+   int firstEscape = position - 1;
+   List&lt;int&gt; chars = &lt;int&gt;[];
+   while (true) {
+     if (position == source.length) {
+       fail(start - 1, "Unterminated string");
+     }
+     char = source.codeUnitAt(position);
+     switch (char) {
+       case CHAR_b: char = BACKSPACE; break;
+       case CHAR_f: char = FORM_FEED; break;
+       case CHAR_n: char = NEWLINE; break;
+       case CHAR_r: char = CARRIAGE_RETURN; break;
+       case CHAR_t: char = TAB; break;
+       case SLASH:
+       case BACKSLASH:
+       case QUOTE:
+         break;
+       case CHAR_u:
+         int hexStart = position - 1;
+         int value = 0;
+         for (int i = 0; i &lt; 4; i++) {
+           position++;
+           if (position == source.length) {
+             fail(start - 1, "Unterminated string");
+           }
+           char = source.codeUnitAt(position);
+           char -= 0x30;
+           if (char &lt; 0) fail(hexStart, "Invalid unicode escape");
+           if (char &lt; 10) {
+             value = value * 16 + char;
+           } else {
+             char = (char | 0x20) - 0x31;
+             if (char &lt; 0 || char &gt; 5) {
+               fail(hexStart, "Invalid unicode escape");
+             }
+             value = value * 16 + char + 10;
+           }
+         }
+         char = value;
+         break;
+       default:
+         if (char &lt; SPACE) fail(position, "Control character in string");
+         fail(position, "Unrecognized string escape");
+     }
+     do {
+       chars.add(char);
+       position++;
+       if (position == source.length) fail(start - 1, "Unterminated string");
+       char = source.codeUnitAt(position);
+       if (char == QUOTE) {
+         String result = new String.fromCharCodes(chars);
+         if (start &lt; firstEscape) {
+           result = "${source.substring(start, firstEscape)}$result";
+         }
+         listener.handleString(result);
+         return position + 1;
+       }
+       if (char &lt; SPACE) {
+         fail(position, "Control character in string");
+       }
+     } while (char != BACKSLASH);
+     position++;
+   }
+ }
+
+ int parseNumber(int char, int position) {
+   // Format:
+   //  '-'?('0'|[1-9][0-9]*)('.'[0-9]+)?([eE][+-]?[0-9]+)?
+   int start = position;
+   int length = source.length;
+   bool isDouble = false;
+   if (char == MINUS) {
+     position++;
+     if (position == length) fail(position, "Missing expected digit");
+     char = source.codeUnitAt(position);
+   }
+   if (char &lt; CHAR_0 || char &gt; CHAR_9) {
+     fail(position, "Missing expected digit");
+   }
+   int handleLiteral(position) {
+     String literal = source.substring(start, position);
+     // This correctly creates -0 for doubles.
+     num value = (isDouble ? double.parse(literal) : int.parse(literal));
+     listener.handleNumber(value);
+     return position;
+   }
+   if (char == CHAR_0) {
+     position++;
+     if (position == length) return handleLiteral(position);
+     char = source.codeUnitAt(position);
+     if (CHAR_0 &lt;= char &amp;&amp; char &lt;= CHAR_9) {
+       fail(position);
+     }
+   } else {
+     do {
+       position++;
+       if (position == length) return handleLiteral(position);
+       char = source.codeUnitAt(position);
+     } while (CHAR_0 &lt;= char &amp;&amp; char &lt;= CHAR_9);
+   }
+   if (char == DECIMALPOINT) {
+     isDouble = true;
+     position++;
+     if (position == length) fail(position, "Missing expected digit");
+     char = source.codeUnitAt(position);
+     if (char &lt; CHAR_0 || char &gt; CHAR_9) fail(position);
+     do {
+       position++;
+       if (position == length) return handleLiteral(position);
+       char = source.codeUnitAt(position);
+     } while (CHAR_0 &lt;= char &amp;&amp; char &lt;= CHAR_9);
+   }
+   if (char == CHAR_e || char == CHAR_E) {
+     isDouble = true;
+     position++;
+     if (position == length) fail(position, "Missing expected digit");
+     char = source.codeUnitAt(position);
+     if (char == PLUS || char == MINUS) {
+       position++;
+       if (position == length) fail(position, "Missing expected digit");
+       char = source.codeUnitAt(position);
+     }
+     if (char &lt; CHAR_0 || char &gt; CHAR_9) {
+       fail(position, "Missing expected digit");
+     }
+     do {
+       position++;
+       if (position == length) return handleLiteral(position);
+       char = source.codeUnitAt(position);
+     } while (CHAR_0 &lt;= char &amp;&amp; char &lt;= CHAR_9);
+   }
+   return handleLiteral(position);
+ }
+
+ void fail(int position, [String message]) {
+   if (message == null) message = "Unexpected character";
+   listener.fail(source, position, message);
+   // If the listener didn't throw, do it here.
+   String slice;
+   int sliceEnd = position + 20;
+   if (sliceEnd &gt; source.length) {
+     slice = "'${source.substring(position)}'";
+   } else {
+     slice = "'${source.substring(position, sliceEnd)}...'";
+   }
+   throw new FormatException("Unexpected character at $position: $slice");
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="AFTER_COLON">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>AFTER_COLON</strong> <a class="anchor-link"
+            href="#AFTER_COLON"
+            title="Permalink to JsonParser.AFTER_COLON">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+AFTER_COLON = 3
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ALLOW_STRING_MASK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ALLOW_STRING_MASK</strong> <a class="anchor-link"
+            href="#ALLOW_STRING_MASK"
+            title="Permalink to JsonParser.ALLOW_STRING_MASK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ALLOW_STRING_MASK = 8
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ALLOW_VALUE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ALLOW_VALUE</strong> <a class="anchor-link"
+            href="#ALLOW_VALUE"
+            title="Permalink to JsonParser.ALLOW_VALUE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ALLOW_VALUE = 0
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ALLOW_VALUE_MASK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>ALLOW_VALUE_MASK</strong> <a class="anchor-link"
+            href="#ALLOW_VALUE_MASK"
+            title="Permalink to JsonParser.ALLOW_VALUE_MASK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+ALLOW_VALUE_MASK = 4
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="BACKSLASH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>BACKSLASH</strong> <a class="anchor-link"
+            href="#BACKSLASH"
+            title="Permalink to JsonParser.BACKSLASH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+BACKSLASH       = 0x5c
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="BACKSPACE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>BACKSPACE</strong> <a class="anchor-link"
+            href="#BACKSPACE"
+            title="Permalink to JsonParser.BACKSPACE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+BACKSPACE       = 0x08
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CARRIAGE_RETURN">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CARRIAGE_RETURN</strong> <a class="anchor-link"
+            href="#CARRIAGE_RETURN"
+            title="Permalink to JsonParser.CARRIAGE_RETURN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CARRIAGE_RETURN = 0x0d
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_0">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_0</strong> <a class="anchor-link"
+            href="#CHAR_0"
+            title="Permalink to JsonParser.CHAR_0">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_0          = 0x30
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_9">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_9</strong> <a class="anchor-link"
+            href="#CHAR_9"
+            title="Permalink to JsonParser.CHAR_9">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_9          = 0x39
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_a">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_a</strong> <a class="anchor-link"
+            href="#CHAR_a"
+            title="Permalink to JsonParser.CHAR_a">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_a          = 0x61
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_b">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_b</strong> <a class="anchor-link"
+            href="#CHAR_b"
+            title="Permalink to JsonParser.CHAR_b">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_b          = 0x62
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_E">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_E</strong> <a class="anchor-link"
+            href="#CHAR_E"
+            title="Permalink to JsonParser.CHAR_E">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_E          = 0x45
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_e">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_e</strong> <a class="anchor-link"
+            href="#CHAR_e"
+            title="Permalink to JsonParser.CHAR_e">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_e          = 0x65
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_f">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_f</strong> <a class="anchor-link"
+            href="#CHAR_f"
+            title="Permalink to JsonParser.CHAR_f">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_f          = 0x66
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_l">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_l</strong> <a class="anchor-link"
+            href="#CHAR_l"
+            title="Permalink to JsonParser.CHAR_l">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_l          = 0x6c
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_n">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_n</strong> <a class="anchor-link"
+            href="#CHAR_n"
+            title="Permalink to JsonParser.CHAR_n">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_n          = 0x6e
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_r">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_r</strong> <a class="anchor-link"
+            href="#CHAR_r"
+            title="Permalink to JsonParser.CHAR_r">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_r          = 0x72
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_s">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_s</strong> <a class="anchor-link"
+            href="#CHAR_s"
+            title="Permalink to JsonParser.CHAR_s">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_s          = 0x73
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_t">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_t</strong> <a class="anchor-link"
+            href="#CHAR_t"
+            title="Permalink to JsonParser.CHAR_t">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_t          = 0x74
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="CHAR_u">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>CHAR_u</strong> <a class="anchor-link"
+            href="#CHAR_u"
+            title="Permalink to JsonParser.CHAR_u">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+CHAR_u          = 0x75
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="COLON">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>COLON</strong> <a class="anchor-link"
+            href="#COLON"
+            title="Permalink to JsonParser.COLON">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+COLON           = 0x3a
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="COMMA">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>COMMA</strong> <a class="anchor-link"
+            href="#COMMA"
+            title="Permalink to JsonParser.COMMA">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+COMMA           = 0x2c
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="DECIMALPOINT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>DECIMALPOINT</strong> <a class="anchor-link"
+            href="#DECIMALPOINT"
+            title="Permalink to JsonParser.DECIMALPOINT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+DECIMALPOINT    = 0x2e
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="EMPTY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>EMPTY</strong> <a class="anchor-link"
+            href="#EMPTY"
+            title="Permalink to JsonParser.EMPTY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+EMPTY = 0
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="EMPTY_MASK">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>EMPTY_MASK</strong> <a class="anchor-link"
+            href="#EMPTY_MASK"
+            title="Permalink to JsonParser.EMPTY_MASK">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+EMPTY_MASK = 16
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="FORM_FEED">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FORM_FEED</strong> <a class="anchor-link"
+            href="#FORM_FEED"
+            title="Permalink to JsonParser.FORM_FEED">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FORM_FEED       = 0x0c
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="INSIDE_ARRAY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>INSIDE_ARRAY</strong> <a class="anchor-link"
+            href="#INSIDE_ARRAY"
+            title="Permalink to JsonParser.INSIDE_ARRAY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+INSIDE_ARRAY = 1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="INSIDE_OBJECT">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>INSIDE_OBJECT</strong> <a class="anchor-link"
+            href="#INSIDE_OBJECT"
+            title="Permalink to JsonParser.INSIDE_OBJECT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+INSIDE_OBJECT = 2
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LBRACE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>LBRACE</strong> <a class="anchor-link"
+            href="#LBRACE"
+            title="Permalink to JsonParser.LBRACE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LBRACE          = 0x7b
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LBRACKET">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>LBRACKET</strong> <a class="anchor-link"
+            href="#LBRACKET"
+            title="Permalink to JsonParser.LBRACKET">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LBRACKET        = 0x5b
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="MINUS">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>MINUS</strong> <a class="anchor-link"
+            href="#MINUS"
+            title="Permalink to JsonParser.MINUS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+MINUS           = 0x2d
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NEWLINE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NEWLINE</strong> <a class="anchor-link"
+            href="#NEWLINE"
+            title="Permalink to JsonParser.NEWLINE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NEWLINE         = 0x0a
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NO_VALUES">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NO_VALUES</strong> <a class="anchor-link"
+            href="#NO_VALUES"
+            title="Permalink to JsonParser.NO_VALUES">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NO_VALUES = 12
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="NON_EMPTY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>NON_EMPTY</strong> <a class="anchor-link"
+            href="#NON_EMPTY"
+            title="Permalink to JsonParser.NON_EMPTY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+NON_EMPTY = 16
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PLUS">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PLUS</strong> <a class="anchor-link"
+            href="#PLUS"
+            title="Permalink to JsonParser.PLUS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PLUS            = 0x2b
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="QUOTE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>QUOTE</strong> <a class="anchor-link"
+            href="#QUOTE"
+            title="Permalink to JsonParser.QUOTE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+QUOTE           = 0x22
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="RBRACE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>RBRACE</strong> <a class="anchor-link"
+            href="#RBRACE"
+            title="Permalink to JsonParser.RBRACE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+RBRACE          = 0x7d
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="RBRACKET">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>RBRACKET</strong> <a class="anchor-link"
+            href="#RBRACKET"
+            title="Permalink to JsonParser.RBRACKET">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+RBRACKET        = 0x5d
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SLASH">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SLASH</strong> <a class="anchor-link"
+            href="#SLASH"
+            title="Permalink to JsonParser.SLASH">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SLASH           = 0x2f
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SPACE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SPACE</strong> <a class="anchor-link"
+            href="#SPACE"
+            title="Permalink to JsonParser.SPACE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SPACE           = 0x20
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_ARRAY_COMMA">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_ARRAY_COMMA</strong> <a class="anchor-link"
+            href="#STATE_ARRAY_COMMA"
+            title="Permalink to JsonParser.STATE_ARRAY_COMMA">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_ARRAY_COMMA  = INSIDE_ARRAY | NON_EMPTY | ALLOW_VALUE
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_ARRAY_EMPTY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_ARRAY_EMPTY</strong> <a class="anchor-link"
+            href="#STATE_ARRAY_EMPTY"
+            title="Permalink to JsonParser.STATE_ARRAY_EMPTY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_ARRAY_EMPTY  = INSIDE_ARRAY | EMPTY | ALLOW_VALUE
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_ARRAY_VALUE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_ARRAY_VALUE</strong> <a class="anchor-link"
+            href="#STATE_ARRAY_VALUE"
+            title="Permalink to JsonParser.STATE_ARRAY_VALUE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_ARRAY_VALUE  = INSIDE_ARRAY | NON_EMPTY | NO_VALUES
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_END">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_END</strong> <a class="anchor-link"
+            href="#STATE_END"
+            title="Permalink to JsonParser.STATE_END">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_END          = NON_EMPTY | NO_VALUES
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_INITIAL">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_INITIAL</strong> <a class="anchor-link"
+            href="#STATE_INITIAL"
+            title="Permalink to JsonParser.STATE_INITIAL">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_INITIAL      = EMPTY | ALLOW_VALUE
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_OBJECT_COLON">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_OBJECT_COLON</strong> <a class="anchor-link"
+            href="#STATE_OBJECT_COLON"
+            title="Permalink to JsonParser.STATE_OBJECT_COLON">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_OBJECT_COLON = AFTER_COLON | NON_EMPTY | ALLOW_VALUE
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_OBJECT_COMMA">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_OBJECT_COMMA</strong> <a class="anchor-link"
+            href="#STATE_OBJECT_COMMA"
+            title="Permalink to JsonParser.STATE_OBJECT_COMMA">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_OBJECT_COMMA = INSIDE_OBJECT | NON_EMPTY | STRING_ONLY
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_OBJECT_EMPTY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_OBJECT_EMPTY</strong> <a class="anchor-link"
+            href="#STATE_OBJECT_EMPTY"
+            title="Permalink to JsonParser.STATE_OBJECT_EMPTY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_OBJECT_EMPTY = INSIDE_OBJECT | EMPTY | STRING_ONLY
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_OBJECT_KEY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_OBJECT_KEY</strong> <a class="anchor-link"
+            href="#STATE_OBJECT_KEY"
+            title="Permalink to JsonParser.STATE_OBJECT_KEY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_OBJECT_KEY   = INSIDE_OBJECT | NON_EMPTY | NO_VALUES
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STATE_OBJECT_VALUE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STATE_OBJECT_VALUE</strong> <a class="anchor-link"
+            href="#STATE_OBJECT_VALUE"
+            title="Permalink to JsonParser.STATE_OBJECT_VALUE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STATE_OBJECT_VALUE = AFTER_COLON | NON_EMPTY | NO_VALUES
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STRING_ONLY">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>STRING_ONLY</strong> <a class="anchor-link"
+            href="#STRING_ONLY"
+            title="Permalink to JsonParser.STRING_ONLY">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STRING_ONLY = 4
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="TAB">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>TAB</strong> <a class="anchor-link"
+            href="#TAB"
+            title="Permalink to JsonParser.TAB">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+TAB             = 0x09
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="VALUE_READ_BITS">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>VALUE_READ_BITS</strong> <a class="anchor-link"
+            href="#VALUE_READ_BITS"
+            title="Permalink to JsonParser.VALUE_READ_BITS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+VALUE_READ_BITS = NO_VALUES | NON_EMPTY
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="JsonParser">
+<button class="show-code">Code</button>
+new <strong>JsonParser</strong>(<a href="../dart_core/String.html">String</a> source, <a href="../dart_json/JsonListener.html">JsonListener</a> listener) <a class="anchor-link" href="#JsonParser"
+              title="Permalink to JsonParser.JsonParser">#</a></h4>
+<div class="doc">
+<pre class="source">
+JsonParser(this.source, this.listener);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="listener">
+<button class="show-code">Code</button>
+final <a href="../dart_json/JsonListener.html">JsonListener</a>         <strong>listener</strong> <a class="anchor-link"
+            href="#listener"
+            title="Permalink to JsonParser.listener">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+listener
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="source">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>source</strong> <a class="anchor-link"
+            href="#source"
+            title="Permalink to JsonParser.source">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+source
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="fail">
+<button class="show-code">Code</button>
+void <strong>fail</strong>(<a href="../dart_core/int.html">int</a> position, [<a href="../dart_core/String.html">String</a> message]) <a class="anchor-link" href="#fail"
+              title="Permalink to JsonParser.fail">#</a></h4>
+<div class="doc">
+<pre class="source">
+void fail(int position, [String message]) {
+ if (message == null) message = "Unexpected character";
+ listener.fail(source, position, message);
+ // If the listener didn't throw, do it here.
+ String slice;
+ int sliceEnd = position + 20;
+ if (sliceEnd &gt; source.length) {
+   slice = "'${source.substring(position)}'";
+ } else {
+   slice = "'${source.substring(position, sliceEnd)}...'";
+ }
+ throw new FormatException("Unexpected character at $position: $slice");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parse">
+<button class="show-code">Code</button>
+void <strong>parse</strong>() <a class="anchor-link" href="#parse"
+              title="Permalink to JsonParser.parse">#</a></h4>
+<div class="doc">
+<p>Parses <a class="crossref" href="../dart_json/JsonParser.html#source">source</a>, or throws if it fails. </p>
+<pre class="source">
+void parse() {
+ final List&lt;int&gt; states = &lt;int&gt;[];
+ int state = STATE_INITIAL;
+ int position = 0;
+ int length = source.length;
+ while (position &lt; length) {
+   int char = source.codeUnitAt(position);
+   switch (char) {
+     case SPACE:
+     case CARRIAGE_RETURN:
+     case NEWLINE:
+     case TAB:
+       position++;
+       break;
+     case QUOTE:
+       if ((state &amp; ALLOW_STRING_MASK) != 0) fail(position);
+       position = parseString(position + 1);
+       state |= VALUE_READ_BITS;
+       break;
+     case LBRACKET:
+       if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+       listener.beginArray();
+       states.add(state);
+       state = STATE_ARRAY_EMPTY;
+       position++;
+       break;
+     case LBRACE:
+       if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+       listener.beginObject();
+       states.add(state);
+       state = STATE_OBJECT_EMPTY;
+       position++;
+       break;
+     case CHAR_n:
+       if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+       position = parseNull(position);
+       state |= VALUE_READ_BITS;
+       break;
+     case CHAR_f:
+       if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+       position = parseFalse(position);
+       state |= VALUE_READ_BITS;
+       break;
+     case CHAR_t:
+       if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+       position = parseTrue(position);
+       state |= VALUE_READ_BITS;
+       break;
+     case COLON:
+       if (state != STATE_OBJECT_KEY) fail(position);
+       listener.propertyName();
+       state = STATE_OBJECT_COLON;
+       position++;
+       break;
+     case COMMA:
+       if (state == STATE_OBJECT_VALUE) {
+         listener.propertyValue();
+         state = STATE_OBJECT_COMMA;
+         position++;
+       } else if (state == STATE_ARRAY_VALUE) {
+         listener.arrayElement();
+         state = STATE_ARRAY_COMMA;
+         position++;
+       } else {
+         fail(position);
+       }
+       break;
+     case RBRACKET:
+       if (state == STATE_ARRAY_EMPTY) {
+         listener.endArray();
+       } else if (state == STATE_ARRAY_VALUE) {
+         listener.arrayElement();
+         listener.endArray();
+       } else {
+         fail(position);
+       }
+       state = states.removeLast() | VALUE_READ_BITS;
+       position++;
+       break;
+     case RBRACE:
+       if (state == STATE_OBJECT_EMPTY) {
+         listener.endObject();
+       } else if (state == STATE_OBJECT_VALUE) {
+         listener.propertyValue();
+         listener.endObject();
+       } else {
+         fail(position);
+       }
+       state = states.removeLast() | VALUE_READ_BITS;
+       position++;
+       break;
+     default:
+       if ((state &amp; ALLOW_VALUE_MASK) != 0) fail(position);
+       position = parseNumber(char, position);
+       state |= VALUE_READ_BITS;
+       break;
+   }
+ }
+ if (state != STATE_END) fail(position);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parseFalse">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>parseFalse</strong>(<a href="../dart_core/int.html">int</a> position) <a class="anchor-link" href="#parseFalse"
+              title="Permalink to JsonParser.parseFalse">#</a></h4>
+<div class="doc">
+<p>Parses a "false" literal starting at 
+<span class="param">position</span>.</p>
+<p><code>source[position]</code> must be "f".</p>
+<pre class="source">
+int parseFalse(int position) {
+ assert(source.codeUnitAt(position) == CHAR_f);
+ if (source.length &lt; position + 5) fail(position, "Unexpected identifier");
+ if (source.codeUnitAt(position + 1) != CHAR_a ||
+     source.codeUnitAt(position + 2) != CHAR_l ||
+     source.codeUnitAt(position + 3) != CHAR_s ||
+     source.codeUnitAt(position + 4) != CHAR_e) {
+   fail(position);
+ }
+ listener.handleBool(false);
+ return position + 5;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parseNull">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>parseNull</strong>(<a href="../dart_core/int.html">int</a> position) <a class="anchor-link" href="#parseNull"
+              title="Permalink to JsonParser.parseNull">#</a></h4>
+<div class="doc">
+<p>Parses a "null" literal starting at 
+<span class="param">position</span>.</p>
+<p><code>source[position]</code> must be "n".</p>
+<pre class="source">
+int parseNull(int position) {
+ assert(source.codeUnitAt(position) == CHAR_n);
+ if (source.length &lt; position + 4) fail(position, "Unexpected identifier");
+ if (source.codeUnitAt(position + 1) != CHAR_u ||
+     source.codeUnitAt(position + 2) != CHAR_l ||
+     source.codeUnitAt(position + 3) != CHAR_l) {
+   fail(position);
+ }
+ listener.handleNull();
+ return position + 4;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parseNumber">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>parseNumber</strong>(<a href="../dart_core/int.html">int</a> char, <a href="../dart_core/int.html">int</a> position) <a class="anchor-link" href="#parseNumber"
+              title="Permalink to JsonParser.parseNumber">#</a></h4>
+<div class="doc">
+<pre class="source">
+int parseNumber(int char, int position) {
+ // Format:
+ //  '-'?('0'|[1-9][0-9]*)('.'[0-9]+)?([eE][+-]?[0-9]+)?
+ int start = position;
+ int length = source.length;
+ bool isDouble = false;
+ if (char == MINUS) {
+   position++;
+   if (position == length) fail(position, "Missing expected digit");
+   char = source.codeUnitAt(position);
+ }
+ if (char &lt; CHAR_0 || char &gt; CHAR_9) {
+   fail(position, "Missing expected digit");
+ }
+ int handleLiteral(position) {
+   String literal = source.substring(start, position);
+   // This correctly creates -0 for doubles.
+   num value = (isDouble ? double.parse(literal) : int.parse(literal));
+   listener.handleNumber(value);
+   return position;
+ }
+ if (char == CHAR_0) {
+   position++;
+   if (position == length) return handleLiteral(position);
+   char = source.codeUnitAt(position);
+   if (CHAR_0 &lt;= char &amp;&amp; char &lt;= CHAR_9) {
+     fail(position);
+   }
+ } else {
+   do {
+     position++;
+     if (position == length) return handleLiteral(position);
+     char = source.codeUnitAt(position);
+   } while (CHAR_0 &lt;= char &amp;&amp; char &lt;= CHAR_9);
+ }
+ if (char == DECIMALPOINT) {
+   isDouble = true;
+   position++;
+   if (position == length) fail(position, "Missing expected digit");
+   char = source.codeUnitAt(position);
+   if (char &lt; CHAR_0 || char &gt; CHAR_9) fail(position);
+   do {
+     position++;
+     if (position == length) return handleLiteral(position);
+     char = source.codeUnitAt(position);
+   } while (CHAR_0 &lt;= char &amp;&amp; char &lt;= CHAR_9);
+ }
+ if (char == CHAR_e || char == CHAR_E) {
+   isDouble = true;
+   position++;
+   if (position == length) fail(position, "Missing expected digit");
+   char = source.codeUnitAt(position);
+   if (char == PLUS || char == MINUS) {
+     position++;
+     if (position == length) fail(position, "Missing expected digit");
+     char = source.codeUnitAt(position);
+   }
+   if (char &lt; CHAR_0 || char &gt; CHAR_9) {
+     fail(position, "Missing expected digit");
+   }
+   do {
+     position++;
+     if (position == length) return handleLiteral(position);
+     char = source.codeUnitAt(position);
+   } while (CHAR_0 &lt;= char &amp;&amp; char &lt;= CHAR_9);
+ }
+ return handleLiteral(position);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parseString">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>parseString</strong>(<a href="../dart_core/int.html">int</a> position) <a class="anchor-link" href="#parseString"
+              title="Permalink to JsonParser.parseString">#</a></h4>
+<div class="doc">
+<pre class="source">
+int parseString(int position) {
+ // Format: '"'([^\x00-\x1f\\\"]|'\\'[bfnrt/\\"])*'"'
+ // Initial position is right after first '"'.
+ int start = position;
+ int char;
+ do {
+   if (position == source.length) {
+     fail(start - 1, "Unterminated string");
+   }
+   char = source.codeUnitAt(position);
+   if (char == QUOTE) {
+     listener.handleString(source.substring(start, position));
+     return position + 1;
+   }
+   if (char &lt; SPACE) {
+     fail(position, "Control character in string");
+   }
+   position++;
+ } while (char != BACKSLASH);
+ // Backslash escape detected. Collect character codes for rest of string.
+ int firstEscape = position - 1;
+ List&lt;int&gt; chars = &lt;int&gt;[];
+ while (true) {
+   if (position == source.length) {
+     fail(start - 1, "Unterminated string");
+   }
+   char = source.codeUnitAt(position);
+   switch (char) {
+     case CHAR_b: char = BACKSPACE; break;
+     case CHAR_f: char = FORM_FEED; break;
+     case CHAR_n: char = NEWLINE; break;
+     case CHAR_r: char = CARRIAGE_RETURN; break;
+     case CHAR_t: char = TAB; break;
+     case SLASH:
+     case BACKSLASH:
+     case QUOTE:
+       break;
+     case CHAR_u:
+       int hexStart = position - 1;
+       int value = 0;
+       for (int i = 0; i &lt; 4; i++) {
+         position++;
+         if (position == source.length) {
+           fail(start - 1, "Unterminated string");
+         }
+         char = source.codeUnitAt(position);
+         char -= 0x30;
+         if (char &lt; 0) fail(hexStart, "Invalid unicode escape");
+         if (char &lt; 10) {
+           value = value * 16 + char;
+         } else {
+           char = (char | 0x20) - 0x31;
+           if (char &lt; 0 || char &gt; 5) {
+             fail(hexStart, "Invalid unicode escape");
+           }
+           value = value * 16 + char + 10;
+         }
+       }
+       char = value;
+       break;
+     default:
+       if (char &lt; SPACE) fail(position, "Control character in string");
+       fail(position, "Unrecognized string escape");
+   }
+   do {
+     chars.add(char);
+     position++;
+     if (position == source.length) fail(start - 1, "Unterminated string");
+     char = source.codeUnitAt(position);
+     if (char == QUOTE) {
+       String result = new String.fromCharCodes(chars);
+       if (start &lt; firstEscape) {
+         result = "${source.substring(start, firstEscape)}$result";
+       }
+       listener.handleString(result);
+       return position + 1;
+     }
+     if (char &lt; SPACE) {
+       fail(position, "Control character in string");
+     }
+   } while (char != BACKSLASH);
+   position++;
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="parseTrue">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>parseTrue</strong>(<a href="../dart_core/int.html">int</a> position) <a class="anchor-link" href="#parseTrue"
+              title="Permalink to JsonParser.parseTrue">#</a></h4>
+<div class="doc">
+<p>Parses a "true" literal starting at 
+<span class="param">position</span>.</p>
+<p><code>source[position]</code> must be "t".</p>
+<pre class="source">
+int parseTrue(int position) {
+ assert(source.codeUnitAt(position) == CHAR_t);
+ if (source.length &lt; position + 4) fail(position, "Unexpected identifier");
+ if (source.codeUnitAt(position + 1) != CHAR_r ||
+     source.codeUnitAt(position + 2) != CHAR_u ||
+     source.codeUnitAt(position + 3) != CHAR_e) {
+   fail(position);
+ }
+ listener.handleBool(true);
+ return position + 4;
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:11.060</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

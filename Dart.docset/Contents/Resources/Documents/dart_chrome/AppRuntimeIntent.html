@@ -1,0 +1,224 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>AppRuntimeIntent class / dart:chrome Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:chrome" data-type="AppRuntimeIntent">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_chrome.html">dart:chrome</a> &rsaquo; <a href="../dart_chrome/AppRuntimeIntent.html">AppRuntimeIntent</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><ul class="icon">
+<li><a href="../dart_chrome/API_app_runtime.html"><div class="icon-class"></div>API_app_runtime</a></li>
+<li><a href="../dart_chrome/API_app_window.html"><div class="icon-class"></div>API_app_window</a></li>
+<li><a href="../dart_chrome/API_Chrome.html"><div class="icon-class"></div>API_Chrome</a></li>
+<li><a href="../dart_chrome/API_ChromeApp.html"><div class="icon-class"></div>API_ChromeApp</a></li>
+<li><div class="icon-class"></div><strong>AppRuntimeIntent</strong></li>
+<li><a href="../dart_chrome/AppRuntimeIntentResponse.html"><div class="icon-class"></div>AppRuntimeIntentResponse</a></li>
+<li><a href="../dart_chrome/AppRuntimeLaunchData.html"><div class="icon-class"></div>AppRuntimeLaunchData</a></li>
+<li><a href="../dart_chrome/AppRuntimeLaunchItem.html"><div class="icon-class"></div>AppRuntimeLaunchItem</a></li>
+<li><a href="../dart_chrome/AppWindowAppWindow.html"><div class="icon-class"></div>AppWindowAppWindow</a></li>
+<li><a href="../dart_chrome/AppWindowBounds.html"><div class="icon-class"></div>AppWindowBounds</a></li>
+<li><a href="../dart_chrome/AppWindowCreateWindowOptions.html"><div class="icon-class"></div>AppWindowCreateWindowOptions</a></li>
+<li><a href="../dart_chrome/ChromeObject.html"><div class="icon-class"></div>ChromeObject</a></li>
+<li><a href="../dart_chrome/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_chrome/Event_app_runtime_onLaunched.html"><div class="icon-class"></div>Event_app_runtime_onLaunched</a></li>
+<li><a href="../dart_chrome/Event_app_runtime_onRestarted.html"><div class="icon-class"></div>Event_app_runtime_onRestarted</a></li>
+<li><a href="../dart_chrome/Event_app_window_onBoundsChanged.html"><div class="icon-class"></div>Event_app_window_onBoundsChanged</a></li>
+<li><a href="../dart_chrome/Event_app_window_onClosed.html"><div class="icon-class"></div>Event_app_window_onClosed</a></li>
+<li><a href="../dart_chrome/Event_app_window_onMaximized.html"><div class="icon-class"></div>Event_app_window_onMaximized</a></li>
+<li><a href="../dart_chrome/Event_app_window_onMinimized.html"><div class="icon-class"></div>Event_app_window_onMinimized</a></li>
+<li><a href="../dart_chrome/Event_app_window_onRestored.html"><div class="icon-class"></div>Event_app_window_onRestored</a></li>
+<li><a href="../dart_chrome/Rule.html"><div class="icon-class"></div>Rule</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>AppRuntimeIntent</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Types</p>
+<pre class="source">
+class AppRuntimeIntent extends ChromeObject {
+ /*
+  * Private constructor
+  */
+ AppRuntimeIntent._proxy(_jsObject) : super._proxy(_jsObject);
+
+ /*
+  * Public accessors
+  */
+ /// The WebIntent being invoked.
+ String get action =&gt; JS('String', '#.action', this._jsObject);
+
+ void set action(String action) {
+   JS('void', '#.action = #', this._jsObject, action);
+ }
+
+ /// The MIME type of the data.
+ String get type =&gt; JS('String', '#.type', this._jsObject);
+
+ void set type(String type) {
+   JS('void', '#.type = #', this._jsObject, type);
+ }
+
+ /// Data associated with the intent.
+ Object get data =&gt; JS('Object', '#.data', this._jsObject);
+
+ void set data(Object data) {
+   JS('void', '#.data = #', this._jsObject, convertArgument(data));
+ }
+
+
+ /*
+  * Methods
+  */
+ /// Callback to be compatible with WebIntents.
+ void postResult() =&gt; JS('void', '#.postResult()', this._jsObject);
+
+ /// Callback to be compatible with WebIntents.
+ void postFailure() =&gt; JS('void', '#.postFailure()', this._jsObject);
+
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_chrome/ChromeObject.html">ChromeObject</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>AppRuntimeIntent</strong></span></p>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="action">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>action</strong> <a class="anchor-link"
+            href="#action"
+            title="Permalink to AppRuntimeIntent.action">#</a>
+        </h4>
+        <div class="doc">
+<p>The WebIntent being invoked.</p>
+<pre class="source">
+String get action =&gt; JS('String', '#.action', this._jsObject);
+</pre>
+<pre class="source">
+void set action(String action) {
+ JS('void', '#.action = #', this._jsObject, action);
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="data">
+<button class="show-code">Code</button>
+<a href="../dart_core/Object.html">Object</a>         <strong>data</strong> <a class="anchor-link"
+            href="#data"
+            title="Permalink to AppRuntimeIntent.data">#</a>
+        </h4>
+        <div class="doc">
+<p>Data associated with the intent.</p>
+<pre class="source">
+Object get data =&gt; JS('Object', '#.data', this._jsObject);
+</pre>
+<pre class="source">
+void set data(Object data) {
+ JS('void', '#.data = #', this._jsObject, convertArgument(data));
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="type">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>type</strong> <a class="anchor-link"
+            href="#type"
+            title="Permalink to AppRuntimeIntent.type">#</a>
+        </h4>
+        <div class="doc">
+<p>The MIME type of the data.</p>
+<pre class="source">
+String get type =&gt; JS('String', '#.type', this._jsObject);
+</pre>
+<pre class="source">
+void set type(String type) {
+ JS('void', '#.type = #', this._jsObject, type);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="postFailure">
+<button class="show-code">Code</button>
+void <strong>postFailure</strong>() <a class="anchor-link" href="#postFailure"
+              title="Permalink to AppRuntimeIntent.postFailure">#</a></h4>
+<div class="doc">
+<p>Callback to be compatible with WebIntents.</p>
+<pre class="source">
+void postFailure() =&gt; JS('void', '#.postFailure()', this._jsObject);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="postResult">
+<button class="show-code">Code</button>
+void <strong>postResult</strong>() <a class="anchor-link" href="#postResult"
+              title="Permalink to AppRuntimeIntent.postResult">#</a></h4>
+<div class="doc">
+<p>Callback to be compatible with WebIntents.</p>
+<pre class="source">
+void postResult() =&gt; JS('void', '#.postResult()', this._jsObject);
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:20.513</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

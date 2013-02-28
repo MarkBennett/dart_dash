@@ -1,0 +1,443 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>AudioBufferSourceNode class / dart:web_audio Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:web_audio" data-type="AudioBufferSourceNode">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_web_audio.html">dart:web_audio</a> &rsaquo; <a href="../dart_web_audio/AudioBufferSourceNode.html">AudioBufferSourceNode</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><ul class="icon">
+<li><a href="../dart_web_audio/AnalyserNode.html"><div class="icon-class"></div>AnalyserNode</a></li>
+<li><a href="../dart_web_audio/AudioBuffer.html"><div class="icon-class"></div>AudioBuffer</a></li>
+<li><a href="../dart_web_audio/AudioBufferCallback.html"><div class="icon-interface"></div>AudioBufferCallback</a></li>
+<li><div class="icon-class"></div><strong>AudioBufferSourceNode</strong></li>
+<li><a href="../dart_web_audio/AudioContext.html"><div class="icon-class"></div>AudioContext</a></li>
+<li><a href="../dart_web_audio/AudioDestinationNode.html"><div class="icon-class"></div>AudioDestinationNode</a></li>
+<li><a href="../dart_web_audio/AudioGain.html"><div class="icon-class"></div>AudioGain</a></li>
+<li><a href="../dart_web_audio/AudioListener.html"><div class="icon-class"></div>AudioListener</a></li>
+<li><a href="../dart_web_audio/AudioNode.html"><div class="icon-class"></div>AudioNode</a></li>
+<li><a href="../dart_web_audio/AudioParam.html"><div class="icon-class"></div>AudioParam</a></li>
+<li><a href="../dart_web_audio/AudioProcessingEvent.html"><div class="icon-class"></div>AudioProcessingEvent</a></li>
+<li><a href="../dart_web_audio/AudioSourceNode.html"><div class="icon-class"></div>AudioSourceNode</a></li>
+<li><a href="../dart_web_audio/BiquadFilterNode.html"><div class="icon-class"></div>BiquadFilterNode</a></li>
+<li><a href="../dart_web_audio/ChannelMergerNode.html"><div class="icon-class"></div>ChannelMergerNode</a></li>
+<li><a href="../dart_web_audio/ChannelSplitterNode.html"><div class="icon-class"></div>ChannelSplitterNode</a></li>
+<li><a href="../dart_web_audio/ConvolverNode.html"><div class="icon-class"></div>ConvolverNode</a></li>
+<li><a href="../dart_web_audio/DelayNode.html"><div class="icon-class"></div>DelayNode</a></li>
+<li><a href="../dart_web_audio/DynamicsCompressorNode.html"><div class="icon-class"></div>DynamicsCompressorNode</a></li>
+<li><a href="../dart_web_audio/GainNode.html"><div class="icon-class"></div>GainNode</a></li>
+<li><a href="../dart_web_audio/MediaElementAudioSourceNode.html"><div class="icon-class"></div>MediaElementAudioSourceNode</a></li>
+<li><a href="../dart_web_audio/MediaStreamAudioDestinationNode.html"><div class="icon-class"></div>MediaStreamAudioDestinationNode</a></li>
+<li><a href="../dart_web_audio/MediaStreamAudioSourceNode.html"><div class="icon-class"></div>MediaStreamAudioSourceNode</a></li>
+<li><a href="../dart_web_audio/OfflineAudioCompletionEvent.html"><div class="icon-class"></div>OfflineAudioCompletionEvent</a></li>
+<li><a href="../dart_web_audio/OfflineAudioContext.html"><div class="icon-class"></div>OfflineAudioContext</a></li>
+<li><a href="../dart_web_audio/OscillatorNode.html"><div class="icon-class"></div>OscillatorNode</a></li>
+<li><a href="../dart_web_audio/PannerNode.html"><div class="icon-class"></div>PannerNode</a></li>
+<li><a href="../dart_web_audio/ScriptProcessorNode.html"><div class="icon-class"></div>ScriptProcessorNode</a></li>
+<li><a href="../dart_web_audio/WaveShaperNode.html"><div class="icon-class"></div>WaveShaperNode</a></li>
+<li><a href="../dart_web_audio/WaveTable.html"><div class="icon-class"></div>WaveTable</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>AudioBufferSourceNode</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+@DomName('AudioBufferSourceNode')
+class AudioBufferSourceNode extends AudioSourceNode native "*AudioBufferSourceNode" {
+
+ // TODO(efortuna): Remove these methods when Chrome stable also uses start
+ // instead of noteOn.
+ void start(num when, [num grainOffset, num grainDuration]) {
+   if (JS('bool', '!!#.start', this)) {
+     if (?grainDuration) {
+       JS('void', '#.start(#, #, #)', this, when, grainOffset, grainDuration);
+     } else if (?grainOffset) {
+       JS('void', '#.start(#, #)', this, when, grainOffset);
+     } else {
+       JS('void', '#.start(#)', this, when);
+     }
+   } else {
+     if (?grainDuration) {
+       JS('void', '#.noteOn(#, #, #)', this, when, grainOffset, grainDuration);
+     } else if (?grainOffset) {
+       JS('void', '#.noteOn(#, #)', this, when, grainOffset);
+     } else {
+       JS('void', '#.noteOn(#)', this, when);
+     }
+   }
+ }
+
+ void stop(num when) {
+   if (JS('bool', '!!#.stop', this)) {
+     JS('void', '#.stop(#)', this, when);
+   } else {
+     JS('void', '#.noteOff(#)', this, when);
+   }
+ }
+
+ static const int FINISHED_STATE = 3;
+
+ static const int PLAYING_STATE = 2;
+
+ static const int SCHEDULED_STATE = 1;
+
+ static const int UNSCHEDULED_STATE = 0;
+
+ @DomName('AudioBufferSourceNode.buffer')
+ @DocsEditable
+ AudioBuffer buffer;
+
+ @DomName('AudioBufferSourceNode.gain')
+ @DocsEditable
+ final AudioGain gain;
+
+ @DomName('AudioBufferSourceNode.loop')
+ @DocsEditable
+ bool loop;
+
+ @DomName('AudioBufferSourceNode.loopEnd')
+ @DocsEditable
+ num loopEnd;
+
+ @DomName('AudioBufferSourceNode.loopStart')
+ @DocsEditable
+ num loopStart;
+
+ @DomName('AudioBufferSourceNode.playbackRate')
+ @DocsEditable
+ final AudioParam playbackRate;
+
+ @DomName('AudioBufferSourceNode.playbackState')
+ @DocsEditable
+ final int playbackState;
+
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_web_audio/AudioNode.html">AudioNode</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><a href="../dart_web_audio/AudioSourceNode.html">AudioSourceNode</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>AudioBufferSourceNode</strong></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="FINISHED_STATE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>FINISHED_STATE</strong> <a class="anchor-link"
+            href="#FINISHED_STATE"
+            title="Permalink to AudioBufferSourceNode.FINISHED_STATE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+FINISHED_STATE = 3
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PLAYING_STATE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>PLAYING_STATE</strong> <a class="anchor-link"
+            href="#PLAYING_STATE"
+            title="Permalink to AudioBufferSourceNode.PLAYING_STATE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PLAYING_STATE = 2
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SCHEDULED_STATE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>SCHEDULED_STATE</strong> <a class="anchor-link"
+            href="#SCHEDULED_STATE"
+            title="Permalink to AudioBufferSourceNode.SCHEDULED_STATE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SCHEDULED_STATE = 1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="UNSCHEDULED_STATE">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>UNSCHEDULED_STATE</strong> <a class="anchor-link"
+            href="#UNSCHEDULED_STATE"
+            title="Permalink to AudioBufferSourceNode.UNSCHEDULED_STATE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+UNSCHEDULED_STATE = 0
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="buffer">
+<button class="show-code">Code</button>
+<a href="../dart_web_audio/AudioBuffer.html">AudioBuffer</a>         <strong>buffer</strong> <a class="anchor-link"
+            href="#buffer"
+            title="Permalink to AudioBufferSourceNode.buffer">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('AudioBufferSourceNode.buffer')
+@DocsEditable
+AudioBuffer buffer
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="context">
+<button class="show-code">Code</button>
+final <a href="../dart_web_audio/AudioContext.html">AudioContext</a>         <strong>context</strong> <a class="anchor-link"
+            href="#context"
+            title="Permalink to AudioBufferSourceNode.context">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_web_audio/AudioNode.html">AudioNode</a> </div><div class="doc">
+<pre class="source">
+@DomName('AudioNode.context')
+@DocsEditable
+final AudioContext context
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="gain">
+<button class="show-code">Code</button>
+final <a href="../dart_web_audio/AudioGain.html">AudioGain</a>         <strong>gain</strong> <a class="anchor-link"
+            href="#gain"
+            title="Permalink to AudioBufferSourceNode.gain">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('AudioBufferSourceNode.gain')
+@DocsEditable
+final AudioGain gain
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="loop">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>loop</strong> <a class="anchor-link"
+            href="#loop"
+            title="Permalink to AudioBufferSourceNode.loop">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('AudioBufferSourceNode.loop')
+@DocsEditable
+bool loop
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="loopEnd">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>loopEnd</strong> <a class="anchor-link"
+            href="#loopEnd"
+            title="Permalink to AudioBufferSourceNode.loopEnd">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('AudioBufferSourceNode.loopEnd')
+@DocsEditable
+num loopEnd
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="loopStart">
+<button class="show-code">Code</button>
+<a href="../dart_core/num.html">num</a>         <strong>loopStart</strong> <a class="anchor-link"
+            href="#loopStart"
+            title="Permalink to AudioBufferSourceNode.loopStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('AudioBufferSourceNode.loopStart')
+@DocsEditable
+num loopStart
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="numberOfInputs">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>numberOfInputs</strong> <a class="anchor-link"
+            href="#numberOfInputs"
+            title="Permalink to AudioBufferSourceNode.numberOfInputs">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_web_audio/AudioNode.html">AudioNode</a> </div><div class="doc">
+<pre class="source">
+@DomName('AudioNode.numberOfInputs')
+@DocsEditable
+final int numberOfInputs
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="numberOfOutputs">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>numberOfOutputs</strong> <a class="anchor-link"
+            href="#numberOfOutputs"
+            title="Permalink to AudioBufferSourceNode.numberOfOutputs">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_web_audio/AudioNode.html">AudioNode</a> </div><div class="doc">
+<pre class="source">
+@DomName('AudioNode.numberOfOutputs')
+@DocsEditable
+final int numberOfOutputs
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="playbackRate">
+<button class="show-code">Code</button>
+final <a href="../dart_web_audio/AudioParam.html">AudioParam</a>         <strong>playbackRate</strong> <a class="anchor-link"
+            href="#playbackRate"
+            title="Permalink to AudioBufferSourceNode.playbackRate">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('AudioBufferSourceNode.playbackRate')
+@DocsEditable
+final AudioParam playbackRate
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="playbackState">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>playbackState</strong> <a class="anchor-link"
+            href="#playbackState"
+            title="Permalink to AudioBufferSourceNode.playbackState">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('AudioBufferSourceNode.playbackState')
+@DocsEditable
+final int playbackState
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="connect">
+<button class="show-code">Code</button>
+void <strong>connect</strong>(destination, <a href="../dart_core/int.html">int</a> output, [<a href="../dart_core/int.html">int</a> input]) <a class="anchor-link" href="#connect"
+              title="Permalink to AudioBufferSourceNode.connect">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_web_audio/AudioNode.html">AudioNode</a> </div><div class="doc">
+<pre class="source">
+@DomName('AudioNode.connect')
+@DocsEditable
+void connect(destination, int output, [int input]) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="disconnect">
+<button class="show-code">Code</button>
+void <strong>disconnect</strong>(<a href="../dart_core/int.html">int</a> output) <a class="anchor-link" href="#disconnect"
+              title="Permalink to AudioBufferSourceNode.disconnect">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_web_audio/AudioNode.html">AudioNode</a> </div><div class="doc">
+<pre class="source">
+@DomName('AudioNode.disconnect')
+@DocsEditable
+void disconnect(int output) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="start">
+<button class="show-code">Code</button>
+void <strong>start</strong>(<a href="../dart_core/num.html">num</a> when, [<a href="../dart_core/num.html">num</a> grainOffset, <a href="../dart_core/num.html">num</a> grainDuration]) <a class="anchor-link" href="#start"
+              title="Permalink to AudioBufferSourceNode.start">#</a></h4>
+<div class="doc">
+<pre class="source">
+void start(num when, [num grainOffset, num grainDuration]) {
+ if (JS('bool', '!!#.start', this)) {
+   if (?grainDuration) {
+     JS('void', '#.start(#, #, #)', this, when, grainOffset, grainDuration);
+   } else if (?grainOffset) {
+     JS('void', '#.start(#, #)', this, when, grainOffset);
+   } else {
+     JS('void', '#.start(#)', this, when);
+   }
+ } else {
+   if (?grainDuration) {
+     JS('void', '#.noteOn(#, #, #)', this, when, grainOffset, grainDuration);
+   } else if (?grainOffset) {
+     JS('void', '#.noteOn(#, #)', this, when, grainOffset);
+   } else {
+     JS('void', '#.noteOn(#)', this, when);
+   }
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="stop">
+<button class="show-code">Code</button>
+void <strong>stop</strong>(<a href="../dart_core/num.html">num</a> when) <a class="anchor-link" href="#stop"
+              title="Permalink to AudioBufferSourceNode.stop">#</a></h4>
+<div class="doc">
+<pre class="source">
+void stop(num when) {
+ if (JS('bool', '!!#.stop', this)) {
+   JS('void', '#.stop(#)', this, when);
+ } else {
+   JS('void', '#.noteOff(#)', this, when);
+ }
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:01.897</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

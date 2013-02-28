@@ -1,0 +1,383 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Uint32x4 abstract class / dart:scalarlist Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:scalarlist" data-type="Uint32x4">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_scalarlist.html">dart:scalarlist</a> &rsaquo; <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><ul class="icon">
+<li><a href="../dart_scalarlist/ByteArray.html"><div class="icon-class"></div>ByteArray</a></li>
+<li><a href="../dart_scalarlist/ByteArrayViewable.html"><div class="icon-class"></div>ByteArrayViewable</a></li>
+<li><a href="../dart_scalarlist/Float32List.html"><div class="icon-class"></div>Float32List</a></li>
+<li><a href="../dart_scalarlist/Float32x4.html"><div class="icon-class"></div>Float32x4</a></li>
+<li><a href="../dart_scalarlist/Float32x4List.html"><div class="icon-class"></div>Float32x4List</a></li>
+<li><a href="../dart_scalarlist/Float64List.html"><div class="icon-class"></div>Float64List</a></li>
+<li><a href="../dart_scalarlist/Int16List.html"><div class="icon-class"></div>Int16List</a></li>
+<li><a href="../dart_scalarlist/Int32List.html"><div class="icon-class"></div>Int32List</a></li>
+<li><a href="../dart_scalarlist/Int64List.html"><div class="icon-class"></div>Int64List</a></li>
+<li><a href="../dart_scalarlist/Int8List.html"><div class="icon-class"></div>Int8List</a></li>
+<li><a href="../dart_scalarlist/Uint16List.html"><div class="icon-class"></div>Uint16List</a></li>
+<li><a href="../dart_scalarlist/Uint32List.html"><div class="icon-class"></div>Uint32List</a></li>
+<li><div class="icon-class"></div><strong>Uint32x4</strong></li>
+<li><a href="../dart_scalarlist/Uint64List.html"><div class="icon-class"></div>Uint64List</a></li>
+<li><a href="../dart_scalarlist/Uint8ClampedList.html"><div class="icon-class"></div>Uint8ClampedList</a></li>
+<li><a href="../dart_scalarlist/Uint8List.html"><div class="icon-class"></div>Uint8List</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Uint32x4</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Interface of Dart Uint32x4 and operations.
+Uint32x4 stores 4 32-bit bit-masks in "lanes".
+The lanes are "x", "y", "z", and "w" respectively.</p>
+<pre class="source">
+abstract class Uint32x4 {
+ external factory Uint32x4(int x, int y, int z, int w);
+ external factory Uint32x4.bool(bool x, bool y, bool z, bool w);
+
+ /// The bit-wise or operator.
+ Uint32x4 operator|(Uint32x4 other);
+ /// The bit-wise and operator.
+ Uint32x4 operator&amp;(Uint32x4 other);
+ /// The bit-wise xor operator.
+ Uint32x4 operator^(Uint32x4 other);
+
+ /// Extract 32-bit mask from x lane.
+ int get x;
+ /// Extract 32-bit mask from y lane.
+ int get y;
+ /// Extract 32-bit mask from z lane.
+ int get z;
+ /// Extract 32-bit mask from w lane.
+ int get w;
+
+ /// Returns a new [Uint32x4] copied from [this] with a new x value.
+ Uint32x4 withX(int x);
+ /// Returns a new [Uint32x4] copied from [this] with a new y value.
+ Uint32x4 withY(int y);
+ /// Returns a new [Uint32x4] copied from [this] with a new z value.
+ Uint32x4 withZ(int z);
+ /// Returns a new [Uint32x4] copied from [this] with a new w value.
+ Uint32x4 withW(int w);
+
+ /// Extracted x value. Returns false for 0, true for any other value.
+ bool get flagX;
+ /// Extracted y value. Returns false for 0, true for any other value.
+ bool get flagY;
+ /// Extracted z value. Returns false for 0, true for any other value.
+ bool get flagZ;
+ /// Extracted w value. Returns false for 0, true for any other value.
+ bool get flagW;
+
+ /// Returns a new [Uint32x4] copied from [this] with a new x value.
+ Uint32x4 withFlagX(bool x);
+ /// Returns a new [Uint32x4] copied from [this] with a new y value.
+ Uint32x4 withFlagY(bool y);
+ /// Returns a new [Uint32x4] copied from [this] with a new z value.
+ Uint32x4 withFlagZ(bool z);
+ /// Returns a new [Uint32x4] copied from [this] with a new w value.
+ Uint32x4 withFlagW(bool w);
+
+ /// Merge [trueValue] and [falseValue] based on [this]' bit mask:
+ /// Select bit from [trueValue] when bit in [this] is on.
+ /// Select bit from [falseValue] when bit in [this] is off.
+ Float32x4 select(Float32x4 trueValue, Float32x4 falseValue);
+
+ /// Returns a bit-wise copy of [this] as a [Float32x4].
+ Float32x4 toFloat32x4();
+}
+</pre>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Uint32x4">
+<button class="show-code">Code</button>
+factory <strong>Uint32x4</strong>(<a href="../dart_core/int.html">int</a> x, <a href="../dart_core/int.html">int</a> y, <a href="../dart_core/int.html">int</a> z, <a href="../dart_core/int.html">int</a> w) <a class="anchor-link" href="#Uint32x4"
+              title="Permalink to Uint32x4.Uint32x4">#</a></h4>
+<div class="doc">
+<pre class="source">
+external factory Uint32x4(int x, int y, int z, int w);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Uint32x4.bool">
+<button class="show-code">Code</button>
+factory <strong>Uint32x4.bool</strong>(<a href="../dart_core/bool.html">bool</a> x, <a href="../dart_core/bool.html">bool</a> y, <a href="../dart_core/bool.html">bool</a> z, <a href="../dart_core/bool.html">bool</a> w) <a class="anchor-link" href="#Uint32x4.bool"
+              title="Permalink to Uint32x4.Uint32x4.bool">#</a></h4>
+<div class="doc">
+<pre class="source">
+external factory Uint32x4.bool(bool x, bool y, bool z, bool w);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="flagW">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>flagW</strong> <a class="anchor-link"
+            href="#flagW"
+            title="Permalink to Uint32x4.flagW">#</a>
+        </h4>
+        <div class="doc">
+<p>Extracted w value. Returns false for 0, true for any other value.</p>
+<pre class="source">
+bool get flagW;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="flagX">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>flagX</strong> <a class="anchor-link"
+            href="#flagX"
+            title="Permalink to Uint32x4.flagX">#</a>
+        </h4>
+        <div class="doc">
+<p>Extracted x value. Returns false for 0, true for any other value.</p>
+<pre class="source">
+bool get flagX;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="flagY">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>flagY</strong> <a class="anchor-link"
+            href="#flagY"
+            title="Permalink to Uint32x4.flagY">#</a>
+        </h4>
+        <div class="doc">
+<p>Extracted y value. Returns false for 0, true for any other value.</p>
+<pre class="source">
+bool get flagY;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="flagZ">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>flagZ</strong> <a class="anchor-link"
+            href="#flagZ"
+            title="Permalink to Uint32x4.flagZ">#</a>
+        </h4>
+        <div class="doc">
+<p>Extracted z value. Returns false for 0, true for any other value.</p>
+<pre class="source">
+bool get flagZ;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="w">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>w</strong> <a class="anchor-link"
+            href="#w"
+            title="Permalink to Uint32x4.w">#</a>
+        </h4>
+        <div class="doc">
+<p>Extract 32-bit mask from w lane.</p>
+<pre class="source">
+int get w;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="x">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>x</strong> <a class="anchor-link"
+            href="#x"
+            title="Permalink to Uint32x4.x">#</a>
+        </h4>
+        <div class="doc">
+<p>Extract 32-bit mask from x lane.</p>
+<pre class="source">
+int get x;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="y">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>y</strong> <a class="anchor-link"
+            href="#y"
+            title="Permalink to Uint32x4.y">#</a>
+        </h4>
+        <div class="doc">
+<p>Extract 32-bit mask from y lane.</p>
+<pre class="source">
+int get y;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="z">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>z</strong> <a class="anchor-link"
+            href="#z"
+            title="Permalink to Uint32x4.z">#</a>
+        </h4>
+        <div class="doc">
+<p>Extract 32-bit mask from z lane.</p>
+<pre class="source">
+int get z;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method"><h4 id="&">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>operator &</strong>(<a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> other) <a class="anchor-link" href="#&"
+              title="Permalink to Uint32x4.operator &">#</a></h4>
+<div class="doc">
+<p>The bit-wise and operator.</p>
+</div>
+</div>
+<div class="method"><h4 id="|">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>operator |</strong>(<a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> other) <a class="anchor-link" href="#|"
+              title="Permalink to Uint32x4.operator |">#</a></h4>
+<div class="doc">
+<p>The bit-wise or operator.</p>
+</div>
+</div>
+<div class="method"><h4 id="^">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>operator ^</strong>(<a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> other) <a class="anchor-link" href="#^"
+              title="Permalink to Uint32x4.operator ^">#</a></h4>
+<div class="doc">
+<p>The bit-wise xor operator.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="select">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>select</strong>(<a href="../dart_scalarlist/Float32x4.html">Float32x4</a> trueValue, <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> falseValue) <a class="anchor-link" href="#select"
+              title="Permalink to Uint32x4.select">#</a></h4>
+<div class="doc">
+<p>Merge 
+<span class="param">trueValue</span> and 
+<span class="param">falseValue</span> based on <code>this</code>' bit mask:
+Select bit from 
+<span class="param">trueValue</span> when bit in <code>this</code> is on.
+Select bit from 
+<span class="param">falseValue</span> when bit in <code>this</code> is off.</p>
+</div>
+</div>
+<div class="method"><h4 id="toFloat32x4">
+abstract <a href="../dart_scalarlist/Float32x4.html">Float32x4</a> <strong>toFloat32x4</strong>() <a class="anchor-link" href="#toFloat32x4"
+              title="Permalink to Uint32x4.toFloat32x4">#</a></h4>
+<div class="doc">
+<p>Returns a bit-wise copy of <code>this</code> as a <a class="crossref" href="../dart_scalarlist/Float32x4.html">Float32x4</a>.</p>
+</div>
+</div>
+<div class="method"><h4 id="withFlagW">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>withFlagW</strong>(<a href="../dart_core/bool.html">bool</a> w) <a class="anchor-link" href="#withFlagW"
+              title="Permalink to Uint32x4.withFlagW">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Uint32x4.html#Uint32x4">Uint32x4</a> copied from <code>this</code> with a new w value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withFlagX">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>withFlagX</strong>(<a href="../dart_core/bool.html">bool</a> x) <a class="anchor-link" href="#withFlagX"
+              title="Permalink to Uint32x4.withFlagX">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Uint32x4.html#Uint32x4">Uint32x4</a> copied from <code>this</code> with a new x value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withFlagY">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>withFlagY</strong>(<a href="../dart_core/bool.html">bool</a> y) <a class="anchor-link" href="#withFlagY"
+              title="Permalink to Uint32x4.withFlagY">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Uint32x4.html#Uint32x4">Uint32x4</a> copied from <code>this</code> with a new y value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withFlagZ">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>withFlagZ</strong>(<a href="../dart_core/bool.html">bool</a> z) <a class="anchor-link" href="#withFlagZ"
+              title="Permalink to Uint32x4.withFlagZ">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Uint32x4.html#Uint32x4">Uint32x4</a> copied from <code>this</code> with a new z value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withW">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>withW</strong>(<a href="../dart_core/int.html">int</a> w) <a class="anchor-link" href="#withW"
+              title="Permalink to Uint32x4.withW">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Uint32x4.html#Uint32x4">Uint32x4</a> copied from <code>this</code> with a new w value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withX">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>withX</strong>(<a href="../dart_core/int.html">int</a> x) <a class="anchor-link" href="#withX"
+              title="Permalink to Uint32x4.withX">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Uint32x4.html#Uint32x4">Uint32x4</a> copied from <code>this</code> with a new x value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withY">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>withY</strong>(<a href="../dart_core/int.html">int</a> y) <a class="anchor-link" href="#withY"
+              title="Permalink to Uint32x4.withY">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Uint32x4.html#Uint32x4">Uint32x4</a> copied from <code>this</code> with a new y value.</p>
+</div>
+</div>
+<div class="method"><h4 id="withZ">
+abstract <a href="../dart_scalarlist/Uint32x4.html">Uint32x4</a> <strong>withZ</strong>(<a href="../dart_core/int.html">int</a> z) <a class="anchor-link" href="#withZ"
+              title="Permalink to Uint32x4.withZ">#</a></h4>
+<div class="doc">
+<p>Returns a new <a class="crossref" href="../dart_scalarlist/Uint32x4.html#Uint32x4">Uint32x4</a> copied from <code>this</code> with a new z value.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:12.779</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

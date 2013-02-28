@@ -1,0 +1,733 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>SimpleFlatFormat class / serialization Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="serialization" data-type="SimpleFlatFormat">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../serialization.html">serialization</a> &rsaquo; <a href="../serialization/SimpleFlatFormat.html">SimpleFlatFormat</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><ul class="icon">
+<li><a href="../serialization/BasicRule.html"><div class="icon-class"></div>BasicRule</a></li>
+<li><a href="../serialization/ClosureRule.html"><div class="icon-class"></div>ClosureRule</a></li>
+<li><a href="../serialization/Constructor.html"><div class="icon-class"></div>Constructor</a></li>
+<li><a href="../serialization/ConstructType.html"><div class="icon-interface"></div>ConstructType</a></li>
+<li><a href="../serialization/CustomRule.html"><div class="icon-class"></div>CustomRule</a></li>
+<li><a href="../serialization/DesignatedRuleForObject.html"><div class="icon-class"></div>DesignatedRuleForObject</a></li>
+<li><a href="../serialization/Format.html"><div class="icon-class"></div>Format</a></li>
+<li><a href="../serialization/GetStateType.html"><div class="icon-interface"></div>GetStateType</a></li>
+<li><a href="../serialization/ListRule.html"><div class="icon-class"></div>ListRule</a></li>
+<li><a href="../serialization/ListRuleEssential.html"><div class="icon-class"></div>ListRuleEssential</a></li>
+<li><a href="../serialization/MapRule.html"><div class="icon-class"></div>MapRule</a></li>
+<li><a href="../serialization/MirrorRule.html"><div class="icon-class"></div>MirrorRule</a></li>
+<li><a href="../serialization/NamedObjectRule.html"><div class="icon-class"></div>NamedObjectRule</a></li>
+<li><a href="../serialization/NonEssentialStateType.html"><div class="icon-interface"></div>NonEssentialStateType</a></li>
+<li><a href="../serialization/PrimitiveRule.html"><div class="icon-class"></div>PrimitiveRule</a></li>
+<li><a href="../serialization/Reader.html"><div class="icon-class"></div>Reader</a></li>
+<li><a href="../serialization/ReaderOrWriter.html"><div class="icon-class"></div>ReaderOrWriter</a></li>
+<li><a href="../serialization/Reference.html"><div class="icon-class"></div>Reference</a></li>
+<li><a href="../serialization/Serialization.html"><div class="icon-class"></div>Serialization</a></li>
+<li><a href="../serialization/SerializationRule.html"><div class="icon-class"></div>SerializationRule</a></li>
+<li><a href="../serialization/SetWithFunction.html"><div class="icon-interface"></div>SetWithFunction</a></li>
+<li><div class="icon-class"></div><strong>SimpleFlatFormat</strong></li>
+<li><a href="../serialization/SimpleJsonFormat.html"><div class="icon-class"></div>SimpleJsonFormat</a></li>
+<li><a href="../serialization/SimpleMapFormat.html"><div class="icon-class"></div>SimpleMapFormat</a></li>
+<li><a href="../serialization/Trace.html"><div class="icon-class"></div>Trace</a></li>
+<li><a href="../serialization/Writer.html"><div class="icon-class"></div>Writer</a></li>
+<li><a href="../serialization/SerializationException.html"><div class="icon-exception"></div>SerializationException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>SimpleFlatFormat</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Writes to a simple mostly-flat format. Details are subject to change.
+Right now this produces a List containing null, num, and String. This is
+more space-efficient than the map formats, but much less human-readable.
+Simple usage is to turn this into JSON for transmission.</p>
+<pre class="source">
+class SimpleFlatFormat extends Format {
+ bool get shouldUseReferencesForPrimitives =&gt; true;
+
+ /**
+  * For each rule we store data to indicate whether it will be reconstructed
+  * as a primitive, a list or a map.
+  */
+ static final int STORED_AS_LIST = 1;
+ static final int STORED_AS_MAP = 2;
+ static final int STORED_AS_PRIMITIVE = 3;
+
+ /**
+  * Generate output for this format from [w]. This will return a List with
+  * three entries, corresponding to the "rules", "data", and "roots" from
+  * [SimpleMapFormat]. The data is stored as a single List containing
+  * primitives.
+  */
+ List generateOutput(Writer w) {
+   var result = new List(3);
+   var flatData = [];
+   for (var eachRule in w.rules) {
+     var ruleData = w.states[eachRule.number];
+     flatData.add(ruleData.length);
+     writeStateInto(eachRule, ruleData, flatData);
+   }
+   result[0] = w.serializedRules();
+   result[1] = flatData;
+   result[2] = new List();
+   w._rootReferences().forEach((x) =&gt; x.writeToList(result[2]));
+   return result;
+ }
+
+ /**
+  * Writes the data from [rule] into the [target] list.
+  */
+ void writeStateInto(SerializationRule rule, List ruleData, List target) {
+   if (!ruleData.isEmpty) {
+     var sample = ruleData.first;
+     if (rule.storesStateAsLists || sample is List) {
+       writeLists(rule, ruleData, target);
+     } else if (rule.storesStateAsMaps || sample is Map) {
+       writeMaps(rule, ruleData, target);
+     } else if (rule.storesStateAsPrimitives || isPrimitive(sample)) {
+       writeObjects(ruleData, target);
+     } else {
+       throw new SerializationException("Invalid data format");
+     }
+   } else {
+     // If there is no data, write a zero for the length.
+     target.add(0);
+   }
+ }
+
+ /**
+  * Write [entries], which contains Lists. Either the lists are variable
+  * length, in which case we add a length field, or they are fixed length, in
+  * which case we don't, and assume the [rule] will know how to read the
+  * right length when we read it back. We expect everything in the list to be
+  * a reference, which is stored as two numbers.
+  */
+ writeLists(SerializationRule rule, List&lt;List&gt; entries, List target) {
+   target.add(STORED_AS_LIST);
+   for (var eachEntry in entries) {
+     if (rule.hasVariableLengthEntries) {
+       target.add(eachEntry.length);
+     }
+     for (var eachReference in eachEntry) {
+       writeReference(eachReference, target);
+     }
+   }
+ }
+
+ /**
+  * Write [entries], which contains Maps. Either the Maps are variable
+  * length, in which case we add a length field, or they are fixed length, in
+  * which case we don't, and assume the [rule] will know how to read the
+  * right length when we read it back. Then we write alternating keys and
+  * values. We expect the values to be references, which we store as
+  * two numbers.
+  */
+ writeMaps(SerializationRule rule, List&lt;Map&gt; entries, List target) {
+   target.add(STORED_AS_MAP);
+   for (var eachEntry in entries) {
+     if (rule.hasVariableLengthEntries) {
+       target.add(eachEntry.length);
+     }
+     eachEntry.forEach((key, value) {
+       writeReference(key, target);
+       writeReference(value, target);
+     });
+   }
+ }
+
+ /**
+  * Write [entries], which contains simple objects which we can put directly
+  * into [target].
+  */
+ writeObjects(List entries, List target) {
+   target.add(STORED_AS_PRIMITIVE);
+   for (var each in entries) {
+     if (!isPrimitive(each)) throw new SerializationException("Invalid data");
+   }
+   target.addAll(entries);
+ }
+
+ /**
+  * Write [eachRef] to [target]. It will be written as two ints. If [eachRef]
+  * is null it will be written as two nulls.
+  */
+ void writeReference(Reference eachRef, List target) {
+   // TODO(alanknight): Writing nulls is problematic in a real flat format.
+   if (eachRef == null) {
+     target..add(null)..add(null);
+   } else {
+     eachRef.writeToList(target);
+   }
+ }
+
+ /**
+  * Read the data from [rawInput] in the context of [r] and return it as a
+  * Map with entries for "roots", "data" and "rules", which the reader knows
+  * how to interpret. We expect [rawInput] to have been generated from this
+  * format.
+  */
+ Map&lt;String, dynamic&gt; read(List rawInput, Reader r) {
+   // TODO(alanknight): It's annoying to have to pass the reader around so
+   // much, consider having the format be specific to a particular
+   // serialization operation along with the reader and having it as a field.
+   var input = {};
+   input["rules"] = rawInput[0];
+   r.readRules(input["rules"]);
+
+   var flatData = rawInput[1];
+   var stream = flatData.iterator;
+   var tempData = new List(r.rules.length);
+   for (var eachRule in r.rules) {
+      tempData[eachRule.number] = readRuleDataFrom(stream, eachRule, r);
+   }
+   input["data"] = tempData;
+
+   var roots = [];
+   var rootsAsInts = rawInput[2].iterator;
+   do {
+     roots.add(nextReferenceFrom(rootsAsInts, r));
+   } while (rootsAsInts.current != null);
+
+   input["roots"] = roots;
+   return input;
+ }
+
+ /**
+  * Read the data for [rule] from [input] and return it.
+  */
+ readRuleDataFrom(Iterator input, SerializationRule rule, Reader r) {
+   var numberOfEntries = _next(input);
+   var entryType = _next(input);
+   if (entryType == STORED_AS_LIST) {
+     return readLists(input, rule, numberOfEntries, r);
+   }
+   if (entryType == STORED_AS_MAP) {
+     return readMaps(input, rule, numberOfEntries, r);
+   }
+   if (entryType == STORED_AS_PRIMITIVE) {
+     return readPrimitives(input, rule, numberOfEntries);
+   }
+   if (numberOfEntries == 0) {
+     return [];
+   } else {
+     throw new SerializationException("Invalid data in serialization");
+   }
+ }
+
+ /**
+  * Read data for [rule] from [input] with [length] number of entries,
+  * creating lists from the results.
+  */
+ readLists(Iterator input, SerializationRule rule, int length, Reader r) {
+   var ruleData = [];
+   for (var i = 0; i &lt; length; i++) {
+     var subLength =
+         rule.hasVariableLengthEntries ? _next(input) : rule.dataLength;
+     var subList = [];
+     ruleData.add(subList);
+     for (var j = 0; j &lt; subLength; j++) {
+       subList.add(nextReferenceFrom(input, r));
+     }
+   }
+   return ruleData;
+ }
+
+ /**
+  * Read data for [rule] from [input] with [length] number of entries,
+  * creating maps from the results.
+  */
+ readMaps(Iterator input, SerializationRule rule, int length, Reader r) {
+   var ruleData = [];
+   for (var i = 0; i &lt; length; i++) {
+     var subLength =
+         rule.hasVariableLengthEntries ? _next(input) : rule.dataLength;
+     var map = new Map();
+     ruleData.add(map);
+     for (var j = 0; j &lt; subLength; j++) {
+       var key = nextReferenceFrom(input, r);
+       var value = nextReferenceFrom(input, r);
+       map[key] = value;
+     }
+   }
+   return ruleData;
+ }
+
+ /**
+  * Read data for [rule] from [input] with [length] number of entries,
+  * treating the data as primitives that can be returned directly.
+  */
+ readPrimitives(Iterator input, SerializationRule rule, int length) {
+   var ruleData = [];
+   for (var i = 0; i &lt; length; i++) {
+     ruleData.add(_next(input));
+   }
+   return ruleData;
+ }
+
+ /** Read the next Reference from the input. */
+ nextReferenceFrom(Iterator input, Reader r) {
+   var a = _next(input);
+   var b = _next(input);
+   if (a == null) {
+     return null;
+   } else {
+     return new Reference(r, a, b);
+   }
+ }
+
+ /** Return the next element from the input. */
+ _next(Iterator input) {
+   input.moveNext();
+   return input.current;
+ }
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../serialization/Format.html">Format</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>SimpleFlatFormat</strong></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="STORED_AS_LIST">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>STORED_AS_LIST</strong> <a class="anchor-link"
+            href="#STORED_AS_LIST"
+            title="Permalink to SimpleFlatFormat.STORED_AS_LIST">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STORED_AS_LIST = 1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STORED_AS_MAP">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>STORED_AS_MAP</strong> <a class="anchor-link"
+            href="#STORED_AS_MAP"
+            title="Permalink to SimpleFlatFormat.STORED_AS_MAP">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STORED_AS_MAP = 2
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="STORED_AS_PRIMITIVE">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>STORED_AS_PRIMITIVE</strong> <a class="anchor-link"
+            href="#STORED_AS_PRIMITIVE"
+            title="Permalink to SimpleFlatFormat.STORED_AS_PRIMITIVE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+STORED_AS_PRIMITIVE = 3
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="shouldUseReferencesForPrimitives">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>shouldUseReferencesForPrimitives</strong> <a class="anchor-link"
+            href="#shouldUseReferencesForPrimitives"
+            title="Permalink to SimpleFlatFormat.shouldUseReferencesForPrimitives">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Return true if this format stores primitives in their own area and uses
+references to them (e.g. <a class="crossref" href="../serialization/SimpleFlatFormat.html">SimpleFlatFormat</a>) and false if primitives
+are stored directly (e.g. <a class="crossref" href="../serialization/SimpleJsonFormat.html">SimpleJsonFormat</a>, <a class="crossref" href="../serialization/SimpleMapFormat.html">SimpleMapFormat</a>).</p>
+<div class="docs-inherited-from">docs inherited from <a href="../serialization/Format.html">Format</a> </div></div>
+<pre class="source">
+bool get shouldUseReferencesForPrimitives =&gt; true;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="generateOutput">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a> <strong>generateOutput</strong>(<a href="../serialization/Writer.html">Writer</a> w) <a class="anchor-link" href="#generateOutput"
+              title="Permalink to SimpleFlatFormat.generateOutput">#</a></h4>
+<div class="doc">
+<p>Generate output for this format from 
+<span class="param">w</span>. This will return a List with
+three entries, corresponding to the "rules", "data", and "roots" from
+<a class="crossref" href="../serialization/SimpleMapFormat.html">SimpleMapFormat</a>. The data is stored as a single List containing
+primitives.</p>
+<pre class="source">
+List generateOutput(Writer w) {
+ var result = new List(3);
+ var flatData = [];
+ for (var eachRule in w.rules) {
+   var ruleData = w.states[eachRule.number];
+   flatData.add(ruleData.length);
+   writeStateInto(eachRule, ruleData, flatData);
+ }
+ result[0] = w.serializedRules();
+ result[1] = flatData;
+ result[2] = new List();
+ w._rootReferences().forEach((x) =&gt; x.writeToList(result[2]));
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="nextReferenceFrom">
+<button class="show-code">Code</button>
+<strong>nextReferenceFrom</strong>(<a href="../dart_core/Iterator.html">Iterator</a> input, <a href="../serialization/Reader.html">Reader</a> r) <a class="anchor-link" href="#nextReferenceFrom"
+              title="Permalink to SimpleFlatFormat.nextReferenceFrom">#</a></h4>
+<div class="doc">
+<p>Read the next Reference from the input. </p>
+<pre class="source">
+nextReferenceFrom(Iterator input, Reader r) {
+ var a = _next(input);
+ var b = _next(input);
+ if (a == null) {
+   return null;
+ } else {
+   return new Reference(r, a, b);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="read">
+<button class="show-code">Code</button>
+<a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, dynamic&gt; <strong>read</strong>(<a href="../dart_core/List.html">List</a> rawInput, <a href="../serialization/Reader.html">Reader</a> r) <a class="anchor-link" href="#read"
+              title="Permalink to SimpleFlatFormat.read">#</a></h4>
+<div class="doc">
+<p>Read the data from 
+<span class="param">rawInput</span> in the context of 
+<span class="param">r</span> and return it as a
+Map with entries for "roots", "data" and "rules", which the reader knows
+how to interpret. We expect 
+<span class="param">rawInput</span> to have been generated from this
+format.</p>
+<pre class="source">
+Map&lt;String, dynamic&gt; read(List rawInput, Reader r) {
+ // TODO(alanknight): It's annoying to have to pass the reader around so
+ // much, consider having the format be specific to a particular
+ // serialization operation along with the reader and having it as a field.
+ var input = {};
+ input["rules"] = rawInput[0];
+ r.readRules(input["rules"]);
+
+ var flatData = rawInput[1];
+ var stream = flatData.iterator;
+ var tempData = new List(r.rules.length);
+ for (var eachRule in r.rules) {
+    tempData[eachRule.number] = readRuleDataFrom(stream, eachRule, r);
+ }
+ input["data"] = tempData;
+
+ var roots = [];
+ var rootsAsInts = rawInput[2].iterator;
+ do {
+   roots.add(nextReferenceFrom(rootsAsInts, r));
+ } while (rootsAsInts.current != null);
+
+ input["roots"] = roots;
+ return input;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="readLists">
+<button class="show-code">Code</button>
+<strong>readLists</strong>(<a href="../dart_core/Iterator.html">Iterator</a> input, <a href="../serialization/SerializationRule.html">SerializationRule</a> rule, <a href="../dart_core/int.html">int</a> length, <a href="../serialization/Reader.html">Reader</a> r) <a class="anchor-link" href="#readLists"
+              title="Permalink to SimpleFlatFormat.readLists">#</a></h4>
+<div class="doc">
+<p>Read data for 
+<span class="param">rule</span> from 
+<span class="param">input</span> with 
+<span class="param">length</span> number of entries,
+creating lists from the results.</p>
+<pre class="source">
+readLists(Iterator input, SerializationRule rule, int length, Reader r) {
+ var ruleData = [];
+ for (var i = 0; i &lt; length; i++) {
+   var subLength =
+       rule.hasVariableLengthEntries ? _next(input) : rule.dataLength;
+   var subList = [];
+   ruleData.add(subList);
+   for (var j = 0; j &lt; subLength; j++) {
+     subList.add(nextReferenceFrom(input, r));
+   }
+ }
+ return ruleData;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="readMaps">
+<button class="show-code">Code</button>
+<strong>readMaps</strong>(<a href="../dart_core/Iterator.html">Iterator</a> input, <a href="../serialization/SerializationRule.html">SerializationRule</a> rule, <a href="../dart_core/int.html">int</a> length, <a href="../serialization/Reader.html">Reader</a> r) <a class="anchor-link" href="#readMaps"
+              title="Permalink to SimpleFlatFormat.readMaps">#</a></h4>
+<div class="doc">
+<p>Read data for 
+<span class="param">rule</span> from 
+<span class="param">input</span> with 
+<span class="param">length</span> number of entries,
+creating maps from the results.</p>
+<pre class="source">
+readMaps(Iterator input, SerializationRule rule, int length, Reader r) {
+ var ruleData = [];
+ for (var i = 0; i &lt; length; i++) {
+   var subLength =
+       rule.hasVariableLengthEntries ? _next(input) : rule.dataLength;
+   var map = new Map();
+   ruleData.add(map);
+   for (var j = 0; j &lt; subLength; j++) {
+     var key = nextReferenceFrom(input, r);
+     var value = nextReferenceFrom(input, r);
+     map[key] = value;
+   }
+ }
+ return ruleData;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="readPrimitives">
+<button class="show-code">Code</button>
+<strong>readPrimitives</strong>(<a href="../dart_core/Iterator.html">Iterator</a> input, <a href="../serialization/SerializationRule.html">SerializationRule</a> rule, <a href="../dart_core/int.html">int</a> length) <a class="anchor-link" href="#readPrimitives"
+              title="Permalink to SimpleFlatFormat.readPrimitives">#</a></h4>
+<div class="doc">
+<p>Read data for 
+<span class="param">rule</span> from 
+<span class="param">input</span> with 
+<span class="param">length</span> number of entries,
+treating the data as primitives that can be returned directly.</p>
+<pre class="source">
+readPrimitives(Iterator input, SerializationRule rule, int length) {
+ var ruleData = [];
+ for (var i = 0; i &lt; length; i++) {
+   ruleData.add(_next(input));
+ }
+ return ruleData;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="readRuleDataFrom">
+<button class="show-code">Code</button>
+<strong>readRuleDataFrom</strong>(<a href="../dart_core/Iterator.html">Iterator</a> input, <a href="../serialization/SerializationRule.html">SerializationRule</a> rule, <a href="../serialization/Reader.html">Reader</a> r) <a class="anchor-link" href="#readRuleDataFrom"
+              title="Permalink to SimpleFlatFormat.readRuleDataFrom">#</a></h4>
+<div class="doc">
+<p>Read the data for 
+<span class="param">rule</span> from 
+<span class="param">input</span> and return it.</p>
+<pre class="source">
+readRuleDataFrom(Iterator input, SerializationRule rule, Reader r) {
+ var numberOfEntries = _next(input);
+ var entryType = _next(input);
+ if (entryType == STORED_AS_LIST) {
+   return readLists(input, rule, numberOfEntries, r);
+ }
+ if (entryType == STORED_AS_MAP) {
+   return readMaps(input, rule, numberOfEntries, r);
+ }
+ if (entryType == STORED_AS_PRIMITIVE) {
+   return readPrimitives(input, rule, numberOfEntries);
+ }
+ if (numberOfEntries == 0) {
+   return [];
+ } else {
+   throw new SerializationException("Invalid data in serialization");
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="writeLists">
+<button class="show-code">Code</button>
+<strong>writeLists</strong>(<a href="../serialization/SerializationRule.html">SerializationRule</a> rule, <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/List.html">List</a>&gt; entries, <a href="../dart_core/List.html">List</a> target) <a class="anchor-link" href="#writeLists"
+              title="Permalink to SimpleFlatFormat.writeLists">#</a></h4>
+<div class="doc">
+<p>Write 
+<span class="param">entries</span>, which contains Lists. Either the lists are variable
+length, in which case we add a length field, or they are fixed length, in
+which case we don't, and assume the 
+<span class="param">rule</span> will know how to read the
+right length when we read it back. We expect everything in the list to be
+a reference, which is stored as two numbers.</p>
+<pre class="source">
+writeLists(SerializationRule rule, List&lt;List&gt; entries, List target) {
+ target.add(STORED_AS_LIST);
+ for (var eachEntry in entries) {
+   if (rule.hasVariableLengthEntries) {
+     target.add(eachEntry.length);
+   }
+   for (var eachReference in eachEntry) {
+     writeReference(eachReference, target);
+   }
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="writeMaps">
+<button class="show-code">Code</button>
+<strong>writeMaps</strong>(<a href="../serialization/SerializationRule.html">SerializationRule</a> rule, <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/Map.html">Map</a>&gt; entries, <a href="../dart_core/List.html">List</a> target) <a class="anchor-link" href="#writeMaps"
+              title="Permalink to SimpleFlatFormat.writeMaps">#</a></h4>
+<div class="doc">
+<p>Write 
+<span class="param">entries</span>, which contains Maps. Either the Maps are variable
+length, in which case we add a length field, or they are fixed length, in
+which case we don't, and assume the 
+<span class="param">rule</span> will know how to read the
+right length when we read it back. Then we write alternating keys and
+values. We expect the values to be references, which we store as
+two numbers.</p>
+<pre class="source">
+writeMaps(SerializationRule rule, List&lt;Map&gt; entries, List target) {
+ target.add(STORED_AS_MAP);
+ for (var eachEntry in entries) {
+   if (rule.hasVariableLengthEntries) {
+     target.add(eachEntry.length);
+   }
+   eachEntry.forEach((key, value) {
+     writeReference(key, target);
+     writeReference(value, target);
+   });
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="writeObjects">
+<button class="show-code">Code</button>
+<strong>writeObjects</strong>(<a href="../dart_core/List.html">List</a> entries, <a href="../dart_core/List.html">List</a> target) <a class="anchor-link" href="#writeObjects"
+              title="Permalink to SimpleFlatFormat.writeObjects">#</a></h4>
+<div class="doc">
+<p>Write 
+<span class="param">entries</span>, which contains simple objects which we can put directly
+into 
+<span class="param">target</span>.</p>
+<pre class="source">
+writeObjects(List entries, List target) {
+ target.add(STORED_AS_PRIMITIVE);
+ for (var each in entries) {
+   if (!isPrimitive(each)) throw new SerializationException("Invalid data");
+ }
+ target.addAll(entries);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="writeReference">
+<button class="show-code">Code</button>
+void <strong>writeReference</strong>(<a href="../serialization/Reference.html">Reference</a> eachRef, <a href="../dart_core/List.html">List</a> target) <a class="anchor-link" href="#writeReference"
+              title="Permalink to SimpleFlatFormat.writeReference">#</a></h4>
+<div class="doc">
+<p>Write 
+<span class="param">eachRef</span> to 
+<span class="param">target</span>. It will be written as two ints. If 
+<span class="param">eachRef</span>
+is null it will be written as two nulls.</p>
+<pre class="source">
+void writeReference(Reference eachRef, List target) {
+ // TODO(alanknight): Writing nulls is problematic in a real flat format.
+ if (eachRef == null) {
+   target..add(null)..add(null);
+ } else {
+   eachRef.writeToList(target);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="writeStateInto">
+<button class="show-code">Code</button>
+void <strong>writeStateInto</strong>(<a href="../serialization/SerializationRule.html">SerializationRule</a> rule, <a href="../dart_core/List.html">List</a> ruleData, <a href="../dart_core/List.html">List</a> target) <a class="anchor-link" href="#writeStateInto"
+              title="Permalink to SimpleFlatFormat.writeStateInto">#</a></h4>
+<div class="doc">
+<p>Writes the data from 
+<span class="param">rule</span> into the 
+<span class="param">target</span> list.</p>
+<pre class="source">
+void writeStateInto(SerializationRule rule, List ruleData, List target) {
+ if (!ruleData.isEmpty) {
+   var sample = ruleData.first;
+   if (rule.storesStateAsLists || sample is List) {
+     writeLists(rule, ruleData, target);
+   } else if (rule.storesStateAsMaps || sample is Map) {
+     writeMaps(rule, ruleData, target);
+   } else if (rule.storesStateAsPrimitives || isPrimitive(sample)) {
+     writeObjects(ruleData, target);
+   } else {
+     throw new SerializationException("Invalid data format");
+   }
+ } else {
+   // If there is no data, write a zero for the length.
+   target.add(0);
+ }
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:05.508</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

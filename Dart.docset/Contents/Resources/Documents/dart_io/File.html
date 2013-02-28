@@ -1,0 +1,713 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>File abstract class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="File">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/File.html">File</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><div class="icon-class"></div><strong>File</strong></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="../dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><a href="../dart_io/IOSink.html"><div class="icon-class"></div>IOSink&lt;T&gt;</a></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="../dart_io/ProcessOptions.html"><div class="icon-class"></div>ProcessOptions</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="../dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/DirectoryIOException.html"><div class="icon-exception"></div>DirectoryIOException</a></li>
+<li><a href="../dart_io/FileIOException.html"><div class="icon-exception"></div>FileIOException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/HttpParserException.html"><div class="icon-exception"></div>HttpParserException</a></li>
+<li><a href="../dart_io/MimeParserException.html"><div class="icon-exception"></div>MimeParserException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/RedirectLimitExceededException.html"><div class="icon-exception"></div>RedirectLimitExceededException</a></li>
+<li><a href="../dart_io/RedirectLoopException.html"><div class="icon-exception"></div>RedirectLoopException</a></li>
+<li><a href="../dart_io/SocketIOException.html"><div class="icon-exception"></div>SocketIOException</a></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>File</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p><a class="crossref" href="../dart_io/File.html#File">File</a> objects are references to files.</p>
+<p>To operate on the underlying file data there are two options:</p><ul><li>
+<p>Use streaming: read the contents of the file from the <code>Stream</code>
+   this.<a class="crossref" href="../dart_io/File.html#openRead">openRead</a>() and write to the file by writing to the <a class="crossref" href="../dart_io/IOSink.html">IOSink</a>
+   this.<a class="crossref" href="../dart_io/File.html#openWrite">openWrite</a>().</p></li><li>Open the file for random access operations using <a class="crossref" href="../dart_io/File.html#open">open</a>.</li></ul>
+<pre class="source">
+abstract class File extends FileSystemEntity {
+ /**
+  * Create a File object.
+  */
+ factory File(String name) =&gt; new _File(name);
+
+ /**
+  * Create a File object from a Path object.
+  */
+ factory File.fromPath(Path path) =&gt; new _File.fromPath(path);
+
+ /**
+  * Check if the file exists. Returns a
+  * [:Future&lt;bool&gt;:] that completes when the answer is known.
+  */
+ Future&lt;bool&gt; exists();
+
+ /**
+  * Synchronously check if the file exists.
+  */
+ bool existsSync();
+
+ /**
+  * Create the file. Returns a [:Future&lt;File&gt;:] that completes with
+  * the file when it has been created.
+  *
+  * Existing files are left untouched by [create]. Calling [create] on an
+  * existing file might fail if there are restrictive permissions on
+  * the file.
+  */
+ Future&lt;File&gt; create();
+
+ /**
+  * Synchronously create the file. Existing files are left untouched
+  * by [createSync]. Calling [createSync] on an existing file might fail
+  * if there are restrictive permissions on the file.
+  */
+ void createSync();
+
+ /**
+  * Delete the file. Returns a [:Future&lt;File&gt;:] that completes with
+  * the file when it has been deleted.
+  */
+ Future&lt;File&gt; delete();
+
+ /**
+  * Synchronously delete the file.
+  */
+ void deleteSync();
+
+ /**
+  * Get a [Directory] object for the directory containing this
+  * file. Returns a [:Future&lt;Directory&gt;:] that completes with the
+  * directory.
+  */
+ Future&lt;Directory&gt; directory();
+
+ /**
+  * Synchronously get a [Directory] object for the directory containing
+  * this file.
+  */
+ Directory directorySync();
+
+ /**
+  * Get the length of the file. Returns a [:Future&lt;int&gt;:] that
+  * completes with the length in bytes.
+  */
+ Future&lt;int&gt; length();
+
+ /**
+  * Synchronously get the length of the file.
+  */
+ int lengthSync();
+
+ /**
+  * Get the last-modified time of the file. Returns a
+  * [:Future&lt;DateTime&gt;:] that completes with a [DateTime] object for the
+  * modification date.
+  */
+ Future&lt;DateTime&gt; lastModified();
+
+ /**
+  * Get the last-modified time of the file. Throws an exception
+  * if the file does not exist.
+  */
+ DateTime lastModifiedSync();
+
+ /**
+  * Open the file for random access operations. Returns a
+  * [:Future&lt;RandomAccessFile&gt;:] that completes with the opened
+  * random access file. [RandomAccessFile]s must be closed using the
+  * [RandomAccessFile.close] method.
+  *
+  * Files can be opened in three modes:
+  *
+  * [FileMode.READ]: open the file for reading.
+  *
+  * [FileMode.WRITE]: open the file for both reading and writing and
+  * truncate the file to length zero. If the file does not exist the
+  * file is created.
+  *
+  * [FileMode.APPEND]: same as [FileMode.WRITE] except that the file is
+  * not truncated.
+  */
+ Future&lt;RandomAccessFile&gt; open([FileMode mode = FileMode.READ]);
+
+ /**
+  * Synchronously open the file for random access operations. The
+  * result is a [RandomAccessFile] on which random access operations
+  * can be performed. Opened [RandomAccessFile]s must be closed using
+  * the [RandomAccessFile.close] method.
+  *
+  * See [open] for information on the [mode] argument.
+  */
+ RandomAccessFile openSync([FileMode mode = FileMode.READ]);
+
+ /**
+  * Get the canonical full path corresponding to the file name.
+  * Returns a [:Future&lt;String&gt;:] that completes with the path.
+  */
+ Future&lt;String&gt; fullPath();
+
+ /**
+  * Synchronously get the canonical full path corresponding to the file name.
+  */
+ String fullPathSync();
+
+ /**
+  * Create a new independent [Stream](../dart_async/Stream.html) for the
+  * contents of this file.
+  *
+  * In order to make sure that system resources are freed, the stream
+  * must be read to completion or the subscription on the stream must
+  * be cancelled.
+  */
+ Stream&lt;List&lt;int&gt;&gt; openRead();
+
+
+ /**
+  * Creates a new independent [IOSink] for the file. The
+  * [IOSink] must be closed when no longer used, to free
+  * system resources.
+  *
+  * An [IOSink] for a file can be opened in two modes:
+  *
+  * * [FileMode.WRITE]: truncates the file to length zero.
+  * * [FileMode.APPEND]: sets the initial write position to the end
+  *   of the file.
+  */
+ IOSink&lt;File&gt; openWrite([FileMode mode = FileMode.WRITE]);
+
+ /**
+  * Read the entire file contents as a list of bytes. Returns a
+  * [:Future&lt;List&lt;int&gt;&gt;:] that completes with the list of bytes that
+  * is the contents of the file.
+  */
+ Future&lt;List&lt;int&gt;&gt; readAsBytes();
+
+ /**
+  * Synchronously read the entire file contents as a list of bytes.
+  */
+ List&lt;int&gt; readAsBytesSync();
+
+ /**
+  * Read the entire file contents as a string using the given
+  * [Encoding].
+  *
+  * Returns a [:Future&lt;String&gt;:] that completes with the string once
+  * the file contents has been read.
+  */
+ Future&lt;String&gt; readAsString([Encoding encoding = Encoding.UTF_8]);
+
+ /**
+  * Synchronously read the entire file contents as a string using the
+  * given [Encoding].
+  */
+ String readAsStringSync([Encoding encoding = Encoding.UTF_8]);
+
+ /**
+  * Read the entire file contents as lines of text using the given
+  * [Encoding].
+  *
+  * Returns a [:Future&lt;List&lt;String&gt;&gt;:] that completes with the lines
+  * once the file contents has been read.
+  */
+ Future&lt;List&lt;String&gt;&gt; readAsLines([Encoding encoding = Encoding.UTF_8]);
+
+ /**
+  * Synchronously read the entire file contents as lines of text
+  * using the given [Encoding].
+  */
+ List&lt;String&gt; readAsLinesSync([Encoding encoding = Encoding.UTF_8]);
+
+ /**
+  * Write a list of bytes to a file.
+  *
+  * Opens the file, writes the list of bytes to it, and closes the file.
+  * Returns a [:Future&lt;File&gt;:] that completes with this [File] object once
+  * the entire operation has completed.
+  *
+  * By default [writeAsBytes] creates the file for writing and truncates the
+  * file if it already exists. In order to append the bytes to an existing
+  * file, pass [FileMode.APPEND] as the optional mode parameter.
+  */
+ Future&lt;File&gt; writeAsBytes(List&lt;int&gt; bytes, [FileMode mode = FileMode.WRITE]);
+
+ /**
+  * Synchronously write a list of bytes to a file.
+  *
+  * Opens the file, writes the list of bytes to it and closes the file.
+  *
+  * By default [writeAsBytesSync] creates the file for writing and truncates
+  * the file if it already exists. In order to append the bytes to an existing
+  * file, pass [FileMode.APPEND] as the optional mode parameter.
+  */
+ void writeAsBytesSync(List&lt;int&gt; bytes, [FileMode mode = FileMode.WRITE]);
+
+ /**
+  * Write a string to a file.
+  *
+  * Opens the file, writes the string in the given encoding, and closes the
+  * file. Returns a [:Future&lt;File&gt;:] that completes with this [File] object
+  * once the entire operation has completed.
+  *
+  * By default [writeAsString] creates the file for writing and truncates the
+  * file if it already exists. In order to append the bytes to an existing
+  * file, pass [FileMode.APPEND] as the optional mode parameter.
+  */
+ Future&lt;File&gt; writeAsString(String contents,
+                            {FileMode mode: FileMode.WRITE,
+                             Encoding encoding: Encoding.UTF_8});
+
+ /**
+  * Synchronously write a string to a file.
+  *
+  * Opens the file, writes the string in the given encoding, and closes the
+  * file.
+  *
+  * By default [writeAsStringSync] creates the file for writing and
+  * truncates the file if it already exists. In order to append the bytes
+  * to an existing file, pass [FileMode.APPEND] as the optional mode
+  * parameter.
+  */
+ void writeAsStringSync(String contents,
+                        {FileMode mode: FileMode.WRITE,
+                         Encoding encoding: Encoding.UTF_8});
+
+ /**
+  * Get the name of the file.
+  */
+ String get name;
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_io/FileSystemEntity.html">FileSystemEntity</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>File</strong></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="File">
+<button class="show-code">Code</button>
+factory <strong>File</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#File"
+              title="Permalink to File.File">#</a></h4>
+<div class="doc">
+<p>Create a File object.</p>
+<pre class="source">
+factory File(String name) =&gt; new _File(name);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="File.fromPath">
+<button class="show-code">Code</button>
+factory <strong>File.fromPath</strong>(<a href="../dart_io/Path.html">Path</a> path) <a class="anchor-link" href="#File.fromPath"
+              title="Permalink to File.File.fromPath">#</a></h4>
+<div class="doc">
+<p>Create a File object from a Path object.</p>
+<pre class="source">
+factory File.fromPath(Path path) =&gt; new _File.fromPath(path);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="name">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>name</strong> <a class="anchor-link"
+            href="#name"
+            title="Permalink to File.name">#</a>
+        </h4>
+        <div class="doc">
+<p>Get the name of the file.</p>
+<pre class="source">
+String get name;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="create">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/File.html">File</a>&gt; <strong>create</strong>() <a class="anchor-link" href="#create"
+              title="Permalink to File.create">#</a></h4>
+<div class="doc">
+<p>Create the file. Returns a <code>Future&lt;File&gt;</code> that completes with
+the file when it has been created.</p>
+<p>Existing files are left untouched by <a class="crossref" href="../dart_io/File.html#create">create</a>. Calling <a class="crossref" href="../dart_io/File.html#create">create</a> on an
+existing file might fail if there are restrictive permissions on
+the file.</p>
+</div>
+</div>
+<div class="method"><h4 id="createSync">
+abstract void <strong>createSync</strong>() <a class="anchor-link" href="#createSync"
+              title="Permalink to File.createSync">#</a></h4>
+<div class="doc">
+<p>Synchronously create the file. Existing files are left untouched
+by <a class="crossref" href="../dart_io/File.html#createSync">createSync</a>. Calling <a class="crossref" href="../dart_io/File.html#createSync">createSync</a> on an existing file might fail
+if there are restrictive permissions on the file.</p>
+</div>
+</div>
+<div class="method"><h4 id="delete">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/File.html">File</a>&gt; <strong>delete</strong>() <a class="anchor-link" href="#delete"
+              title="Permalink to File.delete">#</a></h4>
+<div class="doc">
+<p>Delete the file. Returns a <code>Future&lt;File&gt;</code> that completes with
+the file when it has been deleted.</p>
+</div>
+</div>
+<div class="method"><h4 id="deleteSync">
+abstract void <strong>deleteSync</strong>() <a class="anchor-link" href="#deleteSync"
+              title="Permalink to File.deleteSync">#</a></h4>
+<div class="doc">
+<p>Synchronously delete the file.</p>
+</div>
+</div>
+<div class="method"><h4 id="directory">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/Directory.html">Directory</a>&gt; <strong>directory</strong>() <a class="anchor-link" href="#directory"
+              title="Permalink to File.directory">#</a></h4>
+<div class="doc">
+<p>Get a <a class="crossref" href="../dart_io/Directory.html">Directory</a> object for the directory containing this
+file. Returns a <code>Future&lt;Directory&gt;</code> that completes with the
+directory.</p>
+</div>
+</div>
+<div class="method"><h4 id="directorySync">
+abstract <a href="../dart_io/Directory.html">Directory</a> <strong>directorySync</strong>() <a class="anchor-link" href="#directorySync"
+              title="Permalink to File.directorySync">#</a></h4>
+<div class="doc">
+<p>Synchronously get a <a class="crossref" href="../dart_io/Directory.html">Directory</a> object for the directory containing
+this file.</p>
+</div>
+</div>
+<div class="method"><h4 id="exists">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>exists</strong>() <a class="anchor-link" href="#exists"
+              title="Permalink to File.exists">#</a></h4>
+<div class="doc">
+<p>Check if the file exists. Returns a
+<code>Future&lt;bool&gt;</code> that completes when the answer is known.</p>
+</div>
+</div>
+<div class="method"><h4 id="existsSync">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>existsSync</strong>() <a class="anchor-link" href="#existsSync"
+              title="Permalink to File.existsSync">#</a></h4>
+<div class="doc">
+<p>Synchronously check if the file exists.</p>
+</div>
+</div>
+<div class="method"><h4 id="fullPath">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/String.html">String</a>&gt; <strong>fullPath</strong>() <a class="anchor-link" href="#fullPath"
+              title="Permalink to File.fullPath">#</a></h4>
+<div class="doc">
+<p>Get the canonical full path corresponding to the file name.
+Returns a <code>Future&lt;String&gt;</code> that completes with the path.</p>
+</div>
+</div>
+<div class="method"><h4 id="fullPathSync">
+abstract <a href="../dart_core/String.html">String</a> <strong>fullPathSync</strong>() <a class="anchor-link" href="#fullPathSync"
+              title="Permalink to File.fullPathSync">#</a></h4>
+<div class="doc">
+<p>Synchronously get the canonical full path corresponding to the file name.</p>
+</div>
+</div>
+<div class="method"><h4 id="lastModified">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/DateTime.html">DateTime</a>&gt; <strong>lastModified</strong>() <a class="anchor-link" href="#lastModified"
+              title="Permalink to File.lastModified">#</a></h4>
+<div class="doc">
+<p>Get the last-modified time of the file. Returns a
+<code>Future&lt;DateTime&gt;</code> that completes with a <code>DateTime</code> object for the
+modification date.</p>
+</div>
+</div>
+<div class="method"><h4 id="lastModifiedSync">
+abstract <a href="../dart_core/DateTime.html">DateTime</a> <strong>lastModifiedSync</strong>() <a class="anchor-link" href="#lastModifiedSync"
+              title="Permalink to File.lastModifiedSync">#</a></h4>
+<div class="doc">
+<p>Get the last-modified time of the file. Throws an exception
+if the file does not exist.</p>
+</div>
+</div>
+<div class="method"><h4 id="length">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/int.html">int</a>&gt; <strong>length</strong>() <a class="anchor-link" href="#length"
+              title="Permalink to File.length">#</a></h4>
+<div class="doc">
+<p>Get the length of the file. Returns a <code>Future&lt;int&gt;</code> that
+completes with the length in bytes.</p>
+</div>
+</div>
+<div class="method"><h4 id="lengthSync">
+abstract <a href="../dart_core/int.html">int</a> <strong>lengthSync</strong>() <a class="anchor-link" href="#lengthSync"
+              title="Permalink to File.lengthSync">#</a></h4>
+<div class="doc">
+<p>Synchronously get the length of the file.</p>
+</div>
+</div>
+<div class="method"><h4 id="open">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/RandomAccessFile.html">RandomAccessFile</a>&gt; <strong>open</strong>([<a href="../dart_io/FileMode.html">FileMode</a> mode = FileMode.READ]) <a class="anchor-link" href="#open"
+              title="Permalink to File.open">#</a></h4>
+<div class="doc">
+<p>Open the file for random access operations. Returns a
+<code>Future&lt;RandomAccessFile&gt;</code> that completes with the opened
+random access file. <a class="crossref" href="../dart_io/RandomAccessFile.html">RandomAccessFile</a>s must be closed using the
+<a class="crossref" href="../dart_io/RandomAccessFile.html#close">RandomAccessFile.close</a> method.</p>
+<p>Files can be opened in three modes:</p>
+<p><a class="crossref" href="../dart_io/FileMode.html#READ">FileMode.READ</a>: open the file for reading.</p>
+<p><a class="crossref" href="../dart_io/FileMode.html#WRITE">FileMode.WRITE</a>: open the file for both reading and writing and
+truncate the file to length zero. If the file does not exist the
+file is created.</p>
+<p><a class="crossref" href="../dart_io/FileMode.html#APPEND">FileMode.APPEND</a>: same as <a class="crossref" href="../dart_io/FileMode.html#WRITE">FileMode.WRITE</a> except that the file is
+not truncated.</p>
+</div>
+</div>
+<div class="method"><h4 id="openRead">
+abstract <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;&gt; <strong>openRead</strong>() <a class="anchor-link" href="#openRead"
+              title="Permalink to File.openRead">#</a></h4>
+<div class="doc">
+<p>Create a new independent <a href="../dart_async/Stream.html">Stream</a> for the
+contents of this file.</p>
+<p>In order to make sure that system resources are freed, the stream
+must be read to completion or the subscription on the stream must
+be cancelled.</p>
+</div>
+</div>
+<div class="method"><h4 id="openSync">
+abstract <a href="../dart_io/RandomAccessFile.html">RandomAccessFile</a> <strong>openSync</strong>([<a href="../dart_io/FileMode.html">FileMode</a> mode = FileMode.READ]) <a class="anchor-link" href="#openSync"
+              title="Permalink to File.openSync">#</a></h4>
+<div class="doc">
+<p>Synchronously open the file for random access operations. The
+result is a <a class="crossref" href="../dart_io/RandomAccessFile.html">RandomAccessFile</a> on which random access operations
+can be performed. Opened <a class="crossref" href="../dart_io/RandomAccessFile.html">RandomAccessFile</a>s must be closed using
+the <a class="crossref" href="../dart_io/RandomAccessFile.html#close">RandomAccessFile.close</a> method.</p>
+<p>See <a class="crossref" href="../dart_io/File.html#open">open</a> for information on the 
+<span class="param">mode</span> argument.</p>
+</div>
+</div>
+<div class="method"><h4 id="openWrite">
+abstract <a href="../dart_io/IOSink.html">IOSink</a>&lt;<a href="../dart_io/File.html">File</a>&gt; <strong>openWrite</strong>([<a href="../dart_io/FileMode.html">FileMode</a> mode = FileMode.WRITE]) <a class="anchor-link" href="#openWrite"
+              title="Permalink to File.openWrite">#</a></h4>
+<div class="doc">
+<p>Creates a new independent <a class="crossref" href="../dart_io/IOSink.html">IOSink</a> for the file. The
+<a class="crossref" href="../dart_io/IOSink.html">IOSink</a> must be closed when no longer used, to free
+system resources.</p>
+<p>An <a class="crossref" href="../dart_io/IOSink.html">IOSink</a> for a file can be opened in two modes:</p><ul><li><a class="crossref" href="../dart_io/FileMode.html#WRITE">FileMode.WRITE</a>: truncates the file to length zero.</li><li>
+<p><a class="crossref" href="../dart_io/FileMode.html#APPEND">FileMode.APPEND</a>: sets the initial write position to the end
+  of the file.</p></li></ul>
+</div>
+</div>
+<div class="method"><h4 id="readAsBytes">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;&gt; <strong>readAsBytes</strong>() <a class="anchor-link" href="#readAsBytes"
+              title="Permalink to File.readAsBytes">#</a></h4>
+<div class="doc">
+<p>Read the entire file contents as a list of bytes. Returns a
+<code>Future&lt;List&lt;int&gt;&gt;</code> that completes with the list of bytes that
+is the contents of the file.</p>
+</div>
+</div>
+<div class="method"><h4 id="readAsBytesSync">
+abstract <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt; <strong>readAsBytesSync</strong>() <a class="anchor-link" href="#readAsBytesSync"
+              title="Permalink to File.readAsBytesSync">#</a></h4>
+<div class="doc">
+<p>Synchronously read the entire file contents as a list of bytes.</p>
+</div>
+</div>
+<div class="method"><h4 id="readAsLines">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt;&gt; <strong>readAsLines</strong>([<a href="../dart_io/Encoding.html">Encoding</a> encoding = Encoding.UTF_8]) <a class="anchor-link" href="#readAsLines"
+              title="Permalink to File.readAsLines">#</a></h4>
+<div class="doc">
+<p>Read the entire file contents as lines of text using the given
+<a class="crossref" href="../dart_io/Encoding.html">Encoding</a>.</p>
+<p>Returns a <code>Future&lt;List&lt;String&gt;&gt;</code> that completes with the lines
+once the file contents has been read.</p>
+</div>
+</div>
+<div class="method"><h4 id="readAsLinesSync">
+abstract <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt; <strong>readAsLinesSync</strong>([<a href="../dart_io/Encoding.html">Encoding</a> encoding = Encoding.UTF_8]) <a class="anchor-link" href="#readAsLinesSync"
+              title="Permalink to File.readAsLinesSync">#</a></h4>
+<div class="doc">
+<p>Synchronously read the entire file contents as lines of text
+using the given <a class="crossref" href="../dart_io/Encoding.html">Encoding</a>.</p>
+</div>
+</div>
+<div class="method"><h4 id="readAsString">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/String.html">String</a>&gt; <strong>readAsString</strong>([<a href="../dart_io/Encoding.html">Encoding</a> encoding = Encoding.UTF_8]) <a class="anchor-link" href="#readAsString"
+              title="Permalink to File.readAsString">#</a></h4>
+<div class="doc">
+<p>Read the entire file contents as a string using the given
+<a class="crossref" href="../dart_io/Encoding.html">Encoding</a>.</p>
+<p>Returns a <code>Future&lt;String&gt;</code> that completes with the string once
+the file contents has been read.</p>
+</div>
+</div>
+<div class="method"><h4 id="readAsStringSync">
+abstract <a href="../dart_core/String.html">String</a> <strong>readAsStringSync</strong>([<a href="../dart_io/Encoding.html">Encoding</a> encoding = Encoding.UTF_8]) <a class="anchor-link" href="#readAsStringSync"
+              title="Permalink to File.readAsStringSync">#</a></h4>
+<div class="doc">
+<p>Synchronously read the entire file contents as a string using the
+given <a class="crossref" href="../dart_io/Encoding.html">Encoding</a>.</p>
+</div>
+</div>
+<div class="method"><h4 id="writeAsBytes">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/File.html">File</a>&gt; <strong>writeAsBytes</strong>(<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt; bytes, [<a href="../dart_io/FileMode.html">FileMode</a> mode = FileMode.WRITE]) <a class="anchor-link" href="#writeAsBytes"
+              title="Permalink to File.writeAsBytes">#</a></h4>
+<div class="doc">
+<p>Write a list of bytes to a file.</p>
+<p>Opens the file, writes the list of bytes to it, and closes the file.
+Returns a <code>Future&lt;File&gt;</code> that completes with this <a class="crossref" href="../dart_io/File.html#File">File</a> object once
+the entire operation has completed.</p>
+<p>By default <a class="crossref" href="../dart_io/File.html#writeAsBytes">writeAsBytes</a> creates the file for writing and truncates the
+file if it already exists. In order to append the bytes to an existing
+file, pass <a class="crossref" href="../dart_io/FileMode.html#APPEND">FileMode.APPEND</a> as the optional mode parameter.</p>
+</div>
+</div>
+<div class="method"><h4 id="writeAsBytesSync">
+abstract void <strong>writeAsBytesSync</strong>(<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt; bytes, [<a href="../dart_io/FileMode.html">FileMode</a> mode = FileMode.WRITE]) <a class="anchor-link" href="#writeAsBytesSync"
+              title="Permalink to File.writeAsBytesSync">#</a></h4>
+<div class="doc">
+<p>Synchronously write a list of bytes to a file.</p>
+<p>Opens the file, writes the list of bytes to it and closes the file.</p>
+<p>By default <a class="crossref" href="../dart_io/File.html#writeAsBytesSync">writeAsBytesSync</a> creates the file for writing and truncates
+the file if it already exists. In order to append the bytes to an existing
+file, pass <a class="crossref" href="../dart_io/FileMode.html#APPEND">FileMode.APPEND</a> as the optional mode parameter.</p>
+</div>
+</div>
+<div class="method"><h4 id="writeAsString">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/File.html">File</a>&gt; <strong>writeAsString</strong>(<a href="../dart_core/String.html">String</a> contents, {<a href="../dart_io/FileMode.html">FileMode</a> mode: FileMode.WRITE, <a href="../dart_io/Encoding.html">Encoding</a> encoding: Encoding.UTF_8}) <a class="anchor-link" href="#writeAsString"
+              title="Permalink to File.writeAsString">#</a></h4>
+<div class="doc">
+<p>Write a string to a file.</p>
+<p>Opens the file, writes the string in the given encoding, and closes the
+file. Returns a <code>Future&lt;File&gt;</code> that completes with this <a class="crossref" href="../dart_io/File.html#File">File</a> object
+once the entire operation has completed.</p>
+<p>By default <a class="crossref" href="../dart_io/File.html#writeAsString">writeAsString</a> creates the file for writing and truncates the
+file if it already exists. In order to append the bytes to an existing
+file, pass <a class="crossref" href="../dart_io/FileMode.html#APPEND">FileMode.APPEND</a> as the optional mode parameter.</p>
+</div>
+</div>
+<div class="method"><h4 id="writeAsStringSync">
+abstract void <strong>writeAsStringSync</strong>(<a href="../dart_core/String.html">String</a> contents, {<a href="../dart_io/FileMode.html">FileMode</a> mode: FileMode.WRITE, <a href="../dart_io/Encoding.html">Encoding</a> encoding: Encoding.UTF_8}) <a class="anchor-link" href="#writeAsStringSync"
+              title="Permalink to File.writeAsStringSync">#</a></h4>
+<div class="doc">
+<p>Synchronously write a string to a file.</p>
+<p>Opens the file, writes the string in the given encoding, and closes the
+file.</p>
+<p>By default <a class="crossref" href="../dart_io/File.html#writeAsStringSync">writeAsStringSync</a> creates the file for writing and
+truncates the file if it already exists. In order to append the bytes
+to an existing file, pass <a class="crossref" href="../dart_io/FileMode.html#APPEND">FileMode.APPEND</a> as the optional mode
+parameter.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:10.211</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

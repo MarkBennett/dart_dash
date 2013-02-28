@@ -1,0 +1,1061 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Int16List abstract class / dart:scalarlist Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:scalarlist" data-type="Int16List">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_scalarlist.html">dart:scalarlist</a> &rsaquo; <a href="../dart_scalarlist/Int16List.html">Int16List</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><ul class="icon">
+<li><a href="../dart_scalarlist/ByteArray.html"><div class="icon-class"></div>ByteArray</a></li>
+<li><a href="../dart_scalarlist/ByteArrayViewable.html"><div class="icon-class"></div>ByteArrayViewable</a></li>
+<li><a href="../dart_scalarlist/Float32List.html"><div class="icon-class"></div>Float32List</a></li>
+<li><a href="../dart_scalarlist/Float32x4.html"><div class="icon-class"></div>Float32x4</a></li>
+<li><a href="../dart_scalarlist/Float32x4List.html"><div class="icon-class"></div>Float32x4List</a></li>
+<li><a href="../dart_scalarlist/Float64List.html"><div class="icon-class"></div>Float64List</a></li>
+<li><div class="icon-class"></div><strong>Int16List</strong></li>
+<li><a href="../dart_scalarlist/Int32List.html"><div class="icon-class"></div>Int32List</a></li>
+<li><a href="../dart_scalarlist/Int64List.html"><div class="icon-class"></div>Int64List</a></li>
+<li><a href="../dart_scalarlist/Int8List.html"><div class="icon-class"></div>Int8List</a></li>
+<li><a href="../dart_scalarlist/Uint16List.html"><div class="icon-class"></div>Uint16List</a></li>
+<li><a href="../dart_scalarlist/Uint32List.html"><div class="icon-class"></div>Uint32List</a></li>
+<li><a href="../dart_scalarlist/Uint32x4.html"><div class="icon-class"></div>Uint32x4</a></li>
+<li><a href="../dart_scalarlist/Uint64List.html"><div class="icon-class"></div>Uint64List</a></li>
+<li><a href="../dart_scalarlist/Uint8ClampedList.html"><div class="icon-class"></div>Uint8ClampedList</a></li>
+<li><a href="../dart_scalarlist/Uint8List.html"><div class="icon-class"></div>Uint8List</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Int16List</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A fixed-length list of 16-bit signed integers that is viewable as a
+<a class="crossref" href="../dart_scalarlist/ByteArray.html">ByteArray</a>. For long lists, this implementation will be considerably
+more space- and time-efficient than the default <code>List</code> implementation.</p>
+<pre class="source">
+abstract class Int16List implements List&lt;int&gt;, ByteArrayViewable {
+ /**
+  * Creates an [Int16List] of the specified length (in elements), all of
+  * whose elements are initially zero.
+  */
+ external factory Int16List(int length);
+
+ /**
+  * Creates an [Int16List] _view_ of the specified region in the specified
+  * byte [array]. Changes in the [Int16List] will be visible in the byte
+  * array and vice versa. If the [start] index of the region is not specified,
+  * it defaults to zero (the first byte in the byte array). If the length is
+  * not specified, it defaults to null, which indicates that the view extends
+  * to the end of the byte array.
+  *
+  * Throws [ArgumentError] if the length of the specified region
+  * is not divisible by 2 (the size of an "int16" in bytes), or if the
+  * [start] of the region is not divisible by 2. If, however, [array]
+  * is a view of another byte array, this constructor will throw
+  * [ArgumentError] if the implicit starting position in the
+  * "ultimately backing" byte array is not divisible by 2. In plain terms,
+  * this constructor throws [ArgumentError] if the specified
+  * region does not contain an integral number of "int16s," or if it
+  * is not "int16-aligned."
+  */
+ external factory Int16List.view(ByteArray array, [int start = 0, int length]);
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_scalarlist/ByteArrayViewable.html">ByteArrayViewable</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_core/List.html">List&lt;int&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Int16List">
+<button class="show-code">Code</button>
+factory <strong>Int16List</strong>(<a href="../dart_core/int.html">int</a> length) <a class="anchor-link" href="#Int16List"
+              title="Permalink to Int16List.Int16List">#</a></h4>
+<div class="doc">
+<p>Creates an <a class="crossref" href="../dart_scalarlist/Int16List.html#Int16List">Int16List</a> of the specified length (in elements), all of
+whose elements are initially zero.</p>
+<pre class="source">
+external factory Int16List(int length);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Int16List.view">
+<button class="show-code">Code</button>
+factory <strong>Int16List.view</strong>(<a href="../dart_scalarlist/ByteArray.html">ByteArray</a> array, [<a href="../dart_core/int.html">int</a> start = 0, <a href="../dart_core/int.html">int</a> length]) <a class="anchor-link" href="#Int16List.view"
+              title="Permalink to Int16List.Int16List.view">#</a></h4>
+<div class="doc">
+<p>Creates an <a class="crossref" href="../dart_scalarlist/Int16List.html#Int16List">Int16List</a> <em>view</em> of the specified region in the specified
+byte 
+<span class="param">array</span>. Changes in the <a class="crossref" href="../dart_scalarlist/Int16List.html#Int16List">Int16List</a> will be visible in the byte
+array and vice versa. If the 
+<span class="param">start</span> index of the region is not specified,
+it defaults to zero (the first byte in the byte array). If the length is
+not specified, it defaults to null, which indicates that the view extends
+to the end of the byte array.</p>
+<p>Throws <code>ArgumentError</code> if the length of the specified region
+is not divisible by 2 (the size of an "int16" in bytes), or if the
+
+<span class="param">start</span> of the region is not divisible by 2. If, however, 
+<span class="param">array</span>
+is a view of another byte array, this constructor will throw
+<code>ArgumentError</code> if the implicit starting position in the
+"ultimately backing" byte array is not divisible by 2. In plain terms,
+this constructor throws <code>ArgumentError</code> if the specified
+region does not contain an integral number of "int16s," or if it
+is not "int16-aligned."</p>
+<pre class="source">
+external factory Int16List.view(ByteArray array, [int start = 0, int length]);
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Properties</h3>
+<div class="field inherited"><h4 id="first">
+<button class="show-code">Code</button>
+final <a href="../dart_scalarlist/Int16List.html">E</a>         <strong>first</strong> <a class="anchor-link"
+            href="#first"
+            title="Permalink to Int16List.first">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the first element.</p>
+<p>If <code>this</code> is empty throws a <code>StateError</code>. Otherwise this method is
+equivalent to <code>this.elementAt(0)</code></p>
+<pre class="source">
+E get first {
+ Iterator it = iterator;
+ if (!it.moveNext()) {
+   throw new StateError("No elements");
+ }
+ return it.current;
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isEmpty</strong> <a class="anchor-link"
+            href="#isEmpty"
+            title="Permalink to Int16List.isEmpty">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns true if there is no element in this collection.</p>
+<pre class="source">
+bool get isEmpty =&gt; !iterator.moveNext();
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="iterator">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterator.html">Iterator</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt;         <strong>iterator</strong> <a class="anchor-link"
+            href="#iterator"
+            title="Permalink to Int16List.iterator">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterator</code> that iterates over this <code>Iterable</code> object.</p>
+<pre class="source">
+Iterator&lt;E&gt; get iterator;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="last">
+<button class="show-code">Code</button>
+final <a href="../dart_scalarlist/Int16List.html">E</a>         <strong>last</strong> <a class="anchor-link"
+            href="#last"
+            title="Permalink to Int16List.last">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the last element.</p>
+<p>If <code>this</code> is empty throws a <code>StateError</code>.</p>
+<pre class="source">
+E get last {
+ Iterator it = iterator;
+ if (!it.moveNext()) {
+   throw new StateError("No elements");
+ }
+ E result;
+ do {
+   result = it.current;
+ } while(it.moveNext());
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="length">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>get length</strong> <a class="anchor-link" href="#length"
+              title="Permalink to Int16List.get length">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the number of elements in <code>this</code>.</p>
+<p>Counting all elements may be involve running through all elements and can
+therefore be slow.</p>
+<pre class="source">
+int get length {
+ int count = 0;
+ Iterator it = iterator;
+ while (it.moveNext()) {
+   count++;
+ }
+ return count;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="length=">
+abstract void <strong>set length</strong>(<a href="../dart_core/int.html">int</a> newLength) <a class="anchor-link" href="#length="
+              title="Permalink to Int16List.set length">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Changes the length of the list. If 
+<span class="param">newLength</span> is greater than
+the current <code>length</code>, entries are initialized to <code>null</code>. Throws
+an <code>UnsupportedError</code> if the list is not extendable.</p>
+</div>
+</div>
+<div class="field inherited"><h4 id="reversed">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt;         <strong>reversed</strong> <a class="anchor-link"
+            href="#reversed"
+            title="Permalink to Int16List.reversed">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> of the elements of this <code>List</code> in reverse order.</p>
+<pre class="source">
+Iterable&lt;E&gt; get reversed;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="single">
+<button class="show-code">Code</button>
+final <a href="../dart_scalarlist/Int16List.html">E</a>         <strong>single</strong> <a class="anchor-link"
+            href="#single"
+            title="Permalink to Int16List.single">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the single element in <code>this</code>.</p>
+<p>If <code>this</code> is empty or has more than one element throws a <code>StateError</code>.</p>
+<pre class="source">
+E get single {
+ Iterator it = iterator;
+ if (!it.moveNext()) throw new StateError("No elements");
+ E result = it.current;
+ if (it.moveNext()) throw new StateError("More than one element");
+ return result;
+}
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Operators</h3>
+<div class="method inherited"><h4 id="[]">
+abstract <a href="../dart_scalarlist/Int16List.html">E</a> <strong>operator []</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#[]"
+              title="Permalink to Int16List.operator []">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Returns the element at the given 
+<span class="param">index</span> in the list or throws
+an <code>RangeError</code> if 
+<span class="param">index</span> is out of bounds.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="[]=">
+abstract void <strong>operator []=</strong>(<a href="../dart_core/int.html">int</a> index, <a href="../dart_scalarlist/Int16List.html">E</a> value) <a class="anchor-link" href="#[]="
+              title="Permalink to Int16List.operator []=">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Sets the entry at the given 
+<span class="param">index</span> in the list to 
+<span class="param">value</span>.
+Throws an <code>RangeError</code> if 
+<span class="param">index</span> is out of bounds.</p>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="add">
+abstract void <strong>add</strong>(<a href="../dart_scalarlist/Int16List.html">E</a> value) <a class="anchor-link" href="#add"
+              title="Permalink to Int16List.add">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Adds 
+<span class="param">value</span> at the end of the list, extending the length by
+one. Throws an <code>UnsupportedError</code> if the list is not
+extendable.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="addAll">
+abstract void <strong>addAll</strong>(<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; iterable) <a class="anchor-link" href="#addAll"
+              title="Permalink to Int16List.addAll">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Appends all elements of the 
+<span class="param">iterable</span> to the end of this list.
+Extends the length of the list by the number of elements in 
+<span class="param">iterable</span>.
+Throws an <code>UnsupportedError</code> if this list is not extensible.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="addLast">
+abstract void <strong>addLast</strong>(<a href="../dart_scalarlist/Int16List.html">E</a> value) <a class="anchor-link" href="#addLast"
+              title="Permalink to Int16List.addLast">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Adds 
+<span class="param">value</span> at the end of the list, extending the length by
+one. Throws an <code>UnsupportedError</code> if the list is not
+extendable.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="any">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>any</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#any"
+              title="Permalink to Int16List.any">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns true if one element of this collection satisfies the
+predicate 
+<span class="param">f</span>. Returns false otherwise.</p>
+<pre class="source">
+bool any(bool f(E element)) {
+ for (E element in this) {
+   if (f(element)) return true;
+ }
+ return false;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="asByteArray">
+abstract <a href="../dart_scalarlist/ByteArray.html">ByteArray</a> <strong>asByteArray</strong>([<a href="../dart_core/int.html">int</a> start, <a href="../dart_core/int.html">int</a> length]) <a class="anchor-link" href="#asByteArray"
+              title="Permalink to Int16List.asByteArray">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_scalarlist/ByteArrayViewable.html">ByteArrayViewable</a> </div><div class="doc">
+<p>Returns the byte array view of this object. This view allows the
+byte representation of the object to be read and written directly.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="bytesPerElement">
+abstract <a href="../dart_core/int.html">int</a> <strong>bytesPerElement</strong>() <a class="anchor-link" href="#bytesPerElement"
+              title="Permalink to Int16List.bytesPerElement">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_scalarlist/ByteArrayViewable.html">ByteArrayViewable</a> </div><div class="doc">
+<p>Returns the number of bytes in the representation of each element in
+this list, or the number bytes in the representation of the entire
+object if it is not a list.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="clear">
+abstract void <strong>clear</strong>() <a class="anchor-link" href="#clear"
+              title="Permalink to Int16List.clear">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Removes all elements in the list.</p>
+<p>The length of the list becomes zero.
+Throws an <code>UnsupportedError</code>, and retains all elements, if the
+length of the list cannot be changed.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="contains">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>contains</strong>(<a href="../dart_scalarlist/Int16List.html">E</a> element) <a class="anchor-link" href="#contains"
+              title="Permalink to Int16List.contains">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Check whether the collection contains an element equal to 
+<span class="param">element</span>.</p>
+<pre class="source">
+bool contains(E element) {
+ for (E e in this) {
+   if (e == element) return true;
+ }
+ return false;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="elementAt">
+<button class="show-code">Code</button>
+<a href="../dart_scalarlist/Int16List.html">E</a> <strong>elementAt</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#elementAt"
+              title="Permalink to Int16List.elementAt">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the 
+<span class="param">index</span>th element.</p>
+<p>If [this] [Iterable] has fewer than 
+<span class="param">index</span> elements throws a
+<code>RangeError</code>.</p>
+<p>Note: if <code>this</code> does not have a deterministic iteration order then the
+function may simply return any element without any iteration if there are
+at least 
+<span class="param">index</span> elements in <code>this</code>.</p>
+<pre class="source">
+E elementAt(int index) {
+ if (index is! int || index &lt; 0) throw new RangeError.value(index);
+ int remaining = index;
+ for (E element in this) {
+   if (remaining == 0) return element;
+   remaining--;
+ }
+ throw new RangeError.value(index);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="every">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>every</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#every"
+              title="Permalink to Int16List.every">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns true if every elements of this collection satisify the
+predicate 
+<span class="param">f</span>. Returns false otherwise.</p>
+<pre class="source">
+bool every(bool f(E element)) {
+ for (E element in this) {
+   if (!f(element)) return false;
+ }
+ return true;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="expand">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>expand</strong>(<a href="../dart_core/Iterable.html">Iterable</a> f(<a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#expand"
+              title="Permalink to Int16List.expand">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Expand each element of this <code>Iterable</code> into zero or more elements.</p>
+<p>The resulting Iterable will run through the elements returned
+by 
+<span class="param">f</span> for each element of this, in order.</p>
+<p>The returned <code>Iterable</code> is lazy, and will call 
+<span class="param">f</span> for each element
+of this every time it's iterated.</p>
+<pre class="source">
+Iterable expand(Iterable f(E element)) =&gt;
+   new ExpandIterable&lt;E, dynamic&gt;(this, f);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="firstMatching">
+<button class="show-code">Code</button>
+<a href="../dart_scalarlist/Int16List.html">E</a> <strong>firstMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_scalarlist/Int16List.html">E</a> value), {<a href="../dart_scalarlist/Int16List.html">E</a> orElse()}) <a class="anchor-link" href="#firstMatching"
+              title="Permalink to Int16List.firstMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the first element that satisfies the given predicate <code>f</code>.</p>
+<p>If none matches, the result of invoking the 
+<span class="param">orElse</span> function is
+returned. By default, when 
+<span class="param">orElse</span> is <code>null</code>, a <code>StateError</code> is
+thrown.</p>
+<pre class="source">
+E firstMatching(bool test(E value), { E orElse() }) {
+ // TODO(floitsch): check that arguments are of correct type?
+ for (E element in this) {
+   if (test(element)) return element;
+ }
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="forEach">
+<button class="show-code">Code</button>
+void <strong>forEach</strong>(void f(<a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#forEach"
+              title="Permalink to Int16List.forEach">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Applies the function 
+<span class="param">f</span> to each element of this collection.</p>
+<pre class="source">
+void forEach(void f(E element)) {
+ for (E element in this) f(element);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="getRange">
+abstract <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; <strong>getRange</strong>(<a href="../dart_core/int.html">int</a> start, <a href="../dart_core/int.html">int</a> length) <a class="anchor-link" href="#getRange"
+              title="Permalink to Int16List.getRange">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Returns a new list containing 
+<span class="param">length</span> elements from the list,
+starting at  
+<span class="param">start</span>.
+Returns an empty list if 
+<span class="param">length</span> is 0.
+Throws an <code>ArgumentError</code> if 
+<span class="param">length</span> is negative.
+Throws an <code>RangeError</code> if 
+<span class="param">start</span> or
+<code>start + length - 1</code> are out of range.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="indexOf">
+abstract <a href="../dart_core/int.html">int</a> <strong>indexOf</strong>(<a href="../dart_scalarlist/Int16List.html">E</a> element, [<a href="../dart_core/int.html">int</a> start = 0]) <a class="anchor-link" href="#indexOf"
+              title="Permalink to Int16List.indexOf">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Returns the first index of 
+<span class="param">element</span> in the list.</p>
+<p>Searches the list from index 
+<span class="param">start</span> to the length of the list.
+The first time an element <code>e</code> is encountered so that <code>e == element</code>,
+the index of <code>e</code> is returned.
+Returns -1 if 
+<span class="param">element</span> is not found.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="insertRange">
+abstract void <strong>insertRange</strong>(<a href="../dart_core/int.html">int</a> start, <a href="../dart_core/int.html">int</a> length, [<a href="../dart_scalarlist/Int16List.html">E</a> fill]) <a class="anchor-link" href="#insertRange"
+              title="Permalink to Int16List.insertRange">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Inserts a new range into the list, starting from 
+<span class="param">start</span> to
+<code>start + length - 1</code>. The entries are filled with 
+<span class="param">fill</span>.
+Throws an <code>UnsupportedError</code> if the list is
+not extendable.
+If 
+<span class="param">length</span> is 0, this method does not do anything.
+If 
+<span class="param">start</span> is the length of the list, this method inserts the
+range at the end of the list.
+Throws an <code>ArgumentError</code> if 
+<span class="param">length</span> is negative.
+Throws an <code>RangeError</code> if 
+<span class="param">start</span> is negative or if
+
+<span class="param">start</span> is greater than the length of the list.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="join">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>join</strong>([<a href="../dart_core/String.html">String</a> separator]) <a class="anchor-link" href="#join"
+              title="Permalink to Int16List.join">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Convert each element to a <code>String</code> and concatenate the strings.</p>
+<p>Converts each element to a <code>String</code> by calling <code>Object.toString</code> on it.
+Then concatenates the strings, optionally separated by the 
+<span class="param">separator</span>
+string.</p>
+<pre class="source">
+String join([String separator]) {
+ Iterator&lt;E&gt; iterator = this.iterator;
+ if (!iterator.moveNext()) return "";
+ StringBuffer buffer = new StringBuffer();
+ if (separator == null || separator == "") {
+   do {
+     buffer.add("${iterator.current}");
+   } while (iterator.moveNext());
+ } else {
+   buffer.add("${iterator.current}");
+   while (iterator.moveNext()) {
+     buffer.add(separator);
+     buffer.add("${iterator.current}");
+   }
+ }
+ return buffer.toString();
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="lastIndexOf">
+abstract <a href="../dart_core/int.html">int</a> <strong>lastIndexOf</strong>(<a href="../dart_scalarlist/Int16List.html">E</a> element, [<a href="../dart_core/int.html">int</a> start]) <a class="anchor-link" href="#lastIndexOf"
+              title="Permalink to Int16List.lastIndexOf">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Returns the last index of 
+<span class="param">element</span> in the list.</p>
+<p>Searches the list backwards from index <a href="inclusive">start</a> to 0.
+The first time an element <code>e</code> is encountered so that <code>e == element</code>,
+the index of <code>e</code> is returned.
+If start is not provided, it defaults to <code>this.length - 1</code> .
+Returns -1 if 
+<span class="param">element</span> is not found.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="lastMatching">
+<button class="show-code">Code</button>
+<a href="../dart_scalarlist/Int16List.html">E</a> <strong>lastMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_scalarlist/Int16List.html">E</a> value), {<a href="../dart_scalarlist/Int16List.html">E</a> orElse()}) <a class="anchor-link" href="#lastMatching"
+              title="Permalink to Int16List.lastMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the last element that satisfies the given predicate <code>f</code>.</p>
+<p>If none matches, the result of invoking the 
+<span class="param">orElse</span> function is
+returned. By default, when 
+<span class="param">orElse</span> is <code>null</code>, a <code>StateError</code> is
+thrown.</p>
+<pre class="source">
+E lastMatching(bool test(E value), {E orElse()}) {
+ // TODO(floitsch): check that arguments are of correct type?
+ E result = null;
+ bool foundMatching = false;
+ for (E element in this) {
+   if (test(element)) {
+     result = element;
+     foundMatching = true;
+   }
+ }
+ if (foundMatching) return result;
+ if (orElse != null) return orElse();
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="lengthInBytes">
+abstract <a href="../dart_core/int.html">int</a> <strong>lengthInBytes</strong>() <a class="anchor-link" href="#lengthInBytes"
+              title="Permalink to Int16List.lengthInBytes">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_scalarlist/ByteArrayViewable.html">ByteArrayViewable</a> </div><div class="doc">
+<p>Returns the length of this view, in bytes.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="map">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a> <strong>map</strong>(f(<a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#map"
+              title="Permalink to Int16List.map">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns a lazy <code>Iterable</code> where each element <code>e</code> of <code>this</code> is replaced
+by the result of <code>f(e)</code>.</p>
+<p>This method returns a view of the mapped elements. As long as the
+returned <code>Iterable</code> is not iterated over, the supplied function 
+<span class="param">f</span> will
+not be invoked. The transformed elements will not be cached. Iterating
+multiple times over the the returned <code>Iterable</code> will invoke the supplied
+function 
+<span class="param">f</span> multiple times on the same element.</p>
+<pre class="source">
+Iterable map(f(E element)) =&gt; new MappedIterable&lt;E, dynamic&gt;(this, f);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="max">
+<button class="show-code">Code</button>
+<a href="../dart_scalarlist/Int16List.html">E</a> <strong>max</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_scalarlist/Int16List.html">E</a> a, <a href="../dart_scalarlist/Int16List.html">E</a> b)]) <a class="anchor-link" href="#max"
+              title="Permalink to Int16List.max">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Find the largest element in the iterable.</p>
+<p>Returns null if the iterable is empty.
+Otherwise returns an element <code>x</code> of this <code>Iterable</code> so that
+<code>x</code> is not smaller than <code>y</code> (that is, <code>compare(x, y) &gt;= 0</code>) for all
+other elements <code>y</code> in the iterable.</p>
+<p>The 
+<span class="param">compare</span> function must be a proper [Comparator<T>]. If a function is
+not provided, 
+<span class="param">compare</span> defaults to <code>Comparable.compare</code>.</p>
+<pre class="source">
+E max([int compare(E a, E b)]) {
+ if (compare == null) compare = Comparable.compare;
+ Iterator it = iterator;
+ if (!it.moveNext()) return null;
+ E max = it.current;
+ while (it.moveNext()) {
+   E current = it.current;
+   if (compare(max, current) &lt; 0) max = current;
+ }
+ return max;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="min">
+<button class="show-code">Code</button>
+<a href="../dart_scalarlist/Int16List.html">E</a> <strong>min</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_scalarlist/Int16List.html">E</a> a, <a href="../dart_scalarlist/Int16List.html">E</a> b)]) <a class="anchor-link" href="#min"
+              title="Permalink to Int16List.min">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Find the least element in the iterable.</p>
+<p>Returns null if the iterable is empty.
+Otherwise returns an element <code>x</code> of this <code>Iterable</code> so that
+<code>x</code> is not greater than <code>y</code> (that is, <code>compare(x, y) &lt;= 0</code>) for all
+other elements <code>y</code> in the iterable.</p>
+<p>The 
+<span class="param">compare</span> function must be a proper [Comparator<T>]. If a function is
+not provided, 
+<span class="param">compare</span> defaults to <code>Comparable.compare</code>.</p>
+<pre class="source">
+E min([int compare(E a, E b)]) {
+ if (compare == null) compare = Comparable.compare;
+ Iterator it = iterator;
+ if (!it.moveNext()) return null;
+ E min = it.current;
+ while (it.moveNext()) {
+   E current = it.current;
+   if (compare(min, current) &gt; 0) min = current;
+ }
+ return min;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="reduce">
+<button class="show-code">Code</button>
+<strong>reduce</strong>(initialValue, combine(previousValue, <a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#reduce"
+              title="Permalink to Int16List.reduce">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Reduce a collection to a single value by iteratively combining each element
+of the collection with an existing value using the provided function.
+Use 
+<span class="param">initialValue</span> as the initial value, and the function 
+<span class="param">combine</span> to
+create a new value from the previous one and an element.</p>
+<p>Example of calculating the sum of a collection:</p>
+<p>  collection.reduce(0, (prev, element) => prev + element);</p>
+<pre class="source">
+dynamic reduce(var initialValue,
+              dynamic combine(var previousValue, E element)) {
+ var value = initialValue;
+ for (E element in this) value = combine(value, element);
+ return value;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="remove">
+abstract void <strong>remove</strong>(<a href="../dart_core/Object.html">Object</a> element) <a class="anchor-link" href="#remove"
+              title="Permalink to Int16List.remove">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Collection.html">Collection</a> </div><div class="doc">
+<p>Removes an instance of 
+<span class="param">element</span> from this collection.</p>
+<p>This removes only one instance of the element for collections that can
+contain the same element more than once (e.g., <code>List</code>). Which instance
+is removed is decided by the collection.</p>
+<p>Has no effect if the elements is not in this collection.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="removeAll">
+<button class="show-code">Code</button>
+void <strong>removeAll</strong>(<a href="../dart_core/Iterable.html">Iterable</a> elements) <a class="anchor-link" href="#removeAll"
+              title="Permalink to Int16List.removeAll">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Collection.html">Collection</a> </div><div class="doc">
+<p>Removes all of 
+<span class="param">elements</span> from this collection.</p>
+<p>Equivalent to calling <code>remove</code> once for each element in
+
+<span class="param">elements</span>, but may be faster for some collections.</p>
+<pre class="source">
+void removeAll(Iterable elements) {
+ IterableMixinWorkaround.removeAll(this, elements);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="removeAt">
+abstract <a href="../dart_scalarlist/Int16List.html">E</a> <strong>removeAt</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#removeAt"
+              title="Permalink to Int16List.removeAt">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Removes the element at position
+<span class="param">index</span> from the list.</p>
+<p>This reduces the length of the list by one and moves all later elements
+down by one position.
+Returns the removed element.
+Throws an <code>ArgumentError</code> if 
+<span class="param">index</span> is not an <code>int</code>.
+Throws an <code>RangeError</code> if the 
+<span class="param">index</span> does not point inside
+the list.
+Throws an <code>UnsupportedError</code>, and doesn't remove the element,
+if the length of the list cannot be changed.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="removeLast">
+abstract <a href="../dart_scalarlist/Int16List.html">E</a> <strong>removeLast</strong>() <a class="anchor-link" href="#removeLast"
+              title="Permalink to Int16List.removeLast">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Pops and returns the last element of the list.
+Throws a <code>UnsupportedError</code> if the length of the
+list cannot be changed.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="removeMatching">
+<button class="show-code">Code</button>
+void <strong>removeMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#removeMatching"
+              title="Permalink to Int16List.removeMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Collection.html">Collection</a> </div><div class="doc">
+<p>Removes all elements of this collection that satisfy 
+<span class="param">test</span>.</p>
+<p>An elements <code>e</code> satisfies 
+<span class="param">test</span> if <code>test(e)</code> is true.</p>
+<pre class="source">
+void removeMatching(bool test(E element)) {
+ IterableMixinWorkaround.removeMatching(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="removeRange">
+abstract void <strong>removeRange</strong>(<a href="../dart_core/int.html">int</a> start, <a href="../dart_core/int.html">int</a> length) <a class="anchor-link" href="#removeRange"
+              title="Permalink to Int16List.removeRange">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Removes 
+<span class="param">length</span> elements from the list, beginning at 
+<span class="param">start</span>.
+Throws an <code>UnsupportedError</code> if the list is
+not extendable.
+If 
+<span class="param">length</span> is 0, this method does not do anything.
+Throws an <code>ArgumentError</code> if 
+<span class="param">length</span> is negative.
+Throws an <code>RangeError</code> if 
+<span class="param">start</span> or
+<code>:start + length: - 1</code> are out of range.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="retainAll">
+<button class="show-code">Code</button>
+void <strong>retainAll</strong>(<a href="../dart_core/Iterable.html">Iterable</a> elements) <a class="anchor-link" href="#retainAll"
+              title="Permalink to Int16List.retainAll">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Collection.html">Collection</a> </div><div class="doc">
+<p>Removes all elements of this collection that are not
+in 
+<span class="param">elements</span>.</p>
+<p>For <code>Set</code>s, this is the intersection of the two original sets.</p>
+<pre class="source">
+void retainAll(Iterable elements) {
+ IterableMixinWorkaround.retainAll(this, elements);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="retainMatching">
+<button class="show-code">Code</button>
+void <strong>retainMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#retainMatching"
+              title="Permalink to Int16List.retainMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Collection.html">Collection</a> </div><div class="doc">
+<p>Removes all elements of this collection that fail to satisfy 
+<span class="param">test</span>.</p>
+<p>An elements <code>e</code> satisfies 
+<span class="param">test</span> if <code>test(e)</code> is true.</p>
+<pre class="source">
+void retainMatching(bool test(E element)) {
+ IterableMixinWorkaround.retainMatching(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="setRange">
+abstract void <strong>setRange</strong>(<a href="../dart_core/int.html">int</a> start, <a href="../dart_core/int.html">int</a> length, <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; from, [<a href="../dart_core/int.html">int</a> startFrom]) <a class="anchor-link" href="#setRange"
+              title="Permalink to Int16List.setRange">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Copies 
+<span class="param">length</span> elements of 
+<span class="param">from</span>, starting
+at 
+<span class="param">startFrom</span>, into the list, starting at 
+<span class="param">start</span>.
+If 
+<span class="param">length</span> is 0, this method does not do anything.
+Throws an <code>ArgumentError</code> if 
+<span class="param">length</span> is negative.
+Throws an <code>RangeError</code> if 
+<span class="param">start</span> or
+<code>start + length - 1</code> are out of range for <code>this</code>, or if
+
+<span class="param">startFrom</span> or <code>startFrom + length - 1</code> are out of range for 
+<span class="param">from</span>.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="singleMatching">
+<button class="show-code">Code</button>
+<a href="../dart_scalarlist/Int16List.html">E</a> <strong>singleMatching</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_scalarlist/Int16List.html">E</a> value)) <a class="anchor-link" href="#singleMatching"
+              title="Permalink to Int16List.singleMatching">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns the single element that satisfies <code>f</code>. If no or more than one
+element match then a <code>StateError</code> is thrown.</p>
+<pre class="source">
+E singleMatching(bool test(E value)) {
+ // TODO(floitsch): check that argument is of correct type?
+ E result = null;
+ bool foundMatching = false;
+ for (E element in this) {
+   if (test(element)) {
+     if (foundMatching) {
+       throw new StateError("More than one matching element");
+     }
+     result = element;
+     foundMatching = true;
+   }
+ }
+ if (foundMatching) return result;
+ throw new StateError("No matching element");
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="skip">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; <strong>skip</strong>(<a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#skip"
+              title="Permalink to Int16List.skip">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that skips the first 
+<span class="param">n</span> elements.</p>
+<p>If <code>this</code> has fewer than 
+<span class="param">n</span> elements, then the resulting <code>Iterable</code> will
+be empty.</p>
+<pre class="source">
+Iterable&lt;E&gt; skip(int n) {
+ return new SkipIterable&lt;E&gt;(this, n);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="skipWhile">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; <strong>skipWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_scalarlist/Int16List.html">E</a> value)) <a class="anchor-link" href="#skipWhile"
+              title="Permalink to Int16List.skipWhile">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that skips elements while 
+<span class="param">test</span> is satisfied.</p>
+<p>The filtering happens lazily. Every new <code>Iterator</code> of the returned
+<code>Iterable</code> will iterate over all elements of <code>this</code>.
+As long as the iterator's elements do not satisfy 
+<span class="param">test</span> they are
+discarded. Once an element satisfies the 
+<span class="param">test</span> the iterator stops testing
+and uses every element unconditionally.</p>
+<pre class="source">
+Iterable&lt;E&gt; skipWhile(bool test(E value)) {
+ return new SkipWhileIterable&lt;E&gt;(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="sort">
+abstract void <strong>sort</strong>([<a href="../dart_core/int.html">int</a> compare(<a href="../dart_scalarlist/Int16List.html">E</a> a, <a href="../dart_scalarlist/Int16List.html">E</a> b)]) <a class="anchor-link" href="#sort"
+              title="Permalink to Int16List.sort">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/List.html">List</a> </div><div class="doc">
+<p>Sorts the list according to the order specified by the 
+<span class="param">compare</span> function.</p>
+<p>The 
+<span class="param">compare</span> function must act as a <code>Comparator</code>.
+The default <code>List</code> implementations use <code>Comparable.compare</code> if
+
+<span class="param">compare</span> is omitted.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="take">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; <strong>take</strong>(<a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#take"
+              title="Permalink to Int16List.take">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> with at most 
+<span class="param">n</span> elements.</p>
+<p>The returned <code>Iterable</code> may contain fewer than 
+<span class="param">n</span> elements, if <code>this</code>
+contains fewer than 
+<span class="param">n</span> elements.</p>
+<pre class="source">
+Iterable&lt;E&gt; take(int n) {
+ return new TakeIterable&lt;E&gt;(this, n);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="takeWhile">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; <strong>takeWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_scalarlist/Int16List.html">E</a> value)) <a class="anchor-link" href="#takeWhile"
+              title="Permalink to Int16List.takeWhile">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns an <code>Iterable</code> that stops once 
+<span class="param">test</span> is not satisfied anymore.</p>
+<p>The filtering happens lazily. Every new <code>Iterator</code> of the returned
+<code>Iterable</code> will start iterating over the elements of <code>this</code>.
+When the iterator encounters an element <code>e</code> that does not satisfy 
+<span class="param">test</span>,
+it discards <code>e</code> and moves into the finished state. That is, it will not
+ask or provide any more elements.</p>
+<pre class="source">
+Iterable&lt;E&gt; takeWhile(bool test(E value)) {
+ return new TakeWhileIterable&lt;E&gt;(this, test);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toList">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; <strong>toList</strong>() <a class="anchor-link" href="#toList"
+              title="Permalink to Int16List.toList">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<pre class="source">
+List&lt;E&gt; toList() =&gt; new List&lt;E&gt;.from(this);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toSet">
+<button class="show-code">Code</button>
+<a href="../dart_core/Set.html">Set</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; <strong>toSet</strong>() <a class="anchor-link" href="#toSet"
+              title="Permalink to Int16List.toSet">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<pre class="source">
+Set&lt;E&gt; toSet() =&gt; new Set&lt;E&gt;.from(this);
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="where">
+<button class="show-code">Code</button>
+<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_scalarlist/Int16List.html">E</a>&gt; <strong>where</strong>(<a href="../dart_core/bool.html">bool</a> f(<a href="../dart_scalarlist/Int16List.html">E</a> element)) <a class="anchor-link" href="#where"
+              title="Permalink to Int16List.where">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Iterable.html">Iterable</a> </div><div class="doc">
+<p>Returns a lazy <code>Iterable</code> with all elements that satisfy the
+predicate 
+<span class="param">f</span>.</p>
+<p>This method returns a view of the mapped elements. As long as the
+returned <code>Iterable</code> is not iterated over, the supplied function 
+<span class="param">f</span> will
+not be invoked. Iterating will not cache results, and thus iterating
+multiple times over the the returned <code>Iterable</code> will invoke the supplied
+function 
+<span class="param">f</span> multiple times on the same element.</p>
+<pre class="source">
+Iterable&lt;E&gt; where(bool f(E element)) =&gt; new WhereIterable&lt;E&gt;(this, f);
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:15.037</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

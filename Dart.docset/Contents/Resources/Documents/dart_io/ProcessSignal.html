@@ -1,0 +1,515 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ProcessSignal class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="ProcessSignal">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="../dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><a href="../dart_io/IOSink.html"><div class="icon-class"></div>IOSink&lt;T&gt;</a></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="../dart_io/ProcessOptions.html"><div class="icon-class"></div>ProcessOptions</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><div class="icon-class"></div><strong>ProcessSignal</strong></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/DirectoryIOException.html"><div class="icon-exception"></div>DirectoryIOException</a></li>
+<li><a href="../dart_io/FileIOException.html"><div class="icon-exception"></div>FileIOException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/HttpParserException.html"><div class="icon-exception"></div>HttpParserException</a></li>
+<li><a href="../dart_io/MimeParserException.html"><div class="icon-exception"></div>MimeParserException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/RedirectLimitExceededException.html"><div class="icon-exception"></div>RedirectLimitExceededException</a></li>
+<li><a href="../dart_io/RedirectLoopException.html"><div class="icon-exception"></div>RedirectLoopException</a></li>
+<li><a href="../dart_io/SocketIOException.html"><div class="icon-exception"></div>SocketIOException</a></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ProcessSignal</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>On Posix systems, <a class="crossref" href="../dart_io/ProcessSignal.html">ProcessSignal</a> is used to send a specific signal
+to a child process, see <code>Process.kill</code>.</p>
+<pre class="source">
+class ProcessSignal {
+ static const ProcessSignal SIGHUP = const ProcessSignal._signal(1);
+ static const ProcessSignal SIGINT = const ProcessSignal._signal(2);
+ static const ProcessSignal SIGQUIT = const ProcessSignal._signal(3);
+ static const ProcessSignal SIGILL = const ProcessSignal._signal(4);
+ static const ProcessSignal SIGTRAP = const ProcessSignal._signal(5);
+ static const ProcessSignal SIGABRT = const ProcessSignal._signal(6);
+ static const ProcessSignal SIGBUS = const ProcessSignal._signal(7);
+ static const ProcessSignal SIGFPE = const ProcessSignal._signal(8);
+ static const ProcessSignal SIGKILL = const ProcessSignal._signal(9);
+ static const ProcessSignal SIGUSR1 = const ProcessSignal._signal(10);
+ static const ProcessSignal SIGSEGV = const ProcessSignal._signal(11);
+ static const ProcessSignal SIGUSR2 = const ProcessSignal._signal(12);
+ static const ProcessSignal SIGPIPE = const ProcessSignal._signal(13);
+ static const ProcessSignal SIGALRM = const ProcessSignal._signal(14);
+ static const ProcessSignal SIGTERM = const ProcessSignal._signal(15);
+ static const ProcessSignal SIGCHLD = const ProcessSignal._signal(17);
+ static const ProcessSignal SIGCONT = const ProcessSignal._signal(18);
+ static const ProcessSignal SIGSTOP = const ProcessSignal._signal(19);
+ static const ProcessSignal SIGTSTP = const ProcessSignal._signal(20);
+ static const ProcessSignal SIGTTIN = const ProcessSignal._signal(21);
+ static const ProcessSignal SIGTTOU = const ProcessSignal._signal(22);
+ static const ProcessSignal SIGURG = const ProcessSignal._signal(23);
+ static const ProcessSignal SIGXCPU = const ProcessSignal._signal(24);
+ static const ProcessSignal SIGXFSZ = const ProcessSignal._signal(25);
+ static const ProcessSignal SIGVTALRM = const ProcessSignal._signal(26);
+ static const ProcessSignal SIGPROF = const ProcessSignal._signal(27);
+ static const ProcessSignal SIGPOLL = const ProcessSignal._signal(29);
+ static const ProcessSignal SIGSYS = const ProcessSignal._signal(31);
+
+ const ProcessSignal._signal(int this._signalNumber);
+ final int _signalNumber;
+}
+</pre>
+</div>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="SIGABRT">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGABRT</strong> <a class="anchor-link"
+            href="#SIGABRT"
+            title="Permalink to ProcessSignal.SIGABRT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGABRT = const ProcessSignal._signal(6)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGALRM">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGALRM</strong> <a class="anchor-link"
+            href="#SIGALRM"
+            title="Permalink to ProcessSignal.SIGALRM">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGALRM = const ProcessSignal._signal(14)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGBUS">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGBUS</strong> <a class="anchor-link"
+            href="#SIGBUS"
+            title="Permalink to ProcessSignal.SIGBUS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGBUS = const ProcessSignal._signal(7)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGCHLD">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGCHLD</strong> <a class="anchor-link"
+            href="#SIGCHLD"
+            title="Permalink to ProcessSignal.SIGCHLD">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGCHLD = const ProcessSignal._signal(17)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGCONT">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGCONT</strong> <a class="anchor-link"
+            href="#SIGCONT"
+            title="Permalink to ProcessSignal.SIGCONT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGCONT = const ProcessSignal._signal(18)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGFPE">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGFPE</strong> <a class="anchor-link"
+            href="#SIGFPE"
+            title="Permalink to ProcessSignal.SIGFPE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGFPE = const ProcessSignal._signal(8)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGHUP">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGHUP</strong> <a class="anchor-link"
+            href="#SIGHUP"
+            title="Permalink to ProcessSignal.SIGHUP">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGHUP = const ProcessSignal._signal(1)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGILL">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGILL</strong> <a class="anchor-link"
+            href="#SIGILL"
+            title="Permalink to ProcessSignal.SIGILL">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGILL = const ProcessSignal._signal(4)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGINT">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGINT</strong> <a class="anchor-link"
+            href="#SIGINT"
+            title="Permalink to ProcessSignal.SIGINT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGINT = const ProcessSignal._signal(2)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGKILL">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGKILL</strong> <a class="anchor-link"
+            href="#SIGKILL"
+            title="Permalink to ProcessSignal.SIGKILL">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGKILL = const ProcessSignal._signal(9)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGPIPE">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGPIPE</strong> <a class="anchor-link"
+            href="#SIGPIPE"
+            title="Permalink to ProcessSignal.SIGPIPE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGPIPE = const ProcessSignal._signal(13)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGPOLL">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGPOLL</strong> <a class="anchor-link"
+            href="#SIGPOLL"
+            title="Permalink to ProcessSignal.SIGPOLL">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGPOLL = const ProcessSignal._signal(29)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGPROF">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGPROF</strong> <a class="anchor-link"
+            href="#SIGPROF"
+            title="Permalink to ProcessSignal.SIGPROF">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGPROF = const ProcessSignal._signal(27)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGQUIT">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGQUIT</strong> <a class="anchor-link"
+            href="#SIGQUIT"
+            title="Permalink to ProcessSignal.SIGQUIT">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGQUIT = const ProcessSignal._signal(3)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGSEGV">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGSEGV</strong> <a class="anchor-link"
+            href="#SIGSEGV"
+            title="Permalink to ProcessSignal.SIGSEGV">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGSEGV = const ProcessSignal._signal(11)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGSTOP">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGSTOP</strong> <a class="anchor-link"
+            href="#SIGSTOP"
+            title="Permalink to ProcessSignal.SIGSTOP">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGSTOP = const ProcessSignal._signal(19)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGSYS">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGSYS</strong> <a class="anchor-link"
+            href="#SIGSYS"
+            title="Permalink to ProcessSignal.SIGSYS">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGSYS = const ProcessSignal._signal(31)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGTERM">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGTERM</strong> <a class="anchor-link"
+            href="#SIGTERM"
+            title="Permalink to ProcessSignal.SIGTERM">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGTERM = const ProcessSignal._signal(15)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGTRAP">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGTRAP</strong> <a class="anchor-link"
+            href="#SIGTRAP"
+            title="Permalink to ProcessSignal.SIGTRAP">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGTRAP = const ProcessSignal._signal(5)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGTSTP">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGTSTP</strong> <a class="anchor-link"
+            href="#SIGTSTP"
+            title="Permalink to ProcessSignal.SIGTSTP">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGTSTP = const ProcessSignal._signal(20)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGTTIN">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGTTIN</strong> <a class="anchor-link"
+            href="#SIGTTIN"
+            title="Permalink to ProcessSignal.SIGTTIN">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGTTIN = const ProcessSignal._signal(21)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGTTOU">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGTTOU</strong> <a class="anchor-link"
+            href="#SIGTTOU"
+            title="Permalink to ProcessSignal.SIGTTOU">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGTTOU = const ProcessSignal._signal(22)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGURG">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGURG</strong> <a class="anchor-link"
+            href="#SIGURG"
+            title="Permalink to ProcessSignal.SIGURG">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGURG = const ProcessSignal._signal(23)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGUSR1">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGUSR1</strong> <a class="anchor-link"
+            href="#SIGUSR1"
+            title="Permalink to ProcessSignal.SIGUSR1">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGUSR1 = const ProcessSignal._signal(10)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGUSR2">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGUSR2</strong> <a class="anchor-link"
+            href="#SIGUSR2"
+            title="Permalink to ProcessSignal.SIGUSR2">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGUSR2 = const ProcessSignal._signal(12)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGVTALRM">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGVTALRM</strong> <a class="anchor-link"
+            href="#SIGVTALRM"
+            title="Permalink to ProcessSignal.SIGVTALRM">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGVTALRM = const ProcessSignal._signal(26)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGXCPU">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGXCPU</strong> <a class="anchor-link"
+            href="#SIGXCPU"
+            title="Permalink to ProcessSignal.SIGXCPU">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGXCPU = const ProcessSignal._signal(24)
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SIGXFSZ">
+<button class="show-code">Code</button>
+const <a href="../dart_io/ProcessSignal.html">ProcessSignal</a>         <strong>SIGXFSZ</strong> <a class="anchor-link"
+            href="#SIGXFSZ"
+            title="Permalink to ProcessSignal.SIGXFSZ">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SIGXFSZ = const ProcessSignal._signal(25)
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:07.853</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

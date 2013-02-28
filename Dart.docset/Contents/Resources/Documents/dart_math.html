@@ -1,0 +1,452 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>dart:math Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:math">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="index.html">Dart API Reference</a>
+         &rsaquo; <a href="dart_math.html">dart:math</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="args.html">args</a></h2><h2><div class="icon-library"></div><a href="dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><strong>dart:math</strong></h2><ul class="icon">
+<li><a href="dart_math/Random.html"><div class="icon-class"></div>Random</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="unittest.html">unittest</a></h2></div>
+<div class="content">
+<h2><strong>dart:math</strong> library</h2>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="E">
+<button class="show-code">Code</button>
+const <a href="dart_core/double.html">double</a>         <strong>E</strong> <a class="anchor-link"
+            href="#E"
+            title="Permalink to E">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+E = 2.718281828459045
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LN10">
+<button class="show-code">Code</button>
+const <a href="dart_core/double.html">double</a>         <strong>LN10</strong> <a class="anchor-link"
+            href="#LN10"
+            title="Permalink to LN10">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LN10 =  2.302585092994046
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LN2">
+<button class="show-code">Code</button>
+const <a href="dart_core/double.html">double</a>         <strong>LN2</strong> <a class="anchor-link"
+            href="#LN2"
+            title="Permalink to LN2">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LN2 =  0.6931471805599453
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LOG10E">
+<button class="show-code">Code</button>
+const <a href="dart_core/double.html">double</a>         <strong>LOG10E</strong> <a class="anchor-link"
+            href="#LOG10E"
+            title="Permalink to LOG10E">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LOG10E = 0.4342944819032518
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="LOG2E">
+<button class="show-code">Code</button>
+const <a href="dart_core/double.html">double</a>         <strong>LOG2E</strong> <a class="anchor-link"
+            href="#LOG2E"
+            title="Permalink to LOG2E">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+LOG2E = 1.4426950408889634
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="PI">
+<button class="show-code">Code</button>
+const <a href="dart_core/double.html">double</a>         <strong>PI</strong> <a class="anchor-link"
+            href="#PI"
+            title="Permalink to PI">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+PI = 3.1415926535897932
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SQRT1_2">
+<button class="show-code">Code</button>
+const <a href="dart_core/double.html">double</a>         <strong>SQRT1_2</strong> <a class="anchor-link"
+            href="#SQRT1_2"
+            title="Permalink to SQRT1_2">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SQRT1_2 = 0.7071067811865476
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="SQRT2">
+<button class="show-code">Code</button>
+const <a href="dart_core/double.html">double</a>         <strong>SQRT2</strong> <a class="anchor-link"
+            href="#SQRT2"
+            title="Permalink to SQRT2">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+SQRT2 = 1.4142135623730951
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Functions</h3>
+<div class="method"><h4 id="log">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>log</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#log"
+              title="Permalink to log">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a double and returns the natural logarithm of the value.
+Returns negative infinity if 
+<span class="param">x</span> is equal to zero.
+Returns NaN if 
+<span class="param">x</span> is NaN or less than zero.</p>
+<pre class="source">
+external double log(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="exp">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>exp</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#exp"
+              title="Permalink to exp">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a double and returns the natural exponent, <a class="crossref" href="dart.math.html#E">E</a>,
+to the power 
+<span class="param">x</span>.
+Returns NaN if 
+<span class="param">x</span> is NaN.</p>
+<pre class="source">
+external double exp(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="sqrt">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>sqrt</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#sqrt"
+              title="Permalink to sqrt">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a double and returns the positive square root of the value.</p>
+<p>Returns -0.0 if 
+<span class="param">x</span> is -0.0, and NaN if 
+<span class="param">x</span> is otherwise negative or NaN.</p>
+<pre class="source">
+external double sqrt(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="atan">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>atan</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#atan"
+              title="Permalink to atan">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a dobule and returns the arc tangent of the vlaue.
+Returns a value in the range -PI/2..PI/2, or NaN if 
+<span class="param">x</span> is NaN.</p>
+<pre class="source">
+external double atan(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="asin">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>asin</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#asin"
+              title="Permalink to asin">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a double and returns the arc sine of the value.
+Returns a value in the range -PI..PI, or  NaN if 
+<span class="param">x</span> is outside
+the range -1..1.</p>
+<pre class="source">
+external double asin(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="acos">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>acos</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#acos"
+              title="Permalink to acos">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a double and returns the arc cosine of the value.</p>
+<p>Returns a value in the range -PI..PI, or NaN if 
+<span class="param">x</span> is outside
+the range -1..1.</p>
+<pre class="source">
+external double acos(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="tan">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>tan</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#tan"
+              title="Permalink to tan">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a double and returns the tangent of the value.</p>
+<p>The tangent function is equivalent to <code>sin(x)/cos(x)</code> and may be
+infinite (positive or negative) when <code>cos(x)</code> is equal to zero.
+If 
+<span class="param">x</span> is not a finite number, the result is NaN.</p>
+<pre class="source">
+external double tan(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="cos">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>cos</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#cos"
+              title="Permalink to cos">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a double and returns the cosine of the value.</p>
+<p>If 
+<span class="param">x</span> is not a finite number, the result is NaN.</p>
+<pre class="source">
+external double cos(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="sin">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>sin</strong>(<a href="dart_core/num.html">num</a> x) <a class="anchor-link" href="#sin"
+              title="Permalink to sin">#</a></h4>
+<div class="doc">
+<p>Converts 
+<span class="param">x</span> to a double and returns the sine of the value.</p>
+<p>If 
+<span class="param">x</span> is not a finite number, the result is NaN.</p>
+<pre class="source">
+external double sin(num x);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="pow">
+<button class="show-code">Code</button>
+<a href="dart_core/num.html">num</a> <strong>pow</strong>(<a href="dart_core/num.html">num</a> x, <a href="dart_core/num.html">num</a> exponent) <a class="anchor-link" href="#pow"
+              title="Permalink to pow">#</a></h4>
+<div class="doc">
+<p>Returns 
+<span class="param">x</span> to the power of 
+<span class="param">exponent</span>.</p>
+<p>If 
+<span class="param">x</span> is an <code>int</code> and 
+<span class="param">exponent</span> is a non-negative <code>int</code>, the result is
+an <code>int</code>, otherwise the result it is a <code>double</code>.</p>
+<p>Notice that an <code>int</code> result cannot overflow, but a <code>double</code> result might
+be <code>double.INFINITY</code>.</p>
+<pre class="source">
+external num pow(num x, num exponent);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="atan2">
+<button class="show-code">Code</button>
+<a href="dart_core/double.html">double</a> <strong>atan2</strong>(<a href="dart_core/num.html">num</a> a, <a href="dart_core/num.html">num</a> b) <a class="anchor-link" href="#atan2"
+              title="Permalink to atan2">#</a></h4>
+<div class="doc">
+<p>A variant of <a class="crossref" href="dart.math.html#atan">atan</a>.</p>
+<p>Converts both arguments to doubles.</p>
+<p>Returns the angle between the positive x-axis and the vector (
+<span class="param">b</span>,
+<span class="param">a</span>).
+The result, in radians, is in the range -PI..PI.</p>
+<p>If 
+<span class="param">b</span> is positive, this is the same as <code>atan(b/a)</code>.</p>
+<p>The result is negative when 
+<span class="param">a</span> is negative (including when 
+<span class="param">a</span> is the
+double -0.0).</p>
+<p>If 
+<span class="param">a</span> is equal to zero, the vector (
+<span class="param">b</span>,
+<span class="param">a</span>) is considered parallel to
+the x-axis, even if 
+<span class="param">b</span> is also equal to zero. The sign of 
+<span class="param">b</span> determines
+the direction of the vector along the x-axis.</p>
+<p>Returns NaN if either argument is NaN.</p>
+<pre class="source">
+external double atan2(num a, num b);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="max">
+<button class="show-code">Code</button>
+<a href="dart_core/num.html">num</a> <strong>max</strong>(<a href="dart_core/num.html">num</a> a, <a href="dart_core/num.html">num</a> b) <a class="anchor-link" href="#max"
+              title="Permalink to max">#</a></h4>
+<div class="doc">
+<p>Returns the larger of two numbers.</p>
+<p>Returns NaN if either argument is NaN.
+The larger of <code>-0.0</code> and <code>0.0</code> is <code>0.0</code>. If the arguments are
+otherwise equal (including int and doubles with the same mathematical value)
+then it is unspecified which of the two arguments is returned.</p>
+<pre class="source">
+num max(num a, num b) {
+ if (a is num) {
+   // TODO(floitsch): merge this if into the previous one, once dart2js
+   // correctly propagates types for logical ands.
+   if (b is num) {
+     if (a &gt; b) return a;
+     if (a &lt; b) return b;
+     if (b is double) {
+       // Special case for NaN and -0.0. If one argument is NaN return NaN.
+       // [max] must also distinguish between -0.0 and 0.0.
+       if (a is double) {
+         if (a == 0.0) {
+           // a is either 0.0 or -0.0. b is either 0.0, -0.0, or NaN.
+           // The following returns 0.0 if either a or b is 0.0, and it
+           // returns NaN if b is NaN.
+           return a + b;
+         }
+       }
+       // Check for NaN.
+       if (b.isNaN) return b;
+       return a;
+     }
+     // max(-0.0, 0) must return 0.
+     if (b == 0 &amp;&amp; a.isNegative) return b;
+     return a;
+   }
+   throw new ArgumentError(b);
+ }
+ throw new ArgumentError(a);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="min">
+<button class="show-code">Code</button>
+<a href="dart_core/num.html">num</a> <strong>min</strong>(<a href="dart_core/num.html">num</a> a, <a href="dart_core/num.html">num</a> b) <a class="anchor-link" href="#min"
+              title="Permalink to min">#</a></h4>
+<div class="doc">
+<p>Returns the lesser of two numbers.</p>
+<p>Returns NaN if either argument is NaN.
+The lesser of <code>-0.0</code> and <code>0.0</code> is <code>-0.0</code>.
+If the arguments are otherwise equal (including int and doubles with the
+same mathematical value) then it is unspecified which of the two arguments
+is returned.</p>
+<pre class="source">
+num min(num a, num b) {
+ if (a is num) {
+   // TODO(floitsch): merge this if into the previous one, once dart2js
+   // correctly propagates types for logical ands.
+   if (b is num) {
+     if (a &gt; b) return b;
+     if (a &lt; b) return a;
+     if (b is double) {
+       // Special case for NaN and -0.0. If one argument is NaN return NaN.
+       // [min] must also distinguish between -0.0 and 0.0.
+       if (a is double) {
+         if (a == 0.0) {
+           // a is either 0.0 or -0.0. b is either 0.0, -0.0 or NaN.
+           // The following returns -0.0 if either a or b is -0.0, and it
+           // returns NaN if b is NaN.
+           return (a + b) * a * b;
+         }
+       }
+       // Check for NaN and b == -0.0.
+       if (a == 0 &amp;&amp; b.isNegative || b.isNaN) return b;
+       return a;
+     }
+     return a;
+   }
+   throw new ArgumentError(b);
+ }
+ throw new ArgumentError(a);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Abstract Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_math/Random.html"><strong>Random</strong></a>
+          </h4>
+          </div>
+          
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:52:11.171</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="client-static.js"></script>
+        </body></html>
+        

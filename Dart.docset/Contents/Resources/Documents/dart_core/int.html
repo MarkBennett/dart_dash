@@ -1,0 +1,603 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>int abstract class / dart:core Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:core" data-type="int">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_core.html">dart:core</a> &rsaquo; <a href="../dart_core/int.html">int</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><ul class="icon">
+<li><a href="../dart_core/BidirectionalIterator.html"><div class="icon-class"></div>BidirectionalIterator&lt;T&gt;</a></li>
+<li><a href="../dart_core/bool.html"><div class="icon-class"></div>bool</a></li>
+<li><a href="../dart_core/Collection.html"><div class="icon-class"></div>Collection&lt;E&gt;</a></li>
+<li><a href="../dart_core/Comparable.html"><div class="icon-class"></div>Comparable&lt;T&gt;</a></li>
+<li><a href="../dart_core/Comparator.html"><div class="icon-interface"></div>Comparator&lt;T&gt;</a></li>
+<li><a href="../dart_core/Date.html"><div class="icon-class"></div>Date</a></li>
+<li><a href="../dart_core/DateTime.html"><div class="icon-class"></div>DateTime</a></li>
+<li><a href="../dart_core/double.html"><div class="icon-class"></div>double</a></li>
+<li><a href="../dart_core/Duration.html"><div class="icon-class"></div>Duration</a></li>
+<li><a href="../dart_core/Expando.html"><div class="icon-class"></div>Expando&lt;T&gt;</a></li>
+<li><a href="../dart_core/Expect.html"><div class="icon-class"></div>Expect</a></li>
+<li><a href="../dart_core/Function.html"><div class="icon-class"></div>Function</a></li>
+<li><div class="icon-class"></div><strong>int</strong></li>
+<li><a href="../dart_core/InvocationMirror.html"><div class="icon-class"></div>InvocationMirror</a></li>
+<li><a href="../dart_core/Iterable.html"><div class="icon-class"></div>Iterable&lt;E&gt;</a></li>
+<li><a href="../dart_core/Iterator.html"><div class="icon-class"></div>Iterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/List.html"><div class="icon-class"></div>List&lt;E&gt;</a></li>
+<li><a href="../dart_core/Map.html"><div class="icon-class"></div>Map&lt;K, V&gt;</a></li>
+<li><a href="../dart_core/Match.html"><div class="icon-class"></div>Match</a></li>
+<li><a href="../dart_core/num.html"><div class="icon-class"></div>num</a></li>
+<li><a href="../dart_core/Object.html"><div class="icon-class"></div>Object</a></li>
+<li><a href="../dart_core/Options.html"><div class="icon-class"></div>Options</a></li>
+<li><a href="../dart_core/Pattern.html"><div class="icon-class"></div>Pattern</a></li>
+<li><a href="../dart_core/RegExp.html"><div class="icon-class"></div>RegExp</a></li>
+<li><a href="../dart_core/RuneIterator.html"><div class="icon-class"></div>RuneIterator</a></li>
+<li><a href="../dart_core/Runes.html"><div class="icon-class"></div>Runes</a></li>
+<li><a href="../dart_core/Set.html"><div class="icon-class"></div>Set&lt;E&gt;</a></li>
+<li><a href="../dart_core/Stopwatch.html"><div class="icon-class"></div>Stopwatch</a></li>
+<li><a href="../dart_core/String.html"><div class="icon-class"></div>String</a></li>
+<li><a href="../dart_core/StringBuffer.html"><div class="icon-class"></div>StringBuffer</a></li>
+<li><a href="../dart_core/StringSink.html"><div class="icon-class"></div>StringSink</a></li>
+<li><a href="../dart_core/Type.html"><div class="icon-class"></div>Type</a></li>
+<li><a href="../dart_core/AbstractClassInstantiationError.html"><div class="icon-exception"></div>AbstractClassInstantiationError</a></li>
+<li><a href="../dart_core/ArgumentError.html"><div class="icon-exception"></div>ArgumentError</a></li>
+<li><a href="../dart_core/AssertionError.html"><div class="icon-exception"></div>AssertionError</a></li>
+<li><a href="../dart_core/CastError.html"><div class="icon-exception"></div>CastError</a></li>
+<li><a href="../dart_core/ConcurrentModificationError.html"><div class="icon-exception"></div>ConcurrentModificationError</a></li>
+<li><a href="../dart_core/Error.html"><div class="icon-exception"></div>Error</a></li>
+<li><a href="../dart_core/Exception.html"><div class="icon-exception"></div>Exception</a></li>
+<li><a href="../dart_core/ExpectException.html"><div class="icon-exception"></div>ExpectException</a></li>
+<li><a href="../dart_core/FallThroughError.html"><div class="icon-exception"></div>FallThroughError</a></li>
+<li><a href="../dart_core/FormatException.html"><div class="icon-exception"></div>FormatException</a></li>
+<li><a href="../dart_core/IllegalJSRegExpException.html"><div class="icon-exception"></div>IllegalJSRegExpException</a></li>
+<li><a href="../dart_core/IntegerDivisionByZeroException.html"><div class="icon-exception"></div>IntegerDivisionByZeroException</a></li>
+<li><a href="../dart_core/NoSuchMethodError.html"><div class="icon-exception"></div>NoSuchMethodError</a></li>
+<li><a href="../dart_core/NullThrownError.html"><div class="icon-exception"></div>NullThrownError</a></li>
+<li><a href="../dart_core/OutOfMemoryError.html"><div class="icon-exception"></div>OutOfMemoryError</a></li>
+<li><a href="../dart_core/RangeError.html"><div class="icon-exception"></div>RangeError</a></li>
+<li><a href="../dart_core/RuntimeError.html"><div class="icon-exception"></div>RuntimeError</a></li>
+<li><a href="../dart_core/StackOverflowError.html"><div class="icon-exception"></div>StackOverflowError</a></li>
+<li><a href="../dart_core/StateError.html"><div class="icon-exception"></div>StateError</a></li>
+<li><a href="../dart_core/TypeError.html"><div class="icon-exception"></div>TypeError</a></li>
+<li><a href="../dart_core/UnimplementedError.html"><div class="icon-exception"></div>UnimplementedError</a></li>
+<li><a href="../dart_core/UnsupportedError.html"><div class="icon-exception"></div>UnsupportedError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>int</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Representation of Dart integers containing integer specific
+operations and specialization of operations inherited from <a class="crossref" href="../dart_core/num.html">num</a>.</p>
+<p>Integers can be arbitrarily large in Dart.</p>
+<p><em>Note however, that when compiling to JavaScript, integers are
+implemented as JavaScript numbers. When compiling to JavaScript,
+integers are therefore restricted to 53 significant bits because
+all JavaScript numbers are double-precision floating point
+values. The behavior of the operators and methods in the <a class="crossref" href="../dart_core/int.html">int</a>
+class therefore sometimes differs between the Dart VM and Dart code
+compiled to JavaScript.</em></p>
+<pre class="source">
+abstract class int extends num {
+ /** The bit-wise and operator. */
+ int operator &amp;(int other);
+
+ /** The bit-wise or operator. */
+ int operator |(int other);
+
+ /** The bit-wise xor operator. */
+ int operator ^(int other);
+
+ /** The bit-wise negate operator. */
+ int operator ~();
+
+ /** The left shift operator. */
+ int operator &lt;&lt;(int shiftAmount);
+
+ /** The right shift operator. */
+ int operator &gt;&gt;(int shiftAmount);
+
+ /** Returns true if and only if this integer is even. */
+ bool get isEven;
+
+ /** Returns true if and only if this integer is odd. */
+ bool get isOdd;
+
+ /** Negate operator. Negating an integer produces an integer. */
+ int operator -();
+
+ /** Returns the absolute value of this integer. */
+ int abs();
+
+ /** Returns [this]. */
+ int round();
+
+ /** Returns [this]. */
+ int floor();
+
+ /** Returns [this]. */
+ int ceil();
+
+ /** Returns [this]. */
+ int truncate();
+
+ /**
+  * Returns a representation of this [int] value.
+  *
+  * It should always be the case that if [:i:] is an [int] value,
+  * then [:i == int.parse(i.toString()):].
+  */
+ String toString();
+
+ /**
+  * Converts [this] to a string representation in the given [radix].
+  *
+  * In the string representation, lower-case letters are used for digits above
+  * '9'.
+  *
+  * The [radix] argument must be an integer in the range 2 to 36.
+  */
+ String toRadixString(int radix);
+
+ /**
+  * Parse [source] as an integer literal and return its value.
+  *
+  * The [radix] must be in the range 2..36. The digits used are
+  * first the decimal digits 0..9, and then the letters 'a'..'z'.
+  * Accepts capital letters as well.
+  *
+  * If no [radix] is given then it defaults to 16 if the string starts
+  * with "0x", "-0x" or "+0x" and 10 otherwise.
+  *
+  * The [source] must be a non-empty sequence of base-[radix] digits,
+  * optionally prefixed with a minus or plus sign ('-' or '+').
+  *
+  * It must always be the case for an int [:n:] and radix [:r:] that
+  * [:n == parseRadix(n.toRadixString(r), r):].
+  *
+  * If the [source] is not a valid integer literal, optionally prefixed by a
+  * sign, the [onError] is called with the [source] as argument, and its return
+  * value is used instead. If no [onError] is provided, a [FormatException]
+  * is thrown.
+  */
+ external static int parse(String source,
+                           { int radix,
+                             int onError(String source) });
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_core/num.html">num</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>int</strong></span></p>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart__interceptors/JSInt.html">JSInt</a></span></p>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="parse">
+<button class="show-code">Code</button>
+<a href="../dart_core/int.html">int</a> <strong>parse</strong>(<a href="../dart_core/String.html">String</a> source, {<a href="../dart_core/int.html">int</a> radix, <a href="../dart_core/int.html">int</a> onError(<a href="../dart_core/String.html">String</a> source)}) <a class="anchor-link" href="#parse"
+              title="Permalink to int.parse">#</a></h4>
+<div class="doc">
+<p>Parse 
+<span class="param">source</span> as an integer literal and return its value.</p>
+<p>The 
+<span class="param">radix</span> must be in the range 2..36. The digits used are
+first the decimal digits 0..9, and then the letters 'a'..'z'.
+Accepts capital letters as well.</p>
+<p>If no 
+<span class="param">radix</span> is given then it defaults to 16 if the string starts
+with "0x", "-0x" or "+0x" and 10 otherwise.</p>
+<p>The 
+<span class="param">source</span> must be a non-empty sequence of base-
+<span class="param">radix</span> digits,
+optionally prefixed with a minus or plus sign ('-' or '+').</p>
+<p>It must always be the case for an int <code>n</code> and radix <code>r</code> that
+<code>n == parseRadix(n.toRadixString(r), r)</code>.</p>
+<p>If the 
+<span class="param">source</span> is not a valid integer literal, optionally prefixed by a
+sign, the 
+<span class="param">onError</span> is called with the 
+<span class="param">source</span> as argument, and its return
+value is used instead. If no 
+<span class="param">onError</span> is provided, a <a class="crossref" href="../dart_core/FormatException.html">FormatException</a>
+is thrown.</p>
+<pre class="source">
+external static int parse(String source,
+                         { int radix,
+                           int onError(String source) });
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="isEven">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isEven</strong> <a class="anchor-link"
+            href="#isEven"
+            title="Permalink to int.isEven">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns true if and only if this integer is even. </p>
+<pre class="source">
+bool get isEven;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="isInfinite">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isInfinite</strong> <a class="anchor-link"
+            href="#isInfinite"
+            title="Permalink to int.isInfinite">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<pre class="source">
+bool get isInfinite;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="isNaN">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isNaN</strong> <a class="anchor-link"
+            href="#isNaN"
+            title="Permalink to int.isNaN">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<pre class="source">
+bool get isNaN;
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="isNegative">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isNegative</strong> <a class="anchor-link"
+            href="#isNegative"
+            title="Permalink to int.isNegative">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<pre class="source">
+bool get isNegative;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isOdd">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isOdd</strong> <a class="anchor-link"
+            href="#isOdd"
+            title="Permalink to int.isOdd">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns true if and only if this integer is odd. </p>
+<pre class="source">
+bool get isOdd;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method inherited"><h4 id="+">
+abstract <a href="../dart_core/num.html">num</a> <strong>operator +</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#+"
+              title="Permalink to int.operator +">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Addition operator. </p>
+</div>
+</div>
+<div class="method"><h4 id="unary-">
+abstract <a href="../dart_core/int.html">int</a> <strong>operator -</strong>() <a class="anchor-link" href="#unary-"
+              title="Permalink to int.operator -">#</a></h4>
+<div class="doc">
+<p>Negate operator. Negating an integer produces an integer. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="-">
+abstract <a href="../dart_core/num.html">num</a> <strong>operator -</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#-"
+              title="Permalink to int.operator -">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Subtraction operator. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="*">
+abstract <a href="../dart_core/num.html">num</a> <strong>operator *</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#*"
+              title="Permalink to int.operator *">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Multiplication operator. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="/">
+abstract <a href="../dart_core/double.html">double</a> <strong>operator /</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#/"
+              title="Permalink to int.operator /">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Division operator. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="~/">
+abstract <a href="../dart_core/int.html">int</a> <strong>operator ~/</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#~/"
+              title="Permalink to int.operator ~/">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Truncating division operator.</p>
+<p>The result of the truncating division <code>a ~/ b</code> is equivalent to
+<code>(a / b).truncate().toInt()</code>.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="%">
+abstract <a href="../dart_core/num.html">num</a> <strong>operator %</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#%"
+              title="Permalink to int.operator %">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Euclidean modulo operator. </p>
+</div>
+</div>
+<div class="method"><h4 id="&">
+abstract <a href="../dart_core/int.html">int</a> <strong>operator &</strong>(<a href="../dart_core/int.html">int</a> other) <a class="anchor-link" href="#&"
+              title="Permalink to int.operator &">#</a></h4>
+<div class="doc">
+<p>The bit-wise and operator. </p>
+</div>
+</div>
+<div class="method"><h4 id="|">
+abstract <a href="../dart_core/int.html">int</a> <strong>operator |</strong>(<a href="../dart_core/int.html">int</a> other) <a class="anchor-link" href="#|"
+              title="Permalink to int.operator |">#</a></h4>
+<div class="doc">
+<p>The bit-wise or operator. </p>
+</div>
+</div>
+<div class="method"><h4 id="^">
+abstract <a href="../dart_core/int.html">int</a> <strong>operator ^</strong>(<a href="../dart_core/int.html">int</a> other) <a class="anchor-link" href="#^"
+              title="Permalink to int.operator ^">#</a></h4>
+<div class="doc">
+<p>The bit-wise xor operator. </p>
+</div>
+</div>
+<div class="method"><h4 id="~">
+abstract <a href="../dart_core/int.html">int</a> <strong>operator ~</strong>() <a class="anchor-link" href="#~"
+              title="Permalink to int.operator ~">#</a></h4>
+<div class="doc">
+<p>The bit-wise negate operator. </p>
+</div>
+</div>
+<div class="method"><h4 id="<<">
+abstract <a href="../dart_core/int.html">int</a> <strong>operator <<</strong>(<a href="../dart_core/int.html">int</a> shiftAmount) <a class="anchor-link" href="#<<"
+              title="Permalink to int.operator <<">#</a></h4>
+<div class="doc">
+<p>The left shift operator. </p>
+</div>
+</div>
+<div class="method"><h4 id=">>">
+abstract <a href="../dart_core/int.html">int</a> <strong>operator >></strong>(<a href="../dart_core/int.html">int</a> shiftAmount) <a class="anchor-link" href="#>>"
+              title="Permalink to int.operator >>">#</a></h4>
+<div class="doc">
+<p>The right shift operator. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="<">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator <</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#<"
+              title="Permalink to int.operator <">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Relational less than operator. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="<=">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator <=</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#<="
+              title="Permalink to int.operator <=">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Relational less than or equal operator. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id=">">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator ></strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#>"
+              title="Permalink to int.operator >">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Relational greater than operator. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id=">=">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>operator >=</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#>="
+              title="Permalink to int.operator >=">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Relational greater than or equal operator. </p>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="abs">
+abstract <a href="../dart_core/int.html">int</a> <strong>abs</strong>() <a class="anchor-link" href="#abs"
+              title="Permalink to int.abs">#</a></h4>
+<div class="doc">
+<p>Returns the absolute value of this integer. </p>
+</div>
+</div>
+<div class="method"><h4 id="ceil">
+abstract <a href="../dart_core/int.html">int</a> <strong>ceil</strong>() <a class="anchor-link" href="#ceil"
+              title="Permalink to int.ceil">#</a></h4>
+<div class="doc">
+<p>Returns <code>this</code>. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="clamp">
+abstract <a href="../dart_core/num.html">num</a> <strong>clamp</strong>(<a href="../dart_core/num.html">num</a> lowerLimit, <a href="../dart_core/num.html">num</a> upperLimit) <a class="anchor-link" href="#clamp"
+              title="Permalink to int.clamp">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Clamps <code>this</code> to be in the range 
+<span class="param">lowerLimit</span>-
+<span class="param">upperLimit</span>. The comparison
+is done using <code>compareTo</code> and therefore takes <code>-0.0</code> into account.
+It also implies that <code>double.NaN</code> is treated as the maximal double value.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="compareTo">
+abstract <a href="../dart_core/int.html">int</a> <strong>compareTo</strong>(<a href="../dart_core/int.html">T</a> other) <a class="anchor-link" href="#compareTo"
+              title="Permalink to int.compareTo">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/Comparable.html">Comparable</a> </div><div class="doc">
+<p>Compares this object to another <a class="crossref" href="../dart_core/Comparable.html">Comparable</a></p>
+<p>Returns a value like a <a class="crossref" href="../dart_core/Comparator.html">Comparator</a> when comparing <code>this</code> to 
+<span class="param">other</span>.</p>
+<p>May throw an <a class="crossref" href="../dart_core/ArgumentError.html">ArgumentError</a> if 
+<span class="param">other</span> is of a type that
+is not comparable to <code>this</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="floor">
+abstract <a href="../dart_core/int.html">int</a> <strong>floor</strong>() <a class="anchor-link" href="#floor"
+              title="Permalink to int.floor">#</a></h4>
+<div class="doc">
+<p>Returns <code>this</code>. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="remainder">
+abstract <a href="../dart_core/num.html">num</a> <strong>remainder</strong>(<a href="../dart_core/num.html">num</a> other) <a class="anchor-link" href="#remainder"
+              title="Permalink to int.remainder">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Return the remainder from dividing this <a class="crossref" href="../dart_core/num.html">num</a> by 
+<span class="param">other</span>. </p>
+</div>
+</div>
+<div class="method"><h4 id="round">
+abstract <a href="../dart_core/int.html">int</a> <strong>round</strong>() <a class="anchor-link" href="#round"
+              title="Permalink to int.round">#</a></h4>
+<div class="doc">
+<p>Returns <code>this</code>. </p>
+</div>
+</div>
+<div class="method inherited"><h4 id="toDouble">
+abstract <a href="../dart_core/double.html">double</a> <strong>toDouble</strong>() <a class="anchor-link" href="#toDouble"
+              title="Permalink to int.toDouble">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Return this <a class="crossref" href="../dart_core/num.html">num</a> as a <a class="crossref" href="../dart_core/double.html">double</a>.</p>
+<p>If the number is not representable as a <a class="crossref" href="../dart_core/double.html">double</a>, an
+approximation is returned. For numerically large integers, the
+approximation may be infinite.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="toInt">
+abstract <a href="../dart_core/int.html">int</a> <strong>toInt</strong>() <a class="anchor-link" href="#toInt"
+              title="Permalink to int.toInt">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Truncates this <a class="crossref" href="../dart_core/num.html">num</a> to an integer and returns the result as an <a class="crossref" href="../dart_core/int.html">int</a>. </p>
+</div>
+</div>
+<div class="method"><h4 id="toRadixString">
+abstract <a href="../dart_core/String.html">String</a> <strong>toRadixString</strong>(<a href="../dart_core/int.html">int</a> radix) <a class="anchor-link" href="#toRadixString"
+              title="Permalink to int.toRadixString">#</a></h4>
+<div class="doc">
+<p>Converts <code>this</code> to a string representation in the given 
+<span class="param">radix</span>.</p>
+<p>In the string representation, lower-case letters are used for digits above
+'9'.</p>
+<p>The 
+<span class="param">radix</span> argument must be an integer in the range 2 to 36.</p>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+abstract <a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to int.toString">#</a></h4>
+<div class="doc">
+<p>Returns a representation of this <a class="crossref" href="../dart_core/int.html">int</a> value.</p>
+<p>It should always be the case that if <code>i</code> is an <a class="crossref" href="../dart_core/int.html">int</a> value,
+then <code>i == int.parse(i.toString())</code>.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="toStringAsExponential">
+abstract <a href="../dart_core/String.html">String</a> <strong>toStringAsExponential</strong>([<a href="../dart_core/int.html">int</a> fractionDigits]) <a class="anchor-link" href="#toStringAsExponential"
+              title="Permalink to int.toStringAsExponential">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Converts <code>this</code> to a string in decimal exponential notation with
+
+<span class="param">fractionDigits</span> digits after the decimal point.</p>
+<p>If 
+<span class="param">fractionDigits</span> is given then it must be an integer satisfying:
+<code>0 &lt;= fractionDigits &lt;= 20</code>. Without the parameter the returned string
+uses the shortest number of digits that accurately represent <code>this</code>.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="toStringAsFixed">
+abstract <a href="../dart_core/String.html">String</a> <strong>toStringAsFixed</strong>(<a href="../dart_core/int.html">int</a> fractionDigits) <a class="anchor-link" href="#toStringAsFixed"
+              title="Permalink to int.toStringAsFixed">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Converts <code>this</code> to a string representation with 
+<span class="param">fractionDigits</span> digits
+after the decimal point.</p>
+<p>The parameter 
+<span class="param">fractionDigits</span> must be an integer satisfying:
+<code>0 &lt;= fractionDigits &lt;= 20</code>.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="toStringAsPrecision">
+abstract <a href="../dart_core/String.html">String</a> <strong>toStringAsPrecision</strong>(<a href="../dart_core/int.html">int</a> precision) <a class="anchor-link" href="#toStringAsPrecision"
+              title="Permalink to int.toStringAsPrecision">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_core/num.html">num</a> </div><div class="doc">
+<p>Converts <code>this</code> to a string representation with 
+<span class="param">precision</span> significant
+digits.</p>
+<p>The parameter 
+<span class="param">precision</span> must be an integer satisfying:
+<code>1 &lt;= precision &lt;= 21</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="truncate">
+abstract <a href="../dart_core/int.html">int</a> <strong>truncate</strong>() <a class="anchor-link" href="#truncate"
+              title="Permalink to int.truncate">#</a></h4>
+<div class="doc">
+<p>Returns <code>this</code>. </p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:25.135</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

@@ -1,0 +1,811 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Expect class / dart:core Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:core" data-type="Expect">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_core.html">dart:core</a> &rsaquo; <a href="../dart_core/Expect.html">Expect</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><ul class="icon">
+<li><a href="../dart_core/BidirectionalIterator.html"><div class="icon-class"></div>BidirectionalIterator&lt;T&gt;</a></li>
+<li><a href="../dart_core/bool.html"><div class="icon-class"></div>bool</a></li>
+<li><a href="../dart_core/Collection.html"><div class="icon-class"></div>Collection&lt;E&gt;</a></li>
+<li><a href="../dart_core/Comparable.html"><div class="icon-class"></div>Comparable&lt;T&gt;</a></li>
+<li><a href="../dart_core/Comparator.html"><div class="icon-interface"></div>Comparator&lt;T&gt;</a></li>
+<li><a href="../dart_core/Date.html"><div class="icon-class"></div>Date</a></li>
+<li><a href="../dart_core/DateTime.html"><div class="icon-class"></div>DateTime</a></li>
+<li><a href="../dart_core/double.html"><div class="icon-class"></div>double</a></li>
+<li><a href="../dart_core/Duration.html"><div class="icon-class"></div>Duration</a></li>
+<li><a href="../dart_core/Expando.html"><div class="icon-class"></div>Expando&lt;T&gt;</a></li>
+<li><div class="icon-class"></div><strong>Expect</strong></li>
+<li><a href="../dart_core/Function.html"><div class="icon-class"></div>Function</a></li>
+<li><a href="../dart_core/int.html"><div class="icon-class"></div>int</a></li>
+<li><a href="../dart_core/InvocationMirror.html"><div class="icon-class"></div>InvocationMirror</a></li>
+<li><a href="../dart_core/Iterable.html"><div class="icon-class"></div>Iterable&lt;E&gt;</a></li>
+<li><a href="../dart_core/Iterator.html"><div class="icon-class"></div>Iterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/List.html"><div class="icon-class"></div>List&lt;E&gt;</a></li>
+<li><a href="../dart_core/Map.html"><div class="icon-class"></div>Map&lt;K, V&gt;</a></li>
+<li><a href="../dart_core/Match.html"><div class="icon-class"></div>Match</a></li>
+<li><a href="../dart_core/num.html"><div class="icon-class"></div>num</a></li>
+<li><a href="../dart_core/Object.html"><div class="icon-class"></div>Object</a></li>
+<li><a href="../dart_core/Options.html"><div class="icon-class"></div>Options</a></li>
+<li><a href="../dart_core/Pattern.html"><div class="icon-class"></div>Pattern</a></li>
+<li><a href="../dart_core/RegExp.html"><div class="icon-class"></div>RegExp</a></li>
+<li><a href="../dart_core/RuneIterator.html"><div class="icon-class"></div>RuneIterator</a></li>
+<li><a href="../dart_core/Runes.html"><div class="icon-class"></div>Runes</a></li>
+<li><a href="../dart_core/Set.html"><div class="icon-class"></div>Set&lt;E&gt;</a></li>
+<li><a href="../dart_core/Stopwatch.html"><div class="icon-class"></div>Stopwatch</a></li>
+<li><a href="../dart_core/String.html"><div class="icon-class"></div>String</a></li>
+<li><a href="../dart_core/StringBuffer.html"><div class="icon-class"></div>StringBuffer</a></li>
+<li><a href="../dart_core/StringSink.html"><div class="icon-class"></div>StringSink</a></li>
+<li><a href="../dart_core/Type.html"><div class="icon-class"></div>Type</a></li>
+<li><a href="../dart_core/AbstractClassInstantiationError.html"><div class="icon-exception"></div>AbstractClassInstantiationError</a></li>
+<li><a href="../dart_core/ArgumentError.html"><div class="icon-exception"></div>ArgumentError</a></li>
+<li><a href="../dart_core/AssertionError.html"><div class="icon-exception"></div>AssertionError</a></li>
+<li><a href="../dart_core/CastError.html"><div class="icon-exception"></div>CastError</a></li>
+<li><a href="../dart_core/ConcurrentModificationError.html"><div class="icon-exception"></div>ConcurrentModificationError</a></li>
+<li><a href="../dart_core/Error.html"><div class="icon-exception"></div>Error</a></li>
+<li><a href="../dart_core/Exception.html"><div class="icon-exception"></div>Exception</a></li>
+<li><a href="../dart_core/ExpectException.html"><div class="icon-exception"></div>ExpectException</a></li>
+<li><a href="../dart_core/FallThroughError.html"><div class="icon-exception"></div>FallThroughError</a></li>
+<li><a href="../dart_core/FormatException.html"><div class="icon-exception"></div>FormatException</a></li>
+<li><a href="../dart_core/IllegalJSRegExpException.html"><div class="icon-exception"></div>IllegalJSRegExpException</a></li>
+<li><a href="../dart_core/IntegerDivisionByZeroException.html"><div class="icon-exception"></div>IntegerDivisionByZeroException</a></li>
+<li><a href="../dart_core/NoSuchMethodError.html"><div class="icon-exception"></div>NoSuchMethodError</a></li>
+<li><a href="../dart_core/NullThrownError.html"><div class="icon-exception"></div>NullThrownError</a></li>
+<li><a href="../dart_core/OutOfMemoryError.html"><div class="icon-exception"></div>OutOfMemoryError</a></li>
+<li><a href="../dart_core/RangeError.html"><div class="icon-exception"></div>RangeError</a></li>
+<li><a href="../dart_core/RuntimeError.html"><div class="icon-exception"></div>RuntimeError</a></li>
+<li><a href="../dart_core/StackOverflowError.html"><div class="icon-exception"></div>StackOverflowError</a></li>
+<li><a href="../dart_core/StateError.html"><div class="icon-exception"></div>StateError</a></li>
+<li><a href="../dart_core/TypeError.html"><div class="icon-exception"></div>TypeError</a></li>
+<li><a href="../dart_core/UnimplementedError.html"><div class="icon-exception"></div>UnimplementedError</a></li>
+<li><a href="../dart_core/UnsupportedError.html"><div class="icon-exception"></div>UnsupportedError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Expect</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>This class is <em>deprecated</em>.</p>
+<p>Expect is used for tests that do not want to make use of the
+Dart unit test library - for example, the core language tests.
+Third parties are discouraged from using this, and should use
+the expect() function in the unit test library instead for
+test assertions.</p>
+<pre class="source">
+@deprecated
+class Expect {
+ /**
+  * Checks whether the expected and actual values are equal (using `==`).
+  */
+ @deprecated
+ static void equals(var expected, var actual, [String reason = null]) {
+   if (expected == actual) return;
+   String msg = _getMessage(reason);
+   _fail("Expect.equals(expected: &lt;$expected&gt;, actual: &lt;$actual&gt;$msg) fails.");
+ }
+
+ /**
+  * Checks whether the actual value is a bool and its value is true.
+  */
+ @deprecated
+ static void isTrue(var actual, [String reason = null]) {
+   if (_identical(actual, true)) return;
+   String msg = _getMessage(reason);
+   _fail("Expect.isTrue($actual$msg) fails.");
+ }
+
+ /**
+  * Checks whether the actual value is a bool and its value is false.
+  */
+ @deprecated
+ static void isFalse(var actual, [String reason = null]) {
+   if (_identical(actual, false)) return;
+   String msg = _getMessage(reason);
+   _fail("Expect.isFalse($actual$msg) fails.");
+ }
+
+ /**
+  * Checks whether [actual] is null.
+  */
+ @deprecated
+ static void isNull(actual, [String reason = null]) {
+   if (null == actual) return;
+   String msg = _getMessage(reason);
+   _fail("Expect.isNull(actual: &lt;$actual&gt;$msg) fails.");
+ }
+
+ /**
+  * Checks whether [actual] is not null.
+  */
+ @deprecated
+ static void isNotNull(actual, [String reason = null]) {
+   if (null != actual) return;
+   String msg = _getMessage(reason);
+   _fail("Expect.isNotNull(actual: &lt;$actual&gt;$msg) fails.");
+ }
+
+ /**
+  * Checks whether the expected and actual values are identical
+  * (using `identical`).
+  */
+ @deprecated
+ static void identical(var expected, var actual, [String reason = null]) {
+   if (_identical(expected, actual)) return;
+   String msg = _getMessage(reason);
+   _fail("Expect.identical(expected: &lt;$expected&gt;, actual: &lt;$actual&gt;$msg) "
+         "fails.");
+ }
+
+ // Unconditional failure.
+ @deprecated
+ static void fail(String msg) {
+   _fail("Expect.fail('$msg')");
+ }
+
+ /**
+  * Failure if the difference between expected and actual is greater than the
+  * given tolerance. If no tolerance is given, tolerance is assumed to be the
+  * value 4 significant digits smaller than the value given for expected.
+  */
+ @deprecated
+ static void approxEquals(num expected,
+                          num actual,
+                          [num tolerance = null,
+                           String reason = null]) {
+   if (tolerance == null) {
+     tolerance = (expected / 1e4).abs();
+   }
+   // Note: use !( &lt;= ) rather than &gt; so we fail on NaNs
+   if ((expected - actual).abs() &lt;= tolerance) return;
+
+   String msg = _getMessage(reason);
+   _fail('Expect.approxEquals(expected:&lt;$expected&gt;, actual:&lt;$actual&gt;, '
+         'tolerance:&lt;$tolerance&gt;$msg) fails');
+ }
+
+ @deprecated
+ static void notEquals(unexpected, actual, [String reason = null]) {
+   if (unexpected != actual) return;
+   String msg = _getMessage(reason);
+   _fail("Expect.notEquals(unexpected: &lt;$unexpected&gt;, actual:&lt;$actual&gt;$msg) "
+         "fails.");
+ }
+
+ /**
+  * Checks that all elements in [expected] and [actual] are equal `==`.
+  * This is different than the typical check for identity equality `identical`
+  * used by the standard list implementation.  It should also produce nicer
+  * error messages than just calling `Expect.equals(expected, actual)`.
+  */
+ @deprecated
+ static void listEquals(List expected, List actual, [String reason = null]) {
+   String msg = _getMessage(reason);
+   int n = (expected.length &lt; actual.length) ? expected.length : actual.length;
+   for (int i = 0; i &lt; n; i++) {
+     if (expected[i] != actual[i]) {
+       _fail('Expect.listEquals(at index $i, '
+             'expected: &lt;${expected[i]}&gt;, actual: &lt;${actual[i]}&gt;$msg) fails');
+     }
+   }
+   // We check on length at the end in order to provide better error
+   // messages when an unexpected item is inserted in a list.
+   if (expected.length != actual.length) {
+     _fail('Expect.listEquals(list length, '
+       'expected: &lt;${expected.length}&gt;, actual: &lt;${actual.length}&gt;$msg) '
+       'fails: Next element &lt;'
+       '${expected.length &gt; n ? expected[n] : actual[n]}&gt;');
+   }
+ }
+
+ /**
+  * Checks that all [expected] and [actual] have the same set of keys (using
+  * the semantics of [Map.containsKey] to determine what "same" means. For
+  * each key, checks that the values in both maps are equal using `==`.
+  */
+ @deprecated
+ static void mapEquals(Map expected, Map actual, [String reason = null]) {
+   String msg = _getMessage(reason);
+
+   // Make sure all of the values are present in both and match.
+   for (final key in expected.keys) {
+     if (!actual.containsKey(key)) {
+       _fail('Expect.mapEquals(missing expected key: &lt;$key&gt;$msg) fails');
+     }
+
+     Expect.equals(expected[key], actual[key]);
+   }
+
+   // Make sure the actual map doesn't have any extra keys.
+   for (final key in actual.keys) {
+     if (!expected.containsKey(key)) {
+       _fail('Expect.mapEquals(unexpected key: &lt;$key&gt;$msg) fails');
+     }
+   }
+ }
+
+ /**
+  * Specialized equality test for strings. When the strings don't match,
+  * this method shows where the mismatch starts and ends.
+  */
+ @deprecated
+ static void stringEquals(String expected,
+                          String actual,
+                          [String reason = null]) {
+   String msg = _getMessage(reason);
+   String defaultMessage =
+       'Expect.stringEquals(expected: &lt;$expected&gt;", &lt;$actual&gt;$msg) fails';
+
+   if (expected == actual) return;
+   if ((expected == null) || (actual == null)) {
+     _fail('$defaultMessage');
+   }
+   // scan from the left until we find a mismatch
+   int left = 0;
+   int eLen = expected.length;
+   int aLen = actual.length;
+   while (true) {
+     if (left == eLen) {
+       assert (left &lt; aLen);
+       String snippet = actual.substring(left, aLen);
+       _fail('$defaultMessage\nDiff:\n...[  ]\n...[ $snippet ]');
+       return;
+     }
+     if (left == aLen) {
+       assert (left &lt; eLen);
+       String snippet = expected.substring(left, eLen);
+       _fail('$defaultMessage\nDiff:\n...[  ]\n...[ $snippet ]');
+       return;
+     }
+     if (expected[left] != actual[left]) {
+       break;
+     }
+     left++;
+   }
+
+   // scan from the right until we find a mismatch
+   int right = 0;
+   while (true) {
+     if (right == eLen) {
+       assert (right &lt; aLen);
+       String snippet = actual.substring(0, aLen - right);
+       _fail('$defaultMessage\nDiff:\n[  ]...\n[ $snippet ]...');
+       return;
+     }
+     if (right == aLen) {
+       assert (right &lt; eLen);
+       String snippet = expected.substring(0, eLen - right);
+       _fail('$defaultMessage\nDiff:\n[  ]...\n[ $snippet ]...');
+       return;
+     }
+     // stop scanning if we've reached the end of the left-to-right match
+     if (eLen - right &lt;= left || aLen - right &lt;= left) {
+       break;
+     }
+     if (expected[eLen - right - 1] != actual[aLen - right - 1]) {
+       break;
+     }
+     right++;
+   }
+   String eSnippet = expected.substring(left, eLen - right);
+   String aSnippet = actual.substring(left, aLen - right);
+   String diff = '\nDiff:\n...[ $eSnippet ]...\n...[ $aSnippet ]...';
+   _fail('$defaultMessage$diff');
+ }
+
+ /**
+  * Checks that every element of [expected] is also in [actual], and that
+  * every element of [actual] is also in [expected].
+  */
+ @deprecated
+ static void setEquals(Iterable expected,
+                       Iterable actual,
+                       [String reason = null]) {
+   final missingSet = new Set.from(expected);
+   missingSet.removeAll(actual);
+   final extraSet = new Set.from(actual);
+   extraSet.removeAll(expected);
+
+   if (extraSet.isEmpty &amp;&amp; missingSet.isEmpty) return;
+   String msg = _getMessage(reason);
+
+   StringBuffer sb = new StringBuffer("Expect.setEquals($msg) fails");
+   // Report any missing items.
+   if (!missingSet.isEmpty) {
+     sb.add('\nExpected collection does not contain: ');
+   }
+
+   for (final val in missingSet) {
+     sb.add('$val ');
+   }
+
+   // Report any extra items.
+   if (!extraSet.isEmpty) {
+     sb.add('\nExpected collection should not contain: ');
+   }
+
+   for (final val in extraSet) {
+     sb.add('$val ');
+   }
+   _fail(sb.toString());
+ }
+
+ /**
+  * Calls the function [f] and verifies that it throws an exception.
+  * The optional [check] function can provide additional validation
+  * that the correct exception is being thrown.  For example, to check
+  * the type of the exception you could write this:
+  *
+  *     Expect.throws(myThrowingFunction, (e) =&gt; e is MyException);
+  */
+ @deprecated
+ static void throws(void f(),
+                    [_CheckExceptionFn check = null,
+                     String reason = null]) {
+   try {
+     f();
+   } catch (e, s) {
+     if (check != null) {
+       if (!check(e)) {
+         String msg = reason == null ? "" : reason;
+         _fail("Expect.throws($msg): Unexpected '$e'\n$s");
+       }
+     }
+     return;
+   }
+   String msg = reason == null ? "" : reason;
+   _fail('Expect.throws($msg) fails');
+ }
+
+ static String _getMessage(String reason)
+     =&gt; (reason == null) ? "" : ", '$reason'";
+
+ static void _fail(String message) {
+   throw new ExpectException(message);
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="equals">
+<button class="show-code">Code</button>
+void <strong>equals</strong>(expected, actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#equals"
+              title="Permalink to Expect.equals">#</a></h4>
+<div class="doc">
+<p>Checks whether the expected and actual values are equal (using <code>==</code>).</p>
+<pre class="source">
+@deprecated
+static void equals(var expected, var actual, [String reason = null]) {
+ if (expected == actual) return;
+ String msg = _getMessage(reason);
+ _fail("Expect.equals(expected: &lt;$expected&gt;, actual: &lt;$actual&gt;$msg) fails.");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isTrue">
+<button class="show-code">Code</button>
+void <strong>isTrue</strong>(actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#isTrue"
+              title="Permalink to Expect.isTrue">#</a></h4>
+<div class="doc">
+<p>Checks whether the actual value is a bool and its value is true.</p>
+<pre class="source">
+@deprecated
+static void isTrue(var actual, [String reason = null]) {
+ if (_identical(actual, true)) return;
+ String msg = _getMessage(reason);
+ _fail("Expect.isTrue($actual$msg) fails.");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isFalse">
+<button class="show-code">Code</button>
+void <strong>isFalse</strong>(actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#isFalse"
+              title="Permalink to Expect.isFalse">#</a></h4>
+<div class="doc">
+<p>Checks whether the actual value is a bool and its value is false.</p>
+<pre class="source">
+@deprecated
+static void isFalse(var actual, [String reason = null]) {
+ if (_identical(actual, false)) return;
+ String msg = _getMessage(reason);
+ _fail("Expect.isFalse($actual$msg) fails.");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isNull">
+<button class="show-code">Code</button>
+void <strong>isNull</strong>(actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#isNull"
+              title="Permalink to Expect.isNull">#</a></h4>
+<div class="doc">
+<p>Checks whether 
+<span class="param">actual</span> is null.</p>
+<pre class="source">
+@deprecated
+static void isNull(actual, [String reason = null]) {
+ if (null == actual) return;
+ String msg = _getMessage(reason);
+ _fail("Expect.isNull(actual: &lt;$actual&gt;$msg) fails.");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isNotNull">
+<button class="show-code">Code</button>
+void <strong>isNotNull</strong>(actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#isNotNull"
+              title="Permalink to Expect.isNotNull">#</a></h4>
+<div class="doc">
+<p>Checks whether 
+<span class="param">actual</span> is not null.</p>
+<pre class="source">
+@deprecated
+static void isNotNull(actual, [String reason = null]) {
+ if (null != actual) return;
+ String msg = _getMessage(reason);
+ _fail("Expect.isNotNull(actual: &lt;$actual&gt;$msg) fails.");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="identical">
+<button class="show-code">Code</button>
+void <strong>identical</strong>(expected, actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#identical"
+              title="Permalink to Expect.identical">#</a></h4>
+<div class="doc">
+<p>Checks whether the expected and actual values are identical
+(using <code>identical</code>).</p>
+<pre class="source">
+@deprecated
+static void identical(var expected, var actual, [String reason = null]) {
+ if (_identical(expected, actual)) return;
+ String msg = _getMessage(reason);
+ _fail("Expect.identical(expected: &lt;$expected&gt;, actual: &lt;$actual&gt;$msg) "
+       "fails.");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="fail">
+<button class="show-code">Code</button>
+void <strong>fail</strong>(<a href="../dart_core/String.html">String</a> msg) <a class="anchor-link" href="#fail"
+              title="Permalink to Expect.fail">#</a></h4>
+<div class="doc">
+<pre class="source">
+@deprecated
+static void fail(String msg) {
+ _fail("Expect.fail('$msg')");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="approxEquals">
+<button class="show-code">Code</button>
+void <strong>approxEquals</strong>(<a href="../dart_core/num.html">num</a> expected, <a href="../dart_core/num.html">num</a> actual, [<a href="../dart_core/num.html">num</a> tolerance = null, <a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#approxEquals"
+              title="Permalink to Expect.approxEquals">#</a></h4>
+<div class="doc">
+<p>Failure if the difference between expected and actual is greater than the
+given tolerance. If no tolerance is given, tolerance is assumed to be the
+value 4 significant digits smaller than the value given for expected.</p>
+<pre class="source">
+@deprecated
+static void approxEquals(num expected,
+                        num actual,
+                        [num tolerance = null,
+                         String reason = null]) {
+ if (tolerance == null) {
+   tolerance = (expected / 1e4).abs();
+ }
+ // Note: use !( &lt;= ) rather than &gt; so we fail on NaNs
+ if ((expected - actual).abs() &lt;= tolerance) return;
+
+ String msg = _getMessage(reason);
+ _fail('Expect.approxEquals(expected:&lt;$expected&gt;, actual:&lt;$actual&gt;, '
+       'tolerance:&lt;$tolerance&gt;$msg) fails');
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="notEquals">
+<button class="show-code">Code</button>
+void <strong>notEquals</strong>(unexpected, actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#notEquals"
+              title="Permalink to Expect.notEquals">#</a></h4>
+<div class="doc">
+<pre class="source">
+@deprecated
+static void notEquals(unexpected, actual, [String reason = null]) {
+ if (unexpected != actual) return;
+ String msg = _getMessage(reason);
+ _fail("Expect.notEquals(unexpected: &lt;$unexpected&gt;, actual:&lt;$actual&gt;$msg) "
+       "fails.");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="listEquals">
+<button class="show-code">Code</button>
+void <strong>listEquals</strong>(<a href="../dart_core/List.html">List</a> expected, <a href="../dart_core/List.html">List</a> actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#listEquals"
+              title="Permalink to Expect.listEquals">#</a></h4>
+<div class="doc">
+<p>Checks that all elements in 
+<span class="param">expected</span> and 
+<span class="param">actual</span> are equal <code>==</code>.
+This is different than the typical check for identity equality <code>identical</code>
+used by the standard list implementation.  It should also produce nicer
+error messages than just calling <code>Expect.equals(expected, actual)</code>.</p>
+<pre class="source">
+@deprecated
+static void listEquals(List expected, List actual, [String reason = null]) {
+ String msg = _getMessage(reason);
+ int n = (expected.length &lt; actual.length) ? expected.length : actual.length;
+ for (int i = 0; i &lt; n; i++) {
+   if (expected[i] != actual[i]) {
+     _fail('Expect.listEquals(at index $i, '
+           'expected: &lt;${expected[i]}&gt;, actual: &lt;${actual[i]}&gt;$msg) fails');
+   }
+ }
+ // We check on length at the end in order to provide better error
+ // messages when an unexpected item is inserted in a list.
+ if (expected.length != actual.length) {
+   _fail('Expect.listEquals(list length, '
+     'expected: &lt;${expected.length}&gt;, actual: &lt;${actual.length}&gt;$msg) '
+     'fails: Next element &lt;'
+     '${expected.length &gt; n ? expected[n] : actual[n]}&gt;');
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="mapEquals">
+<button class="show-code">Code</button>
+void <strong>mapEquals</strong>(<a href="../dart_core/Map.html">Map</a> expected, <a href="../dart_core/Map.html">Map</a> actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#mapEquals"
+              title="Permalink to Expect.mapEquals">#</a></h4>
+<div class="doc">
+<p>Checks that all 
+<span class="param">expected</span> and 
+<span class="param">actual</span> have the same set of keys (using
+the semantics of <a class="crossref" href="../dart_core/Map.html#containsKey">Map.containsKey</a> to determine what "same" means. For
+each key, checks that the values in both maps are equal using <code>==</code>.</p>
+<pre class="source">
+@deprecated
+static void mapEquals(Map expected, Map actual, [String reason = null]) {
+ String msg = _getMessage(reason);
+
+ // Make sure all of the values are present in both and match.
+ for (final key in expected.keys) {
+   if (!actual.containsKey(key)) {
+     _fail('Expect.mapEquals(missing expected key: &lt;$key&gt;$msg) fails');
+   }
+
+   Expect.equals(expected[key], actual[key]);
+ }
+
+ // Make sure the actual map doesn't have any extra keys.
+ for (final key in actual.keys) {
+   if (!expected.containsKey(key)) {
+     _fail('Expect.mapEquals(unexpected key: &lt;$key&gt;$msg) fails');
+   }
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="stringEquals">
+<button class="show-code">Code</button>
+void <strong>stringEquals</strong>(<a href="../dart_core/String.html">String</a> expected, <a href="../dart_core/String.html">String</a> actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#stringEquals"
+              title="Permalink to Expect.stringEquals">#</a></h4>
+<div class="doc">
+<p>Specialized equality test for strings. When the strings don't match,
+this method shows where the mismatch starts and ends.</p>
+<pre class="source">
+@deprecated
+static void stringEquals(String expected,
+                        String actual,
+                        [String reason = null]) {
+ String msg = _getMessage(reason);
+ String defaultMessage =
+     'Expect.stringEquals(expected: &lt;$expected&gt;", &lt;$actual&gt;$msg) fails';
+
+ if (expected == actual) return;
+ if ((expected == null) || (actual == null)) {
+   _fail('$defaultMessage');
+ }
+ // scan from the left until we find a mismatch
+ int left = 0;
+ int eLen = expected.length;
+ int aLen = actual.length;
+ while (true) {
+   if (left == eLen) {
+     assert (left &lt; aLen);
+     String snippet = actual.substring(left, aLen);
+     _fail('$defaultMessage\nDiff:\n...[  ]\n...[ $snippet ]');
+     return;
+   }
+   if (left == aLen) {
+     assert (left &lt; eLen);
+     String snippet = expected.substring(left, eLen);
+     _fail('$defaultMessage\nDiff:\n...[  ]\n...[ $snippet ]');
+     return;
+   }
+   if (expected[left] != actual[left]) {
+     break;
+   }
+   left++;
+ }
+
+ // scan from the right until we find a mismatch
+ int right = 0;
+ while (true) {
+   if (right == eLen) {
+     assert (right &lt; aLen);
+     String snippet = actual.substring(0, aLen - right);
+     _fail('$defaultMessage\nDiff:\n[  ]...\n[ $snippet ]...');
+     return;
+   }
+   if (right == aLen) {
+     assert (right &lt; eLen);
+     String snippet = expected.substring(0, eLen - right);
+     _fail('$defaultMessage\nDiff:\n[  ]...\n[ $snippet ]...');
+     return;
+   }
+   // stop scanning if we've reached the end of the left-to-right match
+   if (eLen - right &lt;= left || aLen - right &lt;= left) {
+     break;
+   }
+   if (expected[eLen - right - 1] != actual[aLen - right - 1]) {
+     break;
+   }
+   right++;
+ }
+ String eSnippet = expected.substring(left, eLen - right);
+ String aSnippet = actual.substring(left, aLen - right);
+ String diff = '\nDiff:\n...[ $eSnippet ]...\n...[ $aSnippet ]...';
+ _fail('$defaultMessage$diff');
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="setEquals">
+<button class="show-code">Code</button>
+void <strong>setEquals</strong>(<a href="../dart_core/Iterable.html">Iterable</a> expected, <a href="../dart_core/Iterable.html">Iterable</a> actual, [<a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#setEquals"
+              title="Permalink to Expect.setEquals">#</a></h4>
+<div class="doc">
+<p>Checks that every element of 
+<span class="param">expected</span> is also in 
+<span class="param">actual</span>, and that
+every element of 
+<span class="param">actual</span> is also in 
+<span class="param">expected</span>.</p>
+<pre class="source">
+@deprecated
+static void setEquals(Iterable expected,
+                     Iterable actual,
+                     [String reason = null]) {
+ final missingSet = new Set.from(expected);
+ missingSet.removeAll(actual);
+ final extraSet = new Set.from(actual);
+ extraSet.removeAll(expected);
+
+ if (extraSet.isEmpty &amp;&amp; missingSet.isEmpty) return;
+ String msg = _getMessage(reason);
+
+ StringBuffer sb = new StringBuffer("Expect.setEquals($msg) fails");
+ // Report any missing items.
+ if (!missingSet.isEmpty) {
+   sb.add('\nExpected collection does not contain: ');
+ }
+
+ for (final val in missingSet) {
+   sb.add('$val ');
+ }
+
+ // Report any extra items.
+ if (!extraSet.isEmpty) {
+   sb.add('\nExpected collection should not contain: ');
+ }
+
+ for (final val in extraSet) {
+   sb.add('$val ');
+ }
+ _fail(sb.toString());
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="throws">
+<button class="show-code">Code</button>
+void <strong>throws</strong>(void f(), [<a href="../dart_core/_CheckExceptionFn.html">_CheckExceptionFn</a> check = null, <a href="../dart_core/String.html">String</a> reason = null]) <a class="anchor-link" href="#throws"
+              title="Permalink to Expect.throws">#</a></h4>
+<div class="doc">
+<p>Calls the function 
+<span class="param">f</span> and verifies that it throws an exception.
+The optional 
+<span class="param">check</span> function can provide additional validation
+that the correct exception is being thrown.  For example, to check
+the type of the exception you could write this:</p>
+<pre><code>Expect.throws(myThrowingFunction, (e) =&gt; e is MyException);
+</code></pre>
+<pre class="source">
+@deprecated
+static void throws(void f(),
+                  [_CheckExceptionFn check = null,
+                   String reason = null]) {
+ try {
+   f();
+ } catch (e, s) {
+   if (check != null) {
+     if (!check(e)) {
+       String msg = reason == null ? "" : reason;
+       _fail("Expect.throws($msg): Unexpected '$e'\n$s");
+     }
+   }
+   return;
+ }
+ String msg = reason == null ? "" : reason;
+ _fail('Expect.throws($msg) fails');
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:50:25.638</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

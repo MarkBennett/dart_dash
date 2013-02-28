@@ -1,0 +1,534 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Writer class / serialization Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="serialization" data-type="Writer">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../serialization.html">serialization</a> &rsaquo; <a href="../serialization/Writer.html">Writer</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_crypto.html">dart:crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_scalarlist.html">dart:scalarlist</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_uri.html">dart:uri</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../scheduled_test.html">scheduled_test</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><ul class="icon">
+<li><a href="../serialization/BasicRule.html"><div class="icon-class"></div>BasicRule</a></li>
+<li><a href="../serialization/ClosureRule.html"><div class="icon-class"></div>ClosureRule</a></li>
+<li><a href="../serialization/Constructor.html"><div class="icon-class"></div>Constructor</a></li>
+<li><a href="../serialization/ConstructType.html"><div class="icon-interface"></div>ConstructType</a></li>
+<li><a href="../serialization/CustomRule.html"><div class="icon-class"></div>CustomRule</a></li>
+<li><a href="../serialization/DesignatedRuleForObject.html"><div class="icon-class"></div>DesignatedRuleForObject</a></li>
+<li><a href="../serialization/Format.html"><div class="icon-class"></div>Format</a></li>
+<li><a href="../serialization/GetStateType.html"><div class="icon-interface"></div>GetStateType</a></li>
+<li><a href="../serialization/ListRule.html"><div class="icon-class"></div>ListRule</a></li>
+<li><a href="../serialization/ListRuleEssential.html"><div class="icon-class"></div>ListRuleEssential</a></li>
+<li><a href="../serialization/MapRule.html"><div class="icon-class"></div>MapRule</a></li>
+<li><a href="../serialization/MirrorRule.html"><div class="icon-class"></div>MirrorRule</a></li>
+<li><a href="../serialization/NamedObjectRule.html"><div class="icon-class"></div>NamedObjectRule</a></li>
+<li><a href="../serialization/NonEssentialStateType.html"><div class="icon-interface"></div>NonEssentialStateType</a></li>
+<li><a href="../serialization/PrimitiveRule.html"><div class="icon-class"></div>PrimitiveRule</a></li>
+<li><a href="../serialization/Reader.html"><div class="icon-class"></div>Reader</a></li>
+<li><a href="../serialization/ReaderOrWriter.html"><div class="icon-class"></div>ReaderOrWriter</a></li>
+<li><a href="../serialization/Reference.html"><div class="icon-class"></div>Reference</a></li>
+<li><a href="../serialization/Serialization.html"><div class="icon-class"></div>Serialization</a></li>
+<li><a href="../serialization/SerializationRule.html"><div class="icon-class"></div>SerializationRule</a></li>
+<li><a href="../serialization/SetWithFunction.html"><div class="icon-interface"></div>SetWithFunction</a></li>
+<li><a href="../serialization/SimpleFlatFormat.html"><div class="icon-class"></div>SimpleFlatFormat</a></li>
+<li><a href="../serialization/SimpleJsonFormat.html"><div class="icon-class"></div>SimpleJsonFormat</a></li>
+<li><a href="../serialization/SimpleMapFormat.html"><div class="icon-class"></div>SimpleMapFormat</a></li>
+<li><a href="../serialization/Trace.html"><div class="icon-class"></div>Trace</a></li>
+<li><div class="icon-class"></div><strong>Writer</strong></li>
+<li><a href="../serialization/SerializationException.html"><div class="icon-exception"></div>SerializationException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Writer</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>This writes out the state of the objects to an external format. It holds
+all of the intermediate state needed. The primary API for it is the
+<a class="crossref" href="../serialization/Writer.html#write">write</a> method.</p>
+<pre class="source">
+class Writer implements ReaderOrWriter {
+ /**
+  * The [serialization] holds onto the rules that define how objects
+  * are serialized.
+  */
+ final Serialization serialization;
+
+ /** The [trace] object keeps track of the objects to be visited while finding
+  * the full set of objects to be written.*/
+ Trace trace;
+
+ /**
+  * When we write out objects, should we also write out a description
+  * of the rules for the serialization. This defaults to the corresponding
+  * value on the Serialization.
+  */
+ bool selfDescribing;
+
+ Format format = new SimpleMapFormat();
+
+ /**
+  * Objects that cannot be represented in-place in the serialized form need
+  * to have references to them stored. The [Reference] objects are computed
+  * once and stored here for each object. This provides some space-saving,
+  * but also serves to record which objects we have already seen.
+  */
+ final Map&lt;dynamic, Reference&gt; references =
+     new IdentityMap&lt;Object, Reference&gt;();
+
+ /**
+  * The state of objects that need to be serialized is stored here.
+  * Each rule has a number, and rules keep track of the objects that they
+  * serialize, in order. So the state of any object can be found by indexing
+  * from the rule number and the object number within the rule.
+  * The actual representation of the state is determined by the rule. Lists
+  * and Maps are common, but it is arbitrary.
+  */
+ final List&lt;List&gt; states = new List&lt;List&gt;();
+
+ /** Return the list of rules we use. */
+ List&lt;SerializationRule&gt; get rules =&gt; serialization._rules;
+
+ /**
+  * Creates a new [Writer] that uses the rules from its parent
+  * [Serialization]. Serializations do not keep any state
+  * related to a particular read/write, so the same one can be used
+  * for multiple different Readers/Writers.
+  */
+ Writer(this.serialization, [Format newFormat]) {
+   trace = new Trace(this);
+   selfDescribing = serialization.selfDescribing;
+   if (newFormat != null) format = newFormat;
+ }
+
+ /**
+  * This is the main API for a [Writer]. It writes the objects and returns
+  * the serialized representation, as determined by [format].
+  */
+ write(anObject) {
+   trace.addRoot(anObject);
+   trace.traceAll();
+   _flatten();
+   return format.generateOutput(this);
+ }
+
+ /**
+  * Given that we have fully populated the list of [states], and more
+  * importantly, the list of [references], go through each state and turn
+  * anything that requires a [Reference] into one. Since only the rules
+  * know the representation they use for state, delegate to them.
+  */
+ void _flatten() {
+   for (var eachRule in rules) {
+     _growStates(eachRule);
+     var index = eachRule.number;
+     var statesForThisRule = states[index];
+     for (var i = 0; i &lt; statesForThisRule.length; i++) {
+       var eachState = statesForThisRule[i];
+       var newState = eachRule.flatten(eachState, this);
+       if (newState != null) {
+         statesForThisRule[i] = newState;
+       }
+     }
+   }
+ }
+
+ /**
+  * As the [trace] processes each object, it will call this method on us.
+  * We find the rules for this object, and record the state of the object
+  * as determined by each rule.
+  */
+ void _process(object, Trace trace) {
+   var real = (object is DesignatedRuleForObject) ? object.target : object;
+   for (var eachRule in serialization.rulesFor(object, this)) {
+     _record(real, eachRule);
+   }
+ }
+
+ /**
+  * Record the state of [object] as determined by [rule] and keep
+  * track of it. Generate a [Reference] for this object if required.
+  * When it's required is up to the particular rule, but generally everything
+  * gets a reference except a primitive.
+  * Note that at this point the states are just the same as the fields of the
+  * object, and haven't been flattened.
+  */
+ void _record(object, SerializationRule rule) {
+   if (rule.shouldUseReferenceFor(object, this)) {
+     references.putIfAbsent(object, () =&gt;
+         new Reference(this, rule.number, _nextObjectNumberFor(rule)));
+     var state = rule.extractState(object, trace.note, this);
+     _addStateForRule(rule, state);
+   }
+ }
+
+ /**
+  * Should we store primitive objects directly or create references for them.
+  * That depends on which format we're using, so a flat format will want
+  * references, but the Map format can store them directly.
+  */
+ bool get shouldUseReferencesForPrimitives
+     =&gt; format.shouldUseReferencesForPrimitives;
+
+ /**
+  * Returns a serialized version of the [SerializationRule]s used to write
+  * the data, if [selfDescribing] is true, otherwise returns null.
+  */
+ serializedRules() {
+   if (!selfDescribing) return null;
+   var meta = serialization.ruleSerialization();
+   var writer = new Writer(meta, format);
+   writer.selfDescribing = false;
+   return writer.write(serialization._rules);
+ }
+
+ /** Record a [state] entry for a particular rule. */
+ void _addStateForRule(eachRule, state) {
+   _growStates(eachRule);
+   states[eachRule.number].add(state);
+ }
+
+ /** Find what the object number for the thing we're about to add will be.*/
+ int _nextObjectNumberFor(SerializationRule rule) {
+   _growStates(rule);
+   return states[rule.number].length;
+ }
+
+ /**
+  * We store the states in a List, indexed by rule number. But rules can be
+  * dynamically added, so we may have to grow the list.
+  */
+ void _growStates(eachRule) {
+   while (states.length &lt;= eachRule.number) states.add(new List());
+ }
+
+ /**
+  * Return true if we have an object number for this object. This is used to
+  * tell if we have processed the object or not. This relies on checking if we
+  * have a reference or not. That saves some space by not having to keep track
+  * of simple objects, but means that if someone refers to the identical string
+  * from several places, we will process it several times, and store it
+  * several times. That seems an acceptable tradeoff, and in cases where it
+  * isn't, it's possible to apply a rule for String, or even for Strings larger
+  * than x, which gives them references.
+  */
+ bool _hasIndexFor(object) {
+   return _objectNumberFor(object) != -1;
+ }
+
+ /**
+  * Given an object, find what number it has. The number is valid only in
+  * the context of a particular rule, and if the rule has more than one,
+  * this will return the one for the primary rule, defined as the one that
+  * is listed in its canonical reference.
+  */
+ int _objectNumberFor(object) {
+   var reference = references[object];
+   return (reference == null) ? -1 : reference.objectNumber;
+ }
+
+ /**
+  * Return a list of [Reference] objects pointing to our roots. This will be
+  * stored in the output under "roots" in the default format.
+  */
+ _rootReferences() =&gt; trace.roots.map(_referenceFor).toList();
+
+ /**
+  * Given an object, return a reference for it if one exists. If there's
+  * no reference, return the object itself. Once we have finished the tracing
+  * step, all objects that should have a reference (roughly speaking,
+  * non-primitives) can be relied on to have a reference.
+  */
+ _referenceFor(object) {
+   var result = references[object];
+   return (result == null) ? object : result;
+ }
+
+ /**
+  * Return true if the [namedObjects] collection has a reference to [object].
+  */
+ // TODO(alanknight): Should the writer also have its own namedObjects
+ // collection specific to the particular write, or is that just adding
+ // complexity for little value?
+ hasNameFor(object) =&gt; serialization._hasNameFor(object);
+
+ /**
+  * Return the name we have for this object in the [namedObjects] collection.
+  */
+ nameFor(object) =&gt; serialization._nameFor(object);
+
+ // For debugging/testing purposes. Find what state a reference points to.
+ stateForReference(Reference r) =&gt; states[r.ruleNumber][r.objectNumber];
+
+ /** Return the state pointed to by [reference]. */
+ resolveReference(reference) =&gt; stateForReference(reference);
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../serialization/ReaderOrWriter.html">ReaderOrWriter</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Writer">
+<button class="show-code">Code</button>
+new <strong>Writer</strong>(<a href="../serialization/Serialization.html">Serialization</a> serialization, [<a href="../serialization/Format.html">Format</a> newFormat]) <a class="anchor-link" href="#Writer"
+              title="Permalink to Writer.Writer">#</a></h4>
+<div class="doc">
+<p>Creates a new <a class="crossref" href="../serialization/Writer.html#Writer">Writer</a> that uses the rules from its parent
+<a class="crossref" href="../serialization/Serialization.html">Serialization</a>. Serializations do not keep any state
+related to a particular read/write, so the same one can be used
+for multiple different Readers/Writers.</p>
+<pre class="source">
+Writer(this.serialization, [Format newFormat]) {
+ trace = new Trace(this);
+ selfDescribing = serialization.selfDescribing;
+ if (newFormat != null) format = newFormat;
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="format">
+<button class="show-code">Code</button>
+<a href="../serialization/Format.html">Format</a>         <strong>format</strong> <a class="anchor-link"
+            href="#format"
+            title="Permalink to Writer.format">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+format = new SimpleMapFormat()
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="references">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Map.html">Map</a>&lt;dynamic, <a href="../serialization/Reference.html">Reference</a>&gt;         <strong>references</strong> <a class="anchor-link"
+            href="#references"
+            title="Permalink to Writer.references">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+references =
+new IdentityMap&lt;Object, Reference&gt;()
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="rules">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../serialization/SerializationRule.html">SerializationRule</a>&gt;         <strong>rules</strong> <a class="anchor-link"
+            href="#rules"
+            title="Permalink to Writer.rules">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the list of rules we use. </p>
+<pre class="source">
+List&lt;SerializationRule&gt; get rules =&gt; serialization._rules;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="selfDescribing">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a>         <strong>selfDescribing</strong> <a class="anchor-link"
+            href="#selfDescribing"
+            title="Permalink to Writer.selfDescribing">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+selfDescribing
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="serialization">
+<button class="show-code">Code</button>
+final <a href="../serialization/Serialization.html">Serialization</a>         <strong>serialization</strong> <a class="anchor-link"
+            href="#serialization"
+            title="Permalink to Writer.serialization">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+serialization
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="shouldUseReferencesForPrimitives">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>shouldUseReferencesForPrimitives</strong> <a class="anchor-link"
+            href="#shouldUseReferencesForPrimitives"
+            title="Permalink to Writer.shouldUseReferencesForPrimitives">#</a>
+        </h4>
+        <div class="doc">
+<p>Should we store primitive objects directly or create references for them.
+That depends on which format we're using, so a flat format will want
+references, but the Map format can store them directly.</p>
+<pre class="source">
+bool get shouldUseReferencesForPrimitives
+   =&gt; format.shouldUseReferencesForPrimitives;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="states">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/List.html">List</a>&gt;         <strong>states</strong> <a class="anchor-link"
+            href="#states"
+            title="Permalink to Writer.states">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+states = new List&lt;List&gt;()
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="trace">
+<button class="show-code">Code</button>
+<a href="../serialization/Trace.html">Trace</a>         <strong>trace</strong> <a class="anchor-link"
+            href="#trace"
+            title="Permalink to Writer.trace">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+trace
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="hasNameFor">
+<button class="show-code">Code</button>
+<strong>hasNameFor</strong>(object) <a class="anchor-link" href="#hasNameFor"
+              title="Permalink to Writer.hasNameFor">#</a></h4>
+<div class="doc">
+<p>Return true if the <code>namedObjects</code> collection has a reference to 
+<span class="param">object</span>.</p>
+<pre class="source">
+hasNameFor(object) =&gt; serialization._hasNameFor(object);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="nameFor">
+<button class="show-code">Code</button>
+<strong>nameFor</strong>(object) <a class="anchor-link" href="#nameFor"
+              title="Permalink to Writer.nameFor">#</a></h4>
+<div class="doc">
+<p>Return the name we have for this object in the <code>namedObjects</code> collection.</p>
+<pre class="source">
+nameFor(object) =&gt; serialization._nameFor(object);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="resolveReference">
+<button class="show-code">Code</button>
+<strong>resolveReference</strong>(reference) <a class="anchor-link" href="#resolveReference"
+              title="Permalink to Writer.resolveReference">#</a></h4>
+<div class="doc">
+<p>Return the state pointed to by 
+<span class="param">reference</span>. </p>
+<pre class="source">
+resolveReference(reference) =&gt; stateForReference(reference);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="serializedRules">
+<button class="show-code">Code</button>
+<strong>serializedRules</strong>() <a class="anchor-link" href="#serializedRules"
+              title="Permalink to Writer.serializedRules">#</a></h4>
+<div class="doc">
+<p>Returns a serialized version of the <a class="crossref" href="../serialization/SerializationRule.html">SerializationRule</a>s used to write
+the data, if <a class="crossref" href="../serialization/Writer.html#selfDescribing">selfDescribing</a> is true, otherwise returns null.</p>
+<pre class="source">
+serializedRules() {
+ if (!selfDescribing) return null;
+ var meta = serialization.ruleSerialization();
+ var writer = new Writer(meta, format);
+ writer.selfDescribing = false;
+ return writer.write(serialization._rules);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="stateForReference">
+<button class="show-code">Code</button>
+<strong>stateForReference</strong>(<a href="../serialization/Reference.html">Reference</a> r) <a class="anchor-link" href="#stateForReference"
+              title="Permalink to Writer.stateForReference">#</a></h4>
+<div class="doc">
+<pre class="source">
+stateForReference(Reference r) =&gt; states[r.ruleNumber][r.objectNumber];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="write">
+<button class="show-code">Code</button>
+<strong>write</strong>(anObject) <a class="anchor-link" href="#write"
+              title="Permalink to Writer.write">#</a></h4>
+<div class="doc">
+<p>This is the main API for a <a class="crossref" href="../serialization/Writer.html#Writer">Writer</a>. It writes the objects and returns
+the serialized representation, as determined by <a class="crossref" href="../serialization/Writer.html#format">format</a>.</p>
+<pre class="source">
+write(anObject) {
+ trace.addRoot(anObject);
+ trace.traceAll();
+ _flatten();
+ return format.generateOutput(this);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-02-26 14:53:07.260</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        
