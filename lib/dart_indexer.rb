@@ -42,6 +42,7 @@ class DartPageParser
     tokens += constructor_tokens(page)
     tokens += method_tokens(page)
     tokens += static_prop_tokens(page)
+    tokens += prop_tokens(page)
   end
 
   def page_title_token(page)
@@ -101,6 +102,20 @@ class DartPageParser
   def static_prop_tokens(page)
     tokens = []
     methods_sections = page.xpath('//h3[contains(text(), "Static Properties")]')
+    methods_sections.each do |section|
+      section.parent.css(".field").each do |method|
+        name = method.children[0].attributes["id"].value
+        path = @page_path + "#" + name
+        tokens << { :name => name, :type => "Property", :path => path }
+      end
+    end
+
+    tokens
+  end
+
+  def prop_tokens(page)
+    tokens = []
+    methods_sections = page.xpath('//h3[contains(text(), "Properties")]')
     methods_sections.each do |section|
       section.parent.css(".field").each do |method|
         name = method.children[0].attributes["id"].value
