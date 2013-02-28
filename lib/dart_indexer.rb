@@ -11,13 +11,8 @@ class DartIndexer
   def index
     index = DashIndex.new
 
-    paths = [
-      "dart_async/Future.html",
-      "dart_async/Stream.html",
-      "dart_html/Element.html"
-    ]
-    # paths = Find.find(DOC_ROOT).select { |s| s if s =~ /.*\.html$/ }.
-    #  map { |p| p.split(DOC_ROOT)[1] }
+    paths = Find.find(DOC_ROOT).select { |s| s if s =~ /.*\.html$/ }.
+     map { |p| p.split(DOC_ROOT)[1] }
     paths.each do |path|
       puts "Parsing #{path}..."
       index.add_tokens(DartPageParser.new(DOC_ROOT, path).tokens)
